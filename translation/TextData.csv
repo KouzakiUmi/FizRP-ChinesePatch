@@ -1,0 +1,225 @@
+﻿id,kind,file,path_id,source,index,path,comment,text_ja,text_en_machine,text_en,text_fr,text_es,text_zh_Hans
+TextData:LeafurMegaphyll_Result:0,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,0,textDatas[0],やられちゃった！,やられちゃった！,You got me!, You got me!,,,
+TextData:LeafurMegaphyll_Result:10,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,10,textDatas[10],10まんてん！ おめでとう～！,10まんてん！ おめでとう～！,10 out of 10! Congratulations!,"You scored 100,000 points! Congratulations!",,,
+TextData:LeafurMegaphyll_Result:11,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,11,textDatas[11],20まんてん！？ すごいすごいすごいー！！,20まんてん！？ すごいすごいすごいー！！,"20 out of 10!? Incredible, incredible, INCREDIBLE!!","200,000 points!? Wow, wow, WOW!!",,,
+TextData:LeafurMegaphyll_Result:12,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,12,textDatas[12],こんなにあそんでくれて ありがとう！！,こんなにあそんでくれて ありがとう！！,Thank you for playing with me so much!!,Thanks for spending so much time with me!,,,
+TextData:LeafurMegaphyll_Result:1,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,1,textDatas[1],もりをぬけて ゆきやまが　みえてきたよ！,もりをぬけて ゆきやまが　みえてきたよ！,Snowy mountain has come into view after passing through the forest!,"We made it out of the forest
+- look, snowy mountain! ",,,
+TextData:LeafurMegaphyll_Result:2,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,2,textDatas[2],ゆうひにあたる　ゆきやまが　きれいだね！,ゆうひにあたる　ゆきやまが　きれいだね！,Snowy mountain bathed in the evening sun is so beautiful!,"The snowy mountain
+glowing in the sunset is so beautiful!",,,
+TextData:LeafurMegaphyll_Result:3,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,3,textDatas[3],ゆきやまをこえて まちがみえてきたよ！,ゆきやまをこえて まちがみえてきたよ！,"Beyond the white mountain peaks, the town slowly emerged!","We crossed the snowy peaks and
+ now the town is coming into view!",,,
+TextData:LeafurMegaphyll_Result:4,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,4,textDatas[4],まちのやけいが　きれいだね！,まちのやけいが　きれいだね！,The town's rooftops are beautiful!, The city skyline looks beautiful!,,,
+TextData:LeafurMegaphyll_Result:5,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,5,textDatas[5],まちのやけいが　きれいだね！,まちのやけいが　きれいだね！,The town's rooftops are beautiful!, The city skyline looks beautiful!,,,
+TextData:LeafurMegaphyll_Result:6,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,6,textDatas[6],うちゅうにむけて　しゅっぱつ！,うちゅうにむけて　しゅっぱつ！,Heading off!,Heading off!,,,
+TextData:LeafurMegaphyll_Result:7,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,7,textDatas[7],ちじょうから　どんどん はなれていくよ！,ちじょうから　どんどん はなれていくよ！,Moving further and further away from the ground!,Getting farther and farther from the ground!,,,
+TextData:LeafurMegaphyll_Result:8,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,8,textDatas[8],ちじょうから　どんどん はなれていくよ！,ちじょうから　どんどん はなれていくよ！,Moving further and further away from the ground!,Getting farther and farther from the ground!,,,
+TextData:LeafurMegaphyll_Result:9,TextData,sharedassets153.assets,149,LeafurMegaphyll_Result,9,textDatas[9],ほしぞらがまるで　ながれぼし みたいだね！,ほしぞらがまるで　ながれぼし みたいだね！,It looks like shooting stars all over the sky!,It looks like shooting stars all over the sky!,,,
+TextData:NpcTalkCreator_default:0,TextData,sharedassets112.assets,17,NpcTalkCreator_default,0,textDatas[0],忙しい　忙しい！,忙しい　忙しい！,"Busy, busy!","So busy, busy!",,,
+TextData:NpcTalkCreator_default:1,TextData,sharedassets112.assets,17,NpcTalkCreator_default,1,textDatas[1],たいへんたいへん！,たいへんたいへん！,So difficult!,"Oh dear, oh dear!",,,
+TextData:NpcTalkTest_default:0,TextData,sharedassets16.assets,10,NpcTalkTest_default,0,textDatas[0],こんにちは！,こんにちは！,Hi!,Hi!,Bonjour!,¡Hola!,
+TextData:NpcTalkTest_default:1,TextData,sharedassets16.assets,10,NpcTalkTest_default,1,textDatas[1],おーい！,おーい！,Hello!,Hello!,Comment ça va ?,¡Buenos noches!,
+TextData:NpcTalkTest_talked:0,TextData,sharedassets16.assets,11,NpcTalkTest_talked,0,textDatas[0],がんばって！,がんばって！,Good luck!,Do your best!,,,
+TextData:NpcTalkTest_talked:1,TextData,sharedassets16.assets,11,NpcTalkTest_talked,1,textDatas[1],またね～,またね～,See you soon.,See you soon.,,,
+TextData:NpcTalkあおじそ_default:0,TextData,sharedassets74.assets,11,NpcTalkあおじそ_default,0,textDatas[0],暑い～,暑い～,Hot~.,So hot...,,,
+TextData:NpcTalkあおじそ_default:1,TextData,sharedassets74.assets,11,NpcTalkあおじそ_default,1,textDatas[1],溶けちゃいそう,溶けちゃいそう,I think I'm going to melt.,I think I’m gonna melt.,,,
+TextData:NpcTalkあおじそ_talked:0,TextData,sharedassets74.assets,12,NpcTalkあおじそ_talked,0,textDatas[0],またね～っ,またね～っ,See you soon!,See you later!,,,
+TextData:NpcTalkあおじそ_talked:1,TextData,sharedassets74.assets,12,NpcTalkあおじそ_talked,1,textDatas[1],バイバイ！,バイバイ！,Bye-bye!,Bye-bye!,,,
+TextData:NpcTalkじす_default:0,TextData,sharedassets58.assets,11,NpcTalkじす_default,0,textDatas[0],きれい！,きれい！,Clean!,Beautiful!,,,
+TextData:NpcTalkじす_default:1,TextData,sharedassets58.assets,11,NpcTalkじす_default,1,textDatas[1],触っちゃおうかな,触っちゃおうかな,I think I'll touch it.,Should I touch it?,,,
+TextData:NpcTalkじす_talked:0,TextData,sharedassets58.assets,12,NpcTalkじす_talked,0,textDatas[0],こわいね！,こわいね！,That's scary!,That's scary!,,,
+TextData:NpcTalkじす_talked:1,TextData,sharedassets58.assets,12,NpcTalkじす_talked,1,textDatas[1],じゃあね！,じゃあね！,Bye!,Bye!,,,
+TextData:NpcTalkたまゆら_default:0,TextData,sharedassets36.assets,9,NpcTalkたまゆら_default,0,textDatas[0],わわわ…！,わわわ…！,Wow..!,Wow..!,,,
+TextData:NpcTalkたまゆら_default:1,TextData,sharedassets36.assets,9,NpcTalkたまゆら_default,1,textDatas[1],飛ばされる！,飛ばされる！,They will be sent away!,I’m gonna fly away!,,,
+TextData:NpcTalkたまゆら_talked:0,TextData,sharedassets36.assets,10,NpcTalkたまゆら_talked,0,textDatas[0],バイバイ！,バイバイ！,Bye-bye!,Bye-bye!,,,
+TextData:NpcTalkたまゆら_talked:1,TextData,sharedassets36.assets,10,NpcTalkたまゆら_talked,1,textDatas[1],気を付けてね！,気を付けてね！,Be careful!,Be careful!,,,
+TextData:NpcTalkひょえ_default:0,TextData,sharedassets93.assets,53,NpcTalkひょえ_default,0,textDatas[0],ひょえ～～,ひょえ～～,Hyo~~,Whoaaa.,,,
+TextData:NpcTalkひょえ_default:1,TextData,sharedassets93.assets,53,NpcTalkひょえ_default,1,textDatas[1],たかーい！,たかーい！,Tall!,So expensive!,,,
+TextData:NpcTalkひょえ_talked:0,TextData,sharedassets93.assets,54,NpcTalkひょえ_talked,0,textDatas[0],ふよふよーん,ふよふよーん,sound of something floating,Fluffy,,,
+TextData:NpcTalkアカツキ_default:0,TextData,sharedassets96.assets,23,NpcTalkアカツキ_default,0,textDatas[0],……,……,......,......,,,
+TextData:NpcTalkアカツキ_talked:0,TextData,sharedassets96.assets,24,NpcTalkアカツキ_talked,0,textDatas[0],さようなら…,さようなら…,Goodbye...,Goodbye...,,,
+TextData:NpcTalkアカツキ_talked:1,TextData,sharedassets96.assets,24,NpcTalkアカツキ_talked,1,textDatas[1],…がんばれ,…がんばれ,...Good luck.,...Good luck.,,,
+TextData:NpcTalkサリア_default:0,TextData,sharedassets112.assets,18,NpcTalkサリア_default,0,textDatas[0],ケーキ！,ケーキ！,Cake!,Cake!,,,
+TextData:NpcTalkサリア_default:1,TextData,sharedassets112.assets,18,NpcTalkサリア_default,1,textDatas[1],いただきまーす！,いただきまーす！,Bon appétit!,Bon appétit!,,,
+TextData:NpcTalkサリア_talked:0,TextData,sharedassets112.assets,19,NpcTalkサリア_talked,0,textDatas[0],おいしい～！,おいしい～！,Delicious~!,Mmm... yummy!,,,
+TextData:NpcTalkジア_default:0,TextData,sharedassets109.assets,60,NpcTalkジア_default,0,textDatas[0],おい！,おい！,Hey!,Hey!,,,
+TextData:NpcTalkジア_default:1,TextData,sharedassets109.assets,60,NpcTalkジア_default,1,textDatas[1],ハラへった！,ハラへった！,Harrah's!,I’m hungry!,,,
+TextData:NpcTalkジア_default:2,TextData,sharedassets109.assets,60,NpcTalkジア_default,2,textDatas[2],なんか　くわせろ！,なんか　くわせろ！,Give me something to eat!,Give me something to eat!,,,
+TextData:NpcTalkジア_talked:0,TextData,sharedassets109.assets,61,NpcTalkジア_talked,0,textDatas[0],じゃあな！,じゃあな！,See you!,See you!,,,
+TextData:NpcTalkジア_talked:1,TextData,sharedassets109.assets,61,NpcTalkジア_talked,1,textDatas[1],ハラへった…,ハラへった…,I'm so hungry...,I'm starving...,,,
+TextData:NpcTalkタソガレ_default:0,TextData,sharedassets96.assets,25,NpcTalkタソガレ_default,0,textDatas[0],……,……,......,......,,,
+TextData:NpcTalkタソガレ_talked:0,TextData,sharedassets96.assets,26,NpcTalkタソガレ_talked,0,textDatas[0],頑張ってね！,頑張ってね！,Good luck!,Good luck!,,,
+TextData:NpcTalkタソガレ_talked:1,TextData,sharedassets96.assets,26,NpcTalkタソガレ_talked,1,textDatas[1],さようなら！,さようなら！,Good-bye!,Good-bye!,,,
+TextData:NpcTalkテールック_default:0,TextData,sharedassets105.assets,105,NpcTalkテールック_default,0,textDatas[0],落ち着くなぁ,落ち着くなぁ,It's so relaxing.,It's so relaxing.,,,
+TextData:NpcTalkテールック_default:1,TextData,sharedassets105.assets,105,NpcTalkテールック_default,1,textDatas[1],こんにちは！,こんにちは！,Hello!,Hello!,,,
+TextData:NpcTalkテールック_talked:0,TextData,sharedassets105.assets,106,NpcTalkテールック_talked,0,textDatas[0],またね！,またね！,See you soon!,See you soon!,,,
+TextData:NpcTalkテールック_talked:1,TextData,sharedassets105.assets,106,NpcTalkテールック_talked,1,textDatas[1],良い旅を！,良い旅を！,Have a nice trip!,Have a nice trip!,,,
+TextData:NpcTalkネル_default:0,TextData,sharedassets29.assets,9,NpcTalkネル_default,0,textDatas[0],うわわ…,うわわ…,Wow...,Whoa…,,,
+TextData:NpcTalkネル_default:1,TextData,sharedassets29.assets,9,NpcTalkネル_default,1,textDatas[1],たかい！,たかい！,High!,So high up!,,,
+TextData:NpcTalkネル_talked:0,TextData,sharedassets29.assets,10,NpcTalkネル_talked,0,textDatas[0],じゃあね！,じゃあね！,Bye!,Bye!,,,
+TextData:NpcTalkネル_talked:1,TextData,sharedassets29.assets,10,NpcTalkネル_talked,1,textDatas[1],きをつけて！,きをつけて！,Take care!,Take care!,,,
+TextData:NpcTalkバル_default:0,TextData,sharedassets107.assets,12,NpcTalkバル_default,0,textDatas[0],雪だ…！,雪だ…！,Snow..!,It's snowing...!,,,
+TextData:NpcTalkバル_default:1,TextData,sharedassets107.assets,12,NpcTalkバル_default,1,textDatas[1],……,……,......,......,,,
+TextData:NpcTalkバル_talked:0,TextData,sharedassets107.assets,13,NpcTalkバル_talked,0,textDatas[0],またね！,またね！,See you soon!,See you!,,,
+TextData:NpcTalkバル_talked:1,TextData,sharedassets107.assets,13,NpcTalkバル_talked,1,textDatas[1],傘買わなきゃ…,傘買わなきゃ…,I have to buy an umbrella...,I need to buy an umbrella…,,,
+TextData:NpcTalkフレイ_default:0,TextData,sharedassets85.assets,26,NpcTalkフレイ_default,0,textDatas[0],うみーっ！,うみーっ！,Yummie!,Yum!,,,
+TextData:NpcTalkフレイ_default:1,TextData,sharedassets85.assets,26,NpcTalkフレイ_default,1,textDatas[1],こんにちはっ！,こんにちはっ！,Hello!,Hello!,,,
+TextData:NpcTalkフレイ_talked:0,TextData,sharedassets85.assets,27,NpcTalkフレイ_talked,0,textDatas[0],またね！,またね！,See you soon!,See you soon!,,,
+TextData:NpcTalkフレイ_talked:1,TextData,sharedassets85.assets,27,NpcTalkフレイ_talked,1,textDatas[1],バイバイ！,バイバイ！,Bye-bye!,Bye-bye!,,,
+TextData:NpcTalkヨヤミ_default:0,TextData,sharedassets123.assets,19,NpcTalkヨヤミ_default,0,textDatas[0],よくきたね,よくきたね,"You're here, aren't you?",Welcome!,,,
+TextData:NpcTalkヨヤミ_default:1,TextData,sharedassets123.assets,19,NpcTalkヨヤミ_default,1,textDatas[1],もちもち…,もちもち…,Mochi Mochi...,Mochi Mochi...,,,
+TextData:NpcTalkヨヤミ_talked:0,TextData,sharedassets123.assets,20,NpcTalkヨヤミ_talked,0,textDatas[0],またね～,またね～,See you soon.,See you soon.,,,
+TextData:NpcTalkヨヤミ_talked:1,TextData,sharedassets123.assets,20,NpcTalkヨヤミ_talked,1,textDatas[1],もちもち…,もちもち…,Mochi Mochi...,Mochi Mochi...,,,
+TextData:NpcTalkラムラ_default:0,TextData,sharedassets129.assets,26,NpcTalkラムラ_default,0,textDatas[0],ほう…,ほう…,Hou...,Oh...,,,
+TextData:NpcTalkラムラ_default:1,TextData,sharedassets129.assets,26,NpcTalkラムラ_default,1,textDatas[1],…,…,...,...,,,
+TextData:NpcTalkラムラ_talked:0,TextData,sharedassets129.assets,27,NpcTalkラムラ_talked,0,textDatas[0],予測できません…,予測できません…,Unpredictable...,Who knows what’ll happen...,,,
+TextData:NpcTalkラムラ_talked:1,TextData,sharedassets129.assets,27,NpcTalkラムラ_talked,1,textDatas[1],行かないのですか？,行かないのですか？,Are you not going?,Aren't you going?,,,
+TextData:NpcTalkリラ_default:0,TextData,sharedassets56.assets,8,NpcTalkリラ_default,0,textDatas[0],うう…,うう…,Umm...,Umm...,,,
+TextData:NpcTalkリラ_default:1,TextData,sharedassets56.assets,8,NpcTalkリラ_default,1,textDatas[1],大丈夫なんでしょうか…,大丈夫なんでしょうか…,I wonder if it's ok...,I’m not sure this is safe…,,,
+TextData:NpcTalkリラ_talked:0,TextData,sharedassets56.assets,9,NpcTalkリラ_talked,0,textDatas[0],お気をつけて…！,お気をつけて…！,Take care..!,Stay safe…!,,,
+TextData:NpcTalkリラ_talked:1,TextData,sharedassets56.assets,9,NpcTalkリラ_talked,1,textDatas[1],頑張りましょう！,頑張りましょう！,Let's do our best!,Let’s try our best!,,,
+TextData:NpcTalk剣士くん_default:0,TextData,sharedassets40.assets,18,NpcTalk剣士くん_default,0,textDatas[0],うーん,うーん,hmm,Hmm,,,
+TextData:NpcTalk剣士くん_default:1,TextData,sharedassets40.assets,18,NpcTalk剣士くん_default,1,textDatas[1],報告、報告…,報告、報告…,"Report, report...","Report, report...",,,
+TextData:NpcTalk剣士くん_talked:0,TextData,sharedassets40.assets,19,NpcTalk剣士くん_talked,0,textDatas[0],きをつけて！,きをつけて！,Take care!,Take care!,,,
+TextData:NpcTalk剣士くん_talked:1,TextData,sharedassets40.assets,19,NpcTalk剣士くん_talked,1,textDatas[1],またこんど！,またこんど！,See you next time!,See you next time!,,,
+TextData:NpcTalk女狼蛇_default:0,TextData,sharedassets70.assets,10,NpcTalk女狼蛇_default,0,textDatas[0],ほう…,ほう…,Hou...,Oh...,,,
+TextData:NpcTalk女狼蛇_default:1,TextData,sharedassets70.assets,10,NpcTalk女狼蛇_default,1,textDatas[1],よくきたのぅ,よくきたのぅ,Welcome.,Welcome.,,,
+TextData:NpcTalk女狼蛇_talked:0,TextData,sharedassets70.assets,11,NpcTalk女狼蛇_talked,0,textDatas[0],可愛らしいのう,可愛らしいのう,sweetie.,So cute!,,,
+TextData:NpcTalk女狼蛇_talked:1,TextData,sharedassets70.assets,11,NpcTalk女狼蛇_talked,1,textDatas[1],よく休むのじゃぞ,よく休むのじゃぞ,Rest well.,Get some good rest.,,,
+TextData:NpcTalk種どら_default:0,TextData,sharedassets21.assets,10,NpcTalk種どら_default,0,textDatas[0],ねえねえ！,ねえねえ！,"Hey, hey!","Hey, hey!",,,
+TextData:NpcTalk種どら_default:1,TextData,sharedassets21.assets,10,NpcTalk種どら_default,1,textDatas[1],きいてきいて！,きいてきいて！,"Listen, listen!",Listen up!,,,
+TextData:NpcTalk種どら_talked:0,TextData,sharedassets21.assets,11,NpcTalk種どら_talked,0,textDatas[0],またね！,またね！,See you soon!,See you soon!,,,
+TextData:NpcTalk種どら_talked:1,TextData,sharedassets21.assets,11,NpcTalk種どら_talked,1,textDatas[1],がんばって！,がんばって！,Good luck!,Good luck!,,,
+TextData:NpcTalk種どら_talked:2,TextData,sharedassets21.assets,11,NpcTalk種どら_talked,2,textDatas[2],バイバイ！,バイバイ！,Bye-bye!,Bye-bye!,,,
+TextData:PauseText_default:0,TextData,sharedassets3.assets,488,PauseText_default,0,textDatas[0],ゲームをつづける,ゲームをつづける,Continue the game,Continue,,,
+TextData:PauseText_default:1,TextData,sharedassets3.assets,488,PauseText_default,1,textDatas[1],広場にもどる,広場にもどる,Return to the plaza,Return to Plaza,,,
+TextData:PauseText_default:2,TextData,sharedassets3.assets,488,PauseText_default,2,textDatas[2],タイトルにもどる,タイトルにもどる,Back to Title,Back to Title,,,
+TextData:PauseText_finalBoss:0,TextData,sharedassets3.assets,489,PauseText_finalBoss,0,textDatas[0],ゲームをつづける,ゲームをつづける,Continue the game,Continue,,,
+TextData:PauseText_finalBoss:1,TextData,sharedassets3.assets,489,PauseText_finalBoss,1,textDatas[1],世界を救う,世界を救う,Save the World,Save the World,,,
+TextData:PauseText_finalBoss:2,TextData,sharedassets3.assets,489,PauseText_finalBoss,2,textDatas[2],がんばる,がんばる,stick to (one's opinion),Do your best,,,
+TextData:PauseText_timeattack:0,TextData,sharedassets3.assets,490,PauseText_timeattack,0,textDatas[0],ゲームをつづける,ゲームをつづける,Continue the game,Continue,,,
+TextData:PauseText_timeattack:1,TextData,sharedassets3.assets,490,PauseText_timeattack,1,textDatas[1],広場にもどる,広場にもどる,Return to the plaza,Return to Plaza,,,
+TextData:PauseText_timeattack:2,TextData,sharedassets3.assets,490,PauseText_timeattack,2,textDatas[2],リタイア,リタイア,retire,Retire,,,
+TextData:StageSelectText_WorldName:0,TextData,sharedassets4.assets,234,StageSelectText_WorldName,0,textDatas[0],"ステージ１
+シロップ平原","ステージ１
+シロップ平原","Stage1
+AAAAAA AAAAAA","Stage1
+Syrup Plains",,,
+TextData:StageSelectText_WorldName:1,TextData,sharedassets4.assets,234,StageSelectText_WorldName,1,textDatas[1],"ステージ２
+クッキー砂漠","ステージ２
+クッキー砂漠","Stage2
+AAAAAA AAAAAA","Stage2
+Cookie Sands",,,
+TextData:StageSelectText_WorldName:2,TextData,sharedassets4.assets,234,StageSelectText_WorldName,2,textDatas[2],"ステージ３
+マッチャ樹海","ステージ３
+マッチャ樹海","Stage3
+AAAAAA AAAAAA","Stage3
+Matcha Forest",,,
+TextData:StageSelectText_WorldName:3,TextData,sharedassets4.assets,234,StageSelectText_WorldName,3,textDatas[3],"ステージ４
+ベリー火山","ステージ４
+ベリー火山","Stage4
+AAAAAA AAAAAA","Stage4
+Berry Volcano",,,
+TextData:StageSelectText_WorldName:4,TextData,sharedassets4.assets,234,StageSelectText_WorldName,4,textDatas[4],"ステージ５
+フロート島","ステージ５
+フロート島","Stage5
+AAAAAA AAAAAA","Stage5
+Float Isle",,,
+TextData:StageSelectText_WorldName:5,TextData,sharedassets4.assets,234,StageSelectText_WorldName,5,textDatas[5],"ステージ６
+キャンディポリス","ステージ６
+キャンディポリス","Stage6
+AAAAAA AAAAAA","Stage6
+Candy Polis",,,
+TextData:StageSelectText_WorldName:6,TextData,sharedassets4.assets,234,StageSelectText_WorldName,6,textDatas[6],"ステージ７
+マカロンムーン","ステージ７
+マカロンムーン","Stage7
+AAAAAA AAAAAA","Stage7
+Macaron Moon",,,
+TextData:StageSelectText_WorldName:7,TextData,sharedassets4.assets,234,StageSelectText_WorldName,7,textDatas[7],"ステージ８
+-----","ステージ８
+-----","Stage8
+AAAAAA AAAAAA",-----,,,
+TextData:TaongaMiniTalk_default:0,TextData,sharedassets14.assets,35,TaongaMiniTalk_default,0,textDatas[0],......,......,......,......,,,
+TextData:TaongaMiniTalk_default:1,TextData,sharedassets14.assets,35,TaongaMiniTalk_default,1,textDatas[1],子どもたちよ...,子どもたちよ...,Children...,Kids...,,,
+TextData:TaongaMiniTalk_talked:0,TextData,sharedassets14.assets,36,TaongaMiniTalk_talked,0,textDatas[0],油断は禁物です,油断は禁物です,Be on your guard.,Don't let your guard down.,,,
+TextData:TaongaMiniTalk_talked:1,TextData,sharedassets14.assets,36,TaongaMiniTalk_talked,1,textDatas[1],冒険を続けましょう,冒険を続けましょう,Let the adventure continue!,Let’s keep the adventure going!,,,
+TextData:TreasureText_default:0,TextData,sharedassets3.assets,491,TreasureText_default,0,textDatas[0],？？？,？？？,?,???,,,
+TextData:TreasureText_default:1,TextData,sharedassets3.assets,491,TreasureText_default,1,textDatas[1],Unknown Treasure,Unknown Treasure,"Not found yet,
+unknown treasure.","A secret treasure, still waiting to be found!",,,
+TextData:TreasureText_stage01:0,TextData,sharedassets3.assets,492,TreasureText_stage01,0,textDatas[0],つるぎのペンダント,つるぎのペンダント,Tsurugi pendant,Pendant of Blades,,,
+TextData:TreasureText_stage01:1,TextData,sharedassets3.assets,492,TreasureText_stage01,1,textDatas[1],"剣をかたどった
+ペンダント。
+サヤには　ドラゴンが
+大きく彫られている。","剣をかたどった
+ペンダント。
+サヤには　ドラゴンが
+大きく彫られている。","A pendant in the shape of a sword.
+pendant in the shape of a sword.
+A dragon is carved
+is carved on the sheath.","A pendant shaped like a sword, with a dragon carved into the sheath.",,,
+TextData:TreasureText_stage02:0,TextData,sharedassets3.assets,493,TreasureText_stage02,0,textDatas[0],"つりざお
+","つりざお
+","fishing rod
+",Fishing Rod,,,
+TextData:TreasureText_stage02:1,TextData,sharedassets3.assets,493,TreasureText_stage02,1,textDatas[1],"すごく魚が釣れる
+つりざお。
+これであなたも
+釣りマスターだ！","すごく魚が釣れる
+つりざお。
+これであなたも
+釣りマスターだ！","Very fishable.
+Fishing rod.
+Now you can be
+a fishing master!",An amazing fishing rod that catches tons of fish. You’re a fishing master now!,,,
+TextData:TreasureText_stage03:0,TextData,sharedassets3.assets,494,TreasureText_stage03,0,textDatas[0],しょうたいけん,しょうたいけん,invitation ticket,Invitation Card,,,
+TextData:TreasureText_stage03:1,TextData,sharedassets3.assets,494,TreasureText_stage03,1,textDatas[1],"とあるケーキ屋さんの
+特別招待券。
+プレーンくんが
+譲ってくれた。","とあるケーキ屋さんの
+特別招待券。
+プレーンくんが
+譲ってくれた。","A certain cake shop.
+Special invitation ticket.
+Mr. Plain gave it to me.
+gave it to me.",A special invite to a cake shop. Mr. Plain gave it to you.,,,
+TextData:TreasureText_stage04:0,TextData,sharedassets3.assets,495,TreasureText_stage04,0,textDatas[0],しんぴのほうせき,しんぴのほうせき,true autograph,Mystical gem,,,
+TextData:TreasureText_stage04:1,TextData,sharedassets3.assets,495,TreasureText_stage04,1,textDatas[1],"ベリー火山でとれた
+緑色の宝石。
+縁起物として知られ、
+重宝されている。","ベリー火山でとれた
+緑色の宝石。
+縁起物として知られ、
+重宝されている。","Taken from the Berry Volcano.
+Green gemstone.
+Known as a good luck charm,
+It is known as a good luck charm and is highly valued.","A green gem from Berry Volcano. Known as a lucky charm, it’s highly prized.",,,
+TextData:TreasureText_stage05:0,TextData,sharedassets3.assets,496,TreasureText_stage05,0,textDatas[0],あけとくれのしずく,あけとくれのしずく,having the drops of dawn and evening,Drops of Dawn and Dusk,,,
+TextData:TreasureText_stage05:1,TextData,sharedassets3.assets,496,TreasureText_stage05,1,textDatas[1],"海岸でもらった
+不思議なアクセサリー。
+持っているだけで
+力がみなぎる。","海岸でもらった
+不思議なアクセサリー。
+持っているだけで
+力がみなぎる。","I got it at the beach.
+A mysterious accessory.
+Just by holding it
+I feel powerful just by holding it.","A mysterious accessory 
+from the beach. 
+Just holding it 
+fills you with energy.",,,
+TextData:TreasureText_stage06:0,TextData,sharedassets3.assets,497,TreasureText_stage06,0,textDatas[0],おんがくディスク,おんがくディスク,music disk,Music Disk,,,
+TextData:TreasureText_stage06:1,TextData,sharedassets3.assets,497,TreasureText_stage06,1,textDatas[1],"これまでの冒険で
+聴いたことのある曲が
+収録されたディスク。","これまでの冒険で
+聴いたことのある曲が
+収録されたディスク。","In our previous adventures
+The songs you've heard on the
+The disc contains the songs that you have heard","A disc containing songs 
+you’ve heard throughout 
+your journey.",,,
+TextData:車掌NPCMiniTalk_default:0,TextData,sharedassets105.assets,107,車掌NPCMiniTalk_default,0,textDatas[0],すごい......！,すごい......！,Great ......!,Amazing...!,,,
+TextData:車掌NPCMiniTalk_default:1,TextData,sharedassets105.assets,107,車掌NPCMiniTalk_default,1,textDatas[1],ありがとう！,ありがとう！,Thank you!,Thank you!,,,
+TextData:車掌NPCMiniTalk_impossible:0,TextData,sharedassets105.assets,108,車掌NPCMiniTalk_impossible,0,textDatas[0],たすけてー！！,たすけてー！！,Help!,Help meee!,,,
+TextData:車掌NPCMiniTalk_impossible:1,TextData,sharedassets105.assets,108,車掌NPCMiniTalk_impossible,1,textDatas[1],わーっ！！,わーっ！！,Wow!,Aaaah!,,,
+TextData:車掌NPCMiniTalk_impossible:2,TextData,sharedassets105.assets,108,車掌NPCMiniTalk_impossible,2,textDatas[2],だれかー！！,だれかー！！,Anyone!,Somebody!,,,
+TextData:車掌NPCMiniTalk_impossible:3,TextData,sharedassets105.assets,108,車掌NPCMiniTalk_impossible,3,textDatas[3],ひぃーっ！,ひぃーっ！,Hee!,Yikes!,,,

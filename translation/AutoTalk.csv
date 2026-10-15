@@ -1,0 +1,1886 @@
+﻿id,kind,file,path_id,source,index,path,comment,text_ja,text_en_machine,text_en,text_fr,text_es,text_zh_Hans
+AutoTalk:AutoTalkData_NPC_S1_Neru:0,AutoTalk,sharedassets29.assets,11,AutoTalkData_NPC_S1_Neru,0,talkDatas[0],wait=0.50 speaker=1,"オレ......　こんな高いところ
+初めて登ったよ！",I... I've never been up this high!,I... I've never climbed so high before!,,,
+AutoTalk:AutoTalkData_NPC_S1_Neru:1,AutoTalk,sharedassets29.assets,11,AutoTalkData_NPC_S1_Neru,1,talkDatas[1],wait=0.50 speaker=1,"ココから先は　ちょっとコワくて進めないから...
+みんなは　慎重にね！　","It's a little scary out there, so...
+So be careful!","I can't go any further, it's too scary...
+You all, be careful!",,,
+AutoTalk:AutoTalkData_NPC_S1_Seedra:0,AutoTalk,sharedassets21.assets,12,AutoTalkData_NPC_S1_Seedra,0,talkDatas[0],wait=0.50 speaker=1,"こんにちはっ！
+きみたち、　冒険は初めて？","Hello!
+Are you guys new to this adventure?","Hello!
+Is this your first adventure?",,,
+AutoTalk:AutoTalkData_NPC_S1_Seedra:1,AutoTalk,sharedassets21.assets,12,AutoTalkData_NPC_S1_Seedra,1,talkDatas[1],wait=0.50 speaker=1,"旅の途中で　出会ったヒトに　話しかけると、
+きっと　何かいいことが　起こるよ。　","If you talk to people you meet
+on your journey,
+Something good will surely happen.","If you talk to people you meet on your
+journey, something good might happen!",,,
+AutoTalk:AutoTalkData_NPC_S1_Seedra:2,AutoTalk,sharedassets21.assets,12,AutoTalkData_NPC_S1_Seedra,2,talkDatas[2],wait=0.50 speaker=1,"......僕は　みんなと　お話しできたのが
+　　　よかったこと　かな！",...I guess it was good that I got to talk to everyone!,"...I think the best part
+was talking to all of you!",,,
+AutoTalk:AutoTalkData_NPC_S2_Tamayura:0,AutoTalk,sharedassets36.assets,11,AutoTalkData_NPC_S2_Tamayura,0,talkDatas[0],wait=0.50 speaker=1,"うわああ！
+風が強すぎて　吹き飛ばされちゃう！","Oh, my gosh!
+It's too windy. I'll get blown away!","Wow!
+The wind's so strong,
+I might be blown away!",,,
+AutoTalk:AutoTalkData_NPC_S2_Tamayura:1,AutoTalk,sharedassets36.assets,11,AutoTalkData_NPC_S2_Tamayura,1,talkDatas[1],wait=0.50 speaker=1,"...いや、　もしかして　風に身を任せて
+飛ばされちゃったほうが　楽しいかも！？",...But maybe it would be more fun to just let the wind blow you away!,"...Or maybe it’d be more fun
+to just let the wind take me!",,,
+AutoTalk:AutoTalkData_NPC_S3_Gadhia:0,AutoTalk,sharedassets40.assets,20,AutoTalkData_NPC_S3_Gadhia,0,talkDatas[0],wait=0.50 speaker=1,こんにちは、　旅の方。,"Hello, Traveler.","Hello, Traveler.",,,
+AutoTalk:AutoTalkData_NPC_S3_Gadhia:1,AutoTalk,sharedassets40.assets,20,AutoTalkData_NPC_S3_Gadhia,1,talkDatas[1],wait=0.50 speaker=3,こんにちはっ！　きみは？,Hello! Who are you?,Hi there! Who are you?,,,
+AutoTalk:AutoTalkData_NPC_S3_Gadhia:2,AutoTalk,sharedassets40.assets,20,AutoTalkData_NPC_S3_Gadhia,2,talkDatas[2],wait=0.50 speaker=1,"僕は　依頼を受けて
+このあたりの　調査をしているものです。","I am a commissioned researcher.
+I am doing research in this area
+at the request of the company.","I was hired to investigate
+around here.",,,
+AutoTalk:AutoTalkData_NPC_S3_Gadhia:3,AutoTalk,sharedassets40.assets,20,AutoTalkData_NPC_S3_Gadhia,3,talkDatas[3],wait=0.50 speaker=1,"近くに　宝箱があるという　噂を聞きましたが.....
+一体どこに　あるんでしょうね？","I heard a rumor that
+there is a treasure chest nearby. .....
+I wonder where it is?","I heard there's a treasure chest nearby...
+I wonder where it could be?",,,
+AutoTalk:AutoTalkData_NPC_S3_Gadhia:4,AutoTalk,sharedassets40.assets,20,AutoTalkData_NPC_S3_Gadhia,4,talkDatas[4],wait=0.50 speaker=1,"...それにしても、こうして立ち止まってみると
+なんだか　心が落ち着く場所ですね。","...But when I stop here, it's a really relaxing place.","... This place feels so peaceful, 
+stopping here somehow makes me calm.",,,
+AutoTalk:AutoTalkData_NPC_S3_Lira:0,AutoTalk,sharedassets56.assets,10,AutoTalkData_NPC_S3_Lira,0,talkDatas[0],wait=0.50 speaker=1,"この森、　不気味な生き物が多くて
+なんだか　危険な香りがします......","There are so many creepy creatures
+in this forest.
+There is a dangerous scent in the air......","This forest has so many creepy creatures,
+it feels dangerous...",,,
+AutoTalk:AutoTalkData_NPC_S3_Lira:1,AutoTalk,sharedassets56.assets,10,AutoTalkData_NPC_S3_Lira,1,talkDatas[1],wait=0.50 speaker=1,"もしも　襲ってきたらと思うと......
+ううっ、怖いです！","Just think what would happen
+if they attacked me......
+Ugh, I'm scared!","If they attack us...
+Ugh, I'm scared!",,,
+AutoTalk:AutoTalkData_NPC_S3_Salia_0:0,AutoTalk,sharedassets112.assets,20,AutoTalkData_NPC_S3_Salia_0,0,talkDatas[0],wait=0.50 speaker=1,ワタシ、　一回ココに来てみたかったの！,I've always wanted to come here!,I’ve always wanted to come here!,,,
+AutoTalk:AutoTalkData_NPC_S3_Salia_0:1,AutoTalk,sharedassets112.assets,20,AutoTalkData_NPC_S3_Salia_0,1,talkDatas[1],wait=0.50 speaker=1,"念願の　キノコケーキ......！
+いただきまーす！！","I've been longing for
+a mushroom cake......!
+Bon appétit!","The long-awaited mushroom cake...
+Yum, here I go!!",,,
+AutoTalk:AutoTalkData_NPC_S3_Salia_1:0,AutoTalk,sharedassets112.assets,21,AutoTalkData_NPC_S3_Salia_1,0,talkDatas[0],wait=0.50 speaker=1,"キノコケーキ、おいしい～！
+あれっ、なんだか体の様子が......","Mushroom cake, yummy!
+Hmm, something about my body seems a bit off......","This mushroom cake is delicious~!
+Wait, I feel a little weird...",,,
+AutoTalk:AutoTalkData_NPC_S3_Salia_1:1,AutoTalk,sharedassets112.assets,21,AutoTalkData_NPC_S3_Salia_1,1,talkDatas[1],wait=1.00 speaker=1,わわわっ！,Wow!,W-w-whoa!,,,
+AutoTalk:AutoTalkData_NPC_S3_Salia_1:2,AutoTalk,sharedassets112.assets,21,AutoTalkData_NPC_S3_Salia_1,2,talkDatas[2],wait=0.50 speaker=1,"体が大きくなっちゃった......
+まあ、いいかっ！","I'm getting bigger......
+Oh well!","My body’s getting bigger...
+Well, it's fine!",,,
+AutoTalk:AutoTalkData_NPC_S3_Thystmare:0,AutoTalk,sharedassets58.assets,13,AutoTalkData_NPC_S3_Thystmare,0,talkDatas[0],wait=0.50 speaker=1,"このあたりの水は　キレイな紫色だねぇ～
+入ってみたら楽しいかな？","The water around here has
+a beautiful purple color.
+Would it be fun to go in?","The water here is such a pretty purple...
+I wonder if it's fun to jump in?",,,
+AutoTalk:AutoTalkData_NPC_S3_Thystmare:1,AutoTalk,sharedassets58.assets,13,AutoTalkData_NPC_S3_Thystmare,1,talkDatas[1],wait=0.50 speaker=6,毒だよ？！,"It's poison, right?","It's poisonous, though?!",,,
+AutoTalk:AutoTalkData_NPC_S3_Thystmare:2,AutoTalk,sharedassets58.assets,13,AutoTalkData_NPC_S3_Thystmare,2,talkDatas[2],wait=0.50 speaker=1,"そうなの！！？！
+......おうち帰って、ねようっと！","Really?!?!
+....Let's go home and sleep! ","Really?!
+...I think I’ll just head home and rest!",,,
+AutoTalk:AutoTalkData_NPC_S4_Aoziso:0,AutoTalk,sharedassets74.assets,13,AutoTalkData_NPC_S4_Aoziso,0,talkDatas[0],wait=0.50 speaker=1,"このあたり　すっごく暑いね......
+このままだと　体が溶けちゃいそう","It's been so hot around here......
+I feel like I'm going to melt.","It's been so hot around here......
+I feel like I'm going to melt.",,,
+AutoTalk:AutoTalkData_NPC_S4_Jorouda:0,AutoTalk,sharedassets70.assets,12,AutoTalkData_NPC_S4_Jorouda,0,talkDatas[0],wait=0.50 speaker=1,なんじゃ？幼気な竜の子たちじゃのう…,What is it? Young dragon cubs...,What's this? Little baby dragons...?,,,
+AutoTalk:AutoTalkData_NPC_S4_Jorouda:1,AutoTalk,sharedassets70.assets,12,AutoTalkData_NPC_S4_Jorouda,1,talkDatas[1],wait=0.50 speaker=1,"過酷な環境の中　此処までやってくるとは
+さぞ大変だったじゃろう。","I can't believe you made it this far
+in such a harsh environment.
+It must have been very hard work.","You've come all this way through
+such a harsh environment,
+it must've been tough journey.",,,
+AutoTalk:AutoTalkData_NPC_S4_Jorouda:2,AutoTalk,sharedassets70.assets,12,AutoTalkData_NPC_S4_Jorouda,2,talkDatas[2],wait=0.50 speaker=1,"安全な此の場所で、
+わっちと共に　心ゆくまで休んでいくがよい。","In this place of safety,
+rest with us to your heart's content.","Rest here in safety,
+take your time, and relax with me.",,,
+AutoTalk:AutoTalkData_NPC_S5_Fray:0,AutoTalk,sharedassets85.assets,28,AutoTalkData_NPC_S5_Fray,0,talkDatas[0],wait=0.50 speaker=1,"海だー！
+しおかぜが　きもちいいねっ","It's the sea!
+The sea breeze is so nice!","Sea!
+The salty breeze feels great!",,,
+AutoTalk:AutoTalkData_NPC_S5_Fray:1,AutoTalk,sharedassets85.assets,28,AutoTalkData_NPC_S5_Fray,1,talkDatas[1],wait=0.50 speaker=1,"このまま　水遊び
+しちゃおうっかなぁ......？",Should I just keep playing in the water...?,Maybe I should just play in the water...?,,,
+AutoTalk:AutoTalkData_NPC_S5_Hyoe:0,AutoTalk,sharedassets93.assets,55,AutoTalkData_NPC_S5_Hyoe,0,talkDatas[0],wait=0.50 speaker=1,"ゆったり　とんでたら
+こんな　とおくまできちゃった......！","I was flying leisurely, and I ended up coming this far...!","I was flying slowly and
+ended up this far!",,,
+AutoTalk:AutoTalkData_NPC_S5_Hyoe:1,AutoTalk,sharedassets93.assets,55,AutoTalkData_NPC_S5_Hyoe,1,talkDatas[1],wait=0.50 speaker=1,いそいで　かえらないと！,I'd better hurry up and go!,I have to hurry back!,,,
+AutoTalk:AutoTalkData_NPC_S5_Hyoe:2,AutoTalk,sharedassets93.assets,55,AutoTalkData_NPC_S5_Hyoe,2,talkDatas[2],wait=0.50 speaker=1,みんな　またね～～,See you all soon!,"See you later, everyone!",,,
+AutoTalk:AutoTalkData_NPC_S6_Bal:0,AutoTalk,sharedassets107.assets,14,AutoTalkData_NPC_S6_Bal,0,talkDatas[0],wait=0.50 speaker=1,"今日は　冷え込むなぁ。
+カゼひかないように　気を付けてね。","It's cold today.
+Be careful not to catch a cold.","Today’s cold...
+Stay warm and don’t catch a cold!",,,
+AutoTalk:AutoTalkData_NPC_S6_Leary:0,AutoTalk,sharedassets114.assets,20,AutoTalkData_NPC_S6_Leary,0,talkDatas[0],wait=0.10 speaker=13,"私と　プレーンくんは　おなじ星から
+やってきた　ケーキドラゴンよ。","Mr. Plain and I are both cake dragons
+from the same planet.","Plain and I are cake dragons
+from the same planet.",,,
+AutoTalk:AutoTalkData_NPC_S6_Leary:1,AutoTalk,sharedassets114.assets,20,AutoTalkData_NPC_S6_Leary,1,talkDatas[1],wait=0.10 speaker=13,"もし　フィズくんたちが　私たちの星に
+来ることがあれば...","If Mr. fiz and his friends ever come
+to our planet...","If you ever come to our planet, Fiz... ",,,
+AutoTalk:AutoTalkData_NPC_S6_Leary:2,AutoTalk,sharedassets114.assets,20,AutoTalkData_NPC_S6_Leary,2,talkDatas[2],wait=0.10 speaker=13,そのときは　みんなで　遊びたいわね！,I hope we can all play together then!,We will all play together!,,,
+AutoTalk:AutoTalkData_NPC_S6_Terukku:0,AutoTalk,sharedassets105.assets,109,AutoTalkData_NPC_S6_Terukku,0,talkDatas[0],wait=0.50 speaker=1,"やあ！　こんにちは。
+君たちは　この列車に乗るのは　初めて？","Hi!　Hello.
+Is this your first time on this train?","Hey!
+Is this your first time on this train?",,,
+AutoTalk:AutoTalkData_NPC_S6_Terukku:1,AutoTalk,sharedassets105.assets,109,AutoTalkData_NPC_S6_Terukku,1,talkDatas[1],wait=0.50 speaker=1,"実は俺、　
+今日　初めて乗ってみたんだけど......","Actually me,
+I rode it for the first time today......","I actually just got on today
+for the first time...",,,
+AutoTalk:AutoTalkData_NPC_S6_Terukku:2,AutoTalk,sharedassets105.assets,109,AutoTalkData_NPC_S6_Terukku,2,talkDatas[2],wait=0.50 speaker=1,"都会なのに　緑に囲まれながら
+移動できるなんて　便利だなあ！",It's so convenient to be able to move around while being surrounded by greenery even in the city!,"Even though it's a city,
+it's nice being surrounded by greenery!",,,
+AutoTalk:AutoTalkData_NPC_S6_Terukku:3,AutoTalk,sharedassets105.assets,109,AutoTalkData_NPC_S6_Terukku,3,talkDatas[3],wait=0.50 speaker=6,（ちゃんと　役に立ってる......）,(It's really useful...),(Everything's working properly...),,,
+AutoTalk:AutoTalkData_NPC_S6_Zia:0,AutoTalk,sharedassets109.assets,62,AutoTalkData_NPC_S6_Zia,0,talkDatas[0],wait=0.50 speaker=1,"そこの店から　ウマソ～なニオイがするから
+フラッと　入ってみたんだけどよ......","I could smell something delicious in there.
+So I just walked in...","I smelled something delicious
+from that store,
+so I decided to go in...",,,
+AutoTalk:AutoTalkData_NPC_S6_Zia:1,AutoTalk,sharedassets109.assets,62,AutoTalkData_NPC_S6_Zia,1,talkDatas[1],wait=0.50 speaker=1,"なんでかしらねェが
+即　追い出されたぞ！！","I don't know why, but I was kicked out straight away!","I don’t know why, but
+I was immediately kicked out!!",,,
+AutoTalk:AutoTalkData_NPC_S7_Creator:0,AutoTalk,sharedassets112.assets,24,AutoTalkData_NPC_S7_Creator,0,talkDatas[0],wait=0.50 speaker=1,"（コンピューターを使って
+　ゲームを　作っている）",(I use a computer to create games),"(He is busy making games
+on his computer.)",,,
+AutoTalk:AutoTalkData_NPC_S7_Creator:1,AutoTalk,sharedassets112.assets,24,AutoTalkData_NPC_S7_Creator,1,talkDatas[1],wait=0.50 speaker=1,"（......と思いきや　今は
+　ネットサーフィンを　しているようだ）","(...I thought so, but it looks like 
+I'm surfing the internet right now)","(...... On closer inspection, 
+he appears to be surfing the net.)",,,
+AutoTalk:AutoTalkData_NPC_S7_Ramla:0,AutoTalk,sharedassets129.assets,28,AutoTalkData_NPC_S7_Ramla,0,talkDatas[0],wait=0.50 speaker=1,ここまでたどりつくとは、面白い個体ですね？,"I'm surprised you got this far. You're a fascinating one, aren't you?
+",Interesting individual to have made it this far.,,,
+AutoTalk:AutoTalkData_NPC_S7_Ramla:1,AutoTalk,sharedassets129.assets,28,AutoTalkData_NPC_S7_Ramla,1,talkDatas[1],wait=0.50 speaker=1,"貴方達が　この先で　何を成すのか、
+見届けさせてもらいましょう!","Let's see what you will accomplish
+in the future,
+We'll see what you can do!","Let me see what you'll accomplish.
+I’ll watch closely!",,,
+AutoTalk:AutoTalkData_NPC_S7_Yoyami:0,AutoTalk,sharedassets123.assets,21,AutoTalkData_NPC_S7_Yoyami,0,talkDatas[0],wait=0.50 speaker=1,"こんなにたくさん　ひとが来るなんて
+めずらしいなぁ......。","I can't believe so many people came.
+It's rare to see so many people...",It’s rare to see so many people coming here.,,,
+AutoTalk:AutoTalkData_NPC_S7_Yoyami:1,AutoTalk,sharedassets123.assets,21,AutoTalkData_NPC_S7_Yoyami,1,talkDatas[1],wait=0.50 speaker=1,"みんな　ここまで来るの　大変だったでしょ。
+ボクのおなかの上で　寝かせてあげようか？","It must have been hard for you all
+to get here. Do you want me
+to let you sleep on my tummy?","Everyone must’ve had a tough time
+getting here.
+Want to sleep on my belly?",,,
+AutoTalk:AutoTalkData_NPC_S7_Yoyami:2,AutoTalk,sharedassets123.assets,21,AutoTalkData_NPC_S7_Yoyami,2,talkDatas[2],wait=0.50 speaker=3,"えっ...！！
+おなかの上なんて、そんな......！","Eh...!
+On your tummy, that's such a...!","What...?!
+Sleep on your belly...!?",,,
+AutoTalk:AutoTalkData_NPC_S7_Yoyami:3,AutoTalk,sharedassets123.assets,21,AutoTalkData_NPC_S7_Yoyami,3,talkDatas[3],wait=0.50 speaker=1,......なんてね！,...Just kidding!,...Just kidding!,,,
+AutoTalk:Def_God_0Ryu:0,AutoTalk,sharedassets9.assets,618,Def_God_0Ryu,0,talkDatas[0],wait=0.10 speaker=8,"私の加護によって　あなたたちは
+何度でも蘇ることが　できるのです。","With my blessing,
+you can come back
+to life again and again.","Thanks to my blessing,
+you are able to come back to life
+as many times as you need.",,,
+AutoTalk:Def_God_0Ryu:1,AutoTalk,sharedassets9.assets,618,Def_God_0Ryu,1,talkDatas[1],wait=0.10 speaker=8,"だからといって　無理はせず、
+作戦を立てて　勝負に挑むのですよ。","But with that said, don't be reckless. Come up with a strategy and then take on the fight.","But don’t push it,
+plan your strategy before taking on
+a challenge.",,,
+AutoTalk:Def_God_0Ryu:2,AutoTalk,sharedassets9.assets,618,Def_God_0Ryu,2,talkDatas[2],wait=0.10 speaker=2,"神サマのおかげで　何回死んでも
+再挑戦できるってコトだな！　","Thanks to god, no matter how many times I die, I can always try again!","So basically, even if we die, we can 
+try again thanks to the god’s power!",,,
+AutoTalk:Def_God_0Ryu:3,AutoTalk,sharedassets9.assets,618,Def_God_0Ryu,3,talkDatas[3],wait=0.10 speaker=8,............。,.............,.............,,,
+AutoTalk:Def_God_1Fiz:0,AutoTalk,sharedassets9.assets,619,Def_God_1Fiz,0,talkDatas[0],wait=0.10 speaker=8,"私は　あなたたちを見守りながら
+様々な加護を　与えています。",I am watching over you and bestowing various blessings upon you.,"I am always watching over you, 
+granting various forms of blessings.",,,
+AutoTalk:Def_God_1Fiz:1,AutoTalk,sharedassets9.assets,619,Def_God_1Fiz,1,talkDatas[1],wait=0.10 speaker=8,"例えば、身を守るための道具を
+無限に　使えるようにしたり......","For example, tools for self-defense.
+They can be used infinitely...","For example, I’ve made it so you can 
+use protective tools without limit...",,,
+AutoTalk:Def_God_1Fiz:2,AutoTalk,sharedassets9.assets,619,Def_God_1Fiz,2,talkDatas[2],wait=0.10 speaker=3,"えっ！　どこからか出てくる　ぼくの
+ハンマーって　そういう事だったの.....！？",What?! Is that why my hammer appeared out of nowhere...?,"Wait, so that hammer of mine that just 
+pops outta nowhere...
+That’s because of you!?",,,
+AutoTalk:Def_God_1Fiz:3,AutoTalk,sharedassets9.assets,619,Def_God_1Fiz,3,talkDatas[3],wait=0.10 speaker=8,"そうですね。　ほかの道具のほうが
+良かったでしょうか？",Yes. Would other tools have been better?,"Yes, indeed. Maybe other tools 
+would have been better?",,,
+AutoTalk:Def_God_1Fiz:4,AutoTalk,sharedassets9.assets,619,Def_God_1Fiz,4,talkDatas[4],wait=0.10 speaker=3,"いや......　けっこう便利だから
+気に入ってるよ......","No, really... I'm quite fond of it because it's actually pretty handy...","Nah... it's actually really useful, 
+so I kinda like it...",,,
+AutoTalk:Def_God_2Rub:0,AutoTalk,sharedassets9.assets,620,Def_God_2Rub,0,talkDatas[0],wait=0.10 speaker=8,"オーブには　虹のように、
+７種類の色が存在しています。","Orbs come in seven different colors, like a rainbow.","Orbs exist in seven different colors, 
+much like a rainbow.",,,
+AutoTalk:Def_God_2Rub:1,AutoTalk,sharedassets9.assets,620,Def_God_2Rub,1,talkDatas[1],wait=0.10 speaker=8,"ドラゴンは　ひとつのオーブの力によって　生まれ
+その色が　体に反映されるのです。","Dragons are born from the power of a single orb, whose color is reflected on their bodies.
+","Dragons are born from the power of
+a single orb, and their body reflects
+the color of that origin.",,,
+AutoTalk:Def_God_2Rub:2,AutoTalk,sharedassets9.assets,620,Def_God_2Rub,2,talkDatas[2],wait=0.10 speaker=8,"そして　その体には　同色のオーブを蓄え
+守り抜ける力が　備わっているのです。",And their bodies are endowed with the power to store and protect orbs of the same color.,"They also have the ability to store orbs
+of the same color in their bodies
+and to protect them.",,,
+AutoTalk:Def_God_2Rub:3,AutoTalk,sharedassets9.assets,620,Def_God_2Rub,3,talkDatas[3],wait=0.10 speaker=4,"つまり　むらさき色のオーブが
+わたしの起源ってわけね",So the purple orb is my origin.,"So... that means the purple 
+orb is where I came from.",,,
+AutoTalk:Def_God_3Sor:0,AutoTalk,sharedassets9.assets,621,Def_God_3Sor,0,talkDatas[0],wait=0.10 speaker=5,タオンガって　ホントに神さまなのーー！？,Are you really a god?,"Taonga, are you really a god?",,,
+AutoTalk:Def_God_3Sor:1,AutoTalk,sharedassets9.assets,621,Def_God_3Sor,1,talkDatas[1],wait=0.10 speaker=8,ふふふ... どうでしょうか？,Hmmm... What do you think?,Hehe... Who knows?,,,
+AutoTalk:Def_God_3Sor:2,AutoTalk,sharedassets9.assets,621,Def_God_3Sor,2,talkDatas[2],wait=0.10 speaker=8,"だれかが神様だと思えば、
+それはもう　神様なのかもしれませんね。","If you think someone is god, then maybe they are god.","If someone truly believes in a god... 
+then perhaps, that belief makes it real.",,,
+AutoTalk:Def_God_3Sor:3,AutoTalk,sharedassets9.assets,621,Def_God_3Sor,3,talkDatas[3],wait=0.10 speaker=5,なにそれーーー！！！,What the heck is that!,What does that even mean!?,,,
+AutoTalk:Def_God_4Lea:0,AutoTalk,sharedassets9.assets,622,Def_God_4Lea,0,talkDatas[0],wait=0.10 speaker=8,"「立体保護区」には　必殺技が使えない
+奇妙な空間が　広がっています。",The '3D Protected Zone' is a strange space where special moves cannot be used.,"The Dimensional Sanctuary’s a strange
+place...
+and Special Moves won’t work here.",,,
+AutoTalk:Def_God_4Lea:1,AutoTalk,sharedassets9.assets,622,Def_God_4Lea,1,talkDatas[1],wait=0.10 speaker=8,"同じ方向に進み続けているのに、気づけば
+振り出しにもどってしまうことも　しばしば。","Even though we keep moving in the same direction, we often find ourselves back at square one.","Even if you keep going in the same 
+direction, you might end up back
+where you started.",,,
+AutoTalk:Def_God_4Lea:2,AutoTalk,sharedassets9.assets,622,Def_God_4Lea,2,talkDatas[2],wait=0.10 speaker=8,"しかし、空間の特性を利用できれば
+難なく　突破することができるでしょう。","However, if you can utilize the properties of space, you will be able to break through it with ease.","But if you use the space’s traits
+to your advantage, you can make it
+through without much trouble.",,,
+AutoTalk:Def_God_4Lea:3,AutoTalk,sharedassets9.assets,622,Def_God_4Lea,3,talkDatas[3],wait=0.10 speaker=6,"リーファーの矢も　そこで
+使いこなせるように　なりたいな...","I hope I can learn to master my arrows there, too...","I wanna get better at using
+Leafur’s arrows in there...",,,
+AutoTalk:Def_God_5Kyu:0,AutoTalk,sharedassets9.assets,623,Def_God_5Kyu,0,talkDatas[0],wait=0.10 speaker=8,"ドラゴンによって　得意な状況と
+そうでない状況は　異なるようです。",Dragons seem to have different situations in which they excel and those in which they do not.,"Each Dragon is strong in some stages, 
+but struggles in others too.",,,
+AutoTalk:Def_God_5Kyu:1,AutoTalk,sharedassets9.assets,623,Def_God_5Kyu,1,talkDatas[1],wait=0.10 speaker=8,"状況を見極め、協力し合って
+ステージを突破していきたいものです。","We need to assess the situation, work together, and get through the stages.","Let’s keep a sharp eye out and team up 
+to clear every Stage together.",,,
+AutoTalk:Def_God_5Kyu:2,AutoTalk,sharedassets9.assets,623,Def_God_5Kyu,2,talkDatas[2],wait=0.10 speaker=7,"水の中は　泳ぎがイチバン速い　俺の
+独壇場ってワケだ。　なあ？リュトロン？","I'm the fastest swimmer in the water.
+Right, Rythron? ","Underwater's my territory,
+I'm the fastest swimmer here.
+Right, Rythron?",,,
+AutoTalk:Def_God_5Kyu:3,AutoTalk,sharedassets9.assets,623,Def_God_5Kyu,3,talkDatas[3],wait=0.10 speaker=2,くッ......！　こいつ......,Damn... This guy...,Ghh... This guy...,,,
+AutoTalk:Def_God_Elec:0,AutoTalk,sharedassets9.assets,624,Def_God_Elec,0,talkDatas[0],wait=0.10 speaker=8,"おや......　繰り返し感電して
+命を　落としているようですね。",Oh... it seems you are repeatedly getting electrocuted and losing your life.,"Uh-oh... You got shocked again. 
+That’s another LIFE gone.",,,
+AutoTalk:Def_God_Elec:1,AutoTalk,sharedassets9.assets,624,Def_God_Elec,1,talkDatas[1],wait=0.10 speaker=8,"電撃は　一度だけでも命取りです。
+細心の注意を　払いましょう。","Even a single electric shock can be fatal.
+Be extremely careful.","One jolt is all it takes...
+Be extra careful around
+those zappy spots.",,,
+AutoTalk:Def_God_Fire:0,AutoTalk,sharedassets9.assets,625,Def_God_Fire,0,talkDatas[0],wait=0.10 speaker=8,"おや......　何度も炎に焼かれ
+命を　落としているようですね。",Oh... It seems that you have been burned by fire many times and lost your life.,"Oh... That fire’s burned you
+again and again... and again...",,,
+AutoTalk:Def_God_Fire:1,AutoTalk,sharedassets9.assets,625,Def_God_Fire,1,talkDatas[1],wait=0.10 speaker=8,"火炎に晒され続け
+平気でいられる体など　存在しません。",No body can be exposed to flames for long periods of time and still remain calm.,"No one can stand in flames forever. 
+You’ve gotta be more careful.",,,
+AutoTalk:Def_God_Fire:2,AutoTalk,sharedassets9.assets,625,Def_God_Fire,2,talkDatas[2],wait=0.10 speaker=8,"決して　燃え盛る炎に入ろうなどと
+考えては　いけませんよ。",Never think about stepping into a blazing fire.,"Don’t even think about
+diving into those flames, okay?",,,
+AutoTalk:Def_God_Stone:0,AutoTalk,sharedassets9.assets,626,Def_God_Stone,0,talkDatas[0],wait=0.10 speaker=8,"おや......　何度も力を奪われ
+石にされてしまった　ようですね......。",Oh... It seems you have been drained of power multiple times and turned to stone...,"Oof... Turned to stone again?
+That’s not a good look...",,,
+AutoTalk:Def_God_Stone:1,AutoTalk,sharedassets9.assets,626,Def_God_Stone,1,talkDatas[1],wait=0.10 speaker=8,"奴の光線は　非常に危険です。
+直接浴びないよう　慎重に進みましょう。","That thing's beam is extremely dangerous.
+Proceed with caution to avoid direct exposure.","That light beam is super dangerous.
+Try not to get hit directly.",,,
+AutoTalk:Def_God_Vore1:0,AutoTalk,sharedassets9.assets,627,Def_God_Vore1,0,talkDatas[0],wait=0.10 speaker=8,"なんども　捕食者に
+飲み込まれているようですが.....",It appears you're getting swallowed by predators over and over...,"Uhhh... You’ve been eaten
+by the predator. Again...",,,
+AutoTalk:Def_God_Vore1:1,AutoTalk,sharedassets9.assets,627,Def_God_Vore1,1,talkDatas[1],wait=0.50 speaker=8,"快楽を求め　自ら飛び込んで
+いるのでは　ないですよね？","You're not jumping into it for pleasure, are you?","Wait... you’re not jumping into 
+its mouth on purpose, are you...?",,,
+AutoTalk:Def_God_Vore2:0,AutoTalk,sharedassets9.assets,628,Def_God_Vore2,0,talkDatas[0],wait=0.10 speaker=8,"...そんなに　捕食されることが
+とりこになるようなことなのですか？",...Is being preyed upon so enthralling?,...Is it really that fun getting eaten!?,,,
+AutoTalk:Def_God_Vore2:1,AutoTalk,sharedassets9.assets,628,Def_God_Vore2,1,talkDatas[1],wait=0.10 speaker=8,私も今度　試してみましょうか。,I'll give it a try sometime.,Maybe I should give it a try next time...,,,
+AutoTalk:Def_God_Vore2:2,AutoTalk,sharedassets9.assets,628,Def_God_Vore2,2,talkDatas[2],wait=0.10 speaker=3,えっ                              ,What's up?,What's up?,,,
+AutoTalk:Def_God_Vore2:3,AutoTalk,sharedassets9.assets,628,Def_God_Vore2,3,talkDatas[3],wait=0.10 speaker=8,"まだ見ぬ快楽が　この世に存在するならば、
+ぜひこの身で　体験してみたいものですね。","If there is a pleasure in this world that I have not yet seen,
+I would like to experience it for myself.","If there’s a pleasure
+I haven’t felt in this world...
+I wanna feel it!",,,
+AutoTalk:Def_God_Vore2:4,AutoTalk,sharedassets9.assets,628,Def_God_Vore2,4,talkDatas[4],wait=0.10 speaker=5,"からだおおきいから
+食べられないんじゃない？",Aren't you too large to be eaten?,"Maybe you’re just too big
+to get eaten?",,,
+AutoTalk:Def_God_Vore2:5,AutoTalk,sharedassets9.assets,628,Def_God_Vore2,5,talkDatas[5],wait=0.10 speaker=8,"体の大きさなど、私にとっては　魔法で
+思いのままにできる　ささいなことです。","Regarding body size, it's a trivial matter for me, as I can manipulate it with magic as I wish.","Size means nothing to me.
+Magic can fix that easily.",,,
+AutoTalk:Def_God_Vore2:6,AutoTalk,sharedassets9.assets,628,Def_God_Vore2,6,talkDatas[6],wait=0.10 speaker=6,（神さま　変なスイッチ入っちゃった...）,（The god's...acting weird now...),(Oh no... We flipped a weird switch...),,,
+AutoTalk:Def_God_Water:0,AutoTalk,sharedassets9.assets,629,Def_God_Water,0,talkDatas[0],wait=0.10 speaker=8,"なんども　水に溺れて
+命を　落としているようですね。","You've drowned in the water so many times.
+It seems you have lost your life.","You’ve drowned again.
+That water’s no joke.",,,
+AutoTalk:Def_God_Water:1,AutoTalk,sharedassets9.assets,629,Def_God_Water,1,talkDatas[1],wait=0.10 speaker=8,"泳ぐことが苦手な　仲間を、
+無理に　泳がせてはなりませんよ。","If a friend is not good at swimming, don't force them to swim.","Don’t force someone to swim
+if they’re not good at it, okay?",,,
+AutoTalk:MovieTalk_OP:0,AutoTalk,sharedassets7.assets,676,MovieTalk_OP,0,talkDatas[0],wait=10.00 speaker=0,"宇宙のどこかにある星　惑星ロンガ。         
+ある日、この星で暮らす　こどものドラゴン
+「<color=#55FFFFFF>フィズ</color>」は夢を見ました。","Somewhere in the universe is the planet Longa.
+One day, a child dragon
+<color=#55FFFFFFF>Fiz</color>, who lives on this planet, had a dream.","Somewhere in space lies Planet Longa.
+One day, a young dragon named 
+<color=#55FFFFFF>Fiz</color> had a dream.",,,
+AutoTalk:MovieTalk_OP:1,AutoTalk,sharedassets7.assets,676,MovieTalk_OP,1,talkDatas[1],wait=10.00 speaker=0,"その夢は　世界がモノクロになり
+全ての生き物が　動かなくなってしまうという
+恐ろしい悪夢です。",The dream is a horrifying nightmare in which the world becomes monochrome and all living things stop moving.,"In the dream, the world went gray...
+All life froze in place...
+A terrifying nightmare.",,,
+AutoTalk:MovieTalk_OP:2,AutoTalk,sharedassets7.assets,676,MovieTalk_OP,2,talkDatas[2],wait=10.00 speaker=0,"目を覚ました<color=#55FFFFFF>フィズ</color>は、夢の内容が未来に
+起こりうることだと、目の前に現れた
+全知全能のドラゴン「<color=#FBF97AFF>タオンガ</color>」から告げられます。","When <color=#55FFFFFF>Fizz</color> wakes up, the all-knowing and all-powerful dragon <color=#FBF97AFF>Taonga</color> appears before him and tells him that the content of his dream is something that could happen in the future.","Awake, <color=#55FFFFFF>Fiz</color> learned his dream
+might come true,
+Taonga, the all-knowing dragon, warned.",,,
+AutoTalk:MovieTalk_OP:3,AutoTalk,sharedassets7.assets,676,MovieTalk_OP,3,talkDatas[3],wait=10.00 speaker=0,"そして、未来を変えるには　七匹のドラゴンが
+力を合わせて　世界に散らばるオーブを
+守らなければならない　というのです。","And to change the future, the seven dragons must join forces to protect the orbs scattered around the world.","To change that future, seven dragons
+must unite to guard the scattered
+Orbs across the world.",,,
+AutoTalk:MovieTalk_OP:4,AutoTalk,sharedassets7.assets,676,MovieTalk_OP,4,talkDatas[4],wait=20.00 speaker=0,"それを聞いて　決意した<color=#55FFFFFF>フィズ</color>は、
+世界を守るため、
+仲間を探す冒険へと　出発するのでした...。","Hearing this, <color=#55FFFFFFF>Fiz</color> made up his mind
+and set off on an adventure to find his companions,
+to protect the world...","Hearing this, <color=#55FFFFFF>Fiz</color> vowed
+to protect the world,
+and set off to find allies......",,,
+AutoTalk:MovieTalk_Stage2:0,AutoTalk,sharedassets7.assets,677,MovieTalk_Stage2,0,talkDatas[0],wait=2.00 speaker=3,わっ！,Wow!,Whoa!,,,
+AutoTalk:MovieTalk_Stage2:1,AutoTalk,sharedassets7.assets,677,MovieTalk_Stage2,1,talkDatas[1],wait=3.50 speaker=5,"ソラコだよっ
+よろしくね！","I'm Soraco!
+Nice to meet you!","I’m Soraco!
+Nice to meet you!",,,
+AutoTalk:MovieTalk_Stage3:0,AutoTalk,sharedassets49.assets,21,MovieTalk_Stage3,0,talkDatas[0],wait=2.50 speaker=5,"わーい！
+やっと　そとに出られた！","Yay!
+I'm finally out!","Yay!
+I’m finally outside!",,,
+AutoTalk:MovieTalk_Stage3:1,AutoTalk,sharedassets49.assets,21,MovieTalk_Stage3,1,talkDatas[1],wait=3.00 speaker=3,"穴に落ちた時は　この先
+どうなることかと　思ったよ……！","When I fell into the hole, I wondered what would happen to me...!","When I fell down that hole,
+I wondered what would happen!",,,
+AutoTalk:MovieTalk_Stage3:2,AutoTalk,sharedassets49.assets,21,MovieTalk_Stage3,2,talkDatas[2],wait=3.00 speaker=5,"ところで　ここはどこなんだろう？
+森の中　みたいだけど……","By the way, where are we?
+It looks like we're in the woods...","By the way, where am I?
+Looks like a forest...",,,
+AutoTalk:MovieTalk_Stage3:3,AutoTalk,sharedassets49.assets,21,MovieTalk_Stage3,3,talkDatas[3],wait=3.00 speaker=6,"そこにいる　ふたりっ！
+この森にくるのは　はじめてかな？
+","Two of you there!
+Is this your first time in these woods?
+","Hey, you two over there!
+First time in these woods?",,,
+AutoTalk:MovieTalk_Stage3:4,AutoTalk,sharedassets49.assets,21,MovieTalk_Stage3,4,talkDatas[4],wait=4.00 speaker=6,ほっ,whoosh,Phew.,,,
+AutoTalk:MovieTalk_Stage3:5,AutoTalk,sharedassets49.assets,21,MovieTalk_Stage3,5,talkDatas[5],wait=3.00 speaker=6,"はじめまして！　リーファーだよ！
+","Nice to meet you! I'm Leafur!
+","Nice to meet you!
+I’m Leafur!",,,
+AutoTalk:MovieTalk_Stage3:6,AutoTalk,sharedassets49.assets,21,MovieTalk_Stage3,6,talkDatas[6],wait=4.00 speaker=6,"ここは迷いやすくて　キケンな森だから、
+リーファーが　案内するねっ！","It's a dangerous forest where it's easy to get lost.
+I'll show you the way!","This forest’s easy to get lost in,  
+and full of danger.
+Leafur will guide you!",,,
+AutoTalk:MovieTalk_Stage4:0,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,0,talkDatas[0],wait=2.50 speaker=3,"みんな！
+こっちこっち！","Everyone!
+Over here!","Everyone!
+This way, over here!",,,
+AutoTalk:MovieTalk_Stage4:10,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,10,talkDatas[10],wait=3.00 speaker=2,"このあたりは　おれのナワバリだから
+こっちに　ついてこい！","This is my territory.
+Follow me!","This area is my territory,
+so stick close and follow me!",,,
+AutoTalk:MovieTalk_Stage4:11,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,11,talkDatas[11],wait=2.00 speaker=6,（だいじょうぶかな......）,(I'm not sure about this...),(I hope we’re okay...),,,
+AutoTalk:MovieTalk_Stage4:1,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,1,talkDatas[1],wait=3.00 speaker=5,"おおきな葉っぱの上から　飛ぶと
+こんな場所に　来れるんだぁ～！",So that's how you get to a place like this! You jump off a big leaf!,"If you jump from the giant leaf,
+you can reach places like this!",,,
+AutoTalk:MovieTalk_Stage4:2,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,2,talkDatas[2],wait=2.50 speaker=6,リーファー、あつくて　もうダメ......,"it's too hot, I'm done for...","Leafur, it’s so hot...
+I can’t take it anymore...",,,
+AutoTalk:MovieTalk_Stage4:3,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,3,talkDatas[3],wait=2.50 speaker=3,"あれ...　向こうから何かが
+飛んでくる......？",Huh... is something flying towards us from over there...?,"Huh... 
+Something’s flying this way?",,,
+AutoTalk:MovieTalk_Stage4:4,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,4,talkDatas[4],wait=2.00 speaker=3,うわっ！！,Wow!,Whoa!!,,,
+AutoTalk:MovieTalk_Stage4:5,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,5,talkDatas[5],wait=2.00 speaker=5,なになにっっ！！？？,What the hell?,What is that?!?!,,,
+AutoTalk:MovieTalk_Stage4:6,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,6,talkDatas[6],wait=3.00 speaker=8,"彼の名前はリュトロン。
+ここベリー火山に暮らす　炎のドラゴンです。","His name is Rythron.
+He is a fire dragon who lives here in the Berry Volcano.","His name is Rythron.
+He’s the fire Dragon
+of Berry Volcano.",,,
+AutoTalk:MovieTalk_Stage4:7,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,7,talkDatas[7],wait=4.10 speaker=8,"粘り強く　強敵に挑むことは　よいのですが...
+私の加護に　何度も頼るのは　考え物ですね。","It's all well and good to be tenacious in the face of a formidable foe, but...
+But relying on my blessing again and again is not a good idea.","It’s brave to face tough foes...
+but leaning on my blessing
+over and over is risky.",,,
+AutoTalk:MovieTalk_Stage4:8,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,8,talkDatas[8],wait=3.00 speaker=2,"ぐおおおおっ！！
+また負けたッ！　次こそは勝つ！！　",Grrrrr!! I lost again! Next time I'll win!!,"Guaaah!! I lost again!
+Next time I’ll win!!",,,
+AutoTalk:MovieTalk_Stage4:9,AutoTalk,sharedassets66.assets,54,MovieTalk_Stage4,9,talkDatas[9],wait=3.90 speaker=2,"あっ　お前ら　ちょうどいいところに！
+おれと一緒に　強いヤツを倒しに行こうぜ！","Oh, you guys are just in time! Let's go take down a strong one together!","Ah, you’re just in time!
+Come with me,
+let’s take down a tough foe!",,,
+AutoTalk:MovieTalk_Stage5:0,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,0,talkDatas[0],wait=2.50 speaker=3,わぁっ　海だー！！,"Wow, it's the ocean!","Wow, it's the ocean!!",,,
+AutoTalk:MovieTalk_Stage5:10,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,10,talkDatas[10],wait=3.00 speaker=2,ぐわっ！,Geez!,Gah!,,,
+AutoTalk:MovieTalk_Stage5:11,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,11,talkDatas[11],wait=4.00 speaker=7,"俺の名前はキューマ。　水中最速のドラゴンだ！
+この海のことなら　何でも任せてくれ！","My name is Kyuma.　I am the fastest dragon underwater!
+You can trust me with anything in this sea!","My name is Kyuma,
+the fastest dragon underwater!
+Trust me in this ocean!",,,
+AutoTalk:MovieTalk_Stage5:12,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,12,talkDatas[12],wait=3.00 speaker=2,なんなんだ　コイツ......,What is this guy...?,What is this guy...?,,,
+AutoTalk:MovieTalk_Stage5:1,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,1,talkDatas[1],wait=2.50 speaker=6,きれいな海！,Beautiful!,What a beautiful view!,,,
+AutoTalk:MovieTalk_Stage5:2,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,2,talkDatas[2],wait=3.00 speaker=5,"ここで　魚つりしたら
+いっぱい　つれそう...","If I go fishing here, I'm sure I'll catch a lot of fish...","If I fish here,
+I’d catch a ton...",,,
+AutoTalk:MovieTalk_Stage5:3,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,3,talkDatas[3],wait=2.00 speaker=2,............,............,............,,,
+AutoTalk:MovieTalk_Stage5:4,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,4,talkDatas[4],wait=3.00 speaker=3,あれっ　リュトロンくんどうしたの？,"Hey, Mr. Rythron, what's wrong?","Huh? Rythron, what’s wrong?",,,
+AutoTalk:MovieTalk_Stage5:5,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,5,talkDatas[5],wait=3.00 speaker=2,"どうしたもこうしたも、　こんな広い海で
+オーブを　見つけられるわけないだろ！！","Whatever we do, there's no way we'll find the orb in this vast ocean!!","There’s no way we’d find
+an Orb in this vast ocean!",,,
+AutoTalk:MovieTalk_Stage5:6,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,6,talkDatas[6],wait=3.00 speaker=5,"たしかにそうかも...
+オイラもリュトロンくんも、　およぎが苦手だし...","That may be true...
+Both myself and Ryutron are not good at swimming...","True...
+Neither Rythron nor I swim well...",,,
+AutoTalk:MovieTalk_Stage5:7,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,7,talkDatas[7],wait=2.00 speaker=7,そこの諸君！困っているようだな！,Hey guys! You seem to be in trouble!,"Hey, you there!
+You seem in trouble!",,,
+AutoTalk:MovieTalk_Stage5:8,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,8,talkDatas[8],wait=2.00 speaker=3,誰っ！？,Who's this!?,Who-!?,,,
+AutoTalk:MovieTalk_Stage5:9,AutoTalk,sharedassets82.assets,65,MovieTalk_Stage5,9,talkDatas[9],wait=0.50 speaker=7,はっ！,Huh!,Huh!,,,
+AutoTalk:MovieTalk_Stage6:0,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,0,talkDatas[0],wait=3.00 speaker=3,"わぁ～！
+きれいな夜景だね！","Wow!
+That's a beautiful night view!","Wow~!
+What a beautiful night view!",,,
+AutoTalk:MovieTalk_Stage6:1,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,1,talkDatas[1],wait=4.00 speaker=5,"お...　おっきい建物だらけ.....！
+オイラこんな街　はじめて見たよ！","Oh... Big buildings everywhere...
+I've never seen a town like this before!","Oh... so many tall buildings...! 
+I’ve never seen a city like this!",,,
+AutoTalk:MovieTalk_Stage6:2,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,2,talkDatas[2],wait=3.50 speaker=7,"俺は過去に　一度、　
+この街に　来たことがあるが......",I've been to this town once before...,"I’ve been here once before,",,,
+AutoTalk:MovieTalk_Stage6:3,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,3,talkDatas[3],wait=4.00 speaker=7,"その時は　道に迷って
+干からびかけたんだ...","At that time, I was lost and almost dried up...","but I got lost
+and almost dried up...",,,
+AutoTalk:MovieTalk_Stage6:4,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,4,talkDatas[4],wait=3.50 speaker=2,"なんだっ　オマエ
+方向音痴かよ！！？","What the hell, man?
+Are you directionally challenged?!","What, you’re terrible with directions!?",,,
+AutoTalk:MovieTalk_Stage6:5,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,5,talkDatas[5],wait=2.50 speaker=4,困っているようね...,You seem to be in trouble...,You seem in trouble...,,,
+AutoTalk:MovieTalk_Stage6:6,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,6,talkDatas[6],wait=2.50 speaker=6,わっ！　誰！？,Whoah! Who are you?,Whoa! Who?!,,,
+AutoTalk:MovieTalk_Stage6:7,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,7,talkDatas[7],wait=4.50 speaker=4,"私の名前は　ルーベル。
+ようこそ　キャンディポリスへ！","My name is Rubell.
+Welcome to Candy Polis!","I’m Rubell.
+Welcome to Candy Polis!",,,
+AutoTalk:MovieTalk_Stage6:8,AutoTalk,sharedassets99.assets,68,MovieTalk_Stage6,8,talkDatas[8],wait=5.00 speaker=4,"この街のことなら　わたしに任せて。
+どこへでも　連れて行ってあげる！","I'll take care of everything in town.
+I can take you anywhere you want to go!","I'll take care of everything in town.
+I can take you anywhere!",,,
+AutoTalk:MovieTalk_Stage7:0,AutoTalk,sharedassets119.assets,18,MovieTalk_Stage7,0,talkDatas[0],wait=3.50 speaker=3,"月にオーブがある...　って言われても、
+どうやって　あそこまで行けばいいんだろう...？",Even if you tell me there's an Orb on the moon... how am I supposed to get all the way up there...?,"They say there’s an Orb on the Moon...
+But how do we even get there?",,,
+AutoTalk:MovieTalk_Stage7:1,AutoTalk,sharedassets119.assets,18,MovieTalk_Stage7,1,talkDatas[1],wait=4.00 speaker=8,"......先ほどの戦いで　私は
+普段とは　異なる姿に　なっていました。","...In the recent battle, I had taken on a form different from my usual one.","...In the recent battle,
+I took an unfamiliar form.",,,
+AutoTalk:MovieTalk_Stage7:2,AutoTalk,sharedassets119.assets,18,MovieTalk_Stage7,2,talkDatas[2],wait=4.00 speaker=8,"私は　オーブの力があれば　望みの姿に
+変身できる能力を　もっているのです。","With the power of the Orb, I have the ability to transform into any form I wish.
+","I have the ability
+to transform as I wish
+with an Orb’s power.",,,
+AutoTalk:MovieTalk_Stage7:3,AutoTalk,sharedassets119.assets,18,MovieTalk_Stage7,3,talkDatas[3],wait=4.00 speaker=8,"この能力で　私が大きくなれば、　あなたたちを
+月へ運ぶことも　できるでしょう。","If I were to grow larger with this ability, I could even transport you to the moon.","With this power, if I grow large enough,
+I can carry you to the Moon!",,,
+AutoTalk:MovieTalk_Stage7:4,AutoTalk,sharedassets119.assets,18,MovieTalk_Stage7,4,talkDatas[4],wait=4.00 speaker=5,"ちっちゃくなったと思ったら、　今度は
+でっかくなるの...！　すごい、すごいよ！","Just when you think it's gotten small, it suddenly gets huge...! It's amazing!","First you shrink, then you grow huge...! 
+So amazing!",,,
+AutoTalk:MovieTalk_Stage7:5,AutoTalk,sharedassets119.assets,18,MovieTalk_Stage7,5,talkDatas[5],wait=4.00 speaker=8,"いえいえ。　皆さんが　この星のオーブを
+守っていなければ　私は何も　できませんでしたよ。
+
+","No, no. If you hadn't protected this planet's Orb, I wouldn't have been able to do anything.
+
+","No, no.
+Without you guarding this planet's Orb,
+I could have done nothing.",,,
+AutoTalk:MovieTalk_Stage7:6,AutoTalk,sharedassets119.assets,18,MovieTalk_Stage7,6,talkDatas[6],wait=4.00 speaker=8,"...さて。　次は向かうは　　敵の本拠地。
+この戦いに　終止符を打つのです！","...Now then, our next destination is the enemy's base. We must put an end to this battle!
+","...Now then.
+We head to the enemy’s base.
+We’ll end this battle!",,,
+AutoTalk:MovieTalk_Stage7:7,AutoTalk,sharedassets119.assets,18,MovieTalk_Stage7,7,talkDatas[7],wait=4.00 speaker=3,"うん......！　僕たちみんなで、
+世界を守る冒険へ　出発しよう！",Yes...! Let's all set out on an adventure to protect the world!,"Yeah...!
+Let’s all set out
+on a world-saving adventure!",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:0,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,0,talkDatas[0],wait=3.00 speaker=3,......！,...!,...!,,,
+AutoTalk:MovieTalk_Stage7_Epilogue:10,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,10,talkDatas[10],wait=3.50 speaker=8,"......みなさん全員で、
+家に帰るまでが　冒険ですよ！",...The adventure continues for all of us until we return home!,"...Our adventure doesn’t end
+until we all get home!",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:11,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,11,talkDatas[11],wait=3.00 speaker=3,"......！
+うん...！　そうだね......！","...!
+Yup...! That's right...!","...!
+Yeah... you’re right...!",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:12,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,12,talkDatas[12],wait=3.50 speaker=3,"さあ　みんなで帰ろう！
+僕たちの...　にじいろの星へ！","Let's go home, everyone! To our... rainbow planet!","Come on, let’s go home
+to our Rainbow Planet!",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:1,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,1,talkDatas[1],wait=3.50 speaker=3,僕たち、勝てたの......！？,We won...!?,We won...?!,,,
+AutoTalk:MovieTalk_Stage7_Epilogue:2,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,2,talkDatas[2],wait=3.50 speaker=5,"わぁっ、
+オーブがたくさん　あつまってるよ！","Wow, there are a lot of orbs!","Wow, so many Orbs gathered!",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:3,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,3,talkDatas[3],wait=3.50 speaker=6,"いろんな色がそろって
+キレイだね......！",It's so pretty with all the different colors...!,All the colors together... it’s beautiful!,,,
+AutoTalk:MovieTalk_Stage7_Epilogue:4,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,4,talkDatas[4],wait=3.50 speaker=2,"うおおおお！　なんだかパワーが
+みるみる　わいてきたぞぉ！！！",Woohooo! I feel a surge of power!,Whoaah! I can feel power surging!,,,
+AutoTalk:MovieTalk_Stage7_Epilogue:5,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,5,talkDatas[5],wait=3.50 speaker=7,"奪われていた　オーブの力が
+空間中に　あふれ出ているのか！",The power of the stolen orb is overflowing into space!,"Is the stolen Orb energy
+overflowing everywhere!?",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:6,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,6,talkDatas[6],wait=3.50 speaker=4,"......これで　わたしたちの世界は
+守られたのかしら？",...I wonder if this will save our world?,"...Does this mean our world
+is safe now?",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:7,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,7,talkDatas[7],wait=4.00 speaker=8,"ええ.......。　星の危機は過ぎ去り、
+色彩豊かな世界へと　戻ってゆくでしょう。
+","Yes... The threat to the planet will pass, and we will return to a world brimming with color.
+","Yes... the crisis has passed,
+and our vibrant world returns.",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:8,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,8,talkDatas[8],wait=3.00 speaker=8,"そして　忘れてはならないことが
+もうひとつ......。",And there's one more thing we must not forget...,"And there's one more thing
+we must not forget...",,,
+AutoTalk:MovieTalk_Stage7_Epilogue:9,AutoTalk,sharedassets136.assets,10,MovieTalk_Stage7_Epilogue,9,talkDatas[9],wait=2.50 speaker=5,えっ、まだ何かあるの！？,"Eh, is there something else?!","Huh, is there something else?!",,,
+AutoTalk:S11_1_0_T0:0,AutoTalk,sharedassets15.assets,69,S11_1_0_T0,0,talkDatas[0],wait=4.00 speaker=3,"あっ　トンネルが　ある！
+入ってみよう",,,,,
+AutoTalk:S11_1_0_T1:0,AutoTalk,sharedassets15.assets,70,S11_1_0_T1,0,talkDatas[0],wait=5.00 speaker=3,"この　コイン、
+なんだか　パワーが　あふれてくる！",,,,,
+AutoTalk:S11_1_0_T1:1,AutoTalk,sharedassets15.assets,70,S11_1_0_T1,1,talkDatas[1],wait=5.00 speaker=8,"コインにもオーブの力が込められています。
+きっと　旅の役に立つでしょう。",,,,,
+AutoTalk:S11_1_0_T2:0,AutoTalk,sharedassets15.assets,71,S11_1_0_T2,0,talkDatas[0],wait=4.00 speaker=3,穴には　落っこちないように　しなきゃ…,,,,,
+AutoTalk:S11_1_1_T0:0,AutoTalk,sharedassets7.assets,678,S11_1_1_T0,0,talkDatas[0],wait=4.00 speaker=3,やった！　オーブだ！,,,,,
+AutoTalk:S12_1_0_T1:0,AutoTalk,sharedassets14.assets,40,S12_1_0_T1,0,talkDatas[0],wait=4.00 speaker=3,"砂でできた　高いカベが　あって
+進めなさそうだね…",,,,,
+AutoTalk:S12_1_0_T1:1,AutoTalk,sharedassets14.assets,40,S12_1_0_T1,1,talkDatas[1],wait=3.00 speaker=5,だいじょうぶ！　オイラにまかせて！,,,,,
+AutoTalk:S12_1_0_T1:2,AutoTalk,sharedassets14.assets,40,S12_1_0_T1,2,talkDatas[2],wait=4.00 speaker=5,"オイラの　ひっかきこうげきで
+どんなあなでも　あけちゃうよっ！",,,,,
+AutoTalk:S12_1_0_T1:3,AutoTalk,sharedassets14.assets,40,S12_1_0_T1,3,talkDatas[3],wait=5.00 speaker=0,"ＰＣの場合は左シフトキー、
+ＰＡＤの場合は右トリガーで　ポーズを開きます。",,,,,
+AutoTalk:S12_1_0_T2:0,AutoTalk,sharedassets14.assets,41,S12_1_0_T2,0,talkDatas[0],wait=4.00 speaker=5,"わっ　みずが　たくさんある…
+オイラ　およぐのは　ニガテなんだ…",,,,,
+AutoTalk:S12_1_0_T3:0,AutoTalk,sharedassets14.assets,42,S12_1_0_T3,0,talkDatas[0],wait=4.00 speaker=3,"これは！　「必殺パワーの泉」！
+入ると　必殺パワーが　満タンになるんだって",,,,,
+AutoTalk:S12_1_0_T3:1,AutoTalk,sharedassets14.assets,42,S12_1_0_T3,1,talkDatas[1],wait=4.00 speaker=5,"エ！！！
+しらなかった！！！！",,,,,
+AutoTalk:S12_1_1_T0:0,AutoTalk,sharedassets38.assets,8,S12_1_1_T0,0,talkDatas[0],wait=2.00 speaker=5,............！,,,,,
+AutoTalk:S12_1_1_T0:1,AutoTalk,sharedassets38.assets,8,S12_1_1_T0,1,talkDatas[1],wait=4.00 speaker=5,（こおどりしている）,,,,,
+AutoTalk:S1_0_101_T0:0,AutoTalk,sharedassets15.assets,60,S1_0_101_T0,0,talkDatas[0],wait=3.50 speaker=3,さあ、冒険に　出発しよう！,"Alright, let's set off on our adventure!","Alright, let's set off on our adventure!",,,
+AutoTalk:S1_0_101_T0:1,AutoTalk,sharedassets15.assets,60,S1_0_101_T0,1,talkDatas[1],wait=5.00 speaker=8,"冒険には　危険がつきもの。
+しっかり　準備してから　ゆくのですよ。","Adventure is always dangerous.
+Be well prepared before you go.","Adventure always holds danger.
+Be sure you’re well prepared.",,,
+AutoTalk:S1_0_101_T1:0,AutoTalk,sharedassets15.assets,61,S1_0_101_T1,0,talkDatas[0],wait=5.00 speaker=8,"「方向キー」を　押すことで、
+自由に移動することが　できますよ。","You can move freely by pressing the """"direction keys.""""","Press the Directional Keys
+to move around.",,,
+AutoTalk:S1_0_101_T2:0,AutoTalk,sharedassets15.assets,62,S1_0_101_T2,0,talkDatas[0],wait=5.00 speaker=8,"そこにある　ターボン人形で
+一度　攻撃の練習を　してみましょう。",Let's practice some attacks with that Tabon doll over there.,"Try practicing your attacks
+on that Tabon dummy over there.",,,
+AutoTalk:S1_0_101_T3_1:0,AutoTalk,sharedassets15.assets,63,S1_0_101_T3_1,0,talkDatas[0],wait=1.50 speaker=8,すばらしい！,Wonderful!,Wonderful!,,,
+AutoTalk:S1_0_101_T3_1:1,AutoTalk,sharedassets15.assets,63,S1_0_101_T3_1,1,talkDatas[1],wait=4.00 speaker=8,"ターボンは　踏んで倒すこともできますから、
+試してみてくださいね。","You can also defeat Tabon by stepping on it, so give it a try!","You can stomp Tabon to defeat it,
+give it a try!",,,
+AutoTalk:S1_0_101_T3_2:0,AutoTalk,sharedassets15.assets,64,S1_0_101_T3_2,0,talkDatas[0],wait=1.50 speaker=8,すばらしい！,Wonderful!,Wonderful!,,,
+AutoTalk:S1_0_101_T3_2:1,AutoTalk,sharedassets15.assets,64,S1_0_101_T3_2,1,talkDatas[1],wait=4.00 speaker=8,"今のように、相手を上から踏むことでも
+ダメージを与えることが　できますよ。","Just like now, you can deal damage by jumping on your opponent from above.","You can also damage enemies by
+stomping from above, like that.",,,
+AutoTalk:S1_0_101_T4:0,AutoTalk,sharedassets15.assets,65,S1_0_101_T4,0,talkDatas[0],wait=4.00 speaker=3,"あれっ......　ここちょっと
+登りにくいな......",Huh... it's a bit hard to climb here...,"Huh... this part’s
+a bit tricky to climb...",,,
+AutoTalk:S1_0_101_T4:1,AutoTalk,sharedassets15.assets,65,S1_0_101_T4,1,talkDatas[1],wait=4.00 speaker=8,"「ダッシュ」と「ジャンプ」を
+組み合わせることを　意識しましょう。","Be mindful of combining """"dash"""" and """"jump"""".","Try combining Dash and Jump
+to make it easier.",,,
+AutoTalk:S1_0_101_T5 (DEMO):0,AutoTalk,sharedassets15.assets,66,S1_0_101_T5 (DEMO),0,talkDatas[0],wait=1.00 speaker=0,"この先の扉に入ると、デモ版の
+ステージセレクトに　移動します。","If you enter the door ahead, you'll move to the demo version's stage select.","Enter the door ahead to access
+the demo version's Stage Select.",,,
+AutoTalk:S1_0_101_T5 (DEMO):1,AutoTalk,sharedassets15.assets,66,S1_0_101_T5 (DEMO),1,talkDatas[1],wait=1.00 speaker=0,"本デモでは、選択したステージを
+最後まで　プレイすることができます。","In this demo, you can play through the selected stage to the end.","In this demo, you can play
+any selected stage to the end.",,,
+AutoTalk:S1_0_101_T5 (DEMO):2,AutoTalk,sharedassets15.assets,66,S1_0_101_T5 (DEMO),2,talkDatas[2],wait=1.00 speaker=0,"(補足情報)
+キャラクター切り替えは　ポーズメニュー！","(Additional information)
+To switch characters, use the pause menu!","(Additional information)
+ Switch characters from the Pause Menu!",,,
+AutoTalk:S1_0_101_T6:0,AutoTalk,sharedassets15.assets,67,S1_0_101_T6,0,talkDatas[0],wait=1.00 speaker=0,"おやくだち情報！
+～　フキダシについて　～","Bonus information!
+– About speech bubbles –","Bonus information!
+- About speech bubbles -",,,
+AutoTalk:S1_0_101_T6:1,AutoTalk,sharedassets15.assets,67,S1_0_101_T6,1,talkDatas[1],wait=1.00 speaker=0,"ステージ上で　フキダシを見つけたら、
+「↑」を押すことで　調べることができるぞ。","If you find a speech bubble on the stage, you can examine it by pressing """"↑.""""","If you find a speech bubble on the stage,
+you can examine it by pressing """"UP"""".",,,
+AutoTalk:S1_0_101_T6:2,AutoTalk,sharedassets15.assets,67,S1_0_101_T6,2,talkDatas[2],wait=1.00 speaker=0,"フキダシには　これらのようなバッジが
+ついているので、しっかり確認しよう！","The speech bubbles have badges like these, so be sure to check them out!","Speech bubbles  can have badges
+like these, so be sure to check them!",,,
+AutoTalk:S1_0_103_T0:0,AutoTalk,sharedassets17.assets,40,S1_0_103_T0,0,talkDatas[0],wait=0.50 speaker=3,ちょっと　休んでいこうかな......,I think I'll take a little rest...,I think I'll take a little rest...,,,
+AutoTalk:S1_0_103_T0:1,AutoTalk,sharedassets17.assets,40,S1_0_103_T0,1,talkDatas[1],wait=1.50 speaker=3,............,............,............,,,
+AutoTalk:S1_0_103_T0:2,AutoTalk,sharedassets17.assets,40,S1_0_103_T0,2,talkDatas[2],wait=1.00 speaker=1,フィズたちの体力が　回復した！,Fiz and his friends have recovered their physical strength!,"Fiz and his friends have
+regained their HP!",,,
+AutoTalk:S1_0_103_T0:3,AutoTalk,sharedassets17.assets,40,S1_0_103_T0,3,talkDatas[3],wait=0.50 speaker=3,よしっ！　まだまだ　がんばろう！,Alright! Let's keep it going!,Alright! Let's keep it going!,,,
+AutoTalk:S1_0_103_T1:0,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,0,talkDatas[0],wait=0.50 speaker=3,ちょっと　休んでいこうかな......,I think I'll take a little rest...,I think I'll take a little rest...,,,
+AutoTalk:S1_0_103_T1:1,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,1,talkDatas[1],wait=1.50 speaker=3,............,............,............,,,
+AutoTalk:S1_0_103_T1:2,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,2,talkDatas[2],wait=0.50 speaker=0,"ねえねえ......
+きこえる......？","Hey hey... 
+can you hear me...?","Hey hey... 
+can you hear me...?",,,
+AutoTalk:S1_0_103_T1:3,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,3,talkDatas[3],wait=0.50 speaker=3,（だ　誰......？　体が　うごかない......！）,(Who is that...? I can't move...!),(Wh-Who’s there...? I can’t move...!),,,
+AutoTalk:S1_0_103_T1:4,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,4,talkDatas[4],wait=1.50 speaker=1,............,............,............,,,
+AutoTalk:S1_0_103_T1:5,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,5,talkDatas[5],wait=2.00 speaker=1,"...こわくないよ。　安心して。
+たくさんの元気を　わけてあげるから。","...Don't be scared. Don't worry. 
+I'll give you lots of energy.","“Don’t be scared. It’s okay.
+I’ll share my energy with you.",,,
+AutoTalk:S1_0_103_T1:6,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,6,talkDatas[6],wait=1.00 speaker=3,"（いったい　なにを......
+　うわあああっ！！！）","(What on earth are you doing....
+Ahhhh!!!)",(What’s happening...? Aaaah!!!),,,
+AutoTalk:S1_0_103_T1:7,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,7,talkDatas[7],wait=1.50 speaker=1,"......
+フィズたちの体力が　とっても　回復した！","......
+Fizz and his friends have recovered tremendously!","...Fiz and the team got
+a huge health boost!",,,
+AutoTalk:S1_0_103_T1:8,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,8,talkDatas[8],wait=0.50 speaker=3,はっ......！！,Ha...!!,Huh...!!,,,
+AutoTalk:S1_0_103_T1:9,AutoTalk,sharedassets17.assets,41,S1_0_103_T1,9,talkDatas[9],wait=0.50 speaker=3,"ゆ......　夢......？
+いったい　なんだったんだろう......","A... a dream...?
+What on earth was that...?","A... dream...?
+What was that...?",,,
+AutoTalk:S1_0_103_T2:0,AutoTalk,sharedassets17.assets,42,S1_0_103_T2,0,talkDatas[0],wait=2.50 speaker=2,あっ やべぇ,Oh no!,Oh no!,,,
+AutoTalk:S1_0_103_T2:1,AutoTalk,sharedassets17.assets,42,S1_0_103_T2,1,talkDatas[1],wait=3.00 speaker=3,！？！？！？,！？！？！？,!?!?!?,,,
+AutoTalk:S1_0_1_T0:0,AutoTalk,sharedassets14.assets,37,S1_0_1_T0,0,talkDatas[0],wait=1.00 speaker=0,←　フィズの家,← Fiz's House,<- Fiz's House,,,
+AutoTalk:S1_1_1_T1:0,AutoTalk,sharedassets15.assets,68,S1_1_1_T1,0,talkDatas[0],wait=5.00 speaker=3,"この　コイン、
+なんだか　パワーが　あふれてくる！","This coin
+is overflowing with power!","This coin
+is overflowing with power!",,,
+AutoTalk:S1_1_1_T1:1,AutoTalk,sharedassets15.assets,68,S1_1_1_T1,1,talkDatas[1],wait=5.00 speaker=8,"オーブの力は　そのコインにも込められています。
+きっと　旅の役に立つでしょう。",The power of the Orbs is also contained in that coin. It will surely be useful for our journey.,"The Orbs’ power lives in these coins too.
+They’ll come in handy on your journey.",,,
+AutoTalk:S1_1_2_T0:0,AutoTalk,sharedassets19.assets,10,S1_1_2_T0,0,talkDatas[0],wait=4.00 speaker=3,穴には　落っこちないように　しなきゃ…,I need to be careful not to fall into the hole...,"I need to be careful not to
+fall into holes...",,,
+AutoTalk:S1_1_2_T1:0,AutoTalk,sharedassets19.assets,11,S1_1_2_T1,0,talkDatas[0],wait=4.00 speaker=3,ここは泳いで　渡るところだね,I guess this is where we swim across.,Looks like we have to swim across here.,,,
+AutoTalk:S1_2_0_T0:0,AutoTalk,sharedassets22.assets,2,S1_2_0_T0,0,talkDatas[0],wait=2.00 speaker=3,やった！　オーブだ！,Yay! An Orb!,Yay! An Orb!,,,
+AutoTalk:S1_2_0_T0:1,AutoTalk,sharedassets22.assets,2,S1_2_0_T0,1,talkDatas[1],wait=4.50 speaker=8,"その調子です　フィズ！
+このようにして　他のオーブも　集めていきましょう。","That's the spirit, Fiz! Let's collect the other Orbs like this.","Keep it up, Fiz!
+Let’s gather the rest of the Orbs like this!",,,
+AutoTalk:S1_2_1_T0:0,AutoTalk,sharedassets23.assets,2,S1_2_1_T0,0,talkDatas[0],wait=3.50 speaker=3,"ところで......
+このオーブって、いったい何なの？",By the way... what exactly are these Orbs?,"By the way...
+what exactly are Orbs?",,,
+AutoTalk:S1_2_1_T0:1,AutoTalk,sharedassets23.assets,2,S1_2_1_T0,1,talkDatas[1],wait=4.50 speaker=8,"オーブとは、　世界に色彩をあたえ
+この星のあらゆる生物の　力の源となる存在...",Orbs are entities that bring color to the world and serve as the source of power for all living beings on this planet...,"Orbs bring color to our world.
+They give power to all creatures.",,,
+AutoTalk:S1_2_1_T0:2,AutoTalk,sharedassets23.assets,2,S1_2_1_T0,2,talkDatas[2],wait=5.00 speaker=8,"それゆえ　力を独占しようとする者から
+幾度も狙われてきた　歴史があるのです。","Therefore, they have a history of being targeted many times by those who seek to monopolize their power.
+","Many greedy souls have hunted them
+again and again through the ages.",,,
+AutoTalk:S1_2_3_T0:0,AutoTalk,sharedassets25.assets,18,S1_2_3_T0,0,talkDatas[0],wait=4.00 speaker=8,"これは　「必殺パワーの泉」　です。
+必殺ワザを使うための力が　回復しますよ。",This is the 'Fountain of Ultimate Power.' It restores the energy needed to use special moves.,"Behold the Spring of Special Power.
+Use it to refill your Special Move.",,,
+AutoTalk:S1_2_3_T0:1,AutoTalk,sharedassets25.assets,18,S1_2_3_T0,1,talkDatas[1],wait=2.50 speaker=3,"そうなんだ......
+光がキレイだなぁ",I see... The light is beautiful.,"Oh... I see.
+The light’s so pretty...",,,
+AutoTalk:S1_3_3_T0:0,AutoTalk,sharedassets30.assets,13,S1_3_3_T0,0,talkDatas[0],wait=3.50 speaker=3,"ここは　「立体保護区」だから
+必殺技を　使っちゃダメ　みたいだね",It seems I can't use special moves here because this is a '3D Protection Zone.',"This is a Dimensional Sanctuary.
+Special Moves can’t be used here.",,,
+AutoTalk:S1_3_3_T0:1,AutoTalk,sharedassets30.assets,13,S1_3_3_T0,1,talkDatas[1],wait=3.00 speaker=3,（…立体保護区って　なんだろう？）,（...What could a 3D Protection Zone be?),"(...What exactly is this
+Dimensional Sanctuary?)",,,
+AutoTalk:S1_9_1_T0:0,AutoTalk,sharedassets32.assets,2,S1_9_1_T0,0,talkDatas[0],wait=2.00 speaker=3,"......
+あれはっ！？","...
+What is that!?","...
+What is that!?",,,
+AutoTalk:S1_9_1_T0:1,AutoTalk,sharedassets32.assets,2,S1_9_1_T0,1,talkDatas[1],wait=3.00 speaker=8,"どうやら　この塔を乗っ取ったターボンの
+親玉のようですね......。",It seems that this tower has been taken over by the Tabon leader...,"That’s the Tabon boss
+who seized this tower...",,,
+AutoTalk:S1_9_1_T0:2,AutoTalk,sharedassets32.assets,2,S1_9_1_T0,2,talkDatas[2],wait=3.00 speaker=8,"他とは　一線を画す　体力を持っているはずです。
+心して　掛かりましょう。",It should have a level of stamina that sets it apart from the others. Let's approach with caution.,"He has far more HP than the others. 
+Get ready for a tough fight.",,,
+AutoTalk:S1_9_1_T1:0,AutoTalk,sharedassets32.assets,3,S1_9_1_T1,0,talkDatas[0],wait=2.00 speaker=3,オーブが降ってきた！,An Orb is falling!,Orb is falling!,,,
+AutoTalk:S1_9_1_T1:1,AutoTalk,sharedassets32.assets,3,S1_9_1_T1,1,talkDatas[1],wait=3.00 speaker=8,"塔に収められていた　オーブを
+どうやら　隠し持っていたようですね。",It seems that the Orb stored in the tower was being hidden.,"He must have hidden the
+Orbs stored inside this tower!",,,
+AutoTalk:S1_9_1_T1:2,AutoTalk,sharedassets32.assets,3,S1_9_1_T1,2,talkDatas[2],wait=4.00 speaker=8,"これで　シロップ平原のオーブは
+全て　守られました。","With this, all the Orbs in Syrup Plains have been protected.","Now, the Syrup Plains
+Orbs are all safe!",,,
+AutoTalk:S1_God_1Fiz:0,AutoTalk,sharedassets9.assets,630,S1_God_1Fiz,0,talkDatas[0],wait=0.10 speaker=8,"ここシロップ平原と　クッキー砂漠の間に建つ
+木でできた　巨大な双子塔……",This is a giant wooden twin tower built between Syrup Plains and Orange Desert...,"Between Syrup Plains and
+Cookie Sands stands a great
+wooden Twin Tower.",,,
+AutoTalk:S1_God_1Fiz:1,AutoTalk,sharedassets9.assets,630,S1_God_1Fiz,1,talkDatas[1],wait=0.10 speaker=8,"そこには既に異星の生物、ターボンが
+数多く　住みついているようです。","It looks like many extraterrestrial beings, Tabons, have already made it their home.","The extraterrestrial Tabon 
+have settled here 
+in large numbers.",,,
+AutoTalk:S1_God_1Fiz:2,AutoTalk,sharedassets9.assets,630,S1_God_1Fiz,2,talkDatas[2],wait=0.10 speaker=3,"その塔に登って見渡せば　新しいオーブや
+仲間たちが　みつかるかな……？","If we climb that tower, will we be able to spot new Orbs and friends...?","If we climb that tower,
+maybe we’ll find new Orbs
+and even new friends...?",,,
+AutoTalk:S1_God_Def:0,AutoTalk,sharedassets9.assets,631,S1_God_Def,0,talkDatas[0],wait=0.10 speaker=8,"この星にある　いくつかのステージには
+それぞれ３つのオーブが　存在するようです。",There seem to be three Orbs in several stages on this planet.,"Each stage on this planet
+hides three Orbs to discover.",,,
+AutoTalk:S1_God_Def:1,AutoTalk,sharedassets9.assets,631,S1_God_Def,1,talkDatas[1],wait=0.10 speaker=8,"オーブの力が失われる未来を　防ぐため
+私たちが先に見つけ　守らねばなりません。","To prevent a future where the power of the Orbs is lost, we must find and protect them first.","To stop a future where Orbs 
+power are lost, we must find 
+them first and keep them safe.",,,
+AutoTalk:S1_PostDragon_01:0,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,0,talkDatas[0],wait=0.10 speaker=1,"こんにちは！
+フィズさんたちに　お届け物です！",,,,,
+AutoTalk:S1_PostDragon_01:1,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,1,talkDatas[1],wait=0.10 speaker=3,わあ！誰からだろう？,,,,,
+AutoTalk:S1_PostDragon_01:2,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,2,talkDatas[2],wait=1.50 speaker=1,"こちらです！
+......どうぞ！",,,,,
+AutoTalk:S1_PostDragon_01:3,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,3,talkDatas[3],wait=0.10 speaker=1,"フィズたちは、伝書竜から
+「<color=#ee7800FF>プレーンからの手紙</color>」を受け取った！",,,,,
+AutoTalk:S1_PostDragon_01:4,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,4,talkDatas[4],wait=0.10 speaker=3,1________________________________,,,,,
+AutoTalk:S1_PostDragon_01:5,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,5,talkDatas[5],wait=0.10 speaker=5,2________________________________,,,,,
+AutoTalk:S1_PostDragon_01:6,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,6,talkDatas[6],wait=0.10 speaker=6,3________________________________,,,,,
+AutoTalk:S1_PostDragon_01:7,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,7,talkDatas[7],wait=0.10 speaker=3,4________________________________,,,,,
+AutoTalk:S1_PostDragon_01:8,AutoTalk,sharedassets16.assets,12,S1_PostDragon_01,8,talkDatas[8],wait=0.00 speaker=0,,,,,,
+AutoTalk:S2_0_0_T0:0,AutoTalk,sharedassets14.assets,38,S2_0_0_T0,0,talkDatas[0],wait=6.00 speaker=5,"ここは　オイラがくらしてる　さばくなんだ！
+いっしょに　ぼうけんしよう！",This is the desert where I live! Let's go on an adventure together!,"This desert’s my home!
+Come on, let’s adventure here!",,,
+AutoTalk:S2_1_1_T0:0,AutoTalk,sharedassets35.assets,2,S2_1_1_T0,0,talkDatas[0],wait=6.00 speaker=3,"流砂だ！
+中に沈まないように　気をつけなきゃ",Quicksand! I need to be careful not to sink in!,"Quicksand ahead!
+Watch your step or you’ll sink!",,,
+AutoTalk:S2_1_2_T0:0,AutoTalk,sharedassets36.assets,12,S2_1_2_T0,0,talkDatas[0],wait=3.00 speaker=5,"このあたりは　かぜがつよいから
+きをつけて　すすもうね……！","The wind is strong around here, so let's proceed with caution...!","The wind’s strong here...
+Let’s move carefully!",,,
+AutoTalk:S2_1_2_T1:0,AutoTalk,sharedassets36.assets,13,S2_1_2_T1,0,talkDatas[0],wait=3.00 speaker=3,あっ　あんなところにコインが！,"Oh, there's a coin over there!","Hey, look!
+A Coin over there.",,,
+AutoTalk:S2_1_2_T1:1,AutoTalk,sharedassets36.assets,13,S2_1_2_T1,1,talkDatas[1],wait=3.00 speaker=5,"りゅうさの中に　こんなばしょがあったなんて！
+オイラ　しらなかった……",I didn't know there was a place like this in the quicksand!,"I never knew the quicksand
+hid a place like this!",,,
+AutoTalk:S2_1_3_T0:0,AutoTalk,sharedassets37.assets,2,S2_1_3_T0,0,talkDatas[0],wait=4.00 speaker=3,"砂でできた　高いカベが　あって
+進めなさそうだね…","There's a high wall made of sand, so it looks like we can't get through...","There’s a tall sand wall...
+we can’t get through here...",,,
+AutoTalk:S2_1_3_T0:1,AutoTalk,sharedassets37.assets,2,S2_1_3_T0,1,talkDatas[1],wait=3.00 speaker=5,だいじょうぶ！　オイラにまかせて！,No problem! Leave it to me!,No worries! Leave it to me!,,,
+AutoTalk:S2_1_3_T0:2,AutoTalk,sharedassets37.assets,2,S2_1_3_T0,2,talkDatas[2],wait=4.00 speaker=5,"オイラの　ひっかきこうげきで
+どんなあなでも　あけちゃうよっ！","With my scratching attack, I can open any hole!","With my claw strike,
+I can burrow through any hole!",,,
+AutoTalk:S2_1_3_T1:0,AutoTalk,sharedassets37.assets,3,S2_1_3_T1,0,talkDatas[0],wait=4.00 speaker=5,"わっ　みずが　たくさんある…
+オイラ　およぐのは　ニガテなんだ…","Wow, there's so much water... I'm not good at swimming...","Whoa, so much water...
+I’m not the best swimmer...",,,
+AutoTalk:S2_1_3_T1:1,AutoTalk,sharedassets37.assets,3,S2_1_3_T1,1,talkDatas[1],wait=4.00 speaker=8,"ドラゴンには　得意不得意が　ありますから、
+しっかりと　力を合わせて　進みましょう。","Dragons have their strengths and weaknesses, so let's work together and move forward.","Every Dragon has strengths
+and weaknesses. Let’s team up!",,,
+AutoTalk:S2_2_0_T0:0,AutoTalk,sharedassets38.assets,7,S2_2_0_T0,0,talkDatas[0],wait=2.00 speaker=5,............！,............！,............！,,,
+AutoTalk:S2_2_0_T0:1,AutoTalk,sharedassets38.assets,7,S2_2_0_T0,1,talkDatas[1],wait=4.00 speaker=5,（こおどりしている）,(Dancing),(doing a little dance),,,
+AutoTalk:S2_2_1_T0:0,AutoTalk,sharedassets39.assets,20,S2_2_1_T0,0,talkDatas[0],wait=4.00 speaker=3,"すごい......　砂漠の真ん中に
+こんなところが　あるなんて！",Amazing... I can't believe there's a place like this in the middle of the desert!,"Amazing... a spot like this
+in the middle of a desert!",,,
+AutoTalk:S2_2_1_T0:1,AutoTalk,sharedassets39.assets,20,S2_2_1_T0,1,talkDatas[1],wait=5.00 speaker=5,"すごいでしょ！
+オイラいつも　ここで釣りしてるんだ～",Isn't it great? I always fish here!,"Isn’t it awesome?
+I fish here all the time~",,,
+AutoTalk:S2_2_2_T0:0,AutoTalk,sharedassets40.assets,21,S2_2_2_T0,0,talkDatas[0],wait=5.00 speaker=5,"あっ　きをつけて！　ビリビリにさわると
+しびれて　ふき飛ばされちゃうよ！","Oh, be careful! If you touch it, you'll get shocked and blown away!","Watch out! Touch those zappers
+and you’ll get shocked away!",,,
+AutoTalk:S2_2_2_T0:1,AutoTalk,sharedassets40.assets,21,S2_2_2_T0,1,talkDatas[1],wait=5.00 speaker=5,"（オイラは　しびれにくい　からだだから
+　けっこう　ガマンできるけど......）
+",(I can endure it because I have a body that doesn't get paralyzed...),"(I’m pretty shock-resistant,
+so I can handle it...)",,,
+AutoTalk:S2_2_3_T0:0,AutoTalk,sharedassets41.assets,6,S2_2_3_T0,0,talkDatas[0],wait=6.00 speaker=3,"通り道が 前後に動いてる！
+手前と奥、どっちにも進めそうだね",The path is moving back and forth! It looks like we can go both forward and backward.,"This path moves back and forth!
+Both sides look passable!",,,
+AutoTalk:S2_2_3_T1:0,AutoTalk,sharedassets41.assets,7,S2_2_3_T1,0,talkDatas[0],wait=5.00 speaker=5,こっちは　いきどまりみたい......,This side seems to be a dead end...,This way seems like a dead end...,,,
+AutoTalk:S2_3_0_T0:0,AutoTalk,sharedassets43.assets,15,S2_3_0_T0,0,talkDatas[0],wait=1.50 speaker=5,うわあーっ！,Whoa!,Whoaah!,,,
+AutoTalk:S2_3_0_T0:1,AutoTalk,sharedassets43.assets,15,S2_3_0_T0,1,talkDatas[1],wait=3.00 speaker=3,落ちるーー！！！,I'm falling!!!,I'm falling!!!,,,
+AutoTalk:S2_3_1_T0:0,AutoTalk,sharedassets44.assets,54,S2_3_1_T0,0,talkDatas[0],wait=3.00 speaker=3,"いてて......                     
+っここは！？",Ouch... Where am I!?,"Ouch...                      
+where am I!?",,,
+AutoTalk:S2_3_1_T0:1,AutoTalk,sharedassets44.assets,54,S2_3_1_T0,1,talkDatas[1],wait=5.00 speaker=5,"わぁ～！　キラキラしてる！
+キレイな　どうくつだねぇ～！",Wow~! It's sparkling! What a beautiful cave!,"Wow~! It’s sparkling!
+What a beautiful cave~!",,,
+AutoTalk:S2_9_1_T0:0,AutoTalk,sharedassets48.assets,192,S2_9_1_T0,0,talkDatas[0],wait=5.00 speaker=5,"うわわっ　なにあれ！
+こっちに　むかってくるよ！","Whoa, what's that? It's coming this way!","Whoa, what’s that!
+It’s coming right at us!",,,
+AutoTalk:S2_9_1_T1:0,AutoTalk,sharedassets48.assets,193,S2_9_1_T1,0,talkDatas[0],wait=4.00 speaker=3,"危ない！　カプセルみたいな
+弾が　どんどん飛んでくるよ！",Danger! Capsules are flying at us one after another!,"Danger! Capsule-like shots
+are flying our way!",,,
+AutoTalk:S2_9_1_T1:1,AutoTalk,sharedassets48.assets,193,S2_9_1_T1,1,talkDatas[1],wait=4.00 speaker=3,"なんとかして　操縦してるターボンを
+止めないと......！",We have to stop the Tabon that's controlling them somehow...!,"We need to stop the Tabon
+piloting it...!",,,
+AutoTalk:S2_9_1_T2:0,AutoTalk,sharedassets48.assets,194,S2_9_1_T2,0,talkDatas[0],wait=4.00 speaker=3,"飛んでくる弾を　跳ね返して
+攻撃に使えないかな......？",Can we bounce back the flying bullets and use them for our attack...?,"Could we deflect those shots
+and use them to attack...?",,,
+AutoTalk:S2_9_1_T2:1,AutoTalk,sharedassets48.assets,194,S2_9_1_T2,1,talkDatas[1],wait=4.00 speaker=5,"オイラなら　ひっかき攻撃で
+はねかえせるかも......!",I might be able to bounce them back with my scratching attack...!,"I think a claw strike
+could send them back...!",,,
+AutoTalk:S2_9_1_T3:0,AutoTalk,sharedassets48.assets,195,S2_9_1_T3,0,talkDatas[0],wait=4.00 speaker=3,"このターボン...　ヘルメットを被ってるから
+上からの攻撃が　効かないかも......？","This Tabon... It's wearing a helmet, so attacks from above might not work...?","That Tabon’s wearing a helmet...
+stomps might not work...?",,,
+AutoTalk:S2_9_1_T4:0,AutoTalk,sharedassets48.assets,196,S2_9_1_T4,0,talkDatas[0],wait=4.00 speaker=3,"窓が割れた！
+これで　中に入れそう......！",The window broke! Now we can probably get inside...!,"The window’s broken!
+Now we can get inside!",,,
+AutoTalk:S2_9_1_T5:0,AutoTalk,sharedassets48.assets,197,S2_9_1_T5,0,talkDatas[0],wait=4.00 speaker=3,やった！止まった！,Yay! It stopped!,Yay! It stopped!,,,
+AutoTalk:S2_9_1_T6:0,AutoTalk,sharedassets48.assets,198,S2_9_1_T6,0,talkDatas[0],wait=4.00 speaker=5,オーブ　みつけた！, I found an Orb!, I found an Orb!,,,
+AutoTalk:S2_God_3Sor:0,AutoTalk,sharedassets34.assets,7,S2_God_3Sor,0,talkDatas[0],wait=0.10 speaker=8,"ここクッキー砂漠には、その名の通り
+オレンジ色のオーブが　存在します。","Here in Cookie Sands, as the name suggests, there exists an orange Orb.","In Cookie Sands, as its name
+suggests, bright orange Orbs appear.",,,
+AutoTalk:S2_God_3Sor:1,AutoTalk,sharedassets34.assets,7,S2_God_3Sor,1,talkDatas[1],wait=0.10 speaker=5,"見たことあるかも！　オイラとおなじ色の
+オーブがあるんだねぇ～",I might have seen it before! There's an Orb that's the same color as me~.,"I might have seen it before!
+It’s the same color as me~",,,
+AutoTalk:S2_God_3Sor:2,AutoTalk,sharedassets34.assets,7,S2_God_3Sor,2,talkDatas[2],wait=0.10 speaker=8,"そうです。そして　オーブの力を蓄えることが
+できるのは　同じ色のドラゴンだけ...",That's right. And only dragons of the same color can store the power of the Orb...,"Indeed.  Only a Dragon of the same 
+color can hold an Orb’s power...",,,
+AutoTalk:S2_God_3Sor:3,AutoTalk,sharedassets34.assets,7,S2_God_3Sor,3,talkDatas[3],wait=0.10 speaker=8,"つまり　ソラコ、あなたがクッキー砂漠の
+オーブを　守らねばなりません。","In other words, Soraco, you must protect the Orb in Cookie Sands.","So, Soraco, you must guard
+Cookie Sands’ Orbs.",,,
+AutoTalk:S2_God_3Sor:4,AutoTalk,sharedassets34.assets,7,S2_God_3Sor,4,talkDatas[4],wait=0.10 speaker=5,はわわ......　がんばらなきゃ......,Ahhh... I have to try harder...,Oh... I really need to do my best...,,,
+AutoTalk:S2_God_Def:0,AutoTalk,sharedassets34.assets,8,S2_God_Def,0,talkDatas[0],wait=0.10 speaker=8,"あたり一面砂漠の　クッキー砂漠ですが、
+奥には　広大なオアシスがあります。","The orange desert is all around, but deep inside lies a vast oasis.","Although Cookie Sands is all desert,
+a vast oasis lies deep within.",,,
+AutoTalk:S2_God_Def:1,AutoTalk,sharedassets34.assets,8,S2_God_Def,1,talkDatas[1],wait=0.10 speaker=8,"そこの真下には　どうやらオーブの力が
+集まる洞窟が　あるようです。","Right beneath it, there seems to be a cave where the power of Orbs gathers.","Beneath it is a cave
+where Orb power gathers.",,,
+AutoTalk:S2_God_Def:2,AutoTalk,sharedassets34.assets,8,S2_God_Def,2,talkDatas[2],wait=0.10 speaker=8,"ターボンたちは　そのような場所を
+狙っているかも　しれませんね。",Tabons might be targeting such places.,"Tabon might be targeting 
+places like that.",,,
+AutoTalk:S3_0_0_T0:0,AutoTalk,sharedassets14.assets,39,S3_0_0_T0,0,talkDatas[0],wait=8.00 speaker=6,"この森から出るには、イチバン深いところにある
+大きな葉っぱを　目指すといいよ！","To get out of this forest, aim for the big leaf that's deepest inside!","To leave this forest, head
+for the giant leaf at its heart!",,,
+AutoTalk:S3_1_1_T0:0,AutoTalk,sharedassets51.assets,17,S3_1_1_T0,0,talkDatas[0],wait=3.50 speaker=3,"うっ……
+足場が遠くて　のぼれない……",Ugh... The footholds are too far apart to climb...,"Ugh... these ledges are too
+far apart... I can’t climb...",,,
+AutoTalk:S3_1_1_T0:1,AutoTalk,sharedassets51.assets,17,S3_1_1_T0,1,talkDatas[1],wait=3.00 speaker=6,ここは　リーファーにまかせて！,Leave this to Leafur!,"This is Leafur’s domain,
+leave it to me!",,,
+AutoTalk:S3_1_1_T0:2,AutoTalk,sharedassets51.assets,17,S3_1_1_T0,2,talkDatas[2],wait=4.00 speaker=6,"リーファーの はばたきで、このくらいの距離なら
+飛び越えられるよ！
+","With Leafur's flapping, I can jump over distances like this!","With Leafur’s flutter,
+I can clear this gap!",,,
+AutoTalk:S3_1_1_T1:0,AutoTalk,sharedassets51.assets,18,S3_1_1_T1,0,talkDatas[0],wait=3.50 speaker=5,"わ！　ビリビリがいっぱい......
+こわいなあ",Wow! There are so many shocks... This is scary.,"Whoa! So many zappers...
+This is scary!",,,
+AutoTalk:S3_1_1_T1:1,AutoTalk,sharedassets51.assets,18,S3_1_1_T1,1,talkDatas[1],wait=3.00 speaker=6,こういうところもリーファーの出番だよ！,This is also Leafur's chance to shine!,This is also Leafur’s time to shine!,,,
+AutoTalk:S3_1_1_T1:2,AutoTalk,sharedassets51.assets,18,S3_1_1_T1,2,talkDatas[2],wait=4.00 speaker=6,"細い隙間を　潜り抜けるように
+滑空できるんだ～！",I can glide through narrow gaps like this~!,I can glide through narrow gaps!,,,
+AutoTalk:S3_1_2_T0:0,AutoTalk,sharedassets52.assets,4,S3_1_2_T0,0,talkDatas[0],wait=3.50 speaker=3,こっち側は　行き止まりみたいだね,This side seems to be a dead end.,This side seems to be a dead end.,,,
+AutoTalk:S3_1_2_T1:0,AutoTalk,sharedassets52.assets,5,S3_1_2_T1,0,talkDatas[0],wait=3.50 speaker=5,むこうのほうに　スイッチが見えるね！, I see a switch over there!,I see a switch over there!,,,
+AutoTalk:S3_1_2_T1:1,AutoTalk,sharedassets52.assets,5,S3_1_2_T1,1,talkDatas[1],wait=3.00 speaker=6,"リーファーの矢を使えば、
+あそこのスイッチも　押せるよ！","If I use Leafur's arrow, I can press that switch too!","With Leafur’s arrows,
+I can press that switch!",,,
+AutoTalk:S3_1_3_T0:0,AutoTalk,sharedassets51.assets,19,S3_1_3_T0,0,talkDatas[0],wait=4.00 speaker=6,ここからは　リーファーの　森だよー！,From here on is Leafur's forest!,"From here on, it’s Leafur’s forest!",,,
+AutoTalk:S3_1_3_T1:0,AutoTalk,sharedassets51.assets,20,S3_1_3_T1,0,talkDatas[0],wait=3.00 speaker=6,この木箱は　押して　動かせるよ！,You can push and move this wooden box!,You can push that crate to move it!,,,
+AutoTalk:S3_1_3_T1:1,AutoTalk,sharedassets51.assets,20,S3_1_3_T1,1,talkDatas[1],wait=2.50 speaker=5,おおきい　きばこだねー！,That's a big box!,That's a huge wooden crate!,,,
+AutoTalk:S3_1_3_T1:2,AutoTalk,sharedassets51.assets,20,S3_1_3_T1,2,talkDatas[2],wait=2.50 speaker=3,何が入っているんだろう…？,I wonder what's inside...?,I wonder what's inside...?,,,
+AutoTalk:S3_1_3_T1:3,AutoTalk,sharedassets51.assets,20,S3_1_3_T1,3,talkDatas[3],wait=3.00 speaker=2,おれの炎で　よく燃えそうだな！,My flames should burn it well!,"With my flames, I can
+burn it to ashes!",,,
+AutoTalk:S3_1_3_T2:0,AutoTalk,sharedassets51.assets,21,S3_1_3_T2,0,talkDatas[0],wait=4.00 speaker=5,あ！　きばこで　みちが　ふさがってるよ！？,Oh no! The treasure box is blocking the way!?,Ah! That crate is blocking the path!?,,,
+AutoTalk:S3_1_3_T3:0,AutoTalk,sharedassets51.assets,22,S3_1_3_T3,0,talkDatas[0],wait=4.00 speaker=6,"斜めのスキマから　リーファーの矢を使えば
+通れるように　なるかも…？","If I use Leafur's arrow from the diagonal gap, maybe we can get through...?","If I shoot an arrow through that gap,
+maybe we’ll clear a path!",,,
+AutoTalk:S3_1_3_T4:0,AutoTalk,sharedassets51.assets,23,S3_1_3_T4,0,talkDatas[0],wait=4.00 speaker=3,"僕の必殺技で　壁の向こうの　敵を倒せば
+通れるように　なるかも…？","If I defeat the enemy on the other side of the wall with my special move, maybe we can pass...?","If I use my Special Move on those enemies,
+we might squeeze on through...?",,,
+AutoTalk:S3_1_3_T5:0,AutoTalk,sharedassets51.assets,24,S3_1_3_T5,0,talkDatas[0],wait=4.00 speaker=5,やったあ！　とおれたね！,Yay! We made it through!,Yay! We made it through!,,,
+AutoTalk:S3_1_3_T6:0,AutoTalk,sharedassets51.assets,25,S3_1_3_T6,0,talkDatas[0],wait=4.00 speaker=2,"おれの炎の力なら
+このくらい　朝飯前だぜ！","With my flame power, this is just a piece of cake for me!","With my flame power,
+this is a piece of cake!",,,
+AutoTalk:S3_1_3_T7:0,AutoTalk,sharedassets51.assets,26,S3_1_3_T7,0,talkDatas[0],wait=2.50 speaker=3,うわっ！　なにあれ！？,Whoa! What's that!?,Whoa! What's that!?,,,
+AutoTalk:S3_1_3_T7:1,AutoTalk,sharedassets51.assets,26,S3_1_3_T7,1,talkDatas[1],wait=5.00 speaker=6,"あのくねくねの近くを　ゆっくり通ると
+たべられちゃうよ！　きをつけて……！","If you pass slowly near that squiggly thing, you'll get eaten! Be careful...!","Those wriggly things will
+snap you up if you get too close!
+Be careful!",,,
+AutoTalk:S3_2_0_T0:0,AutoTalk,sharedassets54.assets,3,S3_2_0_T0,0,talkDatas[0],wait=2.00 speaker=6,オーブ見つけた！,I found an Orb! It's a beautiful green color~!,I found an Orb!,,,
+AutoTalk:S3_2_0_T0:1,AutoTalk,sharedassets54.assets,3,S3_2_0_T0,1,talkDatas[1],wait=4.00 speaker=6,キレイな緑色～！, It's a beautiful green color!,Such a lovely green!,,,
+AutoTalk:S3_2_1_T0:0,AutoTalk,sharedassets55.assets,2,S3_2_1_T0,0,talkDatas[0],wait=5.00 speaker=6,"この辺りは　地形が複雑だから、
+敵に　気を付けて　進もうね...！","This area has complex terrain, so let's be careful of enemies as we proceed...!","This terrain’s tricky,
+keep an eye out for foes!",,,
+AutoTalk:S3_2_1_T1:0,AutoTalk,sharedassets55.assets,3,S3_2_1_T1,0,talkDatas[0],wait=3.50 speaker=3,"飲み込まれたと思ったら
+こんなところに　コインが...！","When I thought I'd been swallowed, there was a coin here...!","I thought I was eaten...
+but there’s a Coin!",,,
+AutoTalk:S3_2_1_T1:1,AutoTalk,sharedassets55.assets,3,S3_2_1_T1,1,talkDatas[1],wait=3.00 speaker=5,"毎回こんなだったら
+わざと食べられても　いいかもね！","If it were always like this, it might be okay to get eaten on purpose sometimes!","If every time was this fun,
+being eaten wouldn’t be so bad!",,,
+AutoTalk:S3_2_1_T1:2,AutoTalk,sharedassets55.assets,3,S3_2_1_T1,2,talkDatas[2],wait=3.50 speaker=8,"何を言うのです。うっかり命を落とせば
+目も当てられませんよ？","What are you saying? If you carelessly lose your life, you won't even want to look at it?","Beware, young dragons.
+One careless moment could 
+end your story forever.",,,
+AutoTalk:S3_2_1_T1:3,AutoTalk,sharedassets55.assets,3,S3_2_1_T1,3,talkDatas[3],wait=4.50 speaker=5,（ぎくっ）,(Gulp),(Gulp),,,
+AutoTalk:S3_2_2_T0:0,AutoTalk,sharedassets56.assets,11,S3_2_2_T0,0,talkDatas[0],wait=2.50 speaker=3,"なになに！！？
+白いやつが　追っかけてくる！","What?!
+The white one is chasing me!","Wait, what!? That white creature
+is chasing us!",,,
+AutoTalk:S3_2_2_T0:1,AutoTalk,sharedassets56.assets,11,S3_2_2_T0,1,talkDatas[1],wait=1.00 speaker=5,助けて～！！,Help!!,Help!!,,,
+AutoTalk:S3_2_2_T0:2,AutoTalk,sharedassets56.assets,11,S3_2_2_T0,2,talkDatas[2],wait=4.50 speaker=6,"大丈夫だよ！背中を向けなければ
+その場で止まって　追ってこないから......！","It's okay! If you don't turn your back on it, it'll stop right there and won't chase you...!","Don’t worry. Face it,
+and it won’t chase you!",,,
+AutoTalk:S3_3_1_T0:0,AutoTalk,sharedassets58.assets,14,S3_3_1_T0,0,talkDatas[0],wait=3.00 speaker=6,ここは　毒の湖だよ！,This is a poisonous lake!,This is a Poison Lake!,,,
+AutoTalk:S3_3_1_T0:1,AutoTalk,sharedassets58.assets,14,S3_3_1_T0,1,talkDatas[1],wait=5.00 speaker=6,"ほとんどのドラゴンは　少し触れるだけでも
+死んじゃうから　落ちないようにしようね...！","Most dragons die just from touching it a little bit, so let's avoid falling in...!","Most Dragons die with one touch,
+don’t let yourself fall in!",,,
+AutoTalk:S3_3_2_T0:0,AutoTalk,sharedassets59.assets,3,S3_3_2_T0,0,talkDatas[0],wait=3.50 speaker=3,スイッチと...　細い隙間が　あるね,There's a switch and... a narrow gap.,I see a switch...and a narrow gap here.,,,
+AutoTalk:S3_3_2_T0:1,AutoTalk,sharedassets59.assets,3,S3_3_2_T0,1,talkDatas[1],wait=5.00 speaker=6,"不思議な空間だけど、リーファーの矢
+届くかな？",It's a mysterious space; I wonder if Leafur's arrow will reach?,"This place is strange.
+Can Leafur’s arrow reach it?",,,
+AutoTalk:S3_3_2_T1:0,AutoTalk,sharedassets59.assets,4,S3_3_2_T1,0,talkDatas[0],wait=3.50 speaker=3,"今度は　壁の向こうに　スイッチが！
+どうやったら　押せるんだろう？",Now there's a switch on the other side of the wall! How can we press it?,"Now the switch’s behind that wall!
+How do we hit it?",,,
+AutoTalk:S3_9_1_T0:0,AutoTalk,sharedassets62.assets,24,S3_9_1_T0,0,talkDatas[0],wait=2.50 speaker=3,あっ　あれは......！？,"Oh no, what is that...?","Oh, what is that...?",,,
+AutoTalk:S3_9_1_T0:1,AutoTalk,sharedassets62.assets,24,S3_9_1_T0,1,talkDatas[1],wait=4.00 speaker=8,"あの白い生物は　『モスターボン』...
+空中を飛び回り　獲物を惑わせるといいます。","That white creature is called """"Mostabon""""... It flies around in the air and confuses its prey.","That white creature is Mothtabon.
+It flies to confuse its prey.",,,
+AutoTalk:S3_9_1_T0:2,AutoTalk,sharedassets62.assets,24,S3_9_1_T0,2,talkDatas[2],wait=5.00 speaker=6,"このままじゃ　リーファー達もろとも
+大きな葉っぱを　食い荒らされちゃうよ！","At this rate, even Leafur and friends will devour those big leaves completely!","At this rate, it’ll eat us
+and the giant leaf too!",,,
+AutoTalk:S3_9_1_T0:3,AutoTalk,sharedassets62.assets,24,S3_9_1_T0,3,talkDatas[3],wait=5.00 speaker=3,"空中を飛び回るのなら、飛び道具を使える
+僕たちで　何とかしなきゃ！","If it's flying around in the air, we must do something with our projectile weapons!","If it can fly around, we’ll 
+need to use ranged attacks!",,,
+AutoTalk:S3_9_1_T1:0,AutoTalk,sharedassets62.assets,25,S3_9_1_T1,0,talkDatas[0],wait=3.00 speaker=5,ぎゃっ！いっぱいでてきた！,Yikes! So many are coming out!,Eek! There are so many of them!,,,
+AutoTalk:S3_9_1_T1:1,AutoTalk,sharedassets62.assets,25,S3_9_1_T1,1,talkDatas[1],wait=5.00 speaker=6,"ちいさい方は　リーファーの矢の力で
+まとめて　やっつけちゃえ......！",The smaller ones can be defeated all at once with Leafur's arrows...!,"Take out all the little ones at once
+with Leafur’s arrow!",,,
+AutoTalk:S3_9_1_T2:0,AutoTalk,sharedassets62.assets,26,S3_9_1_T2,0,talkDatas[0],wait=2.00 speaker=6,オーブが　落ちてきたよ！,An Orb fell down!,An Orb just fell down!,,,
+AutoTalk:S3_9_1_T2:1,AutoTalk,sharedassets62.assets,26,S3_9_1_T2,1,talkDatas[1],wait=6.00 speaker=3,"大きな葉っぱで森を抜けて、オーブも見つけた！
+一件落着だね！","We got through the forest with the big leaves and found an Orb!
+Everything's settled now!","We rode the Giant Leaf out of the forest
+and secured an Orb!
+Case closed!",,,
+AutoTalk:S3_God_4Lea:0,AutoTalk,sharedassets50.assets,2,S3_God_4Lea,0,talkDatas[0],wait=0.10 speaker=8,"この森には　ドラゴンをも捕食してしまう
+恐ろしい生き物が　住んでいるようです。",It seems that this forest is inhabited by terrifying creatures that even prey on dragons.,"They say this forest is home to
+terrifying beasts that even
+devour dragons.",,,
+AutoTalk:S3_God_4Lea:1,AutoTalk,sharedassets50.assets,2,S3_God_4Lea,1,talkDatas[1],wait=0.10 speaker=8,"くれぐれも　飲み込まれないよう
+気を付けてくださいね。",Please be careful not to get swallowed.,Be very careful not to get eaten!,,,
+AutoTalk:S3_God_4Lea:2,AutoTalk,sharedassets50.assets,2,S3_God_4Lea,2,talkDatas[2],wait=0.10 speaker=6,"心配しないで　神さま！
+大丈夫だよっ！","Don't worry about me, god!
+I'll be fine!","Don’t worry, Taonga.
+I can handle it!",,,
+AutoTalk:S3_God_Def:0,AutoTalk,sharedassets50.assets,3,S3_God_Def,0,talkDatas[0],wait=0.10 speaker=8,"「大きな葉っぱ」... そう呼ばれる植物が
+ここマッチャ樹海には　自生しています。
+","The plant called """"Giant Leaf"""" grows naturally in this Matcha Forrest.","Here in the Matcha Forest, the plant
+called “Giant Leaf” grows wild.",,,
+AutoTalk:S3_God_Def:1,AutoTalk,sharedassets50.assets,3,S3_God_Def,1,talkDatas[1],wait=0.10 speaker=8,"成長し続ける　双葉に乗ることで、この樹海から
+抜け出すことが　できるようです。","By riding on its continuously growing leaves, we seem to be able to escape from this jungle.","By riding its ever-growing twin leaves,
+we can break free from the jungle.",,,
+AutoTalk:S3_Plain_1_0:0,AutoTalk,sharedassets64.assets,2,S3_Plain_1_0,0,talkDatas[0],wait=0.10 speaker=9,"ぼくは　準備万端だから、
+いつでも　勝負できるよ！","I'm fully prepared, so I'm ready for battle anytime!","I’m fully prepared.
+Challenge me whenever you like!",,,
+AutoTalk:S3_Plain_1_0:1,AutoTalk,sharedassets64.assets,2,S3_Plain_1_0,1,talkDatas[1],wait=0.10 speaker=9,"きみの　心の準備ができたら
+奥にある扉の先へ　進んでね！","When you're ready, go through the door at the back!","When your heart is ready,
+step through the door at the back!",,,
+AutoTalk:S3_Plain_3_0:0,AutoTalk,sharedassets65.assets,2,S3_Plain_3_0,0,talkDatas[0],wait=0.10 speaker=9,"さっきは惜しかったね......！次はぼくに
+一度も飲み込まれずに　勝てるかな？","You were so close last time...! Next time, can you win without getting swallowed by me once?","That was close...! Next time,
+can you win without letting me
+swallow you?",,,
+AutoTalk:S3_Plain_4_0:0,AutoTalk,sharedassets65.assets,3,S3_Plain_4_0,0,talkDatas[0],wait=0.10 speaker=9,"もうプレゼントは　あげちゃったけど、
+また戦ってくれるなら　大歓迎だよ！","I've already given you your present, but you'd be more than welcome to fight again!","I’ve already given you a gift,
+but if you want another round,
+I’d be delighted!",,,
+AutoTalk:S3_Plain_4_0:1,AutoTalk,sharedassets65.assets,3,S3_Plain_4_0,1,talkDatas[1],wait=0.10 speaker=9,（もうちょっと味わってみたいし......）,(I want to taste it a bit more...),(...I just want one more taste...),,,
+AutoTalk:S3_Plain_Battle1:0,AutoTalk,sharedassets63.assets,77,S3_Plain_Battle1,0,talkDatas[0],wait=3.00 speaker=9,それじゃあ、いくよっ！,"Well then, let's go!","Alright, let’s go!",,,
+AutoTalk:S3_Plain_Battle_draw:0,AutoTalk,sharedassets65.assets,4,S3_Plain_Battle_draw,0,talkDatas[0],wait=0.10 speaker=9,"............                                    
+ざんねん！今回はぼくに捕まっちゃったね。","...
+Too bad! You got caught by me this time.","...
+Too bad! I caught you this time.",,,
+AutoTalk:S3_Plain_Battle_draw:1,AutoTalk,sharedassets65.assets,4,S3_Plain_Battle_draw,1,talkDatas[1],wait=0.10 speaker=9,諦めずに　また挑戦してよ！,Don't give up. Try again!,Don't give up. Try again!,,,
+AutoTalk:S3_Plain_Battle_lose:0,AutoTalk,sharedassets65.assets,5,S3_Plain_Battle_lose,0,talkDatas[0],wait=0.10 speaker=9,"............                                    
+ざんねん！今回はぼくの勝ちだったね。","...
+Too bad! I won this time, didn't I?","...
+...Too bad! I won this round.",,,
+AutoTalk:S3_Plain_Battle_lose:1,AutoTalk,sharedassets65.assets,5,S3_Plain_Battle_lose,1,talkDatas[1],wait=0.10 speaker=9,諦めずに　また挑戦してよ！,Don't give up. Try again!,Don't give up. Try again!,,,
+AutoTalk:S3_Plain_Battle_rewin:0,AutoTalk,sharedassets65.assets,6,S3_Plain_Battle_rewin,0,talkDatas[0],wait=0.10 speaker=9,"............                                    
+きみたちスゴイよ！ぼくの完敗だったね...！","...
+You guys are amazing! You totally defeated me...!","...You guys are amazing!
+I’m totally defeated...!",,,
+AutoTalk:S3_Plain_Battle_rewin:1,AutoTalk,sharedassets65.assets,6,S3_Plain_Battle_rewin,1,talkDatas[1],wait=0.10 speaker=9,またこんど勝負しようね！,Let's play again next time!,Let's play again next time!,,,
+AutoTalk:S3_Plain_Battle_win:0,AutoTalk,sharedassets65.assets,7,S3_Plain_Battle_win,0,talkDatas[0],wait=0.10 speaker=9,"............                                    
+きみたちスゴイよ！ぼくの完敗だったね...！","...
+You guys are amazing! You totally defeated me...!","...You’re incredible! I’ve been
+totally beaten...!",,,
+AutoTalk:S3_Plain_Battle_win:1,AutoTalk,sharedassets65.assets,7,S3_Plain_Battle_win,1,talkDatas[1],wait=0.10 speaker=9,約束通り、いいものをプレゼントするよ！,"As promised, I'll give you something good!","As promised,
+I have a special gift for you!",,,
+AutoTalk:S3_Plain_Battle_win:2,AutoTalk,sharedassets65.assets,7,S3_Plain_Battle_win,2,talkDatas[2],wait=5.00 speaker=1,フィズたちは、「<color=#FF3333FF>招待券</color>」を手に入れた！,"Fiz and his team got """"<color=#FF3333FF>invitation card</color>""""!","Fiz and his friends received
+an <color=#FF3333FF>Invitation Card</color>!",,,
+AutoTalk:S3_Plain_Battle_win:3,AutoTalk,sharedassets65.assets,7,S3_Plain_Battle_win,3,talkDatas[3],wait=0.10 speaker=3,これ、何の招待券？,What are these invitations for?,What’s this invitation for?,,,
+AutoTalk:S3_Plain_Battle_win:4,AutoTalk,sharedassets65.assets,7,S3_Plain_Battle_win,4,talkDatas[4],wait=0.10 speaker=9,"これは、ぼくがこの星で探している
+ケーキ屋さんの招待券なんだ！",This is the invitation to the cake shop I'm looking for on this planet!,"It’s to the cake shop I’ve
+been seeking on this planet!",,,
+AutoTalk:S3_Plain_Battle_win:5,AutoTalk,sharedassets65.assets,7,S3_Plain_Battle_win,5,talkDatas[5],wait=0.10 speaker=9,"何枚か余ってたから、
+きみたちにも　ぜひ使ってほしいな！","I have a few left over,
+so I hope you'll use them too!","I had a few extras, please use one too!",,,
+AutoTalk:S3_Plain_Battle_win:6,AutoTalk,sharedassets65.assets,7,S3_Plain_Battle_win,6,talkDatas[6],wait=0.10 speaker=5,やったー！　ありがとうプレーンくん！,"Thank you, Mr. Plain!","Yay! Thanks, Plain!",,,
+AutoTalk:S3_Plain_Def:0,AutoTalk,sharedassets64.assets,3,S3_Plain_Def,0,talkDatas[0],wait=0.10 speaker=9,"この星は　自然が豊かで
+本当にいいところだね......！",This planet is rich in nature and is a truly wonderful place!,"This planet is so rich in nature,
+what a wonderful place!",,,
+AutoTalk:S3_Plain_First:0,AutoTalk,sharedassets64.assets,4,S3_Plain_First,0,talkDatas[0],wait=0.10 speaker=9,"こんにちは！　ぼくはプレーン。
+少し離れた星からやってきた　ドラゴンだよ。","Hello! I'm Plain, a dragon from a planet a little far away.","Hello! I’m Plain,
+a dragon from a planet far away.",,,
+AutoTalk:S3_Plain_First:10,AutoTalk,sharedassets64.assets,4,S3_Plain_First,10,talkDatas[10],wait=0.10 speaker=9,"準備ができたら　扉に入ってね。
+楽しみに　待ってるよ......！","When you're ready, come through the door.
+I'll be waiting for you...","When you’re ready, step through.
+I’ll be waiting...!",,,
+AutoTalk:S3_Plain_First:1,AutoTalk,sharedassets64.assets,4,S3_Plain_First,1,talkDatas[1],wait=0.10 speaker=5,"プレーンくん　こんにちは！
+ここで　何をしてるのっ？","Hello, Mr. Plain!
+What are you doing here?","Hi, Plain! What brings you here?",,,
+AutoTalk:S3_Plain_First:2,AutoTalk,sharedassets64.assets,4,S3_Plain_First,2,talkDatas[2],wait=0.10 speaker=9,"この星に　おいしいケーキがないかを
+探しに来たんだけど......　迷っちゃった。","I came to this planet to find some delicious cakes, but... I got lost.","I came looking for delicious cakes,
+but got lost instead...",,,
+AutoTalk:S3_Plain_First:3,AutoTalk,sharedassets64.assets,4,S3_Plain_First,3,talkDatas[3],wait=0.10 speaker=6,"あらら...
+このあたりは　すぐ迷っちゃうよね......","Oops...
+It's easy to get lost around here...","Oops... 
+It’s easy to get lost here...",,,
+AutoTalk:S3_Plain_First:4,AutoTalk,sharedassets64.assets,4,S3_Plain_First,4,talkDatas[4],wait=0.10 speaker=9,"ところで　きみたちのからだ、すごく......
+いや......　なんでもない。
+","By the way, your bodies are really...
+No...it's nothing.
+","By the way, your bodies look so yum...
+uh, never mind.",,,
+AutoTalk:S3_Plain_First:5,AutoTalk,sharedassets64.assets,4,S3_Plain_First,5,talkDatas[5],wait=0.10 speaker=3,どうしたの？,What's wrong?,What’s the matter?,,,
+AutoTalk:S3_Plain_First:6,AutoTalk,sharedassets64.assets,4,S3_Plain_First,6,talkDatas[6],wait=0.10 speaker=9,...そうだ！　ちょっとぼくと勝負しない？,... I'll tell you what! Wanna play with me for a minute?,...Hey! Wanna challenge me to a duel?,,,
+AutoTalk:S3_Plain_First:7,AutoTalk,sharedassets64.assets,4,S3_Plain_First,7,talkDatas[7],wait=0.10 speaker=9,"一度もぼくに　捕まらずに勝てたら、
+なにかいいものを　プレゼントするよ！","If you can win without getting caught by me even once, I'll give you something great as a gift!","If you can beat me without getting
+caught once, I’ll give you a special gift!",,,
+AutoTalk:S3_Plain_First:8,AutoTalk,sharedassets64.assets,4,S3_Plain_First,8,talkDatas[8],wait=0.10 speaker=5,"プレゼント！？
+ほしい～！！","A present!
+I want it!","A gift!? 
+I want it!!",,,
+AutoTalk:S3_Plain_First:9,AutoTalk,sharedassets64.assets,4,S3_Plain_First,9,talkDatas[9],wait=0.50 speaker=9,"場所は　右側の扉を入った先にある
+空間にしようかな。
+",I think the location will be the space just inside the door on the right.,"Let’s set our match in the room
+inside the door on the right.",,,
+AutoTalk:S3_Plain_vore_Fiz:0,AutoTalk,sharedassets65.assets,8,S3_Plain_vore_Fiz,0,talkDatas[0],wait=0.10 speaker=9,"ぼくの思ったとおり、
+やっぱりキミたち　いい味ついてたよ！","Just as I thought,
+you guys are really tasty!","Just as I thought, 
+you all taste amazing!",,,
+AutoTalk:S3_Plain_vore_Fiz:1,AutoTalk,sharedassets65.assets,8,S3_Plain_vore_Fiz,1,talkDatas[1],wait=0.10 speaker=9,"特にフィズくんはね......　ひんやりした舌触りと
+あっさりとした甘さが　さわやかで......",Especially Mr. Fiz... a cool texture and a light sweetness that is refreshing...,"Especially you, Fiz... 
+that cool texture and light, 
+refreshing sweetness...",,,
+AutoTalk:S3_Plain_vore_Fiz:2,AutoTalk,sharedassets65.assets,8,S3_Plain_vore_Fiz,2,talkDatas[2],wait=0.10 speaker=3,恥ずかしいからやめてー！！！,"Stop it, it's embarrassing! ! !","Stop it, that’s embarrassing!!!",,,
+AutoTalk:S3_Plain_vore_Kyuma:0,AutoTalk,sharedassets65.assets,9,S3_Plain_vore_Kyuma,0,talkDatas[0],wait=0.10 speaker=9,"ぼくの思ったとおり、
+やっぱりキミたち　いい味ついてたよ！","Just as I thought,
+you guys are really tasty!","Just as I thought, 
+you guys are really tasty!",,,
+AutoTalk:S3_Plain_vore_Kyuma:1,AutoTalk,sharedassets65.assets,9,S3_Plain_vore_Kyuma,1,talkDatas[1],wait=0.10 speaker=9,"特にキューマくんはね...　基本しょっぱいけど
+味わうほどに　海の良いだしが出てきて.....","Especially Mr. Kyuma... a bit salty, but the more you taste it, the more the delicious flavor of the sea comes out...","Especially Kyuma... a little salty,
+but so full of rich sea flavor...",,,
+AutoTalk:S3_Plain_vore_Kyuma:2,AutoTalk,sharedassets65.assets,9,S3_Plain_vore_Kyuma,2,talkDatas[2],wait=0.10 speaker=7,くうっ......！,Ugh...!,Ugh...!,,,
+AutoTalk:S3_Plain_vore_Leafur:0,AutoTalk,sharedassets65.assets,10,S3_Plain_vore_Leafur,0,talkDatas[0],wait=0.10 speaker=9,"ぼくの思ったとおり、
+やっぱりキミたち　いい味ついてたよ！","Just as I thought,
+you guys are really tasty!","Just as I thought, 
+you all taste amazing!",,,
+AutoTalk:S3_Plain_vore_Leafur:1,AutoTalk,sharedassets65.assets,10,S3_Plain_vore_Leafur,1,talkDatas[1],wait=0.10 speaker=9,"特にリーファーちゃんはね...　控えめな甘さで
+お茶の葉のうまみが　あって......",Especially Leafur... a subtle sweetness and the delicious flavor of the tea leaves...,"Especially you, Leafur... 
+gentle sweetness with the 
+tea leaf’s delicious flavor...",,,
+AutoTalk:S3_Plain_vore_Leafur:2,AutoTalk,sharedassets65.assets,10,S3_Plain_vore_Leafur,2,talkDatas[2],wait=0.10 speaker=6,きゃーっ　言わないでー！！！,Aaahh don't say that!!!,"Aaahh, stop saying that!!!",,,
+AutoTalk:S3_Plain_vore_Rubell:0,AutoTalk,sharedassets65.assets,11,S3_Plain_vore_Rubell,0,talkDatas[0],wait=0.10 speaker=9,"ぼくの思ったとおり、
+やっぱりキミたち　いい味ついてたよ！","Just as I thought,
+you guys are really tasty!","Just as I thought, 
+you guys are really tasty!",,,
+AutoTalk:S3_Plain_vore_Rubell:1,AutoTalk,sharedassets65.assets,11,S3_Plain_vore_Rubell,1,talkDatas[1],wait=0.10 speaker=9,"特にルーベルちゃんはね...　アメみたいな甘さに
+毒の刺激がピリッとあって......","Especially little Rubell...　Sweet like candy.
+With a tangy pungency of poison...","Especially you, Rubell... 
+candy-like sweetness
+with a tangy hint of spice...",,,
+AutoTalk:S3_Plain_vore_Rubell:2,AutoTalk,sharedassets65.assets,11,S3_Plain_vore_Rubell,2,talkDatas[2],wait=0.10 speaker=4,ぅぅぅ...！恥ずかしい...！,Uuuuh...! How embarrassing...!,Uuuuh...! How embarrassing...!,,,
+AutoTalk:S3_Plain_vore_Rythron:0,AutoTalk,sharedassets65.assets,12,S3_Plain_vore_Rythron,0,talkDatas[0],wait=0.10 speaker=9,"ぼくの思ったとおり、
+やっぱりキミたち　いい味ついてたよ！","Just as I thought,
+you guys are really tasty!","Just as I thought,
+you guys are really tasty!",,,
+AutoTalk:S3_Plain_vore_Rythron:1,AutoTalk,sharedassets65.assets,12,S3_Plain_vore_Rythron,1,talkDatas[1],wait=0.10 speaker=9,"特にリュトロンくんはね...　濃厚な甘さと
+紅白の体で　まるでいちご大福のような.....","Especially Mr. Rythron... with his rich sweetness and red and white body, he looks just like a strawberry...","Especially Rythron... 
+rich sweetness and red-and-white 
+stripes, just like a strawberry mochi...",,,
+AutoTalk:S3_Plain_vore_Rythron:2,AutoTalk,sharedassets65.assets,12,S3_Plain_vore_Rythron,2,talkDatas[2],wait=0.10 speaker=2,"はぁッ！！？　おい！　おれがそんなッ
+か...かわいい味してるワケないだろっ！！",Huh?! Hey! There's no way I taste that...cute!!,"What!? Hey! I don’t...
+There's no way I taste that...cute!!",,,
+AutoTalk:S3_Plain_vore_Soraco:0,AutoTalk,sharedassets65.assets,13,S3_Plain_vore_Soraco,0,talkDatas[0],wait=0.10 speaker=9,"ぼくの思ったとおり、
+やっぱりキミたち　いい味ついてたよ！","Just as I thought,
+you guys are really tasty!","Just as I thought, 
+you all taste amazing!",,,
+AutoTalk:S3_Plain_vore_Soraco:1,AutoTalk,sharedassets65.assets,13,S3_Plain_vore_Soraco,1,talkDatas[1],wait=0.10 speaker=9,"特にソラコくんはね......　サラサラな肌と
+もちもちおなかのバランスが　絶妙で......","Especially you, Soraco... he has the perfect balance between smooth skin and soft belly...","Especially you, Soraco...
+silky skin and a chewy belly,
+perfect balance...",,,
+AutoTalk:S3_Plain_vore_Soraco:2,AutoTalk,sharedassets65.assets,13,S3_Plain_vore_Soraco,2,talkDatas[2],wait=0.10 speaker=5,わわっ、やめてよー！！！,"Whoa, stop it!!!","Whoa, stop it!!!",,,
+AutoTalk:S4_0_0_T0:0,AutoTalk,sharedassets67.assets,40,S4_0_0_T0,0,talkDatas[0],wait=8.00 speaker=2,"ようこそ！
+ここはおれの住処、ベリー火山だ！","Welcome!
+This is where I live, Berry Volcano!","Welcome! This is my home.
+The mighty Berry Volcano!",,,
+AutoTalk:S4_1_1_T0:0,AutoTalk,sharedassets68.assets,10,S4_1_1_T0,0,talkDatas[0],wait=4.00 speaker=2,"こんな崖、おれにとっては
+どうってことないぜ！",A cliff like this is no big deal to me!,"Cliffs like these?
+Not a problem for me!",,,
+AutoTalk:S4_1_1_T0:1,AutoTalk,sharedassets68.assets,10,S4_1_1_T0,1,talkDatas[1],wait=4.00 speaker=5,リュトロンくんって、すごい～～！！,Rythron is amazing!,"Rythron, you’re amazing~!!",,,
+AutoTalk:S4_1_2_T0:0,AutoTalk,sharedassets69.assets,20,S4_1_2_T0,0,talkDatas[0],wait=2.00 speaker=2,げえっ！水だ...!,Geez! Water...!,"Ugh! 
+Water!",,,
+AutoTalk:S4_1_2_T0:1,AutoTalk,sharedassets69.assets,20,S4_1_2_T0,1,talkDatas[1],wait=4.00 speaker=2,"おれは水がその...　苦手だから、
+絶対に　触れないように　してくれよな？！","I'm not good with water, so please make sure I don't touch it!","I’m terrible at swimming, 
+so keep me away from it!",,,
+AutoTalk:S4_1_2_T0:2,AutoTalk,sharedassets69.assets,20,S4_1_2_T0,2,talkDatas[2],wait=4.00 speaker=5,"リュトロンくんも　そうなんだ！
+オイラと　いっしょだねっ！","Oh, yeah, that's right, Mr. Rythron!
+It's just like me, isn't it?","Rythron, we’re in this together!",,,
+AutoTalk:S4_1_3_T0:0,AutoTalk,sharedassets70.assets,13,S4_1_3_T0,0,talkDatas[0],wait=3.50 speaker=5,うゎぇ！　こんなところにもいるのぉ！？,Wow! You're here too in a place like this?!,Eek! Even here?,,,
+AutoTalk:S4_1_3_T0:1,AutoTalk,sharedassets70.assets,13,S4_1_3_T0,1,talkDatas[1],wait=4.00 speaker=3,"しかもこんなに狭いところ...
+絶対　とおれないよ...！",And it's so narrow...there's no way I could get through!,"This gap’s way too narrow...
+There’s no way I can get through!",,,
+AutoTalk:S4_1_3_T0:2,AutoTalk,sharedassets70.assets,13,S4_1_3_T0,2,talkDatas[2],wait=5.00 speaker=2,"オマエら！　こんなのしょせん草だ！
+おれが横から　燃やしてやるよ！","You guys! This is just grass!
+I'll burn it from the side!","Guys! That’s just grass, 
+I’ll burn it away!",,,
+AutoTalk:S4_2_0_T0:0,AutoTalk,sharedassets72.assets,6,S4_2_0_T0,0,talkDatas[0],wait=2.00 speaker=2,オーブ見っけ！,I see the Orb!,I found an Orb!,,,
+AutoTalk:S4_2_0_T0:1,AutoTalk,sharedassets72.assets,6,S4_2_0_T0,1,talkDatas[1],wait=5.00 speaker=2,おれにかかれば　こんなもんよ！,That's how it's done for me!,That's how it's done!,,,
+AutoTalk:S4_2_1_T0:0,AutoTalk,sharedassets73.assets,6,S4_2_1_T0,0,talkDatas[0],wait=3.00 speaker=6,あ...あつい...,Hot... Hot...,It’s so hot...,,,
+AutoTalk:S4_2_1_T0:1,AutoTalk,sharedassets73.assets,6,S4_2_1_T0,1,talkDatas[1],wait=3.00 speaker=2,この辺りから　さらに暑くなるからな...,It's going to get even hotter from here on out...,It only gets hotter from here...,,,
+AutoTalk:S4_2_1_T0:2,AutoTalk,sharedassets73.assets,6,S4_2_1_T0,2,talkDatas[2],wait=4.00 speaker=2,"オマエら！　絶対にマグマには落ちるなよ！
+おれ以外には　命取りだからな！","You guys! Don't fall into the magma!
+It's deadly to everyone but me!","Hey, don’t fall into the magma!
+Anyone but me would be toast!",,,
+AutoTalk:S4_2_3_T0:0,AutoTalk,sharedassets75.assets,4,S4_2_3_T0,0,talkDatas[0],wait=3.00 speaker=3,わわっ！マグマが迫ってきたよ！？,Whoa! Magma's coming at us!,Whoa! The magma’s rising fast!?,,,
+AutoTalk:S4_2_3_T0:1,AutoTalk,sharedassets75.assets,4,S4_2_3_T0,1,talkDatas[1],wait=3.00 speaker=2,"これはキケンだな...！
+オマエら、急いで上に逃げるぞ！","This is dangerous..!
+Guys, hurry up and run upstairs!","This is dangerous...
+Climb up quickly!",,,
+AutoTalk:S4_2_3_T0:2,AutoTalk,sharedassets75.assets,4,S4_2_3_T0,2,talkDatas[2],wait=3.00 speaker=6,ひ～～～っ！！！！,Ahhhhh!!!,Ahhhhh!!!,,,
+AutoTalk:S4_3_1_T0:0,AutoTalk,sharedassets77.assets,5,S4_3_1_T0,0,talkDatas[0],wait=3.00 speaker=2,"くそっ...　噴石だ！
+巻き込まれる前に　先へ進むぞ！",Damn... it's a volcanic rock! Let's move forward before we get caught in it!,"Rockfall...! Let’s move 
+before we get crushed!",,,
+AutoTalk:S4_3_1_T0:1,AutoTalk,sharedassets77.assets,5,S4_3_1_T0,1,talkDatas[1],wait=3.00 speaker=6,ほんとに　燃えちゃうよぉ～～！！,I'm really going to burn up!!,It's really gonna burn us!,,,
+AutoTalk:S4_3_3_T0:0,AutoTalk,sharedassets79.assets,6,S4_3_3_T0,0,talkDatas[0],wait=3.00 speaker=2,<size=24>はしりぬけろーっっ！！</size>,<size=24>Run through it!!</size>,<size=16>Run through it!!</size>,"テキストサイズが大きすぎるため、枠からはみ出ています。
+調整をお願いします。",,
+AutoTalk:S4_9_1_T0:0,AutoTalk,sharedassets81.assets,28,S4_9_1_T0,0,talkDatas[0],wait=2.00 speaker=3,"火山の頂上まで　やってきたけど、
+何もない...？","We've made it to the top of the volcano, but there's nothing here...?","We made it to the volcano’s peak...
+but... there’s nothing here?",,,
+AutoTalk:S4_9_1_T0:1,AutoTalk,sharedassets81.assets,28,S4_9_1_T0,1,talkDatas[1],wait=2.00 speaker=2,"気をつけろッ！
+おれたちの　足元だっ！！",Watch out! Right beneath us!!,"Watch out!
+The ground beneath us!",,,
+AutoTalk:S4_9_1_T0:2,AutoTalk,sharedassets81.assets,28,S4_9_1_T0,2,talkDatas[2],wait=2.00 speaker=5,うわぁあっ！！,Whoa!!,Whoaaaah!!,,,
+AutoTalk:S4_9_1_T0:3,AutoTalk,sharedassets81.assets,28,S4_9_1_T0,3,talkDatas[3],wait=3.00 speaker=2,"おれは何度も　コイツと戦って、
+毎回...！","I've fought this guy many times, and every time...!","I’ve fought this thing so many times...
+and every time...!",,,
+AutoTalk:S4_9_1_T0:4,AutoTalk,sharedassets81.assets,28,S4_9_1_T0,4,talkDatas[4],wait=4.00 speaker=8,"共に戦う　仲間ができた今なら、
+あなたたちは　勝てるはずだと　信じていますよ。","Now that we have comrades fighting alongside us, I believe you can win.","Now that you have friends 
+by your side, I truly believe 
+you can do it!",,,
+AutoTalk:S4_9_1_T1:0,AutoTalk,sharedassets81.assets,29,S4_9_1_T1,0,talkDatas[0],wait=1.00 speaker=2,やった......,We did it...,We... we did it...,,,
+AutoTalk:S4_9_1_T1:1,AutoTalk,sharedassets81.assets,29,S4_9_1_T1,1,talkDatas[1],wait=4.00 speaker=2,やった......！　ついに勝ったぞ！！,Yes...! We finally won!,Yes...! We finally beat it!!,,,
+AutoTalk:S4_9_1_T1:2,AutoTalk,sharedassets81.assets,29,S4_9_1_T1,2,talkDatas[2],wait=5.00 speaker=5,"オイラたちみんなで
+力をあわせた　おかげだねっ！",Thanks to all of us working together!,Thanks to all of us working together!,,,
+AutoTalk:S4_God_0Ryu:0,AutoTalk,sharedassets67.assets,38,S4_God_0Ryu,0,talkDatas[0],wait=0.10 speaker=8,"このあたりには　非常に頑丈な
+岩石質のターボンが　分布しているようです。",There seems to be a distribution of very sturdy rock-like Tabons around here.,"Around here, you'll find some 
+really hard, rock-like Tabons.",,,
+AutoTalk:S4_God_0Ryu:1,AutoTalk,sharedassets67.assets,38,S4_God_0Ryu,1,talkDatas[1],wait=0.10 speaker=2,"おれはソイツの親玉に負けたんだ！
+次こそ倒してやる！！","I lost to its leader! Next time, I'll take it down!!","I lost to their boss last time... 
+but this time, I'm gonna beat 
+him for sure!",,,
+AutoTalk:S4_God_0Ryu:2,AutoTalk,sharedassets67.assets,38,S4_God_0Ryu,2,talkDatas[2],wait=0.10 speaker=8,"それは　オーブの力を奪っている可能性も
+ありますね。　心してかかりましょう。",It might be possible that he's stealing the power of the Orbs. Let's approach with caution.,"Beware, for they may be drawing 
+strength from the Orb itself.
+Do not let your guard down.",,,
+AutoTalk:S4_God_Def:0,AutoTalk,sharedassets67.assets,39,S4_God_Def,0,talkDatas[0],wait=0.10 speaker=8,"惑星ロンガで　最も大きな活火山が
+ここベリー火山です。","This is Berry Volcano, the largest active volcano on the Planet Longa.","Here stands Berry Volcano.
+The largest active volcano 
+on the Planet Longa.",,,
+AutoTalk:S4_God_Def:1,AutoTalk,sharedassets67.assets,39,S4_God_Def,1,talkDatas[1],wait=0.10 speaker=8,"先に進むには　この山を超える必要がありますから、
+くれぐれも　溶岩には気をつけてくださいね。","To move forward, we need to cross this mountain, so please be careful of the lava!","You must climb this volcano 
+to move forward. 
+Take care not to fall into the lava.",,,
+AutoTalk:S5_0_0_T0:0,AutoTalk,sharedassets83.assets,28,S5_0_0_T0,0,talkDatas[0],wait=5.00 speaker=7,"この海には、海底からしか　上陸できない
+ヒミツの島が　あるんだ。",There's a secret island that can only be accessed from the seabed.,"There’s a secret island you can 
+only reach from below the waves.",,,
+AutoTalk:S5_0_0_T0:1,AutoTalk,sharedassets83.assets,28,S5_0_0_T0,1,talkDatas[1],wait=8.00 speaker=7,オーブはきっと　そこに隠されているはずだ！,The Orb must be hidden there!,The Orb must be hidden there!,,,
+AutoTalk:S5_1_1_T0:0,AutoTalk,sharedassets84.assets,15,S5_1_1_T0,0,talkDatas[0],wait=4.00 speaker=3,"うわっ！
+トゲトゲのターボンがいる...",Whoa! There are spiky Tabons...,"Whoa! 
+There’s a spiky Tabon here...",,,
+AutoTalk:S5_1_1_T0:1,AutoTalk,sharedassets84.assets,15,S5_1_1_T0,1,talkDatas[1],wait=4.00 speaker=7,"こいつらは　踏んでも倒せないんだ。
+気を付けてくれ！",You can't defeat these by stepping on them. Be careful!,"You can't defeat them by 
+stepping on them. 
+Watch your step!",,,
+AutoTalk:S5_1_2_T0:0,AutoTalk,sharedassets85.assets,29,S5_1_2_T0,0,talkDatas[0],wait=4.00 speaker=5,"あっ、ビリビリだ...      
+キューマくんは　ビリビリだいじょうぶ？","Ah, it's electric... Are you okay, Kyuma?","Ah, it's buzzing with electricity... 
+Kyuma, are you alright with that?",,,
+AutoTalk:S5_1_2_T0:1,AutoTalk,sharedassets85.assets,29,S5_1_2_T0,1,talkDatas[1],wait=3.00 speaker=7,".........
+できれば近づかないようにしてくれ。","...
+Please stay away if possible.",".........
+Better to stay away.",,,
+AutoTalk:S5_1_2_T0:2,AutoTalk,sharedassets85.assets,29,S5_1_2_T0,2,talkDatas[2],wait=5.00 speaker=2,"ははーッ！！水の中のヤツは　電気がニガテなんだな！
+覚えておいてやるぜ！！",Haha! The ones in the water are weak against electricity! I'll remember that!!,"Ha! Creatures in water hate electricity!
+I’ll remember that!",,,
+AutoTalk:S5_1_3_T0:0,AutoTalk,sharedassets86.assets,39,S5_1_3_T0,0,talkDatas[0],wait=4.00 speaker=6,わわっ！！水面を動かしちゃった！！,Whoa!! I disturbed the water surface!!,"Whoa!! 
+I moved the water surface!",,,
+AutoTalk:S5_1_3_T0:1,AutoTalk,sharedassets86.assets,39,S5_1_3_T0,1,talkDatas[1],wait=5.00 speaker=7,"水を自由自在に操る......
+これこそが　俺の必殺ワザだ！",I can manipulate water freely... This is my special move!,"Controlling water freely...
+This is my special move!",,,
+AutoTalk:S5_2_0_T0:0,AutoTalk,sharedassets87.assets,13,S5_2_0_T0,0,talkDatas[0],wait=2.00 speaker=7,一個目のオーブ、ゲットだ。,Got the first Orb!,Got the first Orb!,,,
+AutoTalk:S5_2_0_T0:1,AutoTalk,sharedassets87.assets,13,S5_2_0_T0,1,talkDatas[1],wait=4.00 speaker=7,この調子で　残りのオーブも集めていくぞ！,Let's keep collecting the rest like this!,Let’s keep this up and find the rest!,,,
+AutoTalk:S5_2_1_T0:0,AutoTalk,sharedassets88.assets,20,S5_2_1_T0,0,talkDatas[0],wait=3.00 speaker=7,"ここからは　フロート島の内部だ。
+",From here we enter the interior of Float Isle,"From here on,
+we’re inside Float Isle.",,,
+AutoTalk:S5_2_1_T0:1,AutoTalk,sharedassets88.assets,20,S5_2_1_T0,1,talkDatas[1],wait=4.00 speaker=7,"最上部まで　水で満たされているらしいが、
+実は俺も　そこまでは行ったことがないんだ。","Apparently it's filled with water up to the top, but I've never actually been that far.","They say it’s flooded to the top.
+But I’ve never been up there.",,,
+AutoTalk:S5_2_1_T0:2,AutoTalk,sharedassets88.assets,20,S5_2_1_T0,2,talkDatas[2],wait=5.00 speaker=3,"ずっと水中なんだ...　ソラコくんとリュトロンくんは
+気を付けないと　いけないね......",It's all underwater... Soraco and Rythron need to be careful...,"It’s all underwater here...
+Soraco and Rythron must watch out.",,,
+AutoTalk:S5_2_2_T0:0,AutoTalk,sharedassets89.assets,9,S5_2_2_T0,0,talkDatas[0],wait=4.00 speaker=5,"あそこに　砂の壁があるけど......
+水の中だから　オイラ壊せないや...","There's a sand wall over there, but since it's underwater, I can't break it...","There’s a sand wall ahead...
+but underwater I can’t break it.",,,
+AutoTalk:S5_2_2_T0:1,AutoTalk,sharedassets89.assets,9,S5_2_2_T0,1,talkDatas[1],wait=4.00 speaker=6,"キューマくんの必殺ワザで、
+水位を下げてもらったら　いいかも？",Maybe Kyuma's special move can lower the water level?,"Maybe Kyuma’s Special Move...
+can lower the water level?",,,
+AutoTalk:S5_2_2_T0:2,AutoTalk,sharedassets89.assets,9,S5_2_2_T0,2,talkDatas[2],wait=5.00 speaker=5,たしかに......！キューマくん、おねがいっ！,"That's right...! Kyuma, please!","Right...!
+Kyuma, please!",,,
+AutoTalk:S5_2_2_T1:0,AutoTalk,sharedassets89.assets,10,S5_2_2_T1,0,talkDatas[0],wait=5.00 speaker=5,"わーい通れた！
+キューマくん　ありがとう～っ！","Yay, we can pass through! Thank you, Kyuma!","Yay, we made it through!
+Thanks, Kyuma!",,,
+AutoTalk:S5_2_2_T2:0,AutoTalk,sharedassets89.assets,11,S5_2_2_T2,0,talkDatas[0],wait=4.00 speaker=5,"...こっちの床は　リュトロンくんの炎で
+燃やせそうだね！",...The floor over here looks like it can be burned by Rythron's flames!,"...Looks like Rythron’s flame
+can burn this floor!",,,
+AutoTalk:S5_2_2_T2:1,AutoTalk,sharedassets89.assets,11,S5_2_2_T2,1,talkDatas[1],wait=4.00 speaker=7,"俺が水位を下げる。
+リュトロンはその間に　床を燃やしてくれ！","I'll lower the water level. Rythron, burn the floor in the meantime!","I’ll lower the water level.
+Rythron, burn the floor then!",,,
+AutoTalk:S5_2_2_T2:2,AutoTalk,sharedassets89.assets,11,S5_2_2_T2,2,talkDatas[2],wait=4.00 speaker=2,"は！？　なんで　おれがおまえに
+指図されないと　いけないんだよッ！",What?! Why should I have to take orders from you?,"Huh?! Why do I have to
+take orders from you?!",,,
+AutoTalk:S5_2_2_T2:3,AutoTalk,sharedassets89.assets,11,S5_2_2_T2,3,talkDatas[3],wait=4.00 speaker=6,まあまあ......,Come on...,Come on...,,,
+AutoTalk:S5_2_2_T3_1:0,AutoTalk,sharedassets89.assets,12,S5_2_2_T3_1,0,talkDatas[0],wait=4.00 speaker=2,"まっ　おれがいれば
+こんなの　ヨユーだぜ！","Well, with me around, this is a piece of cake!","Phew. With me here,
+this is a piece of cake!",,,
+AutoTalk:S5_2_2_T3_1:1,AutoTalk,sharedassets89.assets,12,S5_2_2_T3_1,1,talkDatas[1],wait=3.00 speaker=6,ふたりとも、いいチームワークだったね！,You two made a great team!,You two had great teamwork!,,,
+AutoTalk:S5_2_2_T3_1:2,AutoTalk,sharedassets89.assets,12,S5_2_2_T3_1,2,talkDatas[2],wait=4.00 speaker=2,"ふたりって......！　おれはべつに
+協力してやろうとか　思ってねえし！！",You two...! I don't have any intention of helping you or anything!,"You two...!
+I didn’t do it to help you!!",,,
+AutoTalk:S5_2_2_T3_1:3,AutoTalk,sharedassets89.assets,12,S5_2_2_T3_1,3,talkDatas[3],wait=5.00 speaker=7,.......,.......,.......,,,
+AutoTalk:S5_2_2_T3_2:0,AutoTalk,sharedassets89.assets,13,S5_2_2_T3_2,0,talkDatas[0],wait=4.00 speaker=3,"リュトロンくんって......
+いがいと　素直なんだね......",Rythron is surprisingly honest...,Rythron is surprisingly honest...,,,
+AutoTalk:S5_2_2_T3_2:1,AutoTalk,sharedassets89.assets,13,S5_2_2_T3_2,1,talkDatas[1],wait=4.00 speaker=2,"はあッ！？べつにコイツに頼られたからって
+うれしいとか　全然　思ってねえし！",Huh?! I'm not happy at all that he asked me for help!,"Hah!? It’s not like I was
+happy to be relied on, okay?!",,,
+AutoTalk:S5_2_2_T3_2:2,AutoTalk,sharedassets89.assets,13,S5_2_2_T3_2,2,talkDatas[2],wait=5.00 speaker=7,......,......,......,,,
+AutoTalk:S5_2_3_T0:0,AutoTalk,sharedassets90.assets,7,S5_2_3_T0,0,talkDatas[0],wait=4.00 speaker=6,"このあたり、
+なんだかすごく入り組んでるね......",This area is really complicated...,"This place is super twisty,
+like a maze...",,,
+AutoTalk:S5_2_3_T0:1,AutoTalk,sharedassets90.assets,7,S5_2_3_T0,1,talkDatas[1],wait=4.00 speaker=3,"そうだね......
+道に迷わないよう　慎重に進もう！",That's right... Let's proceed cautiously so we don't get lost!,"That’s right...
+let’s be careful not to get lost!",,,
+AutoTalk:S5_2_4_T0:0,AutoTalk,sharedassets91.assets,2,S5_2_4_T0,0,talkDatas[0],wait=4.00 speaker=5,"わぁ......
+すごい水の流れだね......！",Wow... What a strong current of water...!,"Wow... that current is
+really strong...",,,
+AutoTalk:S5_2_4_T0:1,AutoTalk,sharedassets91.assets,2,S5_2_4_T0,1,talkDatas[1],wait=5.00 speaker=7,"噂では　この先にフロート島に上陸する
+出口があるらしい。　......さあ、いくぞっ！","Rumor has it there's an exit to Float Isle ahead. ...Alright, let's go!","They say there’s an exit ahead
+to step onto Float Isle. Let’s go!",,,
+AutoTalk:S5_3_0_T0:0,AutoTalk,sharedassets92.assets,16,S5_3_0_T0,0,talkDatas[0],wait=3.00 speaker=6,うわぁっ、　いい眺めだね～！！,"Whoa, what a great view!!","Whoa, what a great view!!",,,
+AutoTalk:S5_3_0_T0:1,AutoTalk,sharedassets92.assets,16,S5_3_0_T0,1,talkDatas[1],wait=4.00 speaker=7,これが　島の上の景色なのか......！,Is this what the scenery above the island looks like...?,So this is the top of the isle...,,,
+AutoTalk:S5_3_11_T10:0,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,0,talkDatas[0],wait=0.50 speaker=12,きれいな　そら......,What a beautiful sky...,Beautiful sky...,,,
+AutoTalk:S5_3_11_T10:10,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,10,talkDatas[10],wait=0.50 speaker=12,"ボクは　みんなと一緒に
+冒険できないけど......","I can't go on an adventure with you, but...","I can't go on adventures with you, but...",,,
+AutoTalk:S5_3_11_T10:11,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,11,talkDatas[11],wait=0.50 speaker=12,"きっと　この世界を救ってくれるって
+しんじてるよ。",I believe you'll surely save this world.,I believe you’ll save this world.,,,
+AutoTalk:S5_3_11_T10:1,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,1,talkDatas[1],wait=0.50 speaker=12,"こんな世界が　いつまでも続いたら
+いいのになぁ.......　あっ！",I wish this world could last forever... Oh!,"I wish this world could
+stay like this forever... Ah!",,,
+AutoTalk:S5_3_11_T10:2,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,2,talkDatas[2],wait=1.00 speaker=12,よいしょっと......,Alright...,Heave-ho...,,,
+AutoTalk:S5_3_11_T10:3,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,3,talkDatas[3],wait=0.50 speaker=12,"みんな、初めまして！　ボクの　名前は
+「タソガレ」　って　いうんだ。","Everyone, nice to meet you! My name is Tasogare.","Hello everyone.
+My name is Tasogare.",,,
+AutoTalk:S5_3_11_T10:4,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,4,talkDatas[4],wait=0.50 speaker=3,"タソガレくん！
+初めまして！",Tasogare-kun! Nice to meet you!,"Tasogare! 
+Nice to meet you!",,,
+AutoTalk:S5_3_11_T10:5,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,5,talkDatas[5],wait=0.50 speaker=12,じつは　みんなに　渡したいものが　あるんだ。,"Actually, I have something to give everyone.",I’ve got something for you.,,,
+AutoTalk:S5_3_11_T10:6,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,6,talkDatas[6],wait=1.00 speaker=12,これ、受け取って......,"Here, take this...","Here, take this...",,,
+AutoTalk:S5_3_11_T10:7,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,7,talkDatas[7],wait=3.00 speaker=1,"フィズたちは、タソガレから
+「<color=#FF3333FF>あけとくれのしずく</color>」を受け取った！",Fiz and the others received a <color=#FF3333FF>Drops of Dawn and Dusk</color> from Tasogare!,"Fiz and friends received
+<color=#FF3333FF>Drops of Dawn and Dusk</color> from Tasogare!",,,
+AutoTalk:S5_3_11_T10:8,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,8,talkDatas[8],wait=1.00 speaker=3,これは......？,this is...?,What is this...?,,,
+AutoTalk:S5_3_11_T10:9,AutoTalk,sharedassets96.assets,27,S5_3_11_T10,9,talkDatas[9],wait=0.50 speaker=12,"このしずくは　少しでも長く
+旅を続けるための　おまもりだよ。",These droplets are blessings to support the journey for as long as possible.,"This Drop protects you
+so your adventure lasts longer.",,,
+AutoTalk:S5_3_11_T11:0,AutoTalk,sharedassets96.assets,28,S5_3_11_T11,0,talkDatas[0],wait=1.00 speaker=12,「あけとくれのしずく」を持っているとね......,"When you have """"Drops of Dawn and Dusk""""...","When you have the 
+Drops of Dawn and Dusk...",,,
+AutoTalk:S5_3_11_T11:1,AutoTalk,sharedassets96.assets,28,S5_3_11_T11,1,talkDatas[1],wait=1.00 speaker=12,"もう　やられちゃうっ！って時、いちどだけ
+耐えられるだけの　パワーがわくんだ。","If you're about to be defeated, they will give you enough power to endure once.","If you’re about to be knocked out,
+the Drop lets you stand once more.",,,
+AutoTalk:S5_3_11_T11:2,AutoTalk,sharedassets96.assets,28,S5_3_11_T11,2,talkDatas[2],wait=1.00 speaker=12,"でも、だからって
+無理はしちゃだめだよ。",But that doesn't mean you should push yourself too hard.,But don’t push yourself too far.,,,
+AutoTalk:S5_3_11_T12:0,AutoTalk,sharedassets96.assets,29,S5_3_11_T12,0,talkDatas[0],wait=1.00 speaker=11,"......
+タソガレくんに　話は聞いているよ。",...Tasogare-kun has told me about you.,"......
+I heard about you from Tasogare.",,,
+AutoTalk:S5_3_11_T12:1,AutoTalk,sharedassets96.assets,29,S5_3_11_T12,1,talkDatas[1],wait=1.00 speaker=11,"ワタシの名前はアカツキ。
+彼とワタシは　双子のドラゴンなの。",My name is Akatsuki. He and I are twin dragons.,"My name is Akatsuki.
+He and I are twin dragons.",,,
+AutoTalk:S5_3_11_T12:2,AutoTalk,sharedassets96.assets,29,S5_3_11_T12,2,talkDatas[2],wait=1.00 speaker=11,"ワタシもみんなのこと、応援してるよ。
+頑張ってね。",I'm cheering for all of you too. Do your best.,"I’m cheering you on too!
+You’ve got this!",,,
+AutoTalk:S5_3_11_T20:0,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,0,talkDatas[0],wait=0.50 speaker=11,きれいな　そら......,What a beautiful sky...,Beautiful sky...,,,
+AutoTalk:S5_3_11_T20:10,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,10,talkDatas[10],wait=0.50 speaker=11,"ワタシは　みんなと一緒に
+冒険できないけど......","I can't go on an adventure with you, but...",I can’t adventure with you but...,,,
+AutoTalk:S5_3_11_T20:11,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,11,talkDatas[11],wait=0.50 speaker=11,"きっと　この世界を救ってくれるって
+しんじてるよ。",I believe you'll surely save this world.,I believe you’ll save this world.,,,
+AutoTalk:S5_3_11_T20:1,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,1,talkDatas[1],wait=0.50 speaker=11,"こんな世界が　いつまでも続いたら
+いいのになぁ.......　あっ！",I wish this world could last forever... Oh!,"I wish this world could
+stay like this forever... Ah!",,,
+AutoTalk:S5_3_11_T20:2,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,2,talkDatas[2],wait=1.00 speaker=11,よいしょっと......,Alright...,Heave-ho...,,,
+AutoTalk:S5_3_11_T20:3,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,3,talkDatas[3],wait=0.50 speaker=11,"みんな、初めまして。　ワタシの　名前は
+「アカツキ」　って　いうの。","Everyone, nice to meet you. My name is Akatsuki.","Hello everyone.
+My name is Akatsuki.",,,
+AutoTalk:S5_3_11_T20:4,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,4,talkDatas[4],wait=0.50 speaker=3,"アカツキちゃん！
+初めまして！",Akatsuki-chan! Nice to meet you!,"Akatsuki!
+Nice to meet you",,,
+AutoTalk:S5_3_11_T20:5,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,5,talkDatas[5],wait=0.50 speaker=11,じつは　みんなに　渡したいものが　あるの。,"Actually, I have something to give to you.",I’ve got something for you.,,,
+AutoTalk:S5_3_11_T20:6,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,6,talkDatas[6],wait=1.00 speaker=11,これ、受け取って......,"Here, take this...","Here, take it!",,,
+AutoTalk:S5_3_11_T20:7,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,7,talkDatas[7],wait=3.00 speaker=1,"フィズたちは、アカツキから
+「<color=#FF3333FF>あけとくれのしずく</color>」を受け取った！",Fiz and the others received the <color=#FF3333FF>Drops of Dawn and Dusk</color> from Akatsuki!,"Fiz and friends received
+<color=#FF3333FF>Drops of Dawn and Dusk</color> from Akatsuki!",,,
+AutoTalk:S5_3_11_T20:8,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,8,talkDatas[8],wait=1.00 speaker=3,これは......？,this is...?,Huh? What is this...,,,
+AutoTalk:S5_3_11_T20:9,AutoTalk,sharedassets96.assets,30,S5_3_11_T20,9,talkDatas[9],wait=0.50 speaker=11,"このしずくは　少しでも長く
+旅を続けるための　おまもり。",These droplets are blessings to support the journey for as long as possible.,"This drop is a charm
+to extend your journey.",,,
+AutoTalk:S5_3_11_T21:0,AutoTalk,sharedassets96.assets,31,S5_3_11_T21,0,talkDatas[0],wait=1.00 speaker=11,「あけとくれのしずく」を持っているとね......,"When you have """"Drops of Dawn and Dusk""""...","When you have the 
+Drops of Dawn and Dusk...",,,
+AutoTalk:S5_3_11_T21:1,AutoTalk,sharedassets96.assets,31,S5_3_11_T21,1,talkDatas[1],wait=1.00 speaker=11,"もう　やられちゃうっ！って時、いちどだけ
+耐えられるだけの　パワーがわくの。","If you're about to be defeated, they will give you enough power to endure once.","With this drop, you’ll gain power 
+to survive one final hit.",,,
+AutoTalk:S5_3_11_T21:2,AutoTalk,sharedassets96.assets,31,S5_3_11_T21,2,talkDatas[2],wait=1.00 speaker=11,"でも、だからって
+無理はしちゃだめだよ。",But that doesn't mean you should push yourself too hard.,But don’t push yourself too far.,,,
+AutoTalk:S5_3_11_T22:0,AutoTalk,sharedassets96.assets,32,S5_3_11_T22,0,talkDatas[0],wait=1.00 speaker=12,"あ......！
+アカツキちゃんに　話は聞いてるよ。",Ah...! I've heard about Akatsuki-chan.,"Oh...!
+Akatsuki told me about you.",,,
+AutoTalk:S5_3_11_T22:1,AutoTalk,sharedassets96.assets,32,S5_3_11_T22,1,talkDatas[1],wait=1.00 speaker=12,"ボクの名前はタソガレ。...アカツキちゃんと
+ボクは　双子のドラゴンなんだ！",My name is Tasogare. ...Akatsuki-chan and I are twin dragons!,"My name is Tasogare.
+Akatsuki and I are twins!",,,
+AutoTalk:S5_3_11_T22:2,AutoTalk,sharedassets96.assets,32,S5_3_11_T22,2,talkDatas[2],wait=1.00 speaker=12,"ボクもみんなのこと、応援してるよ。
+頑張ってね！",I'm cheering for all of you too. Do your best!,"I’m cheering for you all too.
+Do your best!",,,
+AutoTalk:S5_3_1_T0:0,AutoTalk,sharedassets93.assets,56,S5_3_1_T0,0,talkDatas[0],wait=5.00 speaker=2,"それにしても　高いところまで来たな......     
+穴に落ちないように　気をつけろよ！","Still, we've come up high... Be careful not to fall into any holes!","We’ve come pretty high...
+be careful not to fall in!",,,
+AutoTalk:S5_8_1_T0:0,AutoTalk,sharedassets97.assets,4,S5_8_1_T0,0,talkDatas[0],wait=0.10 speaker=1,<i>この先キケン！　サメ出没注意</i>,"Warning ahead: Danger!
+Beware of shark sightings.","Danger ahead!
+Sharks spotted.",,,
+AutoTalk:S5_9_1_T0_0:0,AutoTalk,sharedassets98.assets,3,S5_9_1_T0_0,0,talkDatas[0],wait=0.10 speaker=3,あれっ......　オーブはどこ？,Huh...? Where's the Orb?,Huh...? Where’s the Orb?!,,,
+AutoTalk:S5_9_1_T0_0:1,AutoTalk,sharedassets98.assets,3,S5_9_1_T0_0,1,talkDatas[1],wait=0.10 speaker=10,"クク.....　残念だったな！
+オーブの力は　このオレが頂く！",Hehe... Too bad for you! The power of the Orb will be taken by me!,"Heh... too bad for you!
+I’ll take the Orbs’ power!",,,
+AutoTalk:S5_9_1_T0_0:2,AutoTalk,sharedassets98.assets,3,S5_9_1_T0_0,2,talkDatas[2],wait=1.50 speaker=7,誰だっ！！？,Who are you!!?,Who are you!!?,,,
+AutoTalk:S5_9_1_T0_0:3,AutoTalk,sharedassets98.assets,3,S5_9_1_T0_0,3,talkDatas[3],wait=0.10 speaker=10,ククク......,Hehehe...,Heh heh heh...,,,
+AutoTalk:S5_9_1_T0_0:4,AutoTalk,sharedassets98.assets,3,S5_9_1_T0_0,4,talkDatas[4],wait=0.10 speaker=10,"今から食べる　メシに向かって
+自己紹介するような　ヤツなんざ......",There's no one who would introduce themselves before eating their meal like this......,"Who introduces themselves
+to the meal they’re about to eat?  ",,,
+AutoTalk:S5_9_1_T0_0:5,AutoTalk,sharedassets98.assets,3,S5_9_1_T0_0,5,talkDatas[5],wait=0.10 speaker=10,<size=24>いねえだろっ！！</size>,<size=24>There's no way!! </size>,<size=24>No one!! </size>,,,
+AutoTalk:S5_9_1_T0_1:0,AutoTalk,sharedassets98.assets,4,S5_9_1_T0_1,0,talkDatas[0],wait=0.10 speaker=7,"出てこいっ！
+今度こそ　オーブを返してもらうぞ！","Come out! This time, I'm getting my Orb back!","Show yourself!
+This time you’ll give us 
+the Orb back!",,,
+AutoTalk:S5_9_1_T0_1:1,AutoTalk,sharedassets98.assets,4,S5_9_1_T0_1,1,talkDatas[1],wait=1.50 speaker=10,"おいおい！
+また食べられに来たのか？","Hey, hey! Are you here again to get eaten?","Well, well! 
+Came back just to be someone’s meal?",,,
+AutoTalk:S5_9_1_T0_1:2,AutoTalk,sharedassets98.assets,4,S5_9_1_T0_1,2,talkDatas[2],wait=0.10 speaker=10,ククク......,Hehehe...,Heh heh heh...,,,
+AutoTalk:S5_9_1_T0_1:3,AutoTalk,sharedassets98.assets,4,S5_9_1_T0_1,3,talkDatas[3],wait=0.30 speaker=10,何度でも　相手してやるぜッ！,I'll fight you again and again!,I’ll face you again and again!,,,
+AutoTalk:S5_9_1_T1:0,AutoTalk,sharedassets98.assets,5,S5_9_1_T1,0,talkDatas[0],wait=3.50 speaker=5,"うわーっ！
+オイラたち　食べられちゃうよ！！",Whoa!! We're going to get eaten!!,"Wah—
+We’re gonna get eaten!!",,,
+AutoTalk:S5_9_1_T1:1,AutoTalk,sharedassets98.assets,5,S5_9_1_T1,1,talkDatas[1],wait=5.00 speaker=8,"相手の動きをよく見て、
+攻撃を避けるのです......！",Watch your opponent's movements and avoid their attacks...!,"Watch his moves closely,
+and dodge every strike!",,,
+AutoTalk:S5_9_1_T1_1:0,AutoTalk,sharedassets98.assets,6,S5_9_1_T1_1,0,talkDatas[0],wait=3.00 speaker=10,うぎゃあっ！！？,Aaahh!!!,Ugh!?,,,
+AutoTalk:S5_9_1_T1_2:0,AutoTalk,sharedassets98.assets,7,S5_9_1_T1_2,0,talkDatas[0],wait=3.00 speaker=10,まいっ...た......,I've had enough...,I’ve lost...,,,
+AutoTalk:S5_9_1_T1_3:0,AutoTalk,sharedassets98.assets,8,S5_9_1_T1_3,0,talkDatas[0],wait=3.00 speaker=10,"お......おい！　「まいった」って言ってるだろ！
+オレの負けだ！",Hey! I'm saying I've had enough! I admit defeat!,"Hey... I said I’ve lost!
+I admit defeat!",,,
+AutoTalk:S5_9_1_T1_4:0,AutoTalk,sharedassets98.assets,9,S5_9_1_T1_4,0,talkDatas[0],wait=3.00 speaker=10,"わかった！　わかったから！
+いい加減　やめてくれ......ッ！","Okay! I get it!
+Stop it already...!","Okay! I get it!
+Just stop already...!",,,
+AutoTalk:S5_9_1_T1_5:0,AutoTalk,sharedassets98.assets,10,S5_9_1_T1_5,0,talkDatas[0],wait=3.00 speaker=10,"いつまで　やるつもりなんだ？！
+もう　何も出てこねえって！","How long are you going to keep doing this?
+Nothing more will come out!","How long will you do this?!
+There’s nothing left to come out!",,,
+AutoTalk:S5_9_1_T2:0,AutoTalk,sharedassets98.assets,11,S5_9_1_T2,0,talkDatas[0],wait=2.00 speaker=7,オーブを取り戻したぞ！,We got the Orb back!,We got the Orb back!,,,
+AutoTalk:S5_9_1_T2:1,AutoTalk,sharedassets98.assets,11,S5_9_1_T2,1,talkDatas[1],wait=3.00 speaker=8,"これで　フロート島のオーブは
+すべて守られました。","With this, all of Float Isle's Orbs have been protected.","Now all Float Isle Orbs
+are safe.",,,
+AutoTalk:S5_9_1_T2:2,AutoTalk,sharedassets98.assets,11,S5_9_1_T2,2,talkDatas[2],wait=4.00 speaker=8,"次はいよいよ　最後の仲間がいる場所です。
+気を引き締めなおして　臨むのですよ。","Up next we finally arrive at the location where our last companions are.
+We need to gear up and get ready.","Next is where our final ally awaits.
+Brace yourselves!",,,
+AutoTalk:S5_9_1_T3:0,AutoTalk,sharedassets98.assets,12,S5_9_1_T3,0,talkDatas[0],wait=1.50 speaker=10,くっ...!こいつら...！,Damn...! These guys...!,Gah... these guys...!,,,
+AutoTalk:S5_9_1_T3:1,AutoTalk,sharedassets98.assets,12,S5_9_1_T3,1,talkDatas[1],wait=3.00 speaker=10,なら　これならどうだァ！,"Then, how about this?!",Then how about this!,,,
+AutoTalk:S5_God_5Kyu:0,AutoTalk,sharedassets83.assets,26,S5_God_5Kyu,0,talkDatas[0],wait=0.10 speaker=8,"フロート島の奥地は　凶暴な
+魚人の縄張りに　なっているようです。
+","The depths of Float Isle seem to be the territory of the ferocious fishermen.
+","Deep within Float Isle lies
+a territory of ruthless fisherman.",,,
+AutoTalk:S5_God_5Kyu:1,AutoTalk,sharedassets83.assets,26,S5_God_5Kyu,1,talkDatas[1],wait=0.10 speaker=7,"凶暴な魚人...か。　もしも先にオーブを
+奪われていたら　厄介かもな。","The ferocious fisherman... If they've taken the Orb before us, it could be troublesome.","Ruthless fisherman...
+If they’d taken the Orb first,
+we’d be in serious trouble.",,,
+AutoTalk:S5_God_5Kyu:2,AutoTalk,sharedassets83.assets,26,S5_God_5Kyu,2,talkDatas[2],wait=0.10 speaker=8,"ええ。世界を守る力を得るには
+オーブを取り返さなければ　なりません。","Yes. To gain the power to protect the world, we must retrieve the Orb.","Correct. We must reclaim the Orbs
+to gain the power required
+to defend our world.",,,
+AutoTalk:S5_God_Def:0,AutoTalk,sharedassets83.assets,27,S5_God_Def,0,talkDatas[0],wait=0.10 speaker=8,"この海にある、
+断崖絶壁に囲まれた島......",This island in the sea is surrounded by steep cliffs...,"An island rises from the sea,
+surrounded by towering cliffs...",,,
+AutoTalk:S5_God_Def:1,AutoTalk,sharedassets83.assets,27,S5_God_Def,1,talkDatas[1],wait=0.10 speaker=8,"まるで　浮いているように見えることから、
+フロート島と名付けられました。","Because it looks like it's floating, it was named Float Isle.","It seems to drift above waves,
+so it’s called Float Isle.",,,
+AutoTalk:S5_God_Def:2,AutoTalk,sharedassets83.assets,27,S5_God_Def,2,talkDatas[2],wait=0.10 speaker=8,"フロート島に　上陸するためには、
+海底洞窟を　通らねばならないようです。","To land on Float Isle, we must pass through the underwater cave.","To land there safely,
+we must pass through sea caves.",,,
+AutoTalk:S6_0_1_T0:0,AutoTalk,sharedassets100.assets,83,S6_0_1_T0,0,talkDatas[0],wait=5.00 speaker=4,"この街には　ほかの地域では見られないような
+おもしろいモノが　たくさんあるわ。",This town has a lot of interesting things that can't be found in other regions.,"This town’s full of curiosities
+you won’t find elsewhere.",,,
+AutoTalk:S6_0_1_T0:1,AutoTalk,sharedassets100.assets,83,S6_0_1_T0,1,talkDatas[1],wait=5.00 speaker=4,"オーブ探しを進めながら、
+たくさん　楽しんじゃいましょう！",Let's have lots of fun while we continue searching for the Orb!,"Let’s hunt Orbs
+and have lots of fun!",,,
+AutoTalk:S6_1_2_T0:0,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,0,talkDatas[0],wait=0.10 speaker=5,こんばんはっ！,Good evening!,Good evening!,,,
+AutoTalk:S6_1_2_T0:1,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,1,talkDatas[1],wait=0.10 speaker=1,"おや...　このあたりに　ドラゴンのこどもが
+来るなんて　珍しいねぇ......",Oh... It's rare for dragon cub to come around here...,"Oh? A baby dragon here?
+That’s a rare sight...",,,
+AutoTalk:S6_1_2_T0:2,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,2,talkDatas[2],wait=0.10 speaker=1,"この先を　進んでいくなら、
+気をつけたほうがいいよ。
+","If you're going to proceed ahead, you should be careful.","If you go further,
+you’d best be careful.",,,
+AutoTalk:S6_1_2_T0:3,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,3,talkDatas[3],wait=0.10 speaker=1,"なんてったって、　ぼくたちスライムは
+小さなドラゴンを見るとすぐ...","After all, we slimes, when we see a small dragon, we immediately...","You see, we slimes,
+when we spot baby dragons...",,,
+AutoTalk:S6_1_2_T0:4,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,4,talkDatas[4],wait=0.10 speaker=3,すぐ？,Immediately?,Then what?,,,
+AutoTalk:S6_1_2_T0:5,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,5,talkDatas[5],wait=0.50 speaker=1,<size=24>パクッ！</size>...っと食べちゃうからね,<size=24>Crack! </size>... I'm going to eat you up!,"<size=16> Chomp! </size>
+...We gobble them up.",,,
+AutoTalk:S6_1_2_T0:6,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,6,talkDatas[6],wait=0.10 speaker=6,ひいっ！,Noooooo!,Eek!,,,
+AutoTalk:S6_1_2_T0:7,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,7,talkDatas[7],wait=0.10 speaker=1,"うふふ！　ぼくはたった一人の
+食べない派スライムだから　安心してよっ。","Uhehe! I'm the only slime who doesn't eat, so you can relax.","Hehe! I’m the only slime
+who doesn’t eat dragons.
+You can relax!",,,
+AutoTalk:S6_1_2_T0:8,AutoTalk,sharedassets102.assets,42,S6_1_2_T0,8,talkDatas[8],wait=0.10 speaker=2,（安心できるか！）,(Can we rest assured?!),(Can’t exactly relax...),,,
+AutoTalk:S6_1_3_T0:0,AutoTalk,sharedassets103.assets,9,S6_1_3_T0,0,talkDatas[0],wait=3.50 speaker=6,"わっわっ！
+このあたり、毒の水に　囲まれてるよ～！",Wow! This area is surrounded by poisonous water!,"Whoa! This area is surrounded
+by poison water!",,,
+AutoTalk:S6_1_3_T0:1,AutoTalk,sharedassets103.assets,9,S6_1_3_T0,1,talkDatas[1],wait=3.50 speaker=3,何とかして　水を抜かなきゃ......,We have to find a way to drain the water...,We’ve gotta drain this water somehow...,,,
+AutoTalk:S6_1_3_T0:2,AutoTalk,sharedassets103.assets,9,S6_1_3_T0,2,talkDatas[2],wait=3.50 speaker=4,ここは　わたしに任せて！,Leave this to me!,Leave this to me!,,,
+AutoTalk:S6_1_3_T0:3,AutoTalk,sharedassets103.assets,9,S6_1_3_T0,3,talkDatas[3],wait=3.50 speaker=4,"実は　毒に耐性があるの。
+わたしが泳いで　先を見てくる！","Actually, I have a resistance to poison. I'll swim ahead and take a look!","Actually, I’m poison-resistant.
+I'll swim ahead and take a look!",,,
+AutoTalk:S6_2_1_T0:0,AutoTalk,sharedassets105.assets,110,S6_2_1_T0,0,talkDatas[0],wait=3.00 speaker=2,うわぁッ！！！！,Whoa!!,Whoa!!!,,,
+AutoTalk:S6_2_1_T0:1,AutoTalk,sharedassets105.assets,110,S6_2_1_T0,1,talkDatas[1],wait=4.00 speaker=3,"なんだか　地面が揺れているけど
+ここは一体......？                         
+                              ","The ground is shaking, but what on earth is this...?","The ground’s shaking...
+Where on earth are we?",,,
+AutoTalk:S6_2_1_T0:2,AutoTalk,sharedassets105.assets,110,S6_2_1_T0,2,talkDatas[2],wait=5.00 speaker=5,"......わわっ！
+オイラたち、電車の上に落ちてきちゃった！？",Wow! Did we just fall onto a train!?,"Whoa!
+We’ve landed on a train!?",,,
+AutoTalk:S6_2_1_T0:3,AutoTalk,sharedassets105.assets,110,S6_2_1_T0,3,talkDatas[3],wait=5.00 speaker=4,"どうやら　街の中心部に向かう列車に
+乗ったみたいね...。",It seems we've boarded a train heading to the city center...,"Looks like we boarded the train
+heading for the city center...",,,
+AutoTalk:S6_2_1_T0:4,AutoTalk,sharedassets105.assets,110,S6_2_1_T0,4,talkDatas[4],wait=6.00 speaker=4,"ちょうどいいから、このまま車内を探索しながら
+終点に着くのを　待ちましょう！","Since we're here, let's explore the inside of the train while we wait to reach the final stop!","Perfect, let’s explore the carriages
+while we wait for the last stop.",,,
+AutoTalk:S6_2_1_T1:0,AutoTalk,sharedassets105.assets,111,S6_2_1_T1,0,talkDatas[0],wait=2.50 speaker=3,え？　なにこれは,Huh? What is this?,What’s this section?,,,
+AutoTalk:S6_2_1_T1:1,AutoTalk,sharedassets105.assets,111,S6_2_1_T1,1,talkDatas[1],wait=3.00 speaker=4,"これは......
+「グリーン車」　ってやつね！","This is... the """"Green Car""""!",Oh... it’s the first-class carriage!,,,
+AutoTalk:S6_2_1_T1:2,AutoTalk,sharedassets105.assets,111,S6_2_1_T1,2,talkDatas[2],wait=3.00 speaker=2,"......
+だまされないぞ　オレは！",I'm not falling for that!,"...
+Not getting fooled here!",,,
+AutoTalk:S6_2_1_T10:0,AutoTalk,sharedassets105.assets,112,S6_2_1_T10,0,talkDatas[0],wait=0.10 speaker=1,"ありがとう......僕はこの列車の車掌です。
+皆さんのおかげで　助かりました！","Thank you... I'm the conductor of this train. Thanks to all of you, I was saved!","Thank you... I’m the conductor.
+You all saved me!
+",,,
+AutoTalk:S6_2_1_T10:1,AutoTalk,sharedassets105.assets,112,S6_2_1_T10,1,talkDatas[1],wait=0.10 speaker=3,どういたしまして！,You're welcome!,You're welcome!,,,
+AutoTalk:S6_2_1_T10:2,AutoTalk,sharedassets105.assets,112,S6_2_1_T10,2,talkDatas[2],wait=0.10 speaker=1,"列車はまもなく　終着駅に到着します。
+お気をつけて　行ってらっしゃい！","The train will arrive at the last station soon.
+Have a safe trip!","Final station is just ahead.
+Have a safe trip!",,,
+AutoTalk:S6_2_2_T0:0,AutoTalk,sharedassets106.assets,71,S6_2_2_T0,0,talkDatas[0],wait=2.80 speaker=3,"そういえば　すごいヘンな乗り方を
+しちゃったけど　怒られないかな...？","Oh, by the way... I did something really weird.
+I wonder if they'll be mad at me...?","So... that was a pretty strange 
+way to board. I hope they
+won’t kick us out...",,,
+AutoTalk:S6_2_2_T0:1,AutoTalk,sharedassets106.assets,71,S6_2_2_T0,1,talkDatas[1],wait=2.50 speaker=4,"心配しないで！
+乗り放題パス　持ってるから！","Don't worry!
+I have an unlimited ride pass!","Don’t worry!
+I’ve got an unlimited ride pass!",,,
+AutoTalk:S6_2_2_T0:2,AutoTalk,sharedassets106.assets,71,S6_2_2_T0,2,talkDatas[2],wait=3.00 speaker=2,"さすが　この街に住んでるだけあって
+用意周到だな！","As expected from someone who lives in this town, you're well-prepared!","Of course you do, 
+you’re a hometown pro!",,,
+AutoTalk:S6_2_2_T1:0,AutoTalk,sharedassets106.assets,72,S6_2_2_T1,0,talkDatas[0],wait=3.50 speaker=2,いや　だめなのかよ！！,"No, that's not okay!!",Seriously? That’s a no-go?!,,,
+AutoTalk:S6_4_1_T0_0:0,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,0,talkDatas[0],wait=1.00 speaker=8,"ついに　この星のオーブをすべて集め、
+世界を守るために　必要な仲間が揃いました。","Finally, we've collected all the Orbs on this planet and gathered the necessary companions to protect the world.","Finally, we've gathered every 
+Orb, and our team is complete 
+to save the world.",,,
+AutoTalk:S6_4_1_T0_0:10,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,10,talkDatas[10],wait=1.00 speaker=2,"そんなこと　許せねえ！
+月でもなんでも　行ってやるぜ！！",I won't allow that! I'll go to the moon or wherever!!,"I won’t stand for this!  
+If I have to, I’ll go to the moon!!",,,
+AutoTalk:S6_4_1_T0_0:11,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,11,talkDatas[11],wait=1.00 speaker=8,心強い反応、安心しました。,I'm relieved by your strong response.,Your strong response comforts me.,,,
+AutoTalk:S6_4_1_T0_0:1,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,1,talkDatas[1],wait=1.00 speaker=8,"しかし、私たちにはまだ
+やることが　残っています。","However, we still have things left to do.","However, there’s still work to be done.",,,
+AutoTalk:S6_4_1_T0_0:2,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,2,talkDatas[2],wait=1.00 speaker=3,「やること」って？,"What do you mean by """"things""""?",...What is that!?,,,
+AutoTalk:S6_4_1_T0_0:3,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,3,talkDatas[3],wait=2.00 speaker=8,空を見上げてください。,Look up at the sky.,Look up at the sky.,,,
+AutoTalk:S6_4_1_T0_0:4,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,4,talkDatas[4],wait=1.00 speaker=4,今日は　月が良く見えるわね。,The moon looks good today.,The moon is clear tonight.,,,
+AutoTalk:S6_4_1_T0_0:5,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,5,talkDatas[5],wait=1.00 speaker=8,"実は　この惑星ロンガと同じように、
+月にも　オーブが存在しています。","Actually, just like on the Planet Longa, there are Orbs on the moon as well.","It seems waning because
+the moon Orb’s power has faded...",,,
+AutoTalk:S6_4_1_T0_0:6,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,6,talkDatas[6],wait=1.00 speaker=8,"あのような　欠けた姿に見えるのは、
+月のオーブの力が　弱まったから......",The reason it looks like that with those missing pieces is that the power of the moon's Orbs has weakened...,"The reason it looks like that with those
+missing pieces is that the power of the
+moon's Orbs has weakened...",,,
+AutoTalk:S6_4_1_T0_0:7,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,7,talkDatas[7],wait=1.00 speaker=5,"そ...そうなのっ！？
+どうして　そんなことになっちゃったの？",R-Really!? How did that happen?,"Re... really?!
+How could that happen?!",,,
+AutoTalk:S6_4_1_T0_0:8,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,8,talkDatas[8],wait=1.00 speaker=8,"星の色彩と力を　奪おうとする勢力が、
+月を拠点にして　拡大を続けているのです。",A force trying to steal the colors and power of the stars has been expanding its reach from the moon as its base.,"A force seeking to steal
+our world’s color and power
+is using the moon as its base.",,,
+AutoTalk:S6_4_1_T0_0:9,AutoTalk,sharedassets118.assets,121,S6_4_1_T0_0,9,talkDatas[9],wait=1.00 speaker=8,既に私だけでは　手に負えないほどに...,It's already beyond what I can handle alone...,"Their spread only continues.
+It has already become too great 
+for me to handle alone...",,,
+AutoTalk:S6_4_1_T0_1:0,AutoTalk,sharedassets118.assets,122,S6_4_1_T0_1,0,talkDatas[0],wait=2.50 speaker=8,しかし......,However...,However...,,,
+AutoTalk:S6_4_1_T0_1:1,AutoTalk,sharedassets118.assets,122,S6_4_1_T0_1,1,talkDatas[1],wait=4.00 speaker=8,"月へ向かう　ここから先の道のりは
+今までよりも　過酷なものになるでしょう。",The journey ahead toward the moon will be harsher than before.,"The path to the moon will be tougher  
+than anything you’ve faced so far.",,,
+AutoTalk:S6_4_1_T0_1:2,AutoTalk,sharedassets118.assets,122,S6_4_1_T0_1,2,talkDatas[2],wait=5.00 speaker=8,"あなたたちが　これまでの冒険を通して
+試練を乗り越えうるほどに　成長できたのか？",Have you all grown enough through your adventures to overcome these trials?,"Have you grown enough  
+on your journey to meet the challenge?
+",,,
+AutoTalk:S6_4_1_T0_1:3,AutoTalk,sharedassets118.assets,122,S6_4_1_T0_1,3,talkDatas[3],wait=4.50 speaker=8,"今　この場所で、
+私に確かめさせてください。","Now, here in this place, please let me confirm that.","Here and now, let me test you.",,,
+AutoTalk:S6_4_1_T0_1:4,AutoTalk,sharedassets118.assets,122,S6_4_1_T0_1,4,talkDatas[4],wait=5.00 speaker=8,....................,....................,....................,,,
+AutoTalk:S6_4_1_T0_1:5,AutoTalk,sharedassets118.assets,122,S6_4_1_T0_1,5,talkDatas[5],wait=2.00 speaker=8,信じていますよ。,I believe you.,I believe in you.,,,
+AutoTalk:S6_4_1_T10:0,AutoTalk,sharedassets118.assets,123,S6_4_1_T10,0,talkDatas[0],wait=3.00 speaker=8,"......っ！                       
+ここまでとは......！","...!
+To think it would come to this...!","...!
+I didn’t expect this...!",,,
+AutoTalk:S6_4_1_T10:1,AutoTalk,sharedassets118.assets,123,S6_4_1_T10,1,talkDatas[1],wait=3.50 speaker=8,"あなたたちなら　きっと、
+どんな道でも　乗り越えてゆけるでしょう......",I'm sure you can overcome any challenge...,"If it’s you, I’m sure  
+you can overcome 
+any challenge...",,,
+AutoTalk:S6_4_1_T10:2,AutoTalk,sharedassets118.assets,123,S6_4_1_T10,2,talkDatas[2],wait=3.50 speaker=8,"......さあ！
+最後の冒険へ　出発しましょう！",...Now! Let's set off on our final adventure!,"...Now! Let’s set off 
+on the final adventure!",,,
+AutoTalk:S6_4_1_T1_0:0,AutoTalk,sharedassets118.assets,124,S6_4_1_T1_0,0,talkDatas[0],wait=1.00 speaker=8,"あなたたちなら　きっと戻ってくるだろうと
+信じていましたよ。",I believed that you would surely come back.,"I knew you’d return;
+I’ve always believed in you.",,,
+AutoTalk:S6_4_1_T1_1:0,AutoTalk,sharedassets118.assets,125,S6_4_1_T1_1,0,talkDatas[0],wait=4.50 speaker=8,"さて......
+準備は良いですか？","Now... Are you ready?
+
+
+","Now...
+are you ready?",,,
+AutoTalk:S6_4_1_T1_1:1,AutoTalk,sharedassets118.assets,125,S6_4_1_T1_1,1,talkDatas[1],wait=4.00 speaker=8,....................,....................,....................,,,
+AutoTalk:S6_4_1_T1_1:2,AutoTalk,sharedassets118.assets,125,S6_4_1_T1_1,2,talkDatas[2],wait=2.00 speaker=8,始めましょう。,Let's begin.,Let's begin.,,,
+AutoTalk:S6_9_1_T0:0,AutoTalk,sharedassets116.assets,32,S6_9_1_T0,0,talkDatas[0],wait=2.00 speaker=4,......あれはっ！？,... What was that!?,...What is that!?,,,
+AutoTalk:S6_9_1_T0:1,AutoTalk,sharedassets116.assets,32,S6_9_1_T0,1,talkDatas[1],wait=5.50 speaker=3,"でっかいネオンサインが　うごいてる！
+もしかして　オーブのせいなのかな......？",A huge neon sign is moving! Could it be because of the Orb...?,"A giant neon sign is moving!
+Is it because of the Orb...?",,,
+AutoTalk:S6_9_1_T0:2,AutoTalk,sharedassets116.assets,32,S6_9_1_T0,2,talkDatas[2],wait=6.00 speaker=8,"ええ......。　 おそらく　オーブの力で
+モノが意思を持ち　動き出したのでしょう。
+",Yes... It's likely that it gained consciousness and started moving due to the power of the Orb.,"Indeed... It is likely that the 
+Orb's power granted will and 
+motion to lifeless things.",,,
+AutoTalk:S6_9_1_T0:3,AutoTalk,sharedassets116.assets,32,S6_9_1_T0,3,talkDatas[3],wait=6.00 speaker=7,"ネオンサインということは、電気か！
+感電に　気を付けたいところだな......。","Since it's a neon sign, it must be electricity! We need to be careful not to get electrocuted...","A neon sign means electricity!
+Better watch out for getting zapped...",,,
+AutoTalk:S6_9_1_T1:0,AutoTalk,sharedassets116.assets,33,S6_9_1_T1,0,talkDatas[0],wait=2.00 speaker=4,オーブを取り返したわよ！,I got the Orb back!,We got the Orb back!,,,
+AutoTalk:S6_9_1_T1:1,AutoTalk,sharedassets116.assets,33,S6_9_1_T1,1,talkDatas[1],wait=6.00 speaker=3,"やった！　これでやっと
+この街のオーブが　そろったね！","We did it!　Finally!
+We finally have all the orbs in this town!","We did it! Now finally,
+this town’s Orbs are all here!",,,
+AutoTalk:S6_9_1_T1:2,AutoTalk,sharedassets116.assets,33,S6_9_1_T1,2,talkDatas[2],wait=3.00 speaker=8,......,......,......,,,
+AutoTalk:S6_God_2Rub:0,AutoTalk,sharedassets100.assets,81,S6_God_2Rub,0,talkDatas[0],wait=0.10 speaker=8,"この都市では近年、ネオン看板のような
+謎の生物が　確認されているようです。","In this city, mysterious creatures resembling neon signs have been confirmed in recent years.","In recent years, Candy Polis has been 
+haunted by strange neon like creatures.",,,
+AutoTalk:S6_God_2Rub:1,AutoTalk,sharedassets100.assets,81,S6_God_2Rub,1,talkDatas[1],wait=0.10 speaker=8,"その生物は　体を糸のように伸ばし
+私たちを　電撃で麻痺させてしまうとか。",These creatures stretch their bodies like threads and can paralyze us with electric shocks.,"They say these creatures can stretch 
+their bodies like wires and paralyze us 
+with electric shocks.",,,
+AutoTalk:S6_God_2Rub:2,AutoTalk,sharedassets100.assets,81,S6_God_2Rub,2,talkDatas[2],wait=0.10 speaker=4,"それは恐ろしいわね......　でも　私だって
+ワイヤーを使って　攻撃できるんだから！",That's terrifying... But I can attack using wires too!,"That's terrifying......　
+But I can do it too.
+I can attack with a wire!",,,
+AutoTalk:S6_God_2Rub:3,AutoTalk,sharedassets100.assets,81,S6_God_2Rub,3,talkDatas[3],wait=0.10 speaker=4,"電気の糸と　私の糸、どちらか強いか
+試してやろうじゃない！","Let's see whose thread is stronger, mine or the electric one!","Let's see which is stronger.
+My string or the electric one!",,,
+AutoTalk:S6_God_Def:0,AutoTalk,sharedassets100.assets,82,S6_God_Def,0,talkDatas[0],wait=0.10 speaker=8,"ここキャンディポリスは　惑星ロンガで最も
+発展した都市として　知られています。",Candypolis is known as the most developed city on the Planet Longa.,"Candy Polis is known as the most 
+advanced city on Planet Longa.",,,
+AutoTalk:S6_God_Def:1,AutoTalk,sharedassets100.assets,82,S6_God_Def,1,talkDatas[1],wait=0.10 speaker=8,"そして　多くの生物たちが　この地で
+営みを送っているのですが......","Many creatures live their lives here, but...","Here, a great variety of beings dwell...",,,
+AutoTalk:S6_God_Def:2,AutoTalk,sharedassets100.assets,82,S6_God_Def,2,talkDatas[2],wait=0.10 speaker=8,"種族間での対立が起こることも
+珍しくないようです。",It's not uncommon for conflicts to arise between species.,"yet rivalries between them 
+are far from rare.",,,
+AutoTalk:S6_Plain_1_0:0,AutoTalk,sharedassets112.assets,22,S6_Plain_1_0,0,talkDatas[0],wait=0.10 speaker=9,"ぼくは　準備万端だから、
+いつでも　勝負できるよ！","I'm fully prepared, so I'm ready for a challenge anytime!","I'm all set!
+Ready to battle anytime!",,,
+AutoTalk:S6_Plain_1_0:1,AutoTalk,sharedassets112.assets,22,S6_Plain_1_0,1,talkDatas[1],wait=0.10 speaker=9,"ふふ......
+本気のぼくに　勝てるかな？",Hehe... I wonder if you can beat me at my best?,"Hehe...
+Think you can beat me for real?",,,
+AutoTalk:S6_Plain_4_0:0,AutoTalk,sharedassets114.assets,21,S6_Plain_4_0,0,talkDatas[0],wait=0.10 speaker=9,"ぼくたちは　もう少しこの星を
+観光してから　帰るよ！",We're going to explore this planet a bit more before heading back!,"We'll do a bit more sightseeing
+before heading back!",,,
+AutoTalk:S6_Plain_4_0:1,AutoTalk,sharedassets114.assets,21,S6_Plain_4_0,1,talkDatas[1],wait=0.10 speaker=9,"見るものがたくさんあって......
+本当に　楽しいところだね！",There are so many things to see... It's really a fun place!,"So much to see here...
+It's really fun!",,,
+AutoTalk:S6_Plain_Battle_lose(noUse):0,AutoTalk,sharedassets114.assets,22,S6_Plain_Battle_lose(noUse),0,talkDatas[0],wait=0.10 speaker=9,ざんねん！今回はぼくの勝ちだったね。,What a pity! This time I won.,Too bad! Looks like I won this time.,,,
+AutoTalk:S6_Plain_Battle_lose(noUse):1,AutoTalk,sharedassets114.assets,22,S6_Plain_Battle_lose(noUse),1,talkDatas[1],wait=0.10 speaker=9,諦めずに　また挑戦してよ！,Don't give up and try again!,"Don't give up, try again soon!",,,
+AutoTalk:S6_Plain_Battle_rewin:0,AutoTalk,sharedassets114.assets,23,S6_Plain_Battle_rewin,0,talkDatas[0],wait=0.10 speaker=9,"......また　負けちゃった！
+きみたちやっぱり　強いね！",...I lost again! You all are really strong!,"...Lost again!
+You're really strong!",,,
+AutoTalk:S6_Plain_Battle_rewin:1,AutoTalk,sharedassets114.assets,23,S6_Plain_Battle_rewin,1,talkDatas[1],wait=0.10 speaker=9,またこんど勝負しようね！,Let's have another match next time!,Let's battle again another time!,,,
+AutoTalk:S6_Plain_Battle_win:0,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,0,talkDatas[0],wait=0.10 speaker=9,"まさか　本気のぼくにも　勝っちゃうなんて！
+きみたちやっぱり　強いね！",I can't believe you beat my serious self! You all are really strong!,"No way! You even beat me
+at full power... You're amazing!",,,
+AutoTalk:S6_Plain_Battle_win:10,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,10,talkDatas[10],wait=0.10 speaker=3,助かった......,Thank goodness...,"Whew, what a relief...",,,
+AutoTalk:S6_Plain_Battle_win:1,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,1,talkDatas[1],wait=2.50 speaker=0,プレーンくん、　おまたせ～！,"Hey, Plain-kun, sorry to keep you waiting!","Hey, Plain! Sorry to keep you!",,,
+AutoTalk:S6_Plain_Battle_win:2,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,2,talkDatas[2],wait=0.10 speaker=9,"ああ、リアリーちゃん！
+ちょうどいいところに！","Ah, Leary-chan! Just in time!","Ah, Leary!
+Perfect timing!",,,
+AutoTalk:S6_Plain_Battle_win:3,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,3,talkDatas[3],wait=0.10 speaker=3,プレーンくんの　お友達？,Are you Plane's friend? Oh? Could it be...,"Plain, is she your friend?",,,
+AutoTalk:S6_Plain_Battle_win:4,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,4,talkDatas[4],wait=0.10 speaker=13,あら？　そこにいるのは　もしかして......,Oh? Could it be...,Wait... isn't that...?,,,
+AutoTalk:S6_Plain_Battle_win:5,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,5,talkDatas[5],wait=0.10 speaker=13,"プレーンくんから　話は聞いているわ！
+私はリアリー。　よろしくね。","I've heard about you from Plain!
+I'm Leary. Nice to meet you.","Plain told me about you!
+I'm Leary. Nice to meet you!",,,
+AutoTalk:S6_Plain_Battle_win:6,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,6,talkDatas[6],wait=0.10 speaker=5,"わぁ！
+リアリーちゃん　よろしくねっ！","Wow! Nice to meet you, Leary-chan!","Wow!
+Nice to meet you, Leary!",,,
+AutoTalk:S6_Plain_Battle_win:7,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,7,talkDatas[7],wait=0.10 speaker=9,"そうだ！　リアリーちゃんも
+フィズくんたちと　勝負してみたら？",Oh right! Leary-chan should try battling with Fiz and the others too!,"Hey, Leary! Why don't you
+try battling Fiz and friends?",,,
+AutoTalk:S6_Plain_Battle_win:8,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,8,talkDatas[8],wait=0.10 speaker=6,え！？,Huh!?,Huh!?,,,
+AutoTalk:S6_Plain_Battle_win:9,AutoTalk,sharedassets114.assets,24,S6_Plain_Battle_win,9,talkDatas[9],wait=0.10 speaker=13,"私は　遠慮しておくわ。
+理由もなく勝負なんて　しないわよ。","I'll pass.
+I don't compete for no reason.","I’ll pass.
+I don’t fight without a reason.",,,
+AutoTalk:S6_Plain_Def:0,AutoTalk,sharedassets114.assets,25,S6_Plain_Def,0,talkDatas[0],wait=0.10 speaker=9,ここのケーキ、おいしかったなあ......,The cake here was delicious. ......,That cake here... was so good...,,,
+AutoTalk:S6_Plain_Def:1,AutoTalk,sharedassets114.assets,25,S6_Plain_Def,1,talkDatas[1],wait=0.10 speaker=9,"道に迷ったけど　結果的に
+フィズくんたちに会えて　よかったよ！","I got lost, but in the end, I'm glad I met Fiz and the others!
+
+
+","I got lost, but in the end,
+I'm glad I ran into you!",,,
+AutoTalk:S6_Plain_First:0,AutoTalk,sharedassets112.assets,23,S6_Plain_First,0,talkDatas[0],wait=0.10 speaker=3,"プレーンくん　久しぶり！
+
+","Mr. Plain, it's been a long time!
+
+","Long time no see, Plain!",,,
+AutoTalk:S6_Plain_First:1,AutoTalk,sharedassets112.assets,23,S6_Plain_First,1,talkDatas[1],wait=0.10 speaker=9,"あっ、また会ったね！
+...どうにか　この店にたどり着いたよ！","Ah, we meet again!
+... Somehow I made it to this restaurant!","Ah, we meet again!
+I finally made it to this shop!",,,
+AutoTalk:S6_Plain_First:2,AutoTalk,sharedassets112.assets,23,S6_Plain_First,2,talkDatas[2],wait=0.10 speaker=2,"なんか......　
+甘くて　おいしそうな香りがするぜ！",It smells sweet and delicious!,"Mmm...
+Something smells sweet and tasty!",,,
+AutoTalk:S6_Plain_First:3,AutoTalk,sharedassets112.assets,23,S6_Plain_First,3,talkDatas[3],wait=0.10 speaker=9,"そうそう！　ぼく、ちょうど今
+ケーキを　食べたところだったんだけど...",That's right! I just finished eating cake...,"Oh yeah!
+I just had some cake...",,,
+AutoTalk:S6_Plain_First:4,AutoTalk,sharedassets112.assets,23,S6_Plain_First,4,talkDatas[4],wait=0.10 speaker=9,"すごく美味しくて
+みるみる力が　湧いてきたよ！",It was so delicious that I felt my strength returning quickly!,"It was so good,
+I feel totally recharged!",,,
+AutoTalk:S6_Plain_First:5,AutoTalk,sharedassets112.assets,23,S6_Plain_First,5,talkDatas[5],wait=0.10 speaker=9,"いまは　人を待っていてヒマだから、
+強くなったボクと　力試ししてみない？","Right now, I'm waiting for someone and I'm bored, so how about testing your strength against me?","I'm waiting for someone now...
+Wanna test your strength on me?",,,
+AutoTalk:S6_Plain_First:6,AutoTalk,sharedassets112.assets,23,S6_Plain_First,6,talkDatas[6],wait=0.10 speaker=7,"力試しか......
+のぞむところだ！",A strength test... I'm all for it!,"A challenge, huh...?
+I’m all in!",,,
+AutoTalk:S6_Plain_First:7,AutoTalk,sharedassets112.assets,23,S6_Plain_First,7,talkDatas[7],wait=0.50 speaker=9,"よしっ！　それじゃあここだと狭いから、
+隣の部屋で　勝負だ！","Alright then! Since it's cramped here, let's battle in the next room!","Alright then!
+Let’s fight in the next room!",,,
+AutoTalk:S6_Plain_First:8,AutoTalk,sharedassets112.assets,23,S6_Plain_First,8,talkDatas[8],wait=0.10 speaker=9,"ふふ......
+本気のぼくに　勝てるかな？",Hehe... I wonder if you can beat my serious self?,"Hehe...
+Think you can beat me for real?",,,
+AutoTalk:S7_1_1_T0:0,AutoTalk,sharedassets121.assets,63,S7_1_1_T0,0,talkDatas[0],wait=3.00 speaker=3,"うわあああああ！！！
+雲の上を　飛んでる！！","Aaahhh!
+We're flying above the clouds!","Whaaaaa!!!
+We're flying above the clouds!",,,
+AutoTalk:S7_1_1_T0:1,AutoTalk,sharedassets121.assets,63,S7_1_1_T0,1,talkDatas[1],wait=4.00 speaker=5,たのし～～～！！！,This is so much fun!!!,This is awesome!!!,,,
+AutoTalk:S7_1_1_T0:2,AutoTalk,sharedassets121.assets,63,S7_1_1_T0,2,talkDatas[2],wait=4.00 speaker=8,"皆さん......　くれぐれも
+落ちないように　気を付けてくださいね。",Everyone... please be careful not to fall.,"Everyone...
+Please be careful not to fall.",,,
+AutoTalk:S7_1_1_T1:0,AutoTalk,sharedassets121.assets,64,S7_1_1_T1,0,talkDatas[0],wait=4.00 speaker=6,"きゃあ！　あれ、葉っぱの上で
+リーファーたちを　襲ってきたヤツだよ！","Geez! That's the one that attacked Leafur on the leaves!
+","Eek! That’s the thing
+that attacked Leafur at the leaf!",,,
+AutoTalk:S7_1_1_T1:1,AutoTalk,sharedassets121.assets,64,S7_1_1_T1,1,talkDatas[1],wait=4.00 speaker=5,"ううっ......！
+こんなとこまで　追ってくるなんて！",Ugh... To think it would follow us all the way here!,"Ugh...
+It chased us all the way here!?",,,
+AutoTalk:S7_1_1_T10:0,AutoTalk,sharedassets121.assets,65,S7_1_1_T10,0,talkDatas[0],wait=4.00 speaker=8,"さあ！                    
+一気に宇宙へ　飛び立ちますよ！",Alright! We're taking off into space now!,"Okay, time to blast off
+into space together!",,,
+AutoTalk:S7_1_1_T10:1,AutoTalk,sharedassets121.assets,65,S7_1_1_T10,1,talkDatas[1],wait=5.00 speaker=8,"<color=#FF9999FF>私の背中</color>に、
+しっかりと　掴まっていてくださいね。",<color=#FF9999FF>Hold on tight to my back</color>.,"Hold on tight
+<color=#FF9999FF>to my back</color>, please!",,,
+AutoTalk:S7_2_0_T0:0,AutoTalk,sharedassets123.assets,22,S7_2_0_T0,0,talkDatas[0],wait=7.00 speaker=3,これが　月のオーブ...！,This is the Orb of the Moon...!,"This is...
+the Moon Orb!",,,
+AutoTalk:S7_2_1_T0:0,AutoTalk,sharedassets124.assets,16,S7_2_1_T0,0,talkDatas[0],wait=3.50 speaker=3,うわあっ！　地面が　まわっちゃった！？,Whoa! The ground is spinning!?,Whoa! The ground is spinning!?,,,
+AutoTalk:S7_2_1_T0:1,AutoTalk,sharedassets124.assets,16,S7_2_1_T0,1,talkDatas[1],wait=3.50 speaker=8,"今の月はまさに　未知の世界。
+何が起こるのか　全く予想できませんね......。","Right now, the moon is truly an unknown world. We can't predict at all what will happen...","This moon has become
+a land of the unknown.
+No one can foresee what lies ahead...",,,
+AutoTalk:S7_2_1_T0:2,AutoTalk,sharedassets124.assets,16,S7_2_1_T0,2,talkDatas[2],wait=3.50 speaker=2,"上等だ！　どんなことが起きようが、
+オレたちで　乗り越えてやろうぜ！","Bring it on! No matter what happens, we'll overcome it together!","Bring it on! No matter what happens,
+we'll overcome it together!",,,
+AutoTalk:S7_3_0_T0(未使用):0,AutoTalk,sharedassets127.assets,129,S7_3_0_T0(未使用),0,talkDatas[0],wait=7.00 speaker=8,7-2オーブ発見用セリフ,7-2 lines for finding orbs,Lines for finding the 7-2 orb,,,
+AutoTalk:S7_3_1_T0:0,AutoTalk,sharedassets128.assets,64,S7_3_1_T0,0,talkDatas[0],wait=4.00 speaker=3,"......
+空気が　かわったね......",... The air has changed...,The air... feels different...,,,
+AutoTalk:S7_3_1_T0:1,AutoTalk,sharedassets128.assets,64,S7_3_1_T0,1,talkDatas[1],wait=3.00 speaker=8,"そう、
+ここは　すでに　敵の拠点内。","Yes,
+we're already inside the enemy base.","Yes...
+We’ve already stepped 
+into enemy ground.",,,
+AutoTalk:S7_3_1_T0:2,AutoTalk,sharedassets128.assets,64,S7_3_1_T0,2,talkDatas[2],wait=4.00 speaker=8,"もし　一人で乗り込めば
+すぐに　力を奪われて　しまうことでしょう......","If you go in alone, you'll soon have your power stolen...","If you go in alone,
+your power will be stolen instantly...",,,
+AutoTalk:S7_3_1_T0:3,AutoTalk,sharedassets128.assets,64,S7_3_1_T0,3,talkDatas[3],wait=4.00 speaker=4,"なんてこと......
+でも、いまは　わたしたちがいるわ！","Oh dear...
+But now we have it!","That’s awful...
+But we’re all here now!",,,
+AutoTalk:S7_3_1_T0:4,AutoTalk,sharedassets128.assets,64,S7_3_1_T0,4,talkDatas[4],wait=5.00 speaker=3,"そうだよ！　ぼくたちみんなが
+力を合わせれば　きっと大丈夫！","That's right! If we all work together, we’ll surely be fine!","Yeah!
+Together, we’ll be just fine!",,,
+AutoTalk:S7_3_4_T0:0,AutoTalk,sharedassets131.assets,18,S7_3_4_T0,0,talkDatas[0],wait=2.50 speaker=7,何かが......　来る......！,Something is... coming...!,Something’s... coming...!,,,
+AutoTalk:S7_3_4_T0:1,AutoTalk,sharedassets131.assets,18,S7_3_4_T0,1,talkDatas[1],wait=3.00 speaker=8,"ついに　月の勢力のボスが
+姿を　現しましたか......。",The boss of the moon forces has finally appeared...,"So... the boss of the moon's forces
+finally shows his face...",,,
+AutoTalk:S7_3_4_T0:2,AutoTalk,sharedassets131.assets,18,S7_3_4_T0,2,talkDatas[2],wait=3.50 speaker=8,"奴の放つ光は　色彩を奪い去る
+恐ろしい力を　秘めています。",The light it emits holds a terrifying power that steals colors.,"That light... it’s terrifying.
+It strips the world of its colors!",,,
+AutoTalk:S7_3_4_T0:3,AutoTalk,sharedassets131.assets,18,S7_3_4_T0,3,talkDatas[3],wait=5.00 speaker=8,"決して　全身に　光を浴びることなく
+警戒して　好機を伺うのです！",Never let your entire body be exposed to the light; stay alert and look for an opportunity!,"Never let it touch your whole body.
+Stay alert... and wait for your moment.",,,
+AutoTalk:S7_3_4_T0:4,AutoTalk,sharedassets131.assets,18,S7_3_4_T0,4,talkDatas[4],wait=5.00 speaker=3,"全身に光を浴びないように、　<color=#FF9999FF>壁の後ろに
+隠れながら</color>　進んでいけば　いいんだね！","To avoid exposing your whole body to the light, you just need to <color=#FF9999FF>hide
+behind the wall</color> and proceed!","Stay out of the light.
+<color=#FF9999FF>Hide behind walls</color>
+and move ahead carefully!",,,
+AutoTalk:S7_9_1_T0:0,AutoTalk,sharedassets135.assets,403,S7_9_1_T0,0,talkDatas[0],wait=3.50 speaker=3,いったい　何が起こってるの......？,What on earth is going on...?,What’s going on here...!?,,,
+AutoTalk:S7_9_1_T0:1,AutoTalk,sharedassets135.assets,403,S7_9_1_T0,1,talkDatas[1],wait=1.50 speaker=5,わぁっ！！,Wow!,Waaah!!,,,
+AutoTalk:S7_9_1_T0:2,AutoTalk,sharedassets135.assets,403,S7_9_1_T0,2,talkDatas[2],wait=4.50 speaker=8,"『オリジンターボン』...　既にこれほどまで
+星の色彩と力を　得ていたとは......！",Origin Tabon... I can't believe he has already gained this much of the planet's colors and power...!,"Origin Tabon...
+it had already absorbed so much
+of the planet’s color and power...",,,
+AutoTalk:S7_9_1_T1:0,AutoTalk,sharedassets135.assets,404,S7_9_1_T1,0,talkDatas[0],wait=3.50 speaker=2,"おい！こいつ......
+攻撃が　ぜんぜん効かねえぞ！",Hey! This guy... Our attacks aren't working at all!,"Hey! This thing’s
+not taking any damage!",,,
+AutoTalk:S7_9_1_T1:1,AutoTalk,sharedassets135.assets,404,S7_9_1_T1,1,talkDatas[1],wait=4.00 speaker=8,"力を奪われた　この場所では、　私たち
+全員の力でも　敵わないと　いうのですか......","In this place where our power has been stolen, are we saying that even all of us together can't defeat it...?","In this place where power fades...
+could it be that all of us together
+still can’t win...?",,,
+AutoTalk:S7_9_1_T1:2,AutoTalk,sharedassets135.assets,404,S7_9_1_T1,2,talkDatas[2],wait=4.00 speaker=3,"いや......！　まだきっと
+やっつけるチャンスは　残っているはずだよ！",No...! There must still be a chance to take him down!,"No way!
+There must still be a chance!",,,
+AutoTalk:S7_9_1_T2:0,AutoTalk,sharedassets135.assets,405,S7_9_1_T2,0,talkDatas[0],wait=2.50 speaker=4,"ねえ......
+あの光は　なんなの......！？",Hey... What is that light...?,"Hey...
+What is that light...!?",,,
+AutoTalk:S7_9_1_T2:1,AutoTalk,sharedassets135.assets,405,S7_9_1_T2,1,talkDatas[1],wait=3.00 speaker=6,吸い込まれる～～～！！！,It's sucking me in!!,It’s pulling me in~~~!!!,,,
+AutoTalk:S7_9_1_T3:0,AutoTalk,sharedassets135.assets,406,S7_9_1_T3,0,talkDatas[0],wait=2.00 speaker=3,"............
+ううっ...ここはいったい......","............
+Ugh... What the hell is this place...?","........
+Ugh... What is this place...?",,,
+AutoTalk:S7_9_1_T3:1,AutoTalk,sharedassets135.assets,406,S7_9_1_T3,1,talkDatas[1],wait=1.00 speaker=8,"おそらくここは　奴が作った　幻影の世界...
+私たちを　閉じ込めるつもりなのでしょう。","Perhaps this is an illusion of his making...
+where he intends to trap us.","This world...
+is likely one of illusion,
+built to imprison us.",,,
+AutoTalk:S7_9_1_T3:2,AutoTalk,sharedassets135.assets,406,S7_9_1_T3,2,talkDatas[2],wait=1.00 speaker=3,"そんな終わり方　させるもんか！
+ぜったいに抜け出して　やっつけるんだから！","I won't let it end that way!
+I'm going to get out of here and finish it!","I won't let it end that way!
+I'm going to get out of here
+and take him down!",,,
+AutoTalk:S7_9_1_T4:0,AutoTalk,sharedassets135.assets,407,S7_9_1_T4,0,talkDatas[0],wait=3.00 speaker=7,オーブの力が　わずかに戻った...？,The power of the Orb has slightly returned...?,"The power of the Orb has
+slightly returned...?",,,
+AutoTalk:S7_9_1_T4:1,AutoTalk,sharedassets135.assets,407,S7_9_1_T4,1,talkDatas[1],wait=3.50 speaker=8,"...見てください！　今の攻撃で
+相手の防御が　崩れています！",...Look! The opponent's defense is breaking down from that attack!,"Look! That last hit.
+His guard is down!",,,
+AutoTalk:S7_9_1_T4:2,AutoTalk,sharedassets135.assets,407,S7_9_1_T4,2,talkDatas[2],wait=4.00 speaker=3,"......！
+これなら　きっと...！","...!
+This will definitely work...!","...!
+Now’s our chance...!",,,
+AutoTalk:S7_9_1_T5:0,AutoTalk,sharedassets135.assets,408,S7_9_1_T5,0,talkDatas[0],wait=3.50 speaker=8,"奪われていた力が　ヤツから
+すべて　解放されたようです！",It seems that the power that was stolen has been completely released!,"It looks like all the stolen power
+has been released!",,,
+AutoTalk:S7_9_1_T5:1,AutoTalk,sharedassets135.assets,408,S7_9_1_T5,1,talkDatas[1],wait=5.00 speaker=3,"みんな！　あと　ひと踏ん張りだよ！
+ぼくたちで　星を　まもるんだ！",Everyone! Just one more push! We will protect the planet together!,"Everyone! Just a little more!
+We’re the ones who’ll 
+protect this world!",,,
+AutoTalk:S7_God_Def:0,AutoTalk,sharedassets120.assets,16,S7_God_Def,0,talkDatas[0],wait=0.10 speaker=8,"空に浮かぶ月は 「マカロンムーン」と
+呼ばれています。",The moon floating in the sky is called Macaron Moon.,"The moon that drifts above us
+is known as the Macaron Moon.",,,
+AutoTalk:S7_God_Def:1,AutoTalk,sharedassets120.assets,16,S7_God_Def,1,talkDatas[1],wait=0.10 speaker=8,"これから向かう　月への旅は
+非常に厳しい道のりに　なるでしょう。",The journey to the moon ahead will be a very tough road.,"The road that leads to its glow
+will test us every step of the way.",,,
+AutoTalk:S7_God_Def:2,AutoTalk,sharedassets120.assets,16,S7_God_Def,2,talkDatas[2],wait=0.10 speaker=8,"しかし、私たちの力を合わせれば
+きっと　乗り越えられるはずです。","However, if we combine our powers, we should surely be able to overcome it.","But as long as we stand together,
+no challenge can break our will.",,,
+AutoTalk:Stage1_treasurebox:0,AutoTalk,sharedassets26.assets,14,Stage1_treasurebox,0,talkDatas[0],wait=1.50 speaker=0,宝箱をひらいた！,I opened the treasure chest!,Treasure chest opened!,,,
+AutoTalk:Stage1_treasurebox:1,AutoTalk,sharedassets26.assets,14,Stage1_treasurebox,1,talkDatas[1],wait=4.50 speaker=0,"フィズたちは、宝箱の中から
+「<color=#FF3333FF>つるぎのペンダント</color>」を手に入れた！","Fiz and friends found a
+<color=#FF3333FF>Pendant of Blades</color> from the treasure chest!","Fiz and friends found
+a <color=#FF3333FF>Pendant of Blades</color> inside!
+",,,
+AutoTalk:Stage1_treasurebox:2,AutoTalk,sharedassets26.assets,14,Stage1_treasurebox,2,talkDatas[2],wait=1.00 speaker=3,わぁ！　カッコいいペンダント！,Wow! Cool pendant!,"Whoa!
+This pendant looks amazing!",,,
+AutoTalk:Stage1_treasurebox:3,AutoTalk,sharedassets26.assets,14,Stage1_treasurebox,3,talkDatas[3],wait=1.00 speaker=8,"冒険の合間に　宝探しをしてみるのも
+面白いかも　しれませんね。",It might be interesting to try treasure hunting during our adventures.,"Treasure hunting might be
+a fun break from adventuring too.",,,
+AutoTalk:Stage1_treasurebox:4,AutoTalk,sharedassets26.assets,14,Stage1_treasurebox,4,talkDatas[4],wait=1.00 speaker=3,大切に　とっておこうっと......,I'll cherish this and keep it safe...,I’m gonna keep this one safe...,,,
+AutoTalk:Stage2_treasurebox:0,AutoTalk,sharedassets42.assets,2,Stage2_treasurebox,0,talkDatas[0],wait=1.50 speaker=0,宝箱をひらいた！,I opened the treasure chest!,Treasure chest opened!,,,
+AutoTalk:Stage2_treasurebox:1,AutoTalk,sharedassets42.assets,2,Stage2_treasurebox,1,talkDatas[1],wait=4.50 speaker=0,"フィズたちは、宝箱の中から
+「<color=#FF3333FF>つりざお</color>」を手に入れた！","Fiz and friends found a
+<color=#FF3333FF>Fishing Rod</color> from the treasure chest!","Fiz and friends found
+a <color=#FF3333FF>Fishing Rod</color> inside!",,,
+AutoTalk:Stage2_treasurebox:2,AutoTalk,sharedassets42.assets,2,Stage2_treasurebox,2,talkDatas[2],wait=1.00 speaker=3,なんで　つりざおが　こんな所に......？,Why is your slingshot here ......?,"Why is there a fishing rod
+in a place like this...?",,,
+AutoTalk:Stage2_treasurebox:3,AutoTalk,sharedassets42.assets,2,Stage2_treasurebox,3,talkDatas[3],wait=1.00 speaker=5,"うわー！　いっぱいつれそうな　つりざお！！
+あとで　つかっちゃおうっと！","Wow!　Looks like we'll have plenty of slingshots!
+I'll hang on to it later!","Whoa!
+Looks like you could 
+catch tons with this!",,,
+AutoTalk:Stage4_treasurebox:0,AutoTalk,sharedassets71.assets,2,Stage4_treasurebox,0,talkDatas[0],wait=1.50 speaker=0,宝箱をひらいた！,I opened the treasure chest!,Treasure chest opened!,,,
+AutoTalk:Stage4_treasurebox:1,AutoTalk,sharedassets71.assets,2,Stage4_treasurebox,1,talkDatas[1],wait=4.50 speaker=0,"フィズたちは、宝箱の中から
+「<color=#FF3333FF>しんぴのほうせき</color>」を手に入れた！","Fiz and friends found a
+<color=#FF3333FF>Mystical Gem</color> from the treasure chest!","Fiz and friends found
+a <color=#FF3333FF>Mystical Gem</color> inside!",,,
+AutoTalk:Stage4_treasurebox:2,AutoTalk,sharedassets71.assets,2,Stage4_treasurebox,2,talkDatas[2],wait=1.00 speaker=3,わあ！　何の宝石だろう！,Wow! What a gem!,Wow! I wonder what kind of gem this is!,,,
+AutoTalk:Stage4_treasurebox:3,AutoTalk,sharedassets71.assets,2,Stage4_treasurebox,3,talkDatas[3],wait=1.00 speaker=2,"この地域では　有名なヤツだな！
+火山のパワーが　詰まってるらしいぜ！",It's famous in this area! It's said to be filled with the power of the volcano!,"That one’s famous around here.
+It’s said to hold volcanic power!",,,
+AutoTalk:Stage6_treasurebox:0,AutoTalk,sharedassets111.assets,2,Stage6_treasurebox,0,talkDatas[0],wait=1.50 speaker=0,宝箱をひらいた！,I opened the treasure chest!,Treasure chest opened!,,,
+AutoTalk:Stage6_treasurebox:1,AutoTalk,sharedassets111.assets,2,Stage6_treasurebox,1,talkDatas[1],wait=4.50 speaker=0,"フィズたちは、宝箱の中から
+「<color=#FF3333FF>おんがくディスク</color>」を手に入れた！","Fiz and friends found a
+<color=#FF3333FF>Music Disk</color> from the treasure chest!","Fiz and friends found
+a <color=#FF3333FF>Music Disk</color> inside!",,,
+AutoTalk:Stage6_treasurebox:2,AutoTalk,sharedassets111.assets,2,Stage6_treasurebox,2,talkDatas[2],wait=1.00 speaker=3,"わーい！
+何の曲が入ってるのかな？",Wow! I wonder what songs are on it?,"Yay!
+What kind of song is on it?",,,
+AutoTalk:Stage6_treasurebox:3,AutoTalk,sharedassets111.assets,2,Stage6_treasurebox,3,talkDatas[3],wait=1.00 speaker=4,"気になるわね......
+あとで　聴いてみましょ！",I'm curious... Let's listen to it later!,"I’m curious too...
+Let’s listen later!",,,
+AutoTalk:TestTalkSta_0:0,AutoTalk,sharedassets9.assets,632,TestTalkSta_0,0,talkDatas[0],wait=1.00 speaker=2,<color=#FF5555FF>リュトロン</color>(#FF5555FF),,,,,
+AutoTalk:TestTalkSta_1:0,AutoTalk,sharedassets9.assets,633,TestTalkSta_1,0,talkDatas[0],wait=1.00 speaker=3,<color=#55FFFFFF>フィズ</color>(#55FFFFFF),,,,,
+AutoTalk:TestTalkSta_2:0,AutoTalk,sharedassets9.assets,634,TestTalkSta_2,0,talkDatas[0],wait=1.00 speaker=4,<color=#FFAAFFFF>ルーベル</color>(#FFAAFFFF),,,,,
+AutoTalk:TestTalkSta_3:0,AutoTalk,sharedassets9.assets,635,TestTalkSta_3,0,talkDatas[0],wait=1.00 speaker=5,<color=#FF8855FF>ソラコ</color>(#FF8855FF),,,,,
+AutoTalk:TestTalkSta_4:0,AutoTalk,sharedassets9.assets,636,TestTalkSta_4,0,talkDatas[0],wait=1.00 speaker=6,<color=#99FFAAFF>リーファー</color>(#99FFAAFF),,,,,
+AutoTalk:TestTalkSta_5:0,AutoTalk,sharedassets9.assets,637,TestTalkSta_5,0,talkDatas[0],wait=1.00 speaker=7,<color=#77AAFFFF>キューマ</color>(#77AAFFFF),,,,,
+AutoTalk:TestTalkSta_def 1:0,AutoTalk,sharedassets9.assets,638,TestTalkSta_def 1,0,talkDatas[0],wait=0.10 speaker=0,デフォルト会話,,,,,
+AutoTalk:TestTalkSta_def 1:1,AutoTalk,sharedassets9.assets,638,TestTalkSta_def 1,1,talkDatas[1],wait=0.10 speaker=8,<color=#FBF97AFF>タオンガ</color>(#FBF97AFF),,,,,
+AutoTalk:TestTalk_1:0,AutoTalk,sharedassets3.assets,487,TestTalk_1,0,talkDatas[0],wait=4545.00 speaker=7,"これはテストの会話です。
+４秒待機します",きかい,えいご,ふらんすff,すぺいん,
+AutoTalk:TestTalk_1:1,AutoTalk,sharedassets3.assets,487,TestTalk_1,1,talkDatas[1],wait=55.00 speaker=8,"あいうえおかきくけこさしすせそ４秒待機しますたちつ
+てとなにぬねの",,,ffff,,
+AutoTalk:TestTalk_1:2,AutoTalk,sharedassets3.assets,487,TestTalk_1,2,talkDatas[2],wait=5.00 speaker=0,"１２３４５６７８９０１２３４５６７８９０１２３４５
+４秒待機します",,,,,
+AutoTalk:TestTalk_10_pri0:0,AutoTalk,sharedassets9.assets,639,TestTalk_10_pri0,0,talkDatas[0],wait=10.00 speaker=0,プライオリティ　０,,,,,
+AutoTalk:TestTalk_11_pri1:0,AutoTalk,sharedassets9.assets,640,TestTalk_11_pri1,0,talkDatas[0],wait=10.00 speaker=0,"プライオリティ　
+１",,,,,
+AutoTalk:TestTalk_2:0,AutoTalk,sharedassets9.assets,641,TestTalk_2,0,talkDatas[0],wait=3.00 speaker=7,これは水中に入ろうとすると出るテキストだ,,,,,
+AutoTalk:TestTalk_2:1,AutoTalk,sharedassets9.assets,641,TestTalk_2,1,talkDatas[1],wait=3.00 speaker=2,水はこわいなあ,,,,,
+AutoTalk:TestTalk_3:0,AutoTalk,sharedassets9.assets,642,TestTalk_3,0,talkDatas[0],wait=4.00 speaker=2,リッチテキストのテスト,,,,,
+AutoTalk:TestTalk_3:1,AutoTalk,sharedassets9.assets,642,TestTalk_3,1,talkDatas[1],wait=4.00 speaker=2,"カラー変更
+<color=""red"">おれの名前はリュトロンだあああああああ</color>",,,,,
+AutoTalk:TestTalk_3:2,AutoTalk,sharedassets9.assets,642,TestTalk_3,2,talkDatas[2],wait=4.00 speaker=0,<size=24>デカ文字表示</size>,,,,,
+AutoTalk:TestTalk_3:3,AutoTalk,sharedassets9.assets,642,TestTalk_3,3,talkDatas[3],wait=4.00 speaker=2,"<size=24><color=""red"">重複タグは未実装</color></size>",,,,,
+AutoTalk:TestTalk_3:4,AutoTalk,sharedassets9.assets,642,TestTalk_3,4,talkDatas[4],wait=4.00 speaker=2,"<size=24>でも</size> <color=""yellow"">別々</color> なら <color=""blue""> 大丈夫 </color>",,,,,
+AutoTalk:TestTalk_4:0,AutoTalk,sharedassets9.assets,643,TestTalk_4,0,talkDatas[0],wait=4.00 speaker=0,それぞれのキャラクターの色,,,,,
+AutoTalk:TestTalk_4:1,AutoTalk,sharedassets9.assets,643,TestTalk_4,1,talkDatas[1],wait=3.00 speaker=3,フィズ Fiz (#55FFFFFF),,,,,
+AutoTalk:TestTalk_4:2,AutoTalk,sharedassets9.assets,643,TestTalk_4,2,talkDatas[2],wait=3.00 speaker=0,ソラコ Soraco(#FF8855FF),,,,,
+AutoTalk:TestTalk_4:3,AutoTalk,sharedassets9.assets,643,TestTalk_4,3,talkDatas[3],wait=3.00 speaker=6,リーファー Leafur(#99FFAAFF),,,,,
+AutoTalk:TestTalk_4:4,AutoTalk,sharedassets9.assets,643,TestTalk_4,4,talkDatas[4],wait=3.00 speaker=2,リュトロン Rythron(#FF5555FF),,,,,
+AutoTalk:TestTalk_4:5,AutoTalk,sharedassets9.assets,643,TestTalk_4,5,talkDatas[5],wait=3.00 speaker=7,キューマ Kyuma(#77AAFFFF),,,,,
+AutoTalk:TestTalk_4:6,AutoTalk,sharedassets9.assets,643,TestTalk_4,6,talkDatas[6],wait=3.00 speaker=4,ルーベル Rubell(#FFAAFFFF),,,,,
+AutoTalk:TestTalk_4:7,AutoTalk,sharedassets9.assets,643,TestTalk_4,7,talkDatas[7],wait=3.00 speaker=8,タオンガ Taonga(#FBF97AFF),,,,,
+AutoTalk:TestTalk_5:0,AutoTalk,sharedassets105.assets,113,TestTalk_5,0,talkDatas[0],wait=0.00 speaker=0,NPCのテスト会話です。,,,,,
+AutoTalk:TestTalk_7_treasurebox:0,AutoTalk,sharedassets42.assets,3,TestTalk_7_treasurebox,0,talkDatas[0],wait=1.50 speaker=0,宝箱をひらいた！,,,,,
+AutoTalk:TestTalk_7_treasurebox:1,AutoTalk,sharedassets42.assets,3,TestTalk_7_treasurebox,1,talkDatas[1],wait=4.50 speaker=0,"<color=#55FFFFFF>フィズ</color>たちは、宝箱の中から
+「<color=#FF3333FF>任意のおたから名</color>」を手に入れた！",,,,,
+AutoTalk:TestTalk_7_treasurebox:2,AutoTalk,sharedassets42.assets,3,TestTalk_7_treasurebox,2,talkDatas[2],wait=1.00 speaker=3,わーーーーーーーーーーーーーーーーーーーーーーーー,,,,,
+AutoTalk:TestTalk_8_taongaface:0,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,0,talkDatas[0],wait=0.00 speaker=8,01,,,,,
+AutoTalk:TestTalk_8_taongaface:10,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,10,talkDatas[10],wait=0.00 speaker=8,11,,,,,
+AutoTalk:TestTalk_8_taongaface:11,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,11,talkDatas[11],wait=0.00 speaker=8,12,,,,,
+AutoTalk:TestTalk_8_taongaface:12,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,12,talkDatas[12],wait=0.00 speaker=8,13,,,,,
+AutoTalk:TestTalk_8_taongaface:13,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,13,talkDatas[13],wait=0.00 speaker=8,14,,,,,
+AutoTalk:TestTalk_8_taongaface:1,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,1,talkDatas[1],wait=0.00 speaker=8,02,,,,,
+AutoTalk:TestTalk_8_taongaface:2,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,2,talkDatas[2],wait=0.00 speaker=8,03,,,,,
+AutoTalk:TestTalk_8_taongaface:3,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,3,talkDatas[3],wait=0.00 speaker=8,04,,,,,
+AutoTalk:TestTalk_8_taongaface:4,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,4,talkDatas[4],wait=0.00 speaker=8,05,,,,,
+AutoTalk:TestTalk_8_taongaface:5,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,5,talkDatas[5],wait=0.00 speaker=8,06,,,,,
+AutoTalk:TestTalk_8_taongaface:6,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,6,talkDatas[6],wait=0.00 speaker=8,07,,,,,
+AutoTalk:TestTalk_8_taongaface:7,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,7,talkDatas[7],wait=0.00 speaker=8,08,,,,,
+AutoTalk:TestTalk_8_taongaface:8,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,8,talkDatas[8],wait=0.00 speaker=8,09,,,,,
+AutoTalk:TestTalk_8_taongaface:9,AutoTalk,sharedassets9.assets,644,TestTalk_8_taongaface,9,talkDatas[9],wait=0.00 speaker=8,10,,,,,
+AutoTalk:TestTalk_9_pri-1:0,AutoTalk,sharedassets9.assets,645,TestTalk_9_pri-1,0,talkDatas[0],wait=10.00 speaker=0,プライオリティ　ー１,,,,,
+AutoTalk:TestTalk_Eng:0,AutoTalk,sharedassets9.assets,646,TestTalk_Eng,0,talkDatas[0],wait=0.10 speaker=8,"I watch over you from
+the sky and give you
+various blessings. ",,,,,
+AutoTalk:TestTalk_Eng:1,AutoTalk,sharedassets9.assets,646,TestTalk_Eng,1,talkDatas[1],wait=0.10 speaker=8,"For example, I give you access
+to as many tools as you need
+to protect yourself and ......",,,,,
+AutoTalk:TestTalk_Eng:2,AutoTalk,sharedassets9.assets,646,TestTalk_Eng,2,talkDatas[2],wait=0.10 speaker=3,"What? That's what my hammer
+that came out of
+nowhere was all about.....!",,,,,
+AutoTalk:TestTalk_Eng:3,AutoTalk,sharedassets9.assets,646,TestTalk_Eng,3,talkDatas[3],wait=0.10 speaker=8,"Yes, that's right. 
+Should I have made
+other tools available?",,,,,
+AutoTalk:TestTalk_Eng:4,AutoTalk,sharedassets9.assets,646,TestTalk_Eng,4,talkDatas[4],wait=0.10 speaker=3,"Well, no. ...... 
+I like the hammer because
+it's pretty handy too.",,,,,
+AutoTalk:TestTalk_Lang:0,AutoTalk,sharedassets9.assets,647,TestTalk_Lang,0,talkDatas[0],wait=0.10 speaker=8,"英語
+The quick brown fox jumps over the lazy dog",,,,,
+AutoTalk:TestTalk_Lang:1,AutoTalk,sharedassets9.assets,647,TestTalk_Lang,1,talkDatas[1],wait=0.10 speaker=8,"フランス語
+aeiouyéçàèùœâêîôäëïöüÿ
+AEIOUYÉÇÀÈÙŒÂÊÎÔÛÄËÏÖÜŸ",,,,,
+AutoTalk:TestTalk_Lang:2,AutoTalk,sharedassets9.assets,647,TestTalk_Lang,2,talkDatas[2],wait=0.10 speaker=8,"スペイン語
+ñÑáíúéóÁÍÚÉÓ¿¡",,,,,
+AutoTalk:TreasureBoxIsOpened:0,AutoTalk,sharedassets26.assets,15,TreasureBoxIsOpened,0,talkDatas[0],wait=0.00 speaker=0,宝箱は　すでに開いている,The treasure chest is already open.,You’ve already opened this chest,,,
+AutoTalk:タオンガ戦闘テスト:0,AutoTalk,sharedassets118.assets,126,タオンガ戦闘テスト,0,talkDatas[0],wait=0.30 speaker=8,"タオンガ戦闘テスト
+0",,,,,
+AutoTalk:タオンガ戦闘テスト:1,AutoTalk,sharedassets118.assets,126,タオンガ戦闘テスト,1,talkDatas[1],wait=0.30 speaker=8,1,,,,,
+AutoTalk:タオンガ戦闘テスト:2,AutoTalk,sharedassets118.assets,126,タオンガ戦闘テスト,2,talkDatas[2],wait=0.30 speaker=8,2,,,,,
+AutoTalk:タオンガ戦闘テスト:3,AutoTalk,sharedassets118.assets,126,タオンガ戦闘テスト,3,talkDatas[3],wait=3.00 speaker=8,3,,,,,
+AutoTalk:タオンガ戦闘テスト:4,AutoTalk,sharedassets118.assets,126,タオンガ戦闘テスト,4,talkDatas[4],wait=0.50 speaker=8,4,,,,,
+AutoTalk:タオンガ戦闘テスト:5,AutoTalk,sharedassets118.assets,126,タオンガ戦闘テスト,5,talkDatas[5],wait=0.50 speaker=8,5,,,,,
+AutoTalk:タオンガ戦闘テスト2:0,AutoTalk,sharedassets118.assets,127,タオンガ戦闘テスト2,0,talkDatas[0],wait=0.30 speaker=8,6,,,,,
+AutoTalk:逆走テスト:0,AutoTalk,sharedassets51.assets,27,逆走テスト,0,talkDatas[0],wait=3.00 speaker=0,逆走した場合の　フラグテストです。,,,,,

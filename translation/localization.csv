@@ -1,0 +1,719 @@
+﻿id,kind,file,path_id,source,index,path,comment,text_ja,text_en_machine,text_en,text_fr,text_es,text_zh_Hans
+localization:Ending Table:Ending_FirstText,localization,,,Ending Table,,Ending_FirstText,,"
+
+ＳＴＡＦＦ　＆　ＣＨＡＲＡＣＴＥＲＳ",,"
+
+ＳＴＡＦＦ　＆　ＣＨＡＲＡＣＴＥＲＳ","
+
+ＳＴＡＦＦ　＆　ＣＨＡＲＡＣＴＥＲＳ","
+
+ＳＴＡＦＦ　＆　ＣＨＡＲＡＣＴＥＲＳ",
+localization:Ending Table:Ending_NP01_01,localization,,,Ending Table,,Ending_NP01_01,,ディレクター,,Director,,,
+localization:Ending Table:Ending_NP02_01,localization,,,Ending Table,,Ending_NP02_01,,クリエイター,,Creator ,,,
+localization:Ending Table:Ending_NP02_03,localization,,,Ending Table,,Ending_NP02_03,,"ローカライズ &
+デベロッパーリレーション",,"Localization &
+Developer Relations ",,,
+localization:Ending Table:Ending_NP02_05,localization,,,Ending Table,,Ending_NP02_05,,ローカライズアシスタント,,"Localization
+Assistant ",,,
+localization:Ending Table:Ending_NP03_01,localization,,,Ending Table,,Ending_NP03_01,,がいぶアセット,,Extra Asset Source,,,
+"localization:Ending Table:Ending_NP03_03
+",localization,,,Ending Table,,"Ending_NP03_03
+",,パブリッシング,,Publishing,,,
+localization:Ending Table:Ending_NP04_01,localization,,,Ending Table,,Ending_NP04_01,,マーケティング,,Marketing ,,,
+localization:Ending Table:Ending_NP05_01,localization,,,Ending Table,,Ending_NP05_01,,テストプレイ,, Tester (NijiDra),,,
+localization:Ending Table:Ending_NP05_03,localization,,,Ending Table,,Ending_NP05_03,,QA エグゼクティブ,,QA Executive,,,
+localization:Ending Table:Ending_NP05_05,localization,,,Ending Table,,Ending_NP05_05,,ひんしつほしょう,, Quality Assurance,,,
+localization:Ending Table:Ending_NP06_01,localization,,,Ending Table,,Ending_NP06_01,,スーパースペシャルサンクス,,Super Special Thanks,,,
+localization:Ending Table:Ending_NP06_03,localization,,,Ending Table,,Ending_NP06_03,,スペシャルサンクス,,Special Thanks,,,
+localization:Ending Table:Ending_NP07_01,localization,,,Ending Table,,Ending_NP07_01,,スペシャルサンクス,,Special Thanks,,,
+localization:Ending Table:Ending_NP08_01,localization,,,Ending Table,,Ending_NP08_01,,プロデューサー,,Producer,,,
+localization:Ending Table:Ending_NP08_03,localization,,,Ending Table,,Ending_NP08_03,,エグゼクティブディレクター,,Executive Director,,,
+localization:Ending Table:Ending_P010,localization,,,Ending Table,,Ending_P010,,"
+
+
+
+
+
+
+
+ディレクター
+
+Yoshi3110",,"
+
+
+
+
+
+
+
+DIRECTOR
+
+Yoshi3110",,,
+localization:Ending Table:Ending_P020,localization,,,Ending Table,,Ending_P020,,"
+
+
+デザイン
+/サウンド/プログラム
+
+シナリオ/マップ
+/デバッグ
+
+
+Yoshi3110",,"
+
+
+
+
+
+CREATOR
+
+Yoshi3110",,,
+localization:Ending Table:Ending_P030,localization,,,Ending Table,,Ending_P030,,"
+
+がいぶ　アセット
+
+
+ぴぽやそうこ
+
+こうかおんラボ
+
+こうかおんこうぼう
+
+OtoJin
+
+OtoLogic
+
+VSQplus",,"
+
+EX ASSET SOURCE
+
+
+ぴぽやそうこ
+
+こうかおんラボ
+
+こうかおんこうぼう
+
+OtoJin
+
+OtoLogic
+
+VSQplus",,,
+localization:Ending Table:Ending_P040,localization,,,Ending Table,,Ending_P040,,"
+
+
+
+
+
+
+
+スーパースペシャルサンクス
+
+RAO",,"
+
+
+
+
+SUPER
+
+SPECIAL THANKS
+
+
+RAO",,,
+localization:Ending Table:Ending_P050,localization,,,Ending Table,,Ending_P050,,"
+
+
+スペシャルサンクス
+
+
+たね
+
+おひめちん
+
+　たまゆら。
+
+もふおさお
+
+めるど
+",,"
+
+
+SPECIAL THANKS
+
+
+たね
+
+おひめちん
+
+　たまゆら。
+
+もふおさお
+
+めるど
+",,,
+localization:Ending Table:Ending_P060,localization,,,Ending Table,,Ending_P060,,"
+
+
+スペシャルサンクス
+
+
+zaxsya97
+
+アラン・サイジョー
+
+ごぼうあじ
+
+オリー
+
+ひょえ
+",,"
+
+
+SPECIAL THANKS
+
+
+zaxsya97
+
+アラン・サイジョー
+
+ごぼうあじ
+
+オリー
+
+ひょえ
+",,,
+localization:Ending Table:Ending_P070,localization,,,Ending Table,,Ending_P070,,"
+
+
+スペシャルサンクス
+
+
+リッキー
+
+バル
+
+とびうお
+
+DOS
+
+ないろ
+
+もえぎりんご
+",,"
+
+
+SPECIAL THANKS
+
+
+リッキー
+
+バル
+
+とびうお
+
+DOS
+
+ないろ
+
+もえぎりんご
+",,,
+localization:Ending Table:Ending_P080,localization,,,Ending Table,,Ending_P080,,"
+
+プロデューサー
+
+Yoshi3110",,"
+
+PRODUCER
+
+Yoshi3110",,,
+localization:Ending Table:Ending_P081,localization,,,Ending Table,,Ending_P081,,"パブリッシング
+
+Forever Entertainment S.A.",,"PUBLISHING
+
+Forever Entertainment S.A.",,,
+localization:Ending Table:Ending_P910,localization,,,Ending Table,,Ending_P910,,"©  2017-2024 　　  Yoshi3110
+©  2024　　　   NijiiroDragon
+ 
+All  Rights,  including  the  copyrights
+of  Game,  Music  and  program,
+reserved  by  Yoshi3110.",,"©  2017-2024 　　  Yoshi3110
+©  2024　　　   NijiiroDragon
+ 
+All  Rights,  including  the  copyrights
+of  Game,  Music  and  program,
+reserved  by  Yoshi3110.","©  2017-2024 　　  Yoshi3110
+©  2024　　　   NijiiroDragon
+ 
+All  Rights,  including  the  copyrights
+of  Game,  Music  and  program,
+reserved  by  Yoshi3110.","©  2017-2024 　　  Yoshi3110
+©  2024　　　   NijiiroDragon
+ 
+All  Rights,  including  the  copyrights
+of  Game,  Music  and  program,
+reserved  by  Yoshi3110.",
+localization:Ending Table:Ending_P911,localization,,,Ending Table,,Ending_P911,,"©  2017-2025 　    Yoshi3110
+©  2024-2025  NijiiroDragon
+Forever Entertainment  S. A. 
+
+All  Rights,  including  the  copyrights
+of  Game,  Music  and  program,
+reserved  by  Yoshi3110.",,"©  2017-2025 　    Yoshi3110
+©  2024-2025  NijiiroDragon
+Forever Entertainment  S. A. 
+
+All  Rights,  including  the  copyrights
+of  Game,  Music  and  program,
+reserved  by  Yoshi3110.","©  2017-2025 　    Yoshi3110
+©  2024-2025  NijiiroDragon
+Forever Entertainment  S. A. 
+
+All  Rights,  including  the  copyrights
+of  Game,  Music  and  program,
+reserved  by  Yoshi3110.","©  2017-2025 　    Yoshi3110
+©  2024-2025  NijiiroDragon
+Forever Entertainment  S. A. 
+
+All  Rights,  including  the  copyrights
+of  Game,  Music  and  program,
+reserved  by  Yoshi3110.",
+localization:Ending Table:Ending_P920,localization,,,Ending Table,,Ending_P920,,にじいろドラゴン,,にじいろドラゴン,にじいろドラゴン,にじいろドラゴン,
+localization:Ending Table:Ending_P930,localization,,,Ending Table,,Ending_P930,,THE END,,THE END,THE END,THE END,
+"localization:Ending Table:Ending_S1_Chara_Fiz
+",localization,,,Ending Table,,"Ending_S1_Chara_Fiz
+",,"フィズ
+",,"Fiz
+",,,
+localization:Ending Table:Ending_S1_Chara_Neru,localization,,,Ending Table,,Ending_S1_Chara_Neru,,"ネル
+by Ohimechin",,"Neru
+by Ohimechin",,,
+localization:Ending Table:Ending_S1_Chara_Rabbit,localization,,,Ending Table,,Ending_S1_Chara_Rabbit,,"野うさぎ(エネミー)
+by RAO",,"Wild Rabbit
+by RAO",,,
+localization:Ending Table:Ending_S1_Chara_Seedra,localization,,,Ending Table,,Ending_S1_Chara_Seedra,,"種どら
+by Tane",,"Tanedra
+by Tane",,,
+localization:Ending Table:Ending_S1_Stage,localization,,,Ending Table,,Ending_S1_Stage,,ステージ1 シロップへいげん,,"STAGE 1
+SYRUP PLAINS",,,
+localization:Ending Table:Ending_S2_Chara_Guardia,localization,,,Ending Table,,Ending_S2_Chara_Guardia,,"ガーディア
+by Mooon_Mohuo",,"Guardia
+by Mooon_Mohuo",,,
+localization:Ending Table:Ending_S2_Chara_Soraco,localization,,,Ending Table,,Ending_S2_Chara_Soraco,,ソラコ,,Soraco,,,
+localization:Ending Table:Ending_S2_Chara_Yurawo,localization,,,Ending Table,,Ending_S2_Chara_Yurawo,,"ゆらを。
+by tamayura.",,"Yurawo
+by tamayura.",,,
+localization:Ending Table:Ending_S2_Stage,localization,,,Ending Table,,Ending_S2_Stage,,ステージ2 クッキーさばく,,"STAGE 2
+COOKIE SANDS",,,
+localization:Ending Table:Ending_S3_Chara_Leafur,localization,,,Ending Table,,Ending_S3_Chara_Leafur,,リーファー,,Leafur,,,
+localization:Ending Table:Ending_S3_Chara_Lira,localization,,,Ending Table,,Ending_S3_Chara_Lira,,"リラ
+by zaxsya97",,"Lira
+by zaxsya97",,,
+localization:Ending Table:Ending_S3_Chara_Plain,localization,,,Ending Table,,Ending_S3_Chara_Plain,,"プレーン
+by RAO",,"Plain
+by RAO",,,
+localization:Ending Table:Ending_S3_Chara_Thystmare,localization,,,Ending Table,,Ending_S3_Chara_Thystmare,,"ジストメア
+by merudo",,"Thystmare
+by merudo",,,
+localization:Ending Table:Ending_S3_Stage,localization,,,Ending Table,,Ending_S3_Stage,,ステージ3 マッチャじゅかい,,"STAGE 3
+MATCHA FOREST",,,
+localization:Ending Table:Ending_S4_Chara_Aojiso,localization,,,Ending Table,,Ending_S4_Chara_Aojiso,,"あおじそ
+by gobouame",,"Aojiso
+by gobouame",,,
+localization:Ending Table:Ending_S4_Chara_Jorouda,localization,,,Ending Table,,Ending_S4_Chara_Jorouda,,"女狼蛇
+by Aran_Saijo",,"Jorouda
+by Aran_Saijo",,,
+localization:Ending Table:Ending_S4_Chara_Rythron,localization,,,Ending Table,,Ending_S4_Chara_Rythron,,リュトロン,,Rythron,,,
+localization:Ending Table:Ending_S4_Stage,localization,,,Ending Table,,Ending_S4_Stage,,ステージ4 ベリーかざん,,"STAGE 4
+BERRY VOLCANO",,,
+localization:Ending Table:Ending_S5_Chara_Akatsuki,localization,,,Ending Table,,Ending_S5_Chara_Akatsuki,,アカツキ,,Akatsuki,,,
+localization:Ending Table:Ending_S5_Chara_Frey,localization,,,Ending Table,,Ending_S5_Chara_Frey,,"フレイ
+by olient_",,"Frey
+by olient_",,,
+localization:Ending Table:Ending_S5_Chara_Hyoe,localization,,,Ending Table,,Ending_S5_Chara_Hyoe,,"ひょえ
+by Hyoe",,"Hyoe
+by Hyoe",,,
+localization:Ending Table:Ending_S5_Chara_Kyuma,localization,,,Ending Table,,Ending_S5_Chara_Kyuma,,キューマ,,Kyuma,,,
+localization:Ending Table:Ending_S5_Chara_Tasogare,localization,,,Ending Table,,Ending_S5_Chara_Tasogare,,タソガレ,,Tasogare,,,
+localization:Ending Table:Ending_S5_Stage,localization,,,Ending Table,,Ending_S5_Stage,,ステージ5 フロートじま,,"STAGE 5
+FLOAT ISLE",,,
+localization:Ending Table:Ending_S6_Chara_Baru,localization,,,Ending Table,,Ending_S6_Chara_Baru,,"バル
+by Baru",,"Baru
+by Baru",,,
+localization:Ending Table:Ending_S6_Chara_Leary,localization,,,Ending Table,,Ending_S6_Chara_Leary,,"リアリー
+by RAO",,"Leary
+by RAO",,,
+localization:Ending Table:Ending_S6_Chara_Rubell,localization,,,Ending Table,,Ending_S6_Chara_Rubell,,ルーベル,,Rubell,,,
+localization:Ending Table:Ending_S6_Chara_Salia,localization,,,Ending Table,,Ending_S6_Chara_Salia,,"サリア
+by DOS",,"Salia
+by DOS",,,
+localization:Ending Table:Ending_S6_Chara_Syasyo,localization,,,Ending Table,,Ending_S6_Chara_Syasyo,,車掌さん,,Train conductor,,,
+localization:Ending Table:Ending_S6_Chara_Terukku,localization,,,Ending Table,,Ending_S6_Chara_Terukku,,"テールック
+by rickey_315
+",,"Terukku
+by rickey_315
+",,,
+localization:Ending Table:Ending_S6_Chara_Zia,localization,,,Ending Table,,Ending_S6_Chara_Zia,,"ジア
+by tobiuo",,"Zia
+by tobiuo",,,
+localization:Ending Table:Ending_S6_Stage,localization,,,Ending Table,,Ending_S6_Stage,,ステージ6 キャンディポリス,,"STAGE 6
+CANDY POLIS",,,
+localization:Ending Table:Ending_S7_Chara_Ramura,localization,,,Ending Table,,Ending_S7_Chara_Ramura,,"ラムラ
+by kumamotoycx2016",,"Lamra
+by kumamotoycx2016",,,
+localization:Ending Table:Ending_S7_Chara_Taonga,localization,,,Ending Table,,Ending_S7_Chara_Taonga,,タオンガ,,Taonga,,,
+localization:Ending Table:Ending_S7_Chara_Yoyami,localization,,,Ending Table,,Ending_S7_Chara_Yoyami,,"ヨヤミ
+by hgprdragon",,"Yoyami
+by hgprdragon",,,
+localization:Ending Table:Ending_S7_Stage,localization,,,Ending Table,,Ending_S7_Stage,,ステージ7 マカロンムーン,,"STAGE 7
+MACARON MOON",,,
+localization:Message Table:Stage1_0_101_message01,localization,,,Message Table,,Stage1_0_101_message01,, ⑪ ： 移動,, ⑪ ： Move,,,
+localization:Message Table:Stage1_0_101_message02,localization,,,Message Table,,Stage1_0_101_message02,, ⑪ ： ジャンプ,,   ⑪ ： Jump,,,
+"localization:Message Table:Stage1_0_101_message03
+",localization,,,Message Table,,"Stage1_0_101_message03
+",, ⑪ ： こうげき,,  ⑪ ： Attack,,,
+localization:Message Table:Stage1_0_101_message04,localization,,,Message Table,,Stage1_0_101_message04,,"    ⑪ ＋ ⑫
+    ダッシュ",," Hold  ⑪ ＋ ⑫
+      Dash",,,
+localization:Message Table:Stage1_0_101_message05,localization,,,Message Table,,Stage1_0_101_message05,," ⑪  ：あたらしい情報あり 
+ ⑫  ：キャラ切り替えで新情報 
+ ⑬  ：すべて見終わった！",,"  ⑪ : New info available
+  ⑫ : Swap to get new info
+  ⑬ : All viewed!",,,
+localization:Message Table:Stage1_0_101_message06,localization,,,Message Table,,Stage1_0_101_message06,, ⑪ ：ドアに入る,,  ⑪  ： Enter,,,
+localization:Message Table:Stage1_2_3_message00,localization,,,Message Table,,Stage1_2_3_message00,,"オレンジ色の　ゲージがたまると、
+<color=""red"">必殺ワザ</color>を出すことが　できるぞ。
+⑪ を押して、ワザを出してみよう！
+<color=""#00bbbb"">フィズの必殺ワザ：すりぬけハンマー</color>",,"When the orange bar is full,
+you can unleash a <color=""red"">Special Move</color>.
+Press ⑪ to give it a try!
+<color=""#00bbbb"">Special Move: Pass-Through Hammer</color>
+",,,
+localization:Message Table:Stage2_1_3_message00,localization,,,Message Table,,Stage2_1_3_message00,,"<color=#FF8855FF>ソラコ</color>の攻撃は　ひっかき攻撃！
+砂でできたブロックを
+ほり進めることが　できるぞ！
+ポーズ画面を開く： ⑪",,"<color=#FF8855FF>Soraco</color>'s attack is a scratch!
+He can dig through blocks
+made of sand!
+Open the pause menu: ⑪",,,
+localization:Message Table:Stage2_2_2_message00,localization,,,Message Table,,Stage2_2_2_message00,,"<color=#dd6633dd>    ソラコ</color>の必殺ワザは「ドリル」！
+    ソラコが　空中にいるとき
+     -  と  ⑪  を同時に押して、
+    一気に　ブロックを壊そう！",,"<color=#dd6633dd>Soraco</color>'s Special Move is the ""Drill""!
+When Sorako is in the air,
+press  -  +  ⑪  at the same time
+to break through blocks in one go!",,,
+localization:Message Table:Stage3_1_1_message00,localization,,,Message Table,,Stage3_1_1_message00,,"<color=#99FFAAFF>リーファー</color>のはばたき
+⑪　長押しで滞空",,"<color=#99FFAAFF>Leafur</color>'s flapping wings
+Hold ⑪ to stay in the air",,,
+localization:Message Table:Stage3_2_2_message00,localization,,,Message Table,,Stage3_2_2_message00,,"<color=#99FFAAFF>リーファー</color>の　必殺ワザは
+「回復の祈り」だ！
+体力が　減っているときに、
+⑪ で　体力を回復しよう！",,"<color=#99FFAAFF>Leafur</color>'s Special Move
+is “Prayer of Healing”!
+When your HP is low,
+press ⑪ to recover!",,,
+localization:Message Table:Stage4_1_1_message00,localization,,,Message Table,,Stage4_1_1_message00,,"【アドバイス】
+<color=#FF5555FF>リュトロン</color>は　翼を使った
+３段ジャンプができるぞ！",,"[Advice]
+<color=#FF5555FF>Rythron</color> can use his wings
+to perform a triple jump!",,,
+localization:Message Table:Stage4_1_2_message00,localization,,,Message Table,,Stage4_1_2_message00,,"<color=#FF5555FF>リュトロン</color>の　必殺ワザは
+「ファイヤーボール」だ！
+⑪ を押して　火炎の弾を
+とばすことが　できるぞ！",,"<color=#FF5555FF>Rythron</color>'s Special Move
+is “Fireball”!
+Press ⑪ to fire  
+a flame shot!",,,
+localization:Message Table:Stage5_1_1_message00,localization,,,Message Table,,Stage5_1_1_message00,,"<color=#5588DDFF>キューマ</color>のダッシュは　サーフィンだ！
+海でも陸でも　敵を吹き飛ばしちゃえ！",,"<color=#5588DDFF>Kyuma</color>'s dashes by surfing!
+Blow away enemies on land or sea!",,,
+localization:Message Table:Stage5_1_3_message00,localization,,,Message Table,,Stage5_1_3_message00,,"<color=#5588DDFF>キューマ</color>の必殺ワザは『水陣』だ！
+↓キーを長押しして　パワーをためれば
+今いる位置まで　水面がせまってくるぞ！",,"<color=#5588DDFF>Kyuma</color>'s Special Move: ""Water Formation""!
+Hold ↓ to gather power
+and water will rise to you!",,,
+localization:Message Table:Stage6_1_1_message00,localization,,,Message Table,,Stage6_1_1_message00,,"<color=#FFAAFFFF>ルーベル</color>の攻撃は「ワイヤー」！
+方向キーで狙いを定めて、
+⑪ で　ワイヤーを発射だ！",,"<color=#FFAAFFFF>Rubell</color>'s attack is a ""Web""!
+Aim with the direction keys,
+then press ⑪ to fire the wire!",,,
+localization:Message Table:Stage6_1_1_message01,localization,,,Message Table,,Stage6_1_1_message01,,"ワイヤーを壁や天井にひっかけて
+⑪ を押しっぱなしにすると、
+ぶら下がることが　できるぞ！",,"Hook wire on wall or ceiling
+Keep holding ⑪
+to hang down!",,,
+localization:Message Table:Stage6_1_2_message00,localization,,,Message Table,,Stage6_1_2_message00,,"<color=#FFAAFFFF>ルーベル</color>のワザ 「<color=#EE0000FF>ワイヤージャンプ</color>」は、
+必殺パワーを 消費することで
+ぶら下がった状態でも ジャンプができるぞ！",,"<color=#FFAAFFFF>Rubell</color>'s move, ""<color=#EE0000FF>Wire Jump</color>"",
+Use special power to jump,
+even while hanging from a wire!",,,
+localization:SubGames UI Table:LeafurMegaphyll_Continue,localization,,,SubGames UI Table,,LeafurMegaphyll_Continue,,CONTINUE,,CONTINUE,,,
+localization:SubGames UI Table:LeafurMegaphyll_Exit,localization,,,SubGames UI Table,,LeafurMegaphyll_Exit,,EXIT,,EXIT,,,
+localization:SubGames UI Table:LeafurMegaphyll_FinishBottom,localization,,,SubGames UI Table,,LeafurMegaphyll_FinishBottom,,PRESS + BUTTON,,PRESS + BUTTON,,,
+localization:SubGames UI Table:LeafurMegaphyll_GameOver,localization,,,SubGames UI Table,,LeafurMegaphyll_GameOver,,GAME OVER,,GAME OVER,GAME OVER,GAME OVER,
+localization:SubGames UI Table:LeafurMegaphyll_Pause,localization,,,SubGames UI Table,,LeafurMegaphyll_Pause,,PAUSE,,PAUSE,,,
+localization:SubGames UI Table:LeafurMegaphyll_Title,localization,,,SubGames UI Table,,LeafurMegaphyll_Title,,リーファーと大きな葉っぱ,,Leafur and the Giant Leaf,,,
+localization:SubGames UI Table:LeafurMegaphyll_Title_Bottom,localization,,,SubGames UI Table,,LeafurMegaphyll_Title_Bottom,,+:START -:EXIT,,+:START -:EXIT,,,
+localization:SubGames UI Table:LeafurMegaphyll_Title_Manual,localization,,,SubGames UI Table,,LeafurMegaphyll_Title_Manual,,"+ ：移動
+- ：構え / ショット
+右スティック：照準",,"+ ： Move
+- ： Hold / Shot
+Right Stick ： Aiming",,,
+localization:SubGames UI Table:SoracoFishing_Result,localization,,,SubGames UI Table,,SoracoFishing_Result,,けっかはっぴょう,,RESULT,,,
+localization:SubGames UI Table:SoracoFishing_Result_Bottom,localization,,,SubGames UI Table,,SoracoFishing_Result_Bottom,,・:RESTART ＊:EXIT,,・:RESTART ＊:EXIT,,,
+localization:SubGames UI Table:SoracoFishing_Result_PhaseText,localization,,,SubGames UI Table,,SoracoFishing_Result_PhaseText,,"Phase1:
+Phase2:
+Phase3:",,"Phase1:
+Phase2:
+Phase3:",,,
+localization:SubGames UI Table:SoracoFishing_Title,localization,,,SubGames UI Table,,SoracoFishing_Title,,"ソラコの
+さかなつり",,"Soraco's
+Fishing",,,
+localization:SubGames UI Table:SoracoFishing_Title_Bottom,localization,,,SubGames UI Table,,SoracoFishing_Title_Bottom,,+:START -:EXIT,,+:START -:EXIT,,,
+localization:SubGames UI Table:SoracoFishing_Title_Manual,localization,,,SubGames UI Table,,SoracoFishing_Title_Manual,,"""！！"" が出たら　釣り上げて、
+飛んでくる魚を
+タイミングよくキャッチしよう！",,"When you see ""!!"" pull it up
+and catch the flying fish
+at the right time!",,,
+"localization:Title Contents Table:LanguageSettings_Bottom
+",localization,,,Title Contents Table,,"LanguageSettings_Bottom
+",,   ① を押して　選択してください。,,Press  ①  to select.,Appuyez sur  ①  pour sélectionner.,Pulse  ①  para seleccionar.,
+localization:Title Contents Table:LanguageSettings_SubHeader,localization,,,Title Contents Table,,LanguageSettings_SubHeader,,Which language do you play in?,,Which language do you play in?,¿En qué idioma juega?,Dans quelle langue jouez-vous ?,
+localization:Title Contents Table:SoundTest_Bottom,localization,,,Title Contents Table,,SoundTest_Bottom,,     -  + ：曲を選ぶ    = ：再生/停止 　 % ：モード切り替え,,     -  + ：Select    　= ：Play/Pause　 　% ：Change Mode,,,
+localization:Title Contents Table:TheaterRoom_Bottom,localization,,,Title Contents Table,,TheaterRoom_Bottom,,・：ムービーを選ぶ   ⑪：再生する   ⑫：タイトルに戻る,,・：Select   ⑪：Play   ⑫：Back to Title,,,
+localization:Title Contents Table:TheaterRoom_Header,localization,,,Title Contents Table,,TheaterRoom_Header,,THEATER ROOM,,THEATER ROOM,,,
+localization:Title Contents Table:Title_AiSettings_Bottom,localization,,,Title Contents Table,,Title_AiSettings_Bottom,,・：設定を変更　　⑪：設定を閉じる　　⑫：決定,,・：SELECT　　⑪：CLOSE　　⑫：SUBMIT,,,
+localization:Title Contents Table:Title_ControlSettings_Attack,localization,,,Title Contents Table,,Title_ControlSettings_Attack,,こうげき・はしる,,ATTACK・DASH,,,
+localization:Title Contents Table:Title_ControlSettings_Dpad,localization,,,Title Contents Table,,Title_ControlSettings_Dpad,,"せんたく・いどう
+↑：ドアにはいる",,"SELECT/MOVE 
+UP: ENTER      
+THE DOOR ","SELECTが画面外
+https://nextcloud.forever-entertainment.com/s/r2FLoTadaeysxsF",,
+localization:Title Contents Table:Title_ControlSettings_Header,localization,,,Title Contents Table,,Title_ControlSettings_Header,,"CONTROL SETTINGS
+",,"CONTROL SETTINGS
+",,,
+localization:Title Contents Table:Title_ControlSettings_Jump,localization,,,Title Contents Table,,Title_ControlSettings_Jump,,ジャンプ・およぐ,,JUMP・SWIM,,,
+localization:Title Contents Table:Title_ControlSettings_Pause,localization,,,Title Contents Table,,Title_ControlSettings_Pause,,ポーズメニュー,,PAUSE,,,
+localization:Title Contents Table:Title_ControlSettings_SpecialAttack,localization,,,Title Contents Table,,Title_ControlSettings_SpecialAttack,,ひっさつわざ,,SPECIAL MOVE,,,
+localization:Title Contents Table:Title_ControlSettings_Vibration,localization,,,Title Contents Table,,Title_ControlSettings_Vibration,,しんどう,,Vibration,,,
+localization:Title Contents Table:Title_Copy_Consumer,localization,,,Title Contents Table,,Title_Copy_Consumer,,"© 2024-2025 Developed by にじいろドラゴン.
+Published by Forever Entertainment S. A.",,"© 2024-2025 Developed by Nijiiro Dragon.
+Published by Forever Entertainment S. A.","© 2024-2025 Developed by Nijiiro Dragon.
+Published by Forever Entertainment S. A.","© 2024-2025 Developed by Nijiiro Dragon.
+Published by Forever Entertainment S. A.",
+localization:Title Contents Table:Title_Copy_Default,localization,,,Title Contents Table,,Title_Copy_Default,,©2024 にじいろドラゴン,,©2024 にじいろドラゴン,©2024 にじいろドラゴン,©2024 にじいろドラゴン,
+localization:Title Contents Table:Title_DisplaySettings_AutoFrame,localization,,,Title Contents Table,,Title_DisplaySettings_AutoFrame,,AUTO  FRAME,,AUTO  FRAME,,,
+localization:Title Contents Table:Title_DisplaySettings_FullScreen,localization,,,Title Contents Table,,Title_DisplaySettings_FullScreen,,FULL SCREEN,,FULL SCREEN,,,
+localization:Title Contents Table:Title_DisplaySettings_Header,localization,,,Title Contents Table,,Title_DisplaySettings_Header,,GRAPHIC SETTINGS,,GRAPHIC SETTINGS,,,
+localization:Title Contents Table:Title_DisplaySettings_MildMode,localization,,,Title Contents Table,,Title_DisplaySettings_MildMode,,MILD  MODE,,MILD  MODE,,,
+localization:Title Contents Table:Title_DisplaySettings_MildMode_Info,localization,,,Title Contents Table,,Title_DisplaySettings_MildMode_Info,,"これをオンにすると、刺激の強い演出の一部が
+マイルドな表現に差し替わります。",,"When enabled, some strong expressions
+will be toned down and replaced with
+more family-friendly alternatives.",,,
+localization:Title Contents Table:Title_DisplaySettings_Resolution,localization,,,Title Contents Table,,Title_DisplaySettings_Resolution,,RESOLUTION,,RESOLUTION,,,
+localization:Title Contents Table:Title_Loading,localization,,,Title Contents Table,,Title_Loading,,読み込み中… ,,Now Loading…,,,
+localization:Title Contents Table:Title_PressSubmit,localization,,,Title Contents Table,,Title_PressSubmit,,① を押してスタート！,,PRESS  ①  TO START!,,,
+localization:Title Contents Table:Title_Settings_BottomText_Default,localization,,,Title Contents Table,,Title_Settings_BottomText_Default,,・：設定を変更　　⑪：キャンセル　　⑫：設定を保存,,・：SELECT　　⑪：CANCEL　　⑫：SUBMIT,,,
+localization:Title Contents Table:Title_SoundSettings_Bgm,localization,,,Title Contents Table,,Title_SoundSettings_Bgm,,BGM,,BGM,,,
+localization:Title Contents Table:Title_SoundSettings_Env,localization,,,Title Contents Table,,Title_SoundSettings_Env,,ENV,,ENV,,,
+localization:Title Contents Table:Title_SoundSettings_Header,localization,,,Title Contents Table,,Title_SoundSettings_Header,,"SOUND SETTINGS
+",,"SOUND SETTINGS
+",,,
+localization:Title Contents Table:Title_SoundSettings_Master,localization,,,Title Contents Table,,Title_SoundSettings_Master,,MASTER,,MASTER,,,
+localization:Title Contents Table:Title_SoundSettings_MusTypeHeader,localization,,,Title Contents Table,,Title_SoundSettings_MusTypeHeader,,MUSIC TYPE,,MUSIC TYPE,,,
+localization:Title Contents Table:Title_SoundSettings_Se,localization,,,Title Contents Table,,Title_SoundSettings_Se,,SE,,SE,,,
+localization:Title Contents Table:Title_SoundSettings_Voice,localization,,,Title Contents Table,,Title_SoundSettings_Voice,,VOICE,,VOICE,,,
+localization:UI Table:CanvasCamera_Pause_Bottom_Chara,localization,,,UI Table,,CanvasCamera_Pause_Bottom_Chara,, ⑪：キャラ選択  　⑫ ：キャラ変更　　　⑬：ポーズ解除 ,,⑪ :Select character  ⑫ :Change character     ⑬ :Close,,,
+localization:UI Table:CanvasCamera_Pause_Bottom_Menu,localization,,,UI Table,,CanvasCamera_Pause_Bottom_Menu,, ⑪ ：選択  　⑫ ：決定　　　⑬：ポーズ解除 ,,⑪ :Select  ⑫ :Confirm     ⑬ :Close,,,
+localization:UI Table:CanvasCamera_Pause_Bottom_Treasure,localization,,,UI Table,,CanvasCamera_Pause_Bottom_Treasure,, ⑪ ：選択　　　⑫：ポーズ解除 ,,⑪ :Select     ⑫ :Close,,,
+localization:UI Table:CanvasCamera_Pause_Chara_Fiz_L,localization,,,UI Table,,CanvasCamera_Pause_Chara_Fiz_L,,"--------フィズ--------
+
+　<color=#55FFFFFF>「どこまでも
+　　　　冒険しよう！」</color>
+
+心優しいドラゴンの子
+でもハンマーを投げるぞ！",,"----------Fiz---------
+
+<color=#55FFFFFF>""Let's go on
+ an adventure!""</color>
+Even a kind-hearted dragon child 
+can throw a hammer! ",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Fiz_R,localization,,,UI Table,,CanvasCamera_Pause_Chara_Fiz_R,,"------アクション------
+
+⑪ ：ジャンプ・泳ぐ
+⑫ ：ダッシュ・攻撃
+⑬ ：すりぬけハンマー
+
+必殺ワザのコスト：１０",,"--------Action--------
+
+⑪ : Jump / Swim
+⑫ : Dash / Attack
+⑬ : Pass-Through Hammer
+
+Special Move cost: 10",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Kyuma_L,localization,,,UI Table,,CanvasCamera_Pause_Chara_Kyuma_L,,"-------キューマ-------
+
+　<color=#77AAFFFF>「俺こそが水中最速の
+　　　　ドラゴンだ！」</color>
+
+水中に棲むドラゴンの子
+泳ぎの鍛錬は欠かさない",,"---------Kyuma--------
+
+<color=#77AAFFFF>""I am the fastest dragon 
+ in the water!""</color>
+A dragon cub that lives
+underwater. Never misses
+a swim training.",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Kyuma_R,localization,,,UI Table,,CanvasCamera_Pause_Chara_Kyuma_R,,"------アクション------
+
+⑪ ：ジャンプ・泳ぐ
+⑫ ：ダッシュ・サｰフｨン
+⑬ ：長押しで水陣
+
+必殺ワザのコスト：１００",,"--------Action--------
+
+⑪ : Jump / Swim
+⑫ : Dash / Surf
+⑬ : Hold to create
+       water formation
+Special Move cost: 100",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Leafur_L,localization,,,UI Table,,CanvasCamera_Pause_Chara_Leafur_L,,"------リーファー------
+
+　<color=#99FFAAFF>「リーファー
+　　　　がんばるね！」</color>
+
+モフモフなドラゴンの子
+ちょこっと空を飛べる",,"--------Leafur--------
+
+<color=#99FFAAFF>""I'll do my best!""</color>
+
+A fluffy dragon child
+Can fly just a little bit.",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Leafur_R,localization,,,UI Table,,CanvasCamera_Pause_Chara_Leafur_R,,"------アクション------
+
+⑪ ：ジャンプ・滞空
+⑫ ：弓を構える・放つ
+⑬ ：回復の祈り
+
+コスト：回復ＨＰと同量",,"--------Action--------
+
+⑪ : Jump / Hover
+⑫ : Aim & Shoot Arrow
+
+⑬ : Prayer of Recovery
+Cost: Same as Restored HP",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Rubell_L,localization,,,UI Table,,CanvasCamera_Pause_Chara_Rubell_L,,"-------ルーベル-------
+
+　<color=#FFAAFFFF>「わたしの糸で
+　　　　一網打尽よ！」</color>
+
+みんなのお姉さん的存在
+糸を操ることができるぞ",,"--------Rubell--------
+
+<color=#FFAAFFFF>""My threads will 
+sweep them up!""</color>
+Big-sister figure to
+everyone.She can control
+her silk threads.",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Rubell_R,localization,,,UI Table,,CanvasCamera_Pause_Chara_Rubell_R,,"------アクション------
+
+⑪ ：ジャンプ・泳ぐ
+⑫ ：ダッシュ・ワイヤー
+
+※ワイヤージャンプ
+　　　　　：コスト２０",,"--------Action--------
+
+⑪ : Jump / Swim
+⑫ : Dash / Web
+
+
+*Wire Jump cost: 20",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Rythron_L,localization,,,UI Table,,CanvasCamera_Pause_Chara_Rythron_L,,"------リュトロン------
+
+　<color=#FF5555FF>「おれのカラダが
+　　　　火をふくぜ！」</color>
+
+誇り高き炎のドラゴンの子
+水にとても弱いぞ！",,"--------Rythron-------
+
+<color=#FF5555FF>""My body is on fire!""</color>
+
+A proud child of the fire dragon. Very
+vulnerable to water!",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Rythron_R,localization,,,UI Table,,CanvasCamera_Pause_Chara_Rythron_R,,"------アクション------
+
+⑪ ：はばたく
+⑫ ：ダッシュ・攻撃
+⑬ ：ファイヤーボール
+
+必殺ワザのコスト：３０",,"--------Action--------
+
+⑪ : Flap
+⑫ : Dash / attack
+⑬ : Fireball
+
+Special move cost: 30",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Soraco_L,localization,,,UI Table,,CanvasCamera_Pause_Chara_Soraco_L,,"--------ソラコ--------
+
+　<color=#FF8855FF>「穴ほりはオイラに
+　　　　　まかせて！」</color>
+
+好奇心旺盛なドラゴンの子
+でも泳ぐことはニガテ…",,"--------Soraco--------
+
+<color=#FF8855FF>""Leave the digging to
+ me!""</color>
+A curious little dragon,
+full of wonder, but not
+so great at swimming...",,,
+localization:UI Table:CanvasCamera_Pause_Chara_Soraco_R,localization,,,UI Table,,CanvasCamera_Pause_Chara_Soraco_R,,"------アクション------
+
+⑪ ：ジャンプ
+⑫ ：ダッシュ・ひっかき
+
+空中で ⑭ ＆ ⑬ 
+　：ドリル (コスト２０)",,"--------Action--------
+
+⑪ : Jump
+⑫ : Dash / Scratch
+
+⑭ + ⑬  in mid-air:
+Drill (cost: 20)",Dpadの表現,,
+localization:UI Table:GameOver_Bottom,localization,,,UI Table,,GameOver_Bottom,,Press  -  Button,,Press  -  Button,,,
+localization:UI Table:GameOver_Continue,localization,,,UI Table,,GameOver_Continue,,冒険をつづける,,Continue Adventure ,,,
+localization:UI Table:GameOver_GiveUp,localization,,,UI Table,,GameOver_GiveUp,,タイトルにもどる,,Back to title,,,
+localization:UI Table:MovieCanvasCamera_SpeedUp,localization,,,UI Table,,MovieCanvasCamera_SpeedUp,,- ：早送り,,- ：Fast forward,,,
+localization:UI Table:MovieCanvasCamera_Stage1,localization,,,UI Table,,MovieCanvasCamera_Stage1,,"<size=16>ステージ1</size>
+シロップ平原",,"<size=16>Stage 1</size>
+Syrup Plains",,,
+localization:UI Table:MovieCanvasCamera_Stage2,localization,,,UI Table,,MovieCanvasCamera_Stage2,,"<size=16>ステージ2</size>
+クッキー砂漠",,"<size=16>Stage 2</size>
+Cookie Sands",,,
+localization:UI Table:MovieCanvasCamera_Stage3,localization,,,UI Table,,MovieCanvasCamera_Stage3,,"<size=16>ステージ3</size>
+マッチャ樹海",,"<size=16>Stage 3</size>
+Matcha Forest",,,
+localization:UI Table:MovieCanvasCamera_Stage4,localization,,,UI Table,,MovieCanvasCamera_Stage4,,"<size=16>ステージ4</size>
+ベリー火山",,"<size=16>Stage 4</size>
+Berry Volcano",,,
+localization:UI Table:MovieCanvasCamera_Stage5,localization,,,UI Table,,MovieCanvasCamera_Stage5,,"<size=16>ステージ5</size>
+フロート島",,"<size=16>Stage 5</size>
+Float Isle",,,
+localization:UI Table:MovieCanvasCamera_Stage6,localization,,,UI Table,,MovieCanvasCamera_Stage6,,"<size=16>ステージ6</size>
+キャンディポリス",,"<size=16>Stage 6</size>
+Candy Polis",,,
+localization:UI Table:MovieCanvasCamera_Stage7,localization,,,UI Table,,MovieCanvasCamera_Stage7,,"<size=16>ステージ7</size>
+マカロンムーン",,"<size=16>Stage 7</size>
+Macaron Moon",,,
+localization:UI Table:MovieCanvasCamera_Stage8,localization,,,UI Table,,MovieCanvasCamera_Stage8,,"<size=16>ステージ8</size>
+名称未定エリア",,,,,
+localization:UI Table:MovieSkip_AandB,localization,,,UI Table,,MovieSkip_AandB,, - と =  同時押しでスキップ,,Press  -  and  =  together to skip,"A and Bでスキップのはずが、- and Bと表現されております。
+https://nextcloud.forever-entertainment.com/s/FYAAJDg5LDQgXKd?dir=/&openfile=true
+Bボタンのアイコンの後にも”スペース”が必要。",,
+localization:UI Table:Result_BackToTitle,localization,,,UI Table,,Result_BackToTitle,,- ：タイトルにもどる,,- ：Back to Title,,,
+localization:UI Table:Result_OpenET,localization,,,UI Table,,Result_OpenET,,"タイムアタック（エクストラ）で
+遊べるようになったぞ！",,Time Attack (Extra Mode) is now available!,,,
+localization:UI Table:Result_OpenTAandEX,localization,,,UI Table,,Result_OpenTAandEX,,"タイムアタック　と　エクストラ　が
+遊べるようになったぞ！",,Time Attack and Extra modes are now available!,,,
+localization:UI Table:Result_Thanks,localization,,,UI Table,,Result_Thanks,,Thank you for playing!,,Thank you for playing!,,,
+localization:UI Table:StageSelect_Bottom,localization,,,UI Table,,StageSelect_Bottom,,    ← → ：ステージ選択　・：決定,,    ← → ：SELECT　・：ENTER,,,
+localization:UI Table:StageSelect_Loading,localization,,,UI Table,,StageSelect_Loading,,読み込み中… ,,Now Loading…,,,
