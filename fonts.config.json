@@ -1,69 +1,151 @@
 {
   "_comment": "Fiz And The Rainbow Planet 字体替换表。<file>:<path_id> 来自 work/fonts/info.json；fusion 字段可写成字符串或 {profile: 文件名} 映射，profile 用 --profile 选择。",
   "profiles": {
-    "default": "保留日文字形（対応日本語 + 簡体字）",
-    "zh_hans": "以简体中文字形为主（覆盖汉字/假名/拉丁）"
+    "default": "纯像素化替换：日文用 -ja，拉丁用 -latin，不改动任何文字内容",
+    "zh_hans": "全部 CJK 字体改用 -zh_hans（日文原文也会变成简中字形）",
+    "zh_patch": "中文补丁：日文槽位保留 -ja 字形，中文槽位（en，即 LocFontData 的 en/fr/es）用 12px -zh_hans"
   },
   "fonts": [
-    { "file": "sharedassets0.assets", "path_id": 14, "name": "k8x12EXS",
+    {
+      "file": "sharedassets0.assets",
+      "path_id": 14,
+      "name": "k8x12EXS",
       "role": "主日文 UI 字体（45 处 Text + LocFontData 默认字体），8x12 像素",
-      "fusion": { "default": "fusion-pixel-12px-proportional-ja.ttf",
-                  "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf" } },
-
-    { "file": "sharedassets0.assets", "path_id": 15, "name": "YoshiAtari8",
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf"
+      }
+    },
+    {
+      "file": "sharedassets0.assets",
+      "path_id": 15,
+      "name": "YoshiAtari8",
       "role": "雅达利风格英文小字体（4 处 Text），8px",
-      "fusion": "fusion-pixel-8px-proportional-latin.ttf" },
-
-    { "file": "sharedassets2.assets", "path_id": 18, "name": "Yoshi5x8_v2.1",
-      "role": "英文 UI 字体（6 处 Text + LocFontData 的 en/fr/es），5x8 像素",
-      "fusion": "fusion-pixel-8px-proportional-latin.ttf" },
-
-    { "file": "sharedassets2.assets", "path_id": 17, "name": "07やさしさゴシックボールド",
+      "fusion": "fusion-pixel-8px-proportional-latin.ttf"
+    },
+    {
+      "file": "sharedassets2.assets",
+      "path_id": 18,
+      "name": "Yoshi5x8_v2.1",
+      "role": "英文 UI 字体（6 处 Text + LocFontData 的 en/fr/es 槽位）；中文补丁把它换成 12px 简中，字号同步 8 -> 12",
+      "fusion": {
+        "default": "fusion-pixel-8px-proportional-latin.ttf",
+        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-zh_hans.ttf"
+      }
+    },
+    {
+      "file": "sharedassets2.assets",
+      "path_id": 17,
+      "name": "07やさしさゴシックボールド",
       "role": "柔和中黑体（6 处 Text），非像素字体",
-      "fusion": { "default": "fusion-pixel-12px-proportional-ja.ttf",
-                  "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf" } },
-
-    { "file": "sharedassets3.assets", "path_id": 132, "name": "prstartk",
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf"
+      }
+    },
+    {
+      "file": "sharedassets3.assets",
+      "path_id": 132,
+      "name": "prstartk",
       "role": "Press Start K 街机字体（6 处 Text），8px",
-      "fusion": "fusion-pixel-8px-proportional-latin.ttf" },
-
-    { "file": "sharedassets3.assets", "path_id": 133, "name": "k8x12EXL",
+      "fusion": "fusion-pixel-8px-proportional-latin.ttf"
+    },
+    {
+      "file": "sharedassets3.assets",
+      "path_id": 133,
+      "name": "k8x12EXL",
       "role": "k8x12 大号版；扫描未发现被 Text 引用，可留作中文字体槽位",
-      "fusion": { "default": "fusion-pixel-12px-proportional-ja.ttf",
-                  "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf" } },
-
-    { "file": "sharedassets6.assets", "path_id": 10, "name": "PublicPixel",
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf"
+      }
+    },
+    {
+      "file": "sharedassets6.assets",
+      "path_id": 10,
+      "name": "PublicPixel",
       "role": "Public Pixel 8x8 像素字体",
-      "fusion": "fusion-pixel-8px-proportional-latin.ttf" },
-
-    { "file": "sharedassets154.assets", "path_id": 7, "name": "x12y16pxMaruMonica",
+      "fusion": "fusion-pixel-8px-proportional-latin.ttf"
+    },
+    {
+      "file": "sharedassets154.assets",
+      "path_id": 7,
+      "name": "x12y16pxMaruMonica",
       "role": "12x16 像素丸ゴシック",
-      "fusion": { "default": "fusion-pixel-12px-proportional-ja.ttf",
-                  "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf" } },
-
-    { "file": "resources.assets", "path_id": 101, "name": "PerfectDOSVGA437",
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf"
+      }
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 101,
+      "name": "PerfectDOSVGA437",
       "role": "DOS VGA 等宽字体，使用最多（100 处 Text）；像素风保留",
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf" },
-
-    { "file": "sharedassets0.assets", "path_id": 16, "name": "ロゴたいぷゴシック",
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+    },
+    {
+      "file": "sharedassets0.assets",
+      "path_id": 16,
+      "name": "ロゴたいぷゴシック",
       "role": "Logo 用字形，替换会改变游戏 Logo 观感，默认不替换",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-ja.ttf" },
-
-    { "file": "resources.assets", "path_id": 99, "name": "Roboto-Bold",
+      "fusion": "fusion-pixel-12px-proportional-ja.ttf"
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 99,
+      "name": "Roboto-Bold",
       "role": "TextMeshPro 示例字体源文件（TMP_FontAsset 图集已烘焙，单独换 TTF 不生效）",
-      "disabled": true, "fusion": "fusion-pixel-12px-proportional-latin.ttf" },
-    { "file": "resources.assets", "path_id": 100, "name": "Bangers", "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf" },
-    { "file": "resources.assets", "path_id": 102, "name": "Electronic Highway Sign",
-      "disabled": true, "fusion": "fusion-pixel-12px-proportional-latin.ttf" },
-    { "file": "resources.assets", "path_id": 103, "name": "Anton", "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf" },
-    { "file": "resources.assets", "path_id": 104, "name": "Oswald-Bold", "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf" },
-    { "file": "resources.assets", "path_id": 105, "name": "LiberationSans", "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf" },
-    { "file": "sharedassets156.assets", "path_id": 5, "name": "Roboto-Regular",
-      "disabled": true, "fusion": "fusion-pixel-12px-proportional-latin.ttf" }
+      "disabled": true,
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 100,
+      "name": "Bangers",
+      "disabled": true,
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 102,
+      "name": "Electronic Highway Sign",
+      "disabled": true,
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 103,
+      "name": "Anton",
+      "disabled": true,
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 104,
+      "name": "Oswald-Bold",
+      "disabled": true,
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 105,
+      "name": "LiberationSans",
+      "disabled": true,
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+    },
+    {
+      "file": "sharedassets156.assets",
+      "path_id": 5,
+      "name": "Roboto-Regular",
+      "disabled": true,
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+    }
   ]
 }
