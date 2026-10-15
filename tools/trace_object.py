@@ -1,5 +1,6 @@
 import os, sys
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__))), "src"))
 from unity_env import DATA_DIR, mb_class, open_env
 from custom_types import CLASSES, Reader, header_end, STR, I32, F32, BOOL, PPTR
 
