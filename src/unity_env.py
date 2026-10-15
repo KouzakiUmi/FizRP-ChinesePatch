@@ -10,7 +10,11 @@ MonoBehaviours can be read:
 2. The optional `UnityPyBoost` C++ reader ignores that meta flag entirely, so
    it must be disabled for generated typetrees.
 
-Both fixes are installed on import of this module.
+Both fixes are installed on **import** of this module and are process-global:
+`TypeTreeHelper.read_typetree_boost` is set to None and
+`ObjectReader.generate_monobehaviour_node` is replaced.  Any other code in the
+same process that imports UnityPy therefore inherits them.  `install_patches()`
+is idempotent; `patches_installed()` reports whether they are active.
 """
 from __future__ import annotations
 
@@ -57,7 +61,24 @@ def _generate_monobehaviour_node(self, mb_node=None):
     return node
 
 
-ObjectReader.generate_monobehaviour_node = _generate_monobehaviour_node
+_PATCHED = False
+
+
+def install_patches() -> None:
+    """Apply the two work-arounds. Safe to call repeatedly."""
+    global _PATCHED
+    if _PATCHED:
+        return
+    TypeTreeHelper.read_typetree_boost = None
+    ObjectReader.generate_monobehaviour_node = _generate_monobehaviour_node
+    _PATCHED = True
+
+
+def patches_installed() -> bool:
+    return _PATCHED
+
+
+install_patches()
 
 _generator: TypeTreeGenerator | None = None
 

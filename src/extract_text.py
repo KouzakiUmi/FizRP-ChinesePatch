@@ -57,7 +57,8 @@ CUSTOM_FILES = [
     "sharedassets120.assets", "sharedassets121.assets", "sharedassets123.assets",
     "sharedassets124.assets", "sharedassets127.assets", "sharedassets128.assets",
     "sharedassets129.assets", "sharedassets131.assets", "sharedassets135.assets",
-    "sharedassets136.assets", "sharedassets153.assets",
+    "sharedassets136.assets", "sharedassets137.assets",
+    "sharedassets153.assets",
 ]
 
 

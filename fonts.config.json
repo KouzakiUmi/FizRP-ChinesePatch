@@ -86,8 +86,9 @@
       "file": "resources.assets",
       "path_id": 101,
       "name": "PerfectDOSVGA437",
-      "role": "DOS VGA 等宽字体，使用最多（100 处 Text）；像素风保留",
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+      "role": "DOS VGA 等宽字体，被 100 处 Text 引用；实测字号 16(×95)/15/24(×3)/12，而 fusion-pixel 只有 8/10/12px 设计，非整数倍放大后像素边缘会变软。这些 Text 会显示中文，必须保留 CJK 覆盖，故按已知取舍保留替换。",
+      "fusion": "fusion-pixel-12px-proportional-latin.ttf",
+      "risk": "design-size mismatch (12px face at 16/24px)"
     },
     {
       "file": "sharedassets0.assets",

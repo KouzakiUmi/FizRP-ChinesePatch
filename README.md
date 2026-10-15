@@ -83,3 +83,34 @@ fonts.config.json    字体替换映射表（三套 profile：default / zh_hans 
 - TextMeshPro 的 `k8x12EXS SDF` 图集已烘焙，未替换（游戏内仅 1 处 `TextMeshProUGUI`）。
 - 中文按日语同款 12px 排版；原本英文是 8px，极少数写死字号处文字会略大。
 - 补丁占用英文槽位，英文内容在文件里仍然完整保留，但界面上不可选。
+
+---
+
+## 审查与修复记录
+
+首轮代码审查（自查；`subagent_codex` 后端在本会话持续 product-error，4/4 失败，而
+Codex 额度健康剩余 81% —— 即技能所说的"额度健康与推理成功是不同事实"）。
+
+| 级别 | 问题 | 状态 |
+| --- | --- | --- |
+| P1 | `tools/install.py` 不递归，静默漏装 `StreamingAssets/` 下的 StringTable bundle（实测列出 100 文件、提及子目录 0 次） | 已修：改 `os.walk` |
+| P1 | `src/apply_text.py` 用索引短名（`AutoTalk`）比对 C# 类名（`AutoTalk_Data`），1119/1249 行被静默丢弃却仍报成功 | 已修：删除双份实现，改为委托 `build_patch.build()` |
+| P1 | 构建无覆盖率断言，缺行不会失败 | 已修：默认缺行即 `ABORT`（`--allow-missing` 可降级） |
+| P1 | 12 行 DamageTalk 永远写不进去：这些行在 `others` 里没有 `en` 条目，**根本没被路由到目标文件**；且英文资源列表比日文短 | 已修：按语言解析一次目标文件 + 用日文模板补齐列表（本次 `padded=12`） |
+| P1 | 英文 UI 表缺 1 个键（33/34），`localization:UI Table:MovieCanvasCamera_Stage8` 无处可写 | 已修：缺键时追加表项（与 Unity Localization 运行时行为一致，`added=1`） |
+| P2 | `sharedassets137.assets` 的第 6 个 `LocFontData_Ending_Role` 从未被处理（不在 `CUSTOM_FILES`），字号停在 8 而字体已是 12px 设计 | 已修：补入提取清单；`build_patch` 改为从 `work/font_map.json` 发现 LocFontData 所在文件，不再靠硬编码 |
+| P2 | `verify_patch` 只搜"标记子串是否出现"，值落错位置也通过 | 已修：重写为逐行定位比对 + 结构不变性检查 |
+| P2 | `resources.assets:101`（`PerfectDOSVGA437`，100 处 Text）实测字号为 16(×95)/15/24(×3)/12，而替换体是 12px 设计 | **接受的风险**：这 100 处会显示中文，必须保留 CJK 覆盖；已记入下文限制 |
+| P3 | `unity_env` 导入即改 UnityPy 全局状态 | 已修：抽出幂等的 `install_patches()` / `patches_installed()`，并在 docstring 说明 import 副作用 |
+| P3 | `verify_codecs` 只证字节、不证语义 | 已修：补不变量（字符串不得含未解码字节、list 长度合理、`m_FileID` 范围） |
+| P3 | 安装器不校验游戏版本 | 已修：包内 `patch-info.json` 记录未改动文件的 SHA-256，安装前比对，不符则告警并要求确认 |
+
+修复后的实测结果：
+
+```
+verify_codecs : 362/362 对象「解码→重编码」字节一致 + 语义不变量通过
+build_patch   : coverage expected=1364 written=1364 missing=0 unknown_ids=0
+                text=1202  padded=12  locfont=5  fonts=9  tables=5 entries=162(added=1)
+verify_patch  : expected 1364 / verified 1364 / wrong 0 / structural problems 0
+sandbox 安装  : 版本匹配→写入 102 文件；版本不符→告警并中止
+```

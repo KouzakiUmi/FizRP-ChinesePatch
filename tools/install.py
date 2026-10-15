@@ -13,12 +13,19 @@ DATA_DIR = os.path.join(GAME_ROOT, "FizAndTheRainbowPlanet_Data")
 
 
 def collect(payload_dir: str) -> list[tuple[str, str]]:
+    """Every file under the payload, mirroring its relative path into the game.
+
+    Must recurse: the patched Unity Localization bundles live under
+    `StreamingAssets/aa/StandaloneWindows64/`, so a flat listing would silently
+    install only the .assets files and leave the UI strings untranslated.
+    """
     pairs = []
-    for name in sorted(os.listdir(payload_dir)):
-        src = os.path.join(payload_dir, name)
-        if os.path.isfile(src):
-            pairs.append((src, os.path.join(DATA_DIR, name)))
-    return pairs
+    for root, _dirs, names in os.walk(payload_dir):
+        for name in sorted(names):
+            src = os.path.join(root, name)
+            rel = os.path.relpath(src, payload_dir)
+            pairs.append((src, os.path.join(DATA_DIR, rel)))
+    return sorted(pairs)
 
 
 def main() -> int:

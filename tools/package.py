@@ -5,6 +5,9 @@ import argparse
 import os
 import shutil
 
+GAME_DATA = os.environ.get("FIZRP_DATA_DIR",
+                           r"E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data")
+
 PACKAGE = "dist/FizRP-Chinese-Patch"
 PAYLOAD_DIRNAME = "FizAndTheRainbowPlanet_Data"
 
@@ -70,6 +73,29 @@ if (-not $dataDir -or -not (Test-Path $dataDir)) {
 }
 
 Write-Host "游戏目录: $dataDir" -ForegroundColor Cyan
+
+# ---- version gate: refuse to mix a stale payload into an updated game ----
+$infoPath = Join-Path $here "patch-info.json"
+if (Test-Path $infoPath) {
+    $info = Get-Content $infoPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $bad = @()
+    foreach ($prop in $info.reference_hashes.PSObject.Properties) {
+        $f = Join-Path $dataDir $prop.Name
+        if (-not (Test-Path $f)) { $bad += ($prop.Name + " 缺失"); continue }
+        $h = (Get-FileHash -Algorithm SHA256 -Path $f).Hash.ToLower()
+        if ($h -ne $prop.Value) { $bad += ($prop.Name + " 哈希不符") }
+    }
+    if ($bad.Count -gt 0) {
+        Write-Host "警告：目标游戏与补丁构建时的版本不一致" -ForegroundColor Red
+        $bad | ForEach-Object { Write-Host ("   " + $_) -ForegroundColor Red }
+        Write-Host "游戏可能已更新，强行安装可能造成资源错配。" -ForegroundColor Yellow
+        $ans = Read-Host "仍要继续吗？(y/N)"
+        if ($ans -ne "y" -and $ans -ne "Y") { exit 1 }
+    } else {
+        Write-Host "游戏版本校验通过。" -ForegroundColor Green
+    }
+}
+
 $gameRoot = Split-Path -Parent $dataDir
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
 $backup = Join-Path $gameRoot ("_FizRP_backup_" + $stamp)
@@ -217,6 +243,18 @@ def build(payload_src: str, out: str = PACKAGE, name: str = PAYLOAD_DIRNAME):
             fh.write(BAT_TEMPLATE.format(script=script))
     with open(os.path.join(out, "README.txt"), "w", encoding="utf-8-sig") as fh:
         fh.write(README)
+    import hashlib
+    import json as _json
+    refs = {}
+    for name in ("globalgamemanagers", "level0", "app.info"):
+        src = os.path.join(GAME_DATA, name)
+        if os.path.exists(src):
+            with open(src, "rb") as fh:
+                refs[name] = hashlib.sha256(fh.read()).hexdigest()
+    with open(os.path.join(out, "patch-info.json"), "w", encoding="utf-8") as fh:
+        _json.dump({"payload_files": count, "reference_hashes": refs},
+                   fh, ensure_ascii=False, indent=1)
+
     lic = "dist/fonts/source/OFL.txt"
     if os.path.exists(lic):
         shutil.copy2(lic, os.path.join(out, "LICENSE-fusion-pixel-font.txt"))
