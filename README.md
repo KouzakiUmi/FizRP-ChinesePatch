@@ -7,6 +7,11 @@
 
 ---
 
+> **三份文档的分工**：`README.md`（本文）＝使用者工作流与进展；`docs/FINDINGS.md` ＝对游戏本体的
+> 逆向分析；**[`docs/TECHNICAL.md`](docs/TECHNICAL.md) ＝内部实现与格式契约**（两条路线对比、
+> Unity 字节级序列化契约、Addressables catalog 二进制格式、五道校验层、踩坑速查）。
+> 动代码前先读第三份。
+
 ## 最终产物形态（已定型）
 
 **纯文件替换补丁**，不依赖任何运行库 / mod 加载器 / 重新打包的 Addressables 目录。
