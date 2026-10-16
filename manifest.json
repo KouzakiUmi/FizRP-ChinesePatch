@@ -2,9 +2,9 @@
  "name": "Fiz 与彩虹星球 简体中文补丁",
  "game": "Fiz and the Rainbow Planet",
  "version": "1.0",
- "built": "2026-10-16",
+ "built": "2026-10-17",
  "payload_files": 103,
- "payload_bytes": 67346917,
+ "payload_bytes": 64374676,
  "patch_info": {
   "payload_files": 103,
   "reference_hashes": {
@@ -16,13 +16,13 @@
  "files": [
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-string-tables-english(en)_assets_all.bundle",
-   "sha256": "be6af8210cfe6121b09c1c88fe4348f5afe6917b048b50b4cfebe3157691926d",
-   "size": 25723
+   "sha256": "20449d675a1817dbacaf1ee2b1befe98fb6f5f6d242ea093ead197ac28ef2ec2",
+   "size": 9654
   },
   {
    "path": "StreamingAssets/aa/catalog.json",
-   "sha256": "1b4e26c3311cff473c72070394f26717826fe105c9a1d69dbbc2a50b164c1ca8",
-   "size": 79610
+   "sha256": "224725a0503a2c5837fa69ccb517b919558f8a50a5e2f4b5e01989fae1dadbba",
+   "size": 79606
   },
   {
    "path": "resources.assets",
@@ -36,138 +36,138 @@
   },
   {
    "path": "sharedassets100.assets",
-   "sha256": "2854cd4022a392ce72fe8ab51e57aaa8d22416c8a7d0d10525414c472c66b934",
-   "size": 103248
+   "sha256": "6f3a3b1af5e64e2655ad9432b590aa9c669a2584ec0f69d3270260b55f17abff",
+   "size": 103840
   },
   {
    "path": "sharedassets102.assets",
-   "sha256": "01cfbf1f7764e163a97b60d43108c78ac13e4bc71225bf95abf193bd1a83d131",
-   "size": 84144
+   "sha256": "5cfe7af3e4ba49a942581326db04e2ec2e334ceaf6bd66685e8c5bde70f92f17",
+   "size": 84512
   },
   {
    "path": "sharedassets103.assets",
-   "sha256": "54898a21a50553397dbfaf18fae9e30553ee1b9e261dd871e277f6df36659903",
-   "size": 53632
+   "sha256": "35aae389da18d9eba2c721c2d2455624ab140405eb17c49285bf061dd191a9e3",
+   "size": 53800
   },
   {
    "path": "sharedassets105.assets",
-   "sha256": "cd07377f00cdc7dc95c8750dd5334ec27202ddf59fdafc1b3344aac5506056e2",
-   "size": 137984
+   "sha256": "292ee9472b184ae5b70820f3fdafc7f86f57eef4509132402a54071f46b18438",
+   "size": 138928
   },
   {
    "path": "sharedassets106.assets",
-   "sha256": "7515452e05be5723b503c7b355484206373e18253ae088238f2b46a0c8e1370a",
-   "size": 91192
+   "sha256": "58408a12829649531a70c4c278009c249a1f08b93c89035968135109e80fded7",
+   "size": 91392
   },
   {
    "path": "sharedassets107.assets",
-   "sha256": "a5f6f5d32617bc5d7655e72fb4f99f7208e01038c9e00ac3a943fef2b90af995",
-   "size": 56016
+   "sha256": "7ee0ae622bc5c2043898a0416a77f09c899d1b6a3809289d7e1576224cf9a663",
+   "size": 56104
   },
   {
    "path": "sharedassets109.assets",
-   "sha256": "5656e3ae5e40990844839e713ba126b4fc9b01c4778abd8f0505734e3f0c4d71",
-   "size": 88944
+   "sha256": "6226980f0b9db0a6e8af837a3e783ba6c3e62a3361e46a3049de981aabdbe960",
+   "size": 89144
   },
   {
    "path": "sharedassets111.assets",
-   "sha256": "bc4f89e015800767c4ce8580807ab30b06ab2430fbbdd904cdcdbc0bf3cb86a0",
-   "size": 50608
+   "sha256": "b02dacf7c9bb2eb73017c2c7f0a21d8616eae0785e18004aba768965c9090865",
+   "size": 50800
   },
   {
    "path": "sharedassets112.assets",
-   "sha256": "87d6641dcf5a1f8d15bbfb4380d85bddbe39617ea65e4f846d3d8c360829e32c",
-   "size": 61816
+   "sha256": "28fae49af519ac7bd820bb33b90711f8ef283a243b91efcb11d391acca3ce900",
+   "size": 62752
   },
   {
    "path": "sharedassets114.assets",
-   "sha256": "5bf06632a7c86246f8a34e0f0e30f1def36833c977bb66c54d9c438a8034812d",
-   "size": 76400
+   "sha256": "81ae90c223834310f7fdaeaeec7b6c5490b585a3bd007157d698ad5a70b31806",
+   "size": 77360
   },
   {
    "path": "sharedassets116.assets",
-   "sha256": "b0a907ceb73b0cec7e3d3800dd175ad52648f644fdef5f6dbfddaf6e33a88760",
-   "size": 155160
+   "sha256": "e8eb7a0aa194daa54871e026e8f3db969cdcaead754a0bfa8bc8263d5958ebd2",
+   "size": 155488
   },
   {
    "path": "sharedassets118.assets",
-   "sha256": "d167f48df1dcf7f32fed65635b0f7b2e490fe2d67803e3b4004b15f4ece982fd",
-   "size": 198816
+   "sha256": "00d821cccaea11bc5aff015a1aa9f39051ae91b046b1d5aa13e00479fc2adfb5",
+   "size": 200336
   },
   {
    "path": "sharedassets119.assets",
-   "sha256": "a38231d42c0ef8b1899d984875efd7b02568dec20f8ac4147f14c9b8a24476d3",
-   "size": 55176
+   "sha256": "6555746e8fbebf228ea02729a9bb7cd65f48479b2e86618e7d252e25c149a497",
+   "size": 55744
   },
   {
    "path": "sharedassets120.assets",
-   "sha256": "b001918ee262604b49ee0a608720ec1d0e5ef392d6532747ab743e509f5f8d5a",
-   "size": 57304
+   "sha256": "551f4f6865d828f5ec6b7c4a6df5e569e77d9c73f0790df62aefc4c437dec1c9",
+   "size": 57480
   },
   {
    "path": "sharedassets121.assets",
-   "sha256": "729c3991bc0aacbf11049f1af02945958cf8943730a6092f7653994832f32da5",
-   "size": 172824
+   "sha256": "d00e964a6c8984334bf3fd42d6d1bc1da5c18f0d891112cccf370c25e9c1e320",
+   "size": 173176
   },
   {
    "path": "sharedassets123.assets",
-   "sha256": "2d2e92f69b11b2785b27fc3fc1a77aa575cb935d7a3824d84830bbfbc9099fc4",
-   "size": 57248
+   "sha256": "4a4a111963d98deaab850815c02d6643be4e3c1c385a73617e2c8d41c8cbb5ef",
+   "size": 57544
   },
   {
    "path": "sharedassets124.assets",
-   "sha256": "468debb71eb94ce11876d092238d757ea2748fbc663d96ad4ac2b340d0cfa843",
-   "size": 56120
+   "sha256": "1dd47b1be0118659ac1e0f82e2c411f8e21bda56c0e6eeec56bd1d3b86a6e397",
+   "size": 56304
   },
   {
    "path": "sharedassets127.assets",
-   "sha256": "363c685aa30cf1c207470e38c431f41fd6ff98106322f4a0b4715ea18cdb029e",
-   "size": 449256
+   "sha256": "7efea763faccc4000b66db602ff890627b258138a25981de8ae8573090abd526",
+   "size": 449288
   },
   {
    "path": "sharedassets128.assets",
-   "sha256": "456a7f887b8629dd983a42464dd71d251b80bb1d40f1cbb8677637632ab165d3",
-   "size": 88040
+   "sha256": "8d352bb0f1dbb3159258351e0990baeea4e338bc9ce652323cb4d633852525c0",
+   "size": 88304
   },
   {
    "path": "sharedassets129.assets",
-   "sha256": "5ec98e32a85db144c02e3987aa9c89e1a57c7b0c9735d01ca1c23ebebc35afd4",
-   "size": 70536
+   "sha256": "674c4b1d5097557aa9f90c91669f505e4c2c44c47c2a2fe0d88a800a59832b1c",
+   "size": 70688
   },
   {
    "path": "sharedassets131.assets",
-   "sha256": "1ee6b053c1839ab48da1af94b54d3db7f05cc0cc6b2d002d572a891704f89b53",
-   "size": 71568
+   "sha256": "6428a0e64547519b1faa5578059ef96239983d45fee22a1c879b77687ea18ef3",
+   "size": 71864
   },
   {
    "path": "sharedassets135.assets",
-   "sha256": "3cfa3723481e64b22bec06af006ada894155bcb7243c73a040416c4902ea89ad",
-   "size": 642088
+   "sha256": "64644156a7fcd3709f6c9fa46a3caeb7be46abc79b3038118ff9ee645b4c9f27",
+   "size": 642992
   },
   {
    "path": "sharedassets136.assets",
-   "sha256": "9b7b18e6452813a88599b037a2e58c30b680e58fe29dad437afbb2a5c71f3991",
-   "size": 49304
+   "sha256": "139b6aef3c1dd1659450a40608a8c0bc302ae0fea2e38e59882799017ae1046c",
+   "size": 49904
   },
   {
    "path": "sharedassets137.assets",
-   "sha256": "00af82004d58fc12343d3a8f6e1a108750fcdfe24899f392a6813c356dd9ee8b",
+   "sha256": "011afb0cc79f7e155c35d3e646f63d1166c8acf1d70d06dd9a8105697419ee74",
    "size": 138752
   },
   {
    "path": "sharedassets14.assets",
-   "sha256": "8b50898fe30107c75827fe8bb621f7d6dfc8c3ae6a2110584aa4b6e575d88c48",
-   "size": 687152
+   "sha256": "0ac5ecd7127348fa8775c7401b20546a3d45de1013fe59126f3ee53d8d44a34b",
+   "size": 688008
   },
   {
    "path": "sharedassets15.assets",
-   "sha256": "026adceef7a9792b0a025a7f4b15a64830f5b7b6158d0725a4a3c133708c18c5",
-   "size": 89160
+   "sha256": "0da856999b844af97720ee1ed956cdf60cf3e841c91d7df1aa9b3e654a268b19",
+   "size": 90464
   },
   {
    "path": "sharedassets153.assets",
-   "sha256": "8d3225d2851af8e1223c4e0957390638c28f44ac230e10b28b3811492e5ce206",
-   "size": 101104
+   "sha256": "46d98ac1f90420d082ba3aa2f14a1904d01a8c9b55d02baeeb7a9048d88e1e1a",
+   "size": 101552
   },
   {
    "path": "sharedassets154.assets",
@@ -176,178 +176,178 @@
   },
   {
    "path": "sharedassets16.assets",
-   "sha256": "f99f6837058578b606b361cbeeae9a62852d43c5aad95e4e47d3966f5f7dafef",
-   "size": 52264
+   "sha256": "388c6002f9a21936a8ec6b891e68347b53ef6edf81442908128f10b72cdb94d4",
+   "size": 52960
   },
   {
    "path": "sharedassets17.assets",
-   "sha256": "a2453e517ce8c966000044a17207f3ccf036d59a31aac3aaa22e5fbf308a7ea2",
-   "size": 78640
+   "sha256": "145f378668799ab56974cc607f346b0c64634223715df783d94a815aceab28ec",
+   "size": 79128
   },
   {
    "path": "sharedassets19.assets",
-   "sha256": "6f86f5dd93cb3674d6783ca161c087092fa4732e0ecd1bceda98444e74e7de60",
-   "size": 48688
+   "sha256": "1bc9c16289b64c8584d630959934a27caf3f0fb1aefd7fd6716e2cb8e13286f8",
+   "size": 48744
   },
   {
    "path": "sharedassets2.assets",
-   "sha256": "84c1e32e950b4f4c644113e32883865e902963e0d02e60b2f32f1febd8995cc6",
-   "size": 14122976
+   "sha256": "dd71972ff3a51c19be1165a7a2a225993d7c3b497fdbc56c396104eb2d4f2e7c",
+   "size": 11118048
   },
   {
    "path": "sharedassets21.assets",
-   "sha256": "8cdc54bc80f7a90dfa9744644b1b76b8fcfdc07453430919c0654a9ea92c42b3",
-   "size": 51608
+   "sha256": "ca8677e8ea5e7be09b9603ec5ec6ea5baec8a4b6acccbbd8be3e3c2f595efd83",
+   "size": 51840
   },
   {
    "path": "sharedassets22.assets",
-   "sha256": "2f81634b6b210fc3df262b093d2b9f2ff2565fa87588d52677935ac341325d10",
-   "size": 41016
+   "sha256": "c179eeac26689befe11e6a890cc895b116fe4fc078d094fac7a97df480d7b0b2",
+   "size": 41104
   },
   {
    "path": "sharedassets23.assets",
-   "sha256": "836188a48bb01b59f7b2273441fbd9c209cd1b23031d71dd58599b891d66803b",
-   "size": 43016
+   "sha256": "c6d4f76345c87d624b09403e41ae9323714e03487aa29cce585928c41027742c",
+   "size": 43240
   },
   {
    "path": "sharedassets25.assets",
-   "sha256": "124f134589d647ee411f91b4d049e6517208130287efc74f945bfe2d44941a42",
-   "size": 47728
+   "sha256": "8683ee3d6b9cd83966ffede89c9af599d0ac7aa4e5f9161d96717c2091db657d",
+   "size": 47840
   },
   {
    "path": "sharedassets26.assets",
-   "sha256": "8734633820cd388658fe8d4eb34f436c4f8b97da5a0f1d4e8c4a5566bc31d73f",
-   "size": 54760
+   "sha256": "e06f0153898ba08d9eae22d45eb9ece684f6d6e1f8e4e5468b75ec89b0ea2a6f",
+   "size": 55000
   },
   {
    "path": "sharedassets29.assets",
-   "sha256": "151ec06a5485e5763de023cc41900dbad12cc8dec8d55bdc761994410376ba3e",
-   "size": 50512
+   "sha256": "6aeffd1e3bfe00d618bbc846b1d050edcb1abc9020383add1ecac40b7493e417",
+   "size": 50664
   },
   {
    "path": "sharedassets3.assets",
-   "sha256": "d06221564a65545147dce5bc5d016a75320ad4d4c3f43246eff3450e000c16b8",
-   "size": 11125184
+   "sha256": "5410cafc708ab752dab2c2c2d581f2c3404c8565f821452ee76304f56c001659",
+   "size": 11133976
   },
   {
    "path": "sharedassets30.assets",
-   "sha256": "654e0be262c1a60b1df0fc8828a436447c53c10598825e868494e3120120f230",
-   "size": 41240
+   "sha256": "07dbccb5a4b3eaa0901fbd5efd9ed7ad123700e9f346e101928fbc40dd13ba0c",
+   "size": 41352
   },
   {
    "path": "sharedassets32.assets",
-   "sha256": "e8487d93f74d1ac9c4570fada38023c17a62bea79f1561cfce52326dbf2e238e",
-   "size": 44888
+   "sha256": "35cd99b5b46cd12d043c9b8d7e37fe1eb0b9fe8bafc5aede8cc53e5d9067438d",
+   "size": 45176
   },
   {
    "path": "sharedassets34.assets",
-   "sha256": "7e55948e8734efed8ddcfe55c666d738cc08cc3f9cd21fcbc963f30b21efc9b8",
-   "size": 50112
+   "sha256": "513ac52aa54ad20b44c18c8d56dbe5d3b7e243287e85f71ad7ce1de5070b711a",
+   "size": 50600
   },
   {
    "path": "sharedassets35.assets",
-   "sha256": "ae82a6b1ab42b42ff58af8ebc552fd25c98896d48f1251bc4a47b79b4f748592",
-   "size": 41760
+   "sha256": "93afe0ac24ef121420bc9c665b56dc418bf275416f39db27c1e48ff64b8da38f",
+   "size": 41792
   },
   {
    "path": "sharedassets36.assets",
-   "sha256": "57a67765b861cd136bd8c044c6e4526a9e541b3fdae1d805d684c9c9a1ca65b7",
-   "size": 52808
+   "sha256": "56526904c5428fc93b7caf9f70954f75875ba663c0152b7edd02bef85345b25e",
+   "size": 53120
   },
   {
    "path": "sharedassets37.assets",
-   "sha256": "29c3666c258be8951b777ee5f54d6e2c0f5937bfa707977dc493a24b9d4c6bec",
-   "size": 44328
+   "sha256": "67d06014084c714b96a12599cde1e350fcc846bfc70d01e2b6f465dd4628100d",
+   "size": 44592
   },
   {
    "path": "sharedassets38.assets",
-   "sha256": "a19d44138db59078229079e4721141c43ebb5570a181a8c1207b9a4465dcb642",
-   "size": 68944
+   "sha256": "f051da1f0eefa76cb8aee517fc296be420a58243671b76f6f4d8d575e7da96a2",
+   "size": 69112
   },
   {
    "path": "sharedassets39.assets",
-   "sha256": "c9db312eefdd577883cf1cd015fde73d838a4ea3fe9e36bd37d5baad38072393",
-   "size": 58032
+   "sha256": "a2057f583f18ded2b92779ed7fda47f22ed0d569d2a40ea17a0f74e93046d3ae",
+   "size": 58128
   },
   {
    "path": "sharedassets4.assets",
-   "sha256": "c256c943b4507eeeeaf7c1e0cea324028323178256441afbe128bebedde9c3ec",
-   "size": 1344504
+   "sha256": "b6e06951f9f5592a05d5e55de5458492a6fdfddbede8082a470c9bdec63745cb",
+   "size": 1344664
   },
   {
    "path": "sharedassets40.assets",
-   "sha256": "ee462b55cc1ebe60a7e15d654552e0a95eb0606795153128fd123be132c3e923",
-   "size": 61416
+   "sha256": "2240dd9583473894ec11b5ab1b7f6bb7842aefed783f7165f0ea0d2814203885",
+   "size": 61824
   },
   {
    "path": "sharedassets41.assets",
-   "sha256": "61ba648b44497137ac2c35df72adbf680f41e4f8703573d021958e5eedde7125",
-   "size": 43432
+   "sha256": "71aaa8aaca25658a71de68485575b2b7932f62c0133f48c3a1a0390620859b10",
+   "size": 43512
   },
   {
    "path": "sharedassets42.assets",
-   "sha256": "6daf3d4cae3341c226500143a51755342eb37a6a5b546d7f31233e61872517b0",
-   "size": 45784
+   "sha256": "64becefafeea7c68a4704daa10dbc03040786326a327460993f44846bb98a666",
+   "size": 46320
   },
   {
    "path": "sharedassets43.assets",
-   "sha256": "9d42d42770e6afa24078d544df3a95bc7815e27ad3fe544b0022573e1a7cee46",
-   "size": 43328
+   "sha256": "95d0ee17a75d6b90d023821456bf7cd36aaef1cea414cfee500eb861a631a4b4",
+   "size": 43368
   },
   {
    "path": "sharedassets44.assets",
-   "sha256": "b890b36b49ad7deb18ea139ad13f29c04eb6e2c02733532f95d2bd7449c96253",
-   "size": 82200
+   "sha256": "7d22afb77c65b9e893d1cbb80b71e1416b7f05efb41381692e6896ecda5f94a1",
+   "size": 82280
   },
   {
    "path": "sharedassets48.assets",
-   "sha256": "4418c3dcaa9888993b243f9cd152180b0623d5e7677d77b55dca0f9da844a74e",
-   "size": 206200
+   "sha256": "1ef64b87e04158ee0ef2dfb2f0e78766cb84f280d548e9875d56f11b1ca6e8b6",
+   "size": 206624
   },
   {
    "path": "sharedassets49.assets",
-   "sha256": "22cef232e9c2a52cd6c6ef90fd11d1eb18d2276bb306596996db02fc47f2e9eb",
-   "size": 59152
+   "sha256": "a10ea747b96c569d85e8c8d77add6d964d4aa4a1f653a2bb1e871b0f31293142",
+   "size": 59448
   },
   {
    "path": "sharedassets50.assets",
-   "sha256": "acc357cf50c05238e92cec8fdef125bcfb8884daa88c998862cf4cc290ea75b2",
-   "size": 45792
+   "sha256": "09131bbd78e4238fa092933da01802b4193a8ed5bb427eb8af72d92843eeab34",
+   "size": 46104
   },
   {
    "path": "sharedassets51.assets",
-   "sha256": "58711b6f1578b83b4b3bba307a32a4966e8cbcf9c359a64ddc30ab8217aa3620",
-   "size": 64264
+   "sha256": "4fa798ff8096936fd75d35154b16b0884ccb1dbefca9c83ed78c4b656ef2f8e9",
+   "size": 65136
   },
   {
    "path": "sharedassets52.assets",
-   "sha256": "fa1353ea48fd7784e2ebbfa54d0814bc2c318069149e7e33f4785332f014ade7",
-   "size": 46920
+   "sha256": "38df498e1c51abdd855a912b8c2468c7a5acba211a62ea6ed87b2a9973be0492",
+   "size": 47040
   },
   {
    "path": "sharedassets54.assets",
-   "sha256": "9db6f757319f987e210ed020fe3e71945d3fdb08fe9735572a78cc3e6ce7041b",
-   "size": 41880
+   "sha256": "9b6131c372e4dc36d1ba2b90f2a919f69057819f304ddd34fc2c2e7325b1118f",
+   "size": 41920
   },
   {
    "path": "sharedassets55.assets",
-   "sha256": "298198d39b2219d471594bcb44538951dcdd6fce31b8b30ff280883b59fb94a3",
-   "size": 48232
+   "sha256": "f79e701a362b8fbfed0e77ce3ed30a49838b1b372bba83ed4471e3ec6d58cfcf",
+   "size": 48496
   },
   {
    "path": "sharedassets56.assets",
-   "sha256": "10ad710755257aac95822026582dfcf72589c4637e8f3d5a833d6c4a2dc882cb",
-   "size": 55504
+   "sha256": "24023717cdf6fe56882d079f210f9737cc4edaeb18e20cbf834bea0db3fc34e6",
+   "size": 55864
   },
   {
    "path": "sharedassets58.assets",
-   "sha256": "d1cf91ee5dd5d488e8f288598e362fc2aa39235caded38fdddd980fdaa8c8537",
-   "size": 55784
+   "sha256": "61dd21a698acbe00a386cddfdf3c953d37cb85060a6bc174e63acd78eb7ef656",
+   "size": 56112
   },
   {
    "path": "sharedassets59.assets",
-   "sha256": "c25867f8f7f04bf69c37f9f5b34fc3a703f026ccf44165b5b574b3c73995040e",
-   "size": 39168
+   "sha256": "d3ed7b0a1112b0bf6e61fa96f5fa5f9b96b1545f9bcde77062cff60460c9a7bb",
+   "size": 39296
   },
   {
    "path": "sharedassets6.assets",
@@ -356,178 +356,178 @@
   },
   {
    "path": "sharedassets62.assets",
-   "sha256": "ee191640e5d7cb6bc1e98e3c1a675eed9de0d99f33b62421f82cad240ae6ddfe",
-   "size": 66376
+   "sha256": "8768742a75cb9e639bdc2a0e675cfcf2c6220de41cdf7cd3a386ca6244d5e506",
+   "size": 66824
   },
   {
    "path": "sharedassets63.assets",
-   "sha256": "bb703605d6eaa52447345f2f0b69cdf25fdb3cbb7faf7558f84f880cd5214c50",
-   "size": 123272
+   "sha256": "6cdf360f4ea5f86b241f291130b025d4d4346de944a0b7240d601efe22ccc446",
+   "size": 123296
   },
   {
    "path": "sharedassets64.assets",
-   "sha256": "8f8f59a9e644d3786dcdac7bd435f332971c45427a360fb02abfb0f340b973db",
-   "size": 48752
+   "sha256": "0fb053648bc349082ea7d6b67bba5cc6fc436ce067f276506d40f1c390b89c1a",
+   "size": 49504
   },
   {
    "path": "sharedassets65.assets",
-   "sha256": "80c68579fa102bfdd9390231952312fdf3bcdb976a833c4c56f05f902358ab91",
-   "size": 60168
+   "sha256": "ab77db44a8c2da249d6c15959a4cb939a7726d94bac5221940f051a7376d5e0c",
+   "size": 62048
   },
   {
    "path": "sharedassets66.assets",
-   "sha256": "93bea3ca38dd332f00210a83b5db27d0f2be51a1d5223e517a3db20751b1b522",
-   "size": 87432
+   "sha256": "b3b079b9164f2aaf44ec173644b86d8b810fa2a55a5c8aea8b45fb6e163a1d6e",
+   "size": 87984
   },
   {
    "path": "sharedassets67.assets",
-   "sha256": "9c8b6ca3f796db6040994b011b847542260feaac9810ef904007e94c457defc9",
-   "size": 81752
+   "sha256": "0b6e10bafb2b58976f16a97cd0505ed422c3f75668c10b72cce54e397ae7d5bb",
+   "size": 82112
   },
   {
    "path": "sharedassets68.assets",
-   "sha256": "1ea719590b3dcd1380740f51675a1414f392d108227ad9270376ec12d2e07f18",
-   "size": 49920
+   "sha256": "76ded3c5e9079bb82def15d837417b34f9f74e5e0797ff94d2416e44d7448cee",
+   "size": 50008
   },
   {
    "path": "sharedassets69.assets",
-   "sha256": "6ba4d8012ee8f570b2701fabd042d98f8bd7ccf3d8ba3d4c5aa8bab01a4684a5",
-   "size": 60880
+   "sha256": "5badd95d49e87ca36b9862f171cbfadb205f102653b631c1552d1a98768069b0",
+   "size": 61024
   },
   {
    "path": "sharedassets7.assets",
-   "sha256": "734a9af6538fdf1f0bbd3ca0c61265720cdcab6da771b1b145915b4ef74117a0",
-   "size": 229760
+   "sha256": "d130a1e3feccee93842174bad325cc62935cbec56da5bb5015bb14722e5604a9",
+   "size": 230496
   },
   {
    "path": "sharedassets70.assets",
-   "sha256": "360f5d6209e184d118cc22cf2baacc819fd53d9ca175dfcb2a17b58c87ffa4b1",
-   "size": 57800
+   "sha256": "8b6c37c423281a8bc113aaaf5c9879731d2da50f420e6b58f233ba640dae5606",
+   "size": 58216
   },
   {
    "path": "sharedassets71.assets",
-   "sha256": "70b4cf86f1b8bfd7d378e90b6efd2ecb1f66c94bc9b99076cfdd3f77c34094cd",
-   "size": 44720
+   "sha256": "f021d7b2bc7bf12c7f1256f30cd77a834b4f94fdf0b98890b393ccc0cd92b849",
+   "size": 44928
   },
   {
    "path": "sharedassets72.assets",
-   "sha256": "36b3351f9907707a7c075ce777191a1f3ea5de835f5c0ba502ea30486d149048",
-   "size": 43680
+   "sha256": "862fd97dec0aaadc277f486f763fa00b71e33df66ba468e7da914b487c5a9b51",
+   "size": 43744
   },
   {
    "path": "sharedassets73.assets",
-   "sha256": "6660bde6be29dd1666c46dfa3671763c3f1c35e452e084285a415fee4c44dc06",
-   "size": 46144
+   "sha256": "ab6e78b3cce886e3638e8478f4bdde16b9ef04192eba5146acbd2e379893a2cb",
+   "size": 46288
   },
   {
    "path": "sharedassets74.assets",
-   "sha256": "e478d398d8950286a31205dfbeaee909f393b66e903eeab18c5804701a4615a7",
-   "size": 53200
+   "sha256": "e6c3aa6cbc97363715b8432efb0c388d41ca68dc2663bda423c9025d0289864b",
+   "size": 53312
   },
   {
    "path": "sharedassets75.assets",
-   "sha256": "31c2f092796056bb952bd18547932b0cbcef4783c1ce36777776ca42435ff487",
-   "size": 39104
+   "sha256": "49e67bf0e39c0890eb8e63eb96bcb79294ba8bfde43b0df418d42148b939e091",
+   "size": 39208
   },
   {
    "path": "sharedassets77.assets",
-   "sha256": "6437fc2762a6f3b9a99ae43900aa655d311c87728a4f94a276c9f3a2e8ce5a36",
-   "size": 45712
+   "sha256": "99f3f077038212f8f9212a066017d3fec0914a3b15824c9842948197694e4cf8",
+   "size": 45816
   },
   {
    "path": "sharedassets79.assets",
-   "sha256": "50a60e6b5988edf19f6098565306a2a5f6e2318713ef3f8a6495141ebf7eb564",
-   "size": 48288
+   "sha256": "54a6080a91d5d6407bf32b4dd9f4833db8caafe5e488b7d69d7403113b72fe02",
+   "size": 48320
   },
   {
    "path": "sharedassets81.assets",
-   "sha256": "3d6ab81593f8ee63a062dab847d97d5438d307f38e8e428b8ea1d1349b3fd32f",
-   "size": 95120
+   "sha256": "9f46ec46fe5188cd49217a1999217da379e24b45055837a3e62e91be13a73bf1",
+   "size": 95456
   },
   {
    "path": "sharedassets82.assets",
-   "sha256": "9e5f4967eec947bfe3e0f6568d45a8ac2f09a6b5778cfbd786ddc48c6657b79b",
-   "size": 95288
+   "sha256": "a3532c96f5a292ec875fffee4f3d5799fbefe838521bdc4cc70f6e2155f397c0",
+   "size": 95744
   },
   {
    "path": "sharedassets83.assets",
-   "sha256": "b367b4dbaa86418b794badf19a4b96a23bebad59a5774e84eaf6bc340196f1eb",
-   "size": 64576
+   "sha256": "85e1197d90e7d751d5369a9c263089732eb91716cc97dceda4dceb71eaab1a4a",
+   "size": 65072
   },
   {
    "path": "sharedassets84.assets",
-   "sha256": "1c3910b730d931f181277d74338b3f64ea69b2ce0c608069484311bbcb66190c",
-   "size": 58696
+   "sha256": "ac8b342eefa81cb3deffb857b82486583ecca9490ddbca6255bc92dc0e22476b",
+   "size": 58784
   },
   {
    "path": "sharedassets85.assets",
-   "sha256": "73872042a65ce839c03a3b016c3229d90fff6e64177aa14b626c353464ee3ec5",
-   "size": 68680
+   "sha256": "15d0c7ef3856ed5b84673dd0b092065f0259ccc49d442e5d13d7e7a9615db663",
+   "size": 68936
   },
   {
    "path": "sharedassets86.assets",
-   "sha256": "54e704b8f187ceea55301d368e462f1030b4d123fdf05269725940d1c1cb7574",
-   "size": 73584
+   "sha256": "f05188126ff204cb7643d2d1d359600d54827e39c4aa48ddc6d6e9acfc6aaa63",
+   "size": 73688
   },
   {
    "path": "sharedassets87.assets",
-   "sha256": "a02c3276c1c592d1859840cb40d180167a5ece1517b6850339a2bf23008ed7fe",
-   "size": 54056
+   "sha256": "d90df1bd5e88ea30bf5baac2aa92f8ae37742fe41bfc605c7b8c8440861bc9e8",
+   "size": 54136
   },
   {
    "path": "sharedassets88.assets",
-   "sha256": "acad48c880f53604d753d44078a8dc2b9a9ff34a99376a842560a106d91d78b0",
-   "size": 69648
+   "sha256": "b6269b85db105ed41a2693628bb3e158de64eefe01cb269e89162dcdc5147d00",
+   "size": 69832
   },
   {
    "path": "sharedassets89.assets",
-   "sha256": "28302d5263d669b975d50a653702de2bc22f17c8fb40d91192f9b6c2f38ed45c",
-   "size": 55128
+   "sha256": "8121c0721c1dda5ef0aa6aa8fde5de14b2711ab182e727b7ec34057ded5a48b4",
+   "size": 55808
   },
   {
    "path": "sharedassets9.assets",
-   "sha256": "7b828afb6cb82fd1cea01eb54e8131ce07f00a1a63a424f41eeb7ae161fa7668",
-   "size": 552104
+   "sha256": "b85d57e82509f2c7b1bfaa3d4d608b353e0154e8b3a426ed54d16b6ff0e49130",
+   "size": 558312
   },
   {
    "path": "sharedassets90.assets",
-   "sha256": "3122c2bcf50ea5fca2ce22667440c0e03f640f2466faa880d51d62ba963656ee",
-   "size": 40256
+   "sha256": "780597b191825a69a4281cd4c11f08e7fd30404d4523d21d2986494fb814f5bd",
+   "size": 40344
   },
   {
    "path": "sharedassets91.assets",
-   "sha256": "8ea8580acb2b13254131dd944fef9280e49591e7ad3a0402fe4bffde114e2b95",
-   "size": 47984
+   "sha256": "89aaafcc4db6e36e82274a7cb4c810e664ea3316bbeabdcf0f22e2b9d446c322",
+   "size": 48088
   },
   {
    "path": "sharedassets92.assets",
-   "sha256": "afcf93b4c7ed764b1de2a3b88eaf68edebe9b589046fa97c50f7d5d21b98a31d",
-   "size": 49104
+   "sha256": "2bdc47d7aa5b41ff184e8f3c2567dcc47a0c4c5448b3c850496f82172cb2bcb5",
+   "size": 49176
   },
   {
    "path": "sharedassets93.assets",
-   "sha256": "9a8d5f4581485eeeaf6d495b633fd24d730b46220f5b411b06e4a41e1a2878eb",
-   "size": 68928
+   "sha256": "c746ca04407a4cc0e81818e36574ad0507290114eee1ca1d9f26aeb40dab627e",
+   "size": 69144
   },
   {
    "path": "sharedassets96.assets",
-   "sha256": "93a9816a0d1d18c0478c74e62c74c8efbf0d982f01244e267dee12a6e56ed56d",
-   "size": 88736
+   "sha256": "f86619e8fc94fc2431399664bf0414020a22eef3bd50277be414595b308e8a0a",
+   "size": 90424
   },
   {
    "path": "sharedassets97.assets",
-   "sha256": "f24fa66d75a5db7d5d94f06ac4f7744fa1a566fd7a54fdc9c96ccf83e84faedd",
-   "size": 43032
+   "sha256": "13dab84d928c0af9e9f2d169ef18e2f5c1884b2db93bbe2b2a3172644424055c",
+   "size": 43072
   },
   {
    "path": "sharedassets98.assets",
-   "sha256": "19ae7364ae105967975d704349750f0e88c52274a1c7fa3b5e21f4a61b574077",
-   "size": 57032
+   "sha256": "bd1f2e1b6061661ae90c5cad55cc14905922278d2ef200b7dcf227af89f564c4",
+   "size": 57896
   },
   {
    "path": "sharedassets99.assets",
-   "sha256": "7d1fb80d1e1f239222ea106c91a74cbc869692a1c6c011387f622886135e80a3",
-   "size": 109584
+   "sha256": "33d1f8c5733bfd42e8458bc82e9e6413993c5bacf4f4aa6e60d97eda29e9bb58",
+   "size": 110000
   }
  ]
 }

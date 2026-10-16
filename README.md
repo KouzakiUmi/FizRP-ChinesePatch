@@ -163,6 +163,35 @@ sandbox 安装  : 版本匹配→写入 103 文件；版本不符→告警并中
 重建产物（`build_patch.py` + 当前 `zh_Hans.csv`）可一次性消除全部 325 处差异，
 但会改变分发内容，需要重跑本节全部校验并重新发布。
 
+#### 已修复：X1 载荷已按当前源码与工作表重新打包（2026-10-17）
+
+上面那段漂移**已在 X1 侧消除**。核对新构建 `dist/FizAndTheRainbowPlanet_Data`（01:17）
+与当时打包的 `dist/FizRP-Chinese-Patch/files/`（前一日 05:30），**103 个文件里只有 4 个相同**：
+
+| | 旧打包载荷 | 当前构建 |
+| --- | --- | --- |
+| en 串表 bundle | 25,723（未压缩） | **9,654（LZ4HC，与原版一致）** |
+| `catalog.json` | `catalog_sync --verify` **FAILED（问题 3）** | **OK（问题 0）** |
+| 各 `.assets` | 较小（空格清理前） | 较大（含 U+3000 清理与 `added=1`） |
+| `verify_patch` 对当前工作表 | — | **1364/1364，wrong 0** |
+
+处置：用新构建刷新 `files/` → `tools/build_manifest.py` 重生成 `manifest.json`
+→ 用 spec 重建 `FizRP-ChinesePatch.exe`（顺序不能颠倒：spec 在构建期读 `manifest.json`
+枚举载荷路径，并把它一并打进 exe）。重建后核对：
+
+```
+patch_tool.py check                : 载荷 103 / manifest 哈希 OK(103) / Payload OK(103)
+沙箱 install -> verify             : 103/103
+exe --selftest（读自 %LOCALAPPDATA%\FizRPChinesePatch\logs\installer.log）
+                                   : 载荷自检 OK(103/103)、载荷漂移 OK(103/103)、
+                                     自动检测到 e:\steam\...\FizAndTheRainbowPlanet_Data
+X2 dist-additive（同法逐行校验）    : 1364/1364、wrong 0、structural 0
+```
+
+> 上一节两组「已发布」数字（catalog FAILED、en bundle 25,723 未压缩）描述的是
+> **2026-10-16 05:30 的旧产物**，现已被本节结果取代。
+
+
 #### 沙箱重建验证（2026-10-17）
 
 用当前源码 + 当前工作表构建到 `work/_sandbox/`（**未动 `dist/`**），构建报告与
