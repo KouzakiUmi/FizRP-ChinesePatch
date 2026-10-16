@@ -38,11 +38,18 @@ def _find_font(sf, path_id):
     return None
 
 
-def pick_blob_name(entry: dict, profile: str) -> str:
-    """`fusion` is either a plain filename or a {profile: filename} mapping."""
+def pick_blob_name(entry: dict, profile: str) -> str | None:
+    """`fusion` is either a plain filename or a {profile: filename} mapping.
+
+    A *missing* profile key falls back to `default`; an explicit ``null`` does
+    not - it means "this profile leaves the font alone" and is returned as None
+    so the caller skips the object instead of swapping in the default blob.
+    """
     fusion = entry["fusion"]
     if isinstance(fusion, dict):
-        return fusion.get(profile) or fusion.get("default")
+        if profile in fusion:
+            return fusion[profile]
+        return fusion.get("default")
     return fusion
 
 
@@ -66,8 +73,11 @@ def build(config: dict, out_dir: str, fusion_dir: str = "dist/fonts/source",
         changed = []
         for entry in entries:
             blob_name = pick_blob_name(entry, profile)
+            if blob_name is None:
+                # profile explicitly asks for this font to be left alone
+                continue
             blob_path = os.path.join(fusion_dir, blob_name)
-            if not blob_path or not os.path.exists(blob_path):
+            if not os.path.exists(blob_path):
                 report.append({"file": fname, "path_id": entry["path_id"],
                                "error": f"missing font {blob_name}"})
                 continue

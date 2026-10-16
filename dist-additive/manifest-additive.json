@@ -1,0 +1,631 @@
+{
+ "name": "Fiz 与彩虹星球 简体中文补丁",
+ "game": "Fiz and the Rainbow Planet",
+ "version": "1.0",
+ "built": "2026-10-16",
+ "payload_files": 122,
+ "payload_bytes": 22539687,
+ "patch_info": {
+  "reference_hashes": {
+   "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
+   "level0": "8b104e3290d067a4e683c22160f040d7a551d6bd34e12a80ac16fe12d0594fd0",
+   "app.info": "d32db4d3d6e2de75a8ea7b9d89957b228fcef4934aeb2dd83008bc3d7ad58af5"
+  },
+  "payload_files": 122,
+  "mode": "additive",
+  "patch_info_source": "dist/FizRP-Chinese-Patch/patch-info.json（reference_hashes 复用；payload_files 按 additive 载荷重算）"
+ },
+ "files": [
+  {
+   "path": ".doorstop_version",
+   "sha256": "75a2f501000d4fe28f74bc7ee66dae5581959d28b6c44f0c1b0c05cd5ba261e6",
+   "size": 5
+  },
+  {
+   "path": "BepInEx/core/0Harmony.dll",
+   "sha256": "1a21cc03424fc82c3dd1346905d16494536b9595ae4162228d99fb7c285c1031",
+   "size": 204800
+  },
+  {
+   "path": "BepInEx/core/0Harmony.xml",
+   "sha256": "d1f02fc3ada3a13da307de421225bfe56ebe24064370980979391c4be021672f",
+   "size": 267107
+  },
+  {
+   "path": "BepInEx/core/0Harmony20.dll",
+   "sha256": "c755a5ab2712915a32f9a850d580a8c1b70ff1653bc76600f2767aa8ffccc663",
+   "size": 112640
+  },
+  {
+   "path": "BepInEx/core/BepInEx.Harmony.dll",
+   "sha256": "00c8f2ac48593e4d45ce4eb26ce4e68b18113c5c489b38b8bf0850f65830d601",
+   "size": 6656
+  },
+  {
+   "path": "BepInEx/core/BepInEx.Harmony.xml",
+   "sha256": "a04fedf08f7c81f5d01aba6f2840a7ffce50b79bbd24587d8dbe69ab73971d29",
+   "size": 4056
+  },
+  {
+   "path": "BepInEx/core/BepInEx.Preloader.dll",
+   "sha256": "55d3895351a9d16b63b6f35f1c01b44ac650979e853d0bd3a442b92a082af64f",
+   "size": 43008
+  },
+  {
+   "path": "BepInEx/core/BepInEx.Preloader.xml",
+   "sha256": "33275b2783b7b99495a02c098ee86d6a9a2783e884a5c9369021f20c94cf99e7",
+   "size": 7964
+  },
+  {
+   "path": "BepInEx/core/BepInEx.dll",
+   "sha256": "8255b28902886085c578b9e427d3073c97002db85176d2090cdeda90ef14ce70",
+   "size": 128512
+  },
+  {
+   "path": "BepInEx/core/BepInEx.xml",
+   "sha256": "7ba2266061b9f8a9f146218a312bfdd0d7f2b53a99a7e66c957215c6b66ca0d7",
+   "size": 89835
+  },
+  {
+   "path": "BepInEx/core/HarmonyXInterop.dll",
+   "sha256": "7ce1342d3afa0334b59a3e38c0aed15e162b9abe9d46f95f34be44af47f3b493",
+   "size": 23552
+  },
+  {
+   "path": "BepInEx/core/Mono.Cecil.Mdb.dll",
+   "sha256": "5896d1898f616701fff18f3b2c71e6b844d2390ef9f41e1c5fccce8cb27c698e",
+   "size": 43008
+  },
+  {
+   "path": "BepInEx/core/Mono.Cecil.Pdb.dll",
+   "sha256": "174db44a067f58561510af746f3caeb032037762c57a31c8d9ee32db25174984",
+   "size": 86528
+  },
+  {
+   "path": "BepInEx/core/Mono.Cecil.Rocks.dll",
+   "sha256": "54ac539fb5ddc8b44c0e9acd0fcb7324f89d1a072edf8ebc1b06dd691e3d3927",
+   "size": 27648
+  },
+  {
+   "path": "BepInEx/core/Mono.Cecil.dll",
+   "sha256": "7ae470288fff4a402899c254d0a76cefef55877f5c54f96e83c797cc5bb6e2f6",
+   "size": 339456
+  },
+  {
+   "path": "BepInEx/core/MonoMod.RuntimeDetour.dll",
+   "sha256": "40e49bb314391cd7bddc2644f8553eeba92c194b940836b103df16955c464e0c",
+   "size": 105984
+  },
+  {
+   "path": "BepInEx/core/MonoMod.RuntimeDetour.xml",
+   "sha256": "54887808960d156550b37d602d08847607aa9e908d039f2765fb0b5e79394aa4",
+   "size": 9414
+  },
+  {
+   "path": "BepInEx/core/MonoMod.Utils.dll",
+   "sha256": "9d1495f147ac93c4f81f84538c1a326e8f8a6aefc78d6289d798f3ce1162c5e9",
+   "size": 187904
+  },
+  {
+   "path": "BepInEx/core/MonoMod.Utils.xml",
+   "sha256": "0577b362023a3432d6e8d7934c5eddc3e08fdbb19e191af083e341562c5ede38",
+   "size": 78973
+  },
+  {
+   "path": "BepInEx/plugins/FizRPLangMenu.dll",
+   "sha256": "1065829d33e5aa9bea64ccc254d93dae08429c3c3f01c268347fe16a405c325c",
+   "size": 23552
+  },
+  {
+   "path": "StreamingAssets/aa/StandaloneWindows64/localization-string-tables-spanish(es)_assets_all.bundle",
+   "sha256": "dd4530c59d0eab2805d1ff6a14e13070e93a41704aa892d467cbe4be84459eed",
+   "size": 8905
+  },
+  {
+   "path": "StreamingAssets/aa/catalog.json",
+   "sha256": "aacafe2ed476ab47f876df158582bca156171502eb7888f67eb7b76f5d2032c2",
+   "size": 79582
+  },
+  {
+   "path": "changelog.txt",
+   "sha256": "b184d858cb0ff6614ca8ce0247fb0d186cabc91ed7e4d4d9d57ea3d744ce98b5",
+   "size": 338
+  },
+  {
+   "path": "doorstop_config.ini",
+   "sha256": "4d5c6dfa0f771c6a5b1b0c559aca0bd0ece7d08b08fff894708dc3b73ce73cfc",
+   "size": 1460
+  },
+  {
+   "path": "sharedassets0.assets",
+   "sha256": "7166252232ed9f415255dfa07f128bfb5bd73410a5c0cd3af19367290808dea2",
+   "size": 6524536
+  },
+  {
+   "path": "sharedassets100.assets",
+   "sha256": "0b9f9d92235cacf2753adcb481e37cc0861a8ef611d84614309416bea004acb0",
+   "size": 103816
+  },
+  {
+   "path": "sharedassets102.assets",
+   "sha256": "e1d4c995187d695f25532ea6cdedec6fb7698f1d99cf1d5ac45dbe1c769b2b0f",
+   "size": 84464
+  },
+  {
+   "path": "sharedassets103.assets",
+   "sha256": "3234997a952f7bc47b64fe87a3944898d8745311f45d1626d46da04685e4f501",
+   "size": 53816
+  },
+  {
+   "path": "sharedassets105.assets",
+   "sha256": "90b88f40dcad6d48422e08754c97cdb11b3fad018d64b0c35348d61fd939f885",
+   "size": 138744
+  },
+  {
+   "path": "sharedassets106.assets",
+   "sha256": "656aff0b2878566d9484b8f18d9bc1dbb8d0733bdb4cf858f74000f3a69ea366",
+   "size": 91400
+  },
+  {
+   "path": "sharedassets107.assets",
+   "sha256": "7bcf225101302cade4ecc70d9c728ae3e9cf90210adc35863d530266834c96c4",
+   "size": 56120
+  },
+  {
+   "path": "sharedassets109.assets",
+   "sha256": "bb39d9141b262e1f2bc4334b0b56a8df136524674e802360a248d77822d321da",
+   "size": 89136
+  },
+  {
+   "path": "sharedassets111.assets",
+   "sha256": "785b96a5fc53cb5ffdf56e7e1a3a4d12f18caf0f55dc7c6fca5dbd6c8eccb012",
+   "size": 50776
+  },
+  {
+   "path": "sharedassets112.assets",
+   "sha256": "88aeb202e91152e168dfa78e419c36703389f1d15e99d4772c5d0848f0e3b8bb",
+   "size": 62664
+  },
+  {
+   "path": "sharedassets114.assets",
+   "sha256": "afaeb339741013aa925568724ffa4ff57b7d733e18c0ef596c551ed7c355c817",
+   "size": 77208
+  },
+  {
+   "path": "sharedassets116.assets",
+   "sha256": "7c891b81f7a385be0fcc608ba509c6f24d3bff945df9f4cf6504b6f70951530f",
+   "size": 155488
+  },
+  {
+   "path": "sharedassets118.assets",
+   "sha256": "fa004db700d6952196e77ae3179229a689ff32a117f8c9badfe3bebff3660a9e",
+   "size": 199976
+  },
+  {
+   "path": "sharedassets119.assets",
+   "sha256": "a091a6f9d9737a85776ea6b6eecf897d4ccfa3b42ab2e1fe5ea8894f98b3e7f0",
+   "size": 55632
+  },
+  {
+   "path": "sharedassets120.assets",
+   "sha256": "54c547a8d5651e6b8822914e17c9e2634f1b7320eb3e727c8b64d56a72845727",
+   "size": 57496
+  },
+  {
+   "path": "sharedassets121.assets",
+   "sha256": "d93230352a80ba672538e52f025217b1f4f943bb1b38c71e8b745edc56c462e1",
+   "size": 173128
+  },
+  {
+   "path": "sharedassets123.assets",
+   "sha256": "08f1884a1a9028d9c40c84844f64a4a0c7b87863671edb8f3f6877d4d20ed48c",
+   "size": 57488
+  },
+  {
+   "path": "sharedassets124.assets",
+   "sha256": "ac46d20a57c428fe84c77f55bf1032aff1fca0ff0ff2412fffee1490b31b223d",
+   "size": 56296
+  },
+  {
+   "path": "sharedassets127.assets",
+   "sha256": "18f2a64d80e6306c58c20535715336e5a2b2636f0cffe0377b0204b5f190be51",
+   "size": 449288
+  },
+  {
+   "path": "sharedassets128.assets",
+   "sha256": "0cb2833aa117ae7914946ff514ace3396209d5cb0e5212ab0a67baedcfe116ae",
+   "size": 88264
+  },
+  {
+   "path": "sharedassets129.assets",
+   "sha256": "41f7531344eeae53ab16604b15d30b948064269d474b52fae4bd56c1f1439f2b",
+   "size": 70688
+  },
+  {
+   "path": "sharedassets131.assets",
+   "sha256": "2257e398541f25778bb9a5ee498dabce59269ddf1b65228d62b5f421e463f2d6",
+   "size": 71896
+  },
+  {
+   "path": "sharedassets135.assets",
+   "sha256": "567e68cbf3cbd6df6fbbf97430814c5d4e8d88b4ee62832c783a63544c043124",
+   "size": 642888
+  },
+  {
+   "path": "sharedassets136.assets",
+   "sha256": "9b21586fcd13bb376587629ede14cf996f7679137c0daf2fe767e6b2251d49f0",
+   "size": 49752
+  },
+  {
+   "path": "sharedassets137.assets",
+   "sha256": "0c6108fda59b2263750384bd562f6d7673e5e9352a351b685b825442643a4767",
+   "size": 138752
+  },
+  {
+   "path": "sharedassets14.assets",
+   "sha256": "0e5b598f0cf386d3df189039138e38525e0c037fdbab2c377682567959abf760",
+   "size": 687320
+  },
+  {
+   "path": "sharedassets15.assets",
+   "sha256": "f5e8eda41bad7467fe77dffbab67bf1690336f4b71594dae4b4fb8f248dded46",
+   "size": 90032
+  },
+  {
+   "path": "sharedassets153.assets",
+   "sha256": "3f66024f5c36ff6b184f9b3e0a0c2cdc3427a25542971aa7ca922513a541d598",
+   "size": 101640
+  },
+  {
+   "path": "sharedassets16.assets",
+   "sha256": "83e67dde2e4933153ab06b33e8f553f6465f08741d8001a0471ffc7fbd499990",
+   "size": 52272
+  },
+  {
+   "path": "sharedassets17.assets",
+   "sha256": "37affa0cc4f7bf6bd5d3631737718669b6882844fa5d5d6cf4f6775ab70c2b35",
+   "size": 79056
+  },
+  {
+   "path": "sharedassets19.assets",
+   "sha256": "8f8bc974207923f43391a20ef5f6591ed3ab9ba067d12c751ffd31a53c27b555",
+   "size": 48768
+  },
+  {
+   "path": "sharedassets21.assets",
+   "sha256": "361be1c8899561e0c4f49431f8f4ed7ae74c428c591154c7fc1f3907aba1ee3c",
+   "size": 51808
+  },
+  {
+   "path": "sharedassets22.assets",
+   "sha256": "4c93aa10a7e9e29c7011da45c653344c2a031b31112fa1481fa263f9794d41bd",
+   "size": 41080
+  },
+  {
+   "path": "sharedassets23.assets",
+   "sha256": "64b09f9d35ff2f0aa6bb716cca6da9831a38e4397fda11f7e2ae732bf256cc0b",
+   "size": 43168
+  },
+  {
+   "path": "sharedassets25.assets",
+   "sha256": "1da48bef139aeb6506cb773bb68d73dba4c2fab818cfd9b0219f519c5a98e8a0",
+   "size": 47832
+  },
+  {
+   "path": "sharedassets26.assets",
+   "sha256": "394ee3fe9d496297cfc8bf91d5b435802812c116071932055c569eb0348c87fa",
+   "size": 55024
+  },
+  {
+   "path": "sharedassets29.assets",
+   "sha256": "9119045d8d72884fbde4e49147fa00bd4e980214f11c16e78a997167f761dcb7",
+   "size": 50632
+  },
+  {
+   "path": "sharedassets3.assets",
+   "sha256": "0ec4a9049024dd2e5e5e19be14e8042917fed50c09f3d2d6cdf2e5694222d97d",
+   "size": 4101504
+  },
+  {
+   "path": "sharedassets30.assets",
+   "sha256": "fdf0b62f528564087eb7e80b6bd19919e29c6ad36dbb5ed04da40432e265c9f8",
+   "size": 41344
+  },
+  {
+   "path": "sharedassets32.assets",
+   "sha256": "68c8a0035d9c7da3d19b73000007b55b85e0544605330215551c14800cf436c8",
+   "size": 45112
+  },
+  {
+   "path": "sharedassets34.assets",
+   "sha256": "3522f84724527c13399e0f852e49ee8a40eacddb8d13f26dcefd38f9f70ab0dd",
+   "size": 50504
+  },
+  {
+   "path": "sharedassets35.assets",
+   "sha256": "b08cb4df230551f5364ba5525e39db101cf2c29b32244377f0c9350729103ff8",
+   "size": 41808
+  },
+  {
+   "path": "sharedassets36.assets",
+   "sha256": "d337eca1cd89cf23ffeeb3dfc76aff0984818b03ff35cab85b6ef86030b44262",
+   "size": 53088
+  },
+  {
+   "path": "sharedassets37.assets",
+   "sha256": "407cb075030c0379a079b57e66036fedfbf3522059aab96724276afe1e560741",
+   "size": 44552
+  },
+  {
+   "path": "sharedassets38.assets",
+   "sha256": "6b14ea4d768d68550dca3cad7358fd9e7f386750c0332141cd227467927b125a",
+   "size": 68984
+  },
+  {
+   "path": "sharedassets39.assets",
+   "sha256": "87fd4ae142485eb0c7faecc27fe1ea5dfff39ccb95427f16a9d28a17a4a020b6",
+   "size": 58128
+  },
+  {
+   "path": "sharedassets4.assets",
+   "sha256": "62a0d3d5069cb2a8c6df68b378597cc34b7a41fa6b8b52726e6c33ee9e244dc4",
+   "size": 1344656
+  },
+  {
+   "path": "sharedassets40.assets",
+   "sha256": "27096cca0ebd01e49080d8823dc592fb151fdea242e56aededca6b1acb097eb8",
+   "size": 61784
+  },
+  {
+   "path": "sharedassets41.assets",
+   "sha256": "79d7a601f72ebec78c76b1ef5a3d7821754dba6eeba2566064df24b4298d47a3",
+   "size": 43520
+  },
+  {
+   "path": "sharedassets42.assets",
+   "sha256": "9ae7559bbfa39f0298de6f642b1d17b606d12e41a34cb587c498a31ebce322e2",
+   "size": 45976
+  },
+  {
+   "path": "sharedassets43.assets",
+   "sha256": "833fbb8c3d159a5830200dda9f025be008f9527afd1d0378e597800cc3b0bc02",
+   "size": 43352
+  },
+  {
+   "path": "sharedassets44.assets",
+   "sha256": "56296a76742050260a3b9ed6a6743a926b431c55ab347ea97a10f14dda561a82",
+   "size": 82288
+  },
+  {
+   "path": "sharedassets48.assets",
+   "sha256": "0a6728f01eb5b2bc693a6d81f48353f4c204df72b2210135d0a0786a7493f856",
+   "size": 206552
+  },
+  {
+   "path": "sharedassets49.assets",
+   "sha256": "60136f1f28e60cbce6f4e61b4516f41942d33fb4c0ec408886daa8ad8113b498",
+   "size": 59424
+  },
+  {
+   "path": "sharedassets50.assets",
+   "sha256": "e5ea2028d74e599549325866869d6fa175420629f7473d043aab722ad87d253c",
+   "size": 46064
+  },
+  {
+   "path": "sharedassets51.assets",
+   "sha256": "fc7e8013e47e1af6239779ca47330e511bfd7d908dd75e73a866ac46877fe0e9",
+   "size": 64968
+  },
+  {
+   "path": "sharedassets52.assets",
+   "sha256": "1a8e1633a6a5ae36cd329acf4650c245b17f995b26e6b71e71ac928389ad0fa3",
+   "size": 47024
+  },
+  {
+   "path": "sharedassets54.assets",
+   "sha256": "88165307bb46101d30c848fe3184f67f8cac2a28f2a584a8cee001e6fe3779ad",
+   "size": 41912
+  },
+  {
+   "path": "sharedassets55.assets",
+   "sha256": "b649c8f04dbd352e053338a713045d5e9381e5bd04346945081a4aafa1b021ed",
+   "size": 48464
+  },
+  {
+   "path": "sharedassets56.assets",
+   "sha256": "43f5f12f91ac8d704027adc53a90fbf2396a629215c952904789b61b06949864",
+   "size": 55776
+  },
+  {
+   "path": "sharedassets58.assets",
+   "sha256": "5f2bb211f98a6f398e184b48c422d7818341b8a50b7b8f52e628c6f986b8ade0",
+   "size": 56072
+  },
+  {
+   "path": "sharedassets59.assets",
+   "sha256": "2f21342e0b5f5ae74c97bd9635266e1119168ed7d30fc2ee0696a2162fea48fd",
+   "size": 39288
+  },
+  {
+   "path": "sharedassets62.assets",
+   "sha256": "236095534876035c758e81c8ef1a33033f74c2cd1140a0ddfc2b34c8a4e265c1",
+   "size": 66744
+  },
+  {
+   "path": "sharedassets63.assets",
+   "sha256": "df3e41b74d6fd87520a1de68b4d94db565c338936bb69f29cf2f133e8b031d0c",
+   "size": 123296
+  },
+  {
+   "path": "sharedassets64.assets",
+   "sha256": "b8a5264ac467e2ce62fcd2d3f96ee5f3fc1180222c3f646d229b705b2c8475cb",
+   "size": 49384
+  },
+  {
+   "path": "sharedassets65.assets",
+   "sha256": "9a07cb0869f51c1b0ec83d293609ae1e3d76b6295c405d38162ee0ab0dd4c70c",
+   "size": 61808
+  },
+  {
+   "path": "sharedassets66.assets",
+   "sha256": "05a364dbe17ac28188a53fcbe800c503f61cd26251f0eb075d1bc1a266a0c762",
+   "size": 87968
+  },
+  {
+   "path": "sharedassets67.assets",
+   "sha256": "e871b78297d83815d69cacdccc873b2b2830b3459fa8ee9dc239b859a03f5c58",
+   "size": 82192
+  },
+  {
+   "path": "sharedassets68.assets",
+   "sha256": "b0c4293ca9508356bee4c3e9f15cabf1cae0dcdeb8416fb13131ab62f119186b",
+   "size": 49992
+  },
+  {
+   "path": "sharedassets69.assets",
+   "sha256": "df9c7d7aff3d0065df59d1c576c5535bd1c4f3b2b2dab0e34683610d072f1186",
+   "size": 60984
+  },
+  {
+   "path": "sharedassets7.assets",
+   "sha256": "69e514b2897cd15fe3fa5e6395bdd457532618da94ac895fee6404b0c194abdf",
+   "size": 230280
+  },
+  {
+   "path": "sharedassets70.assets",
+   "sha256": "f2647f37de49e72a85413a24c2a44dc291ddac5dfe2ab616b432d26c5389fb32",
+   "size": 58144
+  },
+  {
+   "path": "sharedassets71.assets",
+   "sha256": "2ba1e69ba257e79411ffb06ceb13d601b751cf4d9d94494c5295beb27406576b",
+   "size": 44920
+  },
+  {
+   "path": "sharedassets72.assets",
+   "sha256": "a94f4215b1a77ecb9afc55454da75f1ea6c1f87c8d1902234ed6259becc640cc",
+   "size": 43720
+  },
+  {
+   "path": "sharedassets73.assets",
+   "sha256": "8260a7dd5262e7ed0c30277254ca389bc74b0a70b16a2d08e8d7e597bc7843d2",
+   "size": 46256
+  },
+  {
+   "path": "sharedassets74.assets",
+   "sha256": "d5432dae200cf0bf45281884b1c4c7bcdd9570b1c12318eca06f52ccdac72667",
+   "size": 53328
+  },
+  {
+   "path": "sharedassets75.assets",
+   "sha256": "b421ec21fd9d6005a2549e91e923eb765824b695b27bdea38698a0e05a64ec7c",
+   "size": 39192
+  },
+  {
+   "path": "sharedassets77.assets",
+   "sha256": "5d4dd215b6c35ed5d507f0d2d7ae0af0561626f6af7e5022c02a4cf3dceccacb",
+   "size": 45792
+  },
+  {
+   "path": "sharedassets79.assets",
+   "sha256": "b574ea2fcadf05da35cd7d29afe8742cb2319084545d65194abae4ddce0f63a8",
+   "size": 48320
+  },
+  {
+   "path": "sharedassets81.assets",
+   "sha256": "1990f0d501a8d0aa2c36bf1a992c030bf0386c26b66b0d7db1b433f4956403c4",
+   "size": 95456
+  },
+  {
+   "path": "sharedassets82.assets",
+   "sha256": "a3355300d4632fcba0e67ca4d01b789b25e8588702cd7a32eb05842356326bee",
+   "size": 95640
+  },
+  {
+   "path": "sharedassets83.assets",
+   "sha256": "7e9732fc6c61c830a17fed94582f2751392dac053126b5c70dbc9bfc6cb89ea2",
+   "size": 65096
+  },
+  {
+   "path": "sharedassets84.assets",
+   "sha256": "dd830f01237074f2b6834859e63c6183c2a92bec77f5299c75f12988770643c2",
+   "size": 58800
+  },
+  {
+   "path": "sharedassets85.assets",
+   "sha256": "bfc56ae2309661555a76d6148974f4ef737f328f54cddbac8a71e47970e15ee3",
+   "size": 68952
+  },
+  {
+   "path": "sharedassets86.assets",
+   "sha256": "3f2786fa0bbc54cdd1a2976f0287169568da3b850d8ad7282685f9a83bd4153d",
+   "size": 73672
+  },
+  {
+   "path": "sharedassets87.assets",
+   "sha256": "f59d3d0c8e1c2a23be7f38bbfdda447b2e50e4269cc1152b75eff0e232eafe36",
+   "size": 54112
+  },
+  {
+   "path": "sharedassets88.assets",
+   "sha256": "6d40264eb4963f8dd6f4cfffce157c35709b07342a6029d5e13fd71fe10c2dc7",
+   "size": 69816
+  },
+  {
+   "path": "sharedassets89.assets",
+   "sha256": "e47df6d6438fe9a899673c9fa27cdeb4a6fb32fca3501d26a9df2fa4190e5f07",
+   "size": 55728
+  },
+  {
+   "path": "sharedassets9.assets",
+   "sha256": "28a6bbdf73f252ec249537377ee9b5cd8e955b0d4da392c3df58498408be16aa",
+   "size": 554888
+  },
+  {
+   "path": "sharedassets90.assets",
+   "sha256": "08cfda9f1ca9f6af2cc8d3d40dd0bd6e69ae5e7b2ae5b8404b3b3b01386d7ab5",
+   "size": 40352
+  },
+  {
+   "path": "sharedassets91.assets",
+   "sha256": "22373b25f9a09900f05c7a0bf4f7d2dfea883cd80f1cdf473fc9174784e5436b",
+   "size": 48096
+  },
+  {
+   "path": "sharedassets92.assets",
+   "sha256": "4702f9e439159403a55d48e8ec8ba2c8092ff3001492be6a6c5e5b637079dd46",
+   "size": 49168
+  },
+  {
+   "path": "sharedassets93.assets",
+   "sha256": "188e01e6ffafa7dc3f4f28f64451ed37272065e49305292df6920bc23bdac65f",
+   "size": 69096
+  },
+  {
+   "path": "sharedassets96.assets",
+   "sha256": "fc864ae55d70d9640ed402b625c227c95aa5d4ab48cbefe3b0a6f269f018188d",
+   "size": 90240
+  },
+  {
+   "path": "sharedassets97.assets",
+   "sha256": "42f051108cebd65a51096d492c296923f4d64acad4fae04a264a33fa8fac1c71",
+   "size": 43064
+  },
+  {
+   "path": "sharedassets98.assets",
+   "sha256": "fdeed8942c3593fabbe8ee7fe785b2e3ec4e4c5c929e92a137d583ed4a43f6fe",
+   "size": 57792
+  },
+  {
+   "path": "sharedassets99.assets",
+   "sha256": "1c781a0ef29b601cb45515312933a2cc80c4ced8189bcafaf65ba43e16b016dd",
+   "size": 109912
+  },
+  {
+   "path": "winhttp.dll",
+   "sha256": "8c6cdbc38836dee87e3368f5de1994d7c0ccebf29e4ce7aba3c0981f9375412c",
+   "size": 26112
+  }
+ ],
+ "mode": "additive"
+}

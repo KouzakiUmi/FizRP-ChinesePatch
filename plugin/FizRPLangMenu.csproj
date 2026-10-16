@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- net48：与 BepInEx 5（mscorlib 2.0 系）与 Unity 2021 Mono（mscorlib 4.x）同栈，
+         引用程序集均为 mscorlib 2.0.0.0 系元数据，net48 编译可无警告统一；本机已装 v4.8 目标包，可离线构建。 -->
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>FizRPLangMenu</AssemblyName>
+    <RootNamespace>FizRPLangMenu</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+    <!-- 源文件按 UTF-8 解释（含「中文」「選択肢 (2)」「rect_カーソル」字面量） -->
+    <CodePage>65001</CodePage>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- BepInEx 5.4.23.5 运行时（解压产物，只读引用，Private=false 禁止复制进仓库） -->
+    <Reference Include="BepInEx">
+      <HintPath>..\work\_additive\bepinex\runtime\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>..\work\_additive\bepinex\runtime\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- 游戏 Managed 程序集（只读引用，禁止复制进仓库；HintPath 指向游戏目录） -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- UnityEngine.dll：Unity 2021 类型转发门面（MonoBehaviour 等旧程序集标识），BepInEx 基类解析所需 -->
+    <Reference Include="UnityEngine">
+      <HintPath>E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- UnityEngine.TextRenderingModule：UnityEngine.Font 类型的实际所在模块（Unity 2021 类型转发） -->
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- UnityEngine.UIModule：UnityEngine.Canvas 类型的实际所在模块（诊断日志需要） -->
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- UnityEngine.TextCoreFontEngineModule：GlyphRenderMode 所在模块（TMP 像素字体光栅化需要） -->
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

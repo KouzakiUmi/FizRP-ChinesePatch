@@ -1,20 +1,22 @@
 {
-  "_comment": "Fiz And The Rainbow Planet 字体替换表。<file>:<path_id> 来自 work/fonts/info.json；fusion 字段可写成字符串或 {profile: 文件名} 映射，profile 用 --profile 选择。",
+  "_comment": "Fiz And The Rainbow Planet 字体替换表。<file>:<path_id> 来自 work/fonts/info.json；fusion 字段可写成字符串或 {profile: 文件名} 映射，profile 用 --profile 选择。映射里显式写 null 表示该 profile 下不替换该字体（与键缺失→回落 default 不同）。",
   "profiles": {
     "default": "纯像素化替换：日文用 -ja，拉丁用 -latin，不改动任何文字内容",
     "zh_hans": "全部 CJK 字体改用 -zh_hans（日文原文也会变成简中字形）",
-    "zh_patch": "中文补丁：日文槽位保留 -ja 字形，中文槽位（en，即 LocFontData 的 en/fr/es）用 12px -zh_hans"
+    "zh_patch": "中文补丁：日文槽位保留 -ja 字形，中文槽位（en，即 LocFontData 的 en/fr/es）用 12px -zh_hans",
+    "zh_additive": "X2 追加式（回退版·一开始的方案）：en 槽位保持原版英语，中文写入原先空置的 es(Spanish=4) 槽位。k8x12EXS 装 10px 设计简中、k8x12EXL 装 8px 设计简中，插件按 Text 原字号量化到 10 / 8 两档，中文与宿主设计尺寸 1:1 锐利且不改变原有排版宽度层级。其余字体（含 Yoshi5x8_v2.1）一律不动。已知代价：日/英模式下 EXS@12 为 1.2×、EXL@12 为 1.5× 非整数缩放"
   },
   "fonts": [
     {
       "file": "sharedassets0.assets",
       "path_id": 14,
       "name": "k8x12EXS",
-      "role": "主日文 UI 字体（45 处 Text + LocFontData 默认字体），8x12 像素",
+      "role": "主日文 UI 字体（1006 个 Text 引用：942 个 size 12 + 64 个 size 75，另被 LocFontData.defaultFont 引用），字形 8x12、设计尺寸 12。方案甲：装 12px 设计字体，使 size 12 的日/英/中三种模式都 1:1 锐利",
       "fusion": {
         "default": "fusion-pixel-12px-proportional-ja.ttf",
-        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
-        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf"
+        "zh_hans": "fusion-pixel-10px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_additive": "fusion-pixel-10px-proportional-zh_hans.ttf"
       }
     },
     {
@@ -22,17 +24,21 @@
       "path_id": 15,
       "name": "YoshiAtari8",
       "role": "雅达利风格英文小字体（4 处 Text），8px",
-      "fusion": "fusion-pixel-8px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-8px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "sharedassets2.assets",
       "path_id": 18,
       "name": "Yoshi5x8_v2.1",
-      "role": "英文 UI 字体（6 处 Text + LocFontData 的 en/fr/es 槽位）；中文补丁把它换成 12px 简中，字号同步 8 -> 12",
+      "role": "英文 UI 字体（153 个 Text 以 size 8 引用 + LocFontData 的 en/fr/es 槽位）。**保持原版不动** —— 它的 advance 只有 0.625em，换成 1.0em 的方形中文字体会让这些文本宽 60% 而溢出，实测底栏说明文字就是这个原因换行压叠",
       "fusion": {
         "default": "fusion-pixel-8px-proportional-latin.ttf",
-        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
-        "zh_patch": "fusion-pixel-12px-proportional-zh_hans.ttf"
+        "zh_hans": "fusion-pixel-10px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-10px-proportional-zh_hans.ttf",
+        "zh_additive": null
       }
     },
     {
@@ -42,8 +48,9 @@
       "role": "柔和中黑体（6 处 Text），非像素字体",
       "fusion": {
         "default": "fusion-pixel-12px-proportional-ja.ttf",
-        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
-        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf"
+        "zh_hans": "fusion-pixel-10px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_additive": null
       }
     },
     {
@@ -51,17 +58,21 @@
       "path_id": 132,
       "name": "prstartk",
       "role": "Press Start K 街机字体（6 处 Text），8px",
-      "fusion": "fusion-pixel-8px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-8px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "sharedassets3.assets",
       "path_id": 133,
       "name": "k8x12EXL",
-      "role": "k8x12 大号版；扫描未发现被 Text 引用，可留作中文字体槽位",
+      "role": "被 49 个 Text 以 size 12 引用，同时是插件的「8 档」中文宿主。装 8px 设计简中：size<=8 的中文用它（8/8 = 1:1 锐利）；代价是那 49 个 size 12 的文本在日/英模式下为 12/8 = 1.5×（已接受，见 FONT_SOLUTION 的已知限制）",
       "fusion": {
         "default": "fusion-pixel-12px-proportional-ja.ttf",
-        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
-        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf"
+        "zh_hans": "fusion-pixel-10px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_additive": "fusion-pixel-8px-proportional-zh_hans.ttf"
       }
     },
     {
@@ -69,7 +80,10 @@
       "path_id": 10,
       "name": "PublicPixel",
       "role": "Public Pixel 8x8 像素字体",
-      "fusion": "fusion-pixel-8px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-8px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "sharedassets154.assets",
@@ -78,8 +92,9 @@
       "role": "12x16 像素丸ゴシック",
       "fusion": {
         "default": "fusion-pixel-12px-proportional-ja.ttf",
-        "zh_hans": "fusion-pixel-12px-proportional-zh_hans.ttf",
-        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf"
+        "zh_hans": "fusion-pixel-10px-proportional-zh_hans.ttf",
+        "zh_patch": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_additive": null
       }
     },
     {
@@ -87,7 +102,10 @@
       "path_id": 101,
       "name": "PerfectDOSVGA437",
       "role": "DOS VGA 等宽字体，被 100 处 Text 引用；实测字号 16(×95)/15/24(×3)/12，而 fusion-pixel 只有 8/10/12px 设计，非整数倍放大后像素边缘会变软。这些 Text 会显示中文，必须保留 CJK 覆盖，故按已知取舍保留替换。",
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf",
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-latin.ttf",
+        "zh_additive": null
+      },
       "risk": "design-size mismatch (12px face at 16/24px)"
     },
     {
@@ -96,7 +114,10 @@
       "name": "ロゴたいぷゴシック",
       "role": "Logo 用字形，替换会改变游戏 Logo 观感，默认不替换",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-ja.ttf"
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-ja.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "resources.assets",
@@ -104,49 +125,70 @@
       "name": "Roboto-Bold",
       "role": "TextMeshPro 示例字体源文件（TMP_FontAsset 图集已烘焙，单独换 TTF 不生效）",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "resources.assets",
       "path_id": 100,
       "name": "Bangers",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "resources.assets",
       "path_id": 102,
       "name": "Electronic Highway Sign",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "resources.assets",
       "path_id": 103,
       "name": "Anton",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "resources.assets",
       "path_id": 104,
       "name": "Oswald-Bold",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "resources.assets",
       "path_id": 105,
       "name": "LiberationSans",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     },
     {
       "file": "sharedassets156.assets",
       "path_id": 5,
       "name": "Roboto-Regular",
       "disabled": true,
-      "fusion": "fusion-pixel-12px-proportional-latin.ttf"
+      "fusion": {
+        "default": "fusion-pixel-12px-proportional-latin.ttf",
+        "zh_additive": null
+      }
     }
   ]
 }

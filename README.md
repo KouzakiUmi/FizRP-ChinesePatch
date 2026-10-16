@@ -35,11 +35,17 @@ python src/make_sheets.py                   # 4. 生成翻译工作表（日语�
 #   ... 翻译 translation/zh_Hans.csv 的 zh_Hans 列 ...
 python src/build_patch.py --profile zh_patch --translations translation/zh_Hans.csv \
        --out dist/FizAndTheRainbowPlanet_Data   # 5. 构建补丁
-python src/verify_patch.py dist/FizAndTheRainbowPlanet_Data  # 6. 逐层校验
+python src/verify_patch.py dist/FizAndTheRainbowPlanet_Data \
+       --csv translation/zh_Hans.csv --column zh_Hans   # 6. 逐层校验
 python tools/package.py                     # 7. 生成 dist/FizRP-Chinese-Patch/ 安装包
 ```
 
-安装包结构：`files/`（101 个游戏文件）+ `install.bat` / `uninstall.bat`
+> 第 6 步必须显式传 `--csv translation/zh_Hans.csv --column zh_Hans`：
+> `verify_patch.py` 的 `--csv` 默认值是阶段 A 的合成表 `translation/_synthetic.csv`
+> （其 `zh_Hans` 列是 `【译】` + 日文原文的占位串，与主表 1364 行全部不同），
+> 按默认值执行会把 1364 行全部报成 `wrong`。
+
+安装包结构：`files/`（102 个游戏文件：101 个 `.assets` + 1 个 StringTable bundle）+ `install.bat` / `uninstall.bat`
 （自动在 Steam 库中定位游戏、备份被覆盖的原文件、可一键还原）。
 
 ## 目录
