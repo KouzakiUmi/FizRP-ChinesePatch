@@ -54,7 +54,7 @@
 | --- | --- | --- |
 | 产物 | `dist/legacy/X1/FizRP-Chinese-Patch/`（历史） | `dist/FizRP-X2-v<版本>.zip` + `dist/FizRP-ChinesePatch.exe`；源在 `dist-additive/` |
 | 载荷 | `files/`，**106** 个文件（102 `.assets` + 3 个串表 bundle + `catalog.json`），约 67 MB | `payload/`，**125** 个文件（102 数据：98 `.assets` + 3 bundle + `catalog.json`；23 loader：`winhttp.dll` 等 4 个 + `BepInEx/` 19 个），约 22.5 MB |
-| 清单 | `dist/legacy/X1/manifest.json`（版本 1.1.0） | `dist-additive/manifest-additive.json`（多 `"mode":"additive"`，版本 1.2.1） |
+| 清单 | `dist/legacy/X1/manifest.json`（版本 1.1.0） | `dist-additive/manifest-additive.json`（多 `"mode":"additive"`，版本 1.2.2） |
 | 中文槽位 | `en`（`Language.English = 2`） | **`es`（`Language.Spanish = 4`）** |
 | 字体 profile | `zh_patch` | `zh_additive` |
 | 改英文吗 | 是——界面第二项变成中文，英文不可选（文件里仍保留） | 否——**新增第三项「中文」**，日/英原样 |
@@ -251,7 +251,8 @@ python tools/package_additive.py -> dist/FizRP-X2-v<版本>/ + .zip + .sha256
 发布顺序不能颠倒：**改文本/表 → `build_additive_data.py` → `build_additive_payload.py`
 → spec 重建 exe → `package_additive.py` 重打 zip**。spec 的固定条目是
 `manifest-additive.json` + `docs/release/README-X2.txt` + `docs/release/KNOWN-ISSUES-X2.txt`
-+ `dist/fonts/source/OFL.txt`；X1 的 `manifest.json` / `patch-info.json` / README 不再内嵌。
++ 仓库根 `LICENSE` + 仓库根 `THIRD-PARTY-NOTICES.txt` + `dist/fonts/source/OFL.txt`；
+X1 的 `manifest.json` / `patch-info.json` / README 不再内嵌。
 
 几个坑写在脚本 docstring 里，值得单独强调：
 
@@ -378,7 +379,7 @@ m_EntryDataString：每条 entry = 7×int32
 
 ## 11. 已知问题与已修复项
 
-截至 2026-10-17（X2 v1.2.1 整理后；X1 已归档）：
+截至 2026-10-17（X2 v1.2.2 整理后；X1 已归档）：
 
 * **X1 产物漂移已消除。** 2026-10-16 的 325 处差异（1039/1364）来自旧产物落后于
   `translation/zh_Hans.csv` 与 `src/build_patch.py`；2026-10-17 已按当前源码/工作表重打包，

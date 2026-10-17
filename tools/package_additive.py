@@ -42,6 +42,8 @@ PATCH_TOOL = os.path.join(HERE, "patch_tool.py")
 README_SRC = os.path.join(ROOT, "docs", "release", "README-X2.txt")
 KNOWN_SRC = os.path.join(ROOT, "docs", "release", "KNOWN-ISSUES-X2.txt")
 OFL_SRC = os.path.join(ROOT, "dist", "fonts", "source", "OFL.txt")
+LICENSE_SRC = os.path.join(ROOT, "LICENSE")
+NOTICES_SRC = os.path.join(ROOT, "THIRD-PARTY-NOTICES.txt")
 DIST = os.path.join(ROOT, "dist")
 
 INSTALL_BAT = """@echo off
@@ -111,6 +113,8 @@ def write_release(out_dir, version, manifest):
     shutil.copy2(PATCH_TOOL, os.path.join(out_dir, "patch_tool.py"))
     shutil.copy2(MANIFEST, os.path.join(out_dir, "manifest-additive.json"))
     shutil.copy2(OFL_SRC, os.path.join(out_dir, "LICENSE-fusion-pixel-font.txt"))
+    shutil.copy2(LICENSE_SRC, os.path.join(out_dir, "LICENSE"))
+    shutil.copy2(NOTICES_SRC, os.path.join(out_dir, "THIRD-PARTY-NOTICES.txt"))
     for name, text in (("README.txt", render(README_SRC, version)),
                        ("KNOWN-ISSUES.txt", render(KNOWN_SRC, version)),
                        ("install.bat", INSTALL_BAT),
@@ -167,6 +171,7 @@ def verify_zip(zip_path, manifest):
             if digest != entry["sha256"]:
                 problems.append("hash: " + entry["path"])
         for required in ("README.txt", "KNOWN-ISSUES.txt", "patch_tool.py",
+                         "LICENSE", "THIRD-PARTY-NOTICES.txt",
                          "LICENSE-fusion-pixel-font.txt", "install.bat", "uninstall.bat"):
             if prefix + required not in names:
                 problems.append("missing: " + required)

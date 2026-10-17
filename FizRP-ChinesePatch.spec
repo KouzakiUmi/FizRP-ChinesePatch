@@ -8,13 +8,14 @@
 产出 ``dist/FizRP-ChinesePatch.exe``（onefile）。**当前安装包路线是 X2 追加式**，
 datas 生成规则：
 
-  1. 4 个固定条目：``manifest-additive.json``、``README.txt``、``KNOWN-ISSUES.txt``、
-     ``LICENSE-fusion-pixel-font.txt`` —— 全部落在 exe 根。README / KNOWN-ISSUES
-     取自 ``docs/release/``（X2 发布说明源），OFL 取自 ``dist/fonts/source/``。
+  1. 6 个固定条目：``manifest-additive.json``、``README.txt``、``KNOWN-ISSUES.txt``、
+     ``LICENSE``、``THIRD-PARTY-NOTICES.txt``、``LICENSE-fusion-pixel-font.txt`` —— 全部落在 exe 根。
+     README / KNOWN-ISSUES 取自 ``docs/release/``（X2 发布说明源），LICENSE /
+     THIRD-PARTY-NOTICES 取自仓库根，OFL 取自 ``dist/fonts/source/``。
   2. 每个载荷文件一条：源 ``dist-additive/payload/<rel>``，
      目标 ``additive-payload/<posix dirname(rel)>``。
 
-共 ``4 + N`` 条（N = 载荷文件数；v1.2.1 为 N=125 → 129 条）。
+共 ``6 + N`` 条（N = 载荷文件数；v1.2.2 为 N=125 → 131 条）。
 载荷条目**不手写**：优先读 ``manifest-additive.json``（权威清单、顺序稳定），
 缺失时才回退遍历载荷目录。期望条目数动态计算，避免载荷增减后闸门误报。
 
@@ -25,6 +26,7 @@ datas 生成规则：
 import json as _json
 import os as _os
 import posixpath as _ppath
+import shutil as _shutil
 
 # 规格目录：PyInstaller 注入 SPECPATH（spec 文件所在目录），独立 exec（如自检脚本）
 # 时未定义，则退回当前工作目录 —— 两种情况都指向项目根。
@@ -57,7 +59,7 @@ def _payload_rel_paths():
     return _found
 
 
-# 4 个固定条目（X2 追加式；README / KNOWN-ISSUES 取 docs/release/ 下的发布说明源）。
+# 6 个固定条目（X2 追加式；README / KNOWN-ISSUES 取 docs/release/ 下的发布说明源）。
 # 模板里的 {{VERSION}} 在构建期按 manifest-additive.json 的版本渲染到 build/_release_src/。
 _RELEASE_TMP = _os.path.join(_ROOT, 'build', '_release_src')
 _os.makedirs(_RELEASE_TMP, exist_ok=True)
@@ -69,12 +71,19 @@ for _name, _src in (('README.txt', 'docs/release/README-X2.txt'),
         _text = _fh.read().replace('{{VERSION}}', _VERSION)
     with open(_os.path.join(_RELEASE_TMP, _name), 'w', encoding='utf-8', newline='\n') as _fh:
         _fh.write(_text)
+_shutil.copyfile(_os.path.join(_ROOT, 'LICENSE'), _os.path.join(_RELEASE_TMP, 'LICENSE'))
+_shutil.copyfile(_os.path.join(_ROOT, 'THIRD-PARTY-NOTICES.txt'),
+                 _os.path.join(_RELEASE_TMP, 'THIRD-PARTY-NOTICES.txt'))
+_shutil.copyfile(_os.path.join(_ROOT, 'dist', 'fonts', 'source', 'OFL.txt'),
+                 _os.path.join(_RELEASE_TMP, 'LICENSE-fusion-pixel-font.txt'))
 
 _datas = [
     ('dist-additive/manifest-additive.json', '.'),
-    ('build/_release_src/README.txt', 'README.txt'),
-    ('build/_release_src/KNOWN-ISSUES.txt', 'KNOWN-ISSUES.txt'),
-    ('dist/fonts/source/OFL.txt', 'LICENSE-fusion-pixel-font.txt'),
+    ('build/_release_src/README.txt', '.'),
+    ('build/_release_src/KNOWN-ISSUES.txt', '.'),
+    ('build/_release_src/LICENSE', '.'),
+    ('build/_release_src/THIRD-PARTY-NOTICES.txt', '.'),
+    ('build/_release_src/LICENSE-fusion-pixel-font.txt', '.'),
 ]
 
 # N 条载荷条目，逐条校验源文件存在（缺失即中止，宁可失败也不产出缺载荷的 exe）
@@ -93,10 +102,10 @@ if _MISSING:
     raise SystemExit(
         'ERROR: 载荷源文件缺失 %d 个，拒绝构建（例：%s）'
         % (len(_MISSING), ', '.join(_MISSING[:3])))
-_EXPECTED = 4 + len(_PAYLOAD_RELS)
+_EXPECTED = 6 + len(_PAYLOAD_RELS)
 if len(_datas) != _EXPECTED:
     raise SystemExit(
-        'ERROR: datas 条目数 %d != 期望 %d（4 固定 + %d 载荷），拒绝构建'
+        'ERROR: datas 条目数 %d != 期望 %d（6 固定 + %d 载荷），拒绝构建'
         % (len(_datas), _EXPECTED, len(_PAYLOAD_RELS)))
 
 

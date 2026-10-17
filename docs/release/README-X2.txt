@@ -10,6 +10,9 @@ Fiz 与彩虹星球 简体中文补丁 v{{VERSION}}（追加式 X2）
     *.assets                  数据文件（文本、字号、字体、贴图）
     StreamingAssets/aa/...    es 串表 bundle + catalog.json
     winhttp.dll / BepInEx/    追加式 loader（随包，无需另装）
+  LICENSE                     项目许可证（CC BY-NC-SA 4.0）
+  THIRD-PARTY-NOTICES.txt     第三方组件声明（BepInEx/Doorstop/Harmony 等）
+  LICENSE-fusion-pixel-font.txt  字体授权（SIL OFL 1.1）
   安装后游戏根目录会多出 BepInEx/、winhttp.dll、doorstop_config.ini、.doorstop_version；
   被覆盖的原文件会备份到游戏根目录 _FizRP_backup_<时间戳>/。
 
