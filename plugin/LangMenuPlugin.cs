@@ -453,6 +453,12 @@ namespace FizRPLangMenu
 		/// </summary>
 		private static readonly Dictionary<int, Font> _lastSeen = new Dictionary<int, Font>();
 		/// <summary>
+		/// Text 实例 → 首次接管时记录的原字号（基准字号）。
+		/// 游戏在不同进入时机会给同一文本设 12/10/8 等不同字号；若每次按当前值量化，
+		/// 语言选择画面的提示会在 10px / 8px 之间跳。记录基准后始终按基准量化，档位稳定。
+		/// </summary>
+		private static readonly Dictionary<int, int> _baseFontSize = new Dictionary<int, int>();
+		/// <summary>
 		/// Text 实例 → 上次核算像素对齐时该 RectTransform 的 (xMin, width)。
 		/// 只有这两个量变化时才需要重新核算（省掉每帧调用 preferredWidth 的开销）。
 		/// </summary>
@@ -471,6 +477,40 @@ namespace FizRPLangMenu
 		internal static int QuantizeSize(int fontSize)
 		{
 			return (fontSize <= SizeSmall) ? SizeSmall : SizeLarge;
+		}
+
+		/// <summary>
+		/// 强制 10px 档的标题画面文本：
+		///   * level3 底部滚动说明 InfoText（原版 8px 假名文本）；
+		///   * 主标题下方的版权公司名（©2024 …，原版 8px）。
+		/// </summary>
+		internal static bool ForceLarge(Text text)
+		{
+			if (text == null)
+			{
+				return false;
+			}
+			if (text.gameObject != null && text.gameObject.name == "InfoText")
+			{
+				return true;
+			}
+			string s = text.text;
+			return !string.IsNullOrEmpty(s) && s.TrimStart().StartsWith("©2024");
+		}
+
+		/// <summary>取文本的基准字号：首次接管时记录，之后不再随游戏赋值改变档位。</summary>
+		internal static int GetBaseSize(Text text, int current)
+		{
+			int id = text.GetInstanceID();
+			int size;
+			// 取历史见过的最大字号作为基准：游戏有时先用小字号（8）建对象，
+			// 随后才按界面状态设成 12/10；只看第一次会把基准错误地锁在 8。
+			if (!_baseFontSize.TryGetValue(id, out size) || current > size)
+			{
+				size = current;
+				_baseFontSize[id] = size;
+			}
+			return size;
 		}
 
 		/// <summary>
@@ -786,7 +826,9 @@ namespace FizRPLangMenu
 			{
 				return;
 			}
-			int want = QuantizeSize(text.fontSize);
+			bool forceInfo = ForceLarge(text);
+			int baseSize = GetBaseSize(text, text.fontSize);
+			int want = forceInfo ? SizeLarge : QuantizeSize(baseSize);
 			Font f = GetFontFor(want);
 			if (f == null && want == SizeSmall)
 			{
@@ -806,14 +848,12 @@ namespace FizRPLangMenu
 			// 含假名的日文文本、以及被 HasKana 误判的文本，虽然一行字体都没改过，
 			// 下一帧就会命中「标记过 + 字体不是我们的」→ 刷出大量 [reverted] 假阳性。
 			// 这批假阳性掩盖了真正的问题（有一批译文根本没被处理过）。
-			if (HasKana(text.text))
+			// 含汉字的文本由我们接管；即使夹有假名（如版权行「にじいろドラゴン（虹色龙）」、
+			// 结局作者名），我们的 fusion 字体同时含假名与汉字，能完整显示。
+			// 纯假名（无汉字）的日文文本仍不介入，避免把未翻译的日文界面换成中文字体。
+			if (!HasCJK(text.text) && !forceInfo)
 			{
-				// 含假名 → 日文文本：不介入（当前界面处于日语模式，而语言查询读的是存档值）
-				return;
-			}
-			if (!HasCJK(text.text))
-			{
-				// 纯拉丁文本：保持原版字体与字号，绝不改动
+				// 纯拉丁 / 纯假名文本：保持原版字体与字号，绝不改动
 				return;
 			}
 
@@ -1045,13 +1085,9 @@ namespace FizRPLangMenu
 			{
 				return;
 			}
-			if (HasKana(tmp.text))
-			{
-				// 日文文本：不介入
-				return;
-			}
 			if (!HasCJK(tmp.text))
 			{
+				// 纯拉丁 / 纯假名：不介入；含汉字的混合专名（假名+汉字）继续接管
 				return;
 			}
 			try
@@ -1220,7 +1256,10 @@ namespace FizRPLangMenu
 					return;
 				}
 				FontApplier.NoteSetterCall("set_fontSize", __instance, value);
-				value = FontApplier.QuantizeSize(value);
+				int baseSize = FontApplier.GetBaseSize(__instance, value);
+				value = FontApplier.ForceLarge(__instance)
+					? FontApplier.SizeLarge
+					: FontApplier.QuantizeSize(baseSize);
 			}
 			catch (Exception)
 			{
@@ -1241,7 +1280,11 @@ namespace FizRPLangMenu
 					return;
 				}
 				FontApplier.NoteSetterCall("set_font", __instance, 0);
-				Font f = FontApplier.GetFontFor(FontApplier.QuantizeSize(__instance.fontSize));
+				int want = FontApplier.ForceLarge(__instance)
+					? FontApplier.SizeLarge
+					: FontApplier.QuantizeSize(
+						FontApplier.GetBaseSize(__instance, __instance.fontSize));
+				Font f = FontApplier.GetFontFor(want);
 				if (f != null)
 				{
 					value = f;

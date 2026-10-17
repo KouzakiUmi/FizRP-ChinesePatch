@@ -38,7 +38,7 @@ from typing import Iterator, List, Optional, Tuple
 
 NAME = "Fiz 与彩虹星球 简体中文补丁"
 GAME = "Fiz and the Rainbow Planet"
-VERSION = "1.2.0"
+VERSION = "1.2.1"
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # X1 替换式已归档到 dist/legacy/X1/（2026-10-17）；本脚本的默认输入/输出随之迁移。

@@ -17,7 +17,7 @@ Fiz 与彩虹星球 简体中文补丁 v{{VERSION}}（追加式 X2）
   exe 版（推荐，不需要 Python）：
     双击 FizRP-ChinesePatch.exe，按图形界面提示操作。
   zip 版（需要本机 Python 3.8+）：
-    双击 安装.bat；卸载双击 卸载.bat。
+    双击 install.bat；卸载双击 uninstall.bat。
 
   安装器会自动在 Steam 库中查找游戏；找不到时会提示手动指定游戏根目录
   （FizAndTheRainbowPlanet_Data 的上一级）。安装前会比对版本门禁文件，
@@ -36,7 +36,7 @@ Fiz 与彩虹星球 简体中文补丁 v{{VERSION}}（追加式 X2）
 
 【卸载】
   exe 版：在安装器界面点「卸载并还原」。
-  zip 版：双击 卸载.bat。
+  zip 版：双击 uninstall.bat。
   两者都会从最新备份还原被覆盖文件，但不会删除备份目录。
 
 【字体授权】

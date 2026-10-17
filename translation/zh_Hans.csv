@@ -25,8 +25,8 @@ I might be blown away!","哇啊啊！
 风太大了，要被吹飞啦！"
 AutoTalk:AutoTalkData_NPC_S2_Tamayura:1,AutoTalk,AutoTalkData_NPC_S2_Tamayura,talkDatas[1],剧情对话 | wait=0.50 speaker=1,"...いや、　もしかして　風に身を任せて
 飛ばされちゃったほうが　楽しいかも！？","...Or maybe it’d be more fun
-to just let the wind take me!","……不对，说不定干脆任由风吹
-被吹走反而更开心哦！？"
+to just let the wind take me!","……不对，说不定干脆随风飘走
+反而更开心哦！？"
 AutoTalk:AutoTalkData_NPC_S3_Gadhia:0,AutoTalk,AutoTalkData_NPC_S3_Gadhia,talkDatas[0],剧情对话 | wait=0.50 speaker=1,こんにちは、　旅の方。,"Hello, Traveler.",你好，旅行者。
 AutoTalk:AutoTalkData_NPC_S3_Gadhia:1,AutoTalk,AutoTalkData_NPC_S3_Gadhia,talkDatas[1],剧情对话 | wait=0.50 speaker=3,こんにちはっ！　きみは？,Hi there! Who are you?,你好呀！你是？
 AutoTalk:AutoTalkData_NPC_S3_Gadhia:2,AutoTalk,AutoTalkData_NPC_S3_Gadhia,talkDatas[2],剧情对话 | wait=0.50 speaker=1,"僕は　依頼を受けて
@@ -49,7 +49,7 @@ AutoTalk:AutoTalkData_NPC_S3_Lira:1,AutoTalk,AutoTalkData_NPC_S3_Lira,talkDatas[
 ううっ、怖いです！","If they attack us...
 Ugh, I'm scared!","一想到它们要是袭过来……
 呜呜，好可怕！"
-AutoTalk:AutoTalkData_NPC_S3_Salia_0:0,AutoTalk,AutoTalkData_NPC_S3_Salia_0,talkDatas[0],剧情对话 | wait=0.50 speaker=1,ワタシ、　一回ココに来てみたかったの！,I’ve always wanted to come here!,我呀，一直想来这里看看的！
+AutoTalk:AutoTalkData_NPC_S3_Salia_0:0,AutoTalk,AutoTalkData_NPC_S3_Salia_0,talkDatas[0],剧情对话 | wait=0.50 speaker=1,ワタシ、　一回ココに来てみたかったの！,I’ve always wanted to come here!,我呀，早就想来这里看看了！
 AutoTalk:AutoTalkData_NPC_S3_Salia_0:1,AutoTalk,AutoTalkData_NPC_S3_Salia_0,talkDatas[1],剧情对话 | wait=0.50 speaker=1,"念願の　キノコケーキ......！
 いただきまーす！！","The long-awaited mushroom cake...
 Yum, here I go!!","心心念念的蘑菇蛋糕……！
@@ -76,7 +76,7 @@ AutoTalk:AutoTalkData_NPC_S4_Aoziso:0,AutoTalk,AutoTalkData_NPC_S4_Aoziso,talkDa
 このままだと　体が溶けちゃいそう","It's been so hot around here......
 I feel like I'm going to melt.","这一带热得要命呢……
 再这样下去身体都要化掉了"
-AutoTalk:AutoTalkData_NPC_S4_Jorouda:0,AutoTalk,AutoTalkData_NPC_S4_Jorouda,talkDatas[0],剧情对话 | wait=0.50 speaker=1,なんじゃ？幼気な竜の子たちじゃのう…,What's this? Little baby dragons...?,哎呀？真是些娇小可爱的小龙呀……
+AutoTalk:AutoTalkData_NPC_S4_Jorouda:0,AutoTalk,AutoTalkData_NPC_S4_Jorouda,talkDatas[0],剧情对话 | wait=0.50 speaker=1,なんじゃ？幼気な竜の子たちじゃのう…,What's this? Little baby dragons...?,哎呀？真是些稚气可爱的小龙呐……
 AutoTalk:AutoTalkData_NPC_S4_Jorouda:1,AutoTalk,AutoTalkData_NPC_S4_Jorouda,talkDatas[1],剧情对话 | wait=0.50 speaker=1,"過酷な環境の中　此処までやってくるとは
 さぞ大変だったじゃろう。","You've come all this way through
 such a harsh environment,
@@ -85,13 +85,13 @@ it must've been tough journey.","能在这么严酷的环境里走到这里，
 AutoTalk:AutoTalkData_NPC_S4_Jorouda:2,AutoTalk,AutoTalkData_NPC_S4_Jorouda,talkDatas[2],剧情对话 | wait=0.50 speaker=1,"安全な此の場所で、
 わっちと共に　心ゆくまで休んでいくがよい。","Rest here in safety,
 take your time, and relax with me.","就在这安全的地方，
-跟我一起尽情地休息一会儿吧。"
+与我一同尽情歇息吧。"
 AutoTalk:AutoTalkData_NPC_S5_Fray:0,AutoTalk,AutoTalkData_NPC_S5_Fray,talkDatas[0],剧情对话 | wait=0.50 speaker=1,"海だー！
 しおかぜが　きもちいいねっ","Sea!
 The salty breeze feels great!","是大海～！
 海风好舒服呀"
 AutoTalk:AutoTalkData_NPC_S5_Fray:1,AutoTalk,AutoTalkData_NPC_S5_Fray,talkDatas[1],剧情对话 | wait=0.50 speaker=1,"このまま　水遊び
-しちゃおうっかなぁ......？",Maybe I should just play in the water...?,"就这样玩玩水
+しちゃおうっかなぁ......？",Maybe I should just play in the water...?,"干脆就这样玩玩水
 好不好呢……？"
 AutoTalk:AutoTalkData_NPC_S5_Hyoe:0,AutoTalk,AutoTalkData_NPC_S5_Hyoe,talkDatas[0],剧情对话 | wait=0.50 speaker=1,"ゆったり　とんでたら
 こんな　とおくまできちゃった......！","I was flying slowly and
@@ -121,8 +121,8 @@ for the first time...","其实我啊，
 今天也是第一次坐……"
 AutoTalk:AutoTalkData_NPC_S6_Terukku:2,AutoTalk,AutoTalkData_NPC_S6_Terukku,talkDatas[2],剧情对话 | wait=0.50 speaker=1,"都会なのに　緑に囲まれながら
 移動できるなんて　便利だなあ！","Even though it's a city,
-it's nice being surrounded by greenery!","明明是城市却能一边被绿意环绕
-一边移动真方便啊！"
+it's nice being surrounded by greenery!","明明身在城市，却能穿梭在绿意之中，
+真方便啊！"
 AutoTalk:AutoTalkData_NPC_S6_Terukku:3,AutoTalk,AutoTalkData_NPC_S6_Terukku,talkDatas[3],剧情对话 | wait=0.50 speaker=6,（ちゃんと　役に立ってる......）,(Everything's working properly...),（还挺派得上用场的……）
 AutoTalk:AutoTalkData_NPC_S6_Zia:0,AutoTalk,AutoTalkData_NPC_S6_Zia,talkDatas[0],剧情对话 | wait=0.50 speaker=1,"そこの店から　ウマソ～なニオイがするから
 フラッと　入ってみたんだけどよ......","I smelled something delicious
@@ -308,7 +308,7 @@ AutoTalk:Def_God_Vore2:5,AutoTalk,Def_God_Vore2,talkDatas[5],剧情对话 | wait
 思いのままにできる　ささいなことです。","Size means nothing to me.
 Magic can fix that easily.","身体大小这种事，我用魔法就能
 随心所欲地改变，根本不算什么。"
-AutoTalk:Def_God_Vore2:6,AutoTalk,Def_God_Vore2,talkDatas[6],剧情对话 | wait=0.10 speaker=6,（神さま　変なスイッチ入っちゃった...）,(Oh no... We flipped a weird switch...),（神大人好像被打开了奇怪的开关……）
+AutoTalk:Def_God_Vore2:6,AutoTalk,Def_God_Vore2,talkDatas[6],剧情对话 | wait=0.10 speaker=6,（神さま　変なスイッチ入っちゃった...）,(Oh no... We flipped a weird switch...),（神大人好像被按到了奇怪的开关……）
 AutoTalk:Def_God_Water:0,AutoTalk,Def_God_Water,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"なんども　水に溺れて
 命を　落としているようですね。","You’ve drowned again.
 That water’s no joke.","看来你一次次在水里溺水，
@@ -770,7 +770,7 @@ them first and keep them safe.","为了不让宝珠之力消失的未来到来�
 我们必须先找到它们并守护起来。"
 AutoTalk:S1_PostDragon_01:0,AutoTalk,S1_PostDragon_01,talkDatas[0],剧情对话 | wait=0.10 speaker=1,"こんにちは！
 フィズさんたちに　お届け物です！",,"你好！
-有东西要送给菲兹你们！"
+有包裹要送给菲兹你们！"
 AutoTalk:S1_PostDragon_01:1,AutoTalk,S1_PostDragon_01,talkDatas[1],剧情对话 | wait=0.10 speaker=3,わあ！誰からだろう？,,哇！会是谁寄来的呢？
 AutoTalk:S1_PostDragon_01:2,AutoTalk,S1_PostDragon_01,talkDatas[2],剧情对话 | wait=1.50 speaker=1,"こちらです！
 ......どうぞ！",,"在这里！
@@ -1368,7 +1368,7 @@ AutoTalk:S5_2_2_T0:2,AutoTalk,S5_2_2_T0,talkDatas[2],剧情对话 | wait=5.00 sp
 Kyuma, please!",对哦……！库玛，拜托你！
 AutoTalk:S5_2_2_T1:0,AutoTalk,S5_2_2_T1,talkDatas[0],剧情对话 | wait=5.00 speaker=5,"わーい通れた！
 キューマくん　ありがとう～っ！","Yay, we made it through!
-Thanks, Kyuma!","哇～！过来了！
+Thanks, Kyuma!","哇～！能过去了！
 库玛，谢谢你～！"
 AutoTalk:S5_2_2_T2:0,AutoTalk,S5_2_2_T2,talkDatas[0],剧情对话 | wait=4.00 speaker=5,"...こっちの床は　リュトロンくんの炎で
 燃やせそうだね！","...Looks like Rythron’s flame
@@ -1518,7 +1518,7 @@ Akatsuki told me about you.","啊……！
 AutoTalk:S5_3_11_T22:1,AutoTalk,S5_3_11_T22,talkDatas[1],剧情对话 | wait=1.00 speaker=12,"ボクの名前はタソガレ。...アカツキちゃんと
 ボクは　双子のドラゴンなんだ！","My name is Tasogare.
 Akatsuki and I are twins!","我叫黄昏。……我和晓
-是双生的龙！"
+是双胞胎龙！"
 AutoTalk:S5_3_11_T22:2,AutoTalk,S5_3_11_T22,talkDatas[2],剧情对话 | wait=1.00 speaker=12,"ボクもみんなのこと、応援してるよ。
 頑張ってね！","I’m cheering for you all too.
 Do your best!","我也会为大家加油的哦。
@@ -1686,7 +1686,7 @@ Not getting fooled here!","……
 AutoTalk:S6_2_1_T10:0,AutoTalk,S6_2_1_T10,talkDatas[0],剧情对话 | wait=0.10 speaker=1,"ありがとう......僕はこの列車の車掌です。
 皆さんのおかげで　助かりました！","Thank you... I’m the conductor.
 You all saved me!
-","谢谢……我是这趟列车的列车长。
+","谢谢……我是这趟列车的车长。
 多亏各位，我得救了！"
 AutoTalk:S6_2_1_T10:1,AutoTalk,S6_2_1_T10,talkDatas[1],剧情对话 | wait=0.10 speaker=3,どういたしまして！,You're welcome!,不客气！
 AutoTalk:S6_2_1_T10:2,AutoTalk,S6_2_1_T10,talkDatas[2],剧情对话 | wait=0.10 speaker=1,"列車はまもなく　終着駅に到着します。
@@ -2359,7 +2359,7 @@ DamageTalk:damage_water:2:0,DamageTalk,damage_water,player[2].damage_water[0],�
 DamageTalk:damage_water:3:0,DamageTalk,damage_water,player[3].damage_water[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,おぼれる…！,I'm drowning…!,要淹死了…！
 DamageTalk:damage_water:3:1,DamageTalk,damage_water,player[3].damage_water[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,くるしいっ…,I can't breathe…,好难受…
 DamageTalk:damage_water:3:2,DamageTalk,damage_water,player[3].damage_water[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,たすけて…,Help...,救命…
-DamageTalk:damage_water:3:3,DamageTalk,damage_water,player[3].damage_water[3],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,はひっ,Sigh,哈咿！
+DamageTalk:damage_water:3:3,DamageTalk,damage_water,player[3].damage_water[3],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,はひっ,Sigh,嘎！
 DamageTalk:damage_water:4:0,DamageTalk,damage_water,player[4].damage_water[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,?,?,？
 DamageTalk:damage_water:5:0,DamageTalk,damage_water,player[5].damage_water[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,?,?,？
 DamageTalk:miss_electric:0:0,DamageTalk,miss_electric,player[0].miss_electric[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,う゛あッ,Ow!,呜啊！
@@ -2555,9 +2555,9 @@ TextData:NpcTalk剣士くん_default:1,TextData,NpcTalk剣士くん_default,text
 TextData:NpcTalk剣士くん_talked:0,TextData,NpcTalk剣士くん_talked,textDatas[0],短文本 / 提示 / 名单 | きをつけて！,きをつけて！,Take care!,小心点！
 TextData:NpcTalk剣士くん_talked:1,TextData,NpcTalk剣士くん_talked,textDatas[1],短文本 / 提示 / 名单 | またこんど！,またこんど！,See you next time!,下次见！
 TextData:NpcTalk女狼蛇_default:0,TextData,NpcTalk女狼蛇_default,textDatas[0],短文本 / 提示 / 名单 | ほう…,ほう…,Oh...,嚯…
-TextData:NpcTalk女狼蛇_default:1,TextData,NpcTalk女狼蛇_default,textDatas[1],短文本 / 提示 / 名单 | よくきたのぅ,よくきたのぅ,Welcome.,欢迎你来呀
-TextData:NpcTalk女狼蛇_talked:0,TextData,NpcTalk女狼蛇_talked,textDatas[0],短文本 / 提示 / 名单 | 可愛らしいのう,可愛らしいのう,So cute!,真可爱呀
-TextData:NpcTalk女狼蛇_talked:1,TextData,NpcTalk女狼蛇_talked,textDatas[1],短文本 / 提示 / 名单 | よく休むのじゃぞ,よく休むのじゃぞ,Get some good rest.,好好休息呀
+TextData:NpcTalk女狼蛇_default:1,TextData,NpcTalk女狼蛇_default,textDatas[1],短文本 / 提示 / 名单 | よくきたのぅ,よくきたのぅ,Welcome.,欢迎你来呐
+TextData:NpcTalk女狼蛇_talked:0,TextData,NpcTalk女狼蛇_talked,textDatas[0],短文本 / 提示 / 名单 | 可愛らしいのう,可愛らしいのう,So cute!,真是可爱呐
+TextData:NpcTalk女狼蛇_talked:1,TextData,NpcTalk女狼蛇_talked,textDatas[1],短文本 / 提示 / 名单 | よく休むのじゃぞ,よく休むのじゃぞ,Get some good rest.,好好歇息呐
 TextData:NpcTalk種どら_default:0,TextData,NpcTalk種どら_default,textDatas[0],短文本 / 提示 / 名单 | ねえねえ！,ねえねえ！,"Hey, hey!",喂喂！
 TextData:NpcTalk種どら_default:1,TextData,NpcTalk種どら_default,textDatas[1],短文本 / 提示 / 名单 | きいてきいて！,きいてきいて！,Listen up!,听我说听我说！
 TextData:NpcTalk種どら_talked:0,TextData,NpcTalk種どら_talked,textDatas[0],短文本 / 提示 / 名单 | またね！,またね！,See you soon!,下次见！
@@ -2706,13 +2706,13 @@ Title:TitleData_lv0_root(ActiveAI):label,Title,TitleData_lv0_root(ActiveAI),labe
 Title:TitleData_lv0_root_Consumer:info,Title,TitleData_lv0_root_Consumer,info,标题菜单条目,, ,
 Title:TitleData_lv0_root_Consumer:infoDisable,Title,TitleData_lv0_root_Consumer,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv0_root_Consumer:label,Title,TitleData_lv0_root_Consumer,label,标题菜单条目,top, ,top
-Title:TitleData_lv1_0_Demo:info,Title,TitleData_lv1_0_Demo,info,标题菜单条目,デモをプレイする！......たのしい　たいけんばんが　あそべます。,Demo Play! ...... Try a fun preview version of the game.  ,游玩体验版！……可以游玩好玩的体验版。
+Title:TitleData_lv1_0_Demo:info,Title,TitleData_lv1_0_Demo,info,标题菜单条目,デモをプレイする！......たのしい　たいけんばんが　あそべます。,Demo Play! ...... Try a fun preview version of the game.  ,游玩体验版！……可以玩到有趣的体验版。
 Title:TitleData_lv1_0_Demo:infoDisable,Title,TitleData_lv1_0_Demo,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>满足特定条件后就会解锁。</color>
 Title:TitleData_lv1_0_Demo:label,Title,TitleData_lv1_0_Demo,label,标题菜单条目,デモをプレイする！,Demo Play!,游玩体验版！
-Title:TitleData_lv1_0_StartGame:info,Title,TitleData_lv1_0_StartGame,info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……可以开始玩「菲兹与彩虹星」。
+Title:TitleData_lv1_0_StartGame:info,Title,TitleData_lv1_0_StartGame,info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……可以开始游玩「菲兹与彩虹之星」。
 Title:TitleData_lv1_0_StartGame:infoDisable,Title,TitleData_lv1_0_StartGame,infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_0_StartGame:label,Title,TitleData_lv1_0_StartGame,label,标题菜单条目,ゲームを始める,Start Game,开始游戏
-Title:TitleData_lv1_0_StartGame(ActiveAI):info,Title,TitleData_lv1_0_StartGame(ActiveAI),info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……可以开始玩「菲兹与彩虹星」。
+Title:TitleData_lv1_0_StartGame(ActiveAI):info,Title,TitleData_lv1_0_StartGame(ActiveAI),info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……可以开始游玩「菲兹与彩虹之星」。
 Title:TitleData_lv1_0_StartGame(ActiveAI):infoDisable,Title,TitleData_lv1_0_StartGame(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_0_StartGame(ActiveAI):label,Title,TitleData_lv1_0_StartGame(ActiveAI),label,标题菜单条目,ゲームを始める,Start Game,开始游戏
 Title:TitleData_lv1_1_Bonus:info,Title,TitleData_lv1_1_Bonus,info,标题菜单条目,ボーナス......ゲームの　おまけコンテンツが　ここで　たのしめます。,Bonus ...... Enjoy extra bonus content here.,额外内容……可以在这里玩到游戏附赠的内容。
@@ -2743,7 +2743,7 @@ Title:TitleData_lv2_0_表示設定:info,Title,TitleData_lv2_0_表示設定,info,
 Title:TitleData_lv2_0_表示設定:infoDisable,Title,TitleData_lv2_0_表示設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_0_表示設定:label,Title,TitleData_lv2_0_表示設定,label,标题菜单条目,グラフィック設定,Graphic Settings,画面设置
 Title:TitleData_lv2_1_Extra:info,Title,TitleData_lv2_1_Extra,info,标题菜单条目,エクストラ.....ここは　フィズにじを　クリアしたものだけが　はいれる　トクベツな　モード。　むずかしくなった　フィズにじに　ちょうせんしよう。,"Extra ..... A special mode unlocked only after completing 
-Fiz and the Rainbow Planet.  Challenge the tougher Fiz and the Rainbow Planet!",额外模式……这里是只有通关「菲兹与彩虹星」的人才能进入的特别模式。来挑战变得更难的「菲兹与彩虹星」吧。
+Fiz and the Rainbow Planet.  Challenge the tougher Fiz and the Rainbow Planet!",额外模式……这里是只有通关「菲兹与彩虹之星」的人才能进入的特别模式。来挑战变得更难的「菲兹与彩虹之星」吧。
 Title:TitleData_lv2_1_Extra:infoDisable,Title,TitleData_lv2_1_Extra,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>满足特定条件后就会解锁。</color>
 Title:TitleData_lv2_1_Extra:label,Title,TitleData_lv2_1_Extra,label,标题菜单条目,エクストラ,Extra,额外模式
 Title:TitleData_lv2_1_シアタールーム:info,Title,TitleData_lv2_1_シアタールーム,info,标题菜单条目,シアタールーム.....いちどみた　ムービーを　もういちど！　ぼうけんの　おもいでを　ふりかえろう。,Theater Room ..... Watch movies you've already seen once again! Relive your adventure memories.,放映室……看过的影片可以再看一次！来回味冒险的回忆吧。
@@ -2752,7 +2752,7 @@ Title:TitleData_lv2_1_シアタールーム:label,Title,TitleData_lv2_1_シア�
 Title:TitleData_lv2_1_音声設定:info,Title,TitleData_lv2_1_音声設定,info,标题菜单条目,サウンドせってい......おんせいにかんする　せっていを　かえることが　できます。,Audio Settings : ...... Change volume and sound settings.,声音设置……可以更改声音相关的设置。
 Title:TitleData_lv2_1_音声設定:infoDisable,Title,TitleData_lv2_1_音声設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_1_音声設定:label,Title,TitleData_lv2_1_音声設定,label,标题菜单条目,サウンド設定,Audio Settings  ,声音设置
-Title:TitleData_lv2_2_SoundTest:info,Title,TitleData_lv2_2_SoundTest,info,标题菜单条目,サウンドテスト......ゲームできいた　アノきょくを　おてがるに！ おんがくで　フィズにじのせかいを　たのしもう。,Sound Test ...... Listen to your favorite tracks from Fiz and the Rainbow Planet.  ,音乐测试……可以轻松听到游戏里听过的那些曲子！用音乐来享受「菲兹与彩虹星」的世界吧。
+Title:TitleData_lv2_2_SoundTest:info,Title,TitleData_lv2_2_SoundTest,info,标题菜单条目,サウンドテスト......ゲームできいた　アノきょくを　おてがるに！ おんがくで　フィズにじのせかいを　たのしもう。,Sound Test ...... Listen to your favorite tracks from Fiz and the Rainbow Planet.  ,音乐测试……可以轻松听到游戏里听过的那些曲子！用音乐来享受「菲兹与彩虹之星」的世界吧。
 Title:TitleData_lv2_2_SoundTest:infoDisable,Title,TitleData_lv2_2_SoundTest,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>满足特定条件后就会解锁。</color>
 Title:TitleData_lv2_2_SoundTest:label,Title,TitleData_lv2_2_SoundTest,label,标题菜单条目,サウンドテスト,Sound Test,音乐测试
 Title:TitleData_lv2_2_TimeAttack:info,Title,TitleData_lv2_2_TimeAttack,info,标题菜单条目,タイムアタック......ゲームのさいしょから　さいごまで　じかんをけいそくしながら　あそべるモード。　リアルタイムアタック（RTA）に　おすすめ。,"Time Attack ...... Race from start to finish while your time is recorded.
@@ -2970,11 +2970,11 @@ VSQplus","
 外部素材
 
 
-皮波亚仓库
+ぴぽやそうこ（皮波亚仓库）
 
-音效实验室
+こうかおんラボ（音效实验室）
 
-音效工房
+こうかおんこうぼう（音效工房）
 
 OtoJin
 
@@ -3048,15 +3048,15 @@ SPECIAL THANKS
 特别鸣谢
 
 
-Tane
+たね（塔内）
 
-Ohimechin
+おひめちん（公主亲）
 
-　tamayura.
+　たまゆら。（玉响）
 
-Mooon_Mohuo
+もふおさお（毛茸茸）
 
-merudo
+めるど（梅露多）
 "
 localization:Ending Table:Ending_P060,localization,Ending Table,Ending_P060,Unity Localization 表（UI/菜单/结局字幕）,"
 
@@ -3096,13 +3096,13 @@ zaxsya97
 
 zaxsya97
 
-Aran_Saijo
+アラン・サイジョー（亚兰·赛乔）
 
-gobouame
+ごぼうあじ（牛蒡味）
 
-olient_
+オリー（奥莉）
 
-Hyoe
+ひょえ（希奥埃）
 "
 localization:Ending Table:Ending_P070,localization,Ending Table,Ending_P070,Unity Localization 表（UI/菜单/结局字幕）,"
 
@@ -3144,17 +3144,17 @@ DOS
 特别鸣谢
 
 
-rickey_315
+リッキー（里基）
 
-Baru
+バル（巴尔）
 
-tobiuo
+とびうお（飞鱼）
 
 DOS
 
-Nairo
+ないろ（奈伊罗）
 
-Moegi_Ringo
+もえぎりんご（萌木苹果）
 "
 localization:Ending Table:Ending_P080,localization,Ending Table,Ending_P080,Unity Localization 表（UI/菜单/结局字幕）,"
 
@@ -3211,7 +3211,7 @@ Forever Entertainment  S. A.
 All  Rights,  including  the  copyrights
 of  Game,  Music  and  program,
 reserved  by  Yoshi3110."
-localization:Ending Table:Ending_P920,localization,Ending Table,Ending_P920,Unity Localization 表（UI/菜单/结局字幕）,にじいろドラゴン,にじいろドラゴン,虹色龙
+localization:Ending Table:Ending_P920,localization,Ending Table,Ending_P920,Unity Localization 表（UI/菜单/结局字幕）,にじいろドラゴン,にじいろドラゴン,にじいろドラゴン（虹色龙）
 localization:Ending Table:Ending_P930,localization,Ending Table,Ending_P930,Unity Localization 表（UI/菜单/结局字幕）,THE END,THE END,THE END
 "localization:Ending Table:Ending_S1_Chara_Fiz
 ",localization,Ending Table,"Ending_S1_Chara_Fiz
@@ -3389,7 +3389,7 @@ localization:Message Table:Stage4_1_1_message00,localization,Message Table,Stage
 <color=#FF5555FF>Rythron</color> can use his wings
 to perform a triple jump!","【建议】
 <color=#FF5555FF>琉特隆</color>能用翅膀
-进行三段跳哦！"
+三段跳哦！"
 localization:Message Table:Stage4_1_2_message00,localization,Message Table,Stage4_1_2_message00,Unity Localization 表（UI/菜单/结局字幕）,"<color=#FF5555FF>リュトロン</color>の　必殺ワザは
 「ファイヤーボール」だ！
 ⑪ を押して　火炎の弾を
@@ -3469,7 +3469,7 @@ at the right time!","出现「！！」时就拉竿，
 接住飞过来的鱼吧！"
 "localization:Title Contents Table:LanguageSettings_Bottom
 ",localization,Title Contents Table,"LanguageSettings_Bottom
-",Unity Localization 表（UI/菜单/结局字幕）,   ① を押して　選択してください。,Press  ①  to select.,   按 ① 选择。
+",Unity Localization 表（UI/菜单/结局字幕）,   ① を押して　選択してください。,Press  ①  to select.,   请按 ① 选择。
 localization:Title Contents Table:LanguageSettings_SubHeader,localization,Title Contents Table,LanguageSettings_SubHeader,Unity Localization 表（UI/菜单/结局字幕）,Which language do you play in?,Which language do you play in?,你想用哪种语言游玩？
 localization:Title Contents Table:SoundTest_Bottom,localization,Title Contents Table,SoundTest_Bottom,Unity Localization 表（UI/菜单/结局字幕）,     -  + ：曲を選ぶ    = ：再生/停止 　 % ：モード切り替え,     -  + ：Select    　= ：Play/Pause　 　% ：Change Mode,     -  + ：选曲    = ：播放/停止 　 % ：切换模式
 localization:Title Contents Table:TheaterRoom_Bottom,localization,Title Contents Table,TheaterRoom_Bottom,Unity Localization 表（UI/菜单/结局字幕）,・：ムービーを選ぶ   ⑪：再生する   ⑫：タイトルに戻る,・：Select   ⑪：Play   ⑫：Back to Title,・：选择影片   ⑪：播放   ⑫：返回标题
@@ -3491,9 +3491,9 @@ localization:Title Contents Table:Title_ControlSettings_SpecialAttack,localizati
 localization:Title Contents Table:Title_ControlSettings_Vibration,localization,Title Contents Table,Title_ControlSettings_Vibration,Unity Localization 表（UI/菜单/结局字幕）,しんどう,Vibration,震动
 localization:Title Contents Table:Title_Copy_Consumer,localization,Title Contents Table,Title_Copy_Consumer,Unity Localization 表（UI/菜单/结局字幕）,"© 2024-2025 Developed by にじいろドラゴン.
 Published by Forever Entertainment S. A.","© 2024-2025 Developed by Nijiiro Dragon.
-Published by Forever Entertainment S. A.","© 2024-2025 由虹色龙开发。
-由 Forever Entertainment S. A. 发行。"
-localization:Title Contents Table:Title_Copy_Default,localization,Title Contents Table,Title_Copy_Default,Unity Localization 表（UI/菜单/结局字幕）,©2024 にじいろドラゴン,©2024 にじいろドラゴン,©2024 虹色龙
+Published by Forever Entertainment S. A.","© 2024-2025 にじいろドラゴン（虹色龙）开发，
+Forever Entertainment S. A. 发行。"
+localization:Title Contents Table:Title_Copy_Default,localization,Title Contents Table,Title_Copy_Default,Unity Localization 表（UI/菜单/结局字幕）,©2024 にじいろドラゴン,©2024 にじいろドラゴン,©2024 にじいろドラゴン（虹色龙）
 localization:Title Contents Table:Title_DisplaySettings_AutoFrame,localization,Title Contents Table,Title_DisplaySettings_AutoFrame,Unity Localization 表（UI/菜单/结局字幕）,AUTO  FRAME,AUTO  FRAME,自动调整画面
 localization:Title Contents Table:Title_DisplaySettings_FullScreen,localization,Title Contents Table,Title_DisplaySettings_FullScreen,Unity Localization 表（UI/菜单/结局字幕）,FULL SCREEN,FULL SCREEN,全屏
 localization:Title Contents Table:Title_DisplaySettings_Header,localization,Title Contents Table,Title_DisplaySettings_Header,Unity Localization 表（UI/菜单/结局字幕）,GRAPHIC SETTINGS,GRAPHIC SETTINGS,画面设置
@@ -3630,8 +3630,7 @@ Cost: Same as Restored HP","----动作----
 ⑪ ：跳跃・滞空
 ⑫ ：举弓・放箭
 ⑬ ：治愈之祈
-
-消耗：与恢复的体力值相同"
+消耗：与回复量相同"
 localization:UI Table:CanvasCamera_Pause_Chara_Rubell_L,localization,UI Table,CanvasCamera_Pause_Chara_Rubell_L,Unity Localization 表（UI/菜单/结局字幕）,"-------ルーベル-------
 
 　<color=#FFAAFFFF>「わたしの糸で
@@ -3779,7 +3778,7 @@ Macaron Moon","<size=16>第7关</size>
 马卡龙月亮"
 localization:UI Table:MovieCanvasCamera_Stage8,localization,UI Table,MovieCanvasCamera_Stage8,Unity Localization 表（UI/菜单/结局字幕）,"<size=16>ステージ8</size>
 名称未定エリア",,"<size=16>第8关</size>
-名称未定区域"
+未命名区域"
 localization:UI Table:MovieSkip_AandB,localization,UI Table,MovieSkip_AandB,Unity Localization 表（UI/菜单/结局字幕）, - と =  同時押しでスキップ,Press  -  and  =  together to skip, - 和 =  同时按下即可跳过
 localization:UI Table:Result_BackToTitle,localization,UI Table,Result_BackToTitle,Unity Localization 表（UI/菜单/结局字幕）,- ：タイトルにもどる,- ：Back to Title,- ：返回标题
 localization:UI Table:Result_OpenET,localization,UI Table,Result_OpenET,Unity Localization 表（UI/菜单/结局字幕）,"タイムアタック（エクストラ）で

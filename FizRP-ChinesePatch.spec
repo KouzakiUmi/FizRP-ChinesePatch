@@ -14,7 +14,7 @@ datas 生成规则：
   2. 每个载荷文件一条：源 ``dist-additive/payload/<rel>``，
      目标 ``additive-payload/<posix dirname(rel)>``。
 
-共 ``4 + N`` 条（N = 载荷文件数；v1.2.0 为 N=125 → 129 条）。
+共 ``4 + N`` 条（N = 载荷文件数；v1.2.1 为 N=125 → 129 条）。
 载荷条目**不手写**：优先读 ``manifest-additive.json``（权威清单、顺序稳定），
 缺失时才回退遍历载荷目录。期望条目数动态计算，避免载荷增减后闸门误报。
 
@@ -109,9 +109,10 @@ a = Analysis(
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=[],
+    excludes=['pytest', 'unittest', 'doctest', 'pydoc', 'distutils',
+              'setuptools', 'pip', 'lib2to3', 'test'],
     noarchive=False,
-    optimize=0,
+    optimize=1,
 )
 pyz = PYZ(a.pure)
 

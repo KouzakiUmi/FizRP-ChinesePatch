@@ -113,8 +113,8 @@ def write_release(out_dir, version, manifest):
     shutil.copy2(OFL_SRC, os.path.join(out_dir, "LICENSE-fusion-pixel-font.txt"))
     for name, text in (("README.txt", render(README_SRC, version)),
                        ("KNOWN-ISSUES.txt", render(KNOWN_SRC, version)),
-                       ("安装.bat", INSTALL_BAT),
-                       ("卸载.bat", UNINSTALL_BAT)):
+                       ("install.bat", INSTALL_BAT),
+                       ("uninstall.bat", UNINSTALL_BAT)):
         path = os.path.join(out_dir, name)
         with open(path, "w", encoding="utf-8", newline="\n") as handle:
             handle.write(text)
@@ -127,13 +127,21 @@ def write_zip(out_dir, zip_path):
     if os.path.exists(zip_path):
         os.remove(zip_path)
     prefix = os.path.basename(out_dir) + "/"
-    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+    # 固定时间戳，保证相同输入产出相同 zip（载荷/说明内容变化时哈希仍会改变）。
+    fixed_ts = (2026, 10, 18, 0, 0, 0)
+    with zipfile.ZipFile(zip_path, "w") as archive:
         for dirpath, dirnames, filenames in os.walk(out_dir):
             dirnames.sort()
             for name in sorted(filenames):
                 full = os.path.join(dirpath, name)
                 rel = os.path.relpath(full, out_dir).replace(os.sep, "/")
-                archive.write(full, prefix + rel)
+                info = zipfile.ZipInfo(prefix + rel, date_time=fixed_ts)
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.external_attr = 0o100644 << 16
+                with open(full, "rb") as handle:
+                    archive.writestr(info, handle.read(),
+                                     compress_type=zipfile.ZIP_DEFLATED,
+                                     compresslevel=9)
     digest = sha256(zip_path)
     checksum_path = zip_path + ".sha256"
     with open(checksum_path, "w", encoding="utf-8", newline="\n") as handle:
@@ -159,7 +167,7 @@ def verify_zip(zip_path, manifest):
             if digest != entry["sha256"]:
                 problems.append("hash: " + entry["path"])
         for required in ("README.txt", "KNOWN-ISSUES.txt", "patch_tool.py",
-                         "LICENSE-fusion-pixel-font.txt", "安装.bat", "卸载.bat"):
+                         "LICENSE-fusion-pixel-font.txt", "install.bat", "uninstall.bat"):
             if prefix + required not in names:
                 problems.append("missing: " + required)
     return problems

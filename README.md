@@ -25,9 +25,9 @@
 | 产物 | 说明 |
 | --- | --- |
 | `dist/FizRP-ChinesePatch.exe` | 图形安装器（onefile；内嵌 125 个追加式载荷 + `manifest-additive.json` + 说明/授权） |
-| `dist/FizRP-X2-v1.2.0.zip` | Python 版安装包（`payload/` + `patch_tool.py` + 说明 + 授权 + 安装/卸载.bat） |
+| `dist/FizRP-X2-v1.2.1.zip` | Python 版安装包（`payload/` + `patch_tool.py` + 说明 + 授权 + install/uninstall.bat） |
 | `dist-additive/payload/` | 载荷（发布源） |
-| `dist-additive/manifest-additive.json` | 载荷权威清单（版本 1.2.0，125 文件） |
+| `dist-additive/manifest-additive.json` | 载荷权威清单（版本 1.2.1，125 文件） |
 | `dist-additive/FizAndTheRainbowPlanet_Data/` | `build_additive_data.py` 的构建中间产物（不是直接分发物） |
 | `dist/legacy/X1/` | X1 替换式归档（106 文件、版本 1.1.0、语言画面第二项；**本机归档，不入库**） |
 

@@ -248,6 +248,17 @@ def _tokens_literal_newline(text: str) -> collections.Counter:
     return collections.Counter({"\\n": count}) if count else collections.Counter()
 
 
+def _nonblank_newline_count(text: str) -> int:
+    """非空行之间的换行数（忽略纯空白行）。
+
+    UI/字幕（``localization:``）允许译者按排版增删空行（例如 10px 字号下
+    去掉多余空行），但非空行的换行结构仍必须与源文一致，防止丢行/合并行。
+    对话与其它文本系统仍按真实换行总数严格比对（空行也参与停顿节奏）。
+    """
+    lines = [line for line in RE_LINE_BREAK.split(text) if line.strip()]
+    return max(0, len(lines) - 1)
+
+
 def _diff_tokens(base: collections.Counter,
                  other: collections.Counter) -> tuple[list[str], list[str]]:
     """以 base（源文）为基准比对 other（译文），返回（缺失, 多出）的可读 token 列表。"""
@@ -272,11 +283,26 @@ TOKEN_CATEGORIES = (
 )
 
 
-def _placeholder_problem(ja: str, zh: str) -> str:
-    """四类 token 逐一比对；有问题返回可读描述（类别 + 缺失/多出的 token + 两侧总数）。"""
+def _placeholder_problem(ja: str, zh: str,
+                         ignore_blank_newlines: bool = False) -> str:
+    """四类 token 逐一比对；有问题返回可读描述（类别 + 缺失/多出的 token + 两侧总数）。
+
+    ``ignore_blank_newlines=True``（仅 localization: UI/字幕）时，真实换行只比较
+    **非空行结构**，允许增删空行做排版；花括号/printf/字面转义等仍严格。
+    """
     clauses: list[str] = []
     for label, extract in TOKEN_CATEGORIES:
-        source, target = extract(ja), extract(zh)
+        if ignore_blank_newlines and label == "真实换行":
+            source_count = _nonblank_newline_count(ja)
+            target_count = _nonblank_newline_count(zh)
+            if source_count == target_count:
+                continue
+            source = (collections.Counter({"真实换行": source_count})
+                      if source_count else collections.Counter())
+            target = (collections.Counter({"真实换行": target_count})
+                      if target_count else collections.Counter())
+        else:
+            source, target = extract(ja), extract(zh)
         if source == target:
             continue
         missing, extra = _diff_tokens(source, target)
@@ -338,7 +364,9 @@ def _summary(zh: str) -> str:
 # --------------------------------------------------------------------------- #
 # 逐行规则
 # --------------------------------------------------------------------------- #
-def _check_row(ja: str, zh: str, allow_empty: bool) -> tuple[list[tuple[str, str]],
+def _check_row(ja: str, zh: str, allow_empty: bool,
+               ignore_blank_newlines: bool = False,
+               ignore_kana: bool = False) -> tuple[list[tuple[str, str]],
                                                               list[tuple[str, str]]]:
     """对一条记录做全部机械校验，返回（错误列表, 警告列表），元素为 (rule, message)。"""
     errors: list[tuple[str, str]] = []
@@ -360,7 +388,8 @@ def _check_row(ja: str, zh: str, allow_empty: bool) -> tuple[list[tuple[str, str
         return errors, warnings
 
     # 1. placeholder（含真实换行 / 字面 \n，两个类别互不抵消）
-    problem = _placeholder_problem(ja, zh)
+    problem = _placeholder_problem(ja, zh,
+                                   ignore_blank_newlines=ignore_blank_newlines)
     if problem:
         errors.append(("placeholder", problem))
 
@@ -373,9 +402,9 @@ def _check_row(ja: str, zh: str, allow_empty: bool) -> tuple[list[tuple[str, str
     if not zh.strip():
         errors.append(("empty", "译文为空（该列未填写）"))
 
-    # 4. kana-residue
+    # 4. kana-residue（Ending 感谢名单的署名/专名可保留日文原名）
     kana, total, ratio = _kana_ratio(zh)
-    if total and ratio > KANA_RATIO_LIMIT:
+    if total and ratio > KANA_RATIO_LIMIT and not ignore_kana:
         errors.append((
             "kana-residue",
             f"疑似日文残留: 假名 {kana}/{total} 字符 = {ratio * 100:.1f}%"
@@ -509,7 +538,12 @@ def _scan(path: str, column: str, allow_empty: bool, source_column: str) -> Repo
     groups: dict[str, list[tuple[int, int, str, str]]] = {}
 
     for number, (line, row_id, _comment, ja, zh) in enumerate(rows, start=1):
-        errors, warnings = _check_row(ja, zh, allow_empty)
+        errors, warnings = _check_row(
+            ja, zh, allow_empty,
+            ignore_blank_newlines=str(row_id).startswith("localization:"),
+            ignore_kana=(str(row_id).startswith("localization:Ending Table:Ending_P")
+                         or str(row_id).startswith("localization:Title Contents Table:Title_Copy")),
+        )
         report.errors.extend(
             {"line": line, "row": number, "id": row_id, "rule": rule, "message": message}
             for rule, message in errors
