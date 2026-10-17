@@ -4,7 +4,7 @@
  "version": "1.1.0",
  "built": "2026-10-17",
  "payload_files": 106,
- "payload_bytes": 65852788,
+ "payload_bytes": 65852729,
  "patch_info": {
   "payload_files": 106,
   "reference_hashes": {
@@ -21,8 +21,8 @@
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-assets-shared_assets_all.bundle",
-   "sha256": "761b7eb25bafbaefa5d0b53ffe446ad7dacb8bd874e803cd15c1b1b391e4ab6d",
-   "size": 81015
+   "sha256": "bf310ffd82e1cb9112ae77c0dcf6bc3ef70b7d486690131c0f18ef33d07a3a4a",
+   "size": 80956
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-string-tables-english(en)_assets_all.bundle",
@@ -31,7 +31,7 @@
   },
   {
    "path": "StreamingAssets/aa/catalog.json",
-   "sha256": "404e2ab4950c0c5b43863387855d1ac0274f64aaff781896aa76d4c7a1b68d6b",
+   "sha256": "9c3a0f475d56f792e8d383fac42667ed7b985911a3412d896ef005565a814acf",
    "size": 79538
   },
   {
@@ -146,7 +146,7 @@
   },
   {
    "path": "sharedassets13.assets",
-   "sha256": "1e1cd1a31bbe8affbc3aff99dc2e45c396b943645b2d7f5833369cb4d3e81a1b",
+   "sha256": "ef54e8d637ceef1c6ab39048e31c8f5a8af277ec755841aa7d6597a16622e22e",
    "size": 97088
   },
   {
@@ -241,7 +241,7 @@
   },
   {
    "path": "sharedassets3.assets",
-   "sha256": "61094b960ddfccf5e5436037f5115daa0f10178c7625e3be91a1516f3328ffc1",
+   "sha256": "098b29e6f793abe1cff3da6e6763def160b07733f6f706a83226f403d7bd0c4c",
    "size": 12403520
   },
   {
