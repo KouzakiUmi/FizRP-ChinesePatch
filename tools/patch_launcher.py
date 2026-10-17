@@ -414,7 +414,8 @@ class InstallerApp(tk.Tk):
         if patch_tool is None:
             text = "载荷漂移: 无法比对（patch_tool 不可用）"
             return "unknown", text, text
-        payload_dir = getattr(patch_tool, "PAYLOAD_DIR", None)
+        payload_dir = (patch_tool.payload_dir() if hasattr(patch_tool, "payload_dir")
+                           else getattr(patch_tool, "PAYLOAD_DIR", None))
         if not payload_dir or not os.path.isdir(payload_dir):
             text = "载荷漂移: 无法比对（找不到载荷目录：%s）" % (payload_dir or "未提供")
             return "unknown", text, text
@@ -486,7 +487,8 @@ class InstallerApp(tk.Tk):
         for item in (manifest or {}).get("files") or []:
             if isinstance(item, dict) and item.get("path"):
                 recorded[str(item["path"])] = str(item.get("sha256") or "")
-        payload_dir = getattr(patch_tool, "PAYLOAD_DIR", "") or ""
+        payload_dir = ((patch_tool.payload_dir() if hasattr(patch_tool, "payload_dir") else "")
+                           or "")
 
         bad = []
         for rel in rels:

@@ -38,7 +38,7 @@ from typing import Iterator, List, Optional, Tuple
 
 NAME = "Fiz 与彩虹星球 简体中文补丁"
 GAME = "Fiz and the Rainbow Planet"
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACKAGE_DIR = os.path.join(PROJECT_ROOT, "dist", "FizRP-Chinese-Patch")

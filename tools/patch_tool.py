@@ -160,7 +160,8 @@ _CMD_NAMES = ("detect", "verify", "install", "uninstall", "check")
 # 模式（替换式 / 追加式）——模块级单例，只由 CLI 与测试写入；默认替换式，
 # 因此所有历史调用路径（含 patch_launcher.py）的行为逐字节不变。
 # --------------------------------------------------------------------------
-_ADDITIVE_MODE = False
+_ADDITIVE_MODE = bool(ADDITIVE_PAYLOAD_DIR)
+# 打包态只带追加式载荷时自动走追加式；带替换式载荷（X1）时仍为 False。
 
 
 def set_additive(enabled):

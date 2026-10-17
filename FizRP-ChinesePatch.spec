@@ -29,8 +29,8 @@ try:
 except NameError:
     _ROOT = _os.getcwd()
 
-_MANIFEST = _os.path.join(_ROOT, 'manifest.json')
-_PAYLOAD_SRC = _os.path.join('dist', 'FizRP-Chinese-Patch', 'files')
+_MANIFEST = _os.path.join(_ROOT, 'dist-additive', 'manifest-additive.json')
+_PAYLOAD_SRC = _os.path.join('dist-additive', 'payload')
 _PAYLOAD_SRC_ABS = _os.path.join(_ROOT, _PAYLOAD_SRC)
 _PACKAGE = _os.path.join('dist', 'FizRP-Chinese-Patch')
 
@@ -61,6 +61,7 @@ _datas = [
     ('dist/FizRP-Chinese-Patch/README.txt', '.'),
     ('dist/FizRP-Chinese-Patch/KNOWN-ISSUES.txt', '.'),
     ('dist/FizRP-Chinese-Patch/LICENSE-fusion-pixel-font.txt', '.'),
+    ('dist-additive/manifest-additive.json', '.'),
 ]
 
 # N 条载荷条目，逐条校验源文件存在（缺失即中止，宁可失败也不产出缺载荷的 exe）
@@ -70,7 +71,7 @@ for _rel in _PAYLOAD_RELS:
     _rel = _rel.replace('\\', '/')
     _src = _PAYLOAD_SRC + '/' + _rel
     _subdir = _ppath.dirname(_rel)
-    _dst = 'payload' if not _subdir else 'payload/' + _subdir
+    _dst = 'additive-payload' if not _subdir else 'additive-payload/' + _subdir
     _datas.append((_src, _dst))
     if not _os.path.isfile(_os.path.join(_ROOT, _src)):
         _MISSING.append(_src)
@@ -79,7 +80,7 @@ if _MISSING:
     raise SystemExit(
         'ERROR: 载荷源文件缺失 %d 个，拒绝构建（例：%s）'
         % (len(_MISSING), ', '.join(_MISSING[:3])))
-_EXPECTED = 5 + len(_PAYLOAD_RELS)
+_EXPECTED = 6 + len(_PAYLOAD_RELS)
 if len(_datas) != _EXPECTED:
     raise SystemExit(
         'ERROR: datas 条目数 %d != 期望 %d（5 固定 + %d 载荷），拒绝构建'
