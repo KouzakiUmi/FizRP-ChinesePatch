@@ -4,7 +4,7 @@
  "version": "1.1.0",
  "built": "2026-10-17",
  "payload_files": 125,
- "payload_bytes": 24017808,
+ "payload_bytes": 24017760,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
@@ -133,8 +133,8 @@
   },
   {
    "path": "StreamingAssets/aa/catalog.json",
-   "sha256": "aacafe2ed476ab47f876df158582bca156171502eb7888f67eb7b76f5d2032c2",
-   "size": 79582
+   "sha256": "19a40cff5fbdedecf22b25e1dd2f1162d684fd6bcd942408db79c5dce6335df1",
+   "size": 79534
   },
   {
    "path": "changelog.txt",

@@ -213,8 +213,16 @@ def generate_catalog(out_dir):
     shutil.copy2(CATALOG_SOURCE, work_catalog)
     print("== catalog_sync: %s -> %s" % (CATALOG_SOURCE, work_catalog))
 
+    # 同步载荷里**所有** bundle，而不只是 es 串表：
+    # 图像本地化会额外带 localization-assets-{shared,japanese(ja)}，
+    # 只同步 es 会让那两个 bundle 的 m_BundleSize/m_Crc 保持原版值，
+    # Addressables 校验不过 -> 贴图不加载（踩过：游戏里图片没换）。
+    payload_bundles = sorted(f for f in os.listdir(bundle_dir) if f.endswith(".bundle"))
+    bundle_args = []
+    for name in payload_bundles:
+        bundle_args += ["--bundle", name]
     rc, _out, _err = run_catalog_tool([
-        work_catalog, "--bundle-dir", bundle_dir, "--bundle", ES_BUNDLE_NAME,
+        work_catalog, "--bundle-dir", bundle_dir, *bundle_args,
         "--crc", "0", "--write"])
     if rc != 0:
         raise RuntimeError("catalog_sync --write 退出码 %d（拒绝产出占位 catalog）" % rc)
