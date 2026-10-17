@@ -650,7 +650,9 @@ if __name__ == "__main__":
     ap.add_argument("--slot", type=int, default=2, help="Language 枚举槽位")
     ap.add_argument("--locale", default="en", help="占用的 locale 代码")
     ap.add_argument("--profile", default="zh_hans")
-    ap.add_argument("--font-size", type=int, default=12)
+    ap.add_argument("--font-size", type=int, default=10,
+                    help="中文槽位的字号；必须与所选字体设计尺寸一致"
+                         "（10px 字体就填 10，否则非整数放大会发虚）")
     ap.add_argument("--skip-fonts", action="store_true")
     ap.add_argument("--skip-strings", action="store_true")
     ap.add_argument("--allow-missing", action="store_true",
