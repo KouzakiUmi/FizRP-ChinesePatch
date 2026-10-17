@@ -278,9 +278,12 @@ def check_payload(out_dir=None):
     files = walk_files(out_dir)
     data_files = sum(1 for rel, _f in files if "/" not in rel.replace("\\", "/")
                      and rel.endswith(".assets"))
-    expect_total = _expected_total(data_files + 1)   # +1 = es 串表 bundle
-    lines.append("载荷文件数: %d（按 %d 数据 + %d loader + 插件 + catalog 推算期望 %d）"
-                 % (len(files), data_files + 1, RUNTIME_FILE_COUNT, expect_total))
+    # bundle 不再只有 es 串表：图像本地化会再加 ja / shared 两个 bundle。
+    # 按实际数量计，否则一加 bundle 就误报「文件数异常」。
+    bundle_files = sum(1 for rel, _f in files if rel.endswith(".bundle"))
+    expect_total = _expected_total(data_files + bundle_files)
+    lines.append("载荷文件数: %d（按 %d .assets + %d bundle + %d loader + 插件 + catalog 推算期望 %d）"
+                 % (len(files), data_files, bundle_files, RUNTIME_FILE_COUNT, expect_total))
     if len(files) != expect_total:
         problems.append("文件数 %d != %d" % (len(files), expect_total))
     rels = set(rel for rel, _full in files)

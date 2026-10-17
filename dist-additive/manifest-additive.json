@@ -1,17 +1,17 @@
 {
  "name": "Fiz 与彩虹星球 简体中文补丁",
  "game": "Fiz and the Rainbow Planet",
- "version": "1.0",
- "built": "2026-10-16",
- "payload_files": 122,
- "payload_bytes": 22539687,
+ "version": "1.1.0",
+ "built": "2026-10-17",
+ "payload_files": 125,
+ "payload_bytes": 24017808,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
    "level0": "8b104e3290d067a4e683c22160f040d7a551d6bd34e12a80ac16fe12d0594fd0",
    "app.info": "d32db4d3d6e2de75a8ea7b9d89957b228fcef4934aeb2dd83008bc3d7ad58af5"
   },
-  "payload_files": 122,
+  "payload_files": 125,
   "mode": "additive",
   "patch_info_source": "dist/FizRP-Chinese-Patch/patch-info.json（reference_hashes 复用；payload_files 按 additive 载荷重算）"
  },
@@ -115,6 +115,16 @@
    "path": "BepInEx/plugins/FizRPLangMenu.dll",
    "sha256": "1065829d33e5aa9bea64ccc254d93dae08429c3c3f01c268347fe16a405c325c",
    "size": 23552
+  },
+  {
+   "path": "StreamingAssets/aa/StandaloneWindows64/localization-assets-japanese(ja)_assets_all.bundle",
+   "sha256": "4f38a89ea5f428d47534505c443f0696b748ee3d38b82f2a05475981583d31b7",
+   "size": 30533
+  },
+  {
+   "path": "StreamingAssets/aa/StandaloneWindows64/localization-assets-shared_assets_all.bundle",
+   "sha256": "bf310ffd82e1cb9112ae77c0dcf6bc3ef70b7d486690131c0f18ef33d07a3a4a",
+   "size": 80956
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-string-tables-spanish(es)_assets_all.bundle",
@@ -242,6 +252,11 @@
    "size": 70688
   },
   {
+   "path": "sharedassets13.assets",
+   "sha256": "ef54e8d637ceef1c6ab39048e31c8f5a8af277ec755841aa7d6597a16622e22e",
+   "size": 97088
+  },
+  {
    "path": "sharedassets131.assets",
    "sha256": "2257e398541f25778bb9a5ee498dabce59269ddf1b65228d62b5f421e463f2d6",
    "size": 71896
@@ -323,8 +338,8 @@
   },
   {
    "path": "sharedassets3.assets",
-   "sha256": "0ec4a9049024dd2e5e5e19be14e8042917fed50c09f3d2d6cdf2e5694222d97d",
-   "size": 4101504
+   "sha256": "8a95b52d4d168ed27fbd1c3150d7773caedfa1d0916571f96d9bb81b5d659951",
+   "size": 5371048
   },
   {
    "path": "sharedassets30.assets",
