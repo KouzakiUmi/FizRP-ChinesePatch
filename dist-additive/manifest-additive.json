@@ -4,7 +4,7 @@
  "version": "1.2.0",
  "built": "2026-10-17",
  "payload_files": 125,
- "payload_bytes": 24017759,
+ "payload_bytes": 24017247,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
@@ -13,7 +13,7 @@
   },
   "payload_files": 125,
   "mode": "additive",
-  "patch_info_source": "dist/FizRP-Chinese-Patch/patch-info.json（reference_hashes 复用；payload_files 按 additive 载荷重算）"
+  "patch_info_source": "dist/legacy/X1/FizRP-Chinese-Patch/patch-info.json（reference_hashes 复用；payload_files 按 additive 载荷重算）"
  },
  "files": [
   {
@@ -113,8 +113,8 @@
   },
   {
    "path": "BepInEx/plugins/FizRPLangMenu.dll",
-   "sha256": "1065829d33e5aa9bea64ccc254d93dae08429c3c3f01c268347fe16a405c325c",
-   "size": 23552
+   "sha256": "a7f26f94ebbd989083ed92c2eebe930392d6b2caf48ef36c8af39cc93c287fc7",
+   "size": 23040
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-assets-japanese(ja)_assets_all.bundle",

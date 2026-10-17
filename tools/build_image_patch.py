@@ -31,7 +31,7 @@ def main():
     ap.add_argument('--base-data-dir',required=True,type=Path,
                     help='Explicit baseline Data directory; use translated build for release integration.')
     ap.add_argument('--out-data-dir',required=True,type=Path)
-    ap.add_argument('--images',type=Path,default=ROOT/'work/image_tickets/deliverables')
+    ap.add_argument('--images',type=Path,default=ROOT/'work/image_tickets_opt/deliverables-opt')
     args=ap.parse_args()
     base=args.base_data_dir.resolve();out=args.out_data_dir.resolve()
     if base==out or base in out.parents and out.name==base.name:

@@ -30,7 +30,7 @@ def collect(payload_dir: str) -> list[tuple[str, str]]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--payload", default="dist/FizAndTheRainbowPlanet_Data")
+    ap.add_argument("--payload", default="dist/legacy/X1/FizAndTheRainbowPlanet_Data")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--backup-dir", default=None)
     args = ap.parse_args()

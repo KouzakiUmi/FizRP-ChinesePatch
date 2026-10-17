@@ -13,6 +13,8 @@
         --canvas 256x32 --align center --valign middle --out demo.png
 """
 import argparse
+import re
+from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -21,20 +23,38 @@ def pick_size(target_h, font_path, candidates=(8, 10, 12)):
 
     返回 (design_size, scale, 实际字高)。
     """
-    best = None
-    for d in candidates:
-        for k in range(1, 9):
-            h = d * k
-            err = abs(h - target_h)
-            if best is None or err < best[3]:
-                best = (d, k, h, err)
-    return best[0], best[1], best[2]
+    if target_h <= 0:
+        raise ValueError('目标字高必须为正数')
+    design = min(candidates, key=lambda d: (abs(d - target_h), d))
+    error = abs(design - target_h)
+    if error <= target_h * .4:
+        return design, 1, design
+    if 12 in candidates and abs(24 - target_h) <= target_h * .4:
+        return 12, 2, 24
+    raise ValueError('允许的 8/10/12px×1 或 12px×2 无法达到目标；应保留 AI 版本')
+
+
+def matching_font(font_path, size):
+    """自动选型时同步选择同目录、同语言的设计尺寸文件。"""
+    path = Path(font_path)
+    name = re.sub(r'fusion-pixel-(8|10|12)px-', f'fusion-pixel-{size}px-', path.name)
+    result = path.with_name(name)
+    if not result.is_file():
+        raise ValueError(f'缺少匹配设计尺寸的字体：{result}')
+    return str(result)
 
 
 def render(text, font_path, size, color, outline=(0, 0, 0), outline_w=1,
            canvas=None, align="center", valign="middle", pad=(0, 0), scale=1,
            line_gap=3, line_align="left"):
     """把 text 渲染成像素级 1 位 RGBA。支持 \n 多行（行距 line_gap 像素）。"""
+    if size not in (8, 10, 12) or scale not in (1, 2) or (scale == 2 and size != 12):
+        raise ValueError('仅允许 8/10/12px×1 或 12px×2；禁止其他字号和倍数')
+    match = re.search(r'fusion-pixel-(8|10|12)px-', Path(font_path).name)
+    if match and int(match.group(1)) != size:
+        raise ValueError('字体文件的设计尺寸与 size 不一致；不可缩放字体轮廓冒充另一设计尺寸')
+    if outline_w < 0 or line_gap < 0:
+        raise ValueError('描边和行距不能为负数')
     font = ImageFont.truetype(font_path, size)
     lines = text.split("\n")
 
@@ -94,12 +114,16 @@ def render(text, font_path, size, color, outline=(0, 0, 0), outline_w=1,
     # 6) 放进画布并对齐
     if canvas:
         cw, ch = canvas
+        if w > cw or h > ch:
+            raise ValueError(f'文字块 {w}x{h} 超出画布 {cw}x{ch}；请调整字号或换行')
         lay = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
         px, py = pad
         x = ((cw - w) // 2 + px) if align == "center" else (
             (cw - w - px) if align == "right" else px)
         y = ((ch - h) // 2 + py) if valign == "middle" else (
             (ch - h - py) if valign == "bottom" else py)
+        if x < 0 or y < 0 or x + w > cw or y + h > ch:
+            raise ValueError('对齐或 pad 导致文字超出画布；拒绝静默裁切')
         lay.paste(out, (x, y), out)
         return lay
     return out
@@ -129,6 +153,7 @@ if __name__ == "__main__":
         ap.error("必须给 --size 或 --target-height")
     if a.target_height:
         size, scale, real = pick_size(a.target_height, a.font)
+        a.font = matching_font(a.font, size)
         print("auto: target=%d -> design=%d x%d = %dpx" % (a.target_height, size, scale, real))
     cv = tuple(int(v) for v in a.canvas.lower().split("x")) if a.canvas else None
     col = tuple(int(v) for v in a.color.split(","))

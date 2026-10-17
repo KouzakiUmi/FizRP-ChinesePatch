@@ -1106,7 +1106,8 @@ class InstallerApp(tk.Tk):
     def _execute_worker(self, cmd, data_dir, assume_yes):
         sink = CoreLogSink(lambda line: self.events.put(("log", line)))
         try:
-            result = patch_tool.execute(cmd, data_dir, log=sink, assume_yes=assume_yes)
+            result = patch_tool.execute(cmd, data_dir, log=sink, assume_yes=assume_yes,
+                                        additive=patch_tool.is_additive())
             sink.flush()
             if not isinstance(result, dict):
                 result = {"exit": 1, "error": "补丁核心返回了非预期的执行结果。"}
@@ -1131,7 +1132,11 @@ class InstallerApp(tk.Tk):
             if isinstance(value, int):
                 self._note("%s：%d 个文件" % (name, value))
         if exit_code == 0:
-            message = CMD_DONE.get(cmd, "操作完成。")
+            # 追加式（X2）的中文在语言画面第三项；替换式（X1）在第二项。
+            if cmd == "install" and patch_tool is not None and patch_tool.is_additive():
+                message = "安装完成：下次启动游戏时，语言选择画面请选第三项（中文）。"
+            else:
+                message = CMD_DONE.get(cmd, "操作完成。")
             self._note(message)
             self._set_status(message)
             logging.info("命令完成 cmd=%s", cmd)

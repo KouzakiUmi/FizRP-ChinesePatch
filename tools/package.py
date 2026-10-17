@@ -8,7 +8,7 @@ import shutil
 GAME_DATA = os.environ.get("FIZRP_DATA_DIR",
                            r"E:\Steam\steamapps\common\FizRP\FizAndTheRainbowPlanet_Data")
 
-PACKAGE = "dist/FizRP-Chinese-Patch"
+PACKAGE = "dist/legacy/X1/FizRP-Chinese-Patch"
 PAYLOAD_DIRNAME = "FizAndTheRainbowPlanet_Data"
 
 INSTALL_PS1 = r'''# Fiz And The Rainbow Planet - Simplified Chinese patch installer
@@ -168,13 +168,17 @@ Write-Host "已还原 $n 个文件。" -ForegroundColor Green
 Read-Host "按回车退出"
 '''
 
-BAT_TEMPLATE = """@echo off
+BAT_TEMPLATE = r"""@echo off
 chcp 65001 >nul
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0tools\{script}"
 """
 
-README = """Fiz And The Rainbow Planet —— 简体中文补丁
+README = r"""Fiz And The Rainbow Planet —— 简体中文补丁
 ================================================
+
+> 历史归档：X1 替换式已由 X2 追加式取代；本包只含 zip 版（install.bat），
+> 不再随附 exe。当前安装包见仓库 dist/FizRP-ChinesePatch.exe 与
+> dist/FizRP-X2-v1.2.0.zip。
 
 【这个补丁做了什么】
   1. 把游戏里全部 1364 条文本（剧情对话、菜单、UI、结局字幕、战斗台词）
@@ -266,7 +270,7 @@ def build(payload_src: str, out: str = PACKAGE, name: str = PAYLOAD_DIRNAME):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--payload", default="dist/" + PAYLOAD_DIRNAME)
+    ap.add_argument("--payload", default="dist/legacy/X1/" + PAYLOAD_DIRNAME)
     ap.add_argument("--out", default=PACKAGE)
     a = ap.parse_args()
     n = build(a.payload, a.out)

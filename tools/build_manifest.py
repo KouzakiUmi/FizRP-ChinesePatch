@@ -3,10 +3,10 @@
 
 用法（在项目根执行）：
 
-    python tools/build_manifest.py                    # 替换式：dist/FizRP-Chinese-Patch/files -> manifest.json
+    python tools/build_manifest.py                    # 替换式（已归档）：dist/legacy/X1/FizRP-Chinese-Patch/files -> dist/legacy/X1/manifest.json
     python tools/build_manifest.py --additive         # 追加式：dist-additive/payload        -> dist-additive/manifest-additive.json
 
-输入（替换式）：``dist/FizRP-Chinese-Patch/files/``（打包后交付目录里的载荷；平铺镜像
+输入（替换式）：``dist/legacy/X1/FizRP-Chinese-Patch/files/``（X1 历史路线的载荷；平铺镜像
 ``FizAndTheRainbowPlanet_Data`` 结构，含 ``StreamingAssets/...`` 子目录）。
 输入（追加式）：``dist-additive/payload/``（平铺载荷：Data 侧数据文件 + 游戏根侧的
 BepInEx loader 条目；路由规则见 ``tools/build_additive_payload.py``）。
@@ -41,10 +41,11 @@ GAME = "Fiz and the Rainbow Planet"
 VERSION = "1.2.0"
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PACKAGE_DIR = os.path.join(PROJECT_ROOT, "dist", "FizRP-Chinese-Patch")
+# X1 替换式已归档到 dist/legacy/X1/（2026-10-17）；本脚本的默认输入/输出随之迁移。
+PACKAGE_DIR = os.path.join(PROJECT_ROOT, "dist", "legacy", "X1", "FizRP-Chinese-Patch")
 PAYLOAD_DIR = os.path.join(PACKAGE_DIR, "files")
 PATCH_INFO_PATH = os.path.join(PACKAGE_DIR, "patch-info.json")
-MANIFEST_PATH = os.path.join(PROJECT_ROOT, "manifest.json")
+MANIFEST_PATH = os.path.join(PROJECT_ROOT, "dist", "legacy", "X1", "manifest.json")
 # 追加式（X2）载荷与清单：清单与载荷同树，便于整棵 dist-additive/ 一起分发。
 ADDITIVE_PAYLOAD_DIR = os.path.join(PROJECT_ROOT, "dist-additive", "payload")
 ADDITIVE_MANIFEST_PATH = os.path.join(PROJECT_ROOT, "dist-additive",
@@ -96,11 +97,12 @@ def load_patch_info(path: Optional[str] = None) -> dict:
 
 def build_manifest(payload_dir: Optional[str] = None,
                    patch_info_path: Optional[str] = None,
-                   check_declared: bool = True) -> dict:
+                   check_declared: bool = True,
+                   version: str = VERSION) -> dict:
     """替换式清单（默认参数下与历史行为逐字一致）。
 
     ``check_declared=False`` 供 additive 复用：追加式载荷与替换式
-    ``patch-info.json`` 的 ``payload_files`` 必然不同（103 vs 121），
+    ``patch-info.json`` 的 ``payload_files`` 必然不同（106 vs 125），
     此时由 ``build_additive_manifest`` 自行重算该字段。
     """
     payload_dir = PAYLOAD_DIR if payload_dir is None else payload_dir
@@ -125,7 +127,7 @@ def build_manifest(payload_dir: Optional[str] = None,
     return {
         "name": NAME,
         "game": GAME,
-        "version": VERSION,
+        "version": version,
         "built": datetime.date.today().strftime("%Y-%m-%d"),
         "payload_files": payload_files,
         "payload_bytes": total_bytes,
@@ -135,7 +137,8 @@ def build_manifest(payload_dir: Optional[str] = None,
 
 
 def build_additive_manifest(payload_dir: Optional[str] = None,
-                            patch_info_path: Optional[str] = None) -> dict:
+                            patch_info_path: Optional[str] = None,
+                            version: str = VERSION) -> dict:
     """追加式（X2）清单：字段与替换式一致，另带 ``mode`` 与自洽的 ``patch_info``。
 
     ``patch_info`` 复用替换式 ``patch-info.json`` 的 ``reference_hashes``（同一游戏
@@ -144,7 +147,7 @@ def build_additive_manifest(payload_dir: Optional[str] = None,
     """
     payload_dir = ADDITIVE_PAYLOAD_DIR if payload_dir is None else payload_dir
     manifest = build_manifest(payload_dir, patch_info_path=patch_info_path,
-                              check_declared=False)
+                              check_declared=False, version=version)
     base = load_patch_info(patch_info_path)
     info = {key: value for key, value in base.items() if key != "payload_files"}
     info["payload_files"] = manifest["payload_files"]
@@ -178,16 +181,18 @@ def main(argv=None) -> int:
                         help="对 dist-additive/payload 生成 dist-additive/manifest-additive.json")
     parser.add_argument("--payload-dir", default=None, help="覆盖载荷目录")
     parser.add_argument("--out", default=None, help="覆盖清单输出路径")
+    parser.add_argument("--version", default=VERSION,
+                        help="清单 version 字段（X1 归档复现用 1.1.0；默认 %(default)s）")
     args = parser.parse_args(argv)
 
     payload_dir = args.payload_dir
     out = args.out
     try:
         if args.additive:
-            manifest = build_additive_manifest(payload_dir)
+            manifest = build_additive_manifest(payload_dir, version=args.version)
             out = out or ADDITIVE_MANIFEST_PATH
         else:
-            manifest = build_manifest(payload_dir)
+            manifest = build_manifest(payload_dir, version=args.version)
             out = out or MANIFEST_PATH
     except Exception as exc:  # 失败必须可见且非 0 退出
         print("manifest: FAILED - %s" % exc, file=sys.stderr)

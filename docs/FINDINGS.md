@@ -130,8 +130,8 @@ MonoBehaviour 头 = PPtr<GameObject>(12) + m_Enabled(1+3) + PPtr<MonoScript>(12)
 
 ## 6. 写回与新增语言的路径
 
-* **自定义组件**：`src/apply_text.py` 已可在原字节上拼接新 payload
-  （`obj.set_raw_data(header + encode(data))` → `sf.save()`）。
+* **自定义组件**：`src/apply_text.py` 现在是文本-only 薄封装，委托
+  `src/build_patch.py` 写回（底层 `obj.set_raw_data(header + encode(data))` → `sf.save()`）。
   已用「把现有英文写回英文槽位」的空操作测试验证：22 个文件对象数一致、内容一致。
 * **Unity Localization**：`StringTable` 在 Addressables bundle 中，新增 `zh-Hans`
   需要 ①新建 Locale + 5 张 `StringTable_zh-Hans` + `AssetTable`，

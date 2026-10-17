@@ -557,7 +557,7 @@ def patch_string_tables(out_dir, translations, index, locale_code):
 # --------------------------------------------------------------------------
 # orchestration
 # --------------------------------------------------------------------------
-def build(out_dir="dist/FizAndTheRainbowPlanet_Data",
+def build(out_dir="dist/legacy/X1/FizAndTheRainbowPlanet_Data",
           translations="translation/zh_Hans.csv",
           index_path="work/text_index.json",
           column="zh_Hans", slot=2, locale_code="en",
@@ -644,7 +644,7 @@ def build(out_dir="dist/FizAndTheRainbowPlanet_Data",
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default="dist/FizAndTheRainbowPlanet_Data")
+    ap.add_argument("--out", default="dist/legacy/X1/FizAndTheRainbowPlanet_Data")
     ap.add_argument("--translations", default="translation/zh_Hans.csv")
     ap.add_argument("--column", default="zh_Hans")
     ap.add_argument("--slot", type=int, default=2, help="Language 枚举槽位")

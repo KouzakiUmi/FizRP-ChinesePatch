@@ -142,7 +142,7 @@ if __name__ == "__main__":
         i = args.index("--profile")
         profile = args[i + 1]
         del args[i:i + 2]
-    out = args[0] if args else "dist/FizAndTheRainbowPlanet_Data"
+    out = args[0] if args else "dist/legacy/X1/FizAndTheRainbowPlanet_Data"
     rep = build(cfg, out, profile=profile)
     problems = verify(out, rep)
     print(json.dumps(rep, ensure_ascii=False, indent=1))

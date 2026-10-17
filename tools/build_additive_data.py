@@ -16,14 +16,19 @@
 还是上一版数据。这个坑踩过一次：载荷清单的时间戳没变、安装「成功」，但文本没更新。
 
 参数与原 G1 构建一致：中文写入原先空置的 `es`（Language.Spanish = 4）槽位，
-profile = `zh_additive`，只替换一个字体 blob（k8x12EXL）。
+profile = `zh_additive`，只替换一个字体 blob（k8x12EXL）。默认还会把
+`work/image_tickets_opt/deliverables-opt` 的 16 张 v2.4 贴图回灌进数据目录
+（`--no-images` 可跳过，仅调试用），并在末尾同步 catalog。
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import io
 import json
 import os
+import shutil
+import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -57,6 +62,88 @@ SLOT_FONT_BY_SIZE = {8: ("sharedassets3.assets", 133),
 # 回退：sharedassets137.assets 的外部表里没有 sharedassets2.assets，
 # 它的 es 槽会回退到 12 档宿主（见 build_patch 的 fallback 分支）。
 SLOT_FALLBACK_SIZE = 12
+ES_BUNDLE_NAME = "localization-string-tables-spanish(es)_assets_all.bundle"
+
+# 文本构建先落到临时目录，再用 tools/build_image_patch.py 把 16 张 v2.4 贴图
+# 回灌到最终数据目录。缺了这一步，data 会“文本/字体正确、贴图回退成原版”，
+# 而 verify_patch 只核对文本，看不出来（本次踩过）。
+TEXT_STAGE = os.path.join(ROOT, "work", "_additive", "_stage_text",
+                          "FizAndTheRainbowPlanet_Data")
+IMAGE_STAGE = os.path.join(ROOT, "work", "_additive", "_stage_images",
+                           "FizAndTheRainbowPlanet_Data")
+IMAGES_DIR = os.path.join(ROOT, "work", "image_tickets_opt", "deliverables-opt")
+IMAGE_TOOL = os.path.join(ROOT, "tools", "build_image_patch.py")
+
+
+def _fresh_dir(path):
+    """清空并重建构建目录；先自证路径落在 work/ 或 dist-additive/ 下。"""
+    full = os.path.abspath(path)
+    allowed = (os.path.abspath(os.path.join(ROOT, "work")),
+               os.path.abspath(os.path.join(ROOT, "dist-additive")))
+    if not any(full == base or full.startswith(base + os.sep) for base in allowed):
+        raise RuntimeError("拒绝清理非构建目录: %s" % full)
+    if os.path.isdir(full):
+        shutil.rmtree(full)
+    os.makedirs(full)
+
+
+def _copy_missing(src_root, dst_root):
+    """把 src_root 中目标不存在的文件补进 dst_root（不覆盖已构建的 es bundle）。"""
+    for rel in _walk_rel(src_root):
+        src = os.path.join(src_root, rel)
+        dst = os.path.join(dst_root, rel)
+        if os.path.exists(dst):
+            continue
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.copy2(src, dst)
+
+
+def _walk_rel(root):
+    for dirpath, _dirs, names in os.walk(root):
+        for name in names:
+            yield os.path.relpath(os.path.join(dirpath, name), root)
+
+
+def _changed_files(text_stage, staging_data):
+    """TEXT_STAGE 相对 staging 有差异的文件（即文本/字体实际改写的文件集）。"""
+    changed = []
+    for rel in _walk_rel(text_stage):
+        src = os.path.join(text_stage, rel)
+        base = os.path.join(staging_data, rel)
+        if os.path.isfile(base):
+            with open(src, "rb") as a, open(base, "rb") as b:
+                if hashlib.sha256(a.read()).hexdigest() == hashlib.sha256(b.read()).hexdigest():
+                    continue
+        changed.append(rel)
+    return changed
+
+
+def _sync_catalog(out_dir):
+    """让数据目录自己的 catalog 与 es bundle 尺寸一致（中间产物也自洽）。
+
+    仍**不要**直接分发本目录：正式载荷由 build_additive_payload.py 重新生成
+    catalog（CRC 占位 0），本步骤只是避免 data 目录出现「catalog 说 8905、
+    bundle 实际 8904」这种中间态误导。
+    """
+    catalog = os.path.join(out_dir, "StreamingAssets", "aa", "catalog.json")
+    bundle_dir = os.path.join(out_dir, "StreamingAssets", "aa", "StandaloneWindows64")
+    tool = os.path.join(ROOT, "tools", "catalog_sync.py")
+    if not os.path.isfile(catalog):
+        print("跳过 catalog 同步：找不到 %s" % catalog)
+        return 0
+    bundles = sorted(name for name in os.listdir(bundle_dir) if name.endswith(".bundle"))
+    bundle_args = []
+    for name in bundles:
+        bundle_args += ["--bundle", name]
+    for extra in (["--crc", "0", "--write"], ["--verify"]):
+        rc = subprocess.call([sys.executable, tool, catalog,
+                              "--bundle-dir", bundle_dir, *bundle_args] + extra)
+        if rc != 0:
+            return rc
+    bak = catalog + ".bak"
+    if os.path.exists(bak):
+        os.remove(bak)
+    return 0
 
 
 def main(argv=None):
@@ -65,6 +152,10 @@ def main(argv=None):
     ap.add_argument("--staging", default=STAGING_ROOT,
                     help="原版资产根目录（含 FizAndTheRainbowPlanet_Data）")
     ap.add_argument("--translations", default=os.path.join(ROOT, "translation", "zh_Hans.csv"))
+    ap.add_argument("--images", default=IMAGES_DIR,
+                    help="贴图交付目录（默认 v2.4 deliverables-opt）")
+    ap.add_argument("--no-images", action="store_true",
+                    help="跳过贴图回灌（仅调试；正式构建不要用）")
     ap.add_argument("--check", action="store_true", help="只核验现有产物，不写文件")
     args = ap.parse_args(argv)
 
@@ -78,8 +169,7 @@ def main(argv=None):
     if args.check:
         return _check(args.out, args.staging)
 
-    report = build_patch.build(
-        out_dir=args.out,
+    build_kwargs = dict(
         translations=args.translations,
         column=COLUMN,
         slot=SLOT,
@@ -87,6 +177,54 @@ def main(argv=None):
         profile=PROFILE,
         additive=True,
     )
+    if args.no_images:
+        _fresh_dir(args.out)
+        report = build_patch.build(out_dir=args.out, **build_kwargs)
+    else:
+        if not os.path.isdir(args.images):
+            print("找不到贴图交付目录: %s" % args.images)
+            return 2
+        staging_data = os.path.join(args.staging, "FizAndTheRainbowPlanet_Data")
+        # 1) 完整基线：文本注入与贴图回灌都需要未修改的 assets/bundle 作基础
+        _fresh_dir(TEXT_STAGE)
+        shutil.copytree(staging_data, TEXT_STAGE, dirs_exist_ok=True)
+        # 2) 文本/字体注入（就地写进基线副本）
+        report = build_patch.build(out_dir=TEXT_STAGE, **build_kwargs)
+        # build_patch 会删掉「原版未改动、不再分发」的文件（如 sharedassets13），
+        # 但贴图回灌还需要它们作为基础；补回（不覆盖已注入的文本/字体）。
+        _copy_missing(staging_data, TEXT_STAGE)
+        # 3) 贴图回灌到临时目录（只产出被改的 4 个文件）
+        _fresh_dir(IMAGE_STAGE)
+        print("== 贴图回灌: %s -> %s" % (args.images, IMAGE_STAGE))
+        rc = subprocess.call([sys.executable, IMAGE_TOOL,
+                              "--base-data-dir", TEXT_STAGE,
+                              "--out-data-dir", IMAGE_STAGE,
+                              "--images", args.images])
+        if rc != 0:
+            print("错误: 贴图回灌失败（rc=%d）" % rc)
+            return rc
+        report_path = os.path.join(IMAGE_STAGE, "image_patch_roundtrip.json")
+        if os.path.isfile(report_path):
+            shutil.move(report_path,
+                        os.path.join(ROOT, "work", "_additive",
+                                     "image_patch_roundtrip.json"))
+        # 4) 合并「文本修改集 + 图像修改集 + 原版 catalog」
+        _fresh_dir(args.out)
+        for rel in _changed_files(TEXT_STAGE, staging_data):
+            src = os.path.join(TEXT_STAGE, rel)
+            dst = os.path.join(args.out, rel)
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            shutil.copy2(src, dst)
+        for rel in _walk_rel(IMAGE_STAGE):
+            src = os.path.join(IMAGE_STAGE, rel)
+            dst = os.path.join(args.out, rel)
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            shutil.copy2(src, dst)
+        catalog_rel = os.path.join("StreamingAssets", "aa", "catalog.json")
+        shutil.copy2(os.path.join(staging_data, catalog_rel),
+                     os.path.join(args.out, catalog_rel))
+        shutil.rmtree(os.path.dirname(TEXT_STAGE), ignore_errors=True)
+        shutil.rmtree(os.path.dirname(IMAGE_STAGE), ignore_errors=True)
     io.open(os.path.join(ROOT, "work", "_additive", "G1_build_raw.json"),
             "w", encoding="utf-8", newline="\n").write(
         json.dumps(report, ensure_ascii=False, indent=1))
@@ -107,6 +245,10 @@ def main(argv=None):
     if fixes != 1:
         print("警告: 期望恰好修正 1 处 TreasureText_default 错位，实际 %d" % fixes)
         return 1
+    rc = _sync_catalog(args.out)
+    if rc:
+        print("错误: 数据目录 catalog 同步失败（rc=%d）" % rc)
+        return rc
     print("OK -> %s" % args.out)
     return 0
 

@@ -7,13 +7,14 @@
   python patch_tool.py verify    [--game-dir PATH]         # 校验游戏内文件是否与载荷一致
   python patch_tool.py install   [--game-dir PATH] [--yes] # 安装中文补丁
   python patch_tool.py uninstall [--game-dir PATH] [--yes] # 从最新备份还原英文原版
-  # 追加式中文（X2）：以上子命令都支持 --additive
+  # 追加式中文（X2，当前默认）：以上子命令都支持 --additive
   python patch_tool.py install   --additive [--game-dir PATH] [--yes] [--no-seed-save]
   python patch_tool.py uninstall --additive [--game-dir PATH] [--yes]
+  # 强制替换式（X1 历史回溯，载荷在 dist/legacy/X1/）：加 --replacement
   # 所有子命令都支持 --json: 最后一行输出 json.dumps(结果, ensure_ascii=False)
 
-语义约定 (与 dist/FizRP-Chinese-Patch/tools/install.ps1 / uninstall.ps1 保持一致):
-  * 替换式载荷目录: ROOT/payload, 回退 ROOT/dist/FizRP-Chinese-Patch/files
+语义约定 (与 dist/legacy/X1/FizRP-Chinese-Patch/tools/install.ps1 / uninstall.ps1 保持一致):
+  * 替换式载荷目录: ROOT/payload, 回退 ROOT/dist/legacy/X1/FizRP-Chinese-Patch/files
   * 追加式载荷目录: ROOT/additive-payload, 回退 ROOT/dist-additive/payload
     (ROOT 在打包态是 sys._MEIPASS, 源码态是 tools/ 的上一级)
   * 安装: 先把"将被覆盖"的游戏内现有文件备份到
@@ -63,17 +64,20 @@ def _first_existing(*candidates):
     return candidates[-1]
 
 
-# ROOT/payload → ROOT/dist/FizRP-Chinese-Patch/files (打包态 / 源码态)
+# ROOT/payload → ROOT/dist/legacy/X1/FizRP-Chinese-Patch/files (打包态 / 源码态)
 PAYLOAD_DIR = _first_existing(
     os.path.join(ROOT, "payload"),
-    os.path.join(ROOT, "dist", "FizRP-Chinese-Patch", "files"),
+    os.path.join(ROOT, "dist", "legacy", "X1", "FizRP-Chinese-Patch", "files"),
 )
-# ROOT/patch-info.json → ROOT/dist/FizRP-Chinese-Patch/patch-info.json
+# ROOT/patch-info.json → ROOT/dist/legacy/X1/FizRP-Chinese-Patch/patch-info.json
 PATCH_INFO = _first_existing(
     os.path.join(ROOT, "patch-info.json"),
-    os.path.join(ROOT, "dist", "FizRP-Chinese-Patch", "patch-info.json"),
+    os.path.join(ROOT, "dist", "legacy", "X1", "FizRP-Chinese-Patch", "patch-info.json"),
 )
-MANIFEST = os.path.join(ROOT, "manifest.json")
+MANIFEST = _first_existing(
+    os.path.join(ROOT, "manifest.json"),
+    os.path.join(ROOT, "dist", "legacy", "X1", "manifest.json"),
+)
 
 # 追加式（X2）载荷与清单：ROOT/additive-payload → ROOT/dist-additive/payload（源码态）；
 # 清单里的 patch_info 一并复用（reference_hashes 来自替换式 patch-info.json）。
@@ -94,15 +98,15 @@ ADDITIVE_GAME_ROOT_NAMES = ("winhttp.dll", "doorstop_config.ini",
 ADDITIVE_GAME_ROOT_PREFIXES = ("BepInEx/",)
 
 # 替换式补丁态 / additive 态的特征文件与尺寸（现场核验值，非推测）：
-#   原版 en 串表 bundle = 9585 B；替换式把中文写进 en 槽位后 = 25723 B
-#   原版 es 串表 bundle = 4339 B；additive 写入中文后    = 8936 B
+#   原版 en 串表 bundle = 9585 B；替换式把中文写进 en 槽位后不再是该尺寸
+#   原版 es 串表 bundle = 4339 B；additive 写入中文后随译文修订变化（当前 8904 B），
+#   因此 additive 判据用“不等于原版”，不绑定固定尺寸（固定 8936 曾因译文修订失效）。
 EN_STRING_TABLE_NAME = "localization-string-tables-english(en)_assets_all.bundle"
 ES_STRING_TABLE_NAME = "localization-string-tables-spanish(es)_assets_all.bundle"
 BUNDLE_SUBDIR = ("StreamingAssets", "aa", "StandaloneWindows64")
 CATALOG_REL = "StreamingAssets/aa/catalog.json"
 EN_STRING_TABLE_PRISTINE_BYTES = 9585
 ES_STRING_TABLE_PRISTINE_BYTES = 4339
-ES_STRING_TABLE_ADDITIVE_BYTES = 8936
 
 # 存档播种（X3）
 SAVE_VENDOR_DIR = ("NijiiroDragon", "FizAndTheRainbowPlanet")
@@ -672,12 +676,12 @@ def probe_additive_state(data_dir):
     # 判据 3：catalog 的 dataIndex 错位（替换式改动了 en 段长度却未平移后续段）
     info["replacement"] = bool(en_replaced or en_declared_replaced
                                or info["dataindex_shifted"])
-    # additive 判据：es 槽位已被中文占用（文件或 catalog 任一成立）
+    # additive 判据：es 槽位已非原版（文件或 catalog 声明任一成立；不绑定固定尺寸）
     info["additive"] = bool(
         (info["es_bytes"] is not None
-         and info["es_bytes"] == ES_STRING_TABLE_ADDITIVE_BYTES)
+         and info["es_bytes"] != ES_STRING_TABLE_PRISTINE_BYTES)
         or (info["catalog_es_size"] is not None
-            and info["catalog_es_size"] == ES_STRING_TABLE_ADDITIVE_BYTES))
+            and info["catalog_es_size"] != ES_STRING_TABLE_PRISTINE_BYTES))
     return info
 
 
@@ -1555,8 +1559,9 @@ def _build_parser():
             sub.add_argument("--yes", action="store_true",
                              help="跳过确认，直接执行")
         sub.add_argument("--additive", action="store_true",
-                         help="使用追加式（X2）载荷：dist-additive/payload + "
-                              "manifest-additive.json；loader 条目落游戏根目录")
+                         help="强制使用追加式（X2）载荷（默认：存在 additive 载荷即自动选用）")
+        sub.add_argument("--replacement", action="store_true",
+                         help="强制使用替换式（X1）载荷（dist/legacy/X1/...）；用于历史回溯")
         if name == "install":
             sub.add_argument("--no-seed-save", action="store_true",
                              help="追加式安装时不播种存档（默认仅在存档不存在时写入）")
@@ -1589,7 +1594,12 @@ def main(argv=None):
     game_dir = getattr(args, "game_dir", None)
     as_json = bool(getattr(args, "json", False))
     assume_yes = bool(getattr(args, "yes", False))
-    additive = bool(getattr(args, "additive", False))
+    if getattr(args, "replacement", False):
+        additive = False
+    else:
+        # 默认跟随初值：存在 additive 载荷（源码态 dist-additive/payload 或
+        # 打包态 additive-payload）即走追加式；--replacement 用于 X1 历史回溯。
+        additive = bool(getattr(args, "additive", False)) or is_additive()
     seed_save = not bool(getattr(args, "no_seed_save", False))
     set_additive(additive)
 

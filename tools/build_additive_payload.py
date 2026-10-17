@@ -82,9 +82,14 @@ GAME_ROOT_NAMES = ("winhttp.dll", "doorstop_config.ini", ".doorstop_version",
                    "changelog.txt")
 GAME_ROOT_PREFIXES = ("BepInEx/",)
 
-def _expected_total(data_count):
-    """载荷总文件数 = 数据 + loader + 1 插件 + 1 catalog（数据数动态传入）。"""
-    return data_count + RUNTIME_FILE_COUNT + 1 + 1
+def _expected_total(data_count, catalog_in_data=0):
+    """载荷总文件数 = 数据 + loader + 1 插件 + 1 catalog（数据数动态传入）。
+
+    ``catalog_in_data=1`` 表示 ``data_count`` 已经包含数据目录里的
+    ``StreamingAssets/aa/catalog.json``（assemble 的 copy_into 会连它一起复制），
+    此时不再额外 +1，避免把 catalog 数两遍（126 vs 125 的误报）。
+    """
+    return data_count + RUNTIME_FILE_COUNT + 1 + (0 if catalog_in_data else 1)
 _CHUNK = 1 << 20
 
 
@@ -266,7 +271,7 @@ def assemble():
     routes = {"data": 0, "game_root": 0}
     for rel, _full in files:
         routes[route_of(rel)] += 1
-    expected_total = _expected_total(data_count)
+    expected_total = _expected_total(data_count, catalog_in_data=1)
     if len(files) != expected_total:
         raise RuntimeError("载荷文件数 %d != 期望 %d（%d 数据 + %d loader + 1 插件 + 1 catalog）"
                            % (len(files), expected_total, data_count, RUNTIME_FILE_COUNT))
@@ -378,7 +383,7 @@ def check_payload(out_dir=None):
                         "应清掉；可能之前版本改过、现在已不必分发）: %s"
                         % (len(stale_same), ", ".join(stale_same[:5])))
     else:
-        lines.append("陈旧残留检查: 载荷数据文件均与原版不同 ✓")
+        lines.append("陈旧残留检查: 载荷数据文件均与原版不同 OK")
     lines.append("与数据目录交叉核对: 逐字节比对 %d 个文件，不一致 %d 个"
                  % (compared, len(drift)))
     for rel, sa, sb in drift[:10]:

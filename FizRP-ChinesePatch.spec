@@ -5,17 +5,21 @@
 
     pyinstaller --noconfirm --clean FizRP-ChinesePatch.spec
 
-产出 ``dist/FizRP-ChinesePatch.exe``（onefile）。datas 生成规则（契约 §4）：
+产出 ``dist/FizRP-ChinesePatch.exe``（onefile）。**当前安装包路线是 X2 追加式**，
+datas 生成规则：
 
-  1. 5 个固定条目：``manifest.json``、``patch-info.json``、``README.txt``、
-     ``KNOWN-ISSUES.txt``、``LICENSE-fusion-pixel-font.txt`` —— 全部落在 exe 根。
-     其中后三者取自 ``dist/FizRP-Chinese-Patch/``，落到 ``.``（根）。
-  2. 每个载荷文件一条：源 ``dist/FizRP-Chinese-Patch/files/<rel>``，
-     目标 ``payload/<posix dirname(rel)>``（``dirname`` 为空时即 ``payload``）。
+  1. 4 个固定条目：``manifest-additive.json``、``README.txt``、``KNOWN-ISSUES.txt``、
+     ``LICENSE-fusion-pixel-font.txt`` —— 全部落在 exe 根。README / KNOWN-ISSUES
+     取自 ``docs/release/``（X2 发布说明源），OFL 取自 ``dist/fonts/source/``。
+  2. 每个载荷文件一条：源 ``dist-additive/payload/<rel>``，
+     目标 ``additive-payload/<posix dirname(rel)>``。
 
-共 ``5 + N`` 条（N = 载荷文件数；2026-10-16 CRC 修复后 N=103 → 108 条）。
-载荷条目**不手写**：优先读 ``manifest.json``（权威清单、顺序稳定），缺失时才回退遍历载荷目录。
-期望条目数同样**动态**计算，避免载荷增减后闸门误报（历史上曾硬编码 107）。
+共 ``4 + N`` 条（N = 载荷文件数；v1.2.0 为 N=125 → 129 条）。
+载荷条目**不手写**：优先读 ``manifest-additive.json``（权威清单、顺序稳定），
+缺失时才回退遍历载荷目录。期望条目数动态计算，避免载荷增减后闸门误报。
+
+> X1 替换式已归档到 ``dist/legacy/X1/``，不再由本 spec 打包。安装器源码
+> （``tools/patch_launcher.py``）在打包态检测到 ``additive-payload/`` 时自动走追加式。
 """
 
 import json as _json
@@ -32,11 +36,10 @@ except NameError:
 _MANIFEST = _os.path.join(_ROOT, 'dist-additive', 'manifest-additive.json')
 _PAYLOAD_SRC = _os.path.join('dist-additive', 'payload')
 _PAYLOAD_SRC_ABS = _os.path.join(_ROOT, _PAYLOAD_SRC)
-_PACKAGE = _os.path.join('dist', 'FizRP-Chinese-Patch')
 
 
 def _payload_rel_paths():
-    """载荷相对路径（posix），按 manifest.json 顺序；无清单则遍历目录后排序。"""
+    """载荷相对路径（posix），按 manifest-additive.json 顺序；无清单则遍历目录后排序。"""
     if _os.path.isfile(_MANIFEST):
         with open(_MANIFEST, encoding='utf-8') as _fh:
             _data = _json.load(_fh)
@@ -54,14 +57,24 @@ def _payload_rel_paths():
     return _found
 
 
-# 5 个固定条目（顺序即契约 §4 顺序）
+# 4 个固定条目（X2 追加式；README / KNOWN-ISSUES 取 docs/release/ 下的发布说明源）。
+# 模板里的 {{VERSION}} 在构建期按 manifest-additive.json 的版本渲染到 build/_release_src/。
+_RELEASE_TMP = _os.path.join(_ROOT, 'build', '_release_src')
+_os.makedirs(_RELEASE_TMP, exist_ok=True)
+with open(_MANIFEST, encoding='utf-8') as _fh:
+    _VERSION = _json.load(_fh)['version']
+for _name, _src in (('README.txt', 'docs/release/README-X2.txt'),
+                    ('KNOWN-ISSUES.txt', 'docs/release/KNOWN-ISSUES-X2.txt')):
+    with open(_os.path.join(_ROOT, _src), encoding='utf-8') as _fh:
+        _text = _fh.read().replace('{{VERSION}}', _VERSION)
+    with open(_os.path.join(_RELEASE_TMP, _name), 'w', encoding='utf-8', newline='\n') as _fh:
+        _fh.write(_text)
+
 _datas = [
-    ('manifest.json', '.'),
-    ('dist/FizRP-Chinese-Patch/patch-info.json', '.'),
-    ('dist/FizRP-Chinese-Patch/README.txt', '.'),
-    ('dist/FizRP-Chinese-Patch/KNOWN-ISSUES.txt', '.'),
-    ('dist/FizRP-Chinese-Patch/LICENSE-fusion-pixel-font.txt', '.'),
     ('dist-additive/manifest-additive.json', '.'),
+    ('build/_release_src/README.txt', 'README.txt'),
+    ('build/_release_src/KNOWN-ISSUES.txt', 'KNOWN-ISSUES.txt'),
+    ('dist/fonts/source/OFL.txt', 'LICENSE-fusion-pixel-font.txt'),
 ]
 
 # N 条载荷条目，逐条校验源文件存在（缺失即中止，宁可失败也不产出缺载荷的 exe）
@@ -80,10 +93,10 @@ if _MISSING:
     raise SystemExit(
         'ERROR: 载荷源文件缺失 %d 个，拒绝构建（例：%s）'
         % (len(_MISSING), ', '.join(_MISSING[:3])))
-_EXPECTED = 6 + len(_PAYLOAD_RELS)
+_EXPECTED = 4 + len(_PAYLOAD_RELS)
 if len(_datas) != _EXPECTED:
     raise SystemExit(
-        'ERROR: datas 条目数 %d != 期望 %d（5 固定 + %d 载荷），拒绝构建'
+        'ERROR: datas 条目数 %d != 期望 %d（4 固定 + %d 载荷），拒绝构建'
         % (len(_datas), _EXPECTED, len(_PAYLOAD_RELS)))
 
 

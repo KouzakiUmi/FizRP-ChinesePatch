@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--directory', type=Path, default=ROOT / 'work/image_tickets/deliverables')
+    ap.add_argument('--directory', type=Path, default=ROOT / 'work/image_tickets_opt/deliverables-opt')
     ap.add_argument('--require-all', action='store_true')
     args = ap.parse_args()
     base = ROOT / 'work/image_tickets'
