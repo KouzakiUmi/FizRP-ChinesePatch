@@ -4,7 +4,7 @@
  "version": "1.2.0",
  "built": "2026-10-17",
  "payload_files": 125,
- "payload_bytes": 24017760,
+ "payload_bytes": 24017759,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
@@ -128,12 +128,12 @@
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-string-tables-spanish(es)_assets_all.bundle",
-   "sha256": "dd4530c59d0eab2805d1ff6a14e13070e93a41704aa892d467cbe4be84459eed",
-   "size": 8905
+   "sha256": "7961fc350f61a4da6f1c68012df24de7848cbb37d7515382c04d1a0af1a8437c",
+   "size": 8904
   },
   {
    "path": "StreamingAssets/aa/catalog.json",
-   "sha256": "19a40cff5fbdedecf22b25e1dd2f1162d684fd6bcd942408db79c5dce6335df1",
+   "sha256": "c1aa6e39f71678cae2c67865d12b7730e310ffe30db0f5d49f8f30c1265f6c5c",
    "size": 79534
   },
   {

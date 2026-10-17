@@ -2214,7 +2214,10 @@ AEIOUYÉÇÀÈÙŒÂÊÎÔÛÄËÏÖÜŸ",,"法语
 aeiouyéçàèùœâêîôäëïöüÿ
 AEIOUYÉÇÀÈÙŒÂÊÎÔÛÄËÏÖÜŸ"
 AutoTalk:TestTalk_Lang:2,AutoTalk,TestTalk_Lang,talkDatas[2],剧情对话 | wait=0.10 speaker=8,"スペイン語
-ñÑáíúéóÁÍÚÉÓ¿¡",,"西班牙语
+ñÑ
+áíúéó
+ÁÍÚÉÓ
+¿¡",,"西班牙语
 ñÑ
 áíúéó
 ÁÍÚÉÓ
@@ -3528,7 +3531,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Fiz_L,localization,UI Table,Canva
 <color=#55FFFFFF>""Let's go on
  an adventure!""</color>
 Even a kind-hearted dragon child 
-can throw a hammer! ","------菲兹------
+can throw a hammer! ","----菲兹----
 
 　<color=#55FFFFFF>「不管到哪里
 　　都要去冒险！」</color>
@@ -3547,7 +3550,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Fiz_R,localization,UI Table,Canva
 ⑫ : Dash / Attack
 ⑬ : Pass-Through Hammer
 
-Special Move cost: 10","------动作------
+Special Move cost: 10","----动作----
 
 ⑪ ：跳跃・游泳
 ⑫ ：冲刺・攻击
@@ -3566,7 +3569,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Kyuma_L,localization,UI Table,Can
  in the water!""</color>
 A dragon cub that lives
 underwater. Never misses
-a swim training.","------库玛------
+a swim training.","----库玛----
 
 　<color=#77AAFFFF>「我才是水中最快的
 　　龙！」</color>
@@ -3585,7 +3588,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Kyuma_R,localization,UI Table,Can
 ⑫ : Dash / Surf
 ⑬ : Hold to create
        water formation
-Special Move cost: 100","------动作------
+Special Move cost: 100","----动作----
 
 ⑪ ：跳跃・游泳
 ⑫ ：冲刺・冲浪
@@ -3603,7 +3606,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Leafur_L,localization,UI Table,Ca
 <color=#99FFAAFF>""I'll do my best!""</color>
 
 A fluffy dragon child
-Can fly just a little bit.","------莉芙------
+Can fly just a little bit.","----莉芙----
 
 　<color=#99FFAAFF>「莉芙
 　　会加油的哦！」</color>
@@ -3622,7 +3625,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Leafur_R,localization,UI Table,Ca
 ⑫ : Aim & Shoot Arrow
 
 ⑬ : Prayer of Recovery
-Cost: Same as Restored HP","------动作------
+Cost: Same as Restored HP","----动作----
 
 ⑪ ：跳跃・滞空
 ⑫ ：举弓・放箭
@@ -3641,7 +3644,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Rubell_L,localization,UI Table,Ca
 sweep them up!""</color>
 Big-sister figure to
 everyone.She can control
-her silk threads.","------露贝尔------
+her silk threads.","----露贝尔----
 
 　<color=#FFAAFFFF>「用我的丝线
 　　一网打尽哦！」</color>
@@ -3660,7 +3663,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Rubell_R,localization,UI Table,Ca
 ⑫ : Dash / Web
 
 
-*Wire Jump cost: 20","------动作------
+*Wire Jump cost: 20","----动作----
 
 ⑪ ：跳跃・游泳
 ⑫ ：冲刺・丝线
@@ -3678,7 +3681,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Rythron_L,localization,UI Table,C
 <color=#FF5555FF>""My body is on fire!""</color>
 
 A proud child of the fire dragon. Very
-vulnerable to water!","------琉特隆------
+vulnerable to water!","----琉特隆----
 
 　<color=#FF5555FF>「我的身体
 　　能喷火啦！」</color>
@@ -3697,7 +3700,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Rythron_R,localization,UI Table,C
 ⑫ : Dash / attack
 ⑬ : Fireball
 
-Special move cost: 30","------动作------
+Special move cost: 30","----动作----
 
 ⑪ ：振翅
 ⑫ ：冲刺・攻击
@@ -3716,7 +3719,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Soraco_L,localization,UI Table,Ca
  me!""</color>
 A curious little dragon,
 full of wonder, but not
-so great at swimming...","------索拉科------
+so great at swimming...","----索拉科----
 
 　<color=#FF8855FF>「挖洞的事
 　　就交给我！」</color>
@@ -3735,7 +3738,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Soraco_R,localization,UI Table,Ca
 ⑫ : Dash / Scratch
 
 ⑭ + ⑬  in mid-air:
-Drill (cost: 20)","------动作------
+Drill (cost: 20)","----动作----
 
 ⑪ ：跳跃
 ⑫ ：冲刺・抓挠攻击
