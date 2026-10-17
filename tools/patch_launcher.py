@@ -23,7 +23,7 @@ installer.log 行是打包后判断内嵌资源是否解析正确的唯一证据
     载荷: <N> 文件
     patch-info: payload_files=<值> | patch-info: 未找到 patch-info.json
     清单: payload_files=<值> | 清单: manifest 不可用: <原因>
-    载荷自检: OK (102/102) | 载荷自检: 失败 <n> 条，首条=<相对路径>   # 仅 --selftest
+    载荷自检: OK (125/125) | 载荷自检: 失败 <n> 条，首条=<相对路径>   # 仅 --selftest
 """
 
 import logging

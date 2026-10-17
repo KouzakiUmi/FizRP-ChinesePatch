@@ -5,7 +5,7 @@
 
 > **当前安装包路线：X2 追加式**——中文写入游戏自带的 `es`（`Language.Spanish = 4`）槽位，
 > 日文/英文原样保留，靠随包的 BepInEx 插件在运行时启用「第三项：中文」。
-> X1 替换式已归档到 [`dist/legacy/X1/`](dist/legacy/X1/)，不再作为安装包主线维护。
+> X1 替换式已归档到 `dist/legacy/X1/`（本机归档，不入库），不再作为安装包主线维护。
 
 替换字体：[TakWolf/fusion-pixel-font](https://github.com/TakWolf/fusion-pixel-font)（SIL OFL 1.1）。
 
@@ -29,7 +29,7 @@
 | `dist-additive/payload/` | 载荷（发布源） |
 | `dist-additive/manifest-additive.json` | 载荷权威清单（版本 1.2.0，125 文件） |
 | `dist-additive/FizAndTheRainbowPlanet_Data/` | `build_additive_data.py` 的构建中间产物（不是直接分发物） |
-| `dist/legacy/X1/` | X1 替换式归档（106 文件、版本 1.1.0、语言画面第二项） |
+| `dist/legacy/X1/` | X1 替换式归档（106 文件、版本 1.1.0、语言画面第二项；**本机归档，不入库**） |
 
 载荷构成（125）：**102 个数据文件**（98 个 `.assets` + 3 个串表 bundle + `catalog.json`）
 + **23 个 loader**（`winhttp.dll`、`doorstop_config.ini`、`.doorstop_version`、
@@ -70,7 +70,8 @@ python tools/catalog_sync.py dist-additive/payload/StreamingAssets/aa/catalog.js
 > **顺序不能颠倒**：改了 `src/build_patch.py` 或 `translation/zh_Hans.csv` 之后必须先跑
 > `build_additive_data.py`，再跑 `build_additive_payload.py`；否则载荷里还是上一版数据。
 
-X1 历史路线（已归档）的构建方法见 [`dist/legacy/X1/README.md`](dist/legacy/X1/README.md)。
+X1 历史路线（已归档，本机归档不入库）的构建方法见 `dist/legacy/X1/README.md`
+（该目录需在本机存在时才可读）。
 
 ## 目录
 
@@ -166,4 +167,4 @@ fonts.config.json    字体替换映射（四套 profile：default / zh_hans / z
 2026-10-16 的 X1 替换式曾经历「产物落后于源码/工作表」的漂移（325 处差异：309 条全角空格、
 9 条半角空格、6 条角色卡横线、1 个缺键），随后按当前源码/工作表重打包并归档；
 catalog 不自洽与 en 未压缩的问题也在重打包时修正。完整过程与重建命令见
-[`dist/legacy/X1/README.md`](dist/legacy/X1/README.md)。
+`dist/legacy/X1/README.md`（本机归档，不入库）。

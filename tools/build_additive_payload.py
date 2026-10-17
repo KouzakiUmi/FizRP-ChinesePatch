@@ -27,13 +27,12 @@
 
 载荷文件数构成（全部现场核对，不猜）::
 
-    97  数据文件   dist-additive/FizAndTheRainbowPlanet_Data/（96 .assets + es 串表 bundle）
-    22  loader     work/_additive/bepinex/runtime/ 下全部（winhttp.dll、doorstop_config.ini、
-                   .doorstop_version、changelog.txt、BepInEx/core/* 共 18 个）
-     1  插件 DLL   work/_additive/plugin/FizRPLangMenu.dll -> BepInEx/plugins/FizRPLangMenu.dll
-     1  catalog    catalog_sync.py 由原版 catalog + payload 内 es bundle 生成
+    102 数据文件   dist-additive/FizAndTheRainbowPlanet_Data/
+                   （98 .assets + 3 个 bundle + catalog.json）
+     23 游戏根     winhttp.dll、doorstop_config.ini、.doorstop_version、changelog.txt
+                   （4 个）+ BepInEx/ 19 个（core 18 + plugins/FizRPLangMenu.dll）
     ---
-   121
+    125
 
 catalog.json 的生成：``work/_crc/catalog.original.json`` 复制进临时工作目录后，
 用 ``tools/catalog_sync.py --bundle-dir <payload 的 StandaloneWindows64> \
