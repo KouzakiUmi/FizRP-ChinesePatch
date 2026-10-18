@@ -32,6 +32,9 @@ Fiz 与彩虹星球 简体中文补丁 v{{VERSION}}（追加式 X2）
   存档位置：%USERPROFILE%\AppData\LocalLow\<公司名>\<产品名>。
 
 【本版特点】
+  修复冷启动主菜单中文设置标签不显示、重新选择中文后字号偏小的问题。
+  主菜单及设置子页中文统一 10px，并为文字保留足够高度；对白和 HUD 不套用此规则。
+  已正确使用中文的存档无需修改或重置，也不再需要每次启动后重新选择中文。
   字体双档：k8x12EXS -> fusion-pixel-10px、k8x12EXL -> fusion-pixel-8px
   中文写入 es 槽位，日/英原样保留
   依赖 BepInEx（随包 winhttp.dll + BepInEx/ + 插件），无需手动配置

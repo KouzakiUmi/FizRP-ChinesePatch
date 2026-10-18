@@ -15,7 +15,7 @@ datas 生成规则：
   2. 每个载荷文件一条：源 ``dist-additive/payload/<rel>``，
      目标 ``additive-payload/<posix dirname(rel)>``。
 
-共 ``6 + N`` 条（N = 载荷文件数；v1.2.3 为 N=125 → 131 条）。
+共 ``6 + N`` 条（N = 载荷文件数；v1.2.4 为 N=125 → 131 条）。
 载荷条目**不手写**：优先读 ``manifest-additive.json``（权威清单、顺序稳定），
 缺失时才回退遍历载荷目录。期望条目数动态计算，避免载荷增减后闸门误报。
 

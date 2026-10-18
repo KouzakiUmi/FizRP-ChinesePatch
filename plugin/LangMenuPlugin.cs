@@ -41,6 +41,7 @@ namespace FizRPLangMenu
 				UnityEngine.Object.DontDestroyOnLoad(host);
 				host.AddComponent<FontApplierBehaviour>();
 				Log.LogInfo("[" + PluginGuid + "] font applier created (Text.font -> Chinese font while language is Spanish).");
+				Log.LogInfo("[" + PluginGuid + "] main-menu Chinese: 10px font with fitted text height.");
 			}
 			catch (Exception e)
 			{
@@ -436,7 +437,7 @@ namespace FizRPLangMenu
 		internal const string Font8Name = "k8x12EXL";
 		internal const string Font10Name = "k8x12EXS";
 		internal const int SizeSmall = 8;
-		internal const int SizeLarge = 10;
+		internal const int SizeLarge = TitleMenuFontPolicy.Size;
 
 		private static readonly Font[] FontCache = new Font[2];
 		private static readonly float[] FontSearchTime = new float[2];
@@ -479,16 +480,46 @@ namespace FizRPLangMenu
 			return (fontSize <= SizeSmall) ? SizeSmall : SizeLarge;
 		}
 
+		/// <summary>只识别主菜单 Canvas 内的中文；不改变游戏内 HUD、对白或拉丁文本。</summary>
+		internal static bool IsMainMenuText(Text text)
+		{
+			return text != null && text.canvas != null
+				&& TitleMenuFontPolicy.Applies(text.canvas.name, HasCJK(text.text));
+		}
+
 		/// <summary>
-		/// 强制 10px 档的标题画面文本：
-		///   * level3 底部滚动说明 InfoText（原版 8px 假名文本）；
-		///   * 主标题下方的版权公司名（©2024 …，原版 8px）。
+		/// 主菜单原有 8px 高文本框不能容纳 10px 字体（Truncate 会整行裁掉）。
+		/// 只扩大不足的高度，保留宽度、锚点和位置；稳定态也检查，防止布局把高度改回去。
+		/// </summary>
+		internal static void FitMainMenuHeight(Text text)
+		{
+			if (!IsMainMenuText(text))
+			{
+				return;
+			}
+			RectTransform rect = text.rectTransform;
+			float height = rect.rect.height;
+			float required = TitleMenuFontPolicy.MinimumHeight(height, text.preferredHeight);
+			if (required > height + 0.01f)
+			{
+				Vector2 delta = rect.sizeDelta;
+				rect.sizeDelta = new Vector2(delta.x, delta.y + required - height);
+			}
+		}
+
+		/// <summary>
+		/// 主菜单中文统一使用现有 10px 宿主，不再取决于 8px 宿主是否已经加载。
+		/// 保留原来的 InfoText 和版权行强制大档规则。
 		/// </summary>
 		internal static bool ForceLarge(Text text)
 		{
 			if (text == null)
 			{
 				return false;
+			}
+			if (IsMainMenuText(text))
+			{
+				return true;
 			}
 			if (text.gameObject != null && text.gameObject.name == "InfoText")
 			{
@@ -878,6 +909,7 @@ namespace FizRPLangMenu
 			if (text.font == f && text.fontSize == want && !text.resizeTextForBestFit)
 			{
 				_lastSeen[_id] = f;
+				FitMainMenuHeight(text);
 				// 稳定态：只在 rect 几何变化时才重新核算像素对齐（内部做廉价的 float 比较）。
 				SnapContentToPixelGrid(text, _id);
 				return;
@@ -965,6 +997,7 @@ namespace FizRPLangMenu
 				{
 					text.fontSize = want;
 				}
+				FitMainMenuHeight(text);
 				// 像素网格对齐：把文字内容起点补偿到整数设计像素上。
 				// 这是「同一屏内有锐利也有发虚」的最终解释（见 SnapContentToPixelGrid 注释）。
 				SnapContentToPixelGrid(text, _id);

@@ -267,6 +267,9 @@ X2 能做到"新增第三项而不改 DLL/场景"，靠的是 BepInEx + Harmony 
 2. **`LanguageSetting.Update` 的 Transpiler**——把 clamp 常量 `1` 改成 `2`，
    使光标能选到 index 2，从而由原版逻辑落到 `Language.Spanish`（即中文槽位）。
 3. 另有一个 `FontApplierBehaviour`：语言为 Spanish 时把 `Text.font` 换成中文字体。
+4. 主菜单 `TitleCanvas` 内的中文固定使用现有 10px 宿主，并按 `preferredHeight` 向上取整补足不足的文本框高度；对白、HUD 与纯拉丁文本不套用此规则。
+   原设置标签只有 8px 高且启用垂直截断，冷启动时 8px 宿主尚未加载而回退到 10px，会造成整行不显示；重选语言后改用 8px 字体虽能显示但偏小。修复在首次换字体与稳定快速路径都检查高度，避免布局重设后再次裁切。
+   `TitleMenuFontPolicy` 提供可离线编译执行的范围/高度策略回归；完整 Unity 画面仍以实机验证为准，本次用户已确认问题恢复正常。
 
 磁盘上的游戏 DLL 与场景文件**不做任何修改**——这是 X2 体积小又不牺牲英文的关键。
 

@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-success?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=flat-square)
 ![Engine](https://img.shields.io/badge/Engine-Unity%202021.3-blueviolet?style=flat-square)
-![Version](https://img.shields.io/badge/Version-v1.2.3-blue?style=flat-square)
+![Version](https://img.shields.io/badge/Version-v1.2.4-blue?style=flat-square)
 ![Patch](https://img.shields.io/badge/Patch-X2%20Additive-orange?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)
 
@@ -23,9 +23,16 @@
 | 游戏引擎 | Unity 2021.3.45f1 / Mono（PC / Steam） |
 | 补丁路线 | **X2 追加式**：中文进 `es` 槽，日/英原样保留 |
 | 补丁规模 | 125 个载荷文件（102 个数据文件 + 23 个 loader）；1,364 条非空译文；16 张汉化贴图 |
-| 当前版本 | **v1.2.3**：86 条译文修订、X2 单一路径与安装完整性修复 |
+| 当前版本 | **v1.2.4**：修复主菜单中文冷启动显示，菜单中文统一 10px 并匹配文本框高度 |
 | 运行要求 | 图形安装器无需 Python；zip 版命令行需要 Python 3.8+ |
 | 字体 | [fusion-pixel-font](https://github.com/TakWolf/fusion-pixel-font)（SIL OFL 1.1） |
+
+### v1.2.4 更新（2026-10-18）
+
+- **冷启动显示修复**：修复画面设置等主菜单中文标签首次启动时不显示、重选中文才出现的问题。
+- **菜单字号统一**：仅 `TitleCanvas` 内中文菜单使用 10px，并为文字补足高度，避免被原 8px 高文本框裁切；对白、游戏内 HUD 和纯英文文本不套用此规则。
+- **无需改存档**：已正确保存 `Language=4` 的玩家不必重置或改写存档。
+- **回归与实测**：新增 10 项菜单策略/接入回归，与 X2 安装回归合计 27 项；用户已实机确认本次显示问题恢复正常。
 
 ### v1.2.3 更新（2026-10-18）
 
@@ -144,7 +151,7 @@ X2 把中文写入游戏的 `es`（`Language.Spanish = 4`）本地化槽位，`S
 ### 字体为什么分两档
 
 中文使用 fusion-pixel 的 10px / 8px 两档设计尺寸，插件按原宿主字号把中文文本量化到对应档位，
-避免点阵字被非整数缩放放大后发虚。日/英模式保留原字号，可能出现 1.2× / 1.5× 非整数缩放。
+避免点阵字被非整数缩放放大后发虚。主菜单及设置子页中文固定使用 10px，并同步补足文本框高度；对白/HUD 仍沿用原有量化规则。日/英模式保留原字号，可能出现 1.2× / 1.5× 非整数缩放。
 
 ### 校验机制
 
@@ -180,7 +187,7 @@ X2 把中文写入游戏的 `es`（`Language.Spanish = 4`）本地化槽位，`S
 
 ## ⚙️ 构建与发布（维护者）
 
-需要 Python 3.8+（本机使用 3.12）；重建插件还需要 .NET SDK。发布顺序固定：
+zip 安装入口需要 Python 3.8+；完整重建需满足图像依赖的 Python 3.11+ 要求（本机使用 3.12）。重建插件还需要 .NET SDK 和 .NET Framework 4.8 目标包。发布顺序固定：
 
 ```cmd
 :: 0) 安装/打包逻辑回归：只使用临时游戏与存档
@@ -208,6 +215,7 @@ dist\FizRP-ChinesePatch.exe --selftest
 > `build_additive_data.py`，再跑 `build_additive_payload.py`，否则载荷仍是上一版数据。
 > `tools/build_manifest.py` 默认生成 X2 清单，版本门禁来自入库的 `config/game-reference.json`；不再读取本机历史归档。
 > 构建前需准备原版 `work/_additive/staging/` 与 `dist/fonts/source/OFL.txt`（本地输入，不入库）。
+> 修改插件源码后，还须先重编 DLL 并同步到 `work/_additive/plugin/FizRPLangMenu.dll`，再组装载荷；只重建数据或 exe 不会自动编译插件。
 
 `tools/install.py` / `tools/package.py` 只是 X2 的快捷入口，不维护第二套实现。`--replacement` 已移除；旧 X2 脚本的 `--additive` 仅作为无行为差异的兼容别名。
 
