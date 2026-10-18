@@ -10,6 +10,7 @@ change.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import shutil
@@ -54,7 +55,7 @@ def pick_blob_name(entry: dict, profile: str) -> str | None:
 
 
 def build(config: dict, out_dir: str, fusion_dir: str = "dist/fonts/source",
-          dry_run: bool = False, profile: str = "default") -> list[dict]:
+          dry_run: bool = False, profile: str = "zh_additive") -> list[dict]:
     """Write patched copies of every touched .assets file into `out_dir`."""
     report = []
     by_file: dict[str, list[dict]] = {}
@@ -135,15 +136,11 @@ def verify(patched_dir: str, report: list[dict]) -> list[str]:
 
 
 if __name__ == "__main__":
+    ap = argparse.ArgumentParser(description="构建 X2 双档字体（zh_additive）")
+    ap.add_argument("out", nargs="?", default="dist-additive/FizAndTheRainbowPlanet_Data")
+    args = ap.parse_args()
     cfg = load_config()
-    args = [a for a in sys.argv[1:]]
-    profile = "default"
-    if "--profile" in args:
-        i = args.index("--profile")
-        profile = args[i + 1]
-        del args[i:i + 2]
-    out = args[0] if args else "dist/legacy/X1/FizAndTheRainbowPlanet_Data"
-    rep = build(cfg, out, profile=profile)
-    problems = verify(out, rep)
+    rep = build(cfg, args.out)
+    problems = verify(args.out, rep)
     print(json.dumps(rep, ensure_ascii=False, indent=1))
     print("verify problems:", problems or "none")

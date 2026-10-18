@@ -228,9 +228,9 @@ def main(patched_dir, csv_path, column, slot):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("patched_dir", nargs="?",
-                    default="dist/legacy/X1/FizAndTheRainbowPlanet_Data")
-    ap.add_argument("--csv", default="translation/_synthetic.csv")
+                    default="dist-additive/FizAndTheRainbowPlanet_Data")
+    ap.add_argument("--csv", default="translation/zh_Hans.csv")
     ap.add_argument("--column", default="zh_Hans")
-    ap.add_argument("--slot", type=int, default=2)
+    ap.add_argument("--slot", type=int, choices=[4], default=4)
     args = ap.parse_args()
     raise SystemExit(main(args.patched_dir, args.csv, args.column, args.slot))

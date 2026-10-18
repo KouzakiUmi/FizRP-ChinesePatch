@@ -1,45 +1,14 @@
 # -*- coding: utf-8 -*-
-"""Fiz 与彩虹星球 简体中文补丁 —— 无头核心 + 命令行 (纯标准库, Python 3.8+)
+"""Fiz 与彩虹星球 简体中文补丁 —— X2 安装核心（纯标准库，Python 3.8+）。
 
-用法:
-  python patch_tool.py detect                              # 自动探测游戏数据目录
-  python patch_tool.py check                               # 载荷自检
-  python patch_tool.py verify    [--game-dir PATH]         # 校验游戏内文件是否与载荷一致
-  python patch_tool.py install   [--game-dir PATH] [--yes] # 安装中文补丁
-  python patch_tool.py uninstall [--game-dir PATH] [--yes] # 从最新备份还原英文原版
-  # 追加式中文（X2，当前默认）：以上子命令都支持 --additive
-  python patch_tool.py install   --additive [--game-dir PATH] [--yes] [--no-seed-save]
-  python patch_tool.py uninstall --additive [--game-dir PATH] [--yes]
-  # 强制替换式（X1 历史回溯，载荷在 dist/legacy/X1/）：加 --replacement
-  # 所有子命令都支持 --json: 最后一行输出 json.dumps(结果, ensure_ascii=False)
-
-语义约定 (与 dist/legacy/X1/FizRP-Chinese-Patch/tools/install.ps1 / uninstall.ps1 保持一致):
-  * 替换式载荷目录: ROOT/payload, 回退 ROOT/dist/legacy/X1/FizRP-Chinese-Patch/files
-  * 追加式载荷目录: ROOT/additive-payload, 回退 ROOT/dist-additive/payload
-    (ROOT 在打包态是 sys._MEIPASS, 源码态是 tools/ 的上一级)
-  * 安装: 先把"将被覆盖"的游戏内现有文件备份到
-    <游戏根>/_FizRP_backup_<yyyyMMdd-HHmmss>, 再复制载荷; 不写任何状态文件
-  * 卸载: 从 <游戏根> 下同名备份目录中"最新"的一个还原, 且不删除备份目录
-  * 退出码只有 0 与 1; 输出为中文
-
-追加式（--additive）与替换式的差别 —— 只为 additive 分支增加行为，替换式路径逐字节不变:
-  1. 载荷是一个平铺目录，按相对路径首段分流投放:
-       Data 侧  (顶层 *.assets / StreamingAssets/**)  -> <游戏根>/FizAndTheRainbowPlanet_Data/
-       loader   (winhttp.dll / doorstop_config.ini / .doorstop_version / changelog.txt /
-                 BepInEx/**)                        -> <游戏根>/
-     loader 必须与游戏 exe 同级（Windows DLL 搜索顺序），放进 Data 目录不会生效。
-  2. loader 条目**不进备份、也不从备份还原**: 安装器自己复制进去，卸载器删除"载荷列出的
-     那些文件"，再自底向上清掉因此变空的目录；用户自己的 BepInEx 内容（例如 config/、
-     其它插件）一律保留。
-  3. V6 备份缺口: 载荷里 Data 侧文件若安装前不存在（游戏里本来没有），备份目录不会有它，
-     卸载时无法还原 —— 对这类文件只在"内容与载荷逐字节一致"（可证明是本安装器写入的）时
-     才删除，否则保留并警告。
-  4. 存档播种（X3）: 仅当
-     %USERPROFILE%/AppData/LocalLow/NijiiroDragon/FizAndTheRainbowPlanet/SaveFile.es3
-     **不存在**时才写入最小合法存档（Language=4=Spanish，即中文所在的 es 槽位）；
-     已存在则一个字节都不改。格式取自实机存档逐字节核验（CRLF + TAB 缩进 +
-     {"__type":..,"value":..} 嵌套，无 BOM、无结尾换行），见 es3_render_json()。
-     测试可用环境变量 FIZRP_SAVE_ROOT 覆盖 LocalLow 根（默认 %USERPROFILE%/AppData/LocalLow）。
+命令：detect / check / verify / install / uninstall；--game-dir 指定游戏目录，
+--yes 确认警告，--no-seed-save 禁用新存档播种，--json 输出结构化结果。
+只支持 X2：中文写入 es 槽，loader 放在游戏根，数据放在 *_Data。
+源码、zip 和冻结包分别从 dist-additive/payload、payload、additive-payload 取资源。
+安装前必须通过清单与全量载荷校验，缺失、损坏或非法路径均禁止写入。
+数据文件首次备份到 _FizRP_original，另保留带时间戳的滚动备份；卸载优先还原
+首次备份。loader 按载荷清单移除，用户自己的其它插件、配置与存档保留。
+仅在存档不存在时播种 Language=4，FIZRP_SAVE_ROOT 可隔离测试存档目录。
 """
 import argparse
 import base64
@@ -52,8 +21,9 @@ import sys
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-# PyInstaller --onefile 会把 datas 解包到 sys._MEIPASS; 源码态则是 tools/ 的上一级。
-ROOT = getattr(sys, "_MEIPASS", os.path.dirname(HERE))
+# 源码入口位于 tools/，zip 入口位于包根；冻结资源位于 _MEIPASS。
+ROOT = getattr(sys, "_MEIPASS",
+               os.path.dirname(HERE) if os.path.basename(HERE) == "tools" else HERE)
 
 
 def _first_existing(*candidates):
@@ -64,31 +34,16 @@ def _first_existing(*candidates):
     return candidates[-1]
 
 
-# ROOT/payload → ROOT/dist/legacy/X1/FizRP-Chinese-Patch/files (打包态 / 源码态)
 PAYLOAD_DIR = _first_existing(
-    os.path.join(ROOT, "payload"),
-    os.path.join(ROOT, "dist", "legacy", "X1", "FizRP-Chinese-Patch", "files"),
-)
-# ROOT/patch-info.json → ROOT/dist/legacy/X1/FizRP-Chinese-Patch/patch-info.json
-PATCH_INFO = _first_existing(
-    os.path.join(ROOT, "patch-info.json"),
-    os.path.join(ROOT, "dist", "legacy", "X1", "FizRP-Chinese-Patch", "patch-info.json"),
-)
-MANIFEST = _first_existing(
-    os.path.join(ROOT, "manifest.json"),
-    os.path.join(ROOT, "dist", "legacy", "X1", "manifest.json"),
-)
-
-# 追加式（X2）载荷与清单：ROOT/additive-payload → ROOT/dist-additive/payload（源码态）；
-# 清单里的 patch_info 一并复用（reference_hashes 来自替换式 patch-info.json）。
-ADDITIVE_PAYLOAD_DIR = _first_existing(
     os.path.join(ROOT, "additive-payload"),
+    os.path.join(ROOT, "payload"),
     os.path.join(ROOT, "dist-additive", "payload"),
 )
-ADDITIVE_MANIFEST = _first_existing(
+MANIFEST = _first_existing(
     os.path.join(ROOT, "manifest-additive.json"),
     os.path.join(ROOT, "dist-additive", "manifest-additive.json"),
 )
+REFERENCE_FILES = ("globalgamemanagers", "level0", "app.info")
 
 # 追加式载荷里属于**游戏根**（与 exe 同级）的条目：首段名 与 首段前缀。
 # 其余条目（顶层 *.assets / StreamingAssets/**）落 Data 目录。两侧常量必须与
@@ -131,8 +86,6 @@ DATA_MARKERS = ("globalgamemanagers", "resources.assets", "sharedassets0.assets"
                 "app.info", "level0", "UnityPlayer.dll")
 
 MSG_VERSION_MISMATCH = "目标游戏与补丁构建版本不一致，强行安装可能造成资源错配。"
-MSG_ALREADY_PATCHED = ("游戏当前已是汉化态；继续安装会把已汉化文件当作备份，"
-                       "该备份无法还原英文原版。")
 MSG_RESIDUE_TEMPLATE = ("检测到补丁备份残留：存在 %d 个备份目录，但游戏当前是英文原版"
                         "（补丁已不在游戏中；可能刚完成卸载，或被 Steam 校验/更新还原）。"
                         "备份目录保留可随时还原，不再需要可手动删除。")
@@ -147,9 +100,9 @@ MSG_ADDITIVE_MIXED_STATE = (
     "游戏当前是替换式汉化态（中文被写进 en 槽位），不能直接叠加追加式补丁："
     "追加式载荷里的 catalog.json 按原版尺寸（en 串表 9585 B）生成，"
     "叠在替换式 catalog 上会让 en 段尺寸与实际文件不符，Addressables 会加载失败。"
-    "请先卸载替换式补丁（python tools/patch_tool.py uninstall --yes）再装追加式。")
+    "请先通过 Steam 校验游戏文件以恢复原版，再安装 X2。")
 MSG_ADDITIVE_ALREADY = ("游戏当前已是追加式汉化态（es 槽位已被中文占用）。"
-                        "继续安装会用当前（已汉化）文件覆盖备份，该备份无法还原原版。")
+                        "继续安装会创建新的滚动备份；首次备份不会被覆盖。")
 MSG_ADDITIVE_LOADER_CONFLICT = (
     "游戏根目录已存在 %s（本补丁要部署的 BepInEx loader）。"
     "它可能是其它 MOD 的加载器；继续安装会直接覆盖且**不留备份**，"
@@ -160,44 +113,14 @@ MSG_ADDITIVE_TA_MIXED = (
 
 _CMD_NAMES = ("detect", "verify", "install", "uninstall", "check")
 
-# --------------------------------------------------------------------------
-# 模式（替换式 / 追加式）——模块级单例，只由 CLI 与测试写入；默认替换式，
-# 因此所有历史调用路径（含 patch_launcher.py）的行为逐字节不变。
-# --------------------------------------------------------------------------
-_ADDITIVE_MODE = bool(ADDITIVE_PAYLOAD_DIR)
-# 打包态只带追加式载荷时自动走追加式；带替换式载荷（X1）时仍为 False。
-
-
-def set_additive(enabled):
-    """切换 additive 模式；返回切换前的值（便于调用方恢复）。"""
-    global _ADDITIVE_MODE
-    previous = _ADDITIVE_MODE
-    _ADDITIVE_MODE = bool(enabled)
-    return previous
-
-
-def is_additive():
-    return _ADDITIVE_MODE
-
-
 def payload_dir():
-    """当前模式的载荷目录。"""
-    return ADDITIVE_PAYLOAD_DIR if _ADDITIVE_MODE else PAYLOAD_DIR
+    """X2 载荷目录。"""
+    return PAYLOAD_DIR
 
 
 def manifest_path():
-    """当前模式的清单路径。"""
-    return ADDITIVE_MANIFEST if _ADDITIVE_MODE else MANIFEST
-
-
-def patch_info_path():
-    """当前模式的门禁信息文件。
-
-    additive 的 patch_info 内嵌在 manifest-additive.json 里（见
-    tools/build_manifest.py::build_additive_manifest），因此这里返回清单本身；
-    文件缺失时 load_patch_info() 返回 {}，与替换式缺 patch-info.json 同语义。
-    """
-    return ADDITIVE_MANIFEST if _ADDITIVE_MODE else PATCH_INFO
+    """X2 权威清单。"""
+    return MANIFEST
 
 
 def _basename(rel):
@@ -214,9 +137,9 @@ def additive_route(rel):
 
 
 def _target_path(data_dir, rel):
-    """载荷相对路径 → 目标绝对路径（替换式模式下恒等于 _data_path）。"""
+    """X2 载荷相对路径 → 目标绝对路径。"""
     rel_posix = str(rel).replace("\\", "/")
-    if _ADDITIVE_MODE and additive_route(rel_posix) == "game_root":
+    if additive_route(rel_posix) == "game_root":
         return os.path.join(game_root_of(data_dir), rel_posix.replace("/", os.sep))
     return _data_path(data_dir, rel_posix)
 
@@ -263,20 +186,8 @@ def _walk_files(root):
 
 
 def payload_rel_paths():
-    """载荷相对路径 (posix 风格)。优先按 manifest.files 顺序; 清单不可用时回退实际遍历。"""
-    try:
-        manifest = load_manifest()
-    except RuntimeError:
-        manifest = None
-    if isinstance(manifest, dict):
-        paths = []
-        for entry in manifest.get("files") or []:
-            rel = entry.get("path") if isinstance(entry, dict) else None
-            if rel:
-                paths.append(str(rel).replace("\\", "/"))
-        if paths:
-            return paths
-    return [rel for rel, _full in _walk_files(payload_dir())]
+    """仅使用经过校验的权威清单，不从磁盘推断安装集合。"""
+    return [entry["path"] for entry in load_manifest()["files"]]
 
 
 def payload_status(data_dir):
@@ -295,31 +206,77 @@ def _data_path(data_dir, rel):
 
 
 def _payload_detail(data_dir):
-    rels = payload_rel_paths()
+    entries = load_manifest()["files"]
     rows = []
     installed = missing = mismatch = 0
-    for rel in rels:
-        src = _payload_path(rel)
+    for entry in entries:
+        rel = entry["path"]
         dst = _target_path(data_dir, rel)
         if not os.path.isfile(dst):
             status = "missing"
             missing += 1
-        elif not os.path.isfile(src):
-            status = "mismatch"
-            mismatch += 1
-        elif _sha256_cached(src) != _sha256_cached(dst):
+        elif (os.path.getsize(dst) != entry["size"]
+              or _sha256_cached(dst) != entry["sha256"].lower()):
             status = "mismatch"
             mismatch += 1
         else:
             status = "ok"
             installed += 1
         rows.append((rel, status))
-    return {"total": len(rels), "installed": installed, "missing": missing,
+    return {"total": len(entries), "installed": installed, "missing": missing,
             "mismatch": mismatch, "rows": rows}
 
 
+def validate_manifest(data):
+    """验证 X2 清单；不允许缺字段、重复目标或越出安装目录的路径。"""
+    if not isinstance(data, dict) or data.get("mode") != "additive":
+        raise RuntimeError("清单必须是 mode=additive 的 X2 对象")
+    version = data.get("version")
+    if not isinstance(version, str) or not re.fullmatch(r"\d+\.\d+\.\d+(?:[-+][A-Za-z0-9.-]+)?", version):
+        raise RuntimeError("清单 version 必须是有效版本号")
+    files = data.get("files")
+    if not isinstance(files, list) or not files:
+        raise RuntimeError("清单 files 必须是非空列表")
+    paths = set()
+    total_bytes = 0
+    for entry in files:
+        if not isinstance(entry, dict):
+            raise RuntimeError("清单文件条目不是对象")
+        rel = entry.get("path")
+        if (not isinstance(rel, str) or not rel or "\\" in rel
+                or any(c in rel for c in ':\x00<>"|?*')
+                or any(p in ("", ".", "..") or p.endswith((".", " "))
+                       for p in rel.split("/"))):
+            raise RuntimeError("清单含非法相对路径：%r" % rel)
+        key = rel.casefold()
+        if key in paths:
+            raise RuntimeError("清单含重复文件路径：%s" % rel)
+        paths.add(key)
+        digest = entry.get("sha256")
+        size = entry.get("size")
+        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-fA-F]{64}", digest):
+            raise RuntimeError("清单缺少有效 SHA-256：%s" % rel)
+        if type(size) is not int or size < 0:
+            raise RuntimeError("清单缺少有效文件大小：%s" % rel)
+        total_bytes += size
+    if type(data.get("payload_files")) is not int or data["payload_files"] != len(files):
+        raise RuntimeError("清单 payload_files 与 files 数量不一致")
+    if type(data.get("payload_bytes")) is not int or data["payload_bytes"] != total_bytes:
+        raise RuntimeError("清单 payload_bytes 与文件大小合计不一致")
+    info = data.get("patch_info")
+    refs = info.get("reference_hashes") if isinstance(info, dict) else None
+    if not isinstance(refs, dict) or set(refs) != set(REFERENCE_FILES):
+        raise RuntimeError("清单缺少完整的游戏版本门禁基线")
+    if any(not isinstance(h, str) or not re.fullmatch(r"[0-9a-fA-F]{64}", h)
+           for h in refs.values()):
+        raise RuntimeError("游戏版本门禁基线含无效 SHA-256")
+    if info.get("payload_files") != len(files):
+        raise RuntimeError("门禁信息 payload_files 与载荷数量不一致")
+    return data
+
+
 def load_manifest():
-    """读取当前模式的清单; 读不到或结构损坏 → 抛 RuntimeError (中文原因)。"""
+    """读取并校验 X2 清单；缺失或损坏抛 RuntimeError。"""
     path = manifest_path()
     if not os.path.isfile(path):
         raise RuntimeError("找不到清单文件 %s：%s" % (os.path.basename(path), path))
@@ -335,37 +292,12 @@ def load_manifest():
     if not isinstance(data.get("files"), list):
         raise RuntimeError("清单文件 %s 结构异常：缺少 files 列表（%s）"
                            % (os.path.basename(path), path))
-    return data
+    return validate_manifest(data)
 
 
 def load_patch_info():
-    """读取门禁信息; 缺失/损坏 → 返回 {} (版本门禁随之跳过)。
-
-    替换式读 patch-info.json; 追加式读 manifest-additive.json 内嵌的 patch_info
-    (由 tools/build_manifest.py 生成, reference_hashes 与替换式同源)。
-    """
-    if _ADDITIVE_MODE:
-        try:
-            with open(ADDITIVE_MANIFEST, encoding="utf-8") as handle:
-                data = json.load(handle)
-        except Exception:
-            return {}
-        if not isinstance(data, dict):
-            return {}
-        info = data.get("patch_info")
-        if not isinstance(info, dict):
-            return {}
-        # 清单自身的计数是权威值; patch_info 里的 payload_files 仅作兜底。
-        merged = dict(info)
-        if "payload_files" not in merged and "payload_files" in data:
-            merged["payload_files"] = data["payload_files"]
-        return merged
-    try:
-        with open(PATCH_INFO, encoding="utf-8") as handle:
-            data = json.load(handle)
-    except Exception:
-        return {}
-    return data if isinstance(data, dict) else {}
+    """读取已校验的 X2 门禁信息；缺失或损坏必须阻止安装。"""
+    return load_manifest()["patch_info"]
 
 
 # --------------------------------------------------------------------------
@@ -702,8 +634,6 @@ def additive_state_warnings(state, cmd):
 def additive_loader_conflicts(data_dir):
     """游戏根目录里"已存在且与载荷不同"的 loader 条目（安装会覆盖，且不留备份）。"""
     conflicts = []
-    if not is_additive():
-        return conflicts
     game_root = game_root_of(data_dir)
     for rel in payload_rel_paths():
         if additive_route(rel) != "game_root":
@@ -805,8 +735,12 @@ def seed_save_if_absent(result, emit):
         return False
     try:
         os.makedirs(os.path.dirname(path), exist_ok=True)
-        with open(path, "wb") as handle:
+        with open(path, "xb") as handle:
             handle.write(_seed_save_bytes())
+    except FileExistsError:
+        result.update(_existing_save_note(path, emit))
+        result["save_seeded"] = False
+        return False
     except OSError as exc:
         emit("警告: 无法写入存档播种文件（%s：%s）。安装已完成；首次启动时请手动在"
              "语言选择画面选第三项「中文」。" % (path, exc))
@@ -823,8 +757,8 @@ def seed_save_if_absent(result, emit):
 # 版本门禁
 # --------------------------------------------------------------------------
 def check_version_gate(data_dir):
-    """逐条中文问题描述 (缺失/哈希不符); 无问题 → []。"""
-    hashes = load_patch_info().get("reference_hashes") or {}
+    """逐条核对完整基线；清单损坏不得跳过版本门禁。"""
+    hashes = load_patch_info()["reference_hashes"]
     issues = []
     if not isinstance(hashes, dict):
         return issues
@@ -848,100 +782,39 @@ def _payload_selfcheck():
 
 
 def _payload_selfcheck_detail():
-    """返回 (ok, lines, problems)。
-
-    lines 是完整的自检明细 (调用方必须逐行输出, 通过与否都要);
-    problems 是逐条中文问题描述 (供 error 字段给出具体原因)。
-    清单缺失只降级为警告, 载荷计数与 patch-info 仍强制核对。
-    """
-    lines = []
+    """清单与载荷必须同时完整；任何异常均返回失败，不降级绕过。"""
+    lines = ["载荷目录: %s" % payload_dir(), "模式: X2 追加式（additive）"]
     problems = []
-    active_payload = payload_dir()
-    actual = _walk_files(active_payload)
-    total = len(actual)
-    lines.append("载荷目录: %s" % active_payload)
-    if is_additive():
-        lines.append("模式: 追加式（additive）")
-    if not os.path.isdir(active_payload):
-        lines.append("载荷目录不存在。")
-        problems.append("载荷目录不存在：%s" % active_payload)
-        lines.append("Payload: 异常 (%d)" % len(problems))
-        return False, lines, problems
-    lines.append("载荷文件数: %d" % total)
-    actual_paths = set(rel for rel, _full in actual)
-    if is_additive():
-        routes = {"data": 0, "game_root": 0}
-        for rel in sorted(actual_paths):
-            routes[additive_route(rel)] += 1
-        lines.append("投放路由: Data=%d, 游戏根=%d" % (routes["data"],
-                                                     routes["game_root"]))
-
     try:
         manifest = load_manifest()
     except RuntimeError as exc:
-        manifest = None
-        lines.append("警告: %s" % exc)
-        lines.append("警告: 已跳过 manifest 清单比对（仅核对载荷计数与 patch-info.json）。")
-    if isinstance(manifest, dict):
-        recorded = []
-        for entry in manifest.get("files") or []:
-            rel = entry.get("path") if isinstance(entry, dict) else None
-            if rel:
-                recorded.append(str(rel).replace("\\", "/"))
-        lines.append("清单记录文件数: %d" % len(recorded))
-        if len(recorded) != total:
-            problems.append("manifest 记录 %d 个文件，实际载荷 %d 个"
-                            % (len(recorded), total))
-        absent = [rel for rel in recorded if rel not in actual_paths]
-        if absent:
-            problems.append("manifest 记录的文件在载荷中缺失 %d 个" % len(absent))
-            for rel in absent[:20]:
-                lines.append("   载荷缺失: %s" % rel)
-        extra = sorted(actual_paths - set(recorded))
-        if extra:
-            problems.append("载荷中有 %d 个文件未记入 manifest" % len(extra))
-            for rel in extra[:20]:
-                lines.append("   载荷多出（manifest 未记录）: %s" % rel)
-        bad = []
-        for entry in manifest.get("files") or []:
-            if not isinstance(entry, dict):
-                continue
-            rel = str(entry.get("path") or "").replace("\\", "/")
-            want = str(entry.get("sha256") or "").strip().lower()
-            if not rel or not want:
-                continue
-            src = _payload_path(rel)
-            if os.path.isfile(src) and _sha256_cached(src) != want:
-                bad.append(rel)
-        if bad:
-            problems.append("manifest 与载荷哈希不符 %d 个" % len(bad))
-            for rel in bad[:20]:
-                lines.append("   哈希不符: %s" % rel)
-        else:
-            lines.append("manifest 哈希: OK (%d)" % len(recorded))
-
-    info = load_patch_info()
-    # 文案与替换式保持逐字一致；additive 才知道自己其实读的是 manifest-additive.json
-    label = "门禁信息（manifest-additive.json）" if is_additive() else "patch-info.json"
-    if not info:
-        problems.append("%s 缺失或无法解析：%s"
-                        % ("门禁信息" if is_additive() else "patch-info.json",
-                           patch_info_path()))
-        lines.append("%s: 缺失或无法解析" % label)
-    else:
-        recorded_count = info.get("payload_files")
-        lines.append("%s: payload_files=%s" % (label, recorded_count))
-        if recorded_count != total:
-            problems.append("%s 记录的 payload_files=%s 与实际载荷 %d 不一致"
-                            % (label, recorded_count, total))
-
-    if problems:
-        for problem in problems:
-            lines.append("问题: %s" % problem)
-        lines.append("Payload: 异常 (%d)" % len(problems))
-        return False, lines, problems
-    lines.append("Payload: OK (%d)" % total)
-    return True, lines, []
+        return False, lines + ["问题: %s" % exc], [str(exc)]
+    if not os.path.isdir(payload_dir()):
+        problem = "载荷目录不存在：%s" % payload_dir()
+        return False, lines + [problem], [problem]
+    actual = dict(_walk_files(payload_dir()))
+    recorded = {entry["path"]: entry for entry in manifest["files"]}
+    lines.append("载荷文件数: %d；清单记录文件数: %d" % (len(actual), len(recorded)))
+    for rel in sorted(set(recorded) - set(actual)):
+        problems.append("载荷缺失: %s" % rel)
+    for rel in sorted(set(actual) - set(recorded)):
+        problems.append("载荷多出（manifest 未记录）: %s" % rel)
+    for rel in sorted(set(actual) & set(recorded)):
+        entry = recorded[rel]
+        try:
+            if os.path.getsize(actual[rel]) != entry["size"]:
+                problems.append("载荷大小不符: %s" % rel)
+            elif sha256(actual[rel]) != entry["sha256"].lower():
+                problems.append("载荷哈希不符: %s" % rel)
+        except OSError as exc:
+            problems.append("载荷无法读取: %s（%s）" % (rel, exc))
+    routes = {"data": 0, "game_root": 0}
+    for rel in recorded:
+        routes[additive_route(rel)] += 1
+    lines.append("投放路由: Data=%d, 游戏根=%d" % (routes["data"], routes["game_root"]))
+    lines.extend("问题: %s" % item for item in problems)
+    lines.append("Payload: %s (%d)" % ("异常" if problems else "OK", len(recorded)))
+    return not problems, lines, problems
 
 
 def _check_error_text(problems):
@@ -992,123 +865,85 @@ def _resolve_into(result, data_dir):
     return True
 
 
-def precheck(cmd, data_dir=None, additive=False):
-    """安装/卸载前的检查。返回结构见契约 §2.1 (字段名冻结)。
-
-    ``additive=True`` 走追加式（X2）载荷；默认 False 即替换式，历史行为不变。
-    """
-    set_additive(additive)
+def precheck(cmd, data_dir=None):
+    """X2 公共预检查；安装前完整性校验不可由 --yes 跳过。"""
     cmd = str(cmd or "").lower()
     result = _new_result(cmd)
-    result["mode"] = "additive" if additive else "replace"
+    result["mode"] = "additive"
     if cmd not in _CMD_NAMES:
-        result["ok"] = False
-        result["error"] = "未知命令：%s" % (cmd or "(空)")
+        result.update(ok=False, error="未知命令：%s" % (cmd or "(空)"))
         return result
-
+    if cmd in ("check", "install"):
+        ok, lines, problems = _payload_selfcheck_detail()
+        result["payload_check"] = lines
+        if not ok:
+            result.update(ok=False, error=_check_error_text(problems))
+            return result
+        if cmd == "check":
+            result["state"]["total"] = len(payload_rel_paths())
+            return result
+    else:
+        try:
+            load_manifest()
+        except RuntimeError as exc:
+            result.update(ok=False, error=str(exc))
+            return result
     if cmd == "detect":
         dirs = find_game_dirs()
         if not dirs:
-            result["ok"] = False
-            result["error"] = ("未自动找到游戏数据目录，请用 --game-dir 指定游戏根目录"
-                               "或 %s 目录" % DATA_DIRNAME)
+            result.update(ok=False, error="未自动找到游戏目录，请用 --game-dir 指定。")
             return result
         result["data_dir"] = dirs[0]
         _fill_state(result, dirs[0])
         return result
-
-    if cmd == "check":
-        ok, _lines, problems = _payload_selfcheck_detail()
-        result["ok"] = ok
-        if not ok:
-            result["error"] = _check_error_text(problems)
-        result["state"] = {"total": len(_walk_files(payload_dir())), "installed": 0,
-                           "backups": [], "residue": False, "patched": False}
-        result["warnings"] = [] if ok else ["载荷自检未通过，请重新获取补丁包。"]
-        return result
-
     if not _resolve_into(result, data_dir):
         return result
     resolved = result["data_dir"]
-
-    if not os.path.isdir(payload_dir()):
-        result["ok"] = False
-        result["error"] = "找不到载荷目录：%s" % payload_dir()
-        return result
-
     detail = _payload_detail(resolved)
-    if detail["total"] == 0:
-        result["ok"] = False
-        result["error"] = "载荷为空：%s" % payload_dir()
-        return result
     state = _fill_state(result, resolved, detail)
-
     if cmd == "verify":
+        result["verified"] = detail["installed"]
+        result["skipped"] = detail["missing"] + detail["mismatch"]
         if not state["patched"]:
-            result["ok"] = False
-            result["error"] = ("校验未通过：仅 %d/%d 个文件与载荷一致"
-                               % (state["installed"], state["total"]))
-        if state["residue"]:
-            result["warnings"].append(_residue_warning(resolved, state["backups"]))
-        if additive:
-            probe = probe_additive_state(resolved)
-            result["additive_state"] = probe
-            result["warnings"].extend(additive_state_warnings(probe, "verify"))
-            result["warnings"].extend(probe["notes"])
+            result.update(ok=False, error="校验未通过：仅 %d/%d 个文件与载荷一致"
+                          % (state["installed"], state["total"]))
+        probe = probe_additive_state(resolved)
+        result["additive_state"] = probe
+        result["warnings"].extend(additive_state_warnings(probe, "verify"))
+        result["warnings"].extend(probe["notes"])
         return result
-
     if cmd == "install":
-        if not load_patch_info():
-            result["warnings"].append(
-                "找不到或无法解析 %s（%s），已跳过版本门禁校验。"
-                % ("manifest-additive.json" if additive else "patch-info.json",
-                   patch_info_path()))
         issues = check_version_gate(resolved)
         if issues:
             result["warnings"].append(MSG_VERSION_MISMATCH)
             result["warnings"].extend(issues)
-        if additive:
-            probe = probe_additive_state(resolved)
-            result["additive_state"] = probe
-            result["warnings"].extend(additive_state_warnings(probe, "install"))
-            result["warnings"].extend(probe["notes"])
-            if probe["additive"]:
-                result["warnings"].append(MSG_ADDITIVE_ALREADY)
-            conflicts = additive_loader_conflicts(resolved)
-            if conflicts:
-                result["loader_conflicts"] = conflicts
-                result["warnings"].append(
-                    MSG_ADDITIVE_LOADER_CONFLICT
-                    % ("、".join(conflicts[:5])
-                       + ("（共 %d 个）" % len(conflicts) if len(conflicts) > 5 else "")))
-        elif state["patched"]:
-            result["warnings"].append(MSG_ALREADY_PATCHED)
+        probe = probe_additive_state(resolved)
+        result["additive_state"] = probe
+        result["warnings"].extend(additive_state_warnings(probe, "install"))
+        result["warnings"].extend(probe["notes"])
+        if probe["replacement"]:
+            result.update(ok=False, error=MSG_ADDITIVE_MIXED_STATE)
+            return result
+        if probe["additive"]:
+            result["warnings"].append(MSG_ADDITIVE_ALREADY)
+        conflicts = additive_loader_conflicts(resolved)
+        if conflicts:
+            result["loader_conflicts"] = conflicts
+            result["warnings"].append(MSG_ADDITIVE_LOADER_CONFLICT
+                                      % "、".join(conflicts[:5]))
         if state["residue"]:
             result["warnings"].append(_residue_warning(resolved, state["backups"]))
         result["needs_confirm"] = bool(result["warnings"])
-        return result
-
-    if cmd == "uninstall":
-        if not state["backups"]:
-            result["ok"] = False
-            result["error"] = MSG_NO_BACKUP
-        return result
-
+    elif cmd == "uninstall" and not state["backups"]:
+        result.update(ok=False, error=MSG_NO_BACKUP)
     return result
 
 
 # --------------------------------------------------------------------------
 # execute
 # --------------------------------------------------------------------------
-def execute(cmd, data_dir=None, *, log=None, assume_yes=False, additive=False,
-            seed_save=True):
-    """执行命令。返回契约 §2.2 结构 (含 exit / log / 计数)。
-
-    ``additive=True`` 走追加式（X2）：载荷平铺，loader 条目落游戏根、数据文件落
-    Data 目录，安装后按策略播种存档；默认 False 即替换式，历史行为不变。
-    ``seed_save=False`` 关闭 additive 安装的存档播种。
-    """
-    set_additive(additive)
+def execute(cmd, data_dir=None, *, log=None, assume_yes=False, seed_save=True):
+    """执行唯一的 X2 路径；I/O 失败返回非零，绝不谎报完成。"""
     cmd = str(cmd or "").lower()
     lines = []
 
@@ -1121,56 +956,40 @@ def execute(cmd, data_dir=None, *, log=None, assume_yes=False, additive=False,
             except Exception:
                 pass
 
-    result = precheck(cmd, data_dir, additive=additive)
-    exit_code = 0 if (result.get("ok") and not result.get("error")) else 1
+    result = precheck(cmd, data_dir)
+    exit_code = 0 if result.get("ok") and not result.get("error") else 1
     for warning in result.get("warnings") or []:
         emit("警告: %s" % warning)
-
-    if not data_dir and cmd in ("verify", "install", "uninstall"):
-        # 自动探测到多个安装时, 提示本次使用的是第一个 (契约 §2.4; check 与游戏目录无关, 不提示)
-        candidates = find_game_dirs()
-        if len(candidates) > 1:
-            emit("提示: 找到多个安装，使用第一个: %s" % candidates[0])
-
-    if cmd == "check":
-        # check 与游戏目录无关: 通过与否都要逐行输出自检明细, 末尾再补一行汇总原因
-        _ok, check_lines, _problems = _payload_selfcheck_detail()
-        for line in check_lines:
-            emit(line)
-        if result.get("error"):
-            emit(result["error"])
-
-    elif result.get("error"):
+    for line in result.get("payload_check") or []:
+        emit(line)
+    if result.get("error"):
         emit(result["error"])
-
     elif cmd == "detect":
-        dirs = find_game_dirs()
-        emit("检测到游戏数据目录（共 %d 个）:" % len(dirs))
-        for index, path in enumerate(dirs, 1):
-            emit("  [%d] %s" % (index, path))
-        if len(dirs) > 1:
-            emit("提示: 找到多个安装，使用第一个: %s" % dirs[0])
-        result["dirs"] = dirs
-
+        result["dirs"] = find_game_dirs()
+        for path in result["dirs"]:
+            emit("检测到游戏数据目录: %s" % path)
     elif cmd == "verify":
         detail = _payload_detail(result["data_dir"])
-        label = {"ok": "一致", "missing": "缺失", "mismatch": "不一致"}
         for index, (rel, status) in enumerate(detail["rows"], 1):
-            emit("[%d/%d] %s: %s" % (index, detail["total"], label[status], rel))
-        emit("校验完成: %d/%d" % (detail["installed"], detail["total"]))
+            emit("[%d/%d] %s: %s" % (index, detail["total"], status, rel))
         result["verified"] = detail["installed"]
         result["skipped"] = detail["missing"] + detail["mismatch"]
-
-    elif cmd == "install":
+    elif cmd in ("install", "uninstall"):
         if result.get("needs_confirm") and not assume_yes:
+            result.update(ok=False, error=MSG_NEEDS_CONFIRM)
             emit(MSG_NEEDS_CONFIRM)
             exit_code = 1
         else:
-            exit_code = _do_install(result, emit, seed_save=seed_save)
-
-    elif cmd == "uninstall":
-        exit_code = _do_uninstall(result, emit)
-
+            try:
+                if cmd == "install":
+                    exit_code = _do_install(result, emit, seed_save=seed_save)
+                else:
+                    exit_code = _do_uninstall(result, emit)
+            except (OSError, RuntimeError) as exc:
+                result.update(ok=False, error="操作失败：%s；部分文件可能已写入，请查看备份和日志。" % exc)
+                emit(result["error"])
+                exit_code = 1
+    result["ok"] = bool(result.get("ok")) and exit_code == 0
     result["exit"] = int(exit_code)
     result["log"] = lines
     return result
@@ -1210,7 +1029,6 @@ def _new_backup_dir(game_root):
 
 def _do_install(result, emit, seed_save=True):
     data_dir = result["data_dir"]
-    additive = is_additive()
     rels = payload_rel_paths()
     total = len(rels)
     backup_dir = _new_backup_dir(game_root_of(data_dir))
@@ -1236,10 +1054,8 @@ def _do_install(result, emit, seed_save=True):
         src = _payload_path(rel)
         dst = _target_path(data_dir, rel)
         if not os.path.isfile(src):
-            emit("警告: 载荷缺少 %s，已跳过。" % rel)
-            skipped += 1
-            continue
-        is_loader = additive and additive_route(rel) == "game_root"
+            raise RuntimeError("安装期间载荷文件消失：%s" % rel)
+        is_loader = additive_route(rel) == "game_root"
         if os.path.isfile(dst) and not is_loader:
             backup_file = os.path.join(backup_dir, rel.replace("/", os.sep))
             parent = os.path.dirname(backup_file)
@@ -1301,31 +1117,28 @@ def _do_install(result, emit, seed_save=True):
             emit("已还原 %d 个上一版改过、本版不再需要的文件: %s"
                  % (len(restored), ", ".join(sorted(restored)[:5])
                     + (" …" if len(restored) > 5 else "")))
-    if additive:
-        emit("其中 loader/插件条目 %d 个落在游戏根目录。" % loader_written)
+    emit("其中 loader/插件条目 %d 个落在游戏根目录。" % loader_written)
     emit("原文件备份在: %s" % backup_dir)
-    emit("下一次启动游戏时，语言选择画面请选第二项（中文）。" if not additive else
-         "下一次启动游戏时，语言选择画面请选第三项（中文）。")
+    emit("下一次启动游戏时，语言选择画面请选第三项（中文）。")
     result["written"] = written
     result["backed"] = backed
     result["skipped"] = skipped
     result["backup_dir"] = backup_dir
 
-    if additive:
-        result["loader_written"] = loader_written
-        _verify_v6_backup(result, emit, rels, pre_existing, v6_pre_hashes)
-        if seed_save:
-            seed_save_if_absent(result, emit)
-        else:
-            emit("提示: 已按 --no-seed-save 跳过存档播种。")
-            result["save_seeded"] = False
+    result["loader_written"] = loader_written
+    _verify_v6_backup(result, emit, rels, pre_existing, v6_pre_hashes)
+    if seed_save:
+        seed_save_if_absent(result, emit)
+    else:
+        emit("提示: 已按 --no-seed-save 跳过存档播种。")
+        result["save_seeded"] = False
     return 0
 
 
 def _verify_v6_backup(result, emit, rels, pre_existing, pre_hashes):
     """V6 核对：安装前存在的 Data 侧文件必须真的落进备份目录。
 
-    替换式/追加式都只备份"安装前存在"的文件，因此这里逐条回读备份件哈希，
+    只备份"安装前存在"的 Data 文件，因此这里逐条回读备份件哈希，
     与安装前记录的哈希比对；不一致（或备份缺失）即为 V6 缺口，必须显式告警。
     """
     backup_dir = result["backup_dir"]
@@ -1362,7 +1175,6 @@ def _verify_v6_backup(result, emit, rels, pre_existing, pre_hashes):
 
 def _do_uninstall(result, emit):
     data_dir = result["data_dir"]
-    additive = is_additive()
     backups = result["state"]["backups"]
     if not backups:
         emit(MSG_NO_BACKUP)
@@ -1393,8 +1205,7 @@ def _do_uninstall(result, emit):
     result["restored"] = restored
     result["restored_from"] = backup_dir
     result["skipped"] = 0
-    if additive:
-        _remove_additive_payload(result, emit, data_dir, backup_rels)
+    _remove_additive_payload(result, emit, data_dir, backup_rels)
     emit("备份目录仍在: %s（未删除；如需清理请手动删除）" % backup_dir)
     return 0
 
@@ -1471,11 +1282,10 @@ def _remove_additive_payload(result, emit, data_dir, backup_rels):
     emit("存档未做任何改动（补丁不删除、不还原用户存档）。")
 
 
-def run_command(cmd, data_dir=None, *, log=None, assume_yes=False, additive=False,
-                seed_save=True):
-    """执行命令并只返回退出码 (0/1)。"""
+def run_command(cmd, data_dir=None, *, log=None, assume_yes=False, seed_save=True):
+    """执行 X2 命令并返回退出码。"""
     return int(execute(cmd, data_dir, log=log, assume_yes=assume_yes,
-                       additive=additive, seed_save=seed_save)["exit"])
+                       seed_save=seed_save)["exit"])
 
 
 # --------------------------------------------------------------------------
@@ -1558,10 +1368,8 @@ def _build_parser():
         if name in ("install", "uninstall"):
             sub.add_argument("--yes", action="store_true",
                              help="跳过确认，直接执行")
-        sub.add_argument("--additive", action="store_true",
-                         help="强制使用追加式（X2）载荷（默认：存在 additive 载荷即自动选用）")
-        sub.add_argument("--replacement", action="store_true",
-                         help="强制使用替换式（X1）载荷（dist/legacy/X1/...）；用于历史回溯")
+        # 旧 X2 批处理的兼容别名，不影响执行模式。
+        sub.add_argument("--additive", action="store_true", help=argparse.SUPPRESS)
         if name == "install":
             sub.add_argument("--no-seed-save", action="store_true",
                              help="追加式安装时不播种存档（默认仅在存档不存在时写入）")
@@ -1594,17 +1402,10 @@ def main(argv=None):
     game_dir = getattr(args, "game_dir", None)
     as_json = bool(getattr(args, "json", False))
     assume_yes = bool(getattr(args, "yes", False))
-    if getattr(args, "replacement", False):
-        additive = False
-    else:
-        # 默认跟随初值：存在 additive 载荷（源码态 dist-additive/payload 或
-        # 打包态 additive-payload）即走追加式；--replacement 用于 X1 历史回溯。
-        additive = bool(getattr(args, "additive", False)) or is_additive()
     seed_save = not bool(getattr(args, "no_seed_save", False))
-    set_additive(additive)
 
     if cmd in ("install", "uninstall") and not assume_yes:
-        pre = precheck(cmd, game_dir, additive=additive)
+        pre = precheck(cmd, game_dir)
         if pre.get("needs_confirm") and _stdin_is_tty():
             lines = ["警告: %s" % warning for warning in (pre.get("warnings") or [])]
             for line in lines:
@@ -1624,7 +1425,7 @@ def main(argv=None):
                 return _finish_precheck(pre, 1, lines, as_json)
 
     result = execute(cmd, game_dir, log=print, assume_yes=assume_yes,
-                     additive=additive, seed_save=seed_save)
+                     seed_save=seed_save)
     if as_json:
         _emit_json(result)
     return int(result["exit"])

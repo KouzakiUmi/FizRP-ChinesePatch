@@ -1,4 +1,4 @@
-﻿id,kind,source,path,comment,ja_source,en_reference,zh_Hans
+id,kind,source,path,comment,ja_source,en_reference,zh_Hans
 AutoTalk:AutoTalkData_NPC_S1_Neru:0,AutoTalk,AutoTalkData_NPC_S1_Neru,talkDatas[0],剧情对话 | wait=0.50 speaker=1,"オレ......　こんな高いところ
 初めて登ったよ！",I... I've never climbed so high before!,"我……第一次
 爬到这么高的地方！"
@@ -141,11 +141,11 @@ AutoTalk:AutoTalkData_NPC_S7_Creator:1,AutoTalk,AutoTalkData_NPC_S7_Creator,talk
 　ネットサーフィンを　しているようだ）","(...... On closer inspection, 
 he appears to be surfing the net.)","（……结果一看，现在
 　好像在上网冲浪）"
-AutoTalk:AutoTalkData_NPC_S7_Ramla:0,AutoTalk,AutoTalkData_NPC_S7_Ramla,talkDatas[0],剧情对话 | wait=0.50 speaker=1,ここまでたどりつくとは、面白い個体ですね？,Interesting individual to have made it this far.,居然能走到这里，真是个有趣的个体呢？
+AutoTalk:AutoTalkData_NPC_S7_Ramla:0,AutoTalk,AutoTalkData_NPC_S7_Ramla,talkDatas[0],剧情对话 | wait=0.50 speaker=1,ここまでたどりつくとは、面白い個体ですね？,Interesting individual to have made it this far.,能走到这儿，倒是个有意思的家伙呢？
 AutoTalk:AutoTalkData_NPC_S7_Ramla:1,AutoTalk,AutoTalkData_NPC_S7_Ramla,talkDatas[1],剧情对话 | wait=0.50 speaker=1,"貴方達が　この先で　何を成すのか、
 見届けさせてもらいましょう!","Let me see what you'll accomplish.
-I’ll watch closely!","你们接下来会做出什么，
-就让我好好看个究竟吧！"
+I’ll watch closely!","你们接下来会闯出什么名堂，
+我就在旁边看着了！"
 AutoTalk:AutoTalkData_NPC_S7_Yoyami:0,AutoTalk,AutoTalkData_NPC_S7_Yoyami,talkDatas[0],剧情对话 | wait=0.50 speaker=1,"こんなにたくさん　ひとが来るなんて
 めずらしいなぁ......。",It’s rare to see so many people coming here.,"居然有这么多人来到这里，
 真是少见呢……"
@@ -185,8 +185,8 @@ use protective tools without limit...","比如，让你们能
 AutoTalk:Def_God_1Fiz:2,AutoTalk,Def_God_1Fiz,talkDatas[2],剧情对话 | wait=0.10 speaker=3,"えっ！　どこからか出てくる　ぼくの
 ハンマーって　そういう事だったの.....！？","Wait, so that hammer of mine that just 
 pops outta nowhere...
-That’s because of you!?","诶！不知从哪里冒出来的我的
-锤子，原来是这么回事……！？"
+That’s because of you!?","诶！我那把不知从哪冒出来的锤子，
+原来是这么来的……！？"
 AutoTalk:Def_God_1Fiz:3,AutoTalk,Def_God_1Fiz,talkDatas[3],剧情对话 | wait=0.10 speaker=8,"そうですね。　ほかの道具のほうが
 良かったでしょうか？","Yes, indeed. Maybe other tools 
 would have been better?","是这样呢。难道换成别的道具
@@ -298,17 +298,17 @@ AutoTalk:Def_God_Vore2:2,AutoTalk,Def_God_Vore2,talkDatas[2],剧情对话 | wait
 AutoTalk:Def_God_Vore2:3,AutoTalk,Def_God_Vore2,talkDatas[3],剧情对话 | wait=0.10 speaker=8,"まだ見ぬ快楽が　この世に存在するならば、
 ぜひこの身で　体験してみたいものですね。","If there’s a pleasure
 I haven’t felt in this world...
-I wanna feel it!","如果这世上还有我未曾体验的快感，
-真想用这副身体亲自体验一下呢。"
+I wanna feel it!","这世上要是还有我没尝过的滋味，
+真想用这副身体去尝尝呢。"
 AutoTalk:Def_God_Vore2:4,AutoTalk,Def_God_Vore2,talkDatas[4],剧情对话 | wait=0.10 speaker=5,"からだおおきいから
 食べられないんじゃない？","Maybe you’re just too big
 to get eaten?","你身体那么大，
 是不是根本吃不下呀？"
 AutoTalk:Def_God_Vore2:5,AutoTalk,Def_God_Vore2,talkDatas[5],剧情对话 | wait=0.10 speaker=8,"体の大きさなど、私にとっては　魔法で
 思いのままにできる　ささいなことです。","Size means nothing to me.
-Magic can fix that easily.","身体大小这种事，我用魔法就能
-随心所欲地改变，根本不算什么。"
-AutoTalk:Def_God_Vore2:6,AutoTalk,Def_God_Vore2,talkDatas[6],剧情对话 | wait=0.10 speaker=6,（神さま　変なスイッチ入っちゃった...）,(Oh no... We flipped a weird switch...),（神大人好像被按到了奇怪的开关……）
+Magic can fix that easily.","身子大小而已，我用魔法
+就能随便改，算不上什么。"
+AutoTalk:Def_God_Vore2:6,AutoTalk,Def_God_Vore2,talkDatas[6],剧情对话 | wait=0.10 speaker=6,（神さま　変なスイッチ入っちゃった...）,(Oh no... We flipped a weird switch...),（神大人好像打开了奇怪的开关……）
 AutoTalk:Def_God_Water:0,AutoTalk,Def_God_Water,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"なんども　水に溺れて
 命を　落としているようですね。","You’ve drowned again.
 That water’s no joke.","看来你一次次在水里溺水，
@@ -375,7 +375,7 @@ AutoTalk:MovieTalk_Stage3:3,AutoTalk,MovieTalk_Stage3,talkDatas[3],剧情对话 
 First time in these woods?","那边的两个人！
 来这座森林是第一次吗？
 "
-AutoTalk:MovieTalk_Stage3:4,AutoTalk,MovieTalk_Stage3,talkDatas[4],剧情对话 | wait=4.00 speaker=6,ほっ,Phew.,啊！
+AutoTalk:MovieTalk_Stage3:4,AutoTalk,MovieTalk_Stage3,talkDatas[4],剧情对话 | wait=4.00 speaker=6,ほっ,Phew.,呼……
 AutoTalk:MovieTalk_Stage3:5,AutoTalk,MovieTalk_Stage3,talkDatas[5],剧情对话 | wait=3.00 speaker=6,"はじめまして！　リーファーだよ！
 ","Nice to meet you!
 I’m Leafur!","初次见面！莉芙来啦！
@@ -487,16 +487,16 @@ But how do we even get there?","虽说宝珠就在月亮上……
 AutoTalk:MovieTalk_Stage7:1,AutoTalk,MovieTalk_Stage7,talkDatas[1],剧情对话 | wait=4.00 speaker=8,"......先ほどの戦いで　私は
 普段とは　異なる姿に　なっていました。","...In the recent battle,
 I took an unfamiliar form.","……在刚才的战斗里，我
-变成了一副和平时不同的样子。"
+变成了和平时不一样的样子。"
 AutoTalk:MovieTalk_Stage7:2,AutoTalk,MovieTalk_Stage7,talkDatas[2],剧情对话 | wait=4.00 speaker=8,"私は　オーブの力があれば　望みの姿に
 変身できる能力を　もっているのです。","I have the ability
 to transform as I wish
-with an Orb’s power.","我拥有只要有宝珠之力，就能变身成
-任何想要模样的能力哦。"
+with an Orb’s power.","只要有宝珠之力，我就能变成
+任何想要的样子哦。"
 AutoTalk:MovieTalk_Stage7:3,AutoTalk,MovieTalk_Stage7,talkDatas[3],剧情对话 | wait=4.00 speaker=8,"この能力で　私が大きくなれば、　あなたたちを
 月へ運ぶことも　できるでしょう。","With this power, if I grow large enough,
-I can carry you to the Moon!","用这个能力让我变大，就能把你们
-一起送到月亮上去吧。"
+I can carry you to the Moon!","我用这能力变大，就能把你们
+送到月亮上去。"
 AutoTalk:MovieTalk_Stage7:4,AutoTalk,MovieTalk_Stage7,talkDatas[4],剧情对话 | wait=4.00 speaker=5,"ちっちゃくなったと思ったら、　今度は
 でっかくなるの...！　すごい、すごいよ！","First you shrink, then you grow huge...! 
 So amazing!","刚以为你变小了，这回又
@@ -549,13 +549,13 @@ overflowing everywhere!?","被夺走的宝珠之力，
 正在空间里四处溢出吗！"
 AutoTalk:MovieTalk_Stage7_Epilogue:6,AutoTalk,MovieTalk_Stage7_Epilogue,talkDatas[6],剧情对话 | wait=3.50 speaker=4,"......これで　わたしたちの世界は
 守られたのかしら？","...Does this mean our world
-is safe now?","……这样我们的世界
-就算是被守住了吗？"
+is safe now?","……这样，我们的世界
+就算保住了吗？"
 AutoTalk:MovieTalk_Stage7_Epilogue:7,AutoTalk,MovieTalk_Stage7_Epilogue,talkDatas[7],剧情对话 | wait=4.00 speaker=8,"ええ.......。　星の危機は過ぎ去り、
 色彩豊かな世界へと　戻ってゆくでしょう。
 ","Yes... the crisis has passed,
-and our vibrant world returns.","是的……星球危机已经过去，
-世界将会回到色彩缤纷的样子。
+and our vibrant world returns.","是的……星球的危机已经过去，
+世界也会重新变得五彩缤纷。
 "
 AutoTalk:MovieTalk_Stage7_Epilogue:8,AutoTalk,MovieTalk_Stage7_Epilogue,talkDatas[8],剧情对话 | wait=3.00 speaker=8,"そして　忘れてはならないことが
 もうひとつ......。","And there's one more thing
@@ -611,7 +611,7 @@ AutoTalk:S1_0_101_T3_1:0,AutoTalk,S1_0_101_T3_1,talkDatas[0],剧情对话 | wait
 AutoTalk:S1_0_101_T3_1:1,AutoTalk,S1_0_101_T3_1,talkDatas[1],剧情对话 | wait=4.00 speaker=8,"ターボンは　踏んで倒すこともできますから、
 試してみてくださいね。","You can stomp Tabon to defeat it,
 give it a try!","塔邦也可以踩上去打倒哦，
-请你也试着做做看吧。"
+你也来试试吧。"
 AutoTalk:S1_0_101_T3_2:0,AutoTalk,S1_0_101_T3_2,talkDatas[0],剧情对话 | wait=1.50 speaker=8,すばらしい！,Wonderful!,太棒了！
 AutoTalk:S1_0_101_T3_2:1,AutoTalk,S1_0_101_T3_2,talkDatas[1],剧情对话 | wait=4.00 speaker=8,"今のように、相手を上から踏むことでも
 ダメージを与えることが　できますよ。","You can also damage enemies by
@@ -623,16 +623,16 @@ a bit tricky to climb...","咦……这里有点
 不好爬上去呢……"
 AutoTalk:S1_0_101_T4:1,AutoTalk,S1_0_101_T4,talkDatas[1],剧情对话 | wait=4.00 speaker=8,"「ダッシュ」と「ジャンプ」を
 組み合わせることを　意識しましょう。","Try combining Dash and Jump
-to make it easier.","要有意识地把「冲刺」和「跳跃」
-组合起来使用哦。"
+to make it easier.","要记得把「冲刺」和「跳跃」
+搭配着用哦。"
 AutoTalk:S1_0_101_T5 (DEMO):0,AutoTalk,S1_0_101_T5 (DEMO),talkDatas[0],剧情对话 | wait=1.00 speaker=0,"この先の扉に入ると、デモ版の
 ステージセレクトに　移動します。","Enter the door ahead to access
 the demo version's Stage Select.","进入前面的门，就会
 前往体验版的关卡选择。"
 AutoTalk:S1_0_101_T5 (DEMO):1,AutoTalk,S1_0_101_T5 (DEMO),talkDatas[1],剧情对话 | wait=1.00 speaker=0,"本デモでは、選択したステージを
 最後まで　プレイすることができます。","In this demo, you can play
-any selected stage to the end.","这个体验版里，可以
-把选择的关卡玩到最后。"
+any selected stage to the end.","这个体验版里，选好的关卡
+可以一直玩到通关。"
 AutoTalk:S1_0_101_T5 (DEMO):2,AutoTalk,S1_0_101_T5 (DEMO),talkDatas[2],剧情对话 | wait=1.00 speaker=0,"(補足情報)
 キャラクター切り替えは　ポーズメニュー！","(Additional information)
  Switch characters from the Pause Menu!","（补充信息）
@@ -695,16 +695,16 @@ AutoTalk:S1_1_2_T1:0,AutoTalk,S1_1_2_T1,talkDatas[0],剧情对话 | wait=4.00 sp
 AutoTalk:S1_2_0_T0:0,AutoTalk,S1_2_0_T0,talkDatas[0],剧情对话 | wait=2.00 speaker=3,やった！　オーブだ！,Yay! An Orb!,太好了！是宝珠！
 AutoTalk:S1_2_0_T0:1,AutoTalk,S1_2_0_T0,talkDatas[1],剧情对话 | wait=4.50 speaker=8,"その調子です　フィズ！
 このようにして　他のオーブも　集めていきましょう。","Keep it up, Fiz!
-Let’s gather the rest of the Orbs like this!","就是这样菲兹！
-就照这样把其他的宝珠也收集起来吧。"
+Let’s gather the rest of the Orbs like this!","就是这样，菲兹！
+别的宝珠也这么收下去吧。"
 AutoTalk:S1_2_1_T0:0,AutoTalk,S1_2_1_T0,talkDatas[0],剧情对话 | wait=3.50 speaker=3,"ところで......
 このオーブって、いったい何なの？","By the way...
 what exactly are Orbs?","对了……
 这个宝珠，到底是什么呀？"
 AutoTalk:S1_2_1_T0:1,AutoTalk,S1_2_1_T0,talkDatas[1],剧情对话 | wait=4.50 speaker=8,"オーブとは、　世界に色彩をあたえ
 この星のあらゆる生物の　力の源となる存在...","Orbs bring color to our world.
-They give power to all creatures.","所谓宝珠，是给世界带来色彩，
-并成为这颗星上所有生物力量之源的存在……"
+They give power to all creatures.","宝珠会给世界添上色彩，
+也是这颗星上一切生物的力量来源……"
 AutoTalk:S1_2_1_T0:2,AutoTalk,S1_2_1_T0,talkDatas[2],剧情对话 | wait=5.00 speaker=8,"それゆえ　力を独占しようとする者から
 幾度も狙われてきた　歴史があるのです。","Many greedy souls have hunted them
 again and again through the ages.","因此它一次次被想独占力量的人盯上，
@@ -761,13 +761,13 @@ and even new friends...?","要是爬上那座塔四处看看，会不会
 找到新的宝珠和伙伴呢……？"
 AutoTalk:S1_God_Def:0,AutoTalk,S1_God_Def,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"この星にある　いくつかのステージには
 それぞれ３つのオーブが　存在するようです。","Each stage on this planet
-hides three Orbs to discover.","这颗星上的某些关卡里，
-似乎各自存在着三个宝珠。"
+hides three Orbs to discover.","这颗星上有些关卡里，
+好像各藏着三颗宝珠。"
 AutoTalk:S1_God_Def:1,AutoTalk,S1_God_Def,talkDatas[1],剧情对话 | wait=0.10 speaker=8,"オーブの力が失われる未来を　防ぐため
 私たちが先に見つけ　守らねばなりません。","To stop a future where Orbs 
 power are lost, we must find 
-them first and keep them safe.","为了不让宝珠之力消失的未来到来，
-我们必须先找到它们并守护起来。"
+them first and keep them safe.","要想不让宝珠之力消失，
+就得我们先找到它们，再守住。"
 AutoTalk:S1_PostDragon_01:0,AutoTalk,S1_PostDragon_01,talkDatas[0],剧情对话 | wait=0.10 speaker=1,"こんにちは！
 フィズさんたちに　お届け物です！",,"你好！
 有包裹要送给菲兹你们！"
@@ -886,14 +886,14 @@ AutoTalk:S2_9_1_T6:0,AutoTalk,S2_9_1_T6,talkDatas[0],剧情对话 | wait=4.00 sp
 AutoTalk:S2_God_3Sor:0,AutoTalk,S2_God_3Sor,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"ここクッキー砂漠には、その名の通り
 オレンジ色のオーブが　存在します。","In Cookie Sands, as its name
 suggests, bright orange Orbs appear.","这里的饼干沙漠，正如其名，
-存在着橙色的宝珠。"
+有橙色的宝珠。"
 AutoTalk:S2_God_3Sor:1,AutoTalk,S2_God_3Sor,talkDatas[1],剧情对话 | wait=0.10 speaker=5,"見たことあるかも！　オイラとおなじ色の
 オーブがあるんだねぇ～","I might have seen it before!
 It’s the same color as me~","我好像见过！居然有跟我
 一样颜色的宝珠呢～"
 AutoTalk:S2_God_3Sor:2,AutoTalk,S2_God_3Sor,talkDatas[2],剧情对话 | wait=0.10 speaker=8,"そうです。そして　オーブの力を蓄えることが
 できるのは　同じ色のドラゴンだけ...","Indeed.  Only a Dragon of the same 
-color can hold an Orb’s power...","是的。而且能够蓄积宝珠之力的，
+color can hold an Orb’s power...","是的。而且能把宝珠之力蓄起来的，
 只有同色的龙……"
 AutoTalk:S2_God_3Sor:3,AutoTalk,S2_God_3Sor,talkDatas[3],剧情对话 | wait=0.10 speaker=8,"つまり　ソラコ、あなたがクッキー砂漠の
 オーブを　守らねばなりません。","So, Soraco, you must guard
@@ -932,10 +932,10 @@ AutoTalk:S3_1_1_T1:0,AutoTalk,S3_1_1_T1,talkDatas[0],剧情对话 | wait=3.50 sp
 こわいなあ","Whoa! So many zappers...
 This is scary!","哇！好多电流……
 好可怕呀"
-AutoTalk:S3_1_1_T1:1,AutoTalk,S3_1_1_T1,talkDatas[1],剧情对话 | wait=3.00 speaker=6,こういうところもリーファーの出番だよ！,This is also Leafur’s time to shine!,这种地方也是莉芙出场的时刻哦！
+AutoTalk:S3_1_1_T1:1,AutoTalk,S3_1_1_T1,talkDatas[1],剧情对话 | wait=3.00 speaker=6,こういうところもリーファーの出番だよ！,This is also Leafur’s time to shine!,这种地方也该莉芙出场啦！
 AutoTalk:S3_1_1_T1:2,AutoTalk,S3_1_1_T1,talkDatas[2],剧情对话 | wait=4.00 speaker=6,"細い隙間を　潜り抜けるように
-滑空できるんだ～！",I can glide through narrow gaps!,"莉芙能像钻过细缝一样
-滑翔过去哦～！"
+滑空できるんだ～！",I can glide through narrow gaps!,"再窄的缝，
+我也能滑翔穿过去哦～！"
 AutoTalk:S3_1_2_T0:0,AutoTalk,S3_1_2_T0,talkDatas[0],剧情对话 | wait=3.50 speaker=3,こっち側は　行き止まりみたいだね,This side seems to be a dead end.,这边好像是死路呢
 AutoTalk:S3_1_2_T1:0,AutoTalk,S3_1_2_T1,talkDatas[0],剧情对话 | wait=3.50 speaker=5,むこうのほうに　スイッチが見えるね！,I see a switch over there!,对面那边能看见一个开关呢！
 AutoTalk:S3_1_2_T1:1,AutoTalk,S3_1_2_T1,talkDatas[1],剧情对话 | wait=3.00 speaker=6,"リーファーの矢を使えば、
@@ -1288,8 +1288,8 @@ AutoTalk:S4_9_1_T1:2,AutoTalk,S4_9_1_T1,talkDatas[2],剧情对话 | wait=5.00 sp
 才能赢呢！"
 AutoTalk:S4_God_0Ryu:0,AutoTalk,S4_God_0Ryu,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"このあたりには　非常に頑丈な
 岩石質のターボンが　分布しているようです。","Around here, you'll find some 
-really hard, rock-like Tabons.","这一带好像分布着十分坚硬的
-岩石质塔邦。"
+really hard, rock-like Tabons.","这一带好像有些特别硬的
+岩石塔邦。"
 AutoTalk:S4_God_0Ryu:1,AutoTalk,S4_God_0Ryu,talkDatas[1],剧情对话 | wait=0.10 speaker=2,"おれはソイツの親玉に負けたんだ！
 次こそ倒してやる！！","I lost to their boss last time... 
 but this time, I'm gonna beat 
@@ -1298,8 +1298,8 @@ him for sure!","我输给过它们的头目！
 AutoTalk:S4_God_0Ryu:2,AutoTalk,S4_God_0Ryu,talkDatas[2],剧情对话 | wait=0.10 speaker=8,"それは　オーブの力を奪っている可能性も
 ありますね。　心してかかりましょう。","Beware, for they may be drawing 
 strength from the Orb itself.
-Do not let your guard down.","它说不定正在夺走宝珠之力。
-请务必小心应对。"
+Do not let your guard down.","它说不定正在吸走宝珠之力。
+千万小心。"
 AutoTalk:S4_God_Def:0,AutoTalk,S4_God_Def,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"惑星ロンガで　最も大きな活火山が
 ここベリー火山です。","Here stands Berry Volcano.
 The largest active volcano 
@@ -1678,7 +1678,7 @@ while we wait for the last stop.","正好，我们就一边探索车厢，
 AutoTalk:S6_2_1_T1:0,AutoTalk,S6_2_1_T1,talkDatas[0],剧情对话 | wait=2.50 speaker=3,え？　なにこれは,What’s this section?,诶？这是什么
 AutoTalk:S6_2_1_T1:1,AutoTalk,S6_2_1_T1,talkDatas[1],剧情对话 | wait=3.00 speaker=4,"これは......
 「グリーン車」　ってやつね！",Oh... it’s the first-class carriage!,"这个嘛……
-就是所谓的「头等车厢」呢！"
+就是「头等车厢」啦！"
 AutoTalk:S6_2_1_T1:2,AutoTalk,S6_2_1_T1,talkDatas[2],剧情对话 | wait=3.00 speaker=2,"......
 だまされないぞ　オレは！","...
 Not getting fooled here!","……
@@ -1726,7 +1726,7 @@ AutoTalk:S6_4_1_T0_0:4,AutoTalk,S6_4_1_T0_0,talkDatas[4],剧情对话 | wait=1.0
 AutoTalk:S6_4_1_T0_0:5,AutoTalk,S6_4_1_T0_0,talkDatas[5],剧情对话 | wait=1.00 speaker=8,"実は　この惑星ロンガと同じように、
 月にも　オーブが存在しています。","It seems waning because
 the moon Orb’s power has faded...","其实和隆加星一样，
-月亮上也存在着宝珠。"
+月亮上也有宝珠。"
 AutoTalk:S6_4_1_T0_0:6,AutoTalk,S6_4_1_T0_0,talkDatas[6],剧情对话 | wait=1.00 speaker=8,"あのような　欠けた姿に見えるのは、
 月のオーブの力が　弱まったから......","The reason it looks like that with those
 missing pieces is that the power of the
@@ -1752,11 +1752,11 @@ than anything you’ve faced so far.","从这里前往月亮的路程，
 AutoTalk:S6_4_1_T0_1:2,AutoTalk,S6_4_1_T0_1,talkDatas[2],剧情对话 | wait=5.00 speaker=8,"あなたたちが　これまでの冒険を通して
 試練を乗り越えうるほどに　成長できたのか？","Have you grown enough  
 on your journey to meet the challenge?
-","你们经历了至今的冒险，
-是否已经成长到能跨越试炼了呢？"
+","你们一路冒险过来，
+已经强到能闯过这些试炼了吗？"
 AutoTalk:S6_4_1_T0_1:3,AutoTalk,S6_4_1_T0_1,talkDatas[3],剧情对话 | wait=4.50 speaker=8,"今　この場所で、
 私に確かめさせてください。","Here and now, let me test you.","现在，就在这里，
-请让我来确认一下。"
+让我来试试你们。"
 AutoTalk:S6_4_1_T0_1:4,AutoTalk,S6_4_1_T0_1,talkDatas[4],剧情对话 | wait=5.00 speaker=8,....................,....................,………………
 AutoTalk:S6_4_1_T0_1:5,AutoTalk,S6_4_1_T0_1,talkDatas[5],剧情对话 | wait=2.00 speaker=8,信じていますよ。,I believe in you.,我相信你们哦。
 AutoTalk:S6_4_1_T10:0,AutoTalk,S6_4_1_T10,talkDatas[0],剧情对话 | wait=3.00 speaker=8,"......っ！                       
@@ -2063,12 +2063,12 @@ protect this world!","大家！再加把劲就好了！
 我们要亲手守护这颗星球！"
 AutoTalk:S7_God_Def:0,AutoTalk,S7_God_Def,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"空に浮かぶ月は 「マカロンムーン」と
 呼ばれています。","The moon that drifts above us
-is known as the Macaron Moon.","天上漂浮的月亮
-被称为「马卡龙月亮」。"
+is known as the Macaron Moon.","天上那轮月亮，
+人们叫它「马卡龙月亮」。"
 AutoTalk:S7_God_Def:1,AutoTalk,S7_God_Def,talkDatas[1],剧情对话 | wait=0.10 speaker=8,"これから向かう　月への旅は
 非常に厳しい道のりに　なるでしょう。","The road that leads to its glow
-will test us every step of the way.","接下来前往月亮的旅程，
-将会非常艰险吧。"
+will test us every step of the way.","接下来去月亮的路，
+会非常难走吧。"
 AutoTalk:S7_God_Def:2,AutoTalk,S7_God_Def,talkDatas[2],剧情对话 | wait=0.10 speaker=8,"しかし、私たちの力を合わせれば
 きっと　乗り越えられるはずです。","But as long as we stand together,
 no challenge can break our will.","不过，只要我们齐心协力，
@@ -2359,7 +2359,7 @@ DamageTalk:damage_water:2:0,DamageTalk,damage_water,player[2].damage_water[0],�
 DamageTalk:damage_water:3:0,DamageTalk,damage_water,player[3].damage_water[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,おぼれる…！,I'm drowning…!,要淹死了…！
 DamageTalk:damage_water:3:1,DamageTalk,damage_water,player[3].damage_water[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,くるしいっ…,I can't breathe…,好难受…
 DamageTalk:damage_water:3:2,DamageTalk,damage_water,player[3].damage_water[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,たすけて…,Help...,救命…
-DamageTalk:damage_water:3:3,DamageTalk,damage_water,player[3].damage_water[3],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,はひっ,Sigh,嘎！
+DamageTalk:damage_water:3:3,DamageTalk,damage_water,player[3].damage_water[3],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,はひっ,Sigh,哈呃！
 DamageTalk:damage_water:4:0,DamageTalk,damage_water,player[4].damage_water[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,?,?,？
 DamageTalk:damage_water:5:0,DamageTalk,damage_water,player[5].damage_water[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,?,?,？
 DamageTalk:miss_electric:0:0,DamageTalk,miss_electric,player[0].miss_electric[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,う゛あッ,Ow!,呜啊！
@@ -2471,10 +2471,10 @@ DamageTalk:specialAttack:3:1,DamageTalk,specialAttack,player[3].specialAttack[1]
 DamageTalk:specialAttack:4:0,DamageTalk,specialAttack,player[4].specialAttack[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,傷よ癒えてっ！,Heal my wounds!,伤口，愈合吧！
 DamageTalk:specialAttack:4:1,DamageTalk,specialAttack,player[4].specialAttack[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,いくよっ！,Let's go!,上咯！
 DamageTalk:specialAttack:5:0,DamageTalk,specialAttack,player[5].specialAttack[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,はあっ！！,Haaaah!!,哈啊！！
-TextData:LeafurMegaphyll_Result:0,TextData,LeafurMegaphyll_Result,textDatas[0],短文本 / 提示 / 名单 | やられちゃった！,やられちゃった！, You got me!,莉芙被打败啦！
+TextData:LeafurMegaphyll_Result:0,TextData,LeafurMegaphyll_Result,textDatas[0],短文本 / 提示 / 名单 | やられちゃった！,やられちゃった！, You got me!,哎呀，被打到啦！
 TextData:LeafurMegaphyll_Result:10,TextData,LeafurMegaphyll_Result,textDatas[10],短文本 / 提示 / 名单 | 10まんてん！ おめでとう～！,10まんてん！ おめでとう～！,"You scored 100,000 points! Congratulations!",10万分！恭喜你～！
 TextData:LeafurMegaphyll_Result:11,TextData,LeafurMegaphyll_Result,textDatas[11],短文本 / 提示 / 名单 | 20まんてん！？ すごいすごいすごいー！！,20まんてん！？ すごいすごいすごいー！！,"200,000 points!? Wow, wow, WOW!!",20万分！？好厉害好厉害好厉害～！！
-TextData:LeafurMegaphyll_Result:12,TextData,LeafurMegaphyll_Result,textDatas[12],短文本 / 提示 / 名单 | こんなにあそんでくれて ありがとう！！,こんなにあそんでくれて ありがとう！！,Thanks for spending so much time with me!,陪莉芙玩了这么久，谢谢你！！
+TextData:LeafurMegaphyll_Result:12,TextData,LeafurMegaphyll_Result,textDatas[12],短文本 / 提示 / 名单 | こんなにあそんでくれて ありがとう！！,こんなにあそんでくれて ありがとう！！,Thanks for spending so much time with me!,玩了这么久，谢谢你！！
 TextData:LeafurMegaphyll_Result:1,TextData,LeafurMegaphyll_Result,textDatas[1],短文本 / 提示 / 名单 | もりをぬけて ゆきやまが　みえてきたよ！,もりをぬけて ゆきやまが　みえてきたよ！,"We made it out of the forest
 - look, snowy mountain! ",穿过森林，看到雪山了哦！
 TextData:LeafurMegaphyll_Result:2,TextData,LeafurMegaphyll_Result,textDatas[2],短文本 / 提示 / 名单 | ゆうひにあたる　ゆきやまが　きれいだね！,ゆうひにあたる　ゆきやまが　きれいだね！,"The snowy mountain
@@ -2505,7 +2505,7 @@ TextData:NpcTalkたまゆら_default:0,TextData,NpcTalkたまゆら_default,text
 TextData:NpcTalkたまゆら_default:1,TextData,NpcTalkたまゆら_default,textDatas[1],短文本 / 提示 / 名单 | 飛ばされる！,飛ばされる！,I’m gonna fly away!,要被吹飞了！
 TextData:NpcTalkたまゆら_talked:0,TextData,NpcTalkたまゆら_talked,textDatas[0],短文本 / 提示 / 名单 | バイバイ！,バイバイ！,Bye-bye!,拜拜！
 TextData:NpcTalkたまゆら_talked:1,TextData,NpcTalkたまゆら_talked,textDatas[1],短文本 / 提示 / 名单 | 気を付けてね！,気を付けてね！,Be careful!,小心点哦！
-TextData:NpcTalkひょえ_default:0,TextData,NpcTalkひょえ_default,textDatas[0],短文本 / 提示 / 名单 | ひょえ～～,ひょえ～～,Whoaaa.,咿呀～～
+TextData:NpcTalkひょえ_default:0,TextData,NpcTalkひょえ_default,textDatas[0],短文本 / 提示 / 名单 | ひょえ～～,ひょえ～～,Whoaaa.,哇呀～～
 TextData:NpcTalkひょえ_default:1,TextData,NpcTalkひょえ_default,textDatas[1],短文本 / 提示 / 名单 | たかーい！,たかーい！,So expensive!,好高～！
 TextData:NpcTalkひょえ_talked:0,TextData,NpcTalkひょえ_talked,textDatas[0],短文本 / 提示 / 名单 | ふよふよーん,ふよふよーん,Fluffy,飘呀飘～
 TextData:NpcTalkアカツキ_default:0,TextData,NpcTalkアカツキ_default,textDatas[0],短文本 / 提示 / 名单 | ……,……,......,……
@@ -2706,118 +2706,118 @@ Title:TitleData_lv0_root(ActiveAI):label,Title,TitleData_lv0_root(ActiveAI),labe
 Title:TitleData_lv0_root_Consumer:info,Title,TitleData_lv0_root_Consumer,info,标题菜单条目,, ,
 Title:TitleData_lv0_root_Consumer:infoDisable,Title,TitleData_lv0_root_Consumer,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv0_root_Consumer:label,Title,TitleData_lv0_root_Consumer,label,标题菜单条目,top, ,top
-Title:TitleData_lv1_0_Demo:info,Title,TitleData_lv1_0_Demo,info,标题菜单条目,デモをプレイする！......たのしい　たいけんばんが　あそべます。,Demo Play! ...... Try a fun preview version of the game.  ,游玩体验版！……可以玩到有趣的体验版。
-Title:TitleData_lv1_0_Demo:infoDisable,Title,TitleData_lv1_0_Demo,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>满足特定条件后就会解锁。</color>
+Title:TitleData_lv1_0_Demo:info,Title,TitleData_lv1_0_Demo,info,标题菜单条目,デモをプレイする！......たのしい　たいけんばんが　あそべます。,Demo Play! ...... Try a fun preview version of the game.  ,游玩体验版！……先来一段好玩的试玩。
+Title:TitleData_lv1_0_Demo:infoDisable,Title,TitleData_lv1_0_Demo,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv1_0_Demo:label,Title,TitleData_lv1_0_Demo,label,标题菜单条目,デモをプレイする！,Demo Play!,游玩体验版！
-Title:TitleData_lv1_0_StartGame:info,Title,TitleData_lv1_0_StartGame,info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……可以开始游玩「菲兹与彩虹之星」。
+Title:TitleData_lv1_0_StartGame:info,Title,TitleData_lv1_0_StartGame,info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……进入「菲兹与彩虹之星」。
 Title:TitleData_lv1_0_StartGame:infoDisable,Title,TitleData_lv1_0_StartGame,infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_0_StartGame:label,Title,TitleData_lv1_0_StartGame,label,标题菜单条目,ゲームを始める,Start Game,开始游戏
-Title:TitleData_lv1_0_StartGame(ActiveAI):info,Title,TitleData_lv1_0_StartGame(ActiveAI),info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……可以开始游玩「菲兹与彩虹之星」。
+Title:TitleData_lv1_0_StartGame(ActiveAI):info,Title,TitleData_lv1_0_StartGame(ActiveAI),info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……进入「菲兹与彩虹之星」。
 Title:TitleData_lv1_0_StartGame(ActiveAI):infoDisable,Title,TitleData_lv1_0_StartGame(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_0_StartGame(ActiveAI):label,Title,TitleData_lv1_0_StartGame(ActiveAI),label,标题菜单条目,ゲームを始める,Start Game,开始游戏
-Title:TitleData_lv1_1_Bonus:info,Title,TitleData_lv1_1_Bonus,info,标题菜单条目,ボーナス......ゲームの　おまけコンテンツが　ここで　たのしめます。,Bonus ...... Enjoy extra bonus content here.,额外内容……可以在这里玩到游戏附赠的内容。
+Title:TitleData_lv1_1_Bonus:info,Title,TitleData_lv1_1_Bonus,info,标题菜单条目,ボーナス......ゲームの　おまけコンテンツが　ここで　たのしめます。,Bonus ...... Enjoy extra bonus content here.,额外内容……附赠的东西都在这里。
 Title:TitleData_lv1_1_Bonus:infoDisable,Title,TitleData_lv1_1_Bonus,infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_1_Bonus:label,Title,TitleData_lv1_1_Bonus,label,标题菜单条目,ボーナス,Bonus,额外内容
-Title:TitleData_lv1_1_Bonus(ActiveAI):info,Title,TitleData_lv1_1_Bonus(ActiveAI),info,标题菜单条目,ボーナス......ゲームの　おまけコンテンツが　ここで　たのしめます。,Bonus ...... You can enjoy extra contents of the game here.,额外内容……可以在这里玩到游戏附赠的内容。
+Title:TitleData_lv1_1_Bonus(ActiveAI):info,Title,TitleData_lv1_1_Bonus(ActiveAI),info,标题菜单条目,ボーナス......ゲームの　おまけコンテンツが　ここで　たのしめます。,Bonus ...... You can enjoy extra contents of the game here.,额外内容……附赠的东西都在这里。
 Title:TitleData_lv1_1_Bonus(ActiveAI):infoDisable,Title,TitleData_lv1_1_Bonus(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_1_Bonus(ActiveAI):label,Title,TitleData_lv1_1_Bonus(ActiveAI),label,标题菜单条目,ボーナス,bonus,额外内容
-Title:TitleData_lv1_2_Option:info,Title,TitleData_lv1_2_Option,info,标题菜单条目,オプション......ゲームの　せっていを　かえることができます。,Options ...... You can change the game settings.,选项……可以更改游戏的设置。
+Title:TitleData_lv1_2_Option:info,Title,TitleData_lv1_2_Option,info,标题菜单条目,オプション......ゲームの　せっていを　かえることができます。,Options ...... You can change the game settings.,选项……更改游戏里的设置。
 Title:TitleData_lv1_2_Option:infoDisable,Title,TitleData_lv1_2_Option,infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_2_Option:label,Title,TitleData_lv1_2_Option,label,标题菜单条目,オプション,Options,选项
-Title:TitleData_lv1_2_Option(ActiveAI):info,Title,TitleData_lv1_2_Option(ActiveAI),info,标题菜单条目,オプション......ゲームの　せっていを　かえることができます。,Options ...... You can change the game settings.,选项……可以更改游戏的设置。
+Title:TitleData_lv1_2_Option(ActiveAI):info,Title,TitleData_lv1_2_Option(ActiveAI),info,标题菜单条目,オプション......ゲームの　せっていを　かえることができます。,Options ...... You can change the game settings.,选项……更改游戏里的设置。
 Title:TitleData_lv1_2_Option(ActiveAI):infoDisable,Title,TitleData_lv1_2_Option(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_2_Option(ActiveAI):label,Title,TitleData_lv1_2_Option(ActiveAI),label,标题菜单条目,オプション,Options,选项
-Title:TitleData_lv1_3_Close:info,Title,TitleData_lv1_3_Close,info,标题菜单条目,ゲームをしゅうりょうする......ゲームをしゅうりょうして　がめんをとじます。,Exit Game ...... Exit the game and close the application.,退出游戏……可以退出游戏并关闭画面。
+Title:TitleData_lv1_3_Close:info,Title,TitleData_lv1_3_Close,info,标题菜单条目,ゲームをしゅうりょうする......ゲームをしゅうりょうして　がめんをとじます。,Exit Game ...... Exit the game and close the application.,退出游戏……退出并关掉画面。
 Title:TitleData_lv1_3_Close:infoDisable,Title,TitleData_lv1_3_Close,infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_3_Close:label,Title,TitleData_lv1_3_Close,label,标题菜单条目,ゲームを終了する,Exit Game,退出游戏
-Title:TitleData_lv1_3_Close(ActiveAI):info,Title,TitleData_lv1_3_Close(ActiveAI),info,标题菜单条目,ゲームをしゅうりょうする......ゲームをしゅうりょうして　がめんをとじます。,Exit Game ...... Exit the game and close the application.,退出游戏……可以退出游戏并关闭画面。
+Title:TitleData_lv1_3_Close(ActiveAI):info,Title,TitleData_lv1_3_Close(ActiveAI),info,标题菜单条目,ゲームをしゅうりょうする......ゲームをしゅうりょうして　がめんをとじます。,Exit Game ...... Exit the game and close the application.,退出游戏……退出并关掉画面。
 Title:TitleData_lv1_3_Close(ActiveAI):infoDisable,Title,TitleData_lv1_3_Close(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_3_Close(ActiveAI):label,Title,TitleData_lv1_3_Close(ActiveAI),label,标题菜单条目,ゲームを終了する,Exit Game,退出游戏
-Title:TitleData_lv2_0_Normal:info,Title,TitleData_lv2_0_Normal,info,标题菜单条目,ノーマル......つうじょうの　むずかしさで　ゲームを　はじめます。,Normal ...... Starts the game at standard difficulty.,普通……以普通的难度开始游戏。
+Title:TitleData_lv2_0_Normal:info,Title,TitleData_lv2_0_Normal,info,标题菜单条目,ノーマル......つうじょうの　むずかしさで　ゲームを　はじめます。,Normal ...... Starts the game at standard difficulty.,普通……按普通难度开始。
 Title:TitleData_lv2_0_Normal:infoDisable,Title,TitleData_lv2_0_Normal,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_0_Normal:label,Title,TitleData_lv2_0_Normal,label,标题菜单条目,ノーマル,Normal,普通
-Title:TitleData_lv2_0_サブゲーム:info,Title,TitleData_lv2_0_サブゲーム,info,标题菜单条目,サブゲーム......てがるにあそべる　ミニゲームを　たのしむことが　できるぞ。,Subgames...... You can play simple mini-games on the side.,小游戏……可以轻松玩到迷你游戏哦。
-Title:TitleData_lv2_0_サブゲーム:infoDisable,Title,TitleData_lv2_0_サブゲーム,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>满足特定条件后就会解锁。</color>
+Title:TitleData_lv2_0_サブゲーム:info,Title,TitleData_lv2_0_サブゲーム,info,标题菜单条目,サブゲーム......てがるにあそべる　ミニゲームを　たのしむことが　できるぞ。,Subgames...... You can play simple mini-games on the side.,小游戏……轻松玩一把迷你游戏。
+Title:TitleData_lv2_0_サブゲーム:infoDisable,Title,TitleData_lv2_0_サブゲーム,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv2_0_サブゲーム:label,Title,TitleData_lv2_0_サブゲーム,label,标题菜单条目,サブゲーム,Subgames ,小游戏
-Title:TitleData_lv2_0_表示設定:info,Title,TitleData_lv2_0_表示設定,info,标题菜单条目,グラフィックせってい......がめんひょうじについての　せっていを　かえることが　できます。,Graphic Settings: ...... Adjust screen and display settings.,画面设置……可以更改画面显示相关的设置。
+Title:TitleData_lv2_0_表示設定:info,Title,TitleData_lv2_0_表示設定,info,标题菜单条目,グラフィックせってい......がめんひょうじについての　せっていを　かえることが　できます。,Graphic Settings: ...... Adjust screen and display settings.,画面设置……更改画面怎么显示。
 Title:TitleData_lv2_0_表示設定:infoDisable,Title,TitleData_lv2_0_表示設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_0_表示設定:label,Title,TitleData_lv2_0_表示設定,label,标题菜单条目,グラフィック設定,Graphic Settings,画面设置
 Title:TitleData_lv2_1_Extra:info,Title,TitleData_lv2_1_Extra,info,标题菜单条目,エクストラ.....ここは　フィズにじを　クリアしたものだけが　はいれる　トクベツな　モード。　むずかしくなった　フィズにじに　ちょうせんしよう。,"Extra ..... A special mode unlocked only after completing 
-Fiz and the Rainbow Planet.  Challenge the tougher Fiz and the Rainbow Planet!",额外模式……这里是只有通关「菲兹与彩虹之星」的人才能进入的特别模式。来挑战变得更难的「菲兹与彩虹之星」吧。
-Title:TitleData_lv2_1_Extra:infoDisable,Title,TitleData_lv2_1_Extra,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>满足特定条件后就会解锁。</color>
+Fiz and the Rainbow Planet.  Challenge the tougher Fiz and the Rainbow Planet!",额外模式……通关「菲兹与彩虹之星」后才能进。来挑战更难的一版吧。
+Title:TitleData_lv2_1_Extra:infoDisable,Title,TitleData_lv2_1_Extra,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv2_1_Extra:label,Title,TitleData_lv2_1_Extra,label,标题菜单条目,エクストラ,Extra,额外模式
-Title:TitleData_lv2_1_シアタールーム:info,Title,TitleData_lv2_1_シアタールーム,info,标题菜单条目,シアタールーム.....いちどみた　ムービーを　もういちど！　ぼうけんの　おもいでを　ふりかえろう。,Theater Room ..... Watch movies you've already seen once again! Relive your adventure memories.,放映室……看过的影片可以再看一次！来回味冒险的回忆吧。
-Title:TitleData_lv2_1_シアタールーム:infoDisable,Title,TitleData_lv2_1_シアタールーム,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>满足特定条件后就会解锁。</color>
+Title:TitleData_lv2_1_シアタールーム:info,Title,TitleData_lv2_1_シアタールーム,info,标题菜单条目,シアタールーム.....いちどみた　ムービーを　もういちど！　ぼうけんの　おもいでを　ふりかえろう。,Theater Room ..... Watch movies you've already seen once again! Relive your adventure memories.,放映室……看过的影片可以再看一遍！再回想一下冒险吧。
+Title:TitleData_lv2_1_シアタールーム:infoDisable,Title,TitleData_lv2_1_シアタールーム,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv2_1_シアタールーム:label,Title,TitleData_lv2_1_シアタールーム,label,标题菜单条目,シアタールーム,Theater Room ,放映室
-Title:TitleData_lv2_1_音声設定:info,Title,TitleData_lv2_1_音声設定,info,标题菜单条目,サウンドせってい......おんせいにかんする　せっていを　かえることが　できます。,Audio Settings : ...... Change volume and sound settings.,声音设置……可以更改声音相关的设置。
+Title:TitleData_lv2_1_音声設定:info,Title,TitleData_lv2_1_音声設定,info,标题菜单条目,サウンドせってい......おんせいにかんする　せっていを　かえることが　できます。,Audio Settings : ...... Change volume and sound settings.,声音设置……更改各种音量。
 Title:TitleData_lv2_1_音声設定:infoDisable,Title,TitleData_lv2_1_音声設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_1_音声設定:label,Title,TitleData_lv2_1_音声設定,label,标题菜单条目,サウンド設定,Audio Settings  ,声音设置
-Title:TitleData_lv2_2_SoundTest:info,Title,TitleData_lv2_2_SoundTest,info,标题菜单条目,サウンドテスト......ゲームできいた　アノきょくを　おてがるに！ おんがくで　フィズにじのせかいを　たのしもう。,Sound Test ...... Listen to your favorite tracks from Fiz and the Rainbow Planet.  ,音乐测试……可以轻松听到游戏里听过的那些曲子！用音乐来享受「菲兹与彩虹之星」的世界吧。
-Title:TitleData_lv2_2_SoundTest:infoDisable,Title,TitleData_lv2_2_SoundTest,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>满足特定条件后就会解锁。</color>
+Title:TitleData_lv2_2_SoundTest:info,Title,TitleData_lv2_2_SoundTest,info,标题菜单条目,サウンドテスト......ゲームできいた　アノきょくを　おてがるに！ おんがくで　フィズにじのせかいを　たのしもう。,Sound Test ...... Listen to your favorite tracks from Fiz and the Rainbow Planet.  ,音乐测试……把游戏里听过的曲子再听一遍！用音乐逛逛「菲兹与彩虹之星」吧。
+Title:TitleData_lv2_2_SoundTest:infoDisable,Title,TitleData_lv2_2_SoundTest,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv2_2_SoundTest:label,Title,TitleData_lv2_2_SoundTest,label,标题菜单条目,サウンドテスト,Sound Test,音乐测试
 Title:TitleData_lv2_2_TimeAttack:info,Title,TitleData_lv2_2_TimeAttack,info,标题菜单条目,タイムアタック......ゲームのさいしょから　さいごまで　じかんをけいそくしながら　あそべるモード。　リアルタイムアタック（RTA）に　おすすめ。,"Time Attack ...... Race from start to finish while your time is recorded.
-Perfect for Real-Time Attack (RTA) enthusiasts. ",计时挑战……可以从游戏的最开始玩到最后，同时记录时间的模式。推荐给喜欢实时速通（RTA）的人。
-Title:TitleData_lv2_2_TimeAttack:infoDisable,Title,TitleData_lv2_2_TimeAttack,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>满足特定条件后就会解锁。</color>
+Perfect for Real-Time Attack (RTA) enthusiasts. ",计时挑战……从开头一路打到结尾，并记下用时。适合喜欢实时速通（RTA）的人。
+Title:TitleData_lv2_2_TimeAttack:infoDisable,Title,TitleData_lv2_2_TimeAttack,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv2_2_TimeAttack:label,Title,TitleData_lv2_2_TimeAttack,label,标题菜单条目,タイムアタック,Time Attack  ,计时挑战
-Title:TitleData_lv2_2_操作設定:info,Title,TitleData_lv2_2_操作設定,info,标题菜单条目,そうさせってい......そうさにかんする　せっていを　かえることが　できます。,Control Settings: ...... Customize settings related to controls.,操作设置……可以更改操作相关的设置。
+Title:TitleData_lv2_2_操作設定:info,Title,TitleData_lv2_2_操作設定,info,标题菜单条目,そうさせってい......そうさにかんする　せっていを　かえることが　できます。,Control Settings: ...... Customize settings related to controls.,操作设置……更改操作方式。
 Title:TitleData_lv2_2_操作設定:infoDisable,Title,TitleData_lv2_2_操作設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_2_操作設定:label,Title,TitleData_lv2_2_操作設定,label,标题菜单条目,操作設定,Control Settings,操作设置
-Title:TitleData_lv2_3_その他設定:info,Title,TitleData_lv2_3_その他設定,info,标题菜单条目,そのたのせってい......セーブデータのさくじょを　はじめとした　そのたのせっていを　することが　できます。,"Other settings... Access miscellaneous options, such as deleting save data.",其他设置……可以删除存档数据，也可以进行其他各种设置。
+Title:TitleData_lv2_3_その他設定:info,Title,TitleData_lv2_3_その他設定,info,标题菜单条目,そのたのせってい......セーブデータのさくじょを　はじめとした　そのたのせっていを　することが　できます。,"Other settings... Access miscellaneous options, such as deleting save data.",其他设置……可以删档，也能改些别的。
 Title:TitleData_lv2_3_その他設定:infoDisable,Title,TitleData_lv2_3_その他設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_3_その他設定:label,Title,TitleData_lv2_3_その他設定,label,标题菜单条目,その他設定,Other settings,其他设置
-Title:TitleData_lv2_3_その他設定(ActiveAI):info,Title,TitleData_lv2_3_その他設定(ActiveAI),info,标题菜单条目,そのたのせってい......セーブデータのさくじょを　はじめとした　そのたのせっていを　することが　できます。,"Other settings... Access miscellaneous options, such as deleting save data.",其他设置……可以删除存档数据，也可以进行其他各种设置。
+Title:TitleData_lv2_3_その他設定(ActiveAI):info,Title,TitleData_lv2_3_その他設定(ActiveAI),info,标题菜单条目,そのたのせってい......セーブデータのさくじょを　はじめとした　そのたのせっていを　することが　できます。,"Other settings... Access miscellaneous options, such as deleting save data.",其他设置……可以删档，也能改些别的。
 Title:TitleData_lv2_3_その他設定(ActiveAI):infoDisable,Title,TitleData_lv2_3_その他設定(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_3_その他設定(ActiveAI):label,Title,TitleData_lv2_3_その他設定(ActiveAI),label,标题菜单条目,その他設定,Other settings,其他设置
-Title:TitleData_lv3_0_UIタイプ:info,Title,TitleData_lv3_0_UIタイプ,info,标题菜单条目,UIタイプ......がめんに　ひょうじされる　ボタンアイコンの　UIにかんする　せっていを　へんこうできます。, ,UI类型……可以更改画面上显示的按钮图标等 UI 相关的设置。
+Title:TitleData_lv3_0_UIタイプ:info,Title,TitleData_lv3_0_UIタイプ,info,标题菜单条目,UIタイプ......がめんに　ひょうじされる　ボタンアイコンの　UIにかんする　せっていを　へんこうできます。, ,UI类型……更改画面上的按钮图标之类。
 Title:TitleData_lv3_0_UIタイプ:infoDisable,Title,TitleData_lv3_0_UIタイプ,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv3_0_UIタイプ:label,Title,TitleData_lv3_0_UIタイプ,label,标题菜单条目,UIタイプ, ,UI类型
 Title:TitleData_lv3_0_画面サイズ:info,Title,TitleData_lv3_0_画面サイズ,info,标题菜单条目,がめんサイズ......がめんの　かいぞうどを　へんこうします。, ,画面尺寸……更改画面的分辨率。
 Title:TitleData_lv3_0_画面サイズ:infoDisable,Title,TitleData_lv3_0_画面サイズ,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv3_0_画面サイズ:label,Title,TitleData_lv3_0_画面サイズ,label,标题菜单条目,画面サイズ, ,画面尺寸
-Title:TitleData_lv3_0_言語設定:info,Title,TitleData_lv3_0_言語設定,info,标题菜单条目,げんごせってい......ゲームないで　しようする　げんごを　へんこうできます。,Language Setup ... You can change the in-game language. ,语言设置……可以更改游戏内使用的语言。
+Title:TitleData_lv3_0_言語設定:info,Title,TitleData_lv3_0_言語設定,info,标题菜单条目,げんごせってい......ゲームないで　しようする　げんごを　へんこうできます。,Language Setup ... You can change the in-game language. ,语言设置……更换游戏里使用的语言。
 Title:TitleData_lv3_0_言語設定:infoDisable,Title,TitleData_lv3_0_言語設定,infoDisable,标题菜单条目,この　バージョンでは　しようできない　きのうです,(This feature is unavailable in this version.),这个版本里无法使用这项功能
 Title:TitleData_lv3_0_言語設定:label,Title,TitleData_lv3_0_言語設定,label,标题菜单条目,言語設定,Language Settings,语言设置
 Title:TitleData_lv3_1_ソラコ:info,Title,TitleData_lv3_1_ソラコ,info,标题菜单条目,ソラコのさかなつり......なんでもつっちゃう　ソラコくんが　だいかつやく！　タイミングよく　ボタンをおすだけで　たのしめるぞ。,"Soraco's Fishing...... Soraco's on a reel spree, he'll hook anything that moves!
 Just nail the timing on your button presses for non-stop fun.",索拉科的钓鱼……什么都能钓上来的索拉科要大显身手！只要抓准时机按下按钮，就能玩得很开心哦。
-Title:TitleData_lv3_1_ソラコ:infoDisable,Title,TitleData_lv3_1_ソラコ,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>满足特定条件后就会解锁。</color>
+Title:TitleData_lv3_1_ソラコ:infoDisable,Title,TitleData_lv3_1_ソラコ,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv3_1_ソラコ:label,Title,TitleData_lv3_1_ソラコ,label,标题菜单条目,ソラコのさかなつり,Soraco's Fishing,索拉科的钓鱼
-Title:TitleData_lv3_1_データ削除:info,Title,TitleData_lv3_1_データ削除,info,标题菜单条目,データさくじょ......<color=red>すべてのセーブデータをさくじょします。　もとにもどすことは　できません。</color>,Delete All Data ...... <color=red>Erase all save data permanently. This cannot be undone.</color>,删除数据……<color=red>将删除所有存档数据。无法恢复。</color>
+Title:TitleData_lv3_1_データ削除:info,Title,TitleData_lv3_1_データ削除,info,标题菜单条目,データさくじょ......<color=red>すべてのセーブデータをさくじょします。　もとにもどすことは　できません。</color>,Delete All Data ...... <color=red>Erase all save data permanently. This cannot be undone.</color>,删除数据……<color=red>会删掉全部存档，而且无法恢复。</color>
 Title:TitleData_lv3_1_データ削除:infoDisable,Title,TitleData_lv3_1_データ削除,infoDisable,标题菜单条目,,,
 Title:TitleData_lv3_1_データ削除:label,Title,TitleData_lv3_1_データ削除,label,标题菜单条目,データ削除,Delete All Data  ,删除数据
-Title:TitleData_lv3_1_フルスクリーン:info,Title,TitleData_lv3_1_フルスクリーン,info,标题菜单条目,フルスクリーンきりかえ......ぜんがめんひょうじを　きりかえます。, ,切换全屏……切换全屏显示状态。
+Title:TitleData_lv3_1_フルスクリーン:info,Title,TitleData_lv3_1_フルスクリーン,info,标题菜单条目,フルスクリーンきりかえ......ぜんがめんひょうじを　きりかえます。, ,切换全屏……在窗口和全屏之间切换。
 Title:TitleData_lv3_1_フルスクリーン:infoDisable,Title,TitleData_lv3_1_フルスクリーン,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv3_1_フルスクリーン:label,Title,TitleData_lv3_1_フルスクリーン,label,标题菜单条目,フルスクリーン切り替え, ,切换全屏
-Title:TitleData_lv3_1_操作タイプ:info,Title,TitleData_lv3_1_操作タイプ,info,标题菜单条目,そうさタイプ......ゲームの　そうさほうほうを　へんこうできます。, ,操作类型……可以更改游戏的操作方式。
+Title:TitleData_lv3_1_操作タイプ:info,Title,TitleData_lv3_1_操作タイプ,info,标题菜单条目,そうさタイプ......ゲームの　そうさほうほうを　へんこうできます。, ,操作类型……更换游戏的操作方式。
 Title:TitleData_lv3_1_操作タイプ:infoDisable,Title,TitleData_lv3_1_操作タイプ,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv3_1_操作タイプ:label,Title,TitleData_lv3_1_操作タイプ,label,标题菜单条目,操作タイプ, ,操作类型
-Title:TitleData_lv3_2_AI設定:info,Title,TitleData_lv3_2_AI設定,info,标题菜单条目,(　※この　きのうは　STEAMばん　には　ひとうさいです　)　AIせってい......ゲームちゅうの　じょうきょうにあわせて　かいわを　せいせいするきのうを　ゆうこうにする　せっていです。　OpenAIの APIが　ひつようです。,(* This feature is not available in the Steam version) AI Settings...... This setting enables the feature that generates dialogue based on in-game situations. An OpenAI API is required.,（　※这个功能在 STEAM 版中未提供　）AI设置……开启后即可使用根据游戏中情况自动生成对话的功能。需要 OpenAI 的 API。
+Title:TitleData_lv3_2_AI設定:info,Title,TitleData_lv3_2_AI設定,info,标题菜单条目,(　※この　きのうは　STEAMばん　には　ひとうさいです　)　AIせってい......ゲームちゅうの　じょうきょうにあわせて　かいわを　せいせいするきのうを　ゆうこうにする　せっていです。　OpenAIの APIが　ひつようです。,(* This feature is not available in the Steam version) AI Settings...... This setting enables the feature that generates dialogue based on in-game situations. An OpenAI API is required.,（　※Steam 版没有这个功能　）AI设置……按游戏里的情况自动生成对话。需要 OpenAI 的 API。
 Title:TitleData_lv3_2_AI設定:infoDisable,Title,TitleData_lv3_2_AI設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv3_2_AI設定:label,Title,TitleData_lv3_2_AI設定,label,标题菜单条目,ＡＩ設定 (preview),AI settings (preview),AI设置（预览）
-Title:TitleData_lv3_2_TA_Extra:info,Title,TitleData_lv3_2_TA_Extra,info,标题菜单条目,タイムアタック・エクストラ......なんいどが　たかめの　タイムアタックモード。,Time Attack Extra ...... A higher-difficulty Time Attack mode.  ,计时挑战・额外模式……难度偏高的计时挑战模式。
-Title:TitleData_lv3_2_TA_Extra:infoDisable,Title,TitleData_lv3_2_TA_Extra,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>满足特定条件后就会解锁。</color>
+Title:TitleData_lv3_2_TA_Extra:info,Title,TitleData_lv3_2_TA_Extra,info,标题菜单条目,タイムアタック・エクストラ......なんいどが　たかめの　タイムアタックモード。,Time Attack Extra ...... A higher-difficulty Time Attack mode.  ,计时挑战・额外模式……难度更高的计时挑战。
+Title:TitleData_lv3_2_TA_Extra:infoDisable,Title,TitleData_lv3_2_TA_Extra,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv3_2_TA_Extra:label,Title,TitleData_lv3_2_TA_Extra,label,标题菜单条目,エクストラ,Extra ,额外模式
-Title:TitleData_lv3_2_TA_Master:info,Title,TitleData_lv3_2_TA_Master,info,标题菜单条目,タイムアタック・みんなあつまれ......さいしょから　なかまがそろった　じょうたいで　あそべる　タイムアタックモード。,Time Attack – All Together ...... Race from start to finish with your full team already assembled.,计时挑战・全员集合……从一开始就能以伙伴全齐的状态游玩的计时挑战模式。
-Title:TitleData_lv3_2_TA_Master:infoDisable,Title,TitleData_lv3_2_TA_Master,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,<color=yellow>Unlocks when certain conditions are met.</color>,<color=yellow>满足特定条件后就会解锁。</color>
+Title:TitleData_lv3_2_TA_Master:info,Title,TitleData_lv3_2_TA_Master,info,标题菜单条目,タイムアタック・みんなあつまれ......さいしょから　なかまがそろった　じょうたいで　あそべる　タイムアタックモード。,Time Attack – All Together ...... Race from start to finish with your full team already assembled.,计时挑战・全员集合……一开局伙伴就到齐的计时挑战。
+Title:TitleData_lv3_2_TA_Master:infoDisable,Title,TitleData_lv3_2_TA_Master,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,<color=yellow>Unlocks when certain conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv3_2_TA_Master:label,Title,TitleData_lv3_2_TA_Master,label,标题菜单条目,みんなあつまれ,All Together,全员集合
 Title:TitleData_lv3_2_TA_MasterEX:info,Title,TitleData_lv3_2_TA_MasterEX,info,标题菜单条目,タイムアタック・みんなあつまれEX......さいしょから　なかまがそろった　じょうたいで　あそべる、　なんいどが　たかめの　タイムアタックモード。,"Time Attack – All Together ......A higher-difficulty """"All Together"""" Time Attack mode. 
 Begin with your full party and face tougher challenges.
-",计时挑战・全员集合EX……从一开始就能以伙伴全齐的状态游玩、难度偏高的计时挑战模式。
-Title:TitleData_lv3_2_TA_MasterEX:infoDisable,Title,TitleData_lv3_2_TA_MasterEX,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,<color=yellow>Unlocks when certain conditions are met.</color>,<color=yellow>满足特定条件后就会解锁。</color>
+",计时挑战・全员集合EX……一开局伙伴就到齐，而且更难的计时挑战。
+Title:TitleData_lv3_2_TA_MasterEX:infoDisable,Title,TitleData_lv3_2_TA_MasterEX,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,<color=yellow>Unlocks when certain conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv3_2_TA_MasterEX:label,Title,TitleData_lv3_2_TA_MasterEX,label,标题菜单条目,みんなあつまれＥＸ,All Together EX,全员集合EX
-Title:TitleData_lv3_2_TA_Normal:info,Title,TitleData_lv3_2_TA_Normal,info,标题菜单条目,タイムアタック・ノーマル......つうじょうの　タイムアタックモード。,Time Attack – Normal  ...... Standard Time Attack mode.  ,计时挑战・普通……普通的计时挑战模式。
-Title:TitleData_lv3_2_TA_Normal:infoDisable,Title,TitleData_lv3_2_TA_Normal,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>满足特定条件后就会解锁。</color>
+Title:TitleData_lv3_2_TA_Normal:info,Title,TitleData_lv3_2_TA_Normal,info,标题菜单条目,タイムアタック・ノーマル......つうじょうの　タイムアタックモード。,Time Attack – Normal  ...... Standard Time Attack mode.  ,计时挑战・普通……普通难度的计时挑战。
+Title:TitleData_lv3_2_TA_Normal:infoDisable,Title,TitleData_lv3_2_TA_Normal,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv3_2_TA_Normal:label,Title,TitleData_lv3_2_TA_Normal,label,标题菜单条目,ノーマル,Normal,普通
 Title:TitleData_lv3_2_リーファー:info,Title,TitleData_lv3_2_リーファー,info,标题菜单条目,リーファーとおおきなはっぱ......はっぱにのって　どこまでも！　つぎつぎ　やってくる　ターボンたちから　はっぱをまもろう。,"Leafur and the Giant Leaf ...... Hop on a massive leaf and ride it as far as you can!
-Defend it from wave of incoming Tabons.",莉芙与巨大的叶子……乘上叶子，想去多远就去多远！从接连不断袭来的塔邦们手里守住叶子吧。
-Title:TitleData_lv3_2_リーファー:infoDisable,Title,TitleData_lv3_2_リーファー,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>满足特定条件后就会解锁。</color>
+Defend it from wave of incoming Tabons.",莉芙与巨大的叶子……乘上叶子，想去多远就去多远！守住叶子，别让涌上来的塔邦弄坏它。
+Title:TitleData_lv3_2_リーファー:infoDisable,Title,TitleData_lv3_2_リーファー,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv3_2_リーファー:label,Title,TitleData_lv3_2_リーファー,label,标题菜单条目,リ-ファ-と大きな葉っぱ,Leafur and the Giant Leaf,莉芙与巨大的叶子
 Title:TitleData_lv4_0_x1:info,Title,TitleData_lv4_0_x1,info,标题菜单条目,, ,
 Title:TitleData_lv4_0_x1:infoDisable,Title,TitleData_lv4_0_x1,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv4_0_x1:label,Title,TitleData_lv4_0_x1,label,标题菜单条目,x１（２５６＊２２４）, ,x1（256*224）
-Title:TitleData_lv4_0_データ削除誤爆防止用:info,Title,TitleData_lv4_0_データ削除誤爆防止用,info,标题菜单条目,<color=red>セーブデータを　さくじょする　ばあいは、　カーソルを　「さくじょする」 にあわせて　じっこうしてください。</color>,"<color=red>To delete save data, move the cursor to 'Delete' and confirm.</color>",<color=red>要删除存档数据时，请把光标移到「删除」上再执行。</color>
+Title:TitleData_lv4_0_データ削除誤爆防止用:info,Title,TitleData_lv4_0_データ削除誤爆防止用,info,标题菜单条目,<color=red>セーブデータを　さくじょする　ばあいは、　カーソルを　「さくじょする」 にあわせて　じっこうしてください。</color>,"<color=red>To delete save data, move the cursor to 'Delete' and confirm.</color>",<color=red>要删档的话，把光标移到「删除」再确认。</color>
 Title:TitleData_lv4_0_データ削除誤爆防止用:infoDisable,Title,TitleData_lv4_0_データ削除誤爆防止用,infoDisable,标题菜单条目,,,
 Title:TitleData_lv4_0_データ削除誤爆防止用:label,Title,TitleData_lv4_0_データ削除誤爆防止用,label,标题菜单条目,<color=red>ほんとうに削除しますか？</color>,<color=red>Are you sure? </color>,<color=red>真的要删除吗？</color>
-Title:TitleData_lv4_0_操作タイプA:info,Title,TitleData_lv4_0_操作タイプA,info,标题菜单条目,タイプA......コントローラを　つかっているなら、　4つのボタンのうち　みぎしたの2つが「ジャンプ」　ひだりうえの2つが「ダッシュ」になります。　キーボードのばあいは　Xがジャンプ　Zがダッシュです。, ,类型A……使用手柄的话，4个按钮中右下的2个是「跳跃」，左上的2个是「冲刺」。用键盘时X是跳跃，Z是冲刺。
+Title:TitleData_lv4_0_操作タイプA:info,Title,TitleData_lv4_0_操作タイプA,info,标题菜单条目,タイプA......コントローラを　つかっているなら、　4つのボタンのうち　みぎしたの2つが「ジャンプ」　ひだりうえの2つが「ダッシュ」になります。　キーボードのばあいは　Xがジャンプ　Zがダッシュです。, ,类型A……用手柄的话，4个按钮里右下两个是「跳跃」，左上两个是「冲刺」。用键盘时，X是跳跃，Z是冲刺。
 Title:TitleData_lv4_0_操作タイプA:infoDisable,Title,TitleData_lv4_0_操作タイプA,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv4_0_操作タイプA:label,Title,TitleData_lv4_0_操作タイプA,label,标题菜单条目,タイプA, ,类型A
 Title:TitleData_lv4_0_自動変更:info,Title,TitleData_lv4_0_自動変更,info,标题菜单条目,じどうへんこう......コントローラにあわせ　じどうで　アイコンを　へんこうします。, ,自动切换……根据手柄自动切换图标。
@@ -2832,7 +2832,7 @@ Title:TitleData_lv4_1_x2:label,Title,TitleData_lv4_1_x2,label,标题菜单条目
 Title:TitleData_lv4_1_データ削除実行:info,Title,TitleData_lv4_1_データ削除実行,info,标题菜单条目,,,
 Title:TitleData_lv4_1_データ削除実行:infoDisable,Title,TitleData_lv4_1_データ削除実行,infoDisable,标题菜单条目,,,
 Title:TitleData_lv4_1_データ削除実行:label,Title,TitleData_lv4_1_データ削除実行,label,标题菜单条目,削除する,Delete,删除
-Title:TitleData_lv4_1_操作タイプB:info,Title,TitleData_lv4_1_操作タイプB,info,标题菜单条目,タイプB......コントローラを　つかっているなら、　4つのボタンのうち　みぎしたの2つが「ダッシュ」　ひだりうえの2つが「ジャンプ」になります。　キーボードのばあいは　Xがダッシュ　Zがジャンプです。, ,类型B……使用手柄的话，4个按钮中右下的2个是「冲刺」，左上的2个是「跳跃」。用键盘时X是冲刺，Z是跳跃。
+Title:TitleData_lv4_1_操作タイプB:info,Title,TitleData_lv4_1_操作タイプB,info,标题菜单条目,タイプB......コントローラを　つかっているなら、　4つのボタンのうち　みぎしたの2つが「ダッシュ」　ひだりうえの2つが「ジャンプ」になります。　キーボードのばあいは　Xがダッシュ　Zがジャンプです。, ,类型B……用手柄的话，4个按钮里右下两个是「冲刺」，左上两个是「跳跃」。用键盘时，X是冲刺，Z是跳跃。
 Title:TitleData_lv4_1_操作タイプB:infoDisable,Title,TitleData_lv4_1_操作タイプB,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv4_1_操作タイプB:label,Title,TitleData_lv4_1_操作タイプB,label,标题菜单条目,タイプB, ,类型B
 Title:TitleData_lv4_2_Ninten:info,Title,TitleData_lv4_2_Ninten,info,标题菜单条目,NINTENDO......にんてんどうタイプの　アイコンを　しようします。, ,NINTENDO……使用任天堂类型的图标。
@@ -2841,7 +2841,7 @@ Title:TitleData_lv4_2_Ninten:label,Title,TitleData_lv4_2_Ninten,label,标题菜�
 Title:TitleData_lv4_2_x4:info,Title,TitleData_lv4_2_x4,info,标题菜单条目,, ,
 Title:TitleData_lv4_2_x4:infoDisable,Title,TitleData_lv4_2_x4,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv4_2_x4:label,Title,TitleData_lv4_2_x4,label,标题菜单条目,x４（１０２４＊８９６）, ,x4（1024*896）
-Title:TitleData_lv4_3_Max:info,Title,TitleData_lv4_3_Max,info,标题菜单条目,モニターの　おおきさに　あわせて、　ひょうじできる　さいだいサイズに　せっていします。, ,根据显示器的大小，设置为能够显示的最大尺寸。
+Title:TitleData_lv4_3_Max:info,Title,TitleData_lv4_3_Max,info,标题菜单条目,モニターの　おおきさに　あわせて、　ひょうじできる　さいだいサイズに　せっていします。, ,按显示器大小，调成能放下的最大画面。
 Title:TitleData_lv4_3_Max:infoDisable,Title,TitleData_lv4_3_Max,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv4_3_Max:label,Title,TitleData_lv4_3_Max,label,标题菜单条目,最大サイズにする, ,设为最大尺寸
 Title:TitleData_lv4_3_Ps:info,Title,TitleData_lv4_3_Ps,info,标题菜单条目,PlayStation......PSタイプの　アイコンを　しようします。, ,PlayStation……使用 PS 类型的图标。
@@ -2867,7 +2867,7 @@ localization:Ending Table:Ending_NP03_01,localization,Ending Table,Ending_NP03_0
 ",localization,Ending Table,"Ending_NP03_03
 ",Unity Localization 表（UI/菜单/结局字幕）,パブリッシング,Publishing,发行
 localization:Ending Table:Ending_NP04_01,localization,Ending Table,Ending_NP04_01,Unity Localization 表（UI/菜单/结局字幕）,マーケティング,Marketing ,营销
-localization:Ending Table:Ending_NP05_01,localization,Ending Table,Ending_NP05_01,Unity Localization 表（UI/菜单/结局字幕）,テストプレイ, Tester (NijiDra),试玩测试
+localization:Ending Table:Ending_NP05_01,localization,Ending Table,Ending_NP05_01,Unity Localization 表（UI/菜单/结局字幕）,テストプレイ, Tester (NijiDra),测试玩家
 localization:Ending Table:Ending_NP05_03,localization,Ending Table,Ending_NP05_03,Unity Localization 表（UI/菜单/结局字幕）,QA エグゼクティブ,QA Executive,QA 主管
 localization:Ending Table:Ending_NP05_05,localization,Ending Table,Ending_NP05_05,Unity Localization 表（UI/菜单/结局字幕）,ひんしつほしょう, Quality Assurance,品质保证
 localization:Ending Table:Ending_NP06_01,localization,Ending Table,Ending_NP06_01,Unity Localization 表（UI/菜单/结局字幕）,スーパースペシャルサンクス,Super Special Thanks,超级特别鸣谢
@@ -3048,13 +3048,13 @@ SPECIAL THANKS
 特别鸣谢
 
 
-たね（塔内）
+たね（种）
 
 おひめちん（公主亲）
 
 　たまゆら。（玉响）
 
-もふおさお（毛茸茸）
+もふおさお（莫夫欧萨）
 
 めるど（梅露多）
 "
@@ -3265,7 +3265,7 @@ by gobouame","青紫苏
 by gobouame"
 localization:Ending Table:Ending_S4_Chara_Jorouda,localization,Ending Table,Ending_S4_Chara_Jorouda,Unity Localization 表（UI/菜单/结局字幕）,"女狼蛇
 by Aran_Saijo","Jorouda
-by Aran_Saijo","乔罗达
+by Aran_Saijo","女狼蛇
 by Aran_Saijo"
 localization:Ending Table:Ending_S4_Chara_Rythron,localization,Ending Table,Ending_S4_Chara_Rythron,Unity Localization 表（UI/菜单/结局字幕）,リュトロン,Rythron,琉特隆
 localization:Ending Table:Ending_S4_Stage,localization,Ending Table,Ending_S4_Stage,Unity Localization 表（UI/菜单/结局字幕）,ステージ4 ベリーかざん,"STAGE 4
@@ -3296,7 +3296,7 @@ localization:Ending Table:Ending_S6_Chara_Salia,localization,Ending Table,Ending
 by DOS","Salia
 by DOS","萨莉亚
 by DOS"
-localization:Ending Table:Ending_S6_Chara_Syasyo,localization,Ending Table,Ending_S6_Chara_Syasyo,Unity Localization 表（UI/菜单/结局字幕）,車掌さん,Train conductor,列车长先生
+localization:Ending Table:Ending_S6_Chara_Syasyo,localization,Ending Table,Ending_S6_Chara_Syasyo,Unity Localization 表（UI/菜单/结局字幕）,車掌さん,Train conductor,车长
 localization:Ending Table:Ending_S6_Chara_Terukku,localization,Ending Table,Ending_S6_Chara_Terukku,Unity Localization 表（UI/菜单/结局字幕）,"テールック
 by rickey_315
 ","Terukku

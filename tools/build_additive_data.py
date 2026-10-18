@@ -172,10 +172,6 @@ def main(argv=None):
     build_kwargs = dict(
         translations=args.translations,
         column=COLUMN,
-        slot=SLOT,
-        locale_code=LOCALE,
-        profile=PROFILE,
-        additive=True,
     )
     if args.no_images:
         _fresh_dir(args.out)

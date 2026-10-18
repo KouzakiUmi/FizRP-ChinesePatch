@@ -8,7 +8,7 @@
 > * 工作区：仓库根目录；游戏安装目录：本机 Steam 的 FizRP（只读，命令中用 `FIZRP_ROOT` / `FIZRP_GAMEDATA` 指定）
 > * 原版基线：`work/_additive/staging/FizAndTheRainbowPlanet_Data/`（103 个 `.assets`，
 >   **不含** `level*` 场景文件）
-> * 产物基线：`dist-additive/`（X2 追加式，`manifest-additive.json` 版本 1.2.2）
+> * 产物基线：`dist-additive/`（X2 追加式，`manifest-additive.json` 版本 1.2.3；本轮仅修订译文，沿用本文的系统映射）
 >
 > **证据标注约定**（本文所有结论都带其中一种）：
 > * 【实测】= 本次用 UnityPy / 反编译源码现场扫描得出的数字或字段值，命令见 §5；

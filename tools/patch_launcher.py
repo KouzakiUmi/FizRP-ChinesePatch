@@ -328,7 +328,7 @@ class InstallerApp(tk.Tk):
     def _log_environment(self):
         if patch_tool is None:
             return
-        for attr in ("ROOT", "PAYLOAD_DIR", "PATCH_INFO", "MANIFEST"):
+        for attr in ("ROOT", "PAYLOAD_DIR", "MANIFEST"):
             value = getattr(patch_tool, attr, None)
             if value is not None:
                 logging.info("核心模块常量 %s = %s", attr, value)
@@ -414,8 +414,7 @@ class InstallerApp(tk.Tk):
         if patch_tool is None:
             text = "载荷漂移: 无法比对（patch_tool 不可用）"
             return "unknown", text, text
-        payload_dir = (patch_tool.payload_dir() if hasattr(patch_tool, "payload_dir")
-                           else getattr(patch_tool, "PAYLOAD_DIR", None))
+        payload_dir = patch_tool.payload_dir()
         if not payload_dir or not os.path.isdir(payload_dir):
             text = "载荷漂移: 无法比对（找不到载荷目录：%s）" % (payload_dir or "未提供")
             return "unknown", text, text
@@ -487,8 +486,7 @@ class InstallerApp(tk.Tk):
         for item in (manifest or {}).get("files") or []:
             if isinstance(item, dict) and item.get("path"):
                 recorded[str(item["path"])] = str(item.get("sha256") or "")
-        payload_dir = ((patch_tool.payload_dir() if hasattr(patch_tool, "payload_dir") else "")
-                           or "")
+        payload_dir = patch_tool.payload_dir()
 
         bad = []
         for rel in rels:
@@ -985,7 +983,7 @@ class InstallerApp(tk.Tk):
             return
         confirmed = self._ask(
             "再次确认卸载",
-            "卸载会把游戏文件还原成安装中文补丁之前的英文原版。\n\n"
+            "卸载会优先从首次备份还原游戏文件，并移除随包 loader。\n\n"
             "· 只还原备份目录中记录过的文件；\n"
             "· 备份目录本身会保留下来，不会自动删除；\n"
             "· 如果之后还想玩中文，需要重新安装补丁。\n\n"
@@ -1106,8 +1104,7 @@ class InstallerApp(tk.Tk):
     def _execute_worker(self, cmd, data_dir, assume_yes):
         sink = CoreLogSink(lambda line: self.events.put(("log", line)))
         try:
-            result = patch_tool.execute(cmd, data_dir, log=sink, assume_yes=assume_yes,
-                                        additive=patch_tool.is_additive())
+            result = patch_tool.execute(cmd, data_dir, log=sink, assume_yes=assume_yes)
             sink.flush()
             if not isinstance(result, dict):
                 result = {"exit": 1, "error": "补丁核心返回了非预期的执行结果。"}
@@ -1132,11 +1129,7 @@ class InstallerApp(tk.Tk):
             if isinstance(value, int):
                 self._note("%s：%d 个文件" % (name, value))
         if exit_code == 0:
-            # 追加式（X2）的中文在语言画面第三项；替换式（X1）在第二项。
-            if cmd == "install" and patch_tool is not None and patch_tool.is_additive():
-                message = "安装完成：下次启动游戏时，语言选择画面请选第三项（中文）。"
-            else:
-                message = CMD_DONE.get(cmd, "操作完成。")
+            message = CMD_DONE.get(cmd, "操作完成。")
             self._note(message)
             self._set_status(message)
             logging.info("命令完成 cmd=%s", cmd)
@@ -1149,7 +1142,7 @@ class InstallerApp(tk.Tk):
             self._notify(
                 "error",
                 "操作未完成",
-                "%s\n\n没有完成的步骤不会留下半成品；如仍有疑问，请把日志目录里的 installer.log 交给维护者。"
+                "%s\n\n部分文件可能已写入，请检查备份和运行记录；如需帮助，请把 installer.log 交给维护者。"
                 % reason,
             )
         self._finish_command(cmd, exit_code)

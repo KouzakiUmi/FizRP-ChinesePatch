@@ -5,9 +5,7 @@
 > * `docs/FINDINGS.md` —— 对游戏本体的**逆向分析**（资源布局、语言枚举、字体清单、覆盖率）；
 > * `docs/TECHNICAL.md`（本文）—— **各组件如何工作、格式契约、不变量、校验门槛与已知坑**。
 >
-> 项目根目录：`D:\FizRP-ChinesePatch`（2026-10-16 自 `C:\Users\Fractal\FizRP-Localization` 迁入）。
-> 游戏安装位置：`E:\Steam\steamapps\common\FizRP`。**游戏目录一律只读**——所有写入只发生在
-> `work/`、`dist/`、`dist-additive/` 与沙箱目录。
+> 开发与回归只写工作区或临时沙箱；不操作真实游戏目录。
 
 ---
 
@@ -44,25 +42,19 @@
 
 ---
 
-## 3. 交付路线（当前主线：X2）
+## 3. 唯一交付路线：X2
 
-**当前安装包路线是 X2 追加式**。X1 替换式已于 2026-10-17 归档到
-`dist/legacy/X1/`（本机归档，`dist/` 被 .gitignore 忽略，不入库），
-只保留最后一版产物与清单，不再作为安装包主线维护。
+项目只维护 X2 追加式，不再包含另一套替换式安装/打包分支，也不依赖本机历史归档。
 
-| | **X1 替换式（已归档）** | **X2 追加式（当前）** |
-| --- | --- | --- |
-| 产物 | `dist/legacy/X1/FizRP-Chinese-Patch/`（历史） | `dist/FizRP-X2-v<版本>.zip` + `dist/FizRP-ChinesePatch.exe`；源在 `dist-additive/` |
-| 载荷 | `files/`，**106** 个文件（102 `.assets` + 3 个串表 bundle + `catalog.json`），约 67 MB | `payload/`，**125** 个文件（102 数据：98 `.assets` + 3 bundle + `catalog.json`；23 loader：`winhttp.dll` 等 4 个 + `BepInEx/` 19 个），约 22.5 MB |
-| 清单 | `dist/legacy/X1/manifest.json`（版本 1.1.0） | `dist-additive/manifest-additive.json`（多 `"mode":"additive"`，版本 1.2.2） |
-| 中文槽位 | `en`（`Language.English = 2`） | **`es`（`Language.Spanish = 4`）** |
-| 字体 profile | `zh_patch` | `zh_additive` |
-| 改英文吗 | 是——界面第二项变成中文，英文不可选（文件里仍保留） | 否——**新增第三项「中文」**，日/英原样 |
-| 需要运行库 | 否 | **是**：BepInEx + Harmony + Doorstop（`winhttp.dll`） |
-| 改游戏 DLL/场景 | 否 | 否（插件在**运行时**打补丁） |
-| 安装器 | 不再随 exe 打包；`patch_tool.py` 的替换式回退指向归档目录 | `patch_tool.py` / `patch_launcher.py`（GUI，自动检测 `additive-payload/`） |
-| 优点 | 无依赖、最稳、任何环境都能跑 | 体积小 2/3、不牺牲英文、字号 1:1 更锐利 |
-| 代价 | 牺牲英文选项；中文按 12px 排 | 依赖 loader；需 BepInEx 兼容性 |
+| 项 | X2 |
+| --- | --- |
+| 产物 | `dist/FizRP-X2-v<版本>.zip` + `dist/FizRP-ChinesePatch.exe` |
+| 发布源 | `dist-additive/payload/` 与 `manifest-additive.json` |
+| 载荷 | 125 文件：102 数据 + 23 loader；中文写入 `es`（Language.Spanish=4） |
+| 字体 | `zh_additive`：EXS=10px、EXL=8px |
+| 插件 | BepInEx + Harmony + Doorstop；语言菜单第三项「中文」 |
+| 安装入口 | `tools/patch_tool.py`；GUI 只调用同一套公共 API |
+| 资源定位 | 源码 `dist-additive/payload/`；zip `payload/`；冻结包 `additive-payload/` |
 
 **X2 的中文槽位为什么是 `es`**：`Language` 枚举里 `Spanish = 4` 的本地化数据在该 build
 中**几乎全空**（5 张表合计仅 13 行非空，1411 行文本里西语只占 13 行），且语言菜单
@@ -169,21 +161,11 @@ MonoBehaviour 头 = PPtr<GameObject>(4+8) + m_Enabled(1+3) + PPtr<MonoScript>(4+
 
 替换体为 [fusion-pixel-font](https://github.com/TakWolf/fusion-pixel-font)（SIL OFL-1.1），
 各变体字形覆盖相同（约 28k–35k 字形，汉字/假名/拉丁齐备），差别只在汉字的**字形偏好**
-（`-ja` / `-zh_hans` / `-latin`）。`fonts.config.json` 用**四套** profile 表达取舍：
-
-| profile | 用途 | 日文槽位 | 中文槽位 |
-| --- | --- | --- | --- |
-| `default` | 纯像素化 | `12px-ja` | — |
-| `zh_hans` | 中文补丁（简中字形优先） | `12px-zh_hans` | `12px-zh_hans` |
-| `zh_patch` | **X1 使用** | `12px-ja`（保留日文字形） | `12px-zh_hans`（en 槽） |
-| `zh_additive` | **X2 使用** | 不动 | `k8x12EXS→10px` / `k8x12EXL→8px` |
+（`-ja` / `-zh_hans` / `-latin`）。项目配置仅保留 `zh_additive`，其它字体不替换。
 
 `zh_additive` 的设计要点：**按宿主原字号选设计尺寸**（EXS 原为 12px 级、EXL 原为大号），
 由插件把 `Text` 字号量化到 10 / 8 两档，使中文与设计尺寸 **1:1 锐利**；
 代价是日/英模式下 EXS@12 为 1.2×、EXL@12 为 1.5× 非整数缩放。
-X1 的已知取舍：`resources.assets:101`（`PerfectDOSVGA437`，被 **100** 处 Text 引用）
-实测字号 16(×95)/15/24(×3)/12，而可用设计尺寸只有 8/10/12——非整数放大后像素边缘会软，
-但那些 Text 会显示中文，必须保留 CJK 覆盖，故**接受**。
 
 字体提取与普查在 `src/fonts.py`（含自写的 OpenType `name` 表读取）与 `src/font_usage.py`
 （递归扫 `Text.m_FontData.m_Font` 统计引用数）；`tools/cmap_check.py` 校验字形覆盖，
@@ -193,20 +175,13 @@ X1 的已知取舍：`resources.assets:101`（`PerfectDOSVGA437`，被 **100** �
 
 ## 7. 构建流水线
 
-### 7.1 X1 替换式（已归档）
-
-> 2026-10-17 起 X1 不再作为安装包主线；产物与清单已移到 `dist/legacy/X1/`。
-> 下列命令的默认路径已同步指向归档目录，仅用于历史回溯。
+### 7.1 数据准备与统一构建核心
 
 ```
-src/fonts.py            17 个内嵌字体      -> work/fonts/original/ + work/fonts/info.json
-src/extract_text.py     三套文本系统       -> translation/*.csv + work/text_index.json
-                                            + work/font_map.json（LocFontData -> 所在文件）
-src/make_sheets.py      ja 基准 + en 参考  -> translation/zh_Hans.csv
-（人工翻译）
-src/build_patch.py      文本 + 字号 + 字体 + StringTable -> dist/legacy/X1/FizAndTheRainbowPlanet_Data/
-tools/package.py        组装分发目录        -> dist/legacy/X1/FizRP-Chinese-Patch/
-tools/build_manifest.py 重生成清单          -> dist/legacy/X1/manifest.json（--version 1.1.0）
+src/fonts.py         17 个内嵌字体 -> work/fonts/original/ + work/fonts/info.json
+src/extract_text.py  三套文本系统 -> translation/*.csv + work/text_index.json
+src/make_sheets.py   ja 基准 + en 参考 -> translation/zh_Hans.csv
+src/build_patch.py   固定 slot=4 / locale=es / profile=zh_additive
 ```
 
 `src/build_patch.py` 一次遍历同时改四样东西，避免同一文件被多次改写：
@@ -217,7 +192,7 @@ tools/build_manifest.py 重生成清单          -> dist/legacy/X1/manifest.json
    （`damage_file` 映射），再用日文模板补齐目标资源的列表（实例：`padded=12`）。
    注意**只补列表长度不够——那些行在索引的 `others` 里没有目标语言条目，
    会在路由阶段就被丢掉**，两处都要修。
-3. **`LocFontData` 字号**：目标槽位 8 → 12（X1）。`LocFontData` 不带文本，
+3. **`LocFontData` 字体引用与字号**：es 槽镜像默认档位，并由插件量化到 10/8px。`LocFontData` 不带文本，
    所以它所在文件由 `work/font_map.json` 发现，**不靠硬编码清单**
    （硬编码曾漏掉 `sharedassets137.assets` 的 `LocFontData_Ending_Role`）。
 4. **StringTable 改写**：目标 locale 的 bundle 内逐条改 `m_Localized`；
@@ -225,14 +200,12 @@ tools/build_manifest.py 重生成清单          -> dist/legacy/X1/manifest.json
    与 Unity Localization 运行时行为一致（实例：`added=1`）。bundle 以
    `packer="original"` 保存。
 
-> ⚠️ `catalog.json` **不由 `build_patch.py` 产出**，`tools/package.py` 也不碰它。
-> X1 已发布的那份是手工改的，且**不自洽**（见 §12）。X1 要完全可复现必须补上
-> `tools/catalog_sync.py` 这一步。
+> `catalog.json` 由 X2 数据/载荷流水线调用 `catalog_sync.py` 生成。
 
 **覆盖率门槛**：`build_patch` 末尾对账 `written == expected`，**缺行默认 `ABORT`**
 （`--allow-missing` 可降级为告警）。这是防止"少写了却报成功"的最后一道闸。
 
-### 7.2 X2 追加式（当前主线）
+### 7.2 X2 完整流水线
 
 ```
 tools/build_additive_data.py     work/_additive/staging 的原版资产
@@ -252,7 +225,7 @@ python tools/package_additive.py -> dist/FizRP-X2-v<版本>/ + .zip + .sha256
 → spec 重建 exe → `package_additive.py` 重打 zip**。spec 的固定条目是
 `manifest-additive.json` + `docs/release/README-X2.txt` + `docs/release/KNOWN-ISSUES-X2.txt`
 + 仓库根 `LICENSE` + 仓库根 `THIRD-PARTY-NOTICES.txt` + `dist/fonts/source/OFL.txt`；
-X1 的 `manifest.json` / `patch-info.json` / README 不再内嵌。
+冻结包和 zip 均只包含 X2 清单与同一套安装核心。
 
 几个坑写在脚本 docstring 里，值得单独强调：
 
@@ -339,7 +312,7 @@ m_EntryDataString：每条 entry = 7×int32
 ## 9. 清单与冻结契约
 
 `manifest-additive.json` 是**当前（X2）载荷的权威清单**，安装器只依赖它就完成
-自检与版本门禁。X1 的 `manifest.json` 已随路线归档到 `dist/legacy/X1/`。
+自检与版本门禁。源码、GUI、zip 与冻结包不存在可变的全局模式。
 字段（阶段 F 冻结契约 v1 §4）：
 
 ```json
@@ -351,12 +324,11 @@ m_EntryDataString：每条 entry = 7×int32
 
 * `reference_hashes` 是**版本门禁基线**：安装前逐条比对游戏里这三个未被修改的文件，
   不符则告警并要求用户确认（防止游戏更新后把旧载荷盖上去）。
-* 追加式清单的 `patch_info` 复用替换式的 `reference_hashes`（同一游戏 build 的门禁基线，
-  来源是 X1 归档目录里的 `dist/legacy/X1/FizRP-Chinese-Patch/patch-info.json`），
-  `payload_files` 按 additive 载荷重算。
-* `tools/build_manifest.py` 只读载荷、只写清单，不触碰 `dist/` 既有内容、不做打包。
-  替换式默认输出到 `dist/legacy/X1/manifest.json`；复现 X1 的 1.1.0 版本用
-  `--version 1.1.0`。
+* 基线来自入库的 `config/game-reference.json`，保持已有三个 SHA-256，不依赖本机归档，也不从已安装补丁的游戏采样。
+* `tools/build_manifest.py` 默认只生成 X2 清单；缺少完整基线或空载荷时失败。
+* 安装前强制验证清单结构、版本、相对路径唯一性、文件集合、大小和全量 SHA-256。
+  清单缺失/损坏、缺文件、内容损坏或多余文件均禁止写入，`--yes` 只确认现场警告。
+* 仍保留对英文串表异常改动的只读探测，禁止把 X2 叠加到不兼容数据；它不是另一条安装路线。
 * 发布包（zip）由 `tools/package_additive.py` 生成：复制 payload、校验逐文件哈希、
   打包 zip 并写 `.sha256`；`--check` 可单独复核。
 
@@ -373,28 +345,29 @@ m_EntryDataString：每条 entry = 7×int32
 > `verify_patch.py` 曾经只检查"标记子串是否出现在对象 repr 里"——那种实现**不是校验**：
 > 值落错下标、槽位写错、238 行里少写 12 行，全都能通过。现在改为逐行定位比对。
 >
-> `verify_patch.py` 的 `--csv` **默认值是阶段 A 的合成表** `translation/_synthetic.csv`
-> （`zh_Hans` 列是 `【译】`+日文原文的占位串）。对正式表校验必须显式传
-> `--csv translation/zh_Hans.csv --column zh_Hans`，否则 1364 行全被报成 `wrong`。
+`verify_patch.py` 默认核验 `dist-additive/FizAndTheRainbowPlanet_Data`、正式译表
+`translation/zh_Hans.csv` 与 slot=4，不再默认读取合成译表。
+
+### 安装/打包回归
+
+```cmd
+python -B -m unittest discover -s tests -v
+```
+
+测试只创建临时游戏和存档：覆盖 GUI 预检查→执行、嵌套路径与 loader 路由、重复安装、
+安装→核验→卸载、损坏/缺失清单与载荷零写入、I/O 失败非零退出、已有存档及创建竞争。
+生成的 zip 会解压到临时目录，并从无关工作目录实际执行包内 CLI 的 check/install/verify/uninstall。
+`package_additive.py --check` 同时核对载荷、内嵌清单、安装核心及随包说明，拒绝陈旧入口。
 
 ## 11. 已知问题与已修复项
 
-截至 2026-10-17（X2 v1.2.2 整理后；X1 已归档）：
+本轮 X2 收敛修正：
 
-* **X1 产物漂移已消除。** 2026-10-16 的 325 处差异（1039/1364）来自旧产物落后于
-  `translation/zh_Hans.csv` 与 `src/build_patch.py`；2026-10-17 已按当前源码/工作表重打包，
-  随后 X1 整体归档。归档包 106/106 与 `dist/legacy/X1/manifest.json` 一致。
-* **X1 的 catalog 不自洽与 en 未压缩已修复。** 归档前的重打包用
-  `tools/catalog_sync.py --write` 生成（`--verify` 0 问题），en 串表为 LZ4HC
-  （9,654 字节）。旧发布包（25,723 字节、未压缩）不再分发。
-* **X1 的 7 步流程缺 `catalog.json` 脚本步骤**，X1 侧未补；X2 由
-  `build_additive_payload.py` 自动调用 `catalog_sync`，不存在该缺口。X1 归档后不再维护。
-* **插件 DLL 的旧绝对路径已消除（2026-10-17）。** `plugin/FizRPLangMenu.csproj` 增加
-  `PathMap` / `DebugType=none` 后从 `D:\FizRP-ChinesePatch\plugin` 重编，
-  `dist-additive/payload/BepInEx/plugins/FizRPLangMenu.dll` 已不含 `FizRP-Localization`
-  或本机绝对路径。重编后需重跑 `build_additive_payload.py`（DLL 哈希会进入清单）。
-
-X1 的历史细节见 `dist/legacy/X1/README.md`。
+* 移除安装器的双模式全局状态，GUI 预检查不会把 X2 切回其它路径。
+* zip 根目录入口和冻结包分别定位同包资源，不依赖解压位置或当前工作目录。
+* 安装前强制完整性门槛；安装期间 I/O 失败返回非零，不再宣称失败不会留下半成品。
+* 游戏门禁改用独立入库基线；旧快捷入口统一委托 X2 实现。
+* 存档以独占创建模式播种，避免检查与写入之间出现新存档时被覆盖。
 
 ## 12. 未验证项与残余风险
 
@@ -403,8 +376,7 @@ X1 的历史细节见 `dist/legacy/X1/README.md`。
    `packer="original"` 可复现原压缩。**这是唯一没被覆盖的一环，必须实机确认。**
 2. `SerializedFile.save()` 同样只对比了结构（对象表/path_id/class_id/externals 0 差异），
    没经过 Unity 加载器验证。
-3. **X1 已归档**，其 12px 字号取舍与 `resources.assets:101` 失配仅作历史记录；
-   X2 改用 10/8px 双档（§6），对应风险是日/英模式的非整数缩放。
+3. X2 使用 10/8px 双档（§6），日/英模式仍存在非整数缩放。
 4. **16 张汉化贴图已集成**（v2.4，提交 `60451e5` / `417f6b4`）：离线逐像素回灌、
    黑白底合成、保护区与格式检查均通过；**实机画面核对仍未做**，已列入
    `docs/release/KNOWN-ISSUES-X2.txt` ⑨。

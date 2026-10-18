@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-success?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=flat-square)
 ![Engine](https://img.shields.io/badge/Engine-Unity%202021.3-blueviolet?style=flat-square)
-![Version](https://img.shields.io/badge/Version-v1.2.2-blue?style=flat-square)
+![Version](https://img.shields.io/badge/Version-v1.2.3-blue?style=flat-square)
 ![Patch](https://img.shields.io/badge/Patch-X2%20Additive-orange?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)
 
@@ -13,7 +13,7 @@
 
 ---
 
-**项目说明**：本补丁覆盖全文对白、界面文本、16 张汉化贴图与像素字体，采用 **X2 追加式**：
+**项目说明**：本补丁覆盖全文对白、界面文本、16 张汉化贴图与像素字体，仅维护 **X2 追加式**，不提供替换式分支：
 中文写入游戏自带的 `es`（`Language.Spanish = 4`）槽位，日文/英文原样保留，语言菜单新增第三项「中文」。
 不修改游戏 DLL 与场景文件；文本、字体和贴图由随包 BepInEx 插件在运行时加载。安装前自动备份，卸载可还原。
 
@@ -23,9 +23,18 @@
 | 游戏引擎 | Unity 2021.3.45f1 / Mono（PC / Steam） |
 | 补丁路线 | **X2 追加式**：中文进 `es` 槽，日/英原样保留 |
 | 补丁规模 | 125 个载荷文件（102 个数据文件 + 23 个 loader）；1,364 条非空译文；16 张汉化贴图 |
-| 当前版本 | **v1.2.2**：项目 LICENSE、安装器提示与安装包内容修正 |
+| 当前版本 | **v1.2.3**：86 条译文修订、X2 单一路径与安装完整性修复 |
 | 运行要求 | 图形安装器无需 Python；zip 版命令行需要 Python 3.8+ |
 | 字体 | [fusion-pixel-font](https://github.com/TakWolf/fusion-pixel-font)（SIL OFL 1.1） |
+
+### v1.2.3 更新（2026-10-18）
+
+- **译文修订**：相较 v1.2.2 修正 86 条对白、菜单说明、拟声词与结局署名；仍为 1,364 条非空译文。
+- **仅维护 X2**：统一构建、安装与打包路径；游戏版本门禁使用独立入库基线，不再依赖本机归档。
+- **安装逻辑修复**：修正 GUI 预检查模式和 zip 资源定位；写入前强制核对清单与全部载荷，缺失或损坏时中止。
+- **回归与发布校验**：增加 17 项标准库隔离回归；zip 校验同时核对安装入口、内嵌清单与随包说明，防止旧代码混入。
+- **存档安全**：新存档采用独占创建，避免检查与写入之间出现新存档时被覆盖。
+- **载荷字节保真**：禁用发布资源的 Git 换行转换，确保入库内容与清单哈希一致。
 
 ### v1.2.2 更新（2026-10-18）
 
@@ -84,9 +93,9 @@ python patch_tool.py check
 ## 🎮 安装与还原机制
 
 1. **定位游戏**：自动扫描 Steam 库中的游戏目录；找不到时提示手动指定游戏根目录（`FizAndTheRainbowPlanet_Data` 的上一级）。
-2. **安装前备份**：被覆盖的原文件复制到游戏根目录 `_FizRP_backup_<时间戳>/`，随后写入补丁。
+2. **完整性与备份**：先验证 X2 清单及全部载荷的 SHA-256；缺失、损坏或多余文件一律中止，`--yes` 也不绕过。被覆盖的原文件复制到游戏根目录 `_FizRP_backup_<时间戳>/`，随后写入补丁。
 3. **运行时加载**：BepInEx + Harmony 插件在中文语言下启用第三项，替换文本、字体与贴图；不修改游戏 DLL/场景文件。
-4. **卸载还原**：从最新备份逐字节还原被覆盖文件，移除随包 loader；备份目录保留，便于回滚。
+4. **卸载还原**：优先从 `_FizRP_original/` 首次备份逐字节还原；缺少时回退最新滚动备份。移除随包 loader，保留备份和其它用户插件。
 5. **存档安全**：补丁不删除、不改写用户存档（语言值设置除外，且默认不覆盖已有存档）。
 
 > 💡 兜底方案：Steam → 游戏属性 → 已安装文件 → 验证游戏文件完整性。
@@ -110,7 +119,9 @@ python patch_tool.py check
 ```
 dist/                 发布物（exe、X2 zip；本机生成，不入库）
 dist-additive/        X2 载荷与权威清单（发布源）
-src/                  解包、文本提取、构建与校验
+config/               独立游戏版本门禁基线（不依赖本机归档）
+src/                  解包、文本提取、X2 构建与校验
+tests/                标准库隔离回归（不操作真实游戏）
 tools/                构建/打包/安装核心与图形安装器
 plugin/               BepInEx + Harmony 插件源码
 translation/          翻译主表与工作表
@@ -172,6 +183,9 @@ X2 把中文写入游戏的 `es`（`Language.Spanish = 4`）本地化槽位，`S
 需要 Python 3.8+（本机使用 3.12）；重建插件还需要 .NET SDK。发布顺序固定：
 
 ```cmd
+:: 0) 安装/打包逻辑回归：只使用临时游戏与存档
+python -B -m unittest discover -s tests -v
+
 :: 1) 文本 + 字体 + 贴图注入（slot=4 / locale=es / profile=zh_additive）
 python tools\build_additive_data.py
 
@@ -192,7 +206,10 @@ dist\FizRP-ChinesePatch.exe --selftest
 
 > **顺序不能颠倒**：改了 `translation/zh_Hans.csv` 或 `src/build_patch.py` 后，必须先跑
 > `build_additive_data.py`，再跑 `build_additive_payload.py`，否则载荷仍是上一版数据。
+> `tools/build_manifest.py` 默认生成 X2 清单，版本门禁来自入库的 `config/game-reference.json`；不再读取本机历史归档。
 > 构建前需准备原版 `work/_additive/staging/` 与 `dist/fonts/source/OFL.txt`（本地输入，不入库）。
+
+`tools/install.py` / `tools/package.py` 只是 X2 的快捷入口，不维护第二套实现。`--replacement` 已移除；旧 X2 脚本的 `--additive` 仅作为无行为差异的兼容别名。
 
 版本号在 `tools/build_manifest.py`；发布时更新 README/发布说明的 `{{VERSION}}` 源，推送 `v*` tag 并创建 GitHub Release。发布资产包含 exe、zip、sha256 与 release notes。
 

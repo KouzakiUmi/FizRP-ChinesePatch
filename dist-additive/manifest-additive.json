@@ -1,10 +1,10 @@
 {
  "name": "Fiz 与彩虹星球 简体中文补丁",
  "game": "Fiz and the Rainbow Planet",
- "version": "1.2.2",
+ "version": "1.2.3",
  "built": "2026-10-18",
  "payload_files": 125,
- "payload_bytes": 24041806,
+ "payload_bytes": 24040991,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
@@ -13,7 +13,7 @@
   },
   "payload_files": 125,
   "mode": "additive",
-  "patch_info_source": "dist/legacy/X1/FizRP-Chinese-Patch/patch-info.json（reference_hashes 复用；payload_files 按 additive 载荷重算）"
+  "patch_info_source": "config/game-reference.json"
  },
  "files": [
   {
@@ -128,12 +128,12 @@
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-string-tables-spanish(es)_assets_all.bundle",
-   "sha256": "85d71ee40ea697907a3619f556d03242f005840b40d5adec3282171b49d88df8",
-   "size": 9202
+   "sha256": "a3643c6ba12d0334115c954176f4238eeefd143783fa69307e0073e448837caa",
+   "size": 9195
   },
   {
    "path": "StreamingAssets/aa/catalog.json",
-   "sha256": "baef9acb6b9080efc8f83c1baefd8b95db72900f0d310a0f8fcc0c557eaa5bdc",
+   "sha256": "aee9519a3ff6ac7d1b7ee3f0a4ac319d0509b40bf6631544b3600c22fe028bf1",
    "size": 79538
   },
   {
@@ -168,8 +168,8 @@
   },
   {
    "path": "sharedassets105.assets",
-   "sha256": "83a35676e3e03e06296320dbdccb947e7c20172f03fa1d1bfd7daac35baa41fd",
-   "size": 138744
+   "sha256": "6383e0ccfc0b4d9fe94efe3dd5cdb11c6aff3ce69bd93222acb82d1422afe960",
+   "size": 138736
   },
   {
    "path": "sharedassets106.assets",
@@ -208,17 +208,17 @@
   },
   {
    "path": "sharedassets118.assets",
-   "sha256": "fa004db700d6952196e77ae3179229a689ff32a117f8c9badfe3bebff3660a9e",
-   "size": 199976
+   "sha256": "108d852d1c15bad4a84aac39908edc96285774d04d32a0211a223d7fb392190f",
+   "size": 199960
   },
   {
    "path": "sharedassets119.assets",
-   "sha256": "a091a6f9d9737a85776ea6b6eecf897d4ccfa3b42ab2e1fe5ea8894f98b3e7f0",
-   "size": 55632
+   "sha256": "c740946e1e8c563b39679936e6e828f13b51699faf3b91eff7e81d784d50b7cf",
+   "size": 55600
   },
   {
    "path": "sharedassets120.assets",
-   "sha256": "54c547a8d5651e6b8822914e17c9e2634f1b7320eb3e727c8b64d56a72845727",
+   "sha256": "ac7f128773754a690a84f5b5b8bd14ce837866ed4da485407168e22606b94669",
    "size": 57496
   },
   {
@@ -248,8 +248,8 @@
   },
   {
    "path": "sharedassets129.assets",
-   "sha256": "41f7531344eeae53ab16604b15d30b948064269d474b52fae4bd56c1f1439f2b",
-   "size": 70688
+   "sha256": "225e579d6f207403181a6b7d81a076a6272d5fd8afefa8fd9b8dfbe58184d882",
+   "size": 70680
   },
   {
    "path": "sharedassets13.assets",
@@ -268,8 +268,8 @@
   },
   {
    "path": "sharedassets136.assets",
-   "sha256": "9b21586fcd13bb376587629ede14cf996f7679137c0daf2fe767e6b2251d49f0",
-   "size": 49752
+   "sha256": "1441838525ac9b9076c4111061421d91151762f6afac0c342309dade0ad895f7",
+   "size": 49744
   },
   {
    "path": "sharedassets137.assets",
@@ -283,13 +283,13 @@
   },
   {
    "path": "sharedassets15.assets",
-   "sha256": "f5e8eda41bad7467fe77dffbab67bf1690336f4b71594dae4b4fb8f248dded46",
-   "size": 90032
+   "sha256": "bd1c64a807d1c8d5b605b80ef42c6da2c3abddefcf98a76549d454f57ba8755e",
+   "size": 90016
   },
   {
    "path": "sharedassets153.assets",
-   "sha256": "3f66024f5c36ff6b184f9b3e0a0c2cdc3427a25542971aa7ca922513a541d598",
-   "size": 101640
+   "sha256": "3cb8f90f5ba806d0f71eaa96e0fba63cce8c258c0d95b3f0a697311e4efc401a",
+   "size": 101632
   },
   {
    "path": "sharedassets16.assets",
@@ -313,13 +313,13 @@
   },
   {
    "path": "sharedassets22.assets",
-   "sha256": "4c93aa10a7e9e29c7011da45c653344c2a031b31112fa1481fa263f9794d41bd",
-   "size": 41080
+   "sha256": "39a783ca17af41f5ccba0abe26bd91c344b65cc6b9867e8d79541a226ee48020",
+   "size": 41064
   },
   {
    "path": "sharedassets23.assets",
-   "sha256": "64b09f9d35ff2f0aa6bb716cca6da9831a38e4397fda11f7e2ae732bf256cc0b",
-   "size": 43168
+   "sha256": "b5ac8c9ee775fd222a3a5581a9ce3321c894b98cd296351419604f98025d9415",
+   "size": 43152
   },
   {
    "path": "sharedassets25.assets",
@@ -338,8 +338,8 @@
   },
   {
    "path": "sharedassets3.assets",
-   "sha256": "9c32f705a197b9c73b8017274e721a4b8f27b22c94762528281e99a1a782e9e4",
-   "size": 5371080
+   "sha256": "dd10931f3babe5e781da7bc28c5eb0ec8fb68429ab3020d19ecb6a7b9f9dfb88",
+   "size": 5370480
   },
   {
    "path": "sharedassets30.assets",
@@ -353,7 +353,7 @@
   },
   {
    "path": "sharedassets34.assets",
-   "sha256": "3522f84724527c13399e0f852e49ee8a40eacddb8d13f26dcefd38f9f70ab0dd",
+   "sha256": "26110d608beff3cb0750813ca429526083afdab683306e9b1b1e6e30f5bd85cc",
    "size": 50504
   },
   {
@@ -418,8 +418,8 @@
   },
   {
    "path": "sharedassets49.assets",
-   "sha256": "60136f1f28e60cbce6f4e61b4516f41942d33fb4c0ec408886daa8ad8113b498",
-   "size": 59424
+   "sha256": "fa32205ee566aadcdf42c0afbcae5d203d2d8569fcbcfba2fe15908de42e4a3f",
+   "size": 59432
   },
   {
    "path": "sharedassets50.assets",
@@ -428,8 +428,8 @@
   },
   {
    "path": "sharedassets51.assets",
-   "sha256": "fc7e8013e47e1af6239779ca47330e511bfd7d908dd75e73a866ac46877fe0e9",
-   "size": 64968
+   "sha256": "21f1c2813e6fabc5f22c2011bbd40c73f001f1c8c8f062e4bc197e697c337f31",
+   "size": 64960
   },
   {
    "path": "sharedassets52.assets",
@@ -488,8 +488,8 @@
   },
   {
    "path": "sharedassets67.assets",
-   "sha256": "e871b78297d83815d69cacdccc873b2b2830b3459fa8ee9dc239b859a03f5c58",
-   "size": 82192
+   "sha256": "55fc9bff0f40b89cf96c05a46a100f5e514f4a4cb07f426e45a8c8d3d18d261d",
+   "size": 82176
   },
   {
    "path": "sharedassets68.assets",
@@ -593,8 +593,8 @@
   },
   {
    "path": "sharedassets9.assets",
-   "sha256": "2c5e6bb4b45387b975736b74b46ff38f5af42290687f929ae12fec34549a91b2",
-   "size": 554888
+   "sha256": "c7054c6d7e3e9dd70380fb6fca3d14331bfd3c7ac46959ddbbe5a88880a94d63",
+   "size": 554824
   },
   {
    "path": "sharedassets90.assets",
@@ -613,7 +613,7 @@
   },
   {
    "path": "sharedassets93.assets",
-   "sha256": "188e01e6ffafa7dc3f4f28f64451ed37272065e49305292df6920bc23bdac65f",
+   "sha256": "2b7e166b19bad50cdd26fa437bef710fcac264a28c251df556b73174dd2a6fca",
    "size": 69096
   },
   {

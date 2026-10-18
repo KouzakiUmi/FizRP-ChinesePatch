@@ -1,0 +1,3 @@
+# Game data and loader payloads must match manifest SHA-256 byte-for-byte.
+/dist-additive/payload/** -text
+/dist-additive/FizAndTheRainbowPlanet_Data/** -text

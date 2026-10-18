@@ -1,17 +1,7 @@
-"""Build the complete, file-replacement-only localisation patch.
+"""Build X2 text, fonts and StringTables in the existing es locale slot.
 
-Nothing here needs a mod loader, a rebuilt Addressables catalog or a patched
-DLL: Chinese is written into an *existing* locale slot, so every address and
-every bundle name stays exactly as the game shipped it.
-
-Pipeline
-  0. translation gate    (src/check_translation.py) - a worksheet with
-                         error-level problems aborts before any asset is touched
-  1. tailored worksheet / translations  -> translation/zh_Hans.csv
-  2. ScriptableObject text  (TextData / AutoTalk / Title / DamageTalk)
-  3. LocFontData            (point the slot at a CJK font, bump the point size)
-  4. UnityEngine.Font       (swap the TrueType blob for fusion-pixel-font)
-  5. Unity Localization     (rewrite the StringTable values inside their bundle)
+The maintained release pipeline is tools/build_additive_data.py, followed by
+tools/build_additive_payload.py. Game DLLs and scenes remain unchanged.
 """
 from __future__ import annotations
 
@@ -557,15 +547,15 @@ def patch_string_tables(out_dir, translations, index, locale_code):
 # --------------------------------------------------------------------------
 # orchestration
 # --------------------------------------------------------------------------
-def build(out_dir="dist/legacy/X1/FizAndTheRainbowPlanet_Data",
+def build(out_dir="dist-additive/FizAndTheRainbowPlanet_Data",
           translations="translation/zh_Hans.csv",
           index_path="work/text_index.json",
-          column="zh_Hans", slot=2, locale_code="en",
-          profile="zh_hans", font_size=12,
+          column="zh_Hans",
           config_path="fonts.config.json",
           fusion_dir="dist/fonts/source",
           skip_fonts=False, skip_strings=False, allow_missing=False,
-          skip_translation_check=False, additive=False):
+          skip_translation_check=False):
+    slot, locale_code, profile, font_size = 4, "es", "zh_additive", 0
     # The gate runs before anything is loaded or written: a worksheet with
     # error-level problems must never reach the assets.
     if not skip_translation_check:
@@ -578,15 +568,12 @@ def build(out_dir="dist/legacy/X1/FizAndTheRainbowPlanet_Data",
 
     # Additive mode: Chinese lives in the vacant `es` slot, so that slot's
     # LocFontData must be repointed at the one font blob this mode replaces.
-    additive_font = None
-    if additive:
-        # 方案甲：es 槽按 defaultFont 档位镜像到 EXS(12px 设计) 或 EXL(8px 设计)
-        additive_font = dict(ADDITIVE_FONTS_BY_SIZE)
+    additive_font = dict(ADDITIVE_FONTS_BY_SIZE)
 
     text_entries = []
     if not skip_fonts:
         text_entries = font_entries
-    report = {"mode": {"additive": bool(additive), "slot": slot,
+    report = {"mode": {"additive": True, "slot": slot,
                        "locale": locale_code, "profile": profile,
                        "font_size": font_size,
                        "additive_font": ({str(k): list(v) for k, v in additive_font.items()}
@@ -644,32 +631,18 @@ def build(out_dir="dist/legacy/X1/FizAndTheRainbowPlanet_Data",
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default="dist/legacy/X1/FizAndTheRainbowPlanet_Data")
+    ap.add_argument("--out", default="dist-additive/FizAndTheRainbowPlanet_Data")
     ap.add_argument("--translations", default="translation/zh_Hans.csv")
     ap.add_argument("--column", default="zh_Hans")
-    ap.add_argument("--slot", type=int, default=2, help="Language 枚举槽位")
-    ap.add_argument("--locale", default="en", help="占用的 locale 代码")
-    ap.add_argument("--profile", default="zh_hans")
-    ap.add_argument("--font-size", type=int, default=10,
-                    help="中文槽位的字号；必须与所选字体设计尺寸一致"
-                         "（10px 字体就填 10，否则非整数放大会发虚）")
     ap.add_argument("--skip-fonts", action="store_true")
     ap.add_argument("--skip-strings", action="store_true")
     ap.add_argument("--allow-missing", action="store_true",
                     help="只告警不中断（默认缺行即构建失败）")
     ap.add_argument("--skip-translation-check", action="store_true",
                     help="跳过译文工作表机械校验门槛（默认有错误级问题即 ABORT）")
-    ap.add_argument("--additive", action="store_true",
-                    help="X2 追加式：en 槽位保留原版，中文写入 --slot/--locale 指定的"
-                         "空置槽位，并把该槽位 LocFontData 的 font/size 按 "
-                         "defaultFont 档位镜像到 "
-                         + "/".join("size=%d -> %s:%d" % (k, v[0], v[1])
-                                    for k, v in sorted(ADDITIVE_FONTS_BY_SIZE.items())))
     a = ap.parse_args()
     out = build(out_dir=a.out, translations=a.translations, column=a.column,
-                slot=a.slot, locale_code=a.locale, profile=a.profile,
-                font_size=a.font_size, skip_fonts=a.skip_fonts,
+                skip_fonts=a.skip_fonts,
                 skip_strings=a.skip_strings, allow_missing=a.allow_missing,
-                skip_translation_check=a.skip_translation_check,
-                additive=a.additive)
+                skip_translation_check=a.skip_translation_check)
     print(json.dumps(out, ensure_ascii=False, indent=1))

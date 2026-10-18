@@ -33,6 +33,8 @@ import os
 import shutil
 import zipfile
 
+from patch_tool import validate_manifest
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 
@@ -49,14 +51,18 @@ DIST = os.path.join(ROOT, "dist")
 INSTALL_BAT = """@echo off
 chcp 65001 >nul
 cd /d "%~dp0"
-python patch_tool.py install --additive --yes
+python patch_tool.py install %*
+set "result=%errorlevel%"
 pause
+exit /b %result%
 """
 UNINSTALL_BAT = """@echo off
 chcp 65001 >nul
 cd /d "%~dp0"
-python patch_tool.py uninstall --additive --yes
+python patch_tool.py uninstall %*
+set "result=%errorlevel%"
 pause
+exit /b %result%
 """
 
 
@@ -70,7 +76,7 @@ def sha256(path):
 
 def load_manifest():
     with open(MANIFEST, encoding="utf-8") as handle:
-        return json.load(handle)
+        return validate_manifest(json.load(handle))
 
 
 def render(template, version):
@@ -82,6 +88,7 @@ def render(template, version):
 
 
 def verify_payload(payload_dir, manifest):
+    validate_manifest(manifest)
     problems = []
     seen = set()
     for entry in manifest["files"]:
@@ -108,6 +115,9 @@ def verify_payload(payload_dir, manifest):
 def write_release(out_dir, version, manifest):
     if os.path.isdir(out_dir):
         raise SystemExit("输出目录已存在（加 --force 覆盖）：%s" % out_dir)
+    problems = verify_payload(PAYLOAD, manifest)
+    if problems:
+        raise SystemExit("源载荷校验失败：\n  " + "\n  ".join(problems[:20]))
     os.makedirs(out_dir)
     shutil.copytree(PAYLOAD, os.path.join(out_dir, "payload"))
     shutil.copy2(PATCH_TOOL, os.path.join(out_dir, "patch_tool.py"))
@@ -128,6 +138,8 @@ def write_release(out_dir, version, manifest):
 
 
 def write_zip(out_dir, zip_path):
+    if os.path.abspath(zip_path) != os.path.abspath(out_dir) + ".zip":
+        raise RuntimeError("拒绝覆盖非预期 zip 路径: %s" % zip_path)
     if os.path.exists(zip_path):
         os.remove(zip_path)
     prefix = os.path.basename(out_dir) + "/"
@@ -156,12 +168,42 @@ def write_zip(out_dir, zip_path):
 def verify_zip(zip_path, manifest):
     if not os.path.isfile(zip_path):
         raise SystemExit("找不到 zip：%s" % zip_path)
+    validate_manifest(manifest)
     problems = []
     with zipfile.ZipFile(zip_path) as archive:
-        names = set(archive.namelist())
+        all_names = archive.namelist()
+        names = set(all_names)
+        if len(all_names) != len(names):
+            problems.append("duplicate zip entries")
         prefix = os.path.basename(zip_path)[:-4] + "/"
-        if prefix + "manifest-additive.json" not in names:
+        manifest_name = prefix + "manifest-additive.json"
+        if manifest_name not in names:
             problems.append("missing manifest-additive.json")
+        else:
+            try:
+                embedded = validate_manifest(json.loads(archive.read(manifest_name)))
+                if embedded != manifest:
+                    problems.append("stale embedded manifest-additive.json")
+            except (ValueError, RuntimeError) as exc:
+                problems.append("invalid embedded manifest: %s" % exc)
+        fixed = {}
+        for name, path in (("patch_tool.py", PATCH_TOOL), ("LICENSE", LICENSE_SRC),
+                           ("THIRD-PARTY-NOTICES.txt", NOTICES_SRC),
+                           ("LICENSE-fusion-pixel-font.txt", OFL_SRC)):
+            with open(path, "rb") as handle:
+                fixed[name] = handle.read()
+        fixed.update({"README.txt": render(README_SRC, manifest["version"]).encode("utf-8"),
+                      "KNOWN-ISSUES.txt": render(KNOWN_SRC, manifest["version"]).encode("utf-8"),
+                      "install.bat": INSTALL_BAT.encode("utf-8"),
+                      "uninstall.bat": UNINSTALL_BAT.encode("utf-8")})
+        expected = {manifest_name} | {prefix + name for name in fixed}
+        expected |= {prefix + "payload/" + entry["path"] for entry in manifest["files"]}
+        for name in sorted(names - expected):
+            problems.append("extra: " + name)
+        for name, want in fixed.items():
+            member = prefix + name
+            if member in names and archive.read(member) != want:
+                problems.append("stale: " + name)
         for entry in manifest["files"]:
             name = prefix + "payload/" + entry["path"]
             if name not in names:
@@ -200,6 +242,9 @@ def main(argv=None):
         return 0
 
     if args.force:
+        expected = os.path.abspath(os.path.join(ROOT, "dist", "FizRP-X2-v" + version))
+        if os.path.abspath(out_dir) != expected:
+            raise RuntimeError("拒绝清理非预期发布目录: %s" % out_dir)
         if os.path.isdir(out_dir):
             shutil.rmtree(out_dir)
         for path in (zip_path, zip_path + ".sha256"):

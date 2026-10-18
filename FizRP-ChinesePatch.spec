@@ -15,12 +15,12 @@ datas 生成规则：
   2. 每个载荷文件一条：源 ``dist-additive/payload/<rel>``，
      目标 ``additive-payload/<posix dirname(rel)>``。
 
-共 ``6 + N`` 条（N = 载荷文件数；v1.2.2 为 N=125 → 131 条）。
+共 ``6 + N`` 条（N = 载荷文件数；v1.2.3 为 N=125 → 131 条）。
 载荷条目**不手写**：优先读 ``manifest-additive.json``（权威清单、顺序稳定），
 缺失时才回退遍历载荷目录。期望条目数动态计算，避免载荷增减后闸门误报。
 
-> X1 替换式已归档到 ``dist/legacy/X1/``，不再由本 spec 打包。安装器源码
-> （``tools/patch_launcher.py``）在打包态检测到 ``additive-payload/`` 时自动走追加式。
+> 仅打包 X2。安装器统一从冻结资源根读取 ``additive-payload/`` 与清单，
+> 不再维护模式探测或另一套载荷回退路径。
 """
 
 import json as _json

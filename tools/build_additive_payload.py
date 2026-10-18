@@ -428,7 +428,7 @@ def build_manifest(out_dir):
     sys.path.insert(0, HERE)
     import build_manifest  # noqa: E402  （同目录模块，组装末段才需要）
 
-    manifest = build_manifest.build_additive_manifest(payload_dir=out_dir)
+    manifest = build_manifest.build_manifest(payload_dir=out_dir)
     build_manifest.write_manifest(manifest, MANIFEST_OUT)
     print("manifest: %s（%d files, %d bytes）"
           % (MANIFEST_OUT, manifest["payload_files"], manifest["payload_bytes"]))

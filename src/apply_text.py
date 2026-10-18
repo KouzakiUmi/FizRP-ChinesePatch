@@ -8,8 +8,8 @@ rows while still reporting a success count.  Delegating removes that class of
 bug for good.
 
 Usage:
-    python src/apply_text.py --column text_zh_Hans --lang-slot 2 \
-        --out dist/legacy/X1/FizAndTheRainbowPlanet_Data
+    python src/apply_text.py --column zh_Hans \
+        --out dist-additive/FizAndTheRainbowPlanet_Data
 """
 from __future__ import annotations
 
@@ -23,15 +23,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_patch
 
 
-def run(csv_path: str, column: str, slot: int, out_dir: str,
-        locale_code: str = "en", skip_strings: bool = False,
+def run(csv_path: str, column: str, out_dir: str,
+        skip_strings: bool = False,
         allow_missing: bool = False) -> dict:
     return build_patch.build(
         out_dir=out_dir,
         translations=csv_path,
         column=column,
-        slot=slot,
-        locale_code=locale_code,
         skip_fonts=True,          # 只应用文本
         skip_strings=skip_strings,
         allow_missing=allow_missing,
@@ -40,16 +38,13 @@ def run(csv_path: str, column: str, slot: int, out_dir: str,
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", default="translation/ALL.csv")
-    ap.add_argument("--column", default="text_zh_Hans")
-    ap.add_argument("--lang-slot", type=int, default=2,
-                    help="Language 枚举槽位：0=ja 1=en_machine 2=en 3=fr 4=es")
-    ap.add_argument("--locale", default="en", help="目标 locale 代码")
-    ap.add_argument("--out", default="dist/legacy/X1/FizAndTheRainbowPlanet_Data")
+    ap.add_argument("--csv", default="translation/zh_Hans.csv")
+    ap.add_argument("--column", default="zh_Hans")
+    ap.add_argument("--out", default="dist-additive/FizAndTheRainbowPlanet_Data")
     ap.add_argument("--skip-strings", action="store_true",
                     help="不处理 Unity Localization bundle")
     ap.add_argument("--allow-missing", action="store_true")
     args = ap.parse_args()
-    print(json.dumps(run(args.csv, args.column, args.lang_slot, args.out,
-                         args.locale, args.skip_strings, args.allow_missing),
+    print(json.dumps(run(args.csv, args.column, args.out,
+                         args.skip_strings, args.allow_missing),
                      ensure_ascii=False, indent=1))
