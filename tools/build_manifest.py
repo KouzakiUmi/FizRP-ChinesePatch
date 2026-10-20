@@ -17,7 +17,7 @@ from patch_tool import REFERENCE_FILES, validate_manifest
 
 NAME = "Fiz 与彩虹星球 简体中文补丁"
 GAME = "Fiz and the Rainbow Planet"
-VERSION = "1.2.4"
+VERSION = "1.2.5"
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAYLOAD_DIR = os.path.join(PROJECT_ROOT, "dist-additive", "payload")
 MANIFEST_PATH = os.path.join(PROJECT_ROOT, "dist-additive", "manifest-additive.json")

@@ -71,7 +71,7 @@ AutoTalk:AutoTalkData_NPC_S3_Thystmare:1,AutoTalk,AutoTalkData_NPC_S3_Thystmare,
 AutoTalk:AutoTalkData_NPC_S3_Thystmare:2,AutoTalk,AutoTalkData_NPC_S3_Thystmare,talkDatas[2],剧情对话 | wait=0.50 speaker=1,"そうなの！！？！
 ......おうち帰って、ねようっと！","Really?!
 ...I think I’ll just head home and rest!","是这样吗！！？！
-……还是回家、睡觉去吧！"
+……那还是回家睡觉去吧！"
 AutoTalk:AutoTalkData_NPC_S4_Aoziso:0,AutoTalk,AutoTalkData_NPC_S4_Aoziso,talkDatas[0],剧情对话 | wait=0.50 speaker=1,"このあたり　すっごく暑いね......
 このままだと　体が溶けちゃいそう","It's been so hot around here......
 I feel like I'm going to melt.","这一带热得要命呢……
@@ -157,7 +157,7 @@ Want to sleep on my belly?","大家来到这里一定很辛苦吧。
 AutoTalk:AutoTalkData_NPC_S7_Yoyami:2,AutoTalk,AutoTalkData_NPC_S7_Yoyami,talkDatas[2],剧情对话 | wait=0.50 speaker=3,"えっ...！！
 おなかの上なんて、そんな......！","What...?!
 Sleep on your belly...!?","诶……！！
-在肚子上什么的，那怎么行……！"
+睡、睡在你肚子上？那怎么行……！"
 AutoTalk:AutoTalkData_NPC_S7_Yoyami:3,AutoTalk,AutoTalkData_NPC_S7_Yoyami,talkDatas[3],剧情对话 | wait=0.50 speaker=1,......なんてね！,...Just kidding!,……骗你的啦！
 AutoTalk:Def_God_0Ryu:0,AutoTalk,Def_God_0Ryu,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"私の加護によって　あなたたちは
 何度でも蘇ることが　できるのです。","Thanks to my blessing,
@@ -171,8 +171,8 @@ a challenge.","不过也不要太勉强，
 先想好战术再去挑战哦。"
 AutoTalk:Def_God_0Ryu:2,AutoTalk,Def_God_0Ryu,talkDatas[2],剧情对话 | wait=0.10 speaker=2,"神サマのおかげで　何回死んでも
 再挑戦できるってコトだな！　","So basically, even if we die, we can 
-try again thanks to the god’s power!","就是说，多亏神大人不管死几次
-都能重新挑战啦！"
+try again thanks to the god’s power!","就是说，多亏有神大人，
+不管死几次都能重新挑战啦！"
 AutoTalk:Def_God_0Ryu:3,AutoTalk,Def_God_0Ryu,talkDatas[3],剧情对话 | wait=0.10 speaker=8,............。,.............,…………
 AutoTalk:Def_God_1Fiz:0,AutoTalk,Def_God_1Fiz,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"私は　あなたたちを見守りながら
 様々な加護を　与えています。","I am always watching over you, 
@@ -303,7 +303,7 @@ I wanna feel it!","这世上要是还有我没尝过的滋味，
 AutoTalk:Def_God_Vore2:4,AutoTalk,Def_God_Vore2,talkDatas[4],剧情对话 | wait=0.10 speaker=5,"からだおおきいから
 食べられないんじゃない？","Maybe you’re just too big
 to get eaten?","你身体那么大，
-是不是根本吃不下呀？"
+根本没人吃得下你吧？"
 AutoTalk:Def_God_Vore2:5,AutoTalk,Def_God_Vore2,talkDatas[5],剧情对话 | wait=0.10 speaker=8,"体の大きさなど、私にとっては　魔法で
 思いのままにできる　ささいなことです。","Size means nothing to me.
 Magic can fix that easily.","身子大小而已，我用魔法
@@ -315,29 +315,29 @@ That water’s no joke.","看来你一次次在水里溺水，
 丢了性命呢。"
 AutoTalk:Def_God_Water:1,AutoTalk,Def_God_Water,talkDatas[1],剧情对话 | wait=0.10 speaker=8,"泳ぐことが苦手な　仲間を、
 無理に　泳がせてはなりませんよ。","Don’t force someone to swim
-if they’re not good at it, okay?","对于不擅长游泳的伙伴，
-可不要硬逼着人家游哦。"
+if they’re not good at it, okay?","不擅长游泳的伙伴，
+可别硬逼着他们游哦。"
 AutoTalk:MovieTalk_OP:0,AutoTalk,MovieTalk_OP,talkDatas[0],剧情对话 | wait=10.00 speaker=0,"宇宙のどこかにある星　惑星ロンガ。         
 ある日、この星で暮らす　こどものドラゴン
 「<color=#55FFFFFF>フィズ</color>」は夢を見ました。","Somewhere in space lies Planet Longa.
 One day, a young dragon named 
-<color=#55FFFFFF>Fiz</color> had a dream.","宇宙某处有一颗星球隆加星。
+<color=#55FFFFFF>Fiz</color> had a dream.","宇宙某处，有一颗叫隆加的星球。
 有一天，住在这颗星上的小龙
 「<color=#55FFFFFF>菲兹</color>」做了一个梦。"
 AutoTalk:MovieTalk_OP:1,AutoTalk,MovieTalk_OP,talkDatas[1],剧情对话 | wait=10.00 speaker=0,"その夢は　世界がモノクロになり
 全ての生き物が　動かなくなってしまうという
 恐ろしい悪夢です。","In the dream, the world went gray...
 All life froze in place...
-A terrifying nightmare.","那个梦里，世界变成了黑白，
-所有生物都不再动弹，
-是个可怕的噩梦。"
+A terrifying nightmare.","那是个可怕的噩梦：
+世界变成黑白，
+所有生物都不再动弹。"
 AutoTalk:MovieTalk_OP:2,AutoTalk,MovieTalk_OP,talkDatas[2],剧情对话 | wait=10.00 speaker=0,"目を覚ました<color=#55FFFFFF>フィズ</color>は、夢の内容が未来に
 起こりうることだと、目の前に現れた
 全知全能のドラゴン「<color=#FBF97AFF>タオンガ</color>」から告げられます。","Awake, <color=#55FFFFFF>Fiz</color> learned his dream
 might come true,
 Taonga, the all-knowing dragon, warned.","醒来的<color=#55FFFFFF>菲兹</color>，从出现在眼前的
-全知全能的龙「<color=#FBF97AFF>塔翁加</color>」那里
-被告知：梦里的内容可能会在未来发生。"
+全知全能的龙「<color=#FBF97AFF>塔翁加</color>」口中
+得知：梦里的内容可能会在未来发生。"
 AutoTalk:MovieTalk_OP:3,AutoTalk,MovieTalk_OP,talkDatas[3],剧情对话 | wait=10.00 speaker=0,"そして、未来を変えるには　七匹のドラゴンが
 力を合わせて　世界に散らばるオーブを
 守らなければならない　というのです。","To change that future, seven dragons
@@ -396,8 +396,8 @@ so stick close and follow me!","这一带是我的地盘，
 AutoTalk:MovieTalk_Stage4:11,AutoTalk,MovieTalk_Stage4,talkDatas[11],剧情对话 | wait=2.00 speaker=6,（だいじょうぶかな......）,(I hope we’re okay...),（没问题吧……）
 AutoTalk:MovieTalk_Stage4:1,AutoTalk,MovieTalk_Stage4,talkDatas[1],剧情对话 | wait=3.00 speaker=5,"おおきな葉っぱの上から　飛ぶと
 こんな場所に　来れるんだぁ～！","If you jump from the giant leaf,
-you can reach places like this!","从大叶子上飞起来，
-就能来到这种地方呀～！"
+you can reach places like this!","从大叶子上飞出去，
+就能到这种地方来呀～！"
 AutoTalk:MovieTalk_Stage4:2,AutoTalk,MovieTalk_Stage4,talkDatas[2],剧情对话 | wait=2.50 speaker=6,リーファー、あつくて　もうダメ......,"Leafur, it’s so hot...
 I can’t take it anymore...",莉芙热得快不行了……
 AutoTalk:MovieTalk_Stage4:3,AutoTalk,MovieTalk_Stage4,talkDatas[3],剧情对话 | wait=2.50 speaker=3,"あれ...　向こうから何かが
@@ -423,9 +423,9 @@ Next time I’ll win!!","呜哦哦哦哦！！
 AutoTalk:MovieTalk_Stage4:9,AutoTalk,MovieTalk_Stage4,talkDatas[9],剧情对话 | wait=3.90 speaker=2,"あっ　お前ら　ちょうどいいところに！
 おれと一緒に　強いヤツを倒しに行こうぜ！","Ah, you’re just in time!
 Come with me,
-let’s take down a tough foe!","啊你们来得正好！
+let’s take down a tough foe!","啊，你们来得正好！
 跟我一起去打倒强敌吧！"
-AutoTalk:MovieTalk_Stage5:0,AutoTalk,MovieTalk_Stage5,talkDatas[0],剧情对话 | wait=2.50 speaker=3,わぁっ　海だー！！,"Wow, it's the ocean!!",哇是大海～！！
+AutoTalk:MovieTalk_Stage5:0,AutoTalk,MovieTalk_Stage5,talkDatas[0],剧情对话 | wait=2.50 speaker=3,わぁっ　海だー！！,"Wow, it's the ocean!!",哇，是大海～！！
 AutoTalk:MovieTalk_Stage5:10,AutoTalk,MovieTalk_Stage5,talkDatas[10],剧情对话 | wait=3.00 speaker=2,ぐわっ！,Gah!,呜哇！
 AutoTalk:MovieTalk_Stage5:11,AutoTalk,MovieTalk_Stage5,talkDatas[11],剧情对话 | wait=4.00 speaker=7,"俺の名前はキューマ。　水中最速のドラゴンだ！
 この海のことなら　何でも任せてくれ！","My name is Kyuma,
@@ -466,7 +466,7 @@ AutoTalk:MovieTalk_Stage6:2,AutoTalk,MovieTalk_Stage6,talkDatas[2],剧情对话 
 AutoTalk:MovieTalk_Stage6:3,AutoTalk,MovieTalk_Stage6,talkDatas[3],剧情对话 | wait=4.00 speaker=7,"その時は　道に迷って
 干からびかけたんだ...","but I got lost
 and almost dried up...","那时候我迷了路，
-差点就干瘪掉了……"
+差点被晒干了……"
 AutoTalk:MovieTalk_Stage6:4,AutoTalk,MovieTalk_Stage6,talkDatas[4],剧情对话 | wait=3.50 speaker=2,"なんだっ　オマエ
 方向音痴かよ！！？","What, you’re terrible with directions!?","什么啊你这家伙，
 原来是路痴吗！！？"
@@ -486,8 +486,8 @@ But how do we even get there?","虽说宝珠就在月亮上……
 可要怎么才能到那里去呢……？"
 AutoTalk:MovieTalk_Stage7:1,AutoTalk,MovieTalk_Stage7,talkDatas[1],剧情对话 | wait=4.00 speaker=8,"......先ほどの戦いで　私は
 普段とは　異なる姿に　なっていました。","...In the recent battle,
-I took an unfamiliar form.","……在刚才的战斗里，我
-变成了和平时不一样的样子。"
+I took an unfamiliar form.","……刚才那场战斗里，我
+变成了一副平时没有的模样。"
 AutoTalk:MovieTalk_Stage7:2,AutoTalk,MovieTalk_Stage7,talkDatas[2],剧情对话 | wait=4.00 speaker=8,"私は　オーブの力があれば　望みの姿に
 変身できる能力を　もっているのです。","I have the ability
 to transform as I wish
@@ -570,7 +570,7 @@ AutoTalk:S11_1_0_T1:0,AutoTalk,S11_1_0_T1,talkDatas[0],剧情对话 | wait=5.00 
 总觉得力量涌出来了！"
 AutoTalk:S11_1_0_T1:1,AutoTalk,S11_1_0_T1,talkDatas[1],剧情对话 | wait=5.00 speaker=8,"コインにもオーブの力が込められています。
 きっと　旅の役に立つでしょう。",,"硬币里也注入了宝珠之力。
-一定对旅途有帮助吧。"
+想必会帮上忙的。"
 AutoTalk:S11_1_0_T2:0,AutoTalk,S11_1_0_T2,talkDatas[0],剧情对话 | wait=4.00 speaker=3,穴には　落っこちないように　しなきゃ…,,得小心别掉进洞里才行……
 AutoTalk:S11_1_1_T0:0,AutoTalk,S11_1_1_T0,talkDatas[0],剧情对话 | wait=4.00 speaker=3,やった！　オーブだ！,,太好了！是宝珠！
 AutoTalk:S12_1_0_T1:0,AutoTalk,S12_1_0_T1,talkDatas[0],剧情对话 | wait=4.00 speaker=3,"砂でできた　高いカベが　あって
@@ -598,7 +598,7 @@ AutoTalk:S1_0_101_T0:0,AutoTalk,S1_0_101_T0,talkDatas[0],剧情对话 | wait=3.5
 AutoTalk:S1_0_101_T0:1,AutoTalk,S1_0_101_T0,talkDatas[1],剧情对话 | wait=5.00 speaker=8,"冒険には　危険がつきもの。
 しっかり　準備してから　ゆくのですよ。","Adventure always holds danger.
 Be sure you’re well prepared.","冒险总是伴随着危险。
-要好好做好准备再出发哦。"
+要好好准备再出发哦。"
 AutoTalk:S1_0_101_T1:0,AutoTalk,S1_0_101_T1,talkDatas[0],剧情对话 | wait=5.00 speaker=8,"「方向キー」を　押すことで、
 自由に移動することが　できますよ。","Press the Directional Keys
 to move around.","按下　「方向键」，
@@ -664,7 +664,7 @@ AutoTalk:S1_0_103_T1:3,AutoTalk,S1_0_103_T1,talkDatas[3],剧情对话 | wait=0.5
 AutoTalk:S1_0_103_T1:4,AutoTalk,S1_0_103_T1,talkDatas[4],剧情对话 | wait=1.50 speaker=1,............,............,…………
 AutoTalk:S1_0_103_T1:5,AutoTalk,S1_0_103_T1,talkDatas[5],剧情对话 | wait=2.00 speaker=1,"...こわくないよ。　安心して。
 たくさんの元気を　わけてあげるから。","“Don’t be scared. It’s okay.
-I’ll share my energy with you.","……不可怕的哦。放心吧。
+I’ll share my energy with you.","……别怕哦。放心吧。
 我会分给你好多好多活力的。"
 AutoTalk:S1_0_103_T1:6,AutoTalk,S1_0_103_T1,talkDatas[6],剧情对话 | wait=1.00 speaker=3,"（いったい　なにを......
 　うわあああっ！！！）",(What’s happening...? Aaaah!!!),"（到底在做什么……
@@ -672,7 +672,7 @@ AutoTalk:S1_0_103_T1:6,AutoTalk,S1_0_103_T1,talkDatas[6],剧情对话 | wait=1.0
 AutoTalk:S1_0_103_T1:7,AutoTalk,S1_0_103_T1,talkDatas[7],剧情对话 | wait=1.50 speaker=1,"......
 フィズたちの体力が　とっても　回復した！","...Fiz and the team got
 a huge health boost!","……
-菲兹他们的体力大大地恢复了！"
+菲兹他们的体力恢复了很多！"
 AutoTalk:S1_0_103_T1:8,AutoTalk,S1_0_103_T1,talkDatas[8],剧情对话 | wait=0.50 speaker=3,はっ......！！,Huh...!!,哈……！！
 AutoTalk:S1_0_103_T1:9,AutoTalk,S1_0_103_T1,talkDatas[9],剧情对话 | wait=0.50 speaker=3,"ゆ......　夢......？
 いったい　なんだったんだろう......","A... dream...?
@@ -688,7 +688,7 @@ is overflowing with power!","这枚硬币，
 AutoTalk:S1_1_1_T1:1,AutoTalk,S1_1_1_T1,talkDatas[1],剧情对话 | wait=5.00 speaker=8,"オーブの力は　そのコインにも込められています。
 きっと　旅の役に立つでしょう。","The Orbs’ power lives in these coins too.
 They’ll come in handy on your journey.","宝珠之力也被注入了那枚硬币里。
-一定对旅途有帮助吧。"
+想必会帮上忙的。"
 AutoTalk:S1_1_2_T0:0,AutoTalk,S1_1_2_T0,talkDatas[0],剧情对话 | wait=4.00 speaker=3,穴には　落っこちないように　しなきゃ…,"I need to be careful not to
 fall into holes...",得小心别掉进洞里才行……
 AutoTalk:S1_1_2_T1:0,AutoTalk,S1_1_2_T1,talkDatas[0],剧情对话 | wait=4.00 speaker=3,ここは泳いで　渡るところだね,Looks like we have to swim across here.,这里得游过去呢
@@ -707,8 +707,8 @@ They give power to all creatures.","宝珠会给世界添上色彩，
 也是这颗星上一切生物的力量来源……"
 AutoTalk:S1_2_1_T0:2,AutoTalk,S1_2_1_T0,talkDatas[2],剧情对话 | wait=5.00 speaker=8,"それゆえ　力を独占しようとする者から
 幾度も狙われてきた　歴史があるのです。","Many greedy souls have hunted them
-again and again through the ages.","因此它一次次被想独占力量的人盯上，
-有着这样一段历史呢。"
+again and again through the ages.","所以想独吞力量的人一次次盯上它，
+这事由来已久了。"
 AutoTalk:S1_2_3_T0:0,AutoTalk,S1_2_3_T0,talkDatas[0],剧情对话 | wait=4.00 speaker=8,"これは　「必殺パワーの泉」　です。
 必殺ワザを使うための力が　回復しますよ。","Behold the Spring of Special Power.
 Use it to refill your Special Move.","这是　「必杀能量之泉」。
@@ -817,7 +817,7 @@ I’m not the best swimmer...","哇好多的水……
 AutoTalk:S2_1_3_T1:1,AutoTalk,S2_1_3_T1,talkDatas[1],剧情对话 | wait=4.00 speaker=8,"ドラゴンには　得意不得意が　ありますから、
 しっかりと　力を合わせて　進みましょう。","Every Dragon has strengths
 and weaknesses. Let’s team up!","每只龙都有擅长和不擅长的东西，
-所以要好好齐心协力往前走吧。"
+所以要齐心协力，稳稳地往前走哦。"
 AutoTalk:S2_2_0_T0:0,AutoTalk,S2_2_0_T0,talkDatas[0],剧情对话 | wait=2.00 speaker=5,............！,............！,…………！
 AutoTalk:S2_2_0_T0:1,AutoTalk,S2_2_0_T0,talkDatas[1],剧情对话 | wait=4.00 speaker=5,（こおどりしている）,(doing a little dance),（高兴得手舞足蹈）
 AutoTalk:S2_2_1_T0:0,AutoTalk,S2_2_1_T0,talkDatas[0],剧情对话 | wait=4.00 speaker=3,"すごい......　砂漠の真ん中に
@@ -830,7 +830,7 @@ I fish here all the time~","很厉害吧！
 我平时都在这里钓鱼哦～"
 AutoTalk:S2_2_2_T0:0,AutoTalk,S2_2_2_T0,talkDatas[0],剧情对话 | wait=5.00 speaker=5,"あっ　きをつけて！　ビリビリにさわると
 しびれて　ふき飛ばされちゃうよ！","Watch out! Touch those zappers
-and you’ll get shocked away!","啊小心！碰到电流的话，
+and you’ll get shocked away!","啊，小心！碰到电流的话，
 会被电麻还会被吹飞哦！"
 AutoTalk:S2_2_2_T0:1,AutoTalk,S2_2_2_T0,talkDatas[1],剧情对话 | wait=5.00 speaker=5,"（オイラは　しびれにくい　からだだから
 　けっこう　ガマンできるけど......）
@@ -844,7 +844,7 @@ Both sides look passable!","通道在前后移动！
 近处和远处，好像都能走呢"
 AutoTalk:S2_2_3_T1:0,AutoTalk,S2_2_3_T1,talkDatas[0],剧情对话 | wait=5.00 speaker=5,こっちは　いきどまりみたい......,This way seems like a dead end...,这边好像是死路……
 AutoTalk:S2_3_0_T0:0,AutoTalk,S2_3_0_T0,talkDatas[0],剧情对话 | wait=1.50 speaker=5,うわあーっ！,Whoaah!,哇啊～！
-AutoTalk:S2_3_0_T0:1,AutoTalk,S2_3_0_T0,talkDatas[1],剧情对话 | wait=3.00 speaker=3,落ちるーー！！！,I'm falling!!!,掉下去了～～！！！
+AutoTalk:S2_3_0_T0:1,AutoTalk,S2_3_0_T0,talkDatas[1],剧情对话 | wait=3.00 speaker=3,落ちるーー！！！,I'm falling!!!,要掉下去啦～～！！！
 AutoTalk:S2_3_1_T0:0,AutoTalk,S2_3_1_T0,talkDatas[0],剧情对话 | wait=3.00 speaker=3,"いてて......                     
 っここは！？","Ouch...                      
 where am I!?","疼疼……
@@ -863,8 +863,8 @@ are flying our way!","危险！像胶囊一样的
 子弹不断飞过来！"
 AutoTalk:S2_9_1_T1:1,AutoTalk,S2_9_1_T1,talkDatas[1],剧情对话 | wait=4.00 speaker=3,"なんとかして　操縦してるターボンを
 止めないと......！","We need to stop the Tabon
-piloting it...!","得想办法把在操纵它的塔邦
-拦住才行……！"
+piloting it...!","得想办法拦住那只
+操控它的塔邦……！"
 AutoTalk:S2_9_1_T2:0,AutoTalk,S2_9_1_T2,talkDatas[0],剧情对话 | wait=4.00 speaker=3,"飛んでくる弾を　跳ね返して
 攻撃に使えないかな......？","Could we deflect those shots
 and use them to attack...?","能不能把飞来的子弹弹回去
@@ -910,8 +910,8 @@ where Orb power gathers.","那片绿洲的正下方，似乎有一座
 汇聚宝珠之力的洞窟。"
 AutoTalk:S2_God_Def:2,AutoTalk,S2_God_Def,talkDatas[2],剧情对话 | wait=0.10 speaker=8,"ターボンたちは　そのような場所を
 狙っているかも　しれませんね。","Tabon might be targeting 
-places like that.","塔邦它们也许正盯上了
-那样的地方也说不定呢。"
+places like that.","塔邦它们说不定正盯着
+那样的地方呢。"
 AutoTalk:S3_0_0_T0:0,AutoTalk,S3_0_0_T0,talkDatas[0],剧情对话 | wait=8.00 speaker=6,"この森から出るには、イチバン深いところにある
 大きな葉っぱを　目指すといいよ！","To leave this forest, head
 for the giant leaf at its heart!","想走出这座森林，朝着最深处的
@@ -966,7 +966,7 @@ AutoTalk:S3_1_3_T7:0,AutoTalk,S3_1_3_T7,talkDatas[0],剧情对话 | wait=2.50 sp
 AutoTalk:S3_1_3_T7:1,AutoTalk,S3_1_3_T7,talkDatas[1],剧情对话 | wait=5.00 speaker=6,"あのくねくねの近くを　ゆっくり通ると
 たべられちゃうよ！　きをつけて……！","Those wriggly things will
 snap you up if you get too close!
-Be careful!","在那扭来扭去的东西旁边慢慢走的话，
+Be careful!","在那扭来扭去的东西旁边慢慢走，
 会被吃掉的哦！小心一点……！"
 AutoTalk:S3_2_0_T0:0,AutoTalk,S3_2_0_T0,talkDatas[0],剧情对话 | wait=2.00 speaker=6,オーブ見つけた！,I found an Orb!,宝珠找到了！
 AutoTalk:S3_2_0_T0:1,AutoTalk,S3_2_0_T0,talkDatas[1],剧情对话 | wait=4.00 speaker=6,キレイな緑色～！,Such a lovely green!,好漂亮的绿色～！
@@ -1018,8 +1018,8 @@ It flies to confuse its prey.","那只白色生物是　『莫斯塔邦』……
 据说它会在空中飞来飞去迷惑猎物。"
 AutoTalk:S3_9_1_T0:2,AutoTalk,S3_9_1_T0,talkDatas[2],剧情对话 | wait=5.00 speaker=6,"このままじゃ　リーファー達もろとも
 大きな葉っぱを　食い荒らされちゃうよ！","At this rate, it’ll eat us
-and the giant leaf too!","再这样下去连莉芙和大家
-还有大叶子都要被吃光了！"
+and the giant leaf too!","再这样下去，莉芙他们连同大叶子
+都要被啃光了！"
 AutoTalk:S3_9_1_T0:3,AutoTalk,S3_9_1_T0,talkDatas[3],剧情对话 | wait=5.00 speaker=3,"空中を飛び回るのなら、飛び道具を使える
 僕たちで　何とかしなきゃ！","If it can fly around, we’ll 
 need to use ranged attacks!","既然它在空中乱飞，就得靠能用
@@ -1050,8 +1050,8 @@ I can handle it!","别担心神大人！
 AutoTalk:S3_God_Def:0,AutoTalk,S3_God_Def,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"「大きな葉っぱ」... そう呼ばれる植物が
 ここマッチャ樹海には　自生しています。
 ","Here in the Matcha Forest, the plant
-called “Giant Leaf” grows wild.","「巨大的叶子」……这种被如此称呼的植物
-在这片抹茶树海里自然生长着。
+called “Giant Leaf” grows wild.","在这片抹茶树海里，
+生长着一种叫「巨大的叶子」的植物。
 "
 AutoTalk:S3_God_Def:1,AutoTalk,S3_God_Def,talkDatas[1],剧情对话 | wait=0.10 speaker=8,"成長し続ける　双葉に乗ることで、この樹海から
 抜け出すことが　できるようです。","By riding its ever-growing twin leaves,
@@ -1100,18 +1100,18 @@ AutoTalk:S3_Plain_Battle_win:1,AutoTalk,S3_Plain_Battle_win,talkDatas[1],剧情�
 I have a special gift for you!",按照约定，送你一件好东西哦！
 AutoTalk:S3_Plain_Battle_win:2,AutoTalk,S3_Plain_Battle_win,talkDatas[2],剧情对话 | wait=5.00 speaker=1,フィズたちは、「<color=#FF3333FF>招待券</color>」を手に入れた！,"Fiz and his friends received
 an <color=#FF3333FF>Invitation Card</color>!",菲兹他们获得了「<color=#FF3333FF>招待券</color>」！
-AutoTalk:S3_Plain_Battle_win:3,AutoTalk,S3_Plain_Battle_win,talkDatas[3],剧情对话 | wait=0.10 speaker=3,これ、何の招待券？,What’s this invitation for?,这个，是什么的招待券？
+AutoTalk:S3_Plain_Battle_win:3,AutoTalk,S3_Plain_Battle_win,talkDatas[3],剧情对话 | wait=0.10 speaker=3,これ、何の招待券？,What’s this invitation for?,这个，是什么招待券？
 AutoTalk:S3_Plain_Battle_win:4,AutoTalk,S3_Plain_Battle_win,talkDatas[4],剧情对话 | wait=0.10 speaker=9,"これは、ぼくがこの星で探している
 ケーキ屋さんの招待券なんだ！","It’s to the cake shop I’ve
 been seeking on this planet!","这是我在这颗星上一直寻找的
 那家蛋糕店的招待券哦！"
 AutoTalk:S3_Plain_Battle_win:5,AutoTalk,S3_Plain_Battle_win,talkDatas[5],剧情对话 | wait=0.10 speaker=9,"何枚か余ってたから、
-きみたちにも　ぜひ使ってほしいな！","I had a few extras, please use one too!","因为多出了几张，
-也希望你们一定要用上呢！"
+きみたちにも　ぜひ使ってほしいな！","I had a few extras, please use one too!","多出来几张，
+你们也拿去用吧！"
 AutoTalk:S3_Plain_Battle_win:6,AutoTalk,S3_Plain_Battle_win,talkDatas[6],剧情对话 | wait=0.10 speaker=5,やったー！　ありがとうプレーンくん！,"Yay! Thanks, Plain!",太好了～！谢谢你，普雷恩！
 AutoTalk:S3_Plain_Def:0,AutoTalk,S3_Plain_Def,talkDatas[0],剧情对话 | wait=0.10 speaker=9,"この星は　自然が豊かで
 本当にいいところだね......！","This planet is so rich in nature,
-what a wonderful place!","这颗星大自然生机勃勃，
+what a wonderful place!","这颗星球的大自然生机勃勃，
 真是个很棒的地方呢……！"
 AutoTalk:S3_Plain_First:0,AutoTalk,S3_Plain_First,talkDatas[0],剧情对话 | wait=0.10 speaker=9,"こんにちは！　ぼくはプレーン。
 少し離れた星からやってきた　ドラゴンだよ。","Hello! I’m Plain,
@@ -1135,7 +1135,7 @@ It’s easy to get lost here...","哎呀呀……
 AutoTalk:S3_Plain_First:4,AutoTalk,S3_Plain_First,talkDatas[4],剧情对话 | wait=0.10 speaker=9,"ところで　きみたちのからだ、すごく......
 いや......　なんでもない。
 ","By the way, your bodies look so yum...
-uh, never mind.","对了你们的身体，看起来非常……
+uh, never mind.","话说……你们的身体，看起来非常……
 不……没什么。
 "
 AutoTalk:S3_Plain_First:5,AutoTalk,S3_Plain_First,talkDatas[5],剧情对话 | wait=0.10 speaker=3,どうしたの？,What’s the matter?,怎么了？
@@ -1151,8 +1151,8 @@ I want it!!","礼物！？
 AutoTalk:S3_Plain_First:9,AutoTalk,S3_Plain_First,talkDatas[9],剧情对话 | wait=0.50 speaker=9,"場所は　右側の扉を入った先にある
 空間にしようかな。
 ","Let’s set our match in the room
-inside the door on the right.","地点就定在进了右边那扇门之后的
-空间里吧。
+inside the door on the right.","地点就定在右边那扇门进去后的
+地方吧。
 "
 AutoTalk:S3_Plain_vore_Fiz:0,AutoTalk,S3_Plain_vore_Fiz,talkDatas[0],剧情对话 | wait=0.10 speaker=9,"ぼくの思ったとおり、
 やっぱりキミたち　いい味ついてたよ！","Just as I thought, 
@@ -1219,7 +1219,7 @@ AutoTalk:S3_Plain_vore_Soraco:2,AutoTalk,S3_Plain_vore_Soraco,talkDatas[2],剧�
 AutoTalk:S4_0_0_T0:0,AutoTalk,S4_0_0_T0,talkDatas[0],剧情对话 | wait=8.00 speaker=2,"ようこそ！
 ここはおれの住処、ベリー火山だ！","Welcome! This is my home.
 The mighty Berry Volcano!","欢迎！
-这里是我的地盘，莓果火山！"
+这里是我的住处，莓果火山！"
 AutoTalk:S4_1_1_T0:0,AutoTalk,S4_1_1_T0,talkDatas[0],剧情对话 | wait=4.00 speaker=2,"こんな崖、おれにとっては
 どうってことないぜ！","Cliffs like these?
 Not a problem for me!","这种悬崖对我来说
@@ -1313,7 +1313,7 @@ Take care not to fall into the lava.","要往前就必须翻过这座山，
 AutoTalk:S5_0_0_T0:0,AutoTalk,S5_0_0_T0,talkDatas[0],剧情对话 | wait=5.00 speaker=7,"この海には、海底からしか　上陸できない
 ヒミツの島が　あるんだ。","There’s a secret island you can 
 only reach from below the waves.","这片海里有一座秘密小岛，
-只能从海底才能上去。"
+只能从海底上去。"
 AutoTalk:S5_0_0_T0:1,AutoTalk,S5_0_0_T0,talkDatas[1],剧情对话 | wait=8.00 speaker=7,オーブはきっと　そこに隠されているはずだ！,The Orb must be hidden there!,宝珠一定就藏在那里！
 AutoTalk:S5_1_1_T0:0,AutoTalk,S5_1_1_T0,talkDatas[0],剧情对话 | wait=4.00 speaker=3,"うわっ！
 トゲトゲのターボンがいる...","Whoa! 
@@ -1337,7 +1337,7 @@ AutoTalk:S5_1_2_T0:2,AutoTalk,S5_1_2_T0,talkDatas[2],剧情对话 | wait=5.00 sp
 I’ll remember that!","哈哈！！水里的家伙怕电啊！
 我记住了！！"
 AutoTalk:S5_1_3_T0:0,AutoTalk,S5_1_3_T0,talkDatas[0],剧情对话 | wait=4.00 speaker=6,わわっ！！水面を動かしちゃった！！,"Whoa!! 
-I moved the water surface!",哇哇！！水面竟然动起来了！！
+I moved the water surface!",哇哇！！竟然把水面都弄动了！！
 AutoTalk:S5_1_3_T0:1,AutoTalk,S5_1_3_T0,talkDatas[1],剧情对话 | wait=5.00 speaker=7,"水を自由自在に操る......
 これこそが　俺の必殺ワザだ！","Controlling water freely...
 This is my special move!","自由自在地操控水……
@@ -1449,7 +1449,7 @@ AutoTalk:S5_3_11_T10:8,AutoTalk,S5_3_11_T10,talkDatas[8],剧情对话 | wait=1.0
 AutoTalk:S5_3_11_T10:9,AutoTalk,S5_3_11_T10,talkDatas[9],剧情对话 | wait=0.50 speaker=12,"このしずくは　少しでも長く
 旅を続けるための　おまもりだよ。","This Drop protects you
 so your adventure lasts longer.","这滴晨昏之滴是护身符，
-能让你们的旅行更长久一点。"
+能让你们再多走一段路。"
 AutoTalk:S5_3_11_T11:0,AutoTalk,S5_3_11_T11,talkDatas[0],剧情对话 | wait=1.00 speaker=12,「あけとくれのしずく」を持っているとね......,"When you have the 
 Drops of Dawn and Dusk...",只要带着「晨昏之滴」……
 AutoTalk:S5_3_11_T11:1,AutoTalk,S5_3_11_T11,talkDatas[1],剧情对话 | wait=1.00 speaker=12,"もう　やられちゃうっ！って時、いちどだけ
@@ -1501,7 +1501,7 @@ AutoTalk:S5_3_11_T20:8,AutoTalk,S5_3_11_T20,talkDatas[8],剧情对话 | wait=1.0
 AutoTalk:S5_3_11_T20:9,AutoTalk,S5_3_11_T20,talkDatas[9],剧情对话 | wait=0.50 speaker=11,"このしずくは　少しでも長く
 旅を続けるための　おまもり。","This drop is a charm
 to extend your journey.","这滴晨昏之滴是护身符，
-能让你们的旅行更长久一点。"
+能让你们再多走一段路。"
 AutoTalk:S5_3_11_T21:0,AutoTalk,S5_3_11_T21,talkDatas[0],剧情对话 | wait=1.00 speaker=11,「あけとくれのしずく」を持っているとね......,"When you have the 
 Drops of Dawn and Dusk...",只要带着「晨昏之滴」……
 AutoTalk:S5_3_11_T21:1,AutoTalk,S5_3_11_T21,talkDatas[1],剧情对话 | wait=1.00 speaker=11,"もう　やられちゃうっ！って時、いちどだけ
@@ -1544,7 +1544,7 @@ AutoTalk:S5_9_1_T0_0:5,AutoTalk,S5_9_1_T0_0,talkDatas[5],剧情对话 | wait=0.1
 AutoTalk:S5_9_1_T0_1:0,AutoTalk,S5_9_1_T0_1,talkDatas[0],剧情对话 | wait=0.10 speaker=7,"出てこいっ！
 今度こそ　オーブを返してもらうぞ！","Show yourself!
 This time you’ll give us 
-the Orb back!","出来！
+the Orb back!","给我出来！
 这次一定要你把宝珠还回来！"
 AutoTalk:S5_9_1_T0_1:1,AutoTalk,S5_9_1_T0_1,talkDatas[1],剧情对话 | wait=1.50 speaker=10,"おいおい！
 また食べられに来たのか？","Well, well! 
@@ -1594,8 +1594,8 @@ a territory of ruthless fisherman.","浮岛深处好像成了凶暴的
 AutoTalk:S5_God_5Kyu:1,AutoTalk,S5_God_5Kyu,talkDatas[1],剧情对话 | wait=0.10 speaker=7,"凶暴な魚人...か。　もしも先にオーブを
 奪われていたら　厄介かもな。","Ruthless fisherman...
 If they’d taken the Orb first,
-we’d be in serious trouble.","凶暴的鱼人……吗。要是宝珠
-先被它们抢走，那可就麻烦了。"
+we’d be in serious trouble.","凶暴的鱼人吗……要是宝珠
+先被抢走，那可就麻烦了。"
 AutoTalk:S5_God_5Kyu:2,AutoTalk,S5_God_5Kyu,talkDatas[2],剧情对话 | wait=0.10 speaker=8,"ええ。世界を守る力を得るには
 オーブを取り返さなければ　なりません。","Correct. We must reclaim the Orbs
 to gain the power required
@@ -1692,7 +1692,7 @@ AutoTalk:S6_2_1_T10:1,AutoTalk,S6_2_1_T10,talkDatas[1],剧情对话 | wait=0.10 
 AutoTalk:S6_2_1_T10:2,AutoTalk,S6_2_1_T10,talkDatas[2],剧情对话 | wait=0.10 speaker=1,"列車はまもなく　終着駅に到着します。
 お気をつけて　行ってらっしゃい！","Final station is just ahead.
 Have a safe trip!","列车即将抵达终点站。
-请一路小心，慢走！"
+请多保重，一路顺风！"
 AutoTalk:S6_2_2_T0:0,AutoTalk,S6_2_2_T0,talkDatas[0],剧情对话 | wait=2.80 speaker=3,"そういえば　すごいヘンな乗り方を
 しちゃったけど　怒られないかな...？","So... that was a pretty strange 
 way to board. I hope they
@@ -1701,7 +1701,7 @@ won’t kick us out...","话说回来，我们上车的方式
 AutoTalk:S6_2_2_T0:1,AutoTalk,S6_2_2_T0,talkDatas[1],剧情对话 | wait=2.50 speaker=4,"心配しないで！
 乗り放題パス　持ってるから！","Don’t worry!
 I’ve got an unlimited ride pass!","别担心！
-我有随便坐的乘车券！"
+我有随便坐的通行证！"
 AutoTalk:S6_2_2_T0:2,AutoTalk,S6_2_2_T0,talkDatas[2],剧情对话 | wait=3.00 speaker=2,"さすが　この街に住んでるだけあって
 用意周到だな！","Of course you do, 
 you’re a hometown pro!","不愧是住在这城里的人，
@@ -1715,7 +1715,7 @@ to save the world.","终于集齐了这颗星球的所有宝珠，
 AutoTalk:S6_4_1_T0_0:10,AutoTalk,S6_4_1_T0_0,talkDatas[10],剧情对话 | wait=1.00 speaker=2,"そんなこと　許せねえ！
 月でもなんでも　行ってやるぜ！！","I won’t stand for this!  
 If I have to, I’ll go to the moon!!","这种事我可忍不了！
-月亮也好哪儿都好，我都去！！"
+管它是月亮还是哪儿，我都去！！"
 AutoTalk:S6_4_1_T0_0:11,AutoTalk,S6_4_1_T0_0,talkDatas[11],剧情对话 | wait=1.00 speaker=8,心強い反応、安心しました。,Your strong response comforts me.,你这么有干劲，我就放心了。
 AutoTalk:S6_4_1_T0_0:1,AutoTalk,S6_4_1_T0_0,talkDatas[1],剧情对话 | wait=1.00 speaker=8,"しかし、私たちにはまだ
 やることが　残っています。","However, there’s still work to be done.","不过，我们还有
@@ -1756,7 +1756,7 @@ on your journey to meet the challenge?
 已经强到能闯过这些试炼了吗？"
 AutoTalk:S6_4_1_T0_1:3,AutoTalk,S6_4_1_T0_1,talkDatas[3],剧情对话 | wait=4.50 speaker=8,"今　この場所で、
 私に確かめさせてください。","Here and now, let me test you.","现在，就在这里，
-让我来试试你们。"
+请让我来考考你们吧。"
 AutoTalk:S6_4_1_T0_1:4,AutoTalk,S6_4_1_T0_1,talkDatas[4],剧情对话 | wait=5.00 speaker=8,....................,....................,………………
 AutoTalk:S6_4_1_T0_1:5,AutoTalk,S6_4_1_T0_1,talkDatas[5],剧情对话 | wait=2.00 speaker=8,信じていますよ。,I believe in you.,我相信你们哦。
 AutoTalk:S6_4_1_T10:0,AutoTalk,S6_4_1_T10,talkDatas[0],剧情对话 | wait=3.00 speaker=8,"......っ！                       
@@ -1766,8 +1766,8 @@ I didn’t expect this...!","……！
 AutoTalk:S6_4_1_T10:1,AutoTalk,S6_4_1_T10,talkDatas[1],剧情对话 | wait=3.50 speaker=8,"あなたたちなら　きっと、
 どんな道でも　乗り越えてゆけるでしょう......","If it’s you, I’m sure  
 you can overcome 
-any challenge...","如果是你们，一定
-无论什么路都能走过去……"
+any challenge...","既然是你们，
+再难的路也一定走得过去吧……"
 AutoTalk:S6_4_1_T10:2,AutoTalk,S6_4_1_T10,talkDatas[2],剧情对话 | wait=3.50 speaker=8,"......さあ！
 最後の冒険へ　出発しましょう！","...Now! Let’s set off 
 on the final adventure!","……好！
@@ -1913,8 +1913,8 @@ I feel totally recharged!","好吃极了，
 力量一下子就涌上来了！"
 AutoTalk:S6_Plain_First:5,AutoTalk,S6_Plain_First,talkDatas[5],剧情对话 | wait=0.10 speaker=9,"いまは　人を待っていてヒマだから、
 強くなったボクと　力試ししてみない？","I'm waiting for someone now...
-Wanna test your strength on me?","我现在在等人，正闲着，
-要不要跟变强了的我比试一下？"
+Wanna test your strength on me?","我这会儿正等人，闲着也是闲着，
+要不要跟变强的我比试一下？"
 AutoTalk:S6_Plain_First:6,AutoTalk,S6_Plain_First,talkDatas[6],剧情对话 | wait=0.10 speaker=7,"力試しか......
 のぞむところだ！","A challenge, huh...?
 I’m all in!","比试吗……
@@ -1950,8 +1950,8 @@ into space together!","好！
 我们一口气飞向宇宙吧！"
 AutoTalk:S7_1_1_T10:1,AutoTalk,S7_1_1_T10,talkDatas[1],剧情对话 | wait=5.00 speaker=8,"<color=#FF9999FF>私の背中</color>に、
 しっかりと　掴まっていてくださいね。","Hold on tight
-<color=#FF9999FF>to my back</color>, please!","<color=#FF9999FF>我的后背</color>上，
-请牢牢抓紧哦。"
+<color=#FF9999FF>to my back</color>, please!","请抓紧<color=#FF9999FF>我的后背</color>，
+千万别松手哦。"
 AutoTalk:S7_2_0_T0:0,AutoTalk,S7_2_0_T0,talkDatas[0],剧情对话 | wait=7.00 speaker=3,これが　月のオーブ...！,"This is...
 the Moon Orb!",这就是月亮宝珠……！
 AutoTalk:S7_2_1_T0:0,AutoTalk,S7_2_1_T0,talkDatas[0],剧情对话 | wait=3.50 speaker=3,うわあっ！　地面が　まわっちゃった！？,Whoa! The ground is spinning!?,哇啊！地面转起来了！？
@@ -2059,8 +2059,8 @@ has been released!","被夺走的力量
 AutoTalk:S7_9_1_T5:1,AutoTalk,S7_9_1_T5,talkDatas[1],剧情对话 | wait=5.00 speaker=3,"みんな！　あと　ひと踏ん張りだよ！
 ぼくたちで　星を　まもるんだ！","Everyone! Just a little more!
 We’re the ones who’ll 
-protect this world!","大家！再加把劲就好了！
-我们要亲手守护这颗星球！"
+protect this world!","大家！再加最后一把劲！
+由我们来守护这颗星球！"
 AutoTalk:S7_God_Def:0,AutoTalk,S7_God_Def,talkDatas[0],剧情对话 | wait=0.10 speaker=8,"空に浮かぶ月は 「マカロンムーン」と
 呼ばれています。","The moon that drifts above us
 is known as the Macaron Moon.","天上那轮月亮，
@@ -2252,13 +2252,13 @@ DamageTalk:damage_capture:5:0,DamageTalk,damage_capture,player[5].damage_capture
 DamageTalk:damage_capture:5:1,DamageTalk,damage_capture,player[5].damage_capture[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,はなせっ…！,Let go...!,放开…！
 DamageTalk:damage_capture:5:2,DamageTalk,damage_capture,player[5].damage_capture[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,やめろ！,Stop it!,住手！
 DamageTalk:damage_electric:0:0,DamageTalk,damage_electric,player[0].damage_electric[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ぃぎゃぁああ！！,Yaaaaaa!!,咿呀啊啊啊！！
-DamageTalk:damage_electric:0:1,DamageTalk,damage_electric,player[0].damage_electric[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ぉおお゛ぉおおあ！！,Ooooooh!!,哦哦哦哦哦哦啊！！
+DamageTalk:damage_electric:0:1,DamageTalk,damage_electric,player[0].damage_electric[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ぉおお゛ぉおおあ！！,Ooooooh!!,呜哦哦哦哦哦啊！！
 DamageTalk:damage_electric:0:2,DamageTalk,damage_electric,player[0].damage_electric[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ぁあ゛あ゛あ゛ッ！！,Aaaahhh!!,啊啊啊啊啊！！
 DamageTalk:damage_electric:1:0,DamageTalk,damage_electric,player[1].damage_electric[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ぅわあぁああ！！,Woahhh!!,哇啊啊啊啊！！
 DamageTalk:damage_electric:1:1,DamageTalk,damage_electric,player[1].damage_electric[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,いぎいぃいい！！,Bzzt!,咿呀——！！
 DamageTalk:damage_electric:1:2,DamageTalk,damage_electric,player[1].damage_electric[2],战斗受击台词 | ja=sharedassets3.assets:486,んぃいいい！！,,唔咿——！！
 DamageTalk:damage_electric:2:0,DamageTalk,damage_electric,player[2].damage_electric[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,いやあぁああ！！,Nooooooo!!,不要啊啊啊！！
-DamageTalk:damage_electric:2:1,DamageTalk,damage_electric,player[2].damage_electric[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ぉおお゛おおおッ！！,Mmmmm!!,哦哦哦哦哦！！
+DamageTalk:damage_electric:2:1,DamageTalk,damage_electric,player[2].damage_electric[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ぉおお゛おおおッ！！,Mmmmm!!,呜哦哦哦哦！！
 DamageTalk:damage_electric:2:2,DamageTalk,damage_electric,player[2].damage_electric[2],战斗受击台词 | ja=sharedassets3.assets:486,んぃいいい！！,,唔咿——！！
 DamageTalk:damage_electric:3:0,DamageTalk,damage_electric,player[3].damage_electric[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,あわわわわ！！,No no no!!,哇哇哇哇哇！！
 DamageTalk:damage_electric:3:1,DamageTalk,damage_electric,player[3].damage_electric[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,あたたたっ！！,Ow ow ow!!,痛痛痛！！
@@ -2322,7 +2322,7 @@ DamageTalk:damage_stone:5:0,DamageTalk,damage_stone,player[5].damage_stone[0],�
 DamageTalk:damage_stone:5:1,DamageTalk,damage_stone,player[5].damage_stone[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,体が......！,My body...!,身体……！
 DamageTalk:damage_vore:0:0,DamageTalk,damage_vore,player[0].damage_vore[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,うあっ,Oops,呜啊！
 DamageTalk:damage_vore:0:1,DamageTalk,damage_vore,player[0].damage_vore[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,やめ…,Stop…,住手…
-DamageTalk:damage_vore:0:2,DamageTalk,damage_vore,player[0].damage_vore[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,そこはッ,～～...! !!,那里不行！
+DamageTalk:damage_vore:0:2,DamageTalk,damage_vore,player[0].damage_vore[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,そこはッ,～～...! !!,别碰那儿！
 DamageTalk:damage_vore:0:3,DamageTalk,damage_vore,player[0].damage_vore[3],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,〜〜……ッ！！,Mmmgh!,呜～～……！！
 DamageTalk:damage_vore:0:4,DamageTalk,damage_vore,player[0].damage_vore[4],战斗受击台词 | ja=sharedassets3.assets:486,ん゛ーっ！！,,唔——！！
 DamageTalk:damage_vore:1:0,DamageTalk,damage_vore,player[1].damage_vore[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,うあっ,Oops,呜啊！
@@ -2472,8 +2472,8 @@ DamageTalk:specialAttack:4:0,DamageTalk,specialAttack,player[4].specialAttack[0]
 DamageTalk:specialAttack:4:1,DamageTalk,specialAttack,player[4].specialAttack[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,いくよっ！,Let's go!,上咯！
 DamageTalk:specialAttack:5:0,DamageTalk,specialAttack,player[5].specialAttack[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,はあっ！！,Haaaah!!,哈啊！！
 TextData:LeafurMegaphyll_Result:0,TextData,LeafurMegaphyll_Result,textDatas[0],短文本 / 提示 / 名单 | やられちゃった！,やられちゃった！, You got me!,哎呀，被打到啦！
-TextData:LeafurMegaphyll_Result:10,TextData,LeafurMegaphyll_Result,textDatas[10],短文本 / 提示 / 名单 | 10まんてん！ おめでとう～！,10まんてん！ おめでとう～！,"You scored 100,000 points! Congratulations!",10万分！恭喜你～！
-TextData:LeafurMegaphyll_Result:11,TextData,LeafurMegaphyll_Result,textDatas[11],短文本 / 提示 / 名单 | 20まんてん！？ すごいすごいすごいー！！,20まんてん！？ すごいすごいすごいー！！,"200,000 points!? Wow, wow, WOW!!",20万分！？好厉害好厉害好厉害～！！
+TextData:LeafurMegaphyll_Result:10,TextData,LeafurMegaphyll_Result,textDatas[10],短文本 / 提示 / 名单 | 10まんてん！ おめでとう～！,10まんてん！ おめでとう～！,"You scored 100,000 points! Congratulations!",10万点！恭喜你～！
+TextData:LeafurMegaphyll_Result:11,TextData,LeafurMegaphyll_Result,textDatas[11],短文本 / 提示 / 名单 | 20まんてん！？ すごいすごいすごいー！！,20まんてん！？ すごいすごいすごいー！！,"200,000 points!? Wow, wow, WOW!!",20万点！？好厉害好厉害好厉害～！！
 TextData:LeafurMegaphyll_Result:12,TextData,LeafurMegaphyll_Result,textDatas[12],短文本 / 提示 / 名单 | こんなにあそんでくれて ありがとう！！,こんなにあそんでくれて ありがとう！！,Thanks for spending so much time with me!,玩了这么久，谢谢你！！
 TextData:LeafurMegaphyll_Result:1,TextData,LeafurMegaphyll_Result,textDatas[1],短文本 / 提示 / 名单 | もりをぬけて ゆきやまが　みえてきたよ！,もりをぬけて ゆきやまが　みえてきたよ！,"We made it out of the forest
 - look, snowy mountain! ",穿过森林，看到雪山了哦！
@@ -2706,7 +2706,7 @@ Title:TitleData_lv0_root(ActiveAI):label,Title,TitleData_lv0_root(ActiveAI),labe
 Title:TitleData_lv0_root_Consumer:info,Title,TitleData_lv0_root_Consumer,info,标题菜单条目,, ,
 Title:TitleData_lv0_root_Consumer:infoDisable,Title,TitleData_lv0_root_Consumer,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv0_root_Consumer:label,Title,TitleData_lv0_root_Consumer,label,标题菜单条目,top, ,top
-Title:TitleData_lv1_0_Demo:info,Title,TitleData_lv1_0_Demo,info,标题菜单条目,デモをプレイする！......たのしい　たいけんばんが　あそべます。,Demo Play! ...... Try a fun preview version of the game.  ,游玩体验版！……先来一段好玩的试玩。
+Title:TitleData_lv1_0_Demo:info,Title,TitleData_lv1_0_Demo,info,标题菜单条目,デモをプレイする！......たのしい　たいけんばんが　あそべます。,Demo Play! ...... Try a fun preview version of the game.  ,游玩体验版！……能玩到一段有趣的试玩内容。
 Title:TitleData_lv1_0_Demo:infoDisable,Title,TitleData_lv1_0_Demo,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv1_0_Demo:label,Title,TitleData_lv1_0_Demo,label,标题菜单条目,デモをプレイする！,Demo Play!,游玩体验版！
 Title:TitleData_lv1_0_StartGame:info,Title,TitleData_lv1_0_StartGame,info,标题菜单条目,ゲームをはじめる......「フィズとにじいろのほし」を　はじめることが　できます。,Start Game ...... Start “Fiz and the Rainbow Planet” and begin your adventure.,开始游戏……进入「菲兹与彩虹之星」。
@@ -2727,10 +2727,10 @@ Title:TitleData_lv1_2_Option:label,Title,TitleData_lv1_2_Option,label,标题菜�
 Title:TitleData_lv1_2_Option(ActiveAI):info,Title,TitleData_lv1_2_Option(ActiveAI),info,标题菜单条目,オプション......ゲームの　せっていを　かえることができます。,Options ...... You can change the game settings.,选项……更改游戏里的设置。
 Title:TitleData_lv1_2_Option(ActiveAI):infoDisable,Title,TitleData_lv1_2_Option(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_2_Option(ActiveAI):label,Title,TitleData_lv1_2_Option(ActiveAI),label,标题菜单条目,オプション,Options,选项
-Title:TitleData_lv1_3_Close:info,Title,TitleData_lv1_3_Close,info,标题菜单条目,ゲームをしゅうりょうする......ゲームをしゅうりょうして　がめんをとじます。,Exit Game ...... Exit the game and close the application.,退出游戏……退出并关掉画面。
+Title:TitleData_lv1_3_Close:info,Title,TitleData_lv1_3_Close,info,标题菜单条目,ゲームをしゅうりょうする......ゲームをしゅうりょうして　がめんをとじます。,Exit Game ...... Exit the game and close the application.,退出游戏……结束游戏并关闭程序。
 Title:TitleData_lv1_3_Close:infoDisable,Title,TitleData_lv1_3_Close,infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_3_Close:label,Title,TitleData_lv1_3_Close,label,标题菜单条目,ゲームを終了する,Exit Game,退出游戏
-Title:TitleData_lv1_3_Close(ActiveAI):info,Title,TitleData_lv1_3_Close(ActiveAI),info,标题菜单条目,ゲームをしゅうりょうする......ゲームをしゅうりょうして　がめんをとじます。,Exit Game ...... Exit the game and close the application.,退出游戏……退出并关掉画面。
+Title:TitleData_lv1_3_Close(ActiveAI):info,Title,TitleData_lv1_3_Close(ActiveAI),info,标题菜单条目,ゲームをしゅうりょうする......ゲームをしゅうりょうして　がめんをとじます。,Exit Game ...... Exit the game and close the application.,退出游戏……结束游戏并关闭程序。
 Title:TitleData_lv1_3_Close(ActiveAI):infoDisable,Title,TitleData_lv1_3_Close(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv1_3_Close(ActiveAI):label,Title,TitleData_lv1_3_Close(ActiveAI),label,标题菜单条目,ゲームを終了する,Exit Game,退出游戏
 Title:TitleData_lv2_0_Normal:info,Title,TitleData_lv2_0_Normal,info,标题菜单条目,ノーマル......つうじょうの　むずかしさで　ゲームを　はじめます。,Normal ...... Starts the game at standard difficulty.,普通……按普通难度开始。
@@ -2739,11 +2739,11 @@ Title:TitleData_lv2_0_Normal:label,Title,TitleData_lv2_0_Normal,label,标题菜�
 Title:TitleData_lv2_0_サブゲーム:info,Title,TitleData_lv2_0_サブゲーム,info,标题菜单条目,サブゲーム......てがるにあそべる　ミニゲームを　たのしむことが　できるぞ。,Subgames...... You can play simple mini-games on the side.,小游戏……轻松玩一把迷你游戏。
 Title:TitleData_lv2_0_サブゲーム:infoDisable,Title,TitleData_lv2_0_サブゲーム,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv2_0_サブゲーム:label,Title,TitleData_lv2_0_サブゲーム,label,标题菜单条目,サブゲーム,Subgames ,小游戏
-Title:TitleData_lv2_0_表示設定:info,Title,TitleData_lv2_0_表示設定,info,标题菜单条目,グラフィックせってい......がめんひょうじについての　せっていを　かえることが　できます。,Graphic Settings: ...... Adjust screen and display settings.,画面设置……更改画面怎么显示。
+Title:TitleData_lv2_0_表示設定:info,Title,TitleData_lv2_0_表示設定,info,标题菜单条目,グラフィックせってい......がめんひょうじについての　せっていを　かえることが　できます。,Graphic Settings: ...... Adjust screen and display settings.,画面设置……更改画面的显示方式。
 Title:TitleData_lv2_0_表示設定:infoDisable,Title,TitleData_lv2_0_表示設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_0_表示設定:label,Title,TitleData_lv2_0_表示設定,label,标题菜单条目,グラフィック設定,Graphic Settings,画面设置
 Title:TitleData_lv2_1_Extra:info,Title,TitleData_lv2_1_Extra,info,标题菜单条目,エクストラ.....ここは　フィズにじを　クリアしたものだけが　はいれる　トクベツな　モード。　むずかしくなった　フィズにじに　ちょうせんしよう。,"Extra ..... A special mode unlocked only after completing 
-Fiz and the Rainbow Planet.  Challenge the tougher Fiz and the Rainbow Planet!",额外模式……通关「菲兹与彩虹之星」后才能进。来挑战更难的一版吧。
+Fiz and the Rainbow Planet.  Challenge the tougher Fiz and the Rainbow Planet!",额外模式……通关「菲兹与彩虹之星」后才能进。来挑战难度提升后的正篇吧。
 Title:TitleData_lv2_1_Extra:infoDisable,Title,TitleData_lv2_1_Extra,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。　</color>,,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv2_1_Extra:label,Title,TitleData_lv2_1_Extra,label,标题菜单条目,エクストラ,Extra,额外模式
 Title:TitleData_lv2_1_シアタールーム:info,Title,TitleData_lv2_1_シアタールーム,info,标题菜单条目,シアタールーム.....いちどみた　ムービーを　もういちど！　ぼうけんの　おもいでを　ふりかえろう。,Theater Room ..... Watch movies you've already seen once again! Relive your adventure memories.,放映室……看过的影片可以再看一遍！再回想一下冒险吧。
@@ -2752,7 +2752,7 @@ Title:TitleData_lv2_1_シアタールーム:label,Title,TitleData_lv2_1_シア�
 Title:TitleData_lv2_1_音声設定:info,Title,TitleData_lv2_1_音声設定,info,标题菜单条目,サウンドせってい......おんせいにかんする　せっていを　かえることが　できます。,Audio Settings : ...... Change volume and sound settings.,声音设置……更改各种音量。
 Title:TitleData_lv2_1_音声設定:infoDisable,Title,TitleData_lv2_1_音声設定,infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_1_音声設定:label,Title,TitleData_lv2_1_音声設定,label,标题菜单条目,サウンド設定,Audio Settings  ,声音设置
-Title:TitleData_lv2_2_SoundTest:info,Title,TitleData_lv2_2_SoundTest,info,标题菜单条目,サウンドテスト......ゲームできいた　アノきょくを　おてがるに！ おんがくで　フィズにじのせかいを　たのしもう。,Sound Test ...... Listen to your favorite tracks from Fiz and the Rainbow Planet.  ,音乐测试……把游戏里听过的曲子再听一遍！用音乐逛逛「菲兹与彩虹之星」吧。
+Title:TitleData_lv2_2_SoundTest:info,Title,TitleData_lv2_2_SoundTest,info,标题菜单条目,サウンドテスト......ゲームできいた　アノきょくを　おてがるに！ おんがくで　フィズにじのせかいを　たのしもう。,Sound Test ...... Listen to your favorite tracks from Fiz and the Rainbow Planet.  ,音乐测试……把游戏里听过的曲子再听一遍！用音乐重温「菲兹与彩虹之星」的世界吧。
 Title:TitleData_lv2_2_SoundTest:infoDisable,Title,TitleData_lv2_2_SoundTest,infoDisable,标题菜单条目,<color=yellow>とくていの　じょうけんを　みたすと　かいほうされます。</color>,<color=yellow>Unlocks when specific conditions are met.</color>,<color=yellow>达成特定条件后解锁。</color>
 Title:TitleData_lv2_2_SoundTest:label,Title,TitleData_lv2_2_SoundTest,label,标题菜单条目,サウンドテスト,Sound Test,音乐测试
 Title:TitleData_lv2_2_TimeAttack:info,Title,TitleData_lv2_2_TimeAttack,info,标题菜单条目,タイムアタック......ゲームのさいしょから　さいごまで　じかんをけいそくしながら　あそべるモード。　リアルタイムアタック（RTA）に　おすすめ。,"Time Attack ...... Race from start to finish while your time is recorded.
@@ -2768,7 +2768,7 @@ Title:TitleData_lv2_3_その他設定:label,Title,TitleData_lv2_3_その他設�
 Title:TitleData_lv2_3_その他設定(ActiveAI):info,Title,TitleData_lv2_3_その他設定(ActiveAI),info,标题菜单条目,そのたのせってい......セーブデータのさくじょを　はじめとした　そのたのせっていを　することが　できます。,"Other settings... Access miscellaneous options, such as deleting save data.",其他设置……可以删档，也能改些别的。
 Title:TitleData_lv2_3_その他設定(ActiveAI):infoDisable,Title,TitleData_lv2_3_その他設定(ActiveAI),infoDisable,标题菜单条目,,,
 Title:TitleData_lv2_3_その他設定(ActiveAI):label,Title,TitleData_lv2_3_その他設定(ActiveAI),label,标题菜单条目,その他設定,Other settings,其他设置
-Title:TitleData_lv3_0_UIタイプ:info,Title,TitleData_lv3_0_UIタイプ,info,标题菜单条目,UIタイプ......がめんに　ひょうじされる　ボタンアイコンの　UIにかんする　せっていを　へんこうできます。, ,UI类型……更改画面上的按钮图标之类。
+Title:TitleData_lv3_0_UIタイプ:info,Title,TitleData_lv3_0_UIタイプ,info,标题菜单条目,UIタイプ......がめんに　ひょうじされる　ボタンアイコンの　UIにかんする　せっていを　へんこうできます。, ,UI类型……更改画面按钮图标的样式。
 Title:TitleData_lv3_0_UIタイプ:infoDisable,Title,TitleData_lv3_0_UIタイプ,infoDisable,标题菜单条目,, ,
 Title:TitleData_lv3_0_UIタイプ:label,Title,TitleData_lv3_0_UIタイプ,label,标题菜单条目,UIタイプ, ,UI类型
 Title:TitleData_lv3_0_画面サイズ:info,Title,TitleData_lv3_0_画面サイズ,info,标题菜单条目,がめんサイズ......がめんの　かいぞうどを　へんこうします。, ,画面尺寸……更改画面的分辨率。
@@ -3612,7 +3612,7 @@ Can fly just a little bit.","----莉芙----
 　　会加油的哦！」</color>
 
 毛茸茸的小龙
-能稍微飞上一小会儿"
+能飞上一小会儿"
 localization:UI Table:CanvasCamera_Pause_Chara_Leafur_R,localization,UI Table,CanvasCamera_Pause_Chara_Leafur_R,Unity Localization 表（UI/菜单/结局字幕）,"------アクション------
 
 ⑪ ：ジャンプ・滞空
@@ -3782,11 +3782,11 @@ localization:UI Table:MovieCanvasCamera_Stage8,localization,UI Table,MovieCanvas
 localization:UI Table:MovieSkip_AandB,localization,UI Table,MovieSkip_AandB,Unity Localization 表（UI/菜单/结局字幕）, - と =  同時押しでスキップ,Press  -  and  =  together to skip, - 和 =  同时按下即可跳过
 localization:UI Table:Result_BackToTitle,localization,UI Table,Result_BackToTitle,Unity Localization 表（UI/菜单/结局字幕）,- ：タイトルにもどる,- ：Back to Title,- ：返回标题
 localization:UI Table:Result_OpenET,localization,UI Table,Result_OpenET,Unity Localization 表（UI/菜单/结局字幕）,"タイムアタック（エクストラ）で
-遊べるようになったぞ！",Time Attack (Extra Mode) is now available!,"在计时挑战（额外模式）里
-已经可以玩了哦！"
+遊べるようになったぞ！",Time Attack (Extra Mode) is now available!,"计时挑战（额外模式）
+能玩啦！"
 localization:UI Table:Result_OpenTAandEX,localization,UI Table,Result_OpenTAandEX,Unity Localization 表（UI/菜单/结局字幕）,"タイムアタック　と　エクストラ　が
 遊べるようになったぞ！",Time Attack and Extra modes are now available!,"计时挑战和额外模式
-都已经可以玩了哦！"
+都能玩啦！"
 localization:UI Table:Result_Thanks,localization,UI Table,Result_Thanks,Unity Localization 表（UI/菜单/结局字幕）,Thank you for playing!,Thank you for playing!,感谢游玩！
 localization:UI Table:StageSelect_Bottom,localization,UI Table,StageSelect_Bottom,Unity Localization 表（UI/菜单/结局字幕）,    ← → ：ステージ選択　・：決定,    ← → ：SELECT　・：ENTER,    ← → ：选择关卡・：确定
 localization:UI Table:StageSelect_Loading,localization,UI Table,StageSelect_Loading,Unity Localization 表（UI/菜单/结局字幕）,読み込み中… ,Now Loading…,载入中…

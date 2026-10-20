@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-success?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=flat-square)
 ![Engine](https://img.shields.io/badge/Engine-Unity%202021.3-blueviolet?style=flat-square)
-![Version](https://img.shields.io/badge/Version-v1.2.4-blue?style=flat-square)
+![Version](https://img.shields.io/badge/Version-v1.2.5-blue?style=flat-square)
 ![Patch](https://img.shields.io/badge/Patch-X2%20Additive-orange?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)
 
@@ -23,9 +23,17 @@
 | 游戏引擎 | Unity 2021.3.45f1 / Mono（PC / Steam） |
 | 补丁路线 | **X2 追加式**：中文进 `es` 槽，日/英原样保留 |
 | 补丁规模 | 125 个载荷文件（102 个数据文件 + 23 个 loader）；1,364 条非空译文；16 张汉化贴图 |
-| 当前版本 | **v1.2.4**：修复主菜单中文冷启动显示，菜单中文统一 10px 并匹配文本框高度 |
+| 当前版本 | **v1.2.5**：三轮交叉复核后修订 62 条译文，重点修正语气、拟声与生硬直译 |
 | 运行要求 | 图形安装器无需 Python；zip 版命令行需要 Python 3.8+ |
 | 字体 | [fusion-pixel-font](https://github.com/TakWolf/fusion-pixel-font)（SIL OFL 1.1） |
+
+### v1.2.5 更新（2026-10-20）
+
+- **译文修订**：修订 62 条对白、菜单说明与拟声词，重点修正场景语气、施动/施受关系、日式句式直译；仍为 1,364 条非空译文。
+- **场景修正**：库玛展示水阵、车长送站、莉芙坠落等场景的说话人与动作主体按上下文校正。
+- **语病清理**：「只能…才能」「也许…也说不定」「要好好做好」等叠用与语义重复已修正。
+- **体例统一**：菜单说明改为统一句式；受击拟声统一采用「呜」系。
+- **三轮交叉复核**：GLM-5.3-Flash、MiMo-V2.6-Flash 独立复核，GPT-6.1 Sol 终审通过。
 
 ### v1.2.4 更新（2026-10-18）
 

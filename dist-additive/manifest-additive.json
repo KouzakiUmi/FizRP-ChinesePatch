@@ -1,10 +1,10 @@
 {
  "name": "Fiz 与彩虹星球 简体中文补丁",
  "game": "Fiz and the Rainbow Planet",
- "version": "1.2.4",
- "built": "2026-10-18",
+ "version": "1.2.5",
+ "built": "2026-10-20",
  "payload_files": 125,
- "payload_bytes": 24041503,
+ "payload_bytes": 24041386,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
@@ -128,12 +128,12 @@
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-string-tables-spanish(es)_assets_all.bundle",
-   "sha256": "a3643c6ba12d0334115c954176f4238eeefd143783fa69307e0073e448837caa",
-   "size": 9195
+   "sha256": "67b172612360987710d304952102ae9cf34363c8a89c05856234d5083adf44a5",
+   "size": 9166
   },
   {
    "path": "StreamingAssets/aa/catalog.json",
-   "sha256": "aee9519a3ff6ac7d1b7ee3f0a4ac319d0509b40bf6631544b3600c22fe028bf1",
+   "sha256": "90f2ddf55c29a43baeda55cd13c3e93f4856f5d91630f2138ecf25e9eb92d4c6",
    "size": 79538
   },
   {
@@ -168,12 +168,12 @@
   },
   {
    "path": "sharedassets105.assets",
-   "sha256": "6383e0ccfc0b4d9fe94efe3dd5cdb11c6aff3ce69bd93222acb82d1422afe960",
+   "sha256": "bd874ed6167fe6166de240f925698fd57453e536f7b3b71a000fcc7dd1894b94",
    "size": 138736
   },
   {
    "path": "sharedassets106.assets",
-   "sha256": "656aff0b2878566d9484b8f18d9bc1dbb8d0733bdb4cf858f74000f3a69ea366",
+   "sha256": "94b25fd19ac92a49efb9fe726317d98563f0f1d38400cc9b74b9a301c774757a",
    "size": 91400
   },
   {
@@ -193,8 +193,8 @@
   },
   {
    "path": "sharedassets112.assets",
-   "sha256": "3754abafb8744aadfd71ee8df3d402086ee59fef9e439f4d01268f3cc25a2265",
-   "size": 62664
+   "sha256": "46c57ade20b656f8cf317925a129e8c1ed435a955c202130b0547f1fdb69d037",
+   "size": 62680
   },
   {
    "path": "sharedassets114.assets",
@@ -208,12 +208,12 @@
   },
   {
    "path": "sharedassets118.assets",
-   "sha256": "108d852d1c15bad4a84aac39908edc96285774d04d32a0211a223d7fb392190f",
-   "size": 199960
+   "sha256": "7dae204d174cc266c1b0701e5c898cc2ab9dfd3546debac3c64af18e124d8f36",
+   "size": 199976
   },
   {
    "path": "sharedassets119.assets",
-   "sha256": "c740946e1e8c563b39679936e6e828f13b51699faf3b91eff7e81d784d50b7cf",
+   "sha256": "d005e5a339f78fbe2bf4ef493667589dc9299954292aa7c116ae61ffebca5c8d",
    "size": 55600
   },
   {
@@ -223,12 +223,12 @@
   },
   {
    "path": "sharedassets121.assets",
-   "sha256": "d93230352a80ba672538e52f025217b1f4f943bb1b38c71e8b745edc56c462e1",
+   "sha256": "eb2a285d965b4d36b0bc75dbdf73975a2d7fd31f45511c5f8245d7cf95d200e7",
    "size": 173128
   },
   {
    "path": "sharedassets123.assets",
-   "sha256": "08f1884a1a9028d9c40c84844f64a4a0c7b87863671edb8f3f6877d4d20ed48c",
+   "sha256": "1e23a82b53e099658854528a64c0a900486fcb1b4291879e1ca619fbd78ef606",
    "size": 57488
   },
   {
@@ -263,8 +263,8 @@
   },
   {
    "path": "sharedassets135.assets",
-   "sha256": "567e68cbf3cbd6df6fbbf97430814c5d4e8d88b4ee62832c783a63544c043124",
-   "size": 642888
+   "sha256": "ffeced5f80a28f038abb0969347b5d4c9bcde0f5dae3f56a6fc70cbfefbd8202",
+   "size": 642880
   },
   {
    "path": "sharedassets136.assets",
@@ -283,12 +283,12 @@
   },
   {
    "path": "sharedassets15.assets",
-   "sha256": "bd1c64a807d1c8d5b605b80ef42c6da2c3abddefcf98a76549d454f57ba8755e",
-   "size": 90016
+   "sha256": "1c8818ef46f097aa7fad7fb5d8d929e65c22c079bfe1be6921310443aa9dcbef",
+   "size": 90000
   },
   {
    "path": "sharedassets153.assets",
-   "sha256": "3cb8f90f5ba806d0f71eaa96e0fba63cce8c258c0d95b3f0a697311e4efc401a",
+   "sha256": "a0489a22d96e120e400feb04921222072c3f6479c1a724cc1ce12a148a50b3e2",
    "size": 101632
   },
   {
@@ -298,8 +298,8 @@
   },
   {
    "path": "sharedassets17.assets",
-   "sha256": "37affa0cc4f7bf6bd5d3631737718669b6882844fa5d5d6cf4f6775ab70c2b35",
-   "size": 79056
+   "sha256": "21cb8e11e836de99586f3bac2290f8578fb7433168b6c681d4df5d5441214a2f",
+   "size": 79048
   },
   {
    "path": "sharedassets19.assets",
@@ -318,8 +318,8 @@
   },
   {
    "path": "sharedassets23.assets",
-   "sha256": "b5ac8c9ee775fd222a3a5581a9ce3321c894b98cd296351419604f98025d9415",
-   "size": 43152
+   "sha256": "82b03874be116d185442dfcee99090b15680ecf222466324ea3e7a7fbf6321e8",
+   "size": 43144
   },
   {
    "path": "sharedassets25.assets",
@@ -338,8 +338,8 @@
   },
   {
    "path": "sharedassets3.assets",
-   "sha256": "dd10931f3babe5e781da7bc28c5eb0ec8fb68429ab3020d19ecb6a7b9f9dfb88",
-   "size": 5370480
+   "sha256": "0223698e63f55be41e4427f03a3133e90c8bcc0878bbfc1cce5ac7492f19caf5",
+   "size": 5370496
   },
   {
    "path": "sharedassets30.assets",
@@ -353,8 +353,8 @@
   },
   {
    "path": "sharedassets34.assets",
-   "sha256": "26110d608beff3cb0750813ca429526083afdab683306e9b1b1e6e30f5bd85cc",
-   "size": 50504
+   "sha256": "cb9450474a619f8bd7d917fe0e1a4f22fb698ed72558b7e6a73e9e9ffb22bc8a",
+   "size": 50496
   },
   {
    "path": "sharedassets35.assets",
@@ -368,8 +368,8 @@
   },
   {
    "path": "sharedassets37.assets",
-   "sha256": "407cb075030c0379a079b57e66036fedfbf3522059aab96724276afe1e560741",
-   "size": 44552
+   "sha256": "64af971f2aee032713d47f6d369b2671a0bb0475f4a77f8617df0c5de51063c6",
+   "size": 44560
   },
   {
    "path": "sharedassets38.assets",
@@ -388,7 +388,7 @@
   },
   {
    "path": "sharedassets40.assets",
-   "sha256": "27096cca0ebd01e49080d8823dc592fb151fdea242e56aededca6b1acb097eb8",
+   "sha256": "50be50404739110c215a15f412c84fbbc317c8b514218a94ee88c3a927ec022f",
    "size": 61784
   },
   {
@@ -403,8 +403,8 @@
   },
   {
    "path": "sharedassets43.assets",
-   "sha256": "833fbb8c3d159a5830200dda9f025be008f9527afd1d0378e597800cc3b0bc02",
-   "size": 43352
+   "sha256": "6a979e258088cef4876e916f1c4c11555f447aacb4c32bc62edc79a1c074ee99",
+   "size": 43360
   },
   {
    "path": "sharedassets44.assets",
@@ -413,8 +413,8 @@
   },
   {
    "path": "sharedassets48.assets",
-   "sha256": "0a6728f01eb5b2bc693a6d81f48353f4c204df72b2210135d0a0786a7493f856",
-   "size": 206552
+   "sha256": "be80bda908f03bef7b3081cd600b078bb0fc52adf8698f246d3804f4155f5e3b",
+   "size": 206544
   },
   {
    "path": "sharedassets49.assets",
@@ -423,13 +423,13 @@
   },
   {
    "path": "sharedassets50.assets",
-   "sha256": "e5ea2028d74e599549325866869d6fa175420629f7473d043aab722ad87d253c",
-   "size": 46064
+   "sha256": "60f35a58cb4404c1966029cc0ca181d5a0ab4a0e912c6581fdd48945f5b5694b",
+   "size": 46040
   },
   {
    "path": "sharedassets51.assets",
-   "sha256": "21f1c2813e6fabc5f22c2011bbd40c73f001f1c8c8f062e4bc197e697c337f31",
-   "size": 64960
+   "sha256": "249cfabd67bb083a05cb1c1831899ba4fbc016fec232c4b3dee5bcc4ea5152ef",
+   "size": 64952
   },
   {
    "path": "sharedassets52.assets",
@@ -453,7 +453,7 @@
   },
   {
    "path": "sharedassets58.assets",
-   "sha256": "5f2bb211f98a6f398e184b48c422d7818341b8a50b7b8f52e628c6f986b8ade0",
+   "sha256": "6aa8d2e8ac572bb50f104f33ff25044a11619555835b1fc52bcef46d3d4dcfd1",
    "size": 56072
   },
   {
@@ -463,7 +463,7 @@
   },
   {
    "path": "sharedassets62.assets",
-   "sha256": "236095534876035c758e81c8ef1a33033f74c2cd1140a0ddfc2b34c8a4e265c1",
+   "sha256": "eab7b76b52243375ed4e6fb3c3c1b9ad5784f3a0a57b3a6929c8c274c1b3235d",
    "size": 66744
   },
   {
@@ -473,22 +473,22 @@
   },
   {
    "path": "sharedassets64.assets",
-   "sha256": "b8a5264ac467e2ce62fcd2d3f96ee5f3fc1180222c3f646d229b705b2c8475cb",
+   "sha256": "2176f7ee9e176ca3f29463d9bd1b947650552c69f608c8f6c66a8304f2a09906",
    "size": 49384
   },
   {
    "path": "sharedassets65.assets",
-   "sha256": "9a07cb0869f51c1b0ec83d293609ae1e3d76b6295c405d38162ee0ab0dd4c70c",
-   "size": 61808
+   "sha256": "4e6ff4b2098c08346cbb25a1c7c21bfe0a42094bef6db5d93093c820c1dfa7e6",
+   "size": 61784
   },
   {
    "path": "sharedassets66.assets",
-   "sha256": "05a364dbe17ac28188a53fcbe800c503f61cd26251f0eb075d1bc1a266a0c762",
+   "sha256": "e17aff393fb83685a6799f0d97984f5ac6f673212940d4977c0e8d0b5a7d1122",
    "size": 87968
   },
   {
    "path": "sharedassets67.assets",
-   "sha256": "55fc9bff0f40b89cf96c05a46a100f5e514f4a4cb07f426e45a8c8d3d18d261d",
+   "sha256": "50701442d9b32220df8ef35b35fd2fc0d0099bb8baa8e4c9abc5ff2caaa764be",
    "size": 82176
   },
   {
@@ -503,8 +503,8 @@
   },
   {
    "path": "sharedassets7.assets",
-   "sha256": "69e514b2897cd15fe3fa5e6395bdd457532618da94ac895fee6404b0c194abdf",
-   "size": 230280
+   "sha256": "bc3fb4860b4f1b22a74bbc077bb36ff8ec703f8578ac31310568aa4599d81a91",
+   "size": 230272
   },
   {
    "path": "sharedassets70.assets",
@@ -553,13 +553,13 @@
   },
   {
    "path": "sharedassets82.assets",
-   "sha256": "a3355300d4632fcba0e67ca4d01b789b25e8588702cd7a32eb05842356326bee",
+   "sha256": "436a87b7e23c082273c1d322aa63401360f7ebd5af35c64215d744d7a2f6f668",
    "size": 95640
   },
   {
    "path": "sharedassets83.assets",
-   "sha256": "7e9732fc6c61c830a17fed94582f2751392dac053126b5c70dbc9bfc6cb89ea2",
-   "size": 65096
+   "sha256": "88bb31fc097604c3680afd5b9a8b9722aaeab29ab280f49f34e1a73d34d56ade",
+   "size": 65080
   },
   {
    "path": "sharedassets84.assets",
@@ -573,7 +573,7 @@
   },
   {
    "path": "sharedassets86.assets",
-   "sha256": "3f2786fa0bbc54cdd1a2976f0287169568da3b850d8ad7282685f9a83bd4153d",
+   "sha256": "8d25f9c8d28c32a06948bf6cb61b590c19f5b5510eb446daa455f16de55f75b0",
    "size": 73672
   },
   {
@@ -593,7 +593,7 @@
   },
   {
    "path": "sharedassets9.assets",
-   "sha256": "c7054c6d7e3e9dd70380fb6fca3d14331bfd3c7ac46959ddbbe5a88880a94d63",
+   "sha256": "3bf57db3dfbc0138d1f2e3bf5a7aeb6f331c230fa3f24f46d011735068ffaf5b",
    "size": 554824
   },
   {
@@ -618,8 +618,8 @@
   },
   {
    "path": "sharedassets96.assets",
-   "sha256": "2ff6706722e34908dc76088395afce124146726cd758b09536274dad87346a2c",
-   "size": 90240
+   "sha256": "bf96ae00d2e0f6d97423a2503461e13b508bb5fa9067b308378e7d111e8237a6",
+   "size": 90224
   },
   {
    "path": "sharedassets97.assets",
@@ -628,12 +628,12 @@
   },
   {
    "path": "sharedassets98.assets",
-   "sha256": "fdeed8942c3593fabbe8ee7fe785b2e3ec4e4c5c929e92a137d583ed4a43f6fe",
+   "sha256": "a58eabe7d0d8975e39eba3bc0525f81ba936302bd4d9acff0591127ddf6419fe",
    "size": 57792
   },
   {
    "path": "sharedassets99.assets",
-   "sha256": "1c781a0ef29b601cb45515312933a2cc80c4ced8189bcafaf65ba43e16b016dd",
+   "sha256": "72479c2580504cfb383f7dd4b6be3637f46591d16a2ab9e3a616ce43df934c39",
    "size": 109912
   },
   {
