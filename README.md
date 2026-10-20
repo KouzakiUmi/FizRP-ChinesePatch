@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-success?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=flat-square)
 ![Engine](https://img.shields.io/badge/Engine-Unity%202021.3-blueviolet?style=flat-square)
-![Version](https://img.shields.io/badge/Version-v1.2.5-blue?style=flat-square)
+![Version](https://img.shields.io/badge/Version-v1.2.6-blue?style=flat-square)
 ![Patch](https://img.shields.io/badge/Patch-X2%20Additive-orange?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)
 
@@ -23,9 +23,15 @@
 | 游戏引擎 | Unity 2021.3.45f1 / Mono（PC / Steam） |
 | 补丁路线 | **X2 追加式**：中文进 `es` 槽，日/英原样保留 |
 | 补丁规模 | 125 个载荷文件（102 个数据文件 + 23 个 loader）；1,364 条非空译文；16 张汉化贴图 |
-| 当前版本 | **v1.2.5**：三轮交叉复核后修订 62 条译文，重点修正语气、拟声与生硬直译 |
+| 当前版本 | **v1.2.6**：补修 9 处遗留（说话人标注、拟声用字、句首感叹停顿） |
 | 运行要求 | 图形安装器无需 Python；zip 版命令行需要 Python 3.8+ |
 | 字体 | [fusion-pixel-font](https://github.com/TakWolf/fusion-pixel-font)（SIL OFL 1.1） |
+
+### v1.2.6 更新（2026-10-20）
+
+- **遗留补修**：在 v1.2.5 基础上补修 9 处——`S6_Plain_Battle_win:1` 的说话人标注、`あばばばばば` 的拟声用字、7 处「感叹词＋句子」的停顿。
+- **说明**：说话人标注属工作表元数据，不改变游戏行为；游戏内 `chara` 字段本身标为旁白。
+- 译文仍为 1,364 条非空；插件、字体与贴图沿用 v1.2.5。
 
 ### v1.2.5 更新（2026-10-20）
 

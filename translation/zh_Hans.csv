@@ -563,7 +563,7 @@ we must not forget...","而且还有一件事
 不能忘记……"
 AutoTalk:MovieTalk_Stage7_Epilogue:9,AutoTalk,MovieTalk_Stage7_Epilogue,talkDatas[9],剧情对话 | wait=2.50 speaker=5,えっ、まだ何かあるの！？,"Huh, is there something else?!",诶，还有什么呀！？
 AutoTalk:S11_1_0_T0:0,AutoTalk,S11_1_0_T0,talkDatas[0],剧情对话 | wait=4.00 speaker=3,"あっ　トンネルが　ある！
-入ってみよう",,"啊有个隧道！
+入ってみよう",,"啊，有个隧道！
 进去看看吧"
 AutoTalk:S11_1_0_T1:0,AutoTalk,S11_1_0_T1,talkDatas[0],剧情对话 | wait=5.00 speaker=3,"この　コイン、
 なんだか　パワーが　あふれてくる！",,"这枚硬币，
@@ -584,7 +584,7 @@ AutoTalk:S12_1_0_T1:3,AutoTalk,S12_1_0_T1,talkDatas[3],剧情对话 | wait=5.00 
 ＰＡＤの場合は右トリガーで　ポーズを開きます。",,"用电脑玩的时候按左 Shift 键，
 用手柄玩的时候按右扳机，就能打开暂停菜单哦。"
 AutoTalk:S12_1_0_T2:0,AutoTalk,S12_1_0_T2,talkDatas[0],剧情对话 | wait=4.00 speaker=5,"わっ　みずが　たくさんある…
-オイラ　およぐのは　ニガテなんだ…",,"哇好多的水……
+オイラ　およぐのは　ニガテなんだ…",,"哇，好多的水……
 我不太会游泳呢……"
 AutoTalk:S12_1_0_T3:0,AutoTalk,S12_1_0_T3,talkDatas[0],剧情对话 | wait=4.00 speaker=3,"これは！　「必殺パワーの泉」！
 入ると　必殺パワーが　満タンになるんだって",,"这是！「必杀能量之泉」！
@@ -678,7 +678,7 @@ AutoTalk:S1_0_103_T1:9,AutoTalk,S1_0_103_T1,talkDatas[9],剧情对话 | wait=0.5
 いったい　なんだったんだろう......","A... dream...?
 What was that...?","是……梦……？
 刚才那到底是什么呢……"
-AutoTalk:S1_0_103_T2:0,AutoTalk,S1_0_103_T2,talkDatas[0],剧情对话 | wait=2.50 speaker=2,あっ やべぇ,Oh no!,啊糟了
+AutoTalk:S1_0_103_T2:0,AutoTalk,S1_0_103_T2,talkDatas[0],剧情对话 | wait=2.50 speaker=2,あっ やべぇ,Oh no!,啊，糟了
 AutoTalk:S1_0_103_T2:1,AutoTalk,S1_0_103_T2,talkDatas[1],剧情对话 | wait=3.00 speaker=3,！？！？！？,!?!?!?,！？！？！？
 AutoTalk:S1_0_1_T0:0,AutoTalk,S1_0_1_T0,talkDatas[0],剧情对话 | wait=1.00 speaker=0,←　フィズの家,<- Fiz's House,←　菲兹的家
 AutoTalk:S1_1_1_T1:0,AutoTalk,S1_1_1_T1,talkDatas[0],剧情对话 | wait=5.00 speaker=3,"この　コイン、
@@ -796,7 +796,7 @@ AutoTalk:S2_1_2_T0:0,AutoTalk,S2_1_2_T0,talkDatas[0],剧情对话 | wait=3.00 sp
 Let’s move carefully!","这一带风很大，
 小心点往前走吧……！"
 AutoTalk:S2_1_2_T1:0,AutoTalk,S2_1_2_T1,talkDatas[0],剧情对话 | wait=3.00 speaker=3,あっ　あんなところにコインが！,"Hey, look!
-A Coin over there.",啊那边有枚硬币！
+A Coin over there.",啊，那边有枚硬币！
 AutoTalk:S2_1_2_T1:1,AutoTalk,S2_1_2_T1,talkDatas[1],剧情对话 | wait=3.00 speaker=5,"りゅうさの中に　こんなばしょがあったなんて！
 オイラ　しらなかった……","I never knew the quicksand
 hid a place like this!","流沙里居然有这种地方！
@@ -812,7 +812,7 @@ I can burrow through any hole!","用我的抓挠攻击，
 什么样的洞都能挖开哦！"
 AutoTalk:S2_1_3_T1:0,AutoTalk,S2_1_3_T1,talkDatas[0],剧情对话 | wait=4.00 speaker=5,"わっ　みずが　たくさんある…
 オイラ　およぐのは　ニガテなんだ…","Whoa, so much water...
-I’m not the best swimmer...","哇好多的水……
+I’m not the best swimmer...","哇，好多的水……
 我不太会游泳呢……"
 AutoTalk:S2_1_3_T1:1,AutoTalk,S2_1_3_T1,talkDatas[1],剧情对话 | wait=4.00 speaker=8,"ドラゴンには　得意不得意が　ありますから、
 しっかりと　力を合わせて　進みましょう。","Every Dragon has strengths
@@ -855,7 +855,7 @@ What a beautiful cave~!","哇～！亮闪闪的！
 好漂亮的洞窟呢～！"
 AutoTalk:S2_9_1_T0:0,AutoTalk,S2_9_1_T0,talkDatas[0],剧情对话 | wait=5.00 speaker=5,"うわわっ　なにあれ！
 こっちに　むかってくるよ！","Whoa, what’s that!
-It’s coming right at us!","哇哇那是什么！
+It’s coming right at us!","哇哇，那是什么！
 它朝这边过来了！"
 AutoTalk:S2_9_1_T1:0,AutoTalk,S2_9_1_T1,talkDatas[0],剧情对话 | wait=4.00 speaker=3,"危ない！　カプセルみたいな
 弾が　どんどん飛んでくるよ！","Danger! Capsule-like shots
@@ -1011,7 +1011,7 @@ AutoTalk:S3_3_2_T1:0,AutoTalk,S3_3_2_T1,talkDatas[0],剧情对话 | wait=3.50 sp
 どうやったら　押せるんだろう？","Now the switch’s behind that wall!
 How do we hit it?","这回墙的那边有个开关！
 要怎么做才能按到呢？"
-AutoTalk:S3_9_1_T0:0,AutoTalk,S3_9_1_T0,talkDatas[0],剧情对话 | wait=2.50 speaker=3,あっ　あれは......！？,"Oh, what is that...?",啊那是……！？
+AutoTalk:S3_9_1_T0:0,AutoTalk,S3_9_1_T0,talkDatas[0],剧情对话 | wait=2.50 speaker=3,あっ　あれは......！？,"Oh, what is that...?",啊，那是……！？
 AutoTalk:S3_9_1_T0:1,AutoTalk,S3_9_1_T0,talkDatas[1],剧情对话 | wait=4.00 speaker=8,"あの白い生物は　『モスターボン』...
 空中を飛び回り　獲物を惑わせるといいます。","That white creature is Mothtabon.
 It flies to confuse its prey.","那只白色生物是　『莫斯塔邦』……
@@ -1861,7 +1861,7 @@ AutoTalk:S6_Plain_Battle_win:0,AutoTalk,S6_Plain_Battle_win,talkDatas[0],剧情�
 at full power... You're amazing!","没想到连认真的我都输了！
 你们果然好强呢！"
 AutoTalk:S6_Plain_Battle_win:10,AutoTalk,S6_Plain_Battle_win,talkDatas[10],剧情对话 | wait=0.10 speaker=3,助かった......,"Whew, what a relief...",得救了……
-AutoTalk:S6_Plain_Battle_win:1,AutoTalk,S6_Plain_Battle_win,talkDatas[1],剧情对话 | wait=2.50 speaker=0,プレーンくん、　おまたせ～！,"Hey, Plain! Sorry to keep you!",普雷恩，让你久等啦～！
+AutoTalk:S6_Plain_Battle_win:1,AutoTalk,S6_Plain_Battle_win,talkDatas[1],剧情对话 | wait=2.50 speaker=13,プレーンくん、　おまたせ～！,"Hey, Plain! Sorry to keep you!",普雷恩，让你久等啦～！
 AutoTalk:S6_Plain_Battle_win:2,AutoTalk,S6_Plain_Battle_win,talkDatas[2],剧情对话 | wait=0.10 speaker=9,"ああ、リアリーちゃん！
 ちょうどいいところに！","Ah, Leary!
 Perfect timing!","啊，莉亚莉！
@@ -2265,7 +2265,7 @@ DamageTalk:damage_electric:3:1,DamageTalk,damage_electric,player[3].damage_elect
 DamageTalk:damage_electric:3:2,DamageTalk,damage_electric,player[3].damage_electric[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,いててててっ！！,Ouch ouch ouch!!,疼疼疼疼！！
 DamageTalk:damage_electric:4:0,DamageTalk,damage_electric,player[4].damage_electric[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,いやあぁああ！！,Nooooooo!!,不要啊啊啊！！
 DamageTalk:damage_electric:4:1,DamageTalk,damage_electric,player[4].damage_electric[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,んぎゃあぁああ！！,Gyaaaaaah!!!,呜呀啊啊啊！！
-DamageTalk:damage_electric:4:2,DamageTalk,damage_electric,player[4].damage_electric[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,あばばばばば！！,Blblblblbl!!,啊吧吧吧吧吧！！
+DamageTalk:damage_electric:4:2,DamageTalk,damage_electric,player[4].damage_electric[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,あばばばばば！！,Blblblblbl!!,啊巴巴巴巴！！
 DamageTalk:damage_electric:5:0,DamageTalk,damage_electric,player[5].damage_electric[0],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ォあぎゃァあ゛あ！！！,Aaaaghhhh!!,呜啊呀啊啊啊啊！！！
 DamageTalk:damage_electric:5:1,DamageTalk,damage_electric,player[5].damage_electric[1],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,ぇあ゛あぁア゛あ！！！,Eaaaaaagh!!,诶啊啊啊啊啊啊！！！
 DamageTalk:damage_electric:5:2,DamageTalk,damage_electric,player[5].damage_electric[2],战斗受击台词 | en=sharedassets3.assets:482;en_machine=sharedassets3.assets:483;es=sharedassets3.assets:484;fr=sharedassets3.assets:485;ja=sharedassets3.assets:486,イ゛ああアぁ゛ッ！！！,Uwaaaaah!!,咿啊啊啊啊啊！！！

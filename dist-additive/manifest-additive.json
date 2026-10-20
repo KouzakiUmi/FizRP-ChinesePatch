@@ -1,10 +1,10 @@
 {
  "name": "Fiz 与彩虹星球 简体中文补丁",
  "game": "Fiz and the Rainbow Planet",
- "version": "1.2.5",
+ "version": "1.2.6",
  "built": "2026-10-20",
  "payload_files": 125,
- "payload_bytes": 24041386,
+ "payload_bytes": 24041394,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
@@ -278,12 +278,12 @@
   },
   {
    "path": "sharedassets14.assets",
-   "sha256": "0e5b598f0cf386d3df189039138e38525e0c037fdbab2c377682567959abf760",
+   "sha256": "53c3811b090684dcb4171eee09ed20e103bb18688092fa0ab83fd0ab564bf57c",
    "size": 687320
   },
   {
    "path": "sharedassets15.assets",
-   "sha256": "1c8818ef46f097aa7fad7fb5d8d929e65c22c079bfe1be6921310443aa9dcbef",
+   "sha256": "f43a22928d34c2603c50cf2339e83f5fb3ce9151c07c8b5ad0425fbe2e834ead",
    "size": 90000
   },
   {
@@ -298,7 +298,7 @@
   },
   {
    "path": "sharedassets17.assets",
-   "sha256": "21cb8e11e836de99586f3bac2290f8578fb7433168b6c681d4df5d5441214a2f",
+   "sha256": "75a138c488f3f2c98bc123940510fe1a71da4d912354b20f68634ce31b91ff29",
    "size": 79048
   },
   {
@@ -338,7 +338,7 @@
   },
   {
    "path": "sharedassets3.assets",
-   "sha256": "0223698e63f55be41e4427f03a3133e90c8bcc0878bbfc1cce5ac7492f19caf5",
+   "sha256": "e405447c4a783dae2dee21fe5a3643417c72cd17f36bbec981cd20cbc8ed1b15",
    "size": 5370496
   },
   {
@@ -363,12 +363,12 @@
   },
   {
    "path": "sharedassets36.assets",
-   "sha256": "71bdbfa3d44deb7496fc364a8005d3c40418d0ce43b094005b2bb8ad81445e12",
+   "sha256": "63c5e34dcf592333b6d88a7d6a83fb04840516986973cfbd0c36237bfe8af1bb",
    "size": 53080
   },
   {
    "path": "sharedassets37.assets",
-   "sha256": "64af971f2aee032713d47f6d369b2671a0bb0475f4a77f8617df0c5de51063c6",
+   "sha256": "92fe45e4789870bd8709a413911608a9bdde72503f71f7517f9d881c8ea73454",
    "size": 44560
   },
   {
@@ -413,8 +413,8 @@
   },
   {
    "path": "sharedassets48.assets",
-   "sha256": "be80bda908f03bef7b3081cd600b078bb0fc52adf8698f246d3804f4155f5e3b",
-   "size": 206544
+   "sha256": "68d5d7ccb9ee1a30242664c8483fa52820fbccfbf4af70cda1daf3415464b46b",
+   "size": 206552
   },
   {
    "path": "sharedassets49.assets",
@@ -463,7 +463,7 @@
   },
   {
    "path": "sharedassets62.assets",
-   "sha256": "eab7b76b52243375ed4e6fb3c3c1b9ad5784f3a0a57b3a6929c8c274c1b3235d",
+   "sha256": "a3d608b45ad3f658f0518c11998b55ff46def3862bb64ca4b162f2ebd3095158",
    "size": 66744
   },
   {
