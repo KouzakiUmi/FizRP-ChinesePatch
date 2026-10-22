@@ -1,10 +1,10 @@
 {
  "name": "Fiz 与彩虹星球 简体中文补丁",
  "game": "Fiz and the Rainbow Planet",
- "version": "1.2.6",
- "built": "2026-10-20",
+ "version": "1.2.7",
+ "built": "2026-10-22",
  "payload_files": 125,
- "payload_bytes": 24041394,
+ "payload_bytes": 24043442,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
@@ -113,8 +113,8 @@
   },
   {
    "path": "BepInEx/plugins/FizRPLangMenu.dll",
-   "sha256": "01ec4c9f90921f931ab17ff268e0e3fa37de157505e1aace1f376adbd5237d51",
-   "size": 24064
+   "sha256": "4d15cabd3f817e92f4f10d9b938ef377d4029828b0637a23e4ae638b6629c2b6",
+   "size": 26112
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-assets-japanese(ja)_assets_all.bundle",

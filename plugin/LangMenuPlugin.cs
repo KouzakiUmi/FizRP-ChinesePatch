@@ -459,11 +459,21 @@ namespace FizRPLangMenu
 		/// 语言选择画面的提示会在 10px / 8px 之间跳。记录基准后始终按基准量化，档位稳定。
 		/// </summary>
 		private static readonly Dictionary<int, int> _baseFontSize = new Dictionary<int, int>();
-		/// <summary>
-		/// Text 实例 → 上次核算像素对齐时该 RectTransform 的 (xMin, width)。
-		/// 只有这两个量变化时才需要重新核算（省掉每帧调用 preferredWidth 的开销）。
-		/// </summary>
+		/// <summary>Legacy snap cache for UI outside the three pause-footer hints.</summary>
 		private static readonly Dictionary<int, Vector2> _snapChecked = new Dictionary<int, Vector2>();
+		private static readonly Dictionary<int, PauseHintState> _pauseHints = new Dictionary<int, PauseHintState>();
+		private static readonly HashSet<int> _pauseHintLogged = new HashSet<int>();
+		private sealed class PauseHintState
+		{
+			internal string Content;
+			internal Font Font;
+			internal int Size;
+			internal int CanvasId;
+			internal float Ppu;
+			internal float XMin;
+			internal float Width;
+			internal float TargetX;
+		}
 		private static int _snapLogged;
 		private static readonly HashSet<int> _reverted = new HashSet<int>();
 		private static readonly HashSet<int> _assignFail = new HashSet<int>();
@@ -731,6 +741,66 @@ namespace FizRPLangMenu
 		}
 
 		/// <summary>
+		/// Pause footers only: wait for an active Canvas instance and set an absolute X offset.
+		/// Do not shift prefab assets, do not add to a copied offset, and never move Y or Z.
+		/// </summary>
+		private static void SnapPauseHint(Text text, int id)
+		{
+			Canvas canvas = text.canvas;
+			if (!PauseHintPixelPolicy.Applies(text.gameObject.name, text.isActiveAndEnabled,
+				canvas != null, HasCJK(text.text), HasKana(text.text)))
+			{
+				return;
+			}
+			Font font = text.font;
+			if (font == null || font.name != Font10Name || text.fontSize != SizeLarge
+				|| text.resizeTextForBestFit)
+			{
+				return;
+			}
+			RectTransform rect = text.rectTransform;
+			if (rect.localRotation != Quaternion.identity
+				|| Mathf.Abs(rect.localScale.x - 1f) > 0.001f
+				|| Mathf.Abs(rect.localScale.y - 1f) > 0.001f
+				|| Mathf.Abs(rect.pivot.x - 0.5f) > 0.001f
+				|| Mathf.Abs(rect.anchorMin.x) > 0.001f
+				|| Mathf.Abs(rect.anchorMax.x - 1f) > 0.001f
+				|| (text.alignment != TextAnchor.UpperCenter
+					&& text.alignment != TextAnchor.MiddleCenter
+					&& text.alignment != TextAnchor.LowerCenter))
+			{
+				return;
+			}
+			Vector2 position = rect.anchoredPosition;
+			float ppu = text.pixelsPerUnit;
+			if (!PauseHintPixelPolicy.IsFinite(position.x) || !PauseHintPixelPolicy.IsFinite(position.y)
+				|| !PauseHintPixelPolicy.IsFinite(ppu) || ppu <= 0f)
+			{
+				return;
+			}
+			Rect box = rect.rect;
+			PauseHintState state;
+			if (!_pauseHints.TryGetValue(id, out state) || state.Content != text.text
+				|| state.Font != font || state.Size != text.fontSize || state.CanvasId != canvas.GetInstanceID()
+				|| state.Ppu != ppu || state.XMin != box.xMin || state.Width != box.width)
+			{
+				float target;
+				if (!PauseHintPixelPolicy.TryTargetX(box.xMin, box.width, text.preferredWidth, out target))
+					return;
+				state = new PauseHintState {
+					Content = text.text, Font = font, Size = text.fontSize, CanvasId = canvas.GetInstanceID(),
+					Ppu = ppu, XMin = box.xMin, Width = box.width, TargetX = target
+				};
+				_pauseHints[id] = state;
+			}
+			if (Mathf.Abs(position.x - state.TargetX) <= 0.001f) return;
+			rect.anchoredPosition = new Vector2(state.TargetX, position.y);
+			if (_pauseHintLogged.Count < 80 && _pauseHintLogged.Add(id))
+				PatchUtil.Info(string.Format("[pause-hint] {0} id={1} x={2:F3}->{3:F3} y={4:F3} absolute-baseline=0",
+					text.gameObject.name, id, position.x, state.TargetX, position.y));
+		}
+
+		/// <summary>
 		/// 把文字内容起点补偿到「整数设计像素」上 —— 修的是同屏内一部分文本锐利、
 		/// 另一部分发虚的最终原因。
 		///
@@ -753,6 +823,11 @@ namespace FizRPLangMenu
 		/// </summary>
 		internal static void SnapContentToPixelGrid(Text text, int id)
 		{
+			if (text != null && PauseHintPixelPolicy.IsTarget(text.gameObject.name))
+			{
+				SnapPauseHint(text, id);
+				return;
+			}
 			if (text == null)
 			{
 				return;
@@ -910,7 +985,7 @@ namespace FizRPLangMenu
 			{
 				_lastSeen[_id] = f;
 				FitMainMenuHeight(text);
-				// 稳定态：只在 rect 几何变化时才重新核算像素对齐（内部做廉价的 float 比较）。
+				// 暂停提示检查挂载状态并按绝对偏移纠正；其它 UI 保持原有策略。
 				SnapContentToPixelGrid(text, _id);
 				return;
 			}

@@ -41,6 +41,16 @@ class MenuFontPolicyTests(unittest.TestCase):
         proc = subprocess.run(command, capture_output=True, encoding='utf-8')
         if proc.returncode:
             raise RuntimeError(proc.stdout + '\n' + proc.stderr)
+        # Exercise the pure pause-hint policy with the widths and inherited offsets
+        # observed in live A/B/C captures. This is not a Unity rendering test.
+        cls.grid_exe = cls.base / 'PauseHintPolicyTests.exe'
+        grid_command = command[:command.index('-out:' + str(cls.exe))]
+        grid_command += ['-out:' + str(cls.grid_exe), '-reference:' + str(reference),
+                         str(ROOT / 'plugin/PauseHintPixelPolicy.cs'),
+                         str(ROOT / 'tests/pixel_grid_harness.cs')]
+        proc = subprocess.run(grid_command, capture_output=True, encoding='utf-8')
+        if proc.returncode:
+            raise RuntimeError(proc.stdout + '\n' + proc.stderr)
 
     @classmethod
     def clean_temp(cls):
@@ -78,6 +88,34 @@ class MenuFontPolicyTests(unittest.TestCase):
     def test_zero_measurement_still_reserves_10px(self):
         self.run_case('empty-measurement')
 
+    def run_grid_case(self, name):
+        proc = subprocess.run([str(self.grid_exe), name], capture_output=True, encoding='utf-8')
+        self.assertEqual(proc.returncode, 0, proc.stdout + '\n' + proc.stderr)
+
+    def test_only_three_named_pause_hints_are_targets(self):
+        self.run_grid_case('scope')
+
+    def test_inactive_or_unmounted_prefab_is_not_shifted(self):
+        self.run_grid_case('prefab')
+
+    def test_clone_inherited_offset_is_not_added_again(self):
+        self.run_grid_case('clone')
+
+    def test_repeated_frames_and_recreated_instances_do_not_drift(self):
+        self.run_grid_case('idempotent')
+
+    def test_reselected_language_recalculates_absolute_phase(self):
+        self.run_grid_case('text-change')
+
+    def test_measured_three_page_widths_use_expected_offsets(self):
+        self.run_grid_case('measured-widths')
+
+    def test_invalid_layout_values_are_rejected(self):
+        self.run_grid_case('invalid')
+
+    def test_japanese_and_latin_hints_are_not_shifted(self):
+        self.run_grid_case('language')
+
 
 class MenuFontIntegrationTests(unittest.TestCase):
     def test_height_repair_runs_on_fast_and_changed_font_paths(self):
@@ -90,6 +128,31 @@ class MenuFontIntegrationTests(unittest.TestCase):
         changed = apply.split('text.fontSize = want;', 1)[1]
         self.assertLess(changed.index('FitMainMenuHeight(text);'),
                         changed.index('SnapContentToPixelGrid(text, _id);'))
+
+    def test_pause_hints_bypass_legacy_additive_snap(self):
+        source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
+        snap = source.split('internal static void SnapContentToPixelGrid(Text text, int id)', 1)[1]
+        snap = snap.split('private static float NearestGridShift', 1)[0]
+        branch = snap.split('if (text == null)', 1)[0]
+        self.assertIn('PauseHintPixelPolicy.IsTarget(text.gameObject.name)', branch)
+        self.assertIn('SnapPauseHint(text, id);', branch)
+        self.assertIn('return;', branch)
+        self.assertLess(snap.index('SnapPauseHint(text, id);'), snap.index('_snapChecked.TryGetValue'))
+
+    def test_pause_hint_repairs_absolute_x_only_after_scope_guard(self):
+        source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
+        helper = source.split('private static void SnapPauseHint(Text text, int id)', 1)[1]
+        helper = helper.split('internal static void SnapContentToPixelGrid', 1)[0]
+        self.assertLess(helper.index('PauseHintPixelPolicy.Applies'), helper.index('text.preferredWidth'))
+        self.assertIn('rect.anchoredPosition = new Vector2(state.TargetX, position.y);', helper)
+        self.assertNotIn('position.x +', helper)
+        self.assertNotIn('rect.position =', helper)
+        self.assertNotIn('text.font =', helper)
+        self.assertNotIn('text.fontSize =', helper)
+        for field in ('Content', 'Font', 'Size', 'CanvasId', 'Ppu', 'XMin', 'Width'):
+            self.assertIn('state.' + field + ' !=', helper)
+        self.assertIn('PauseHintPixelPolicy.IsFinite(position.x)', helper)
+        self.assertIn('PauseHintPixelPolicy.IsFinite(position.y)', helper)
 
     def test_force_large_is_cjk_scoped_and_uses_policy_size(self):
         source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')

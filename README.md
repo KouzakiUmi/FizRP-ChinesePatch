@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-success?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=flat-square)
 ![Engine](https://img.shields.io/badge/Engine-Unity%202021.3-blueviolet?style=flat-square)
-![Version](https://img.shields.io/badge/Version-v1.2.6-blue?style=flat-square)
+![Version](https://img.shields.io/badge/Version-v1.2.7-blue?style=flat-square)
 ![Patch](https://img.shields.io/badge/Patch-X2%20Additive-orange?style=flat-square)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)
 
@@ -23,9 +23,17 @@
 | 游戏引擎 | Unity 2021.3.45f1 / Mono（PC / Steam） |
 | 补丁路线 | **X2 追加式**：中文进 `es` 槽，日/英原样保留 |
 | 补丁规模 | 125 个载荷文件（102 个数据文件 + 23 个 loader）；1,364 条非空译文；16 张汉化贴图 |
-| 当前版本 | **v1.2.6**：补修 9 处遗留（说话人标注、拟声用字、句首感叹停顿） |
+| 当前版本 | **v1.2.7**：修复暂停菜单按键提示在启动、重选中文或返回标题后偶发模糊的问题 |
 | 运行要求 | 图形安装器无需 Python；zip 版命令行需要 Python 3.8+ |
 | 字体 | [fusion-pixel-font](https://github.com/TakWolf/fusion-pixel-font)（SIL OFL 1.1） |
+
+### v1.2.7 更新（2026-10-22）
+
+- **暂停提示清晰度修复**：修复第三页等暂停菜单按键提示有时清晰、有时模糊，重选中文或重新进入关卡后表现变化的问题。
+- **避免重复补偿**：不再移动未激活、未挂载 Canvas 的提示模板；实际实例采用绝对横向偏移，避免继承模板偏移后再次累加。
+- **限定影响范围**：仅处理三条暂停菜单中文按键提示，不改字体、字号或纵坐标，其他 UI 保持原处理。
+- **回归与实测**：37 项隔离回归通过；用户复测直接进入、重选中文和反复进入菜单后提示清晰，日志中 3 个重建实例均未再累积偏移。未逐项覆盖全部分辨率与屏幕模式。
+- 译文、双档字体和 16 张汉化贴图保持 v1.2.6；正式包不包含临时诊断插件。
 
 ### v1.2.6 更新（2026-10-20）
 
