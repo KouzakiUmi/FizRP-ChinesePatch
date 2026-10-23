@@ -1,5 +1,5 @@
 # Optional image-ticket composition and verification tools; versions verified locally.
-Pillow==12.3.0
+Pillow==13.0.0
 numpy==2.4.1
 scipy==1.17.0
 UnityPy==1.25.4
