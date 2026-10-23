@@ -16,8 +16,8 @@
 还是上一版数据。这个坑踩过一次：载荷清单的时间戳没变、安装「成功」，但文本没更新。
 
 参数与原 G1 构建一致：中文写入原先空置的 `es`（Language.Spanish = 4）槽位，
-profile = `zh_additive`，只替换一个字体 blob（k8x12EXL）。默认还会把
-`work/image_tickets_opt/deliverables-opt` 的 16 张 v2.4 贴图回灌进数据目录
+profile = `zh_additive`，替换 k8x12EXS / k8x12EXL 两个共享字体 blob。默认还会把
+`work/image_tickets_opt/deliverables-opt` 中中文会调用的 13 张 v2.4 贴图回灌进数据目录
 （`--no-images` 可跳过，仅调试用），并在末尾同步 catalog。
 """
 from __future__ import annotations
@@ -43,28 +43,19 @@ LOCALE = "es"
 PROFILE = "zh_additive"
 COLUMN = "zh_Hans"
 
-# `font_size` 会被 `build_patch` **直接写进 es 槽的 `size`**（src/build_patch.py 的
-# LocFontData 分支），所以它必须等于 es 槽所指字体的**设计尺寸**，否则字号与字形网格
-# 不 1:1 —— 8px 设计配 size 10/12 分别是 1.25×/1.5× 的整数倍缩放，像素字会糊。
-#
-# 方案甲（2026-10-16 定案）：es 槽**按该 LocFontData 的 defaultFont 档位镜像**，
-# 两个宿主都装 zh_hans blob，且宿主设计尺寸 == 它被使用的字号：
-#     size 12 -> sharedassets0.assets:14   k8x12EXS  <- fusion-12px-zh_hans
-#     size  8 -> sharedassets3.assets:133  k8x12EXL  <- fusion-8px-zh_hans
-# 与插件常量 `Font10Name="k8x12EXS"/SizeLarge=12`、`Font8Name="k8x12EXL"/SizeSmall=8`
-# 一一对应，所以数据侧与运行时完全一致，没有瞬时失配。
-#
-# 这条不变量被静默破坏过一次（构建默认参数 font_size=12 覆盖了原先的 10，
-# 谁都没注意到），所以现在由 build_patch 的 `_additive_size_for` 统一决定，
-# 并在 --check 里逐槽断言。
+# es 槽按 LocFontData.defaultFont 的 8/12 档位镜像，引用与序列化字号一起核验：
+#     size 12 -> sharedassets0.assets:14 k8x12EXS <- Fusion Pixel 10px
+#     size  8 -> sharedassets3.assets:133 k8x12EXL <- Fusion Pixel 8px
+# 序列化 size=12 不等于宿主设计尺寸；普通中文最终由插件量化为 10px。
+# 大标题另由运行时策略保留原字号。不要把数据档位、设计尺寸和最终显示字号混为一谈。
+# 档位选择由 build_patch._additive_size_for 统一决定，--check 逐槽核对引用与数据档位。
 SLOT_FONT_BY_SIZE = {8: ("sharedassets3.assets", 133),
                      12: ("sharedassets0.assets", 14)}
-# 回退：sharedassets137.assets 的外部表里没有 sharedassets2.assets，
-# 它的 es 槽会回退到 12 档宿主（见 build_patch 的 fallback 分支）。
+# 外部表无法解析镜像目标时回退到 12 档宿主（见 build_patch 的 fallback 分支）。
 SLOT_FALLBACK_SIZE = 12
 ES_BUNDLE_NAME = "localization-string-tables-spanish(es)_assets_all.bundle"
 
-# 文本构建先落到临时目录，再用 tools/build_image_patch.py 把 16 张 v2.4 贴图
+# 文本构建先落到临时目录，再用 tools/build_image_patch.py 把 13 张中文运行时 v2.4 贴图
 # 回灌到最终数据目录。缺了这一步，data 会“文本/字体正确、贴图回退成原版”，
 # 而 verify_patch 只核对文本，看不出来（本次踩过）。
 TEXT_STAGE = os.path.join(ROOT, "work", "_additive", "_stage_text",
@@ -189,7 +180,7 @@ def main(argv=None):
         # build_patch 会删掉「原版未改动、不再分发」的文件（如 sharedassets13），
         # 但贴图回灌还需要它们作为基础；补回（不覆盖已注入的文本/字体）。
         _copy_missing(staging_data, TEXT_STAGE)
-        # 3) 贴图回灌到临时目录（只产出被改的 4 个文件）
+        # 3) 贴图回灌到临时目录（只产出被改的 3 个文件；不改 JP 图片 bundle）
         _fresh_dir(IMAGE_STAGE)
         print("== 贴图回灌: %s -> %s" % (args.images, IMAGE_STAGE))
         rc = subprocess.call([sys.executable, IMAGE_TOOL,

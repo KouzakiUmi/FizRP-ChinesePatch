@@ -1,14 +1,14 @@
 {
   "_comment": "Fiz And The Rainbow Planet 的 X2 字体配置。仅保留 zh_additive；显式 null 表示不替换该字体。",
   "profiles": {
-    "zh_additive": "X2 追加式（回退版·一开始的方案）：en 槽位保持原版英语，中文写入原先空置的 es(Spanish=4) 槽位。k8x12EXS 装 10px 设计简中、k8x12EXL 装 8px 设计简中，插件按 Text 原字号量化到 10 / 8 两档，中文与宿主设计尺寸 1:1 锐利且不改变原有排版宽度层级。其余字体（含 Yoshi5x8_v2.1）一律不动。已知代价：日/英模式下 EXS@12 为 1.2×、EXL@12 为 1.5× 非整数缩放"
+    "zh_additive": "X2：中文写入 es(Spanish=4)，en 文案槽不被中文覆盖。k8x12EXS 装 10px、k8x12EXL 装 8px 设计简中；插件将普通中文小字量化到 10/8，超过 12px 的大字号保留。其余字体不替换。共享 Font blob 仍影响日英；原字号可能产生非整数缩放，不能保证所有排版与清晰度不变"
   },
   "fonts": [
     {
       "file": "sharedassets0.assets",
       "path_id": 14,
       "name": "k8x12EXS",
-      "role": "10px 中文宿主；插件把中文大档量化为 10px。日/英模式的原 12px 文本仍存在 1.2 倍缩放。",
+      "role": "10px 中文宿主；普通中文大档量化为 10px，超过 12px 的大标题保留原字号。日/英模式的原 12px 文本仍存在 1.2 倍缩放。",
       "fusion": {
         "zh_additive": "fusion-pixel-10px-proportional-zh_hans.ttf"
       }
@@ -17,7 +17,7 @@
       "file": "sharedassets0.assets",
       "path_id": 15,
       "name": "YoshiAtari8",
-      "role": "雅达利风格英文小字体（4 处 Text），8px",
+      "role": "雅达利风格英文小字体，8px；不替换",
       "fusion": {
         "zh_additive": null
       }
@@ -35,7 +35,7 @@
       "file": "sharedassets2.assets",
       "path_id": 17,
       "name": "07やさしさゴシックボールド",
-      "role": "柔和中黑体（6 处 Text），非像素字体",
+      "role": "柔和中黑体，非像素字体；不替换",
       "fusion": {
         "zh_additive": null
       }
@@ -44,7 +44,7 @@
       "file": "sharedassets3.assets",
       "path_id": 132,
       "name": "prstartk",
-      "role": "Press Start K 街机字体（6 处 Text），8px",
+      "role": "Press Start K 街机字体，8px；不替换",
       "fusion": {
         "zh_additive": null
       }
@@ -53,7 +53,7 @@
       "file": "sharedassets3.assets",
       "path_id": 133,
       "name": "k8x12EXL",
-      "role": "被 49 个 Text 以 size 12 引用，同时是插件的「8 档」中文宿主。装 8px 设计简中：size<=8 的中文用它（8/8 = 1:1 锐利）；代价是那 49 个 size 12 的文本在日/英模式下为 12/8 = 1.5×（已接受，见 FONT_SOLUTION 的已知限制）",
+      "role": "8px 设计中文宿主；普通 size<=8 中文使用它。共享对象被其它语言按 size 12 使用时会产生 12/8=1.5 倍缩放，不保证日英画面不变",
       "fusion": {
         "zh_additive": "fusion-pixel-8px-proportional-zh_hans.ttf"
       }

@@ -1,17 +1,17 @@
 {
  "name": "Fiz 与彩虹星球 简体中文补丁",
  "game": "Fiz and the Rainbow Planet",
- "version": "1.2.7",
- "built": "2026-10-22",
- "payload_files": 125,
- "payload_bytes": 24043442,
+ "version": "1.2.8",
+ "built": "2026-10-23",
+ "payload_files": 117,
+ "payload_bytes": 23061785,
  "patch_info": {
   "reference_hashes": {
    "globalgamemanagers": "406b9d3b883f72c7d08d531942044f98757e5eb243f66c8cf0a5c25196d0ce4e",
    "level0": "8b104e3290d067a4e683c22160f040d7a551d6bd34e12a80ac16fe12d0594fd0",
    "app.info": "d32db4d3d6e2de75a8ea7b9d89957b228fcef4934aeb2dd83008bc3d7ad58af5"
   },
-  "payload_files": 125,
+  "payload_files": 117,
   "mode": "additive",
   "patch_info_source": "config/game-reference.json"
  },
@@ -27,11 +27,6 @@
    "size": 204800
   },
   {
-   "path": "BepInEx/core/0Harmony.xml",
-   "sha256": "d1f02fc3ada3a13da307de421225bfe56ebe24064370980979391c4be021672f",
-   "size": 267107
-  },
-  {
    "path": "BepInEx/core/0Harmony20.dll",
    "sha256": "c755a5ab2712915a32f9a850d580a8c1b70ff1653bc76600f2767aa8ffccc663",
    "size": 112640
@@ -42,29 +37,14 @@
    "size": 6656
   },
   {
-   "path": "BepInEx/core/BepInEx.Harmony.xml",
-   "sha256": "a04fedf08f7c81f5d01aba6f2840a7ffce50b79bbd24587d8dbe69ab73971d29",
-   "size": 4056
-  },
-  {
    "path": "BepInEx/core/BepInEx.Preloader.dll",
    "sha256": "55d3895351a9d16b63b6f35f1c01b44ac650979e853d0bd3a442b92a082af64f",
    "size": 43008
   },
   {
-   "path": "BepInEx/core/BepInEx.Preloader.xml",
-   "sha256": "33275b2783b7b99495a02c098ee86d6a9a2783e884a5c9369021f20c94cf99e7",
-   "size": 7964
-  },
-  {
    "path": "BepInEx/core/BepInEx.dll",
    "sha256": "8255b28902886085c578b9e427d3073c97002db85176d2090cdeda90ef14ce70",
    "size": 128512
-  },
-  {
-   "path": "BepInEx/core/BepInEx.xml",
-   "sha256": "7ba2266061b9f8a9f146218a312bfdd0d7f2b53a99a7e66c957215c6b66ca0d7",
-   "size": 89835
   },
   {
    "path": "BepInEx/core/HarmonyXInterop.dll",
@@ -97,34 +77,19 @@
    "size": 105984
   },
   {
-   "path": "BepInEx/core/MonoMod.RuntimeDetour.xml",
-   "sha256": "54887808960d156550b37d602d08847607aa9e908d039f2765fb0b5e79394aa4",
-   "size": 9414
-  },
-  {
    "path": "BepInEx/core/MonoMod.Utils.dll",
    "sha256": "9d1495f147ac93c4f81f84538c1a326e8f8a6aefc78d6289d798f3ce1162c5e9",
    "size": 187904
   },
   {
-   "path": "BepInEx/core/MonoMod.Utils.xml",
-   "sha256": "0577b362023a3432d6e8d7934c5eddc3e08fdbb19e191af083e341562c5ede38",
-   "size": 78973
-  },
-  {
    "path": "BepInEx/plugins/FizRPLangMenu.dll",
-   "sha256": "4d15cabd3f817e92f4f10d9b938ef377d4029828b0637a23e4ae638b6629c2b6",
-   "size": 26112
-  },
-  {
-   "path": "StreamingAssets/aa/StandaloneWindows64/localization-assets-japanese(ja)_assets_all.bundle",
-   "sha256": "4f38a89ea5f428d47534505c443f0696b748ee3d38b82f2a05475981583d31b7",
-   "size": 30533
+   "sha256": "194dd72660cf04861060403933f19b2c5acd7014d06c070062fa79cfa4a28e80",
+   "size": 26624
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-assets-shared_assets_all.bundle",
-   "sha256": "cf7e0b771598bdc210c3f78387c1a43b2501286d4af422f100b108181942f3d3",
-   "size": 104669
+   "sha256": "26626b6e0329a07ddb6de141eb0a15cc224c1493858dd5eff611713b310f2bbd",
+   "size": 102184
   },
   {
    "path": "StreamingAssets/aa/StandaloneWindows64/localization-string-tables-spanish(es)_assets_all.bundle",
@@ -133,13 +98,8 @@
   },
   {
    "path": "StreamingAssets/aa/catalog.json",
-   "sha256": "90f2ddf55c29a43baeda55cd13c3e93f4856f5d91630f2138ecf25e9eb92d4c6",
-   "size": 79538
-  },
-  {
-   "path": "changelog.txt",
-   "sha256": "b184d858cb0ff6614ca8ce0247fb0d186cabc91ed7e4d4d9d57ea3d744ce98b5",
-   "size": 338
+   "sha256": "821515106127252b7c583cd4662ef4c23e3687e4d874a9c61e07e7cbf05ce160",
+   "size": 79562
   },
   {
    "path": "doorstop_config.ini",
@@ -338,8 +298,8 @@
   },
   {
    "path": "sharedassets3.assets",
-   "sha256": "e405447c4a783dae2dee21fe5a3643417c72cd17f36bbec981cd20cbc8ed1b15",
-   "size": 5370496
+   "sha256": "9a54c7c42ba5fc6066be8271af06bd7f9a0d08606a7eb8bc7186fb2a0820250c",
+   "size": 4879008
   },
   {
    "path": "sharedassets30.assets",

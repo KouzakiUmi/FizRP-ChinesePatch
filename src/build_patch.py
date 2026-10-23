@@ -566,8 +566,8 @@ def build(out_dir="dist-additive/FizAndTheRainbowPlanet_Data",
     cfg = load_config(config_path)
     font_entries = [e for e in cfg["fonts"] if not e.get("disabled")]
 
-    # Additive mode: Chinese lives in the vacant `es` slot, so that slot's
-    # LocFontData must be repointed at the one font blob this mode replaces.
+    # Chinese lives in `es`; its LocFontData selects one of the two shared
+    # 8/10px font hosts. The serialized tiers are 8/12; runtime handles display size.
     additive_font = dict(ADDITIVE_FONTS_BY_SIZE)
 
     text_entries = []

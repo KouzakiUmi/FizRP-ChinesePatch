@@ -1,402 +1,151 @@
-# FizRP 简体中文补丁 — 技术实现文档
+# X2 技术架构与维护契约
 
-> **本文定位**：写给维护者看的**内部实现**参考。三份文档分工如下——
-> * `README.md` —— 面向使用者的工作流与命令、当前进展与复核记录；
-> * `docs/FINDINGS.md` —— 对游戏本体的**逆向分析**（资源布局、语言枚举、字体清单、覆盖率）；
-> * `docs/TECHNICAL.md`（本文）—— **各组件如何工作、格式契约、不变量、校验门槛与已知坑**。
->
-> 开发与回归只写工作区或临时沙箱；不操作真实游戏目录。
+当前维护版本：v1.2.8。面向维护者；使用与升级见 [README](../README.md)，数据覆盖见 [TEXT-MAPPING](TEXT-MAPPING.md)，待验与已知漏项见 [KNOWN-ISSUES](release/KNOWN-ISSUES-X2.txt)。历史发布记录描述当时版本，不是当前实现规范。
 
----
+## 1. 架构边界
 
-## 1. 目标与硬约束
+游戏为 Unity 2021.3.45f1 / Mono。中文复用 `Language.Spanish=4`、locale `es`，不新增枚举或 locale，不修改游戏 DLL，不分发 `level*` 场景。
 
-把一款只有日/英/法/西的 Unity 游戏做成**可直接分发给别人**的简体中文补丁。
+```text
+原版 staging + 译表 + 字体配置 + 美术 PNG
+  → build_additive_data：改 SO/es 串表/共享字体/图片，生成数据目录
+  → build_additive_payload：组装 loader/插件，同步 catalog，生成 manifest
+  → PyInstaller / package_additive：EXE 与 ZIP
+  → patch_tool：验证、备份、复制、卸载还原
 
-三条约束按优先级排列，后续所有设计取舍都由它们决定：
+运行时 BepInEx 插件：第三语言选项 + 字体/字号 + 局部像素定位
+```
 
-| 优先级 | 约束 | 后果 |
-| --- | --- | --- |
-| 1 | **拷到任何一台装了正版游戏的电脑上都能直接玩** | 排除"依赖本机环境/需要用户自己装一堆东西"的方案；也排除"改 `Assembly-CSharp.dll` 后只在我机器上验证过"的方案 |
-| 2 | 不改动游戏原始 DLL 与场景文件 | 因此不新造 `Language` 枚举值、不改 `catalog.json` 的键空间 |
-| 3 | 尽量保留原有语言 | 中文**占用一个既有但空置的槽位**，而不是覆盖日/英 |
+内容在构建时写入资源，并非由插件在游戏启动时统一注入。en/ja 文本槽不被中文写入，但共享图片和字体仍可能影响其它语言，不能把“复用 es”解释成“资源完全隔离”。
 
-约束 1 与 2 联手排除了"新增 `zh-Hans` locale"：那需要同时改 DLL 枚举、
-重建 Addressables catalog、并放开语言选择界面的 clamp。取而代之的是**槽位复用**。
+## 2. 组件与唯一真源
 
----
-
-## 2. 游戏画像
-
-| 项 | 值 |
+| 组件 | 真源与职责 |
 | --- | --- |
-| 引擎 | Unity **2021.3.45f1**，**Mono** 后端（`MonoBleedingEdge/`，脚本在 `Managed/*.dll`） |
-| 构建名 | `NijiiroDragon` / `FizAndTheRainbowPlanet` |
-| Steam app | `FizRP` |
-| 资源 | `level*.assets`（场景）+ `sharedassets*.assets` + `resources.assets`；每个 `.assets` 配同名 `.resS` / `.resource` 存流式数据 |
-| 现代内容 | **Addressables 1.22.2**：`StreamingAssets/aa/catalog.json` + `StandaloneWindows64/*.bundle` |
-| 存档/日志 | `%USERPROFILE%\AppData\LocalLow\NijiiroDragon\FizAndTheRainbowPlanet\`（Easy Save 3 + `Player.log`） |
+| 提取 | [extract_text.py](../src/extract_text.py)：生成工作表与本地索引；其自定义文件列表是显式清单，不是任意新版本的自动全量发现 |
+| 译文 | [zh_Hans.csv](../translation/zh_Hans.csv)，1,411 行、1,364 非空；不是所有场景文案的全集 |
+| 编解码 | [custom_types.py](../src/custom_types.py)：TextData、AutoTalk_Data、Title_Data、DamageTalk_Data、LocFontData |
+| Unity 环境 | [unity_env.py](../src/unity_env.py)：游戏根/类型树及对齐兼容；import 会安装进程级补丁 |
+| 数据写入 | [build_patch.py](../src/build_patch.py)：四类文案、LocFontData、字体 blob、es StringTable |
+| 图片范围 | [image_patch_policy.py](../tools/image_patch_policy.py)：整图排除及 JP Sprite 名单；不依工单编号或资源名是否含日文猜语言 |
+| 图片回灌 | [build_image_patch.py](../tools/build_image_patch.py)：合成受保护图像、写回、逐像素回读；不安装、不改 catalog |
+| 数据流水线 | [build_additive_data.py](../tools/build_additive_data.py)：原版副本→文本→图片→合并修改文件→同步 catalog |
+| 载荷流水线 | [build_additive_payload.py](../tools/build_additive_payload.py)：数据、运行时 DLL、插件、catalog 与计数/路由门槛 |
+| 版本与清单 | [build_manifest.py](../tools/build_manifest.py)，独立基线 [game-reference.json](../config/game-reference.json) |
+| 安装核心 | [patch_tool.py](../tools/patch_tool.py)，[GUI](../tools/patch_launcher.py)委托同一公共 API |
+| 分发 | [package_additive.py](../tools/package_additive.py)、[PyInstaller spec](../FizRP-ChinesePatch.spec) |
 
-`Managed/` 里的 DLL 是**还原类型树的关键输入**：`src/unity_env.py` 用
-`TypeTreeGeneratorAPI` 从这些 DLL 生成 MonoBehaviour 类型树（见 §5）。
+原版 staging、Managed DLL、提取索引、原版 PNG、美术 PNG、字体和 loader 输入为本地构建输入，不随仓库自动提供。不要把已安装补丁的目录当原版输入。
 
----
+## 3. 文本写入契约
 
-## 3. 唯一交付路线：X2
+- 主表 ID 与索引定位必须一致，禁止仅凭显示文本子串验证写入。
+- `TextData`：写 `textDatas[language==4].strings[index]`，缺块时新建。
+- `AutoTalk_Data`：写 `locTalkDatas[language==4].talkDatas[index].text`；沿用 ja 的结构，保持说话人、表情、事件和等待字段。
+- `Title_Data`：写 `label_es`、`info_es`、`infoDisable_es`。
+- `DamageTalk_Data`：每语言一个资源，仅改 es 资源；目标列表按日文模板补长，不能因 es 原本缺下标丢行。
+- `StringTable`：通过 SharedTableData 的 ID/键映射写 `m_Localized`，目标缺键则追加；不是把其它 locale 的数组位置当键。
+- `TreasureText_default` 原版多一个重复 ja 块，构建移除重复块以对齐宝物表索引；这是数据修正，不是新增翻译。
+- 默认覆盖门槛为 `written == expected`；`verify_patch` 按文件、对象、语言、字段/下标回读。1,364 条通过只证明已登记行写对，不证明硬编码 UI 全覆盖。
 
-项目只维护 X2 追加式，不再包含另一套替换式安装/打包分支，也不依赖本机历史归档。
+### 序列化安全
 
-| 项 | X2 |
+MonoBehaviour 头、字符串长度、列表和字段对齐以编解码规格为准，不应泛化为“所有字段都固定四字节对齐”。小整数/布尔字段存在对齐标志，数组元素另有语义。
+
+UnityPy 1.25.4 的生成树在本游戏存在小字段对齐与部分类型节点问题；环境兼容层补齐 `kAlignBytes`、关闭相应 boost 读取路径，自定义类走手写编解码。修改规格必须执行 [verify_codecs.py](../src/verify_codecs.py) 的字节往返与语义不变量检查。字节往返相等不等于语义正确。
+
+对象 ID、class ID、external 表必须保持；`.resS` 不作为本补丁分发目标。替换 Texture2D 将像素内联并清空其旧流引用，其余对象不应跟随重写。
+
+## 4. 字体、字号与像素定位
+
+[字体配置](../fonts.config.json)只替换两个共享 Font 的 blob：
+
+| 宿主 | blob 设计尺寸 |
 | --- | --- |
-| 产物 | `dist/FizRP-X2-v<版本>.zip` + `dist/FizRP-ChinesePatch.exe` |
-| 发布源 | `dist-additive/payload/` 与 `manifest-additive.json` |
-| 载荷 | 125 文件：102 数据 + 23 loader；中文写入 `es`（Language.Spanish=4） |
-| 字体 | `zh_additive`：EXS=10px、EXL=8px |
-| 插件 | BepInEx + Harmony + Doorstop；语言菜单第三项「中文」 |
-| 安装入口 | `tools/patch_tool.py`；GUI 只调用同一套公共 API |
-| 资源定位 | 源码 `dist-additive/payload/`；zip `payload/`；冻结包 `additive-payload/` |
+| sharedassets0.assets:14 / k8x12EXS | Fusion Pixel 10px zh-Hans |
+| sharedassets3.assets:133 / k8x12EXL | Fusion Pixel 8px zh-Hans |
 
-**X2 的中文槽位为什么是 `es`**：`Language` 枚举里 `Spanish = 4` 的本地化数据在该 build
-中**几乎全空**（5 张表合计仅 13 行非空，1411 行文本里西语只占 13 行），且语言菜单
-原本 clamp 在 `0..1` 根本选不到它——属于事实上的死槽位。X2 把它启用，代价最小。
+6 个 LocFontData 的 es 槽按默认 8/12 档位镜像字体引用；**序列化 size=12 不等于字体设计尺寸=12**。最终普通中文字号由插件改为 8/10。
 
----
+[运行时插件](../plugin/LangMenuPlugin.cs)由 Harmony 属性补丁、渲染前修正及扫描共同处理：
 
-## 4. 文本的三个存储系统
+- 中文语言下，含 CJK 的 Text 才换中文宿主；纯拉丁通常保持原字体，不承担翻译文案职责。
+- [FontSizePolicy](../plugin/FontSizePolicy.cs)：普通字号不大于 8→8，9～12→10，超过 12→保留；过场标题原字号 24，不应套入普通小字号档。
+- 基准字号记录该实例见过的最大值，用于抵抗游戏后续小字号写入。主菜单、InfoText 和版权等既有强制 10px 范围仍由原策略决定。
+- [TitleMenuFontPolicy](../plugin/TitleMenuFontPolicy.cs)：TitleCanvas 中文使用 10px，补足不足的文本框高度，不改变宽度/位置。
+- [PauseHintPixelPolicy](../plugin/PauseHintPixelPolicy.cs)：仅三条挂载到 Canvas 的中文暂停提示，按绝对横向偏移纠正，不移动未激活模板，不累加继承偏移。
+- TMP 有独立接管路径；当前唯一 TMP 初始串为纯拉丁 NPC TALK，不能误写成“没有 TMP 支持”或“该文本已翻译”。
 
-游戏把文本放在**三套互不相干**的系统里，任何只处理一套的方案都会漏掉大半。
+共享 Font 替换对引用该对象的其它语言也有效；原字号/设计尺寸可能产生非整数缩放。大标题保留字号不意味着点阵字在所有缩放下锐利。
 
-| 系统 | 载体 | 数量 | 语言组织 |
-| --- | --- | --- | --- |
-| Unity Localization | `StringTable` MonoBehaviour，在 Addressables bundle 内 | 5 表 × 4 语言 = **162 键** | 每语言一个 `StringTable_xx` + 共享 `SharedTableData`（在独立 bundle `localization-assets-shared`） |
-| 自定义 SO（列表式） | `TextData`(55) / `AutoTalk_Data`(247) | 302 个对象 | 组件内 `List<...Class>`，每项带 `language` 枚举 |
-| 自定义 SO（字段式） | `Title_Data`(49) / `DamageTalk_Data`(5) | 54 个对象 | `label` / `label_en` / `label_fr` …；DamageTalk 是**每语言一个资源** |
+## 5. 图片范围与 JP 保护
 
-合计提取出 **1411 行**可翻译文本（`localization` 162 / `AutoTalk` 734 / `DamageTalk` 238 /
-`Title` 147 / `TextData` 130）。
+历史美术集 16 张，正式回灌 13 张：
 
-**`Language` 枚举**（`work/decompiled/Language.cs`，取自 `Assembly-CSharp.dll`）：
+- 排除 IMG-06（JP 关卡横幅）、IMG-15（JP 主标题）、IMG-16（JP 小游戏标题）。JP 图片 bundle 不再进入中文载荷。
+- IMG-03/04/05/08 是共享图集，不能整张删除。回灌时按实际 Sprite 的 textureRect 定位，恢复其中 10 个 JP 专用切片。
+- 保护矩形从 Unity 左下角坐标转换为 PNG 左上角坐标，向外包围浮点矩形，越界/缺失/重复 Sprite 都中止。
+- 原版片区从原版提取 PNG 直接复制 RGBA，**不用 alpha mask 混合**，以保留透明像素；PNG 尺寸必须匹配。
+- 其余区域沿用批准的中文 PNG。原始美术输入不被改写；序列化后与合成后的期望图逐像素比对，格式/过滤方式保持，非目标对象字节保持。
 
-```
-Japanese = 0, English_Machine = 1, English = 2, French = 3, Spanish = 4, Max = 5
-```
+参数 `--images` 指定美术 PNG，`--original-images` 指定原版 PNG。默认均为工作区本地输入，构建前需核对它们来自适配版本。
 
-`English_Machine = 1` 是机翻占位槽（数据几乎为空）；`Language.Max` 全项目无人使用。
-两套自定义系统的 `language` 字段就是这个枚举的整数值——**因此"写中文"= 往某个整数槽位写**，
-不需要任何代码改动，这正是槽位复用方案成立的根本原因。
+es/en 的六个 Sprite Table 条目目前相同。恢复 JP 片区不会隔离英文模式；真正的独立中文图像层是另一项架构变更，本版未实现。
 
-`FileId`/键映射还有一个易错点：`StringTable` 条目的 `m_Id` 才是键，必须经
-`SharedTableData.m_Entries` 反查成 `m_Key` 才能得到稳定 id；而**各 locale 的 `m_Id` 集合并不相同**
-（fr/es 是子集），所以提取时按 `m_Id` 并集出行、缺该 locale 就留空。
+## 6. 当前载荷与目录路由
 
----
+**117 个载荷文件**，以[权威清单](../dist-additive/manifest-additive.json)为准：
 
-## 5. Unity 序列化字节级契约
+| 投放目标 | 文件 |
+| --- | --- |
+| Data：101 | 98 `.assets` + es 字符串 bundle + shared 图片/键表 bundle + catalog |
+| 游戏根：16 | winhttp.dll、doorstop_config.ini、.doorstop_version + BepInEx/core 12 个 DLL + 插件 DLL |
 
-**这是整个项目最容易出错的一层，改动前务必先读 `docs/FINDINGS.md` 与本节。**
+loader 原始输入仍可包含完整 SDK 文档；组装时排除 changelog 和 core XML API 文档，**不裁剪运行时 DLL**。项目、第三方、字体许可保留于发布包根目录。路由常量保留历史 changelog 兼容识别，不代表本版仍分发它。
 
-### 5.1 通用规则（Unity 2021.3 Mono）
+安装器以源码、ZIP、冻结环境分别定位本包资源，不靠当前工作目录。数据与 loader 的路由边界由相对路径首段决定，不能把 winhttp.dll 放进 Data。
 
-```
-每个字段都从 4 字节边界开始
-bool / UInt8 / char / SInt16 等 1、2 字节字段，读完补齐到 4 字节
-string  = align + int32 长度 + UTF-8 字节 + align
-List<T> = int32 数量 + N 个元素
-MonoBehaviour 头 = PPtr<GameObject>(4+8) + m_Enabled(1+3) + PPtr<MonoScript>(4+8) + m_Name(string)
-```
-`m_Name` 之后即自定义字段。
+ZIP 为 117 个载荷 + 9 个清单/安装/说明/许可文件。EXE 固定数据为清单与 5 个说明/许可文件，再按清单动态收集 117 个载荷；此外带 Python/Tk 运行依赖，不能按所有归档条目数判断游戏载荷数量。
 
-### 5.2 UnityPy 1.25.4 的两个必修 bug
+## 7. catalog 与完整性
 
-1. **生成的类型树缺 `kAlignBytes`(0x4000)。** `TypeTreeGeneratorAPI` 依据 DLL 生成的节点
-   没带对齐标志，于是 `m_Enabled` 之后所有字段提前 3 字节读出——`m_Script.m_FileID` 会变成
-   `16777216`，`PPtr.deref()` 报 `invalid m_FileID`。修法：递归给
-   `UInt8/SInt8/char/bool/UInt16/SInt16` 节点补 flag，**但跳过父节点是 `Array` 的元素节点**
-   （否则数组元素被逐个对齐，会毁掉 string 与数组）。
-2. **C++ 加速读取器忽略该 flag。** 必须 `TypeTreeHelper.read_typetree_boost = None`。
+修改 bundle 后同步其实际大小与 CRC 策略，不能只同步 es 串表而漏掉 shared。退出载荷的 JP bundle 不应继续沿用修改后的 catalog 记录。
 
-两处补丁都在 `src/unity_env.py`，由幂等的 `install_patches()` 施加，`patches_installed()` 查询。
-**注意这是进程级全局副作用**：import 本模块即改变整个进程的 UnityPy 行为。
+[catalog_sync.py](../tools/catalog_sync.py)对 catalog 的两个二进制字符串字段定点更新。当前格式包括：extra-data 段、长度前缀、七个 int32 的 entry，以及指向类型头的绝对 dataIndex。段长变化必须同步后续偏移；脚本做格式往返与引用检查。
 
-### 5.3 为什么不用类型树、改成手写编解码器
+构建对已修改 bundle 使用 `--crc 0`，意图是禁用对应 CRC 校验，不是声称已离线算出真实 CRC。离线自洽/回读不等于 Unity 运行时加载验收。
 
-补完对齐后仍有类**生成错节点**，且错法各不相同：
+清单约束包括模式、版本、文件路径唯一性、相对路径合法性、大小、哈希和三项游戏版本门禁。门禁来自独立配置，不从已安装补丁文件重新采样。安装器发现载荷缺失/多余/损坏即禁止写入，`--yes` 不跳过此检查。
 
-* `TextData` 的 `List<string>` 字段被标成 `m_Type="string"`，`read_value` 先命中
-  `FUNCTION_READ_MAP["string"]`，永远进不了 vector 分支 → 只读 208/904 字节；
-* `DamageTalk_Data` 生成的节点漏了一个列表（枚举里有 `miss_capture` 但类里没有对应字段）；
-* `ButtonImageData` 直接让生成器抛 `NullReferenceException`。
-
-因此 5 个游戏自定义类改为**按反编译源码手写字节级编解码器**（`src/custom_types.py`），
-用 `(字段名, 类型) 规格表` 描述，`Reader`/`Writer` 共用同一份规格。
+## 8. 安装与升级
 
-**验收方式**：`src/verify_codecs.py` 对全部 **362** 个对象做「解码 → 重编码 → 与原字节比对」，
-并要求 362/362 完全一致；同时校验语义不变量（字符串不得含未解码字节、list 长度合理、
-`m_FileID` 范围）。
-
-> ⚠️ **字节往返相等不等于语义正确。** 曾经漏了逐字段对齐，`isCheckViewedFlag`(bool) 与
-> `talkedFlagKey`(string) 从错误偏移读出，往返却仍然字节一致——因为 0/1 的字节模式
-> 恰好能原样写回。这正是后来必须补语义不变量的原因。
-
-### 5.4 写回
-
-* `.assets`：`obj.set_raw_data(header + encode(data)) ` → `sf.save()`。
-  **绝不改 `.resS` / `.resource`**：对象 path_id 不变，流式数据引用依然有效。
-* bundle：`obj.save_typetree(tt)` → `bundle.save(packer="original")`。
-  `packer="original"` 复现原 bundle 的压缩与目录标志（原版 en 串表为
-  LZ4HC，`data_flag=0x243 / block_info=0x3`）；用默认 packer 会写成未压缩。
-
----
-
-## 6. 字体子系统
-
-游戏 17 个字体**全部是动态 `UnityEngine.Font`**，完整 TTF/OTF 就存在 `m_FontData` 里
-（`m_CharacterRects` 为空、图集未烘焙），因此**换字体 = 换这段 blob**，无需重建图集。
-唯一的例外是 `sharedassets14.assets:43` 的 `k8x12EXS SDF`——那是 TextMeshPro 字体资源、
-图集已烘焙，只换源 TTF 不生效；全游戏仅 1 处 `TextMeshProUGUI` 用到它，故不处理。
-
-**逐语言换字体由 `LocFontData` 驱动**：`LocalizedText.cs` 在运行时
-`FindIndex(x => x.language == lang)` 后设置 `text.font / fontSize / lineSpacing`，
-找不到就回落 `defaultFont`。全游戏共 **6** 个 `LocFontData` 资源。
-
-替换体为 [fusion-pixel-font](https://github.com/TakWolf/fusion-pixel-font)（SIL OFL-1.1），
-各变体字形覆盖相同（约 28k–35k 字形，汉字/假名/拉丁齐备），差别只在汉字的**字形偏好**
-（`-ja` / `-zh_hans` / `-latin`）。项目配置仅保留 `zh_additive`，其它字体不替换。
-
-`zh_additive` 的设计要点：**按宿主原字号选设计尺寸**（EXS 原为 12px 级、EXL 原为大号），
-由插件把 `Text` 字号量化到 10 / 8 两档，使中文与设计尺寸 **1:1 锐利**；
-代价是日/英模式下 EXS@12 为 1.2×、EXL@12 为 1.5× 非整数缩放。
-
-字体提取与普查在 `src/fonts.py`（含自写的 OpenType `name` 表读取）与 `src/font_usage.py`
-（递归扫 `Text.m_FontData.m_Font` 统计引用数）；`tools/cmap_check.py` 校验字形覆盖，
-其 cmap format-4 解析器的 `idRangeOffset` 偏移曾被写错（把 `了/人/个/日` 误报为缺失），已修。
-
----
-
-## 7. 构建流水线
-
-### 7.1 数据准备与统一构建核心
-
-```
-src/fonts.py         17 个内嵌字体 -> work/fonts/original/ + work/fonts/info.json
-src/extract_text.py  三套文本系统 -> translation/*.csv + work/text_index.json
-src/make_sheets.py   ja 基准 + en 参考 -> translation/zh_Hans.csv
-src/build_patch.py   固定 slot=4 / locale=es / profile=zh_additive
-```
-
-`src/build_patch.py` 一次遍历同时改四样东西，避免同一文件被多次改写：
-
-1. **自定义 SO 文本**：按 `KIND_TO_CLASS` 把索引里的短名（`AutoTalk`）映射到 C# 类名
-   （`AutoTalk_Data`）。**这个映射缺失过两次**，两次都表现为"静默丢弃 1119 行却报成功"。
-2. **DamageTalk 补齐**：每语言一个资源且列表长度不同；先按语言解析一次目标文件
-   （`damage_file` 映射），再用日文模板补齐目标资源的列表（实例：`padded=12`）。
-   注意**只补列表长度不够——那些行在索引的 `others` 里没有目标语言条目，
-   会在路由阶段就被丢掉**，两处都要修。
-3. **`LocFontData` 字体引用与字号**：es 槽镜像默认档位，并由插件量化到 10/8px。`LocFontData` 不带文本，
-   所以它所在文件由 `work/font_map.json` 发现，**不靠硬编码清单**
-   （硬编码曾漏掉 `sharedassets137.assets` 的 `LocFontData_Ending_Role`）。
-4. **StringTable 改写**：目标 locale 的 bundle 内逐条改 `m_Localized`；
-   若目标语言表**缺某个键**（en UI 表只有 33/34），则追加一条表项——
-   与 Unity Localization 运行时行为一致（实例：`added=1`）。bundle 以
-   `packer="original"` 保存。
-
-> `catalog.json` 由 X2 数据/载荷流水线调用 `catalog_sync.py` 生成。
-
-**覆盖率门槛**：`build_patch` 末尾对账 `written == expected`，**缺行默认 `ABORT`**
-（`--allow-missing` 可降级为告警）。这是防止"少写了却报成功"的最后一道闸。
-
-### 7.2 X2 完整流水线
-
-```
-tools/build_additive_data.py     work/_additive/staging 的原版资产
-                                 -> dist-additive/FizAndTheRainbowPlanet_Data/
-                                    （slot=4 / locale=es / profile=zh_additive；
-                                      双档：k8x12EXS -> 10px、k8x12EXL -> 8px；
-                                      默认用 build_image_patch.py 回灌 v2.4 的 16 张贴图，
-                                      并在末尾用 catalog_sync 同步 catalog）
-tools/build_additive_payload.py  上一步产物 -> dist-additive/payload/ + manifest-additive.json
-                                 （含调 tools/catalog_sync.py 生成 catalog.json）
-python -m PyInstaller --noconfirm --clean FizRP-ChinesePatch.spec
-                                 -> dist/FizRP-ChinesePatch.exe（内嵌 additive-payload/）
-python tools/package_additive.py -> dist/FizRP-X2-v<版本>/ + .zip + .sha256
-```
-
-发布顺序不能颠倒：**改文本/表 → `build_additive_data.py` → `build_additive_payload.py`
-→ spec 重建 exe → `package_additive.py` 重打 zip**。spec 的固定条目是
-`manifest-additive.json` + `docs/release/README-X2.txt` + `docs/release/KNOWN-ISSUES-X2.txt`
-+ 仓库根 `LICENSE` + 仓库根 `THIRD-PARTY-NOTICES.txt` + `dist/fonts/source/OFL.txt`；
-冻结包和 zip 均只包含 X2 清单与同一套安装核心。
-
-几个坑写在脚本 docstring 里，值得单独强调：
-
-* **`build_additive_data.py` 默认包含贴图回灌。** 它先做文本/字体注入，再调
-  `tools/build_image_patch.py` 把 v2.4 的 16 张贴图写进数据目录，最后同步 catalog。
-  `--no-images` 仅用于调试；正式构建不要用，否则 `verify_patch`（只核对文本）
-  仍会通过，但贴图会悄悄回退成原版。
-* **staging 必须含图像宿主的原版文件。** 图像用到的 `sharedassets13.assets`、
-  `localization-assets-{shared,japanese(ja)}` 若不在 `work/_additive/staging/`，
-  图像回灌会失败；本次曾误从**已安装补丁的游戏目录**补 `sharedassets13`，把中文版
-  当成原版，导致“载荷与原版相同”误报。应从 `_FizRP_original` 或 Steam 校验后的
-  原版补入。
-* **`build_additive_payload.py` 只做组装，不重跑文本注入。** 改了
-  `src/build_patch.py` 或 `translation/zh_Hans.csv` 之后**必须先跑 `build_additive_data.py`**，
-  否则载荷里还是上一版数据——曾踩过：清单时间戳没变、安装"成功"，文本却没更新。
-* **loader 条目必须投放到游戏根目录，不是 `*_Data`。** BepInEx 5 的 Doorstop 代理
-  `winhttp.dll` 依赖 Windows DLL 搜索顺序（从 exe 所在目录开始），`*_Data` 不在搜索路径里；
-  `doorstop_config.ini`、`.doorstop_version`、`BepInEx/` 也必须同级。因此载荷是**平铺**的，
-  由安装器按"相对路径首段"分流：
-  ```
-  payload/*.assets                -> <游戏根>/FizAndTheRainbowPlanet_Data/*.assets
-  payload/StreamingAssets/**      -> <游戏根>/FizAndTheRainbowPlanet_Data/StreamingAssets/**
-  payload/winhttp.dll             -> <游戏根>/winhttp.dll
-  payload/doorstop_config.ini     -> <游戏根>/doorstop_config.ini
-  payload/.doorstop_version       -> <游戏根>/.doorstop_version
-  payload/BepInEx/**              -> <游戏根>/BepInEx/**
-  ```
-  路由常量两侧共用（`ADDITIVE_GAME_ROOT_NAMES` / `ADDITIVE_GAME_ROOT_PREFIXES`），
-  并在构建时校验载荷里不存在第三条路由。
-
-### 7.3 运行时插件 `plugin/LangMenuPlugin.cs`
-
-X2 能做到"新增第三项而不改 DLL/场景"，靠的是 BepInEx + Harmony 两处运行时补丁：
-
-1. **`LanguageSetting.Start` 的 Postfix**——激活原场景里已存在但未启用的第三项
-   （源码里 `Update()` 的 switch 早就写好了 `case 2 → Language.Spanish`，
-   只是 `nowSelectingIndex` 被 clamp 在 `0..1`，且场景里第三个选项没被启用），
-   并把它的文本置为「中文」。
-2. **`LanguageSetting.Update` 的 Transpiler**——把 clamp 常量 `1` 改成 `2`，
-   使光标能选到 index 2，从而由原版逻辑落到 `Language.Spanish`（即中文槽位）。
-3. 另有一个 `FontApplierBehaviour`：语言为 Spanish 时把 `Text.font` 换成中文字体。
-4. 主菜单 `TitleCanvas` 内的中文固定使用现有 10px 宿主，并按 `preferredHeight` 向上取整补足不足的文本框高度；对白、HUD 与纯拉丁文本不套用此规则。
-   原设置标签只有 8px 高且启用垂直截断，冷启动时 8px 宿主尚未加载而回退到 10px，会造成整行不显示；重选语言后改用 8px 字体虽能显示但偏小。修复在首次换字体与稳定快速路径都检查高度，避免布局重设后再次裁切。
-   `TitleMenuFontPolicy` 提供可离线编译执行的范围/高度策略回归；完整 Unity 画面仍以实机验证为准，本次用户已确认问题恢复正常。
-
-磁盘上的游戏 DLL 与场景文件**不做任何修改**——这是 X2 体积小又不牺牲英文的关键。
-
----
-
-## 8. Addressables `catalog.json` 二进制格式
-
-`tools/catalog_sync.py` 把这份格式实测清楚了（不是推测）。替换 bundle 内容后，
-必须同步 catalog 里该 bundle 的 `m_BundleSize` 与 `m_Crc`，否则 Addressables 会因
-CRC Mismatch 拒绝加载。
-
-```
-catalog.json = UTF-8、无 BOM、无结尾换行的紧凑 JSON（separators=(",", ":")）
-
-m_ExtraDataString = base64(.NET BinaryWriter 流)，每个 bundle 一段：
-    [153 字节常量类型头][int32 LE = 该段 JSON 的 UTF-16 字节长度][UTF-16LE JSON]
-  * 153 字节类型头在 11/11 段上完全一致（程序集名 + 类型名，各带 .NET 7-bit 长度前缀）
-  * 段起点用 MARK = '{"m_Hash":' 的 UTF-16LE 编码定位
-  * 每段 JSON 是 AssetBundleRequestOptions，12 个键；关键：m_Crc(uint32，可 >2^31)、
-    m_BundleSize、m_BundleName、m_UseCrcForCachedBundles
-  * json.dumps(obj, separators=(",", ":"), ensure_ascii=False) 与游戏原样序列化逐字相同
-    （3 份样本 × 11 段全部验证），脚本每次运行都自检这一点
-
-m_EntryDataString：每条 entry = 7×int32
-    (internalIdIdx, providerIdx, dependencyKeyIdx, dependencyHash,
-     dataIndex, primaryKeyIdx, resourceTypeIdx)
-  * dataIndex >= 0 时指向该 bundle 对应 extra-data 段的**类型头绝对偏移**
-    （= json_at - 157），不是段号、也不是 JSON 起点
-  * **某段长度变化时，它之后所有段的 dataIndex 必须同步平移** —— 只改帧头不改
-    dataIndex 会让 Addressables 从错误位置反序列化
-```
-
-**CRC 算法未破解**，脚本不做任何 CRC 计算：回填值一律来自 `--crc`。
-占位流程是先 `--crc 0` 让尺寸进 catalog，**实机首跑**后从 `Player.log` 的 `calculated`
-行取真实值，再 `--crc <真实值> --write`。**因此"重建并重发"不是纯离线操作，必须配一次实机验证。**
-
-写回采用**外科式替换**：只替换 `"m_EntryDataString":"<b64>"` 与 `"m_ExtraDataString":"<b64>"`
-两个字面量（各自必须恰好出现一次，否则中止），其余字节原样保留，因此键序/空白/其它 blob
-不可能被改动。任何格式不符一律中止并打印实际字节证据。
-
----
-
-## 9. 清单与冻结契约
-
-`manifest-additive.json` 是**当前（X2）载荷的权威清单**，安装器只依赖它就完成
-自检与版本门禁。源码、GUI、zip 与冻结包不存在可变的全局模式。
-字段（阶段 F 冻结契约 v1 §4）：
-
-```json
-{"name","game","version","built","payload_files","payload_bytes",
- "patch_info":{"reference_hashes":{"globalgamemanagers":sha256,"level0":sha256,"app.info":sha256}},
- "files":[{"path": posix 相对路径, "sha256", "size"}],   // 按 path 排序，稳定可复现
- "mode":"additive"}                                       // 仅追加式
-```
-
-* `reference_hashes` 是**版本门禁基线**：安装前逐条比对游戏里这三个未被修改的文件，
-  不符则告警并要求用户确认（防止游戏更新后把旧载荷盖上去）。
-* 基线来自入库的 `config/game-reference.json`，保持已有三个 SHA-256，不依赖本机归档，也不从已安装补丁的游戏采样。
-* `tools/build_manifest.py` 默认只生成 X2 清单；缺少完整基线或空载荷时失败。
-* 安装前强制验证清单结构、版本、相对路径唯一性、文件集合、大小和全量 SHA-256。
-  清单缺失/损坏、缺文件、内容损坏或多余文件均禁止写入，`--yes` 只确认现场警告。
-* 仍保留对英文串表异常改动的只读探测，禁止把 X2 叠加到不兼容数据；它不是另一条安装路线。
-* 发布包（zip）由 `tools/package_additive.py` 生成：复制 payload、校验逐文件哈希、
-  打包 zip 并写 `.sha256`；`--check` 可单独复核。
-
-## 10. 校验层（五道）
-
-| 层 | 工具 | 断言 |
-| --- | --- | --- |
-| 1. 字节编解码 | `src/verify_codecs.py` | 362/362 解码↔重编码字节一致 **+ 语义不变量** |
-| 2. 构建覆盖率 | `src/build_patch.py` 末尾对账 | `written == expected`，缺行 `ABORT` |
-| 3. 产物逐行定位 | `src/verify_patch.py` | 每行译文在**确切位置**读回一致 + 结构不变性（对象表/path_id/class_id/externals） |
-| 4. 译文工作表 | `src/check_translation.py` | 离线机械校验（不联网、不调 LLM、不做语义判断）；判定规则写死在文件里 |
-| 5. 载荷完整性 | `tools/build_manifest.py` / `--check` / `catalog_sync --verify` | 逐文件 SHA-256、catalog 帧头与 dataIndex 自洽 |
-
-> `verify_patch.py` 曾经只检查"标记子串是否出现在对象 repr 里"——那种实现**不是校验**：
-> 值落错下标、槽位写错、238 行里少写 12 行，全都能通过。现在改为逐行定位比对。
->
-`verify_patch.py` 默认核验 `dist-additive/FizAndTheRainbowPlanet_Data`、正式译表
-`translation/zh_Hans.csv` 与 slot=4，不再默认读取合成译表。
-
-### 安装/打包回归
-
-```cmd
-python -B -m unittest discover -s tests -v
-```
-
-测试只创建临时游戏和存档：覆盖 GUI 预检查→执行、嵌套路径与 loader 路由、重复安装、
-安装→核验→卸载、损坏/缺失清单与载荷零写入、I/O 失败非零退出、已有存档及创建竞争。
-生成的 zip 会解压到临时目录，并从无关工作目录实际执行包内 CLI 的 check/install/verify/uninstall。
-`package_additive.py --check` 同时核对载荷、内嵌清单、安装核心及随包说明，拒绝陈旧入口。
-
-## 11. 已知问题与已修复项
-
-本轮 X2 收敛修正：
-
-* 移除安装器的双模式全局状态，GUI 预检查不会把 X2 切回其它路径。
-* zip 根目录入口和冻结包分别定位同包资源，不依赖解压位置或当前工作目录。
-* 安装前强制完整性门槛；安装期间 I/O 失败返回非零，不再宣称失败不会留下半成品。
-* 游戏门禁改用独立入库基线；旧快捷入口统一委托 X2 实现。
-* 存档以独占创建模式播种，避免检查与写入之间出现新存档时被覆盖。
-
-## 12. 未验证项与残余风险
-
-1. **bundle 重打包后 Unity 运行时能否加载——始终没有验证过。** 已证的只是：
-   StringTable 写回字节精确、UnityPy 能读回自己写的 bundle、压缩/目录标志与原文件一致、
-   `packer="original"` 可复现原压缩。**这是唯一没被覆盖的一环，必须实机确认。**
-2. `SerializedFile.save()` 同样只对比了结构（对象表/path_id/class_id/externals 0 差异），
-   没经过 Unity 加载器验证。
-3. X2 使用 10/8px 双档（§6），日/英模式仍存在非整数缩放。
-4. **16 张汉化贴图已集成**（v2.4，提交 `60451e5` / `417f6b4`）：离线逐像素回灌、
-   黑白底合成、保护区与格式检查均通过；**实机画面核对仍未做**，已列入
-   `docs/release/KNOWN-ISSUES-X2.txt` ⑨。
-5. 分发必须保留 `LICENSE-fusion-pixel-font.txt`（SIL OFL-1.1）。
-
-## 13. 踩坑速查
-
-| 症状 | 根因 | 处置 |
-| --- | --- | --- |
-| `invalid m_FileID` / `m_Script` 值离谱 | 类型树缺 `kAlignBytes` 或 boost 读取器未关 | 确认 `unity_env.install_patches()` 已跑 |
-| 某类字段整体错位但往返仍"一致" | 逐字段对齐漏了 | 用 `verify_codecs` 的语义不变量兜底 |
-| 译文写不进去却报成功 | 索引短名 vs C# 类名映射缺失 | 用 `KIND_TO_CLASS`；看构建的 coverage 行 |
-| 某行永远 missing | 该行在 `others` 里没有目标语言条目 → 未路由 | 修路由，不只修列表长度 |
-| `LocFontData` 字号没改 | 硬编码文件清单漏了它所在文件 | 改由 `work/font_map.json` 发现 |
-| 改完文本却没生效 | X2 只跑了 payload 组装，没重跑 data | 先 `build_additive_data.py` |
-| 安装后 loader 不生效 | `winhttp.dll` 放进了 `*_Data` | 必须在游戏根目录（DLL 搜索顺序） |
-| Addressables CRC Mismatch | 换了 bundle 但没同步 catalog | `catalog_sync --write`（CRC 需实机回填） |
-| 控制台日文/中文报 GBK 错 | 编码 | `PYTHONIOENCODING=utf-8` |
-| 原生 Python 找不到 `/c/...` | MSYS 路径不被原生 Python 理解 | 用相对路径或 `D:/...` |
-| 长 heredoc 被截断 | 单次写入过大 | 分段 `cat >>` |
+首次数据备份与滚动备份由安装核心维护；已有存档不覆盖，新存档可播种中文语言。loader 冲突需玩家自行备份，安装器不承诺对其它 MOD 自动回滚。
+
+**从 v1.2.7 及更早升级时先用旧版卸载，再安装本版。** 本版退出清单的 JP bundle/文档不会在覆盖安装时被自动还原。不能因为新包不再带这些文件，就宣称旧安装现场已清理。勿删除玩家首次备份或存档。
+
+## 9. 构建、验证与发布顺序
+
+1. 固定原版 staging、译表、字体/原版图片/美术 PNG、loader、C# 引用程序集与依赖环境。
+2. 修改插件则离线编译 DLL，再同步到载荷组装入口；构建脚本不会自动重编插件。
+3. 数据构建（默认含图片）→ 数据检查/文本回读/编解码检查。
+4. 载荷组装 → 全 bundle catalog 同步 → 清单。
+5. EXE / ZIP → 清单与包内容哈希核验 → 发布说明及校验和。
+6. 包内容变化才发布新安装包；仅不入包文档变化、输入与产物哈希不变时只更新文档。随包说明也属于包内容。
+
+命令与依赖准备见 [README 构建章节](../README.md#源码与构建)。不要在未核对目标路径时清空构建输出；旧版本 Release 不覆盖，保留可回退版本。
+
+| 验证 | 能证明什么 |
+| --- | --- |
+| check_translation | 占位符、标签、换行、空译等机械规则；不替代语义审校 |
+| verify_codecs | 362 个自定义对象的字节往返及语义不变量 |
+| verify_patch | 1,364 条已登记译文在目标位置读回 |
+| 图像回灌报告 | 13 纹理期望图一致、10 JP 区域保护、非目标对象不变 |
+| patch_tool check / package --check | 本包文件、哈希、内嵌清单和安装入口一致 |
+| 标准库隔离回归 | 在临时游戏/存档内检查安装器、字号及图像范围策略 |
+| 实机复测 | 首次过场标题、图像切片、各分辨率和条件界面的实际表现 |
+
+## 10. 已知覆盖边界
+
+2026-10-23 全量复核扫描 159 场景和 161 个序列化资源文件，发现 1,824 Text、1 TMP、730 字符串事件、40 图片事件。自定义对象和 StringTable 的登记行未发现遗漏，但场景硬编码仍存在。
+
+温和模式、震动、五个声音标签属于“有译文无绑定”；小游戏标题提示、52 条音乐鉴赏元数据、9 条剧场目录、启动异常提示有旁路。未使用静态表键、隐藏模板、测试场景、被脚本覆写的初始日文不能一律当漏译或多余资源删除。详见 [TEXT-MAPPING](TEXT-MAPPING.md)。

@@ -12,6 +12,16 @@ internal static class MenuFontPolicyHarness
 	{
 		switch (args[0])
 		{
+			case "font-sizes":
+				Check(FontSizePolicy.Quantize(8) == 8);
+				Check(FontSizePolicy.Quantize(10) == 10);
+				Check(FontSizePolicy.Quantize(12) == 10);
+				foreach (int size in new[] { 13, 16, 24, 32, 48, 64, 96 })
+				{
+					Check(FontSizePolicy.Quantize(size) == size);
+					Check(FontSizePolicy.Quantize(FontSizePolicy.Quantize(size)) == size);
+				}
+				break;
 			case "menu":
 				Check(TitleMenuFontPolicy.Applies("TitleCanvas", true));
 				break;

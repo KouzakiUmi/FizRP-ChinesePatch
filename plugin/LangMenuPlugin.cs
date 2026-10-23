@@ -407,18 +407,12 @@ namespace FizRPLangMenu
 	/// <summary>
 	/// 运行时字体替换（追加式中文 X2 的字形修复）。
 	///
-	/// 背景：本作共 134 个 UnityEngine.UI.Text，其中只有 1 个挂了 LocalizedText
-	/// （唯一按语言切换字体的组件）。其余 133 个 Text 的字体是序列化时写死的日文字体
-	/// （k8x12EXS 简体字覆盖 68.6% / 07やさしさ 71.0% / x12y16pxMaruMonica 69.0%）。
-	/// 中文译文里那些日文字体没有的简体字（锤、们、为…）会触发 Unity 字体回退，
-	/// 回退字形的宽度与主字体不同 -> 同一行内出现「宽窄不一」。
+	/// 2026-10-23 全量口径为 1824 Text / 159 LocalizedText；很多文本没有逐语言字体设置。
+	/// 中文（Spanish 槽）下接管含 CJK 的文本，普通小字使用 Fusion Pixel 8/10px 宿主，
+	/// 大标题保留基准字号。主菜单高度与暂停页脚位置分别使用有界策略。
+	/// 这里只处理字形/排版，不翻译任意硬编码文案。
 	///
-	/// 做法：语言为 Spanish（中文所在的 es 槽位）时，把这些 Text 的 font 指向 k8x12EXL
-	/// ——该字体对象的 TrueType blob 已由数据侧换成简体中文字体（MuzaiPixel，1113/1113
-	/// 汉字全覆盖），且规格与原版 k8x12 逐项一致（全角 advance 0.667em、ascent 0.833em、
-	/// descent -0.167em），所以 fontSize / lineSpacing / 布局都无需改动。
-	///
-	/// 语言不是 Spanish 时不做任何事，英文与日文原版体验完全不受影响。
+	/// 非中文时不主动套用此策略，但数据侧已替换共享 Font blob，日英字形仍可能受影响。
 	/// 磁盘上的 DLL 与场景文件均不修改。
 	/// </summary>
 	internal static class FontApplier
@@ -427,8 +421,8 @@ namespace FizRPLangMenu
 
 		/// <summary>
 		/// 双字体宿主（一开始的方案）：`k8x12EXL` 装 8px 设计简中、`k8x12EXS` 装 10px
-		/// 设计简中，插件按 Text 原字号量化到 8 / 10 两档，字号 == 宿主设计尺寸 => 1:1
-		/// 零缩放（像素锐利）。中文字形为全角方形（advance 1.0em）。
+		/// 设计简中。普通小字量化到 8 / 10 两档以匹配设计尺寸；超过 12px 的大标题保留
+		/// 基准字号，不保证非整数放大后的点阵锐利。中文字形为全角方形（advance 1.0em）。
 		///
 		/// 为什么不用 12：方形中文字宽 = 字号，把大档提到 12 会让中文比现在的 10 宽 20%，
 		/// 在底栏说明这类刚好顶满容器的文本上会换行压叠（实测过并已回退）。维持在
@@ -484,10 +478,10 @@ namespace FizRPLangMenu
 		private static MethodInfo _getLanguage;
 		private static bool _langProbeFailed;
 
-		/// <summary>把任意原字号量化到 8（小）或 10（大）两档。</summary>
+		/// <summary>普通小字量化到 8/10；超过原版常规 12px 的大标题保留原字号。</summary>
 		internal static int QuantizeSize(int fontSize)
 		{
-			return (fontSize <= SizeSmall) ? SizeSmall : SizeLarge;
+			return FontSizePolicy.Quantize(fontSize);
 		}
 
 		/// <summary>只识别主菜单 Canvas 内的中文；不改变游戏内 HUD、对白或拉丁文本。</summary>
@@ -1067,7 +1061,7 @@ namespace FizRPLangMenu
 				{
 					pixelCanvas.pixelPerfect = true;
 				}
-				// 字号对齐到字体设计尺寸（8 / 10），保证 1:1 零缩放渲染（像素锐利）
+				// 普通小字对齐到 8/10；大标题保留基准字号，不强行压缩成小字。
 				if (text.fontSize != want)
 				{
 					text.fontSize = want;

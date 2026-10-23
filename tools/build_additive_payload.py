@@ -27,12 +27,14 @@
 
 载荷文件数构成（全部现场核对，不猜）::
 
-    102 数据文件   dist-additive/FizAndTheRainbowPlanet_Data/
-                   （98 .assets + 3 个 bundle + catalog.json）
-     23 游戏根     winhttp.dll、doorstop_config.ini、.doorstop_version、changelog.txt
-                   （4 个）+ BepInEx/ 19 个（core 18 + plugins/FizRPLangMenu.dll）
+    101 数据文件   dist-additive/FizAndTheRainbowPlanet_Data/
+                   （98 .assets + 2 个 bundle + catalog.json）
+     16 游戏根     winhttp.dll、doorstop_config.ini、.doorstop_version
+                   （3 个）+ BepInEx/ 13 个（core 12 + plugins/FizRPLangMenu.dll）
     ---
-    125
+    117
+
+不再分发 JP 专用图片 bundle、XML API 文档和 changelog；保留全部运行时 DLL 与许可。
 
 catalog.json 的生成：``work/_crc/catalog.original.json`` 复制进临时工作目录后，
 用 ``tools/catalog_sync.py --bundle-dir <payload 的 StandaloneWindows64> \
@@ -74,7 +76,7 @@ ES_BUNDLE_BYTES = None   # 已废弃：译文修订会改变尺寸，不再做�
 # （单中文字体宿主 = 96 .assets + 1 es bundle = 97；双字号宿主多改 sharedassets0.assets = 98）。
 # 故只校验下限，精确集合由 --check 的关键文件检查与构建报告保证。
 DATA_FILE_COUNT_MIN = 96        # 至少 96 个 .assets 数据文件
-RUNTIME_FILE_COUNT = 22         # work/_additive/bepinex/runtime 下文件数
+RUNTIME_FILE_COUNT = 15         # 运行时分发文件；排除 6 个 XML API 文档和 changelog
 
 # 与 patch_tool.py 一致的 loader 条目集合（首段名 / 首段前缀）
 GAME_ROOT_NAMES = ("winhttp.dll", "doorstop_config.ini", ".doorstop_version",
@@ -124,7 +126,13 @@ def route_of(rel):
     raise ValueError("载荷条目 %s 不属于任何已知投放路由（loader / Data）" % rel)
 
 
-def copy_into(src_root, dst_root, expect, prune=False):
+def runtime_file_required(rel):
+    """Omit SDK documentation, never runtime DLLs or legal notices."""
+    return not (rel == 'changelog.txt'
+                or (rel.startswith('BepInEx/core/') and rel.endswith('.xml')))
+
+
+def copy_into(src_root, dst_root, expect, prune=False, include=None):
     """把 src_root 下的文件平铺复制进 dst_root；返回复制条数（与 expect 不符即报错）。
 
     复制前会删掉 dst_root 里**源目录已经没有**的旧文件。否则上一版载荷留下的
@@ -134,7 +142,8 @@ def copy_into(src_root, dst_root, expect, prune=False):
     """
     if not os.path.isdir(src_root):
         raise RuntimeError("源目录不存在: %s" % src_root)
-    wanted = set(rel for rel, _full in walk_files(src_root))
+    wanted = set(rel for rel, _full in walk_files(src_root)
+                 if include is None or include(rel))
     # prune 只在「数据目录 -> 载荷」那一次开启：copy_into 也被用于 loader 目录，
     # 若在第二次调用时按 loader 的文件集去删，会把刚复制好的数据文件全删掉（踩过）。
     if prune and os.path.isdir(dst_root):
@@ -152,6 +161,8 @@ def copy_into(src_root, dst_root, expect, prune=False):
                 pass
     count = 0
     for rel, full in walk_files(src_root):
+        if rel not in wanted:
+            continue
         dst = os.path.join(dst_root, rel.replace("/", os.sep))
         parent = os.path.dirname(dst)
         if parent:
@@ -218,8 +229,8 @@ def generate_catalog(out_dir):
     print("== catalog_sync: %s -> %s" % (CATALOG_SOURCE, work_catalog))
 
     # 同步载荷里**所有** bundle，而不只是 es 串表：
-    # 图像本地化会额外带 localization-assets-{shared,japanese(ja)}，
-    # 只同步 es 会让那两个 bundle 的 m_BundleSize/m_Crc 保持原版值，
+    # 图像本地化还会带 localization-assets-shared，JP 专用 bundle 不再分发。
+    # 只同步 es 会让 shared bundle 的 m_BundleSize/m_Crc 保持原版值，
     # Addressables 校验不过 -> 贴图不加载（踩过：游戏里图片没换）。
     payload_bundles = sorted(f for f in os.listdir(bundle_dir) if f.endswith(".bundle"))
     bundle_args = []
@@ -254,7 +265,8 @@ def assemble():
     data_count = copy_into(DIST_DATA_DIR, out, DATA_FILE_COUNT_MIN, prune=True)
 
     print("== 2/4 loader 运行时: %s" % BEPINEX_RUNTIME_DIR)
-    runtime_count = copy_into(BEPINEX_RUNTIME_DIR, out, RUNTIME_FILE_COUNT)
+    runtime_count = copy_into(BEPINEX_RUNTIME_DIR, out, RUNTIME_FILE_COUNT,
+                              include=runtime_file_required)
 
     print("== 3/4 插件 DLL: %s -> %s" % (PLUGIN_DLL, PLUGIN_REL))
     if not os.path.isfile(PLUGIN_DLL):
@@ -290,7 +302,7 @@ def check_payload(out_dir=None):
     files = walk_files(out_dir)
     data_files = sum(1 for rel, _f in files if "/" not in rel.replace("\\", "/")
                      and rel.endswith(".assets"))
-    # bundle 不再只有 es 串表：图像本地化会再加 ja / shared 两个 bundle。
+    # 除 es 串表外还有 shared 图片 bundle，不再包含 JP 专用图片 bundle。
     # 按实际数量计，否则一加 bundle 就误报「文件数异常」。
     bundle_files = sum(1 for rel, _f in files if rel.endswith(".bundle"))
     expect_total = _expected_total(data_files + bundle_files)
@@ -299,6 +311,11 @@ def check_payload(out_dir=None):
     if len(files) != expect_total:
         problems.append("文件数 %d != %d" % (len(files), expect_total))
     rels = set(rel for rel, _full in files)
+    optional_docs = sorted(rel for rel in rels if not runtime_file_required(rel))
+    if optional_docs:
+        problems.append('载荷包含非运行时文档: %s' % ', '.join(optional_docs))
+    if any('localization-assets-japanese(ja)' in rel for rel in rels):
+        problems.append('载荷包含 JP 专用图片 bundle')
     routes = {"data": 0, "game_root": 0}
     for rel in sorted(rels):
         try:

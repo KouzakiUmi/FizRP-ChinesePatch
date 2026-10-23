@@ -1,53 +1,53 @@
-Fiz 与彩虹星球 简体中文补丁 v{{VERSION}}（追加式 X2）
+Fiz 与彩虹星球 简体中文补丁 v{{VERSION}}（X2）
 
-【这个包是什么】
-  X2 追加式：中文写入游戏自带的 es（Language.Spanish = 4）槽位，
-  日文/英文原样保留；语言菜单新增第三项「中文」。
-  不修改游戏的 DLL 与场景文件，文本/字体/贴图由随包插件在运行时加载。
+【工作方式】
+中文复用 es / Language.Spanish=4 槽位。构建时把文案、字体和贴图写入资源，
+安装时复制这些资源；随包 BepInEx 插件开放第三语言选项并处理字体、字号和局部像素定位。
+不修改游戏 DLL，不替换 level* 场景。
+
+不是完全隔离的中文资源层：日英对白/字符串槽不被中文覆盖，但共享字体会影响其它语言，
+en/es 共用部分图片，因此英文模式也可能显示中文图片。
 
 【包含什么】
-  payload/                    125 个文件
-    *.assets                  数据文件（文本、字号、字体、贴图）
-    StreamingAssets/aa/...    es 串表 bundle + catalog.json
-    winhttp.dll / BepInEx/    追加式 loader（随包，无需另装）
-  LICENSE                     项目许可证（CC BY-NC-SA 4.0）
-  THIRD-PARTY-NOTICES.txt     第三方组件声明（BepInEx/Doorstop/Harmony 等）
-  LICENSE-fusion-pixel-font.txt  字体授权（SIL OFL 1.1）
-  安装后游戏根目录会多出 BepInEx/、winhttp.dll、doorstop_config.ini、.doorstop_version；
-  被覆盖的原文件会备份到游戏根目录 _FizRP_backup_<时间戳>/。
+117 个载荷文件：101 数据（98 assets、2 bundle、catalog）+ 16 loader/插件。
+1,364 条非空译文；13 张中文替换纹理，另保护共享图集中的 10 个 JP 专用切片。
+不分发 JP 专用图片 bundle、XML API 文档和更新日志；保留运行时 DLL 和许可。
+包根有安装入口、清单、说明、项目/第三方/字体许可；这些不是游戏载荷。
 
-【安装】
-  exe 版（推荐，不需要 Python）：
-    双击 FizRP-ChinesePatch.exe，按图形界面提示操作。
-  zip 版（需要本机 Python 3.8+）：
-    双击 install.bat；卸载双击 uninstall.bat。
+【本版变更】
+保留超过普通 12px 的大字号，避免中央过场标题被强制缩成 8/10px。
+恢复仅由 JP 调用的整图与共享图集片区的原版使用范围，减少多余载荷。
+保留 v1.2.7 暂停提示的绝对横向补偿，不重复移动模板和实例。
+译文未在本版新增或改译；设置硬编码等覆盖缺口见 KNOWN-ISSUES.txt。
+本版大标题及 JP 片区恢复需实机复核，离线验证不代表全流程画面验收。
 
-  安装器会自动在 Steam 库中查找游戏；找不到时会提示手动指定游戏根目录
-  （FizAndTheRainbowPlanet_Data 的上一级）。安装前会比对版本门禁文件，
-  不符时告警并要求确认。写入前还会强制校验完整清单与所有载荷哈希，损坏时禁止安装。
+【首次安装】
+关闭游戏并备份已有 MOD。
+EXE：双击 FizRP-ChinesePatch.exe，无需 Python。
+ZIP：完整解压后双击 install.bat；命令行需 Python 3.8+。
+未找到游戏时，选择 FizAndTheRainbowPlanet_Data 的上一级游戏根目录。
+语言选择画面选第三项“中文”；已正确保存中文的存档无需重置。
 
-【装完之后】
-  首次启动游戏时，语言选择画面请选第三项「中文」。
-  已有存档：把存档中的 Language 值设为 4（es 槽位 = 本补丁的中文槽位）；
-  存档位置：%USERPROFILE%\AppData\LocalLow\<公司名>\<产品名>。
+命令行（ZIP 包根）：
+  python patch_tool.py check
+  python patch_tool.py install --game-dir "<游戏根目录>"
+  python patch_tool.py verify --game-dir "<游戏根目录>"
+  python patch_tool.py uninstall --game-dir "<游戏根目录>"
 
-【本版特点】
-  修复暂停菜单按键提示在启动、重选中文或返回标题后偶发模糊的问题。
-  仅对三条已挂载的中文暂停提示做绝对横向补偿，不改字体、字号和纵坐标，避免模板与实例重复位移。
-  正式包不含临时诊断插件；已验证重复进入菜单，其他分辨率和屏幕模式仍需按实机核对。
-  保留冷启动主菜单中文设置标签不显示、重新选择中文后字号偏小的修复。
-  主菜单及设置子页中文统一 10px，并为文字保留足够高度；对白和 HUD 不套用此规则。
-  已正确使用中文的存档无需修改或重置，也不再需要每次启动后重新选择中文。
-  字体双档：k8x12EXS -> fusion-pixel-10px、k8x12EXL -> fusion-pixel-8px
-  中文写入 es 槽位，日/英原样保留
-  依赖 BepInEx（随包 winhttp.dll + BepInEx/ + 插件），无需手动配置
-  含 16 张汉化贴图
+【从 v1.2.7 或更早版本升级】
+先使用旧版安装器卸载并还原，再安装本版，不建议直接覆盖。
+新包不再带旧版曾改写的 JP bundle 和部分 loader 文档；覆盖安装不会自动还原退出清单的文件。
+保留 _FizRP_original 和 _FizRP_backup_<时间戳>，不要为清理资源删除存档。
 
-【卸载】
-  exe 版：在安装器界面点「卸载并还原」。
-  zip 版：双击 uninstall.bat。
-  两者都优先从 _FizRP_original 首次备份还原；缺少时回退最新滚动备份。
-  移除随包 loader，保留其它用户插件、存档与备份目录。
+【完整性、备份与卸载】
+安装前检查游戏门禁和全部载荷哈希；损坏、缺失、多余文件会阻止写入。
+--yes 只确认现场警告，不跳过载荷检查。
+数据首次备份到 _FizRP_original，另保留滚动备份；已有 loader 冲突需自行备份。
+新存档不存在时才可播种 Language=4，不默认覆盖已有存档。
+卸载优先还原首次备份，缺少时回退滚动备份；保留其它用户插件、备份及存档。
+EXE 选择“卸载并还原”，ZIP 可双击 uninstall.bat。
 
-【字体授权】
-  SIL OFL-1.1，见 LICENSE-fusion-pixel-font.txt，分发时必须保留。
+【许可】
+项目：LICENSE（CC BY-NC-SA 4.0）；第三方：THIRD-PARTY-NOTICES.txt；
+字体：LICENSE-fusion-pixel-font.txt（SIL OFL 1.1）。分发必须保留。
+原游戏及其素材权利归原权利方，本项目非官方且仅供非营利使用，请支持正版。

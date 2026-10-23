@@ -37,6 +37,7 @@ class MenuFontPolicyTests(unittest.TestCase):
                    '-nostdlib+', '-target:exe', '-out:' + str(cls.exe),
                    '-reference:' + str(reference),
                    str(ROOT / 'plugin/TitleMenuFontPolicy.cs'),
+                   str(ROOT / 'plugin/FontSizePolicy.cs'),
                    str(ROOT / 'tests/menu_font_policy_harness.cs')]
         proc = subprocess.run(command, capture_output=True, encoding='utf-8')
         if proc.returncode:
@@ -63,6 +64,9 @@ class MenuFontPolicyTests(unittest.TestCase):
     def run_case(self, name):
         proc = subprocess.run([str(self.exe), name], capture_output=True, encoding='utf-8')
         self.assertEqual(proc.returncode, 0, proc.stdout + '\n' + proc.stderr)
+
+    def test_large_stage_titles_keep_authored_size_across_scans(self):
+        self.run_case('font-sizes')
 
     def test_main_menu_chinese_selected(self):
         self.run_case('menu')
@@ -118,6 +122,17 @@ class MenuFontPolicyTests(unittest.TestCase):
 
 
 class MenuFontIntegrationTests(unittest.TestCase):
+    def test_scan_and_setters_share_size_policy(self):
+        source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
+        quantize = source.split('internal static int QuantizeSize(int fontSize)', 1)[1]
+        self.assertIn('return FontSizePolicy.Quantize(fontSize);', quantize.split('}', 1)[0])
+        apply = source.split('internal static void Apply(Text text)', 1)[1]
+        self.assertIn('QuantizeSize(baseSize)', apply.split('internal static void ApplyTMP', 1)[0])
+        setter = source.split('internal static class TextFontSizePatch', 1)[1]
+        self.assertIn('GetBaseSize(__instance, value)', setter)
+        self.assertIn('FontApplier.QuantizeSize(baseSize)', setter)
+
+
     def test_height_repair_runs_on_fast_and_changed_font_paths(self):
         source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
         apply = source.split('internal static void Apply(Text text)', 1)[1]
