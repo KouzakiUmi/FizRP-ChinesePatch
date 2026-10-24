@@ -1,6 +1,6 @@
 # X2 技术架构与维护契约
 
-当前维护版本：v1.2.11。面向维护者；使用与升级见 [README](../README.md)，数据覆盖见 [TEXT-MAPPING](TEXT-MAPPING.md)，待验与已知漏项见 [KNOWN-ISSUES](release/KNOWN-ISSUES-X2.txt)。历史发布记录描述当时版本，不是当前实现规范。
+当前维护版本：v1.2.12。面向维护者；使用与升级见 [README](../README.md)，数据覆盖见 [TEXT-MAPPING](TEXT-MAPPING.md)，待验与已知漏项见 [KNOWN-ISSUES](release/KNOWN-ISSUES-X2.txt)。历史发布记录描述当时版本，不是当前实现规范。
 
 ## 1. 架构边界
 
@@ -64,6 +64,7 @@ UnityPy 1.25.4 的生成树在本游戏存在小字段对齐与部分类型节�
 | --- | --- |
 | sharedassets0.assets:14 / k8x12EXS | Fusion Pixel 10px zh-Hans |
 | sharedassets3.assets:133 / k8x12EXL | Fusion Pixel 8px zh-Hans |
+| sharedassets0.assets / FizRP12pxZhHans（新增对象） | Fusion Pixel 12px zh-Hans 子集（1402 字符 / 241 KB） |
 
 6 个 LocFontData 的 es 槽按默认 8/12 档位镜像字体引用；**序列化 size=12 不等于字体设计尺寸=12**。最终普通中文字号由插件改为 8/10。
 
@@ -75,8 +76,8 @@ UnityPy 1.25.4 的生成树在本游戏存在小字段对齐与部分类型节�
 - [TitleMenuFontPolicy](../plugin/TitleMenuFontPolicy.cs)：TitleCanvas 中文使用 10px，补足不足的文本框高度，不改变宽度/位置。
 - [PauseHintPixelPolicy](../plugin/PauseHintPixelPolicy.cs)：仅三条挂载到 Canvas 的中文暂停提示，按绝对横向偏移纠正，不移动未激活模板，不累加继承偏移。
 - TMP 有独立接管路径；当前唯一 TMP 初始串为纯拉丁 NPC TALK，不能误写成“没有 TMP 支持”或“该文本已翻译”。
-- [LargeTitlePixelPolicy](../plugin/LargeTitlePixelPolicy.cs)：仅两处大字——关卡选择世界名（go=StageName）与中央过场标题（`<size=16>第N关</size>`）——统一用 **10px 设计宿主**（k8x12EXS）：关卡选择 10px（1:1，其文本框仅 32 canvas 单位高，两行 10px 行高 1.4em 合计 28px 恰好容纳），过场标题 20px（2× 整数倍，框 256×224 充裕）。**不可用 8px 宿主**：8px 设计网格里「糖/浆/饼」等密笔画汉字本身没有字腔，2× 放大只会把实心块放大，字腔被填成实心（v1.2.9 实机复测确认）。另游戏自研 `PixelOutline` 描边固定 1 canvas 单位（实测白笔画 8px / 黑间隙 4px），不随字号缩放。范围严格受限：对白内 `<size=24>` 富文本、教学板 75px 等不适用。
-- 像素对齐网格按实际宿主与字号计算：1 设计像素 = fontSize/设计尺寸 个 canvas 单位（8/10px 小字 = 1，大字 20px@10 设计 = 2），起点对齐到该网格的整数倍。
+- [LargeTitlePixelPolicy](../plugin/LargeTitlePixelPolicy.cs)：仅两处大字——关卡选择世界名（go=StageName）与中央过场标题（`<size=16>第N关</size>`）——统一用 **12px 设计宿主**（补丁新增的 Font 对象 `FizRP12pxZhHans`，见 `fonts.config.json` 的 `hosts` 段）：关卡选择 12px（1:1），过场标题 24px（2× 整数倍）。**不可用 8px 宿主**：8px 设计网格里「糖/浆/饼」等密笔画汉字本身没有字腔，2× 放大只会把实心块放大，字腔被填成实心（v1.2.10 实机复测确认）；**10px 也不理想**：字腔仍被游戏自研 `PixelOutline` 的固定描边挤压，且关卡选择 10px 比原版 14px 明显偏小（v1.2.11 实机复测确认）。12px 宿主按译表实际用字子集化（1402 字符 / 241 KB），避免 7 MB 全量字体进载荷；游戏自带字体槽位全部保持原样，日英界面不受影响。宿主缺失时插件回退到 10px 宿主并在日志告警。范围严格受限：对白内 `<size=24>` 富文本、教学板 75px 等不适用。
+- 像素对齐网格按实际宿主与字号计算：1 设计像素 = fontSize/设计尺寸 个 canvas 单位（8/10px 小字 = 1，12px 宿主 @12px = 1、@24px = 2），起点对齐到该网格的整数倍。
 
 共享 Font 替换对引用该对象的其它语言也有效；原字号/设计尺寸可能产生非整数缩放。大标题保留字号不意味着点阵字在所有缩放下锐利。
 

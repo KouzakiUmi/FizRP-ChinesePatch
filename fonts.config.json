@@ -1,14 +1,25 @@
 {
   "_comment": "Fiz And The Rainbow Planet 的 X2 字体配置。仅保留 zh_additive；显式 null 表示不替换该字体。",
   "profiles": {
-    "zh_additive": "X2：中文写入 es(Spanish=4)，en 文案槽不被中文覆盖。k8x12EXS 装 10px、k8x12EXL 装 8px 设计简中；插件将普通中文小字量化到 10/8。两处大字（关卡选择世界名、中央过场标题）也用 10px 宿主，按 10px(1:1)/20px(2×) 整数倍渲染。其余字体不替换。共享 Font blob 仍影响日英；原字号可能产生非整数缩放，不能保证所有排版与清晰度不变"
+    "zh_additive": "X2：中文写入 es(Spanish=4)，en 文案槽不被中文覆盖。k8x12EXS 装 10px、k8x12EXL 装 8px 设计简中；插件将普通中文小字量化到 10/8。两处大字（关卡选择世界名、中央过场标题）改用新增的 12px 设计宿主（12px 1:1 / 24px 2× 整数倍）——8px 设计网格承载不了「糖/浆/饼」等密笔画汉字，字腔会糊成实心。其余字体不替换。共享 Font blob 仍影响日英；原字号可能产生非整数缩放，不能保证所有排版与清晰度不变"
   },
+  "hosts": [
+    {
+      "file": "sharedassets0.assets",
+      "name": "FizRP12pxZhHans",
+      "zip_dir": "work/fonts/source",
+      "zip": "fusion-pixel-font-12px-proportional-ttf-v2026.09.25.zip",
+      "member": "fusion-pixel-12px-proportional-zh_hans.ttf",
+      "subset_out": "fusion-pixel-12px-subset-zh_hans.ttf",
+      "role": "12px 设计中文宿主（新增对象，非替换）：专供关卡选择世界名 12px(1:1) 与中央过场标题 24px(2× 整数倍)。8px 设计网格里「糖/浆/饼」等密笔画汉字没有字腔，放大后字腔会糊成实心；12px 才有可辨字腔。按译表实际用字子集化，避免 7MB 全量字体进载荷。"
+    }
+  ],
   "fonts": [
     {
       "file": "sharedassets0.assets",
       "path_id": 14,
       "name": "k8x12EXS",
-      "role": "10px 中文宿主；普通中文大档量化为 10px。两处大字（关卡选择世界名 10px、中央过场标题 20px）也用本宿主做整数倍渲染 —— 8px 设计网格承载不了「糖/浆/饼」等密笔画汉字，字腔会糊成实心。日/英模式的原 12px 文本仍存在 1.2 倍缩放。",
+      "role": "10px 中文宿主；普通中文大档量化为 10px。两处大字改用新增的 12px 宿主（见 hosts 段），本宿主只在该宿主缺失时作为回退（关卡选择 10px、中央过场标题 20px，仍是整数倍）。日/英模式的原 12px 文本仍存在 1.2 倍缩放。",
       "fusion": {
         "zh_additive": "fusion-pixel-10px-proportional-zh_hans.ttf"
       }

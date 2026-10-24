@@ -184,25 +184,42 @@ class MenuFontIntegrationTests(unittest.TestCase):
         force = force.split('\n\t\t}', 1)[0]
         self.assertIn('IsMainMenuText(text)', force)
 
-    def test_big_title_wiring_uses_ten_px_host_in_scan_and_setters(self):
+    def test_big_title_wiring_uses_twelve_px_host_in_scan_and_setters(self):
         source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
-        self.assertIn('internal static Font GetTenDesignFont()', source)
+        self.assertIn('internal static Font GetTwelveDesignFont()', source)
+        self.assertIn('internal const string Font12Name = "FizRP12pxZhHans";', source)
         # 8px 宿主承载不了密笔画汉字（8px 设计网格里没有字腔），大字不得再用它。
         self.assertNotIn('GetEightDesignFont', source)
-        self.assertNotIn('FindFont(0, Font8Name);', source.split('GetTenDesignFont', 1)[1]
-                         .split('}', 1)[0])
-        # Apply 与两个 setter 都必须走同一策略（10px 宿主 + 定点字号），不能只修扫描路径。
+        # Apply 与两个 setter 都必须走同一策略（12px 宿主 + 定点字号），不能只修扫描路径。
         apply = source.split('internal static void Apply(Text text)', 1)[1]
         apply = apply.split('internal static void ApplyTMP', 1)[0]
         self.assertIn('LargeTitlePixelPolicy.TargetSize(text.gameObject.name, text.text)', apply)
-        self.assertIn('GetTenDesignFont()', apply)
+        self.assertIn('GetTwelveDesignFont()', apply)
         setter_size = source.split('internal static class TextFontSizePatch', 1)[1]
         self.assertIn('LargeTitlePixelPolicy.TargetSize(', setter_size)
+        self.assertIn('GetTwelveDesignFont()', setter_size)
         setter_font = source.split('internal static class TextFontPatch', 1)[1]
-        self.assertIn('FontApplier.GetTenDesignFont()', setter_font)
+        self.assertIn('FontApplier.GetTwelveDesignFont()', setter_font)
         # 大字判定不得回写文案或改 rect（只换字体与字号）。
         self.assertNotIn('text.text =', apply)
         self.assertNotIn('text.rectTransform', apply.split('FitMainMenuHeight(text);', 1)[0])
+
+    def test_missing_font_host_warning_requires_a_real_search(self):
+        """12px 宿主缺失告警必须在**真的搜过**之后才发。
+
+        FindFont 有每秒一次的限流：限流期内的 null 只说明这一秒没搜，
+        不代表字体不存在。若告警不区分两者，日志里会出现假的「宿主缺失」，
+        而 KNOWN-ISSUES 正把它当作「新增对象未被实例化」的判据。
+        """
+        source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
+        self.assertIn('FontSearched[slot] = true;', source)
+        getter = source.split('internal static Font GetTwelveDesignFont()', 1)[1]
+        getter = getter.split('}', 1)[0]
+        self.assertIn('FontSearched[2]', getter)
+        # 告警条件必须同时要求「没找到」和「搜过」。
+        self.assertRegex(getter, r'font == null && FontSearched\[2\]')
+        # 三个槽位都要有对应的搜索标记数组。
+        self.assertIn('new bool[3]', source)
 
     def test_snap_log_format_placeholders_match_arguments(self):
         """[snap] 日志的格式串占位符数必须与实参个数一致。
