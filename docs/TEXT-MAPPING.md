@@ -1,6 +1,6 @@
 # 文本、字体与图片映射
 
-本文件描述 v1.2.8 实际维护的数据路径及覆盖边界，不承诺所有玩家可见文案都已本地化。安装、升级见 [README](../README.md)，实现契约见 [TECHNICAL](TECHNICAL.md)。
+本文件描述 v1.2.9 实际维护的数据路径及覆盖边界，不承诺所有玩家可见文案都已本地化。安装、升级见 [README](../README.md)，实现契约见 [TECHNICAL](TECHNICAL.md)。
 
 ## 1. 语言选择与内容来源
 
@@ -81,7 +81,7 @@ Japanese=0, English_Machine=1, English=2, French=3, Spanish=4, Max=5
 
 [图片策略](../tools/image_patch_policy.py)按运行时资源身份识别，不靠 IMG 编号或文件名是否含日文判断。
 
-| 工单 | 内容 | v1.2.8 正式回灌 |
+| 工单 | 内容 | v1.2.9 正式回灌 |
 | --- | --- | --- |
 | IMG-01 / IMG-02 | 非日语主标题 / 莉芙标题 | 保留中文替换 |
 | IMG-03 | SoracoFishingLogo | 保留非日语切片；恢复 JP `_0` 切片 |

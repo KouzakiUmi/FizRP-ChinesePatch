@@ -1,6 +1,6 @@
 # X2 技术架构与维护契约
 
-当前维护版本：v1.2.8。面向维护者；使用与升级见 [README](../README.md)，数据覆盖见 [TEXT-MAPPING](TEXT-MAPPING.md)，待验与已知漏项见 [KNOWN-ISSUES](release/KNOWN-ISSUES-X2.txt)。历史发布记录描述当时版本，不是当前实现规范。
+当前维护版本：v1.2.9。面向维护者；使用与升级见 [README](../README.md)，数据覆盖见 [TEXT-MAPPING](TEXT-MAPPING.md)，待验与已知漏项见 [KNOWN-ISSUES](release/KNOWN-ISSUES-X2.txt)。历史发布记录描述当时版本，不是当前实现规范。
 
 ## 1. 架构边界
 

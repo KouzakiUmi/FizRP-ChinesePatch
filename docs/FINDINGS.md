@@ -1,6 +1,6 @@
 # 游戏资源结构与复核结论
 
-当前说明对应 v1.2.8；实现细节以 [TECHNICAL](TECHNICAL.md) 为准，文本/图片逐类映射以 [TEXT-MAPPING](TEXT-MAPPING.md) 为准。此文件不记录早期方案的推演或把局部扫描数字当全游戏数量。
+当前说明对应 v1.2.9；实现细节以 [TECHNICAL](TECHNICAL.md) 为准，文本/图片逐类映射以 [TEXT-MAPPING](TEXT-MAPPING.md) 为准。此文件不记录早期方案的推演或把局部扫描数字当全游戏数量。
 
 ## 游戏与资源边界
 
