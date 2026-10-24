@@ -75,6 +75,12 @@ class MenuFontPolicyTests(unittest.TestCase):
     def test_big_title_sizes_snap_to_integer_design_multiples(self):
         self.run_case('big-title-snap')
 
+    def test_stage_select_second_line_gets_a_big_size_tag(self):
+        self.run_case('stage-select-content')
+
+    def test_movie_title_first_line_tag_is_rewritten_to_design_size(self):
+        self.run_case('movie-title-content')
+
     def test_main_menu_chinese_selected(self):
         self.run_case('menu')
 
@@ -184,42 +190,43 @@ class MenuFontIntegrationTests(unittest.TestCase):
         force = force.split('\n\t\t}', 1)[0]
         self.assertIn('IsMainMenuText(text)', force)
 
-    def test_big_title_wiring_uses_twelve_px_host_in_scan_and_setters(self):
+    def test_big_title_wiring_uses_ten_px_host_in_scan_and_setters(self):
+        """两处大字都用 10px 宿主（8px 设计网格承载不了密笔画汉字），三个接线点同策略。"""
         source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
-        self.assertIn('internal static Font GetTwelveDesignFont()', source)
-        self.assertIn('internal const string Font12Name = "FizRP12pxZhHans";', source)
         # 8px 宿主承载不了密笔画汉字（8px 设计网格里没有字腔），大字不得再用它。
         self.assertNotIn('GetEightDesignFont', source)
-        # Apply 与两个 setter 都必须走同一策略（12px 宿主 + 定点字号），不能只修扫描路径。
+        # 12px 宿主已整体移除：游戏自带的字体槽位都在用，新增对象又无法保证被实例化，
+        # 因此两处大字统一走 10px 宿主（整数倍 10/20/30）。
+        self.assertNotIn('FizRP12pxZhHans', source)
+        self.assertNotIn('GetTwelveDesignFont', source)
+        # Apply 与两个 setter 都必须走同一策略，不能只修扫描路径。
         apply = source.split('internal static void Apply(Text text)', 1)[1]
         apply = apply.split('internal static void ApplyTMP', 1)[0]
-        self.assertIn('LargeTitlePixelPolicy.TargetSize(text.gameObject.name, text.text)', apply)
-        self.assertIn('GetTwelveDesignFont()', apply)
+        self.assertIn('LargeTitlePixelPolicy.TargetSize(goName, text.text)', apply)
+        self.assertIn('LargeTitlePixelPolicy.IsStageSelectName(goName)', apply)
+        self.assertIn('LargeTitlePixelPolicy.IsMovieStageTitle(text.text)', apply)
+        self.assertIn('LargeTitlePixelPolicy.StageSelectNumberSize', apply)
+        self.assertIn('LargeTitlePixelPolicy.MovieTitleSize', apply)
         setter_size = source.split('internal static class TextFontSizePatch', 1)[1]
         self.assertIn('LargeTitlePixelPolicy.TargetSize(', setter_size)
-        self.assertIn('GetTwelveDesignFont()', setter_size)
+        self.assertIn('LargeTitlePixelPolicy.MovieTitleSize', setter_size)
         setter_font = source.split('internal static class TextFontPatch', 1)[1]
-        self.assertIn('FontApplier.GetTwelveDesignFont()', setter_font)
-        # 大字判定不得回写文案或改 rect（只换字体与字号）。
-        self.assertNotIn('text.text =', apply)
+        self.assertIn('LargeTitlePixelPolicy.MovieTitleSize', setter_font)
+        # 关卡选择的行2 放大与过场标题首行改写都靠运行期注入富文本标签
+        # （组件 m_RichText=1，译表本身不带标签，所以只能由插件加）。
+        self.assertIn('LargeTitlePixelPolicy.BuildStageSelectContent(text.text)', apply)
+        self.assertIn('LargeTitlePixelPolicy.BuildMovieTitleContent(text.text)', apply)
+        # 日文原文不得被注入标签：语言探测可能滞后于界面语言，而 LocalizedText 只覆盖
+        # 字体不覆盖文本 —— 注入会永久改写日文文案。注入前必须先判 HasCJK。
+        self.assertIn('if (HasCJK(text.text))', apply)
+        # 像素网格按最大那一行取（关卡选择行1 10px / 行2 20px → 2 单位）。
+        self.assertIn('LargeTitlePixelPolicy.MaxLineSize(', source)
+        self.assertIn('text.text = tagged;', apply)
+        self.assertIn('text.text = retagged;', apply)
+        # 只有这两处允许写 text.text（行2 放大标签、首行标签改写），其余文本不得被回写。
+        self.assertEqual(apply.count('text.text ='), 2)
+        # 其它文本不得被回写文案或改 rect（只换字体与字号）。
         self.assertNotIn('text.rectTransform', apply.split('FitMainMenuHeight(text);', 1)[0])
-
-    def test_missing_font_host_warning_requires_a_real_search(self):
-        """12px 宿主缺失告警必须在**真的搜过**之后才发。
-
-        FindFont 有每秒一次的限流：限流期内的 null 只说明这一秒没搜，
-        不代表字体不存在。若告警不区分两者，日志里会出现假的「宿主缺失」，
-        而 KNOWN-ISSUES 正把它当作「新增对象未被实例化」的判据。
-        """
-        source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
-        self.assertIn('FontSearched[slot] = true;', source)
-        getter = source.split('internal static Font GetTwelveDesignFont()', 1)[1]
-        getter = getter.split('}', 1)[0]
-        self.assertIn('FontSearched[2]', getter)
-        # 告警条件必须同时要求「没找到」和「搜过」。
-        self.assertRegex(getter, r'font == null && FontSearched\[2\]')
-        # 三个槽位都要有对应的搜索标记数组。
-        self.assertIn('new bool[3]', source)
 
     def test_snap_log_format_placeholders_match_arguments(self):
         """[snap] 日志的格式串占位符数必须与实参个数一致。

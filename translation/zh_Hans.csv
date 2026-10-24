@@ -3422,7 +3422,7 @@ localization:Message Table:Stage6_1_1_message01,localization,Message Table,Stage
 ⑪ を押しっぱなしにすると、
 ぶら下がることが　できるぞ！","Hook wire on wall or ceiling
 Keep holding ⑪
-to hang down!","把丝线挂到墙壁或天花板上，
+to hang down!","把丝线挂到墙壁或天花板上
 一直按住 ⑪ ，
 就能吊在空中了！"
 localization:Message Table:Stage6_1_2_message00,localization,Message Table,Stage6_1_2_message00,Unity Localization 表（UI/菜单/结局字幕）,"<color=#FFAAFFFF>ルーベル</color>のワザ 「<color=#EE0000FF>ワイヤージャンプ</color>」は、
@@ -3571,8 +3571,8 @@ A dragon cub that lives
 underwater. Never misses
 a swim training.","----库玛----
 
-　<color=#77AAFFFF>「我才是水中最快的
-　　龙！」</color>
+　<color=#77AAFFFF>「水中最快的龙
+　　当然是我！」</color>
 
 住在水里的小龙
 游泳锻炼从不偷懒"
@@ -3740,7 +3740,7 @@ localization:UI Table:CanvasCamera_Pause_Chara_Soraco_R,localization,UI Table,Ca
 Drill (cost: 20)","----动作----
 
 ⑪ ：跳跃
-⑫ ：冲刺・抓挠攻击
+⑫ ：冲刺・抓挠
 
 空中 ⑭ ＆ ⑬ 
 　：钻头（消耗20）"

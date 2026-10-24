@@ -248,49 +248,6 @@ def _check(out_dir, staging_root=None):
 
     ok = True
 
-    # 12px 大字宿主必须真的在产物里（新增的 Font 对象）。没有这条断言时，
-    # 一次静默跳过就会让运行期大字退回 10px 宿主，而构建报告看起来一切正常。
-    import font_patch
-
-    config = font_patch.load_config()
-    for entry in config.get("hosts", []):
-        if entry.get("disabled"):
-            continue
-        fpath = os.path.join(out_dir, entry["file"])
-        if not os.path.isfile(fpath):
-            print("宿主载体缺失: %s" % fpath)
-            ok = False
-            continue
-        henv = open_env(fpath)
-        hsf = None
-        for cand in henv.files.values():
-            if hasattr(cand, "objects") and hasattr(cand, "externals"):
-                hsf = cand
-                break
-        found = None
-        for obj in hsf.objects.values():
-            if obj.type.name != "Font":
-                continue
-            try:
-                tree = obj.read_typetree()
-            except Exception:
-                continue
-            if tree.get("m_Name") == entry["name"]:
-                found = (obj.path_id, tree)
-        if found is None:
-            print("产物里找不到字体宿主 %s（%s）"
-                  % (entry["name"], entry["file"]))
-            ok = False
-            continue
-        path_id, tree = found
-        want = os.path.join("dist/fonts/source", entry["subset_out"])
-        blob = bytes(tree["m_FontData"])
-        same = os.path.isfile(want) and open(want, "rb").read() == blob
-        print("字体宿主 %s: path_id=%d bytes=%d 与子集字体一致=%s"
-              % (entry["name"], path_id, len(blob), same))
-        if not same:
-            ok = False
-
     path = os.path.join(out_dir, "sharedassets3.assets")
     if not os.path.isfile(path):
         print("产物缺失: %s" % path)

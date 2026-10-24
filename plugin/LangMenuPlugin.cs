@@ -409,7 +409,8 @@ namespace FizRPLangMenu
 	///
 	/// 2026-10-23 全量口径为 1824 Text / 159 LocalizedText；很多文本没有逐语言字体设置。
 	/// 中文（Spanish 槽）下接管含 CJK 的文本，普通小字使用 Fusion Pixel 8/10px 宿主，
-	/// 两处大字（关卡选择世界名、中央过场标题）改用 12px 宿主的 12px/24px 整数倍渲染
+	/// 两处大字（关卡选择世界名、中央过场标题）改用 10px 宿主的整数倍渲染
+	/// （关卡选择 10px/20px，过场标题 20px/30px）
 	/// （见 LargeTitlePixelPolicy）。主菜单高度与暂停页脚位置分别使用有界策略。
 	/// 这里只处理字形/排版，不翻译任意硬编码文案。
 	///
@@ -431,18 +432,11 @@ namespace FizRPLangMenu
 		/// </summary>
 		internal const string Font8Name = "k8x12EXL";
 		internal const string Font10Name = "k8x12EXS";
-		/// <summary>
-		/// 12px 设计宿主（补丁新增的 Font 对象，见 fonts.config.json 的 hosts 段）。
-		/// 只有两处大字用它：8px 设计网格里「糖/浆/饼」等密笔画汉字没有字腔，
-		/// 整数倍放大只会把实心块放大；12px 才有可辨字腔。
-		/// </summary>
-		internal const string Font12Name = "FizRP12pxZhHans";
 		internal const int SizeSmall = 8;
 		internal const int SizeLarge = TitleMenuFontPolicy.Size;
 
-		private static readonly Font[] FontCache = new Font[3];
-		private static readonly float[] FontSearchTime = new float[3];
-		private static readonly bool[] FontSearched = new bool[3];
+		private static readonly Font[] FontCache = new Font[2];
+		private static readonly float[] FontSearchTime = new float[2];
 		private static readonly HashSet<int> DiagSeen = new HashSet<int>();
 		private static int DiagCount;
 		private static Text[] _textCache;
@@ -577,8 +571,6 @@ namespace FizRPLangMenu
 				return null;
 			}
 			FontSearchTime[slot] = now;
-			// 记录「确实搜过」：限流期内的 null 只说明这一秒没搜，不代表字体不存在。
-			FontSearched[slot] = true;
 			try
 			{
 				Font[] all = Resources.FindObjectsOfTypeAll<Font>();
@@ -605,29 +597,6 @@ namespace FizRPLangMenu
 		{
 			return (size <= SizeSmall) ? FindFont(0, Font8Name) : FindFont(1, Font10Name);
 		}
-
-		/// <summary>
-		/// 12px 设计宿主（补丁新增的 Font 对象）。两处大字用它：关卡选择 12px（1:1）、
-		/// 过场标题 24px（2× 整数倍）。8px 宿主承载不了「糖/浆/饼」这类密笔画汉字
-		/// （8px 设计网格里没有字腔），不能用于大字。
-		/// 宿主未加载时返回 null，调用方回退到 10px 宿主（不丢文本）。
-		/// </summary>
-		internal static Font GetTwelveDesignFont()
-		{
-			// slot 2 专门缓存 12px 宿主。
-			Font font = FindFont(2, Font12Name);
-			// 只有在**真的搜过**之后仍未找到才告警：FindFont 有 1 秒限流，
-			// 限流期内的 null 不代表宿主不存在。
-			if (font == null && FontSearched[2] && !_font12MissingLogged)
-			{
-				_font12MissingLogged = true;
-				PatchUtil.Warn("12px font host '" + Font12Name
-					+ "' not found; the two big titles fall back to the 10px host");
-			}
-			return font;
-		}
-
-		private static bool _font12MissingLogged;
 
 		/// <summary>当前语言是否为 Spanish（中文槽位）。反射调用以兼容 GetLanguage 的实际签名。</summary>
 		internal static bool IsChineseLanguage()
@@ -845,7 +814,7 @@ namespace FizRPLangMenu
 		///
 		/// 做法：沿 x 与 y 两轴各平移 ≤0.5 个网格，就近取整，使内容起点落整。
 		/// 网格 = 1 个设计像素占多少 canvas 单位（见 DesignPixelGrid）：普通 8/10px 小字
-		/// 为 1，两处大字（12px 宿主 @24px）为 2，故大字单轴位移上限 1 canvas 单位
+		/// 为 1，两处大字（10px 宿主 @20px / @30px）为 2 / 3，故大字单轴位移上限 1 canvas 单位
 		/// （scaleFactor 4 下即 4 屏幕像素）。
 		/// 该修正自稳定：一旦落整，residual 变 0，后续帧不再动；若游戏挪动了 rect，
 		/// 靠 _snapChecked 里记录的 (xMin, width) 发现并重新核算。
@@ -918,11 +887,11 @@ namespace FizRPLangMenu
 			}
 
 			// 网格换算（2026-10-24 复核）：Unity 动态字体按 fontSize 光栅化，1 个设计像素
-			// = fontSize / 设计尺寸 个 canvas 单位（12px 宿主 @24px 时 1 设计像素 = 2 单位）。
+			// = fontSize / 设计尺寸 个 canvas 单位（10px 宿主 @20px 时 1 设计像素 = 2 单位）。
 			// 要让笔画边缘落在整格上，内容起点须对齐到**设计像素**的整数倍：
 			// 普通 8/10px 小字 fontSize == 设计尺寸，1 设计像素 = 1 canvas 单位，
 			// 故按整 canvas 单位对齐即可（半 canvas 单位偏移实测整格 50% 灰）；
-			// 大字（12px 宿主 @24px）1 设计像素 = 2 canvas 单位，需对齐到 2 单位。
+			// 大字（10px 宿主 @20px）1 设计像素 = 2 canvas 单位，需对齐到 2 单位。
 			// 设计尺寸的整数倍另决定**光栅内部**有无灰阶（非整数倍放大会把字腔糊死，
 			// 见 LargeTitlePixelPolicy），与这里的对齐网格是两件事。
 			float grid = DesignPixelGrid(text);
@@ -970,8 +939,8 @@ namespace FizRPLangMenu
 		/// <summary>
 		/// 当前文本的对齐网格（canvas 单位）：1 个设计像素占多少 canvas 单位。
 		/// 依据是**实际挂载的宿主字体**与当前 fontSize：8px 宿主 @8px → 1；
-		/// 10px 宿主 @10px → 1；12px 宿主 @12px（关卡选择大字）→ 1；
-		/// 12px 宿主 @24px（过场标题）→ 2。
+		/// 10px 宿主 @10px → 1；10px 宿主 @20px（关卡选择行2、过场标题首行）→ 2；
+		/// 10px 宿主 @30px（过场标题地名行）→ 3。
 		/// 非整数倍时退回 1（保守：宁可少对齐，也不要按错误的网格平移）。
 		/// </summary>
 		private static float DesignPixelGrid(Text text)
@@ -992,16 +961,20 @@ namespace FizRPLangMenu
 				{
 					design = 10;
 				}
-				else if (font.name == Font12Name)
-				{
-					design = 12;
-				}
 			}
 			if (design <= 0 || text.fontSize <= 0)
 			{
 				return 1f;
 			}
 			int size = text.fontSize;
+			// 一个 Text 里可能有多行不同字号（关卡选择：行1 10px、行2 20px）。
+			// 网格必须按**最大**那一行取：20px 行 1 设计像素 = 2 canvas 单位，
+			// 起点落在 2 的整数倍上才不糊；而 2 又是 1 的整数倍，行1 随之一起对齐。
+			int maxLine = LargeTitlePixelPolicy.MaxLineSize(text.gameObject.name, text.text);
+			if (maxLine > size)
+			{
+				size = maxLine;
+			}
 			if (size % design != 0)
 			{
 				return 1f;
@@ -1021,24 +994,46 @@ namespace FizRPLangMenu
 			int baseSize = GetBaseSize(text, text.fontSize);
 			int want = forceInfo ? SizeLarge : QuantizeSize(baseSize);
 			Font f = GetFontFor(want);
-			// 两处大字（关卡选择世界名 / 中央过场标题）：改用 12px 设计宿主，字号取
-			// 各自版式余量允许的整数倍（关卡选择 12px=1:1，过场标题 24px=2×），消除
-			// 非整数倍放大造成的字腔糊死（见 LargeTitlePixelPolicy）。
-			// 12px 宿主未加载时回退到 10px 宿主，不丢文本。
+			// 两处大字（关卡选择世界名 / 中央过场标题）：按各自版式余量取锐利字号，
+			// 消除非整数倍放大造成的字腔糊死（见 LargeTitlePixelPolicy）。
+			//   关卡选择：10px 宿主 1:1 小字（行1「第N关」）+ 行2「地名」用 <size=20> 标签放大；
+			//   过场标题：首行「第N关」<size=16> → <size=20>（2×）、地名 30px（3×）。
+			// 两行共用同一个字体，所以字号只能取该字体设计尺寸的整数倍。
 			if (!forceInfo)
 			{
-				int bigSize = LargeTitlePixelPolicy.TargetSize(text.gameObject.name, text.text);
+				string goName = text.gameObject.name;
+				int bigSize = LargeTitlePixelPolicy.TargetSize(goName, text.text);
 				if (bigSize > 0)
 				{
-					Font bigFont = GetTwelveDesignFont();
-					if (bigFont != null)
+					if (LargeTitlePixelPolicy.IsStageSelectName(goName))
 					{
-						want = bigSize;
-						f = bigFont;
+						// 行2 的放大靠富文本标签实现（组件 m_RichText=1，译表本身不带标签）。
+						//
+						// 只对含汉字的文本注入：语言探测可能滞后于界面语言（此时场景里仍是
+						// 日文「ステージ1\nシロップへいげん」），而 LocalizedText 只覆盖字体、
+						// 不覆盖文本 —— 注入会永久改写日文文案。日文原文不含汉字，故此判定安全。
+						if (HasCJK(text.text))
+						{
+							string tagged = LargeTitlePixelPolicy.BuildStageSelectContent(text.text);
+							if (!string.IsNullOrEmpty(tagged) && tagged != text.text)
+							{
+								text.text = tagged;
+							}
+						}
+						want = LargeTitlePixelPolicy.StageSelectNumberSize;
+						f = GetFontFor(want);
 					}
-					else
+					else if (LargeTitlePixelPolicy.IsMovieStageTitle(text.text))
 					{
-						want = LargeTitlePixelPolicy.FallbackSize(bigSize);
+						// 首行「第N关」必须与地名共用同一个字体，所以它的字号只能取该字体
+						// 设计尺寸的整数倍：10px 宿主 → 20px(2×) / 30px(3×)。
+						// 译表里的 <size=16> 是 1.6× 非整数倍（糊），因此运行期改写标签。
+						string retagged = LargeTitlePixelPolicy.BuildMovieTitleContent(text.text);
+						if (!string.IsNullOrEmpty(retagged) && retagged != text.text)
+						{
+							text.text = retagged;
+						}
+						want = LargeTitlePixelPolicy.MovieTitleSize;
 						f = GetFontFor(want);
 					}
 				}
@@ -1174,7 +1169,7 @@ namespace FizRPLangMenu
 				{
 					pixelCanvas.pixelPerfect = true;
 				}
-				// 普通小字对齐到 8/10；两处大字按 LargeTitlePixelPolicy 取 12px/24px
+				// 普通小字对齐到 8/10；两处大字按 LargeTitlePixelPolicy 取 10px 宿主的整数倍
 				// 整数倍，不压缩成小字。
 				if (text.fontSize != want)
 				{
@@ -1476,17 +1471,23 @@ namespace FizRPLangMenu
 				value = FontApplier.ForceLarge(__instance)
 					? FontApplier.SizeLarge
 					: FontApplier.QuantizeSize(baseSize);
-				// 两处大字：字号取各自版式余量允许的整数倍（关卡选择 12、过场标题 24），
+				// 两处大字：字号取各自版式余量允许的整数倍（关卡选择行1 10、过场标题 24），
 				// 避免游戏赋值后到下一次扫描之间闪一帧非整数倍的模糊字号。
 				if (!FontApplier.ForceLarge(__instance))
 				{
-					int bigSize = LargeTitlePixelPolicy.TargetSize(
-						__instance.gameObject.name, __instance.text);
+					string goName = __instance.gameObject.name;
+					int bigSize = LargeTitlePixelPolicy.TargetSize(goName, __instance.text);
 					if (bigSize > 0)
 					{
-						value = FontApplier.GetTwelveDesignFont() != null
-							? bigSize
-							: LargeTitlePixelPolicy.FallbackSize(bigSize);
+						if (LargeTitlePixelPolicy.IsMovieStageTitle(__instance.text))
+						{
+							value = LargeTitlePixelPolicy.MovieTitleSize;
+						}
+						else
+						{
+							// 关卡选择：行1 保持小字，行2 由 <size=20> 标签放大。
+							value = LargeTitlePixelPolicy.StageSelectNumberSize;
+						}
 					}
 				}
 			}
@@ -1514,22 +1515,23 @@ namespace FizRPLangMenu
 					: FontApplier.QuantizeSize(
 						FontApplier.GetBaseSize(__instance, __instance.fontSize));
 				Font f = FontApplier.GetFontFor(want);
-				// 两处大字改用 12px 设计宿主（12px=1:1 / 24px=2×），与 Apply 的取字体一致。
+				// 两处大字：与 Apply 保持同一套策略（关卡选择用 10px 宿主的小字档，
+				// 过场标题用 10px 宿主的 20px / 30px）。
 				if (!FontApplier.ForceLarge(__instance))
 				{
-					int bigSize = LargeTitlePixelPolicy.TargetSize(
-						__instance.gameObject.name, __instance.text);
+					string goName = __instance.gameObject.name;
+					int bigSize = LargeTitlePixelPolicy.TargetSize(goName, __instance.text);
 					if (bigSize > 0)
 					{
-						Font bigFont = FontApplier.GetTwelveDesignFont();
-						if (bigFont != null)
+						if (LargeTitlePixelPolicy.IsMovieStageTitle(__instance.text))
 						{
-							f = bigFont;
+							want = LargeTitlePixelPolicy.MovieTitleSize;
+							f = FontApplier.GetFontFor(want);
 						}
 						else
 						{
-							// 12px 宿主缺失：与另两条路径一致地退到 10px 宿主的整数倍。
-							want = LargeTitlePixelPolicy.FallbackSize(bigSize);
+							// 关卡选择：行1 保持小字（行2 由 <size=20> 标签放大）。
+							want = LargeTitlePixelPolicy.StageSelectNumberSize;
 							f = FontApplier.GetFontFor(want);
 						}
 					}

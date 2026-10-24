@@ -22,8 +22,7 @@ import UnityPy
 
 from check_translation import SheetError, check_file
 from custom_types import DAMAGE_LIST_NAMES, decode, encode, header_end
-from font_patch import add_font_host, load_config, pick_blob_name
-from font_subset import build_subset, chars_from_translation, extract_member
+from font_patch import load_config, pick_blob_name
 from loc_common import LANGS, SHARED_TABLE_BUNDLE, STR_TABLE_BUNDLE
 from unity_env import BUNDLE_DIR, DATA_DIR, mb_class, mb_name, open_env
 
@@ -254,7 +253,7 @@ def _additive_font_pptr(serialized_file, fname, target):
 
 def patch_assets(out_dir, translations, index, slot, font_entries, profile,
                  fusion_dir, font_size, font_map_path="work/font_map.json",
-                 additive_font=None, host_entries=None, host_blobs=None):
+                 additive_font=None):
     lang_code = LANGS[slot]
     # Which file holds the DamageTalk asset for a given language. Rows that the
     # target language lacks an index for have no `others` entry of that language,
@@ -279,10 +278,6 @@ def patch_assets(out_dir, translations, index, slot, font_entries, profile,
             by_file.setdefault(meta["file"], {"text": [], "fonts": []})["text"].append(rid)
     for entry in font_entries:
         by_file.setdefault(entry["file"], {"text": [], "fonts": []})["fonts"].append(entry)
-    # 12px 大字宿主的载体文件必须被处理，哪怕它没有任何文本行、字体条目也被禁用 ——
-    # 否则宿主会被静默跳过（产物缺对象、运行期大字退回 10px 宿主且构建不报错）。
-    for entry in host_entries or []:
-        by_file.setdefault(entry["file"], {"text": [], "fonts": []})
     # LocFontData carries no text, so it would never be visited on its own.
     # work/font_map.json records which .assets file each one lives in.
     missing_locfont = []
@@ -296,8 +291,6 @@ def patch_assets(out_dir, translations, index, slot, font_entries, profile,
     report = []
     written_files = set()
     build_started = time.time()
-    host_entries = host_entries or []
-    host_blobs = host_blobs or {}
     for fname, work in sorted(by_file.items()):
         src = os.path.join(DATA_DIR, fname)
         env = open_env(src)
@@ -421,21 +414,8 @@ def patch_assets(out_dir, translations, index, slot, font_entries, profile,
                 obj.save_typetree(d)
                 stats["fonts"] += 1
 
-        # 12px 大字宿主：作为新对象写进本文件（sharedassets0.assets 已被载荷分发
-        # 且每个场景都会加载它，所以新对象在运行期同样会被实例化）。
-        for entry in host_entries:
-            if entry["file"] != fname:
-                continue
-            path_id = add_font_host(sf, entry["name"], host_blobs[entry["name"]])
-            stats["hosts"] = stats.get("hosts", []) + [
-                {"name": entry["name"], "path_id": path_id,
-                 "bytes": len(host_blobs[entry["name"]])}]
-            print("[host] %s: added Font %s as path_id %d"
-                  % (fname, entry["name"], path_id))
-
         if (stats["text"] or stats["fonts"] or stats["locfont"]
-                or stats["padded"] or stats["locfont_font"] or stats["treasure_fix"]
-                or stats.get("hosts")):
+                or stats["padded"] or stats["locfont_font"] or stats["treasure_fix"]):
             os.makedirs(out_dir, exist_ok=True)
             out_path = os.path.join(out_dir, fname)
             with open(out_path, "wb") as fh:
@@ -586,25 +566,6 @@ def build(out_dir="dist-additive/FizAndTheRainbowPlanet_Data",
     cfg = load_config(config_path)
     font_entries = [e for e in cfg["fonts"] if not e.get("disabled")]
 
-    # 12px 大字宿主：子集化后作为**新对象**写进 sharedassets0.assets。
-    # 游戏自带的字体槽位都在用（换掉会改变日英界面），而两处大字又需要更大的
-    # 设计尺寸来承载密笔画汉字，所以新增对象而不是替换既有槽位。
-    host_entries = [e for e in cfg.get("hosts", []) if not e.get("disabled")]
-    host_blobs: dict[str, bytes] = {}
-    for entry in host_entries:
-        zip_path = os.path.join(entry.get("zip_dir", "work/fonts/source"),
-                                entry["zip"])
-        if not os.path.exists(zip_path):
-            raise SystemExit("ABORT: 缺少字体源包: %s" % zip_path)
-        source = extract_member(zip_path, entry["member"])
-        chars = chars_from_translation([{"zh_Hans": v} for v in translations.values()])
-        out_ttf = os.path.join(fusion_dir, entry["subset_out"])
-        build_subset(source, chars, out_ttf)
-        host_blobs[entry["name"]] = open(out_ttf, "rb").read()
-        print("[host] %s: %s -> %s (%d bytes, %d glyphs)"
-              % (entry["file"], entry["name"], out_ttf,
-                 len(host_blobs[entry["name"]]), len(chars)))
-
     # Chinese lives in `es`; its LocFontData selects one of the two shared
     # 8/10px font hosts. The serialized tiers are 8/12; runtime handles display size.
     additive_font = dict(ADDITIVE_FONTS_BY_SIZE)
@@ -619,9 +580,7 @@ def build(out_dir="dist-additive/FizAndTheRainbowPlanet_Data",
                                         if additive_font else None)}}
     report["assets"] = patch_assets(out_dir, translations, index, slot,
                                     text_entries, profile, fusion_dir,
-                                    font_size, additive_font=additive_font,
-                                    host_entries=host_entries,
-                                    host_blobs=host_blobs)
+                                    font_size, additive_font=additive_font)
     if not skip_strings:
         bundle_out = os.path.join(out_dir, "StreamingAssets", "aa",
                                   "StandaloneWindows64")
