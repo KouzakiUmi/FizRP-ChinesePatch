@@ -184,23 +184,63 @@ class MenuFontIntegrationTests(unittest.TestCase):
         force = force.split('\n\t\t}', 1)[0]
         self.assertIn('IsMainMenuText(text)', force)
 
-    def test_big_title_wiring_uses_eight_px_host_in_scan_and_setters(self):
+    def test_big_title_wiring_uses_ten_px_host_in_scan_and_setters(self):
         source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
-        self.assertIn('internal static bool IsBigTitle(Text text)', source)
-        self.assertIn('LargeTitlePixelPolicy.Applies(text.gameObject.name, text.text)', source)
-        self.assertIn('internal static Font GetEightDesignFont()', source)
-        # Apply 与两个 setter 都必须走同一策略（8px 宿主 + SnapSize），不能只修扫描路径。
+        self.assertIn('internal static Font GetTenDesignFont()', source)
+        # 8px 宿主承载不了密笔画汉字（8px 设计网格里没有字腔），大字不得再用它。
+        self.assertNotIn('GetEightDesignFont', source)
+        self.assertNotIn('FindFont(0, Font8Name);', source.split('GetTenDesignFont', 1)[1]
+                         .split('}', 1)[0])
+        # Apply 与两个 setter 都必须走同一策略（10px 宿主 + 定点字号），不能只修扫描路径。
         apply = source.split('internal static void Apply(Text text)', 1)[1]
         apply = apply.split('internal static void ApplyTMP', 1)[0]
-        self.assertIn('LargeTitlePixelPolicy.SnapSize(baseSize)', apply)
-        self.assertIn('GetEightDesignFont()', apply)
+        self.assertIn('LargeTitlePixelPolicy.TargetSize(text.gameObject.name, text.text)', apply)
+        self.assertIn('GetTenDesignFont()', apply)
         setter_size = source.split('internal static class TextFontSizePatch', 1)[1]
-        self.assertIn('LargeTitlePixelPolicy.SnapSize(baseSize)', setter_size)
+        self.assertIn('LargeTitlePixelPolicy.TargetSize(', setter_size)
         setter_font = source.split('internal static class TextFontPatch', 1)[1]
-        self.assertIn('FontApplier.GetEightDesignFont()', setter_font)
+        self.assertIn('FontApplier.GetTenDesignFont()', setter_font)
         # 大字判定不得回写文案或改 rect（只换字体与字号）。
         self.assertNotIn('text.text =', apply)
         self.assertNotIn('text.rectTransform', apply.split('FitMainMenuHeight(text);', 1)[0])
+
+    def test_snap_log_format_placeholders_match_arguments(self):
+        """[snap] 日志的格式串占位符数必须与实参个数一致。
+
+        这条路径不在纯策略文件里，只有插件本体才会执行；占位符多于实参时
+        string.Format 抛 FormatException，会中断当帧文本处理并刷错误日志。
+        """
+        source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
+        start = source.index('"[snap]')
+        end = source.index('));', start)
+        call = source[start:end]
+        literals = re.findall(r'"((?:[^"\\]|\\.)*)"', call)
+        self.assertTrue(literals, 'no [snap] format literal found')
+        fmt = ''.join(literals)
+        placeholders = sorted({int(n) for n in re.findall(r'\{(\d+)', fmt)})
+        self.assertTrue(placeholders, 'no placeholder in [snap] format string')
+        self.assertEqual(placeholders, list(range(len(placeholders))),
+                         'placeholders must be contiguous from 0')
+        # 实参：在最后一个字符串字面量之后、调用右括号之前的顶层逗号分隔项。
+        tail = call[call.rindex('"') + 1:]
+        depth = 0
+        args = []
+        current = ''
+        for char in tail:
+            if char in '([':
+                depth += 1
+            elif char in ')]':
+                depth -= 1
+            if char == ',' and depth == 0:
+                args.append(current)
+                current = ''
+            else:
+                current += char
+        args.append(current)
+        args = [a for a in args if a.strip()]
+        self.assertEqual(len(args), len(placeholders),
+                         f'[snap] format has {len(placeholders)} placeholders '
+                         f'but {len(args)} arguments: {fmt}')
 
 
 if __name__ == '__main__':

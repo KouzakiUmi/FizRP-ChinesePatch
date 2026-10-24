@@ -1,6 +1,6 @@
 # 文本、字体与图片映射
 
-本文件描述 v1.2.10 实际维护的数据路径及覆盖边界，不承诺所有玩家可见文案都已本地化。安装、升级见 [README](../README.md)，实现契约见 [TECHNICAL](TECHNICAL.md)。
+本文件描述 v1.2.11 实际维护的数据路径及覆盖边界，不承诺所有玩家可见文案都已本地化。安装、升级见 [README](../README.md)，实现契约见 [TECHNICAL](TECHNICAL.md)。
 
 ## 1. 语言选择与内容来源
 
@@ -53,12 +53,12 @@ Japanese=0, English_Machine=1, English=2, French=3, Spanish=4, Max=5
 
 | 路径 | 载体 | 本版策略 |
 | --- | --- | --- |
-| 首次到达新世界的中央标题 | UI Table:MovieCanvasCamera_Stage2…7 → Text | 原字号 24，首行 `<size=16>`；8px 设计宿主整数倍渲染（24=3×8、16=2×8） |
+| 首次到达新世界的中央标题 | UI Table:MovieCanvasCamera_Stage2…7 → Text | 原字号 24，首行 `<size=16>`；10px 设计宿主 20px 渲染（2× 整数倍） |
 | 普通关卡进入横幅 | stageCallPanels_Upper / _en → Sprite | Japanese 分支用 JP 图，中文走非日语图 |
 | 世界地图关名 | TextData:StageSelectText_WorldName | 由语言块选择，不是修改场景初始字符串 |
 | 旧 GameSceneManager HUD 关名 | 场景 stageName 字段 | 部分场景保留旧路径，需要实际启用情况确认 |
 
-字号处理只影响字体/排版，不会替代文本翻译。大标题修复由 [FontSizePolicy](../plugin/FontSizePolicy.cs)、[LargeTitlePixelPolicy](../plugin/LargeTitlePixelPolicy.cs) 与[插件接入](../plugin/LangMenuPlugin.cs)共同实现：普通 8/10 档保持，超过 12 的字号不再被全局压缩；关卡选择世界名与中央过场标题两处大字额外走 8px 设计宿主的整数倍放大（消除非整数倍发虚，世界名 14→16）。新版本的实际过场观感仍需复测。
+字号处理只影响字体/排版，不会替代文本翻译。大标题修复由 [FontSizePolicy](../plugin/FontSizePolicy.cs)、[LargeTitlePixelPolicy](../plugin/LargeTitlePixelPolicy.cs) 与[插件接入](../plugin/LangMenuPlugin.cs)共同实现：普通 8/10 档保持，超过 12 的字号不再被全局压缩；关卡选择世界名（10px，1:1）与中央过场标题（20px，2× 整数倍）两处大字统一用 10px 设计宿主渲染——8px 设计网格承载不了「糖/浆/饼」这类密笔画汉字，字腔会糊成实心。新版本的实际过场观感仍需复测。
 
 ## 4. 字体映射与限制
 

@@ -6,24 +6,35 @@ namespace FizRPLangMenu
 	/// 仅两处大字的像素对齐策略：
 	///   a) 关卡选择界面左上角世界名（go=StageName，TextData:StageSelectText_WorldName，原 14px）；
 	///   b) 首次到达新关卡的中央过场标题（UI Table: MovieCanvasCamera_Stage*，
-	///      原 24px + 首行富文本 &lt;size=16&gt;）。
+	///      原 24px，首行富文本 &lt;size=16&gt;）。
 	///
-	/// 发虚根因：两处宿主字体是 fusion-10px 设计（k8x12EXS），14 / 24 / 16 px 都不是
-	/// 10px 的整数倍（1.4× / 2.4× / 1.6×），字形贴图光栅化时设计像素边界落在分数像素上，
-	/// 边缘自带灰阶 —— 这是光栅内部的模糊，位置对齐救不了，只有整数倍放大才能消除。
+	/// 实机反馈（v1.2.10）确认：改成 8px 设计宿主 @16px 后「糖/浆/饼」等密笔画汉字
+	/// **字腔被填成实心**。原因有两层，且都只能从字形本身解决：
+	///   1) 8px 设计网格里这些字就没有留出字腔（放大到 16px 只是把实心块放大）；
+	///   2) 游戏的 PixelOutline 描边固定 1 canvas 单位（实测白笔画 8px / 黑间隙 4px），
+	///      不随字号缩放，字号越大相对越细，但密笔画的 1px 间隙仍会被吃掉。
 	///
-	/// 改用 8px 设计宿主（k8x12EXL ← fusion-8px）后 24 = 3×8、16 = 2×8、14 → 16 = 2×8
-	/// 均为整数倍，字形按整块设计像素放大；24/16 版式一毫不变，仅世界名 14→16 微调一格。
+	/// 因此两处一律改用 **10px 设计宿主（k8x12EXS）**：
+	///   关卡选择 10px（1:1）——其文本框只有 32 canvas 单位高（两行 10px 行高 1.4em
+	///   合计 28px 恰好容纳；12px 起就溢出被裁），10px 也是唯一放得下的整数倍；
+	///   过场标题 20px（2× 整数倍）——文本框 256×224 空间充裕，2× 放大后字腔完整、
+	///   笔画粗壮；首行由译表 &lt;size=16&gt; 固定为 16px，不受此处的 fontSize 影响。
 	///
 	/// 范围严格限定：其它大字（对白内 &lt;size=24&gt;、教学板 75px 等）不适用本策略。
 	/// </summary>
 	internal static class LargeTitlePixelPolicy
 	{
-		/// <summary>fusion-8px 的设计尺寸；倍率 = fontSize / 8 必须为整数。</summary>
-		internal const int DesignSize = 8;
+		/// <summary>fusion-10px 的设计尺寸（k8x12EXS 槽位）；倍率须为整数。</summary>
+		internal const int DesignSize = 10;
 
 		/// <summary>关卡选择世界名的 GameObject 名（全场景唯一命中）。</summary>
 		internal const string StageSelectName = "StageName";
+
+		/// <summary>关卡选择世界名字号：1:1，10px 设计逐格对应。</summary>
+		internal const int StageSelectSize = 10;
+
+		/// <summary>过场中央标题字号：2× 整数倍，20px。</summary>
+		internal const int MovieTitleSize = 20;
 
 		internal static bool IsStageSelectName(string goName)
 		{
@@ -50,17 +61,20 @@ namespace FizRPLangMenu
 		}
 
 		/// <summary>
-		/// 字号吸附到设计尺寸的整数倍（就近取整，下限 1 个倍率）：
-		/// 14 → 16（2×8）、24 → 24（3×8）、16 → 16（2×8）。幂等。
+		/// 该文本应使用的字号。关卡选择与过场标题各有独立取值（版式余量不同），
+		/// 其它文本返回 -1 表示不适用本策略。
 		/// </summary>
-		internal static int SnapSize(int size)
+		internal static int TargetSize(string goName, string text)
 		{
-			if (size <= DesignSize)
+			if (IsStageSelectName(goName))
 			{
-				return DesignSize;
+				return StageSelectSize;
 			}
-			int rounded = ((size + DesignSize / 2) / DesignSize) * DesignSize;
-			return rounded < DesignSize ? DesignSize : rounded;
+			if (IsMovieStageTitle(text))
+			{
+				return MovieTitleSize;
+			}
+			return -1;
 		}
 	}
 }

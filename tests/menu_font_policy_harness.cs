@@ -38,19 +38,16 @@ internal static class MenuFontPolicyHarness
 				Check(!LargeTitlePixelPolicy.Applies("Text", "普通文本"));
 				break;
 			case "big-title-snap":
-				// 字号吸附到 8px 设计尺寸的整数倍：14→16（2×8）、24→24（3×8）、16→16（2×8）
-				Check(LargeTitlePixelPolicy.SnapSize(14) == 16);
-				Check(LargeTitlePixelPolicy.SnapSize(24) == 24);
-				Check(LargeTitlePixelPolicy.SnapSize(16) == 16);
-				Check(LargeTitlePixelPolicy.SnapSize(8) == 8);
-				Check(LargeTitlePixelPolicy.SnapSize(12) == 16);
-				Check(LargeTitlePixelPolicy.SnapSize(4) == 8);
-				foreach (int size in new[] { 8, 14, 16, 24, 32 })
-				{
-					int snapped = LargeTitlePixelPolicy.SnapSize(size);
-					Check(snapped % LargeTitlePixelPolicy.DesignSize == 0);
-					Check(LargeTitlePixelPolicy.SnapSize(snapped) == snapped);
-				}
+				// 两处大字各自的整数倍字号：关卡选择 10px（1:1，框高 32 只容 28）、
+				// 过场标题 20px（2×，框 256x224 充裕）。
+				Check(LargeTitlePixelPolicy.TargetSize("StageName", "第1关\n糖浆平原") == 10);
+				Check(LargeTitlePixelPolicy.TargetSize("Text", "<size=16>第2关</size>\n饼干沙漠") == 20);
+				Check(LargeTitlePixelPolicy.TargetSize("Text", "普通文本") == -1);
+				Check(LargeTitlePixelPolicy.TargetSize("StageText", "第1关\n糖浆平原") == -1);
+				Check(LargeTitlePixelPolicy.DesignSize == 10);
+				// 字号必须是设计尺寸的整数倍，否则字腔会被描边吃掉。
+				Check(LargeTitlePixelPolicy.TargetSize("StageName", "x") % LargeTitlePixelPolicy.DesignSize == 0);
+				Check(LargeTitlePixelPolicy.TargetSize("Text", "<size=16>第2关</size>") % LargeTitlePixelPolicy.DesignSize == 0);
 				break;
 			case "menu":
 				Check(TitleMenuFontPolicy.Applies("TitleCanvas", true));
