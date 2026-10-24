@@ -596,6 +596,22 @@ namespace FizRPLangMenu
 			return (size <= SizeSmall) ? FindFont(0, Font8Name) : FindFont(1, Font10Name);
 		}
 
+		/// <summary>
+		/// 8px 设计宿主（k8x12EXL ← fusion-8px）。大字用它做整数倍放大
+		/// （24 = 3×8、16 = 2×8）；未加载时返回 null，调用方回退普通路径。
+		/// </summary>
+		internal static Font GetEightDesignFont()
+		{
+			return FindFont(0, Font8Name);
+		}
+
+		/// <summary>两处大字判定：关卡选择世界名（go=StageName）/ 中央过场标题。</summary>
+		internal static bool IsBigTitle(Text text)
+		{
+			return text != null && text.gameObject != null
+				&& LargeTitlePixelPolicy.Applies(text.gameObject.name, text.text);
+		}
+
 		/// <summary>当前语言是否为 Spanish（中文槽位）。反射调用以兼容 GetLanguage 的实际签名。</summary>
 		internal static bool IsChineseLanguage()
 		{
@@ -881,9 +897,13 @@ namespace FizRPLangMenu
 				originY = r.yMin;
 			}
 
-			// 不变量：宿主字体的设计尺寸 == 我们设的 fontSize（k8x12EXS/Fusion10px@10、
-			// k8x12EXL/Fusion8px@8），故 1 个设计像素 == 1 个 canvas 单位。
-			// 若日后打破该不变量，这里要改成 originX / (want / designSize)。
+			// 网格换算（2026-10-24 复核）：动态字体贴图按 fontSize 光栅化，
+			// **1 texel == 1 canvas 单位，与宿主设计尺寸无关**（大字 24px@8 设计时
+			// 1 设计像素 = 3 texel，仍是 1 texel = 1 canvas 单位）。整数 canvas 单位
+			// 即整数 texel，故旧注释担心的「originX / (want/designSize)」不需要——
+			// 半 canvas 单位偏移实测整格 50% 灰，正说明 texel = 1 canvas 单位。
+			// 设计尺寸的整数倍只决定**光栅内部**有无灰阶（非整数倍放大自带灰阶，
+			// 位置对齐救不了，见 LargeTitlePixelPolicy），不影响这里的对齐网格。
 			float shiftX = NearestGridShift(originX);
 			float shiftY = NearestGridShift(originY);
 			if (shiftX == 0f && shiftY == 0f)
@@ -930,6 +950,18 @@ namespace FizRPLangMenu
 			int baseSize = GetBaseSize(text, text.fontSize);
 			int want = forceInfo ? SizeLarge : QuantizeSize(baseSize);
 			Font f = GetFontFor(want);
+			// 两处大字（关卡选择世界名 / 中央过场标题）：换 8px 设计宿主并把字号吸附到
+			// 设计尺寸的整数倍，消除 1.4×/2.4×/1.6× 非整数放大在光栅内部造成的灰阶发虚
+			// （见 LargeTitlePixelPolicy）。8px 宿主未加载时回退上面的普通路径，不丢文本。
+			if (!forceInfo && IsBigTitle(text))
+			{
+				Font bigFont = GetEightDesignFont();
+				if (bigFont != null)
+				{
+					want = LargeTitlePixelPolicy.SnapSize(baseSize);
+					f = bigFont;
+				}
+			}
 			if (f == null && want == SizeSmall)
 			{
 				// 两个字体宿主位于不同的 serialized file，而场景只加载其中一部分
@@ -1362,6 +1394,13 @@ namespace FizRPLangMenu
 				value = FontApplier.ForceLarge(__instance)
 					? FontApplier.SizeLarge
 					: FontApplier.QuantizeSize(baseSize);
+				// 两处大字：字号吸附到 8px 设计的整数倍（14→16、24→24），避免
+				// 游戏赋值后到下一次扫描之间闪一帧非整数倍的模糊字号。
+				if (!FontApplier.ForceLarge(__instance) && FontApplier.IsBigTitle(__instance)
+					&& FontApplier.GetEightDesignFont() != null)
+				{
+					value = LargeTitlePixelPolicy.SnapSize(baseSize);
+				}
 			}
 			catch (Exception)
 			{
@@ -1387,6 +1426,15 @@ namespace FizRPLangMenu
 					: FontApplier.QuantizeSize(
 						FontApplier.GetBaseSize(__instance, __instance.fontSize));
 				Font f = FontApplier.GetFontFor(want);
+				// 两处大字改用 8px 设计宿主（整数倍放大），与 Apply 的取字体一致。
+				if (!FontApplier.ForceLarge(__instance) && FontApplier.IsBigTitle(__instance))
+				{
+					Font bigFont = FontApplier.GetEightDesignFont();
+					if (bigFont != null)
+					{
+						f = bigFont;
+					}
+				}
 				if (f != null)
 				{
 					value = f;

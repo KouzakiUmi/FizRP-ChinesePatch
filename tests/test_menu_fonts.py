@@ -38,6 +38,7 @@ class MenuFontPolicyTests(unittest.TestCase):
                    '-reference:' + str(reference),
                    str(ROOT / 'plugin/TitleMenuFontPolicy.cs'),
                    str(ROOT / 'plugin/FontSizePolicy.cs'),
+                   str(ROOT / 'plugin/LargeTitlePixelPolicy.cs'),
                    str(ROOT / 'tests/menu_font_policy_harness.cs')]
         proc = subprocess.run(command, capture_output=True, encoding='utf-8')
         if proc.returncode:
@@ -67,6 +68,12 @@ class MenuFontPolicyTests(unittest.TestCase):
 
     def test_large_stage_titles_keep_authored_size_across_scans(self):
         self.run_case('font-sizes')
+
+    def test_big_title_scope_matches_only_two_targets(self):
+        self.run_case('big-title')
+
+    def test_big_title_sizes_snap_to_integer_design_multiples(self):
+        self.run_case('big-title-snap')
 
     def test_main_menu_chinese_selected(self):
         self.run_case('menu')
@@ -176,6 +183,24 @@ class MenuFontIntegrationTests(unittest.TestCase):
         force = source.split('internal static bool ForceLarge(Text text)', 1)[1]
         force = force.split('\n\t\t}', 1)[0]
         self.assertIn('IsMainMenuText(text)', force)
+
+    def test_big_title_wiring_uses_eight_px_host_in_scan_and_setters(self):
+        source = (ROOT / 'plugin/LangMenuPlugin.cs').read_text(encoding='utf-8')
+        self.assertIn('internal static bool IsBigTitle(Text text)', source)
+        self.assertIn('LargeTitlePixelPolicy.Applies(text.gameObject.name, text.text)', source)
+        self.assertIn('internal static Font GetEightDesignFont()', source)
+        # Apply 与两个 setter 都必须走同一策略（8px 宿主 + SnapSize），不能只修扫描路径。
+        apply = source.split('internal static void Apply(Text text)', 1)[1]
+        apply = apply.split('internal static void ApplyTMP', 1)[0]
+        self.assertIn('LargeTitlePixelPolicy.SnapSize(baseSize)', apply)
+        self.assertIn('GetEightDesignFont()', apply)
+        setter_size = source.split('internal static class TextFontSizePatch', 1)[1]
+        self.assertIn('LargeTitlePixelPolicy.SnapSize(baseSize)', setter_size)
+        setter_font = source.split('internal static class TextFontPatch', 1)[1]
+        self.assertIn('FontApplier.GetEightDesignFont()', setter_font)
+        # 大字判定不得回写文案或改 rect（只换字体与字号）。
+        self.assertNotIn('text.text =', apply)
+        self.assertNotIn('text.rectTransform', apply.split('FitMainMenuHeight(text);', 1)[0])
 
 
 if __name__ == '__main__':

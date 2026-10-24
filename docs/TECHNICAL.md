@@ -1,6 +1,6 @@
 # X2 技术架构与维护契约
 
-当前维护版本：v1.2.9。面向维护者；使用与升级见 [README](../README.md)，数据覆盖见 [TEXT-MAPPING](TEXT-MAPPING.md)，待验与已知漏项见 [KNOWN-ISSUES](release/KNOWN-ISSUES-X2.txt)。历史发布记录描述当时版本，不是当前实现规范。
+当前维护版本：v1.2.10。面向维护者；使用与升级见 [README](../README.md)，数据覆盖见 [TEXT-MAPPING](TEXT-MAPPING.md)，待验与已知漏项见 [KNOWN-ISSUES](release/KNOWN-ISSUES-X2.txt)。历史发布记录描述当时版本，不是当前实现规范。
 
 ## 1. 架构边界
 
@@ -75,6 +75,7 @@ UnityPy 1.25.4 的生成树在本游戏存在小字段对齐与部分类型节�
 - [TitleMenuFontPolicy](../plugin/TitleMenuFontPolicy.cs)：TitleCanvas 中文使用 10px，补足不足的文本框高度，不改变宽度/位置。
 - [PauseHintPixelPolicy](../plugin/PauseHintPixelPolicy.cs)：仅三条挂载到 Canvas 的中文暂停提示，按绝对横向偏移纠正，不移动未激活模板，不累加继承偏移。
 - TMP 有独立接管路径；当前唯一 TMP 初始串为纯拉丁 NPC TALK，不能误写成“没有 TMP 支持”或“该文本已翻译”。
+- [LargeTitlePixelPolicy](../plugin/LargeTitlePixelPolicy.cs)：仅两处大字——关卡选择世界名（go=StageName）与中央过场标题（`<size=16>第N关</size>`）——换 8px 设计宿主并把字号吸附到 8 的整数倍（24=3×8、16=2×8、14→16）。非整数倍放大（如 24px@10 设计 = 2.4×）会在光栅内部产生灰阶发虚，位置对齐救不了，只有整数倍放大能消除；对齐网格仍是整数 canvas 单位（1 texel = 1 canvas 单位，与设计尺寸无关）。范围严格受限：对白内 `<size=24>` 富文本、教学板 75px 等不适用。
 
 共享 Font 替换对引用该对象的其它语言也有效；原字号/设计尺寸可能产生非整数缩放。大标题保留字号不意味着点阵字在所有缩放下锐利。
 
