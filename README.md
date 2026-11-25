@@ -2,7 +2,7 @@
 
 《Fiz and the Rainbow Planet》Steam / Windows 版的非营利简体中文补丁，由 **KouzakiUmi（呜咪 / 神前海）**维护。
 
-**当前版本：v1.2.13 · 唯一维护路线：X2（复用 es 槽位）**
+**当前版本：v1.2.14 · 唯一维护路线：X2（复用 es 槽位）**
 
 [下载与历史版本](https://github.com/KouzakiUmi/FizRP-ChinesePatch/releases) · [技术架构](docs/TECHNICAL.md) · [文本与图片映射](docs/TEXT-MAPPING.md) · [已知限制](docs/release/KNOWN-ISSUES-X2.txt)
 
