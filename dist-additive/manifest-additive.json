@@ -1,8 +1,8 @@
 {
  "name": "Fiz 与彩虹星球 简体中文补丁",
  "game": "Fiz and the Rainbow Planet",
- "version": "1.2.13",
- "built": "2026-10-25",
+ "version": "1.2.14",
+ "built": "2026-11-26",
  "payload_files": 117,
  "payload_bytes": 23064017,
  "patch_info": {
