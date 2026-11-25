@@ -8,7 +8,8 @@
 安装前必须通过清单与全量载荷校验，缺失、损坏或非法路径均禁止写入。
 数据文件首次备份到 _FizRP_original，另保留带时间戳的滚动备份；卸载优先还原
 首次备份。loader 按载荷清单移除，用户自己的其它插件、配置与存档保留。
-仅在存档不存在时播种 Language=4，FIZRP_SAVE_ROOT 可隔离测试存档目录。
+仅在存档不存在时播种 Language=4；Linux/Proton 会按 Steam appmanifest 写入 compatdata 前缀，
+FIZRP_SAVE_ROOT 可隔离测试存档目录。
 """
 import argparse
 import base64
@@ -67,6 +68,7 @@ ES_STRING_TABLE_PRISTINE_BYTES = 4339
 SAVE_VENDOR_DIR = ("NijiiroDragon", "FizAndTheRainbowPlanet")
 SAVE_FILENAME = "SaveFile.es3"
 SAVE_ROOT_ENV = "FIZRP_SAVE_ROOT"       # 测试钩子：覆盖 LocalLow 根（只读环境变量）
+STEAM_USER = "steamuser"
 LANGUAGE_SPANISH = 4                    # Language 枚举: Japanese=0..Spanish=4, Max=5
 SAVE_LANGUAGE_TYPE = "Language,Assembly-CSharp"
 SAVE_DUMMY_TYPE = "int"
@@ -677,17 +679,84 @@ def es3_value_text(value):
     return json.dumps(value, ensure_ascii=False)
 
 
-def save_root_dir():
-    """LocalLow 根目录（测试可用 FIZRP_SAVE_ROOT 覆盖）。"""
+def _steam_app_id(game_dir):
+    """从游戏所在 Steam 库的 appmanifest 中读取 appid。
+
+    Proton 的存档在 ``steamapps/compatdata/<appid>/pfx`` 下；仅凭游戏目录名
+    无法可靠推导 appid，因此只接受同一库中 ``installdir`` 精确匹配的清单。
+    """
+    game_root = game_root_of(game_dir)
+    common = os.path.dirname(game_root)
+    steamapps = os.path.dirname(common)
+    if (os.path.basename(common).lower() != "common"
+            or os.path.basename(steamapps).lower() != "steamapps"):
+        return None
+    try:
+        names = os.listdir(steamapps)
+    except OSError:
+        return None
+    install_dir = os.path.basename(game_root).casefold()
+    for name in sorted(names):
+        if not (name.lower().startswith("appmanifest_") and name.lower().endswith(".acf")):
+            continue
+        match = re.match(r"appmanifest_(\d+)\.acf$", name, re.IGNORECASE)
+        if not match:
+            continue
+        path = os.path.join(steamapps, name)
+        try:
+            with open(path, encoding="utf-8", errors="replace") as handle:
+                text = handle.read()
+        except OSError:
+            continue
+        installdir = re.search(r'"installdir"\s+"([^"]+)"', text, re.IGNORECASE)
+        if installdir and installdir.group(1).casefold() == install_dir:
+            return match.group(1)
+    return None
+
+
+def proton_save_root(game_dir):
+    """返回 Linux Steam Proton 的 LocalLow 根；无法确认时返回 ``None``。"""
+    if os.name == "nt" or not game_dir:
+        return None
+    appid = _steam_app_id(game_dir)
+    if not appid:
+        return None
+    game_root = game_root_of(game_dir)
+    steamapps = os.path.dirname(os.path.dirname(game_root))
+    return os.path.join(steamapps, "compatdata", appid, "pfx", "drive_c", "users",
+                        STEAM_USER, "AppData", "LocalLow")
+
+
+def _looks_like_steam_linux_game(game_dir):
+    """判断路径是否是 Steam Linux 库中的 common/<game> 游戏目录。"""
+    if not game_dir:
+        return False
+    game_root = game_root_of(game_dir)
+    common = os.path.dirname(game_root)
+    steamapps = os.path.dirname(common)
+    return (os.path.basename(common).lower() == "common"
+            and os.path.basename(steamapps).lower() == "steamapps")
+
+
+def save_root_dir(game_dir=None):
+    """LocalLow 根目录；Linux/Proton 按游戏目录定位 compatdata 前缀。"""
     override = os.environ.get(SAVE_ROOT_ENV)
     if override:
         return override
+    if game_dir and os.name != "nt":
+        proton_root = proton_save_root(game_dir)
+        if proton_root:
+            return proton_root
+        # Steam Linux 路径但 appmanifest 缺失时不要把存档误写到宿主机 HOME。
+        if _looks_like_steam_linux_game(game_dir):
+            return None
     profile = os.environ.get("USERPROFILE") or os.path.expanduser("~")
     return os.path.join(profile, "AppData", "LocalLow")
 
 
-def save_file_path():
-    return os.path.join(save_root_dir(), *SAVE_VENDOR_DIR, SAVE_FILENAME)
+def save_file_path(game_dir=None):
+    root = save_root_dir(game_dir)
+    return os.path.join(root, *SAVE_VENDOR_DIR, SAVE_FILENAME) if root else None
 
 
 def _seed_save_bytes():
@@ -726,9 +795,14 @@ def _existing_save_note(path, emit):
     return {"save_existing": True, "save_language_key": bool(has_language)}
 
 
-def seed_save_if_absent(result, emit):
+def seed_save_if_absent(result, emit, game_dir=None):
     """存档播种（X3）：只在存档**不存在**时写入；存在则一个字节都不动。"""
-    path = save_file_path()
+    path = save_file_path(game_dir)
+    if not path:
+        emit("警告: 无法定位 Steam Proton 存档目录，未播种存档；请启动游戏后在语言选择画面选第三项「中文」。")
+        result["save_seeded"] = False
+        result["save_error"] = "无法定位 Steam Proton compatdata 存档目录"
+        return False
     if os.path.isfile(path):
         result.update(_existing_save_note(path, emit))
         result["save_seeded"] = False
@@ -1128,7 +1202,7 @@ def _do_install(result, emit, seed_save=True):
     result["loader_written"] = loader_written
     _verify_v6_backup(result, emit, rels, pre_existing, v6_pre_hashes)
     if seed_save:
-        seed_save_if_absent(result, emit)
+        seed_save_if_absent(result, emit, data_dir)
     else:
         emit("提示: 已按 --no-seed-save 跳过存档播种。")
         result["save_seeded"] = False

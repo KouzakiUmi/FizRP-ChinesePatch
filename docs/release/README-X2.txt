@@ -41,6 +41,14 @@ ZIP：完整解压后双击 install.bat；命令行需 Python 3.8+。
   python patch_tool.py verify --game-dir "<游戏根目录>"
   python patch_tool.py uninstall --game-dir "<游戏根目录>"
 
+【Linux Steam Proton】
+从 Steam 启动游戏前，在游戏属性的“启动选项”加入：
+  WINEDLLOVERRIDES="winhttp=n,b" %command%
+Linux 安装会按游戏所在 Steam 库的 appmanifest 定位
+steamapps/compatdata/<appid>/pfx/drive_c/users/steamuser/AppData/LocalLow，
+不会把新存档写入宿主机 ~/AppData/LocalLow。无法确认 Proton 前缀时不会写入宿主机存档，
+请启动游戏后在语言选择画面选第三项“中文”。
+
 【从 v1.2.7 或更早版本升级】
 先使用旧版安装器卸载并还原，再安装本版，不建议直接覆盖。
 新包不再带旧版曾改写的 JP bundle 和部分 loader 文档；覆盖安装不会自动还原退出清单的文件。

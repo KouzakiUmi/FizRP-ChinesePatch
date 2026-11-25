@@ -83,6 +83,20 @@ python patch_tool.py verify --game-dir "<游戏根目录>"
 python patch_tool.py uninstall --game-dir "<游戏根目录>"
 ```
 
+### Linux Steam Proton
+
+从 Steam 启动游戏前，在游戏属性的“启动选项”中加入：
+
+```text
+WINEDLLOVERRIDES="winhttp=n,b" %command%
+```
+
+在 Proton 环境中运行 `patch_tool.py install --game-dir ...` 时，安装器会读取游戏所在
+Steam 库的 `appmanifest_*.acf`，将新存档播种到对应的
+`steamapps/compatdata/<appid>/pfx/drive_c/users/steamuser/AppData/LocalLow/`，而不是
+Linux 宿主机的 `~/AppData/LocalLow/`。如果无法从游戏路径和 appmanifest 确认 Proton 前缀，
+安装器不会写入宿主机存档，并提示启动游戏后在语言选择画面选第三项“中文”。
+
 ### 从 v1.2.7 或更早版本升级
 
 **先使用旧版安装器卸载并还原，再安装本版，不建议直接覆盖。** 本版不再携带 JP bundle 和部分 loader 文档；只复制新载荷不会自动还原旧包曾改写、现已退出清单的文件。保留原来的首次备份和滚动备份，卸载不会删除存档。

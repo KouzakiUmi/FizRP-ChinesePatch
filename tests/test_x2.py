@@ -243,6 +243,25 @@ class X2Tests(unittest.TestCase):
             self.assertFalse(core.seed_save_if_absent({}, lambda _: None))
         self.assertEqual(path.read_bytes(), b"created by game")
 
+    def test_proton_save_uses_matching_steam_manifest(self):
+        steamapps = self.base / "steamapps"
+        data = steamapps / "common" / "FizRP" / core.DATA_DIRNAME
+        manifest = steamapps / "appmanifest_123456.acf"
+        manifest.parent.mkdir(parents=True)
+        manifest.write_text('"AppState"\n{\n\t"appid"\t\t"123456"\n'
+                            '\t"installdir"\t\t"FizRP"\n}\n', encoding="utf-8")
+        expected = (steamapps / "compatdata" / "123456" / "pfx" / "drive_c" /
+                    "users" / "steamuser" / "AppData" / "LocalLow" /
+                    "NijiiroDragon" / "FizAndTheRainbowPlanet" / core.SAVE_FILENAME)
+        with mock.patch.dict(os.environ, {"FIZRP_SAVE_ROOT": ""}), \
+                mock.patch.object(core.os, "name", "posix"):
+            self.assertEqual(os.path.normcase(core.save_file_path(str(data))),
+                             os.path.normcase(str(expected)))
+            result = {}
+            self.assertTrue(core.seed_save_if_absent(result, lambda _: None, str(data)))
+        self.assertTrue(expected.is_file())
+        self.assertTrue(result["save_seeded"])
+
     def test_cli_rejects_replacement_option(self):
         with mock.patch("sys.stderr", new=io.StringIO()):
             with self.assertRaises(SystemExit) as exc:
